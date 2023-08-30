@@ -1,0 +1,628 @@
+// // LAPTOP SIZE
+// @media screen and (max-width: 1440px) {
+// 	//PORTAL MINOR ADJUSTMENT
+// 	#light #portals #portfolioPortal {
+// 		padding: 5% 0 10%;
+// 		.portalContent {
+// 			margin-bottom: 42.1rem;
+// 		}
+// 	}
+// }
+
+// @media screen and (max-width: 1300px) {
+// 	#light {
+// 		$navHeight: 7vh;
+// 		//--------- NAVBAR
+// 		.navbar {
+// 			height: $navHeight;
+// 			.logo {
+// 				margin-left: 2.5rem;
+// 			}
+// 			.navigation {
+// 				.MuiButton-text {
+// 					margin-right: 12px;
+// 					font-size: 0.85rem;
+// 					padding: 4px 0 0;
+// 					width: fit-content;
+// 				}
+// 			}
+// 		}
+
+// 		//--------- THEME
+// 		.theme {
+// 			@include fixMeR($top: 1.2rem, $right: 1rem);
+// 			button svg {
+// 				font-size: 1rem;
+// 			}
+// 		}
+
+// 		//--------- SCROLL UP
+// 		.scrollUp {
+// 			padding: 1px 10px 3px 3px;
+// 			svg {
+// 				width: 20px;
+// 			}
+// 		}
+
+// 		//--------- HOME
+// 		#home {
+// 			.intro {
+// 				h1 {
+// 					font-size: 4.7rem;
+// 				}
+// 				.hero,
+// 				.h5Hold {
+// 					-webkit-text-stroke: 0.2px white;
+// 					font-size: 0.8rem;
+// 					height: 15.25px;
+// 					padding: 2px 1.5px 0 3px;
+// 				}
+// 				button {
+// 					padding: 9px 23px;
+// 					font-size: 0.75rem;
+// 				}
+// 			}
+// 			.lilAbout {
+// 				.img {
+// 					width: 50%;
+// 				}
+// 				.about {
+// 					p {
+// 						line-height: 3;
+// 						padding: 1rem 3.5rem 3rem 0;
+// 					}
+// 					.hero {
+// 						width: 56%;
+// 						h2 {
+// 							font-size: 2.7rem;
+// 						}
+// 					}
+// 					button {
+// 						padding: 9px 23px;
+// 						font-size: 0.8rem;
+// 					}
+// 				}
+// 			}
+// 			.skills {
+// 				#tsparticles {
+// 					height: 103vh;
+// 				}
+// 				.KeySkillsWrapper {
+// 					.keySkills {
+// 						padding-top: 2.5rem;
+// 						h2 {
+// 							font-size: 2.5rem;
+// 						}
+// 						.skillList {
+// 							margin: 1.5rem -1rem 1.3rem 3rem;
+// 							& > div p {
+// 								font-size: 0.75rem;
+// 							}
+// 						}
+// 						button {
+// 							margin-top: 2rem;
+// 						}
+// 					}
+// 					.skillPoster {
+// 						margin: -4.5rem 2rem 0 8.3rem;
+// 						& > div svg {
+// 							width: 480px;
+// 						}
+// 						p {
+// 							margin: 2rem 5.5rem 0 auto;
+// 						}
+// 					}
+// 				}
+// 			}
+// 			.homeProjects {
+// 				height: 80vh;
+// 				h3 {
+// 					-webkit-text-stroke: 0.3px
+// 						$themeCoarseBlue;
+// 					font-size: 1rem;
+// 				}
+// 			}
+// 		}
+
+// 		//--------- PROJECTS
+// 		#projects {
+// 			.explore h1 {
+// 				font-size: 3.8rem;
+// 			}
+// 			main {
+// 				.projectNav {
+// 					&.stick {
+// 						top: calc($navHeight - 0.25vh);
+// 					}
+// 					> div button {
+// 						font-size: 0.71rem;
+// 					}
+// 				}
+// 				section {
+// 					padding: 4.5rem 1.5rem;
+// 					.gridSection {
+// 						column-gap: 1.5rem;
+
+// 						//MAIN PROJECTS DIV
+// 						> div {
+// 							margin: 0 1rem 3rem;
+// 							.img {
+// 								height: 35vh;
+// 								background-size: 100% 35vh;
+// 								border-radius: 10px;
+// 								.contentWrapper {
+// 									p {
+// 										line-height: 2;
+// 										font-size: 12px;
+// 									}
+// 									.actions {
+// 										margin-top: -0.5rem;
+// 										margin-bottom: 1rem;
+// 										button {
+// 											padding: 6px 6px 5px;
+// 											margin-right: 8px;
+// 											svg {
+// 												font-size: 0.95rem;
+// 											}
+// 										}
+// 									}
+// 									ul {
+// 										font-size: 0.55rem;
+// 										margin: 0 0 1rem;
+// 									}
+// 								}
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		//--------- CONTACT
+// 		#contact {
+// 			.bg header {
+// 				h1 {
+// 					font-size: 4rem;
+// 				}
+// 				.sub {
+// 					font-size: 0.85rem;
+// 					margin: 1.7rem auto 0 0.3rem;
+// 				}
+// 			}
+// 			main {
+// 				> div:last-of-type {
+// 					width: 68%;
+// 				}
+// 				.svg {
+// 					section {
+// 						.hero h3 {
+// 							font-size: 1.35rem;
+// 						}
+// 						.socials {
+// 							padding-left: 3rem;
+// 							padding-bottom: 3.5rem;
+// 							button,
+// 							a {
+// 								margin: 0 10px;
+// 								svg {
+// 									height: 1.3rem;
+// 								}
+// 							}
+// 						}
+// 					}
+// 				}
+// 				.ContactMeWrapper {
+// 					.ContactMe {
+// 						h2 {
+// 							margin-bottom: 1rem;
+// 							font-size: 2.2rem;
+// 						}
+// 						form .formControl {
+// 							input,
+// 							textarea {
+// 								&::placeholder {
+// 									font-size: 0.7rem;
+// 								}
+// 							}
+// 						}
+// 					}
+// 					.circleWrapper {
+// 						height: 100vh;
+// 						clip-path: circle(20rem);
+// 						margin: -24rem 0 -27rem 10rem;
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		//---------ABOUT
+// 		#about {
+// 			.bg {
+// 				h1 {
+// 					padding: 10vh 0 1.1vh;
+// 					font-size: 4rem;
+// 				}
+// 				.content {
+// 					width: 80%;
+// 					font-size: 1rem;
+// 					word-spacing: 5px;
+// 					margin-top: 1rem;
+// 					line-height: 3.5;
+// 					button {
+// 						padding: 13px 30px;
+// 					}
+// 				}
+// 			}
+// 			section {
+// 				.aboutMe {
+// 					font-size: 0.9rem;
+// 					> div {
+// 						padding-left: 2rem;
+// 					}
+// 				}
+// 			}
+// 			.myServices {
+// 				h2 {
+// 					padding: 2rem 0 1.5rem;
+// 					font-size: 2.9rem;
+// 				}
+// 				.serviceList {
+// 					padding: 1.5rem 3.5rem 4rem 2rem;
+// 					.serviceListCol {
+// 						margin-left: 1.5rem;
+// 						> div .service {
+// 							padding: 1.5rem 2.35rem 2.5rem
+// 								1.82rem;
+// 							h4 {
+// 								font-size: 1.6rem;
+// 							}
+// 							p {
+// 								line-height: 1.35;
+// 								font-size: 0.75rem;
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		//-------- FOOTER
+// 		.BottomColor {
+// 			height: 1.4vh;
+// 			margin: 0rem auto -5px;
+// 		}
+// 		.foot {
+// 			.leftPanel > button {
+// 				font-size: 13px;
+// 				margin-right: 6%;
+// 			}
+// 			.socials .socialButtons a svg {
+// 				font-size: 1.2rem;
+// 			}
+// 			.copyx0 h5 {
+// 				font-size: 12px;
+// 			}
+// 		}
+
+// 		//-------- PORTALS
+// 		#portals {
+// 			//--------- MY RESUME
+// 			#Resume {
+// 				.ResumeDwn {
+// 					right: 14rem;
+// 				}
+// 			}
+
+// 			//--------- MAIN PORTAL
+// 			#portfolioPortal {
+// 				.clsArea {
+// 					height: 170rem;
+// 				}
+// 				.portalContent {
+// 					margin-bottom: 3.5rem;
+// 					header {
+// 						margin-top: 0.5rem;
+// 						h1 {
+// 							font-size: 1.8rem;
+// 							margin-top: 0.5rem;
+// 							word-spacing: 7px;
+// 						}
+// 						button[title="Close"] {
+// 							top: -0.4rem;
+// 							right: 1rem;
+// 							svg {
+// 								width: 1.25rem;
+// 							}
+// 						}
+// 					}
+// 					blockquote {
+// 						font-size: 0.9rem;
+// 						word-spacing: 2px;
+// 						line-height: 2.2;
+// 						padding: 3% 4.5% 2.5% 4%;
+// 						p {
+// 							margin-bottom: 1rem;
+// 							&::first-letter {
+// 								font-size: 0.945rem;
+// 							}
+// 						}
+// 					}
+// 					#donate form button {
+// 						font-size: 0.7rem;
+// 						padding: 6.25px 0 7px;
+// 					}
+// 					#FAQs
+// 						.FAquestions
+// 						.questionDiv
+// 						div[class^="answer"]
+// 						p {
+// 						line-height: 1.85;
+// 					}
+// 					#privacy {
+// 						h1 {
+// 							margin-bottom: 2.7rem;
+// 						}
+// 						h3 {
+// 							margin-bottom: -20px;
+// 						}
+// 						blockquote {
+// 							font-size: 0.9rem;
+// 							line-height: 1.9;
+// 							padding-top: 3%;
+// 							padding-bottom: 3.3%;
+// 						}
+// 					}
+// 					#pricing {
+// 						padding-bottom: 4rem;
+// 						h1 {
+// 							margin-bottom: 2.7rem;
+// 						}
+// 						.viewBtns button {
+// 							font-size: 0.75rem;
+// 						}
+// 						section {
+// 							.card {
+// 								.cardHeader p {
+// 									font-size: 0.7rem;
+// 								}
+
+// 								button {
+// 									padding: 11px 15px 12px;
+// 								}
+// 								div[class*="Action"] {
+// 									font-size: 0.8rem;
+// 									strong {
+// 										font-size: 1.2rem;
+// 									}
+// 								}
+// 								ul li svg {
+// 									width: 0.68rem;
+// 								}
+// 							}
+// 						}
+// 					}
+// 					.copyx1 {
+// 						margin: 0.7rem auto 1rem;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// @media screen and (max-width: 1024px) {
+// 	#light {
+// 		//--------- THEME
+// 		.theme {
+// 			@include fixMeR($top: 2rem, $right: 1rem);
+// 		}
+
+// 		//--------- HOME
+// 		#home {
+// 			.intro {
+// 				top: 40vh;
+// 				h1 {
+// 					font-size: 4.8rem;
+// 					margin-bottom: 2rem;
+// 				}
+// 				button {
+// 					margin-top: 2rem;
+// 				}
+// 			}
+// 			.lilAbout {
+// 				height: 65vh;
+// 				.img {
+// 					width: 57%;
+// 				}
+// 				.about {
+// 					.hero {
+// 						width: 65%;
+// 						.line {
+// 							height: 0.5vh;
+// 						}
+// 					}
+// 				}
+// 			}
+// 			.skills {
+// 				#tsparticles {
+// 					height: 65vh;
+// 				}
+// 				.KeySkillsWrapper .skillPoster {
+// 					margin: -4rem 2rem 0 4.5rem;
+// 					p {
+// 						width: 280px;
+// 						margin: 3rem auto 0;
+// 					}
+// 				}
+// 			}
+// 			.homeProjects {
+// 				height: 65vh;
+// 				.hero {
+// 					margin-top: 5rem;
+// 				}
+// 			}
+// 		}
+
+// 		//--------- PROJECTS
+// 		#projects {
+// 			.explore {
+// 				h1 {
+// 					width: 100%;
+// 				}
+// 				.sub {
+// 					width: 500px;
+// 					margin-top: 7vh;
+// 				}
+// 			}
+// 			//MAIN PROJECTS DIV
+// 			main {
+// 				.projectNav > div button {
+// 					padding: 5px 12px;
+// 					margin: 0 1rem -1px;
+// 				}
+// 				section .gridSection > div .img {
+// 					height: 20vh;
+// 					background-size: 100% 20vh;
+// 					.contentWrapper p {
+// 						line-height: 1.7;
+// 					}
+// 				}
+// 			}
+// 		}
+// 		//--------- CONTACT
+// 		#contact {
+// 			.bg header {
+// 				h1 {
+// 					font-size: 4.25rem;
+// 				}
+// 				.content {
+// 					font-size: 0.9rem;
+// 					margin: 3.5rem auto 0 0.25rem;
+// 				}
+// 			}
+// 			main .ContactMeWrapper .circleWrapper {
+// 				clip-path: circle(16.5rem);
+// 				margin: -38rem 0 -40rem 5rem;
+// 			}
+// 		}
+
+// 		//---------ABOUT
+// 		#about {
+// 			.bg {
+// 				h1 {
+// 					padding: 12vh 0 2.5vh;
+// 					font-size: 4.2rem;
+// 				}
+// 				.content {
+// 					width: 80%;
+// 					font-size: 1.05rem;
+// 					word-spacing: 7px;
+// 					margin-top: 1.5rem;
+// 					line-height: 4;
+// 				}
+// 			}
+// 			.myServices {
+// 				.serviceList {
+// 					.serviceListCol {
+// 						> div .service {
+// 							h4 {
+// 								font-size: 1rem;
+// 							}
+// 							p {
+// 								line-height: 1;
+// 								font-size: 0.7rem;
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		//---------FOOTER
+// 		.BottomColor {
+// 			margin-top: -2px;
+// 			height: 1.1vh;
+// 		}
+
+// 		//-------- PORTALS
+// 		#portals {
+// 			//--------- RESUME VIEW
+// 			#Resume {
+// 				[title="Close"] {
+// 					top: 2rem;
+// 					right: 2rem;
+// 					padding-top: 7px;
+// 				}
+// 				.ResumeImg img {
+// 					max-width: 100%;
+// 					object-fit: contain;
+// 					height: 82vh;
+// 					padding-top: 5rem;
+// 				}
+// 				.ResumeDwn {
+// 					right: 2rem;
+// 				}
+// 			}
+
+// 			//--------- MAIN PORTAL
+// 			#portfolioPortal {
+// 				padding: 7% 0 15%;
+// 				.clsArea {
+// 					height: 200rem;
+// 				}
+// 				.portalContent {
+// 					min-width: 80%;
+// 					margin-bottom: 5rem;
+// 					header {
+// 						h1 {
+// 							margin: 1.2rem auto -0.3rem;
+// 							word-spacing: 0;
+// 							letter-spacing: -0.7px;
+// 							font-size: 1.7rem;
+// 						}
+// 					}
+// 					blockquote {
+// 						line-height: 2.3;
+// 						padding-left: 5.5%;
+// 						p {
+// 							margin-bottom: 1.35rem;
+// 						}
+// 					}
+// 					#privacy {
+// 						blockquote {
+// 							line-height: 2.3;
+// 							padding-top: 3.7%;
+// 							padding-bottom: 5%;
+// 						}
+// 					}
+// 					#pricing {
+// 						section {
+// 							padding: 2.5rem 3rem 3rem;
+// 							grid-gap: 1.8rem;
+// 							display: grid;
+// 							grid-template-columns: repeat(
+// 								2,
+// 								50%
+// 							);
+// 							.card {
+// 								max-width: 100%;
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+
+  // For Desktops, Large screens, Extra large screens, TVs
+  @media screen and (min-width: 1024px) and (height: 768px) {
+    // ?
+    // ?
+  }
+  // For Desktops 1.3K+
+  @media screen and (min-width: 1025px) and (max-width: 5000px) {
+    // ?
+    // ?
+  }
