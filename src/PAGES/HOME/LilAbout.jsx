@@ -6,7 +6,7 @@ import ReactVisibilitySensor from "react-visibility-sensor";
 
 const LilAbout = () => {
   const [anime, setAnime] = useState(false);
-  const Elem = useRef(null);
+  // const Elem = useRef(null);
   return (
     <ReactVisibilitySensor
       resizeCheck={true}
@@ -18,7 +18,7 @@ const LilAbout = () => {
       onChange={(isVisible) => setAnime(isVisible)}
       active={!anime}
     >
-      <div className="lilAbout" ref={Elem}>
+      <div className="lilAbout">
         <Zoom big when={anime}>
           <CircleImg />
         </Zoom>

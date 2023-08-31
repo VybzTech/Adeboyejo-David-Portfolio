@@ -18,15 +18,14 @@ const Home = () => {
           <Video vid={homeVideo} img={homeBg} imgName="HomeBg" />
           <Intro /> 
       <ErrorHandler>
-        {/* <LilAbout /> */}
+        <LilAbout />
       </ErrorHandler>
       <ErrorHandler>
-        {/* <Skills /> */}
+        <Skills />
       </ErrorHandler>
       <ErrorHandler>
-        {/* <MyWorks /> */}
+        <MyWorks />
       </ErrorHandler>
-      
       {/* <ScrollUp />
       */}
       <Footer />

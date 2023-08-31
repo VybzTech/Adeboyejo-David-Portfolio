@@ -96,22 +96,22 @@ export const projectSlides = [
 		alt: 'Whatodo Project',
 		src: WhatodoProject,
 	},
-	{
-		alt: 'SammieArt Project',
-		src: SammieArtProject,
-	},
-	{
-		alt: 'DivisionForm Project',
-		src: DivisionFormProject,
-	},
-	{
-		alt: 'TaskManager Project',
-		src: TaskManagerProject,
-	},
-	{
-		alt: 'SammieArt 2 Project',
-		src: SammieArtProject2,
-	},
+	// {
+	// 	alt: 'SammieArt Project',
+	// 	src: SammieArtProject,
+	// },
+	// {
+	// 	alt: 'DivisionForm Project',
+	// 	src: DivisionFormProject,
+	// },
+	// {
+	// 	alt: 'TaskManager Project',
+	// 	src: TaskManagerProject,
+	// },
+	// {
+	// 	alt: 'SammieArt 2 Project',
+	// 	src: SammieArtProject2,
+	// },
 ]
 
 //PROJECT PAGE UIs
