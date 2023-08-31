@@ -9,7 +9,7 @@ class Typo extends React.Component {
       content: [
         "React Front End Developer",
         "Electronic & Computer Engineer",
-        "Professional Disc Jockey",
+        "Asp .NET Backend Developer",
       ],
       currentText: 0,
       currentTextIndex: 0,
@@ -28,9 +28,7 @@ class Typo extends React.Component {
     return (
       <Fade bottom big delay={1300}>
         <div className="h5Hold">
-          <p id="text" className="blinkAnime">
-            {" "}
-          </p>
+          <p id="text" className="blinkAnime" />
         </div>
       </Fade>
     );

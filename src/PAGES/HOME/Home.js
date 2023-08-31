@@ -15,13 +15,8 @@ const Home = () => {
   return (
     <div id="home">
       <ErrorHandler>
-        {/* <div className="bg w-full h-[100vh] flex rel"> */}
           <Video vid={homeVideo} img={homeBg} imgName="HomeBg" />
           <Intro /> 
-        {/* </div> */}
-        {/* <Fade delay={1e3} cascade damping={1e-1}>
-        Easy-to-use animation library for React apps
-      </Fade> */}
       <ErrorHandler>
         {/* <LilAbout /> */}
       </ErrorHandler>

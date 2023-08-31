@@ -43,11 +43,13 @@ const Footer = () => {
             {socialLinks.map((social) => {
               return (
                 // <IconButton
-                //   key={social.name}
                 //   title={social.name}
                 //   href={social.href}
                 // >
-                <>{social?.icon}</>
+                <div
+                  key={social.name}
+
+                >{social?.icon}</div>
                 // </IconButton>
               );
             })}

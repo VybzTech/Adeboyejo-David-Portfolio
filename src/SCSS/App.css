@@ -104,13 +104,6 @@
     transform: translateY(0%) scaleY(1);
   }
 }
-@media screen and (min-width: 320px) and (min-height: 551px) and (max-height: 750px) {
-  .intro {
-    position: absolute;
-    left: 20%;
-    top: 40%;
-  }
-}
 #home .rel {
   position: relative;
 }
@@ -121,4 +114,47 @@
   width: auto;
   height: 100vh;
   object-fit: cover;
+}
+#home .intro {
+  position: absolute;
+  left: 9%;
+  top: 33vh;
+}
+#home .intro .hero,
+#home .intro .h5Hold {
+  line-height: 0.5;
+  letter-spacing: 0.2px;
+  word-spacing: 1px;
+  @apply w-fit text-white font-sans uppercase;
+}
+#home .intro .hero {
+  font-size: 11.5px;
+  @apply pl-1 mb-2;
+}
+#home .intro .h5Hold {
+  border-right: 2px solid #f22;
+}
+#home .intro .h5Hold > p {
+  font-size: 13px;
+  -webkit-text-stroke: 0.05px white;
+  @apply pt-1 pr-[0.1rem] h-[14.5px] mt-2;
+}
+#home .intro h1 {
+  line-height: 1.05;
+  color: white;
+  font-family: montXBold, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 0;
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 2.5rem;
+}
+#home .intro .btn {
+  font-size: 11px;
+  background: linear-gradient(-15deg, #1e40af, #2563eb);
+  @apply font-sans rounded rounded-md text-white mt-7 px-5 py-3 ease-in-out uppercase;
+}
+#home .intro .btn:hover, #home .intro .btn:focus, #home .intro .btn:focus-within, #home .intro .btn:focus-visible {
+  background: linear-gradient(-15deg, #153290, #1e40af);
+  -webkit-text-stroke: 0.05px white;
 }

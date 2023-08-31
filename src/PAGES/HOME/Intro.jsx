@@ -48,31 +48,33 @@ const Intro = () => {
   }, [showCV]);
   // body.children.home
   return (
-    <div className="intro mt-10">
+    <div className="intro">
       <>
-        I am Intro
+        {/* I am Intro */}
+        <p className="hero ">Hello I'm</p>
         {/* <Zoom delay={1200}> */}
         {/* <animated.div
 						className='hero'
 						style={hero}
 					>
-						Hello I'm
+        Hello I'm
 					</animated.div> */}
-        {/* <h1>Adeboyejo David</h1> */}
-        {/* <Typo /> */}
+        <h1>Adeboyejo David</h1>
+        <Typo />
+        <button
+          onClick={() => {
+            setShowCV((cv) => !cv);
+            setTimeout(() => {
+              document.documentElement.scrollTop = 0;
+            }, 450);
+          }}
+          className="btn"
+          variant="outlined"
+          disableElevation={false}
+        >
+          download cv
+        </button>
         {/* <Pulse delay={500} appear spy={top} duration={750}>
-            <button
-              onClick={() => {
-                setShowCV((cv) => !cv);
-                setTimeout(() => {
-                  document.documentElement.scrollTop = 0;
-                }, 450);
-              }}
-              variant="outlined"
-              disableElevation={false}
-            >
-              download cv
-            </button>
           </Pulse> */}
         {/* </Zoom> */}
         {/* <Resume showCV={showCV} setShowCV={setShowCV} /> */}

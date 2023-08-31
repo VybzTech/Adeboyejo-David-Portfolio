@@ -12,12 +12,60 @@
   .rel {
     position: relative;
   }
+  // VIDEO EDIT (320x480)
   .vid {
     background: radial-gradient(#2225, #1118);
     video {
       width: auto;
       height: 100vh;
       object-fit: cover;
+    }
+  }
+
+  // INTRO EDIT (320x480)
+  .intro {
+    position: absolute;
+    left: 9%;
+    top: 33vh;
+    .hero,
+    .h5Hold {
+      line-height: 0.5;
+      letter-spacing: 0.2px;
+      word-spacing: 1px;
+      @apply w-fit text-white font-sans uppercase;
+    }
+    .hero {
+      font-size: 11.5px;
+      @apply pl-1 mb-2;
+    }
+    .h5Hold {
+      border-right: 2px solid $themeRed;
+    &> p {
+      font-size: 13px;
+      -webkit-text-stroke: 0.05px white;
+      @apply pt-1 pr-[0.1rem] h-[14.5px] mt-2;
+    }
+    }
+    h1 {
+      line-height: 1.05;
+      @include BoldText(
+        $case: capitalize,
+        $color: white,
+        $size: 2.5rem,
+        $word: 0
+      );
+    }
+    .btn {
+      font-size: 11px;
+      background: linear-gradient(-15deg, #1e40af, #2563eb,);
+      @apply font-sans rounded rounded-md text-white mt-7 px-5 py-3 ease-in-out uppercase;
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        background: linear-gradient(-15deg, #153290, #1e40af,);
+        -webkit-text-stroke: 0.05px white;
+      }
     }
   }
 }
