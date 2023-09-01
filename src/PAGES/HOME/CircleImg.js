@@ -2,7 +2,7 @@ import React from "react";
 import passport from "../../IMAGES/ME.jpg";
 
 const CircleImg = () => (
-  <div className="img">
+  <div className="circleImg">
     <img src={passport} alt="David's passport photograph" />
   </div>
 );

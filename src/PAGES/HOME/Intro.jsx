@@ -70,7 +70,7 @@ const Intro = () => {
           }}
           className="btn"
           variant="outlined"
-          disableElevation={false}
+          // disableElevation={false}
         >
           download cv
         </button>

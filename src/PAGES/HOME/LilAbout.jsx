@@ -5,24 +5,24 @@ import { Zoom, Slide } from "react-awesome-reveal";
 import ReactVisibilitySensor from "react-visibility-sensor";
 
 const LilAbout = () => {
-  const [anime, setAnime] = useState(false);
+  // const [anime, setAnime] = useState(false);
   // const Elem = useRef(null);
   return (
     <ReactVisibilitySensor
       resizeCheck={true}
       delayedCall={true}
-      scrollCheck={true}
+      scrollCheck={false}
       scrollDelay={150}
       partialVisibility={true}
       minTopValue={200}
-      onChange={(isVisible) => setAnime(isVisible)}
-      active={!anime}
+      // onChange={(isVisible) => setAnime(isVisible)}
+      // active={!anime}
     >
       <div className="lilAbout">
-        <Zoom big when={anime}>
+        <Zoom big triggerOnce>
           <CircleImg />
         </Zoom>
-        <Slide when={anime} right>
+        <Slide right triggerOnce>
           <LilAboutMe />
         </Slide>
       </div>

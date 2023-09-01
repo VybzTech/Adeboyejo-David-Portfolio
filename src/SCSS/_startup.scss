@@ -18,15 +18,14 @@
 }
 
 // LOADER STYLES
-.Loader
-{
-.AFill {
-  animation: Fade 900ms ease-in infinite alternate-reverse forwards;
-}
+.Loader {
+  .AFill {
+    animation: Fade 900ms ease-in infinite alternate-reverse forwards;
+  }
 
- .progress {
-  animation: Slide 900ms ease-in infinite alternate-reverse forwards;
-}
+  .progress {
+    animation: Slide 900ms ease-in infinite alternate-reverse forwards;
+  }
 }
 @keyframes Fade {
   from {
@@ -101,7 +100,8 @@ $themeDGray: #333a;
 $themeGray: #aaa;
 // $themeWhite: #fafafa;
 $themeWhite: #f9f9fa;
-$themeWhite2: #cdcdcd;
+$themeWhite2: #f5f5f9;
+$gray: #e5e5e5;
 $offWhite: #eee;
 $themeWhitishBlue: #e3f2f8;
 $themeBlueOptic: #2684ff;
@@ -236,7 +236,7 @@ $themeBlueShadow: #09095077;
   $color: $themeBlue,
   $size: 0.7rem,
   $size2: 0.6rem,
-  $pad: 9px 17px,
+  $pad: 10px 18px,
   $pad2: 7.5px 15px
 ) {
   background: $bg;

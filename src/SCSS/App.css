@@ -150,11 +150,150 @@
   font-size: 2.5rem;
 }
 #home .intro .btn {
+  background: transparent;
+  color: #135be8;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 0.7rem;
+  border: 2px solid #135be8;
+  cursor: pointer;
+  @apply rounded rounded-md mt-5 px-5 py-3 ease-in-out;
+}
+@media screen and (max-width: 1024px) {
+  #home .intro .btn {
+    padding: 7.5px 15px;
+    font-size: 0.6rem;
+  }
+}
+#home .intro .btn:focus {
+  outline: none;
+}
+#home .intro .btn:hover {
+  color: #63a6ff;
+  background-color: rgba(19, 90, 232, 0.2666666667);
+}
+#home .lilAbout {
+  background: #f5f5f9;
+  @apply pt-6 px-3 pb-16;
+}
+#home .lilAbout .circleImg {
+  background-color: #f9f9fa;
+  box-shadow: 0 0 15px 0.5px #e5e5e5;
+  @apply rounded rounded-[50%] w-[70%] my-3 mx-auto py-[3.1%] px-[3.1%] pb-[3.4%];
+}
+#home .lilAbout .circleImg img {
+  border-radius: 50%;
+  width: 100%;
+  @apply duration-75 transition-all ease-in;
+}
+#home .lilAbout .about .hero {
+  @apply w-max mx-auto;
+}
+#home .lilAbout .about .hero h2 {
+  @apply mt-1;
+  color: black;
+  font-family: montXBold, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 4px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 1.85rem;
+}
+#home .lilAbout .about .hero h2 .line {
+  background: #eee;
+  @apply rounded rounded-sm  mb-6 overflow-hidden;
+}
+#home .lilAbout .about .hero h2 .line > div {
+  background: #021db8;
+  @apply w-[40%] h-[1.2vh];
+}
+#home .lilAbout .about p {
+  color: black;
+  font-family: montLight, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 2px;
+  text-align: left;
+  font-size: 0.8em;
+  @apply leading-[2.2] text-justify px-2;
+}
+#home .lilAbout .about p::first-letter {
+  @apply pl-3;
+}
+#home .lilAbout .about > div.more {
+  @apply w-fit mx-auto mt-7;
+}
+#home .lilAbout .about > div.more .btn {
   font-size: 11px;
   background: linear-gradient(-15deg, #1e40af, #2563eb);
-  @apply font-sans rounded rounded-md text-white mt-7 px-5 py-3 ease-in-out uppercase;
+  @apply border border-blue-600 font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase w-fit;
 }
-#home .intro .btn:hover, #home .intro .btn:focus, #home .intro .btn:focus-within, #home .intro .btn:focus-visible {
+#home .lilAbout .about > div.more .btn:hover, #home .lilAbout .about > div.more .btn:focus, #home .lilAbout .about > div.more .btn:focus-within, #home .lilAbout .about > div.more .btn:focus-visible {
   background: linear-gradient(-15deg, #153290, #1e40af);
   -webkit-text-stroke: 0.05px white;
+}
+#home .skills {
+  background: linear-gradient(0rad, #000626, #00326f, #05438d);
+}
+#home .skills #tsparticles {
+  @apply w-full h-[220vh] overflow-hidden;
+}
+#home .skills #tsparticles > canvas {
+  position: absolute !important;
+}
+#home .skills .KeySkillsWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @apply w-full;
+}
+#home .skills .KeySkillsWrapper .keySkills > div {
+  @apply w-full;
+}
+#home .skills .KeySkillsWrapper .keySkills h2 {
+  @apply w-max my-4 mx-auto;
+  color: white;
+  font-family: montXBold, Verdana, sans-serif;
+  letter-spacing: 0.75px;
+  word-spacing: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.85rem;
+}
+#home .skills .KeySkillsWrapper .keySkills .skillList {
+  @apply mx-4 my-2;
+}
+#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill {
+  background-color: rgba(19, 90, 232, 0.2666666667);
+  @apply w-[90%] rounded rounded-md mb-5 overflow-hidden;
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  transition: all 150ms ease-in-out;
+}
+#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill .skillName {
+  -webkit-text-stroke: 0.05px white;
+  color: #f9f9fa;
+  @apply min-w-[25%] uppercase text-slate-200 bg-blue-400 text-center;
+}
+#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill .skillName p {
+  font-size: 0.7rem;
+  @apply py-[0.35rem] px-1.5 h-fit my-auto mx-auto;
+}
+#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill > div.progressBar {
+  @apply w-[75%];
+}
+#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill > div.progressBar .progress {
+  transition: all 150ms ease-in-out;
+  @apply h-[28px] bg-blue-600;
+}
+#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill:hover {
+  box-shadow: 0 0 15px 0.5px rgba(9, 9, 80, 0.4666666667);
+}
+#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill:hover > div.progressBar {
+  box-shadow: 5px 0 10px 0 rgba(9, 9, 80, 0.4666666667);
+}
+#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill:hover > div.progressBar .progress {
+  @apply bg-blue-500;
 }

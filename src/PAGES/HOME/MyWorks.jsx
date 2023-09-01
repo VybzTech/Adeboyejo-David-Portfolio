@@ -87,7 +87,8 @@ const MyWorks = withRouter(({ history }) => {
       onChange={(isVisible) => setAnime(isVisible)}
     >
       <div className="homeProjects">
-        <Fade big when={anime}>
+        <Fade big triggerOnce> 
+        {/* // when={anime} */}
           <div className="hero">
             <h3>case study</h3>
             <h1>latest works</h1>
@@ -103,6 +104,7 @@ const MyWorks = withRouter(({ history }) => {
           <div className="swiper-wrapper">
             {projectSlides?.map((slide) => (
               <div
+              key={slide.alt}
                 className="swiper-slide"
                 // style={bgStyles(slide.src)}
               >

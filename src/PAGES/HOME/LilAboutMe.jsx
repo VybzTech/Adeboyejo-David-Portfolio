@@ -8,7 +8,7 @@ const LilAboutMe = withRouter(({ history }) => {
       <div className="hero">
         <h2>
           Who i am
-          <div className="line rounded">
+          <div className="line">
             <div />
           </div>
         </h2>
@@ -23,14 +23,16 @@ const LilAboutMe = withRouter(({ history }) => {
         backend services. I'm excited to apply my skills to enhance software
         development projects and collaborate on innovative solutions.
       </p>
-      <button
-        className="uppercase btn"
-        onClick={() => {
-          history.push("/About");
-        }}
-      >
-        learn more
-      </button>
+      <div className="more">
+        <button
+          className="btn"
+          onClick={() => {
+            history.push("/About");
+          }}
+        >
+          learn more about david
+        </button>
+      </div>
     </div>
   );
 });
