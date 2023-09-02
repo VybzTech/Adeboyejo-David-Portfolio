@@ -25,12 +25,26 @@ const LilAboutMe = withRouter(({ history }) => {
       </p>
       <div className="more">
         <button
-          className="btn"
+          className="btn flex"
           onClick={() => {
             history.push("/About");
           }}
         >
-          learn more about david
+          continue reading
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="ml-2 w-4 h-4 animate-pulse mr-[-.2rem]"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+            />
+          </svg>
         </button>
       </div>
     </div>

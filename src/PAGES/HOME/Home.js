@@ -5,11 +5,9 @@ import Footer from "../../COMPONENTS/Footer";
 import Skills from "./Skills";
 import MyWorks from "./MyWorks";
 import LilAbout from "./LilAbout";
-import ScrollUp from "../../COMPONENTS/ScrollUp";
 import homeBg from "../../IMAGES/HomeBackground.jpg";
 import ErrorHandler from "../../COMPONENTS/ErrorHandler";
 import homeVideo from "../../VIDEOS/Home-Background.mp4";
-import Loader from "../../COMPONENTS/Loader";
 
 const Home = () => {
   return (
@@ -26,8 +24,6 @@ const Home = () => {
       <ErrorHandler>
         <MyWorks />
       </ErrorHandler>
-      {/* <ScrollUp />
-      */}
       <Footer />
       </ErrorHandler>
     </div>

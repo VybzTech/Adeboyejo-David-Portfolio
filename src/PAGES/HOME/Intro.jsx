@@ -1,6 +1,6 @@
 import Typo from "./Typo";
 import Resume from "../../COMPONENTS/Resume";
-import { Zoom } from "react-awesome-reveal";
+import { Slide, Zoom } from "react-awesome-reveal";
 // import { Button } from '@material-ui/core'
 import React, { useState, useEffect } from "react";
 // import { animated, useSpring } from 'react-spring'
@@ -51,7 +51,10 @@ const Intro = () => {
     <div className="intro">
       <>
         {/* I am Intro */}
-        <p className="hero ">Hello I'm</p>
+        {/* // 	delay: , */}
+        <Slide delay={7000} direction="down" duration={250} triggerOnce reverse>
+          <p className="hero ">Hello I'm</p>
+        </Slide>
         {/* <Zoom delay={1200}> */}
         {/* <animated.div
 						className='hero'

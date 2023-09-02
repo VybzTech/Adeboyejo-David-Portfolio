@@ -1,5 +1,6 @@
 import { Params } from "../Utils";
 import SkillSvg from "./SkillSvg";
+import Tools from "./Tools";
 import KeySkills from "./KeySkills";
 import React, { useState } from "react";
 import Particles from "react-tsparticles";
@@ -44,11 +45,14 @@ const Skills = () => {
       <div className="skills">
         <Particles params={Params} />
         <div className="KeySkillsWrapper">
-          <Fade left when={anime}>
+          <Fade left>
             <KeySkills />
           </Fade>
-          <Slide when={anime} bottom>
+          <Slide triggerOnce bottom>
             <SkillSvg />
+          </Slide>
+          <Slide triggerOnce bottom>
+            <Tools />
           </Slide>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 import { withRouter } from "react-router-dom";
 // import Netflex from '../../IMAGES/NetFlex-Project.png'
 // import SammieArt from '../../IMAGES/SammieArt-Project.png'
@@ -11,7 +11,7 @@ import ReactVisibilitySensor from "react-visibility-sensor";
 //c:/Users/DHARVO/Desktop/PROGRAMMING/PROGRAMS/REACT/portfolio/node_modules/swiper/react/
 // import {
 // 	Swiper,
-// 	SwiperSlide,
+// 	// SwiperSlide,
 // } from 'swiper/react/swiper-react'
 // import {
 // 	EffectCoverflow,
@@ -20,8 +20,12 @@ import ReactVisibilitySensor from "react-visibility-sensor";
 // 	EffectCards,
 // } from 'swiper'
 // import "swiper/swiper.min.css";
+// import "node_modules/swiper/swiper-bundle.min.css"
+// import "swiper/swiper-bundle.min.css"
 // import "swiper/swiper-bundle.css";
+import "swiper/css";
 import { projectSlides } from "../Utils";
+import Swiper from "swiper";
 // import NetflexProject from '../../IMAGES/NetFlex-Project.png'
 
 const MyWorks = withRouter(({ history }) => {
@@ -37,43 +41,46 @@ const MyWorks = withRouter(({ history }) => {
   // }
   //
 
-  //   var swiper = new Swiper(".swiper", {
-  //     effect: "coverflow",
-  //     grabCursor: true,
-  //     centeredSlides: true,
-  //     loop: true,
-  //     speed: 300,
-  //     slidesPerView: 3,
-  //     spaceBetween: 20,
-  //     // cardsEffect: {
-  //     // 	slideShadows: true,
-  //     // },
-  //     initialSlide: 2,
-  //     coverflow: {
-  //       rotate: 120,
-  //       stretch: 300,
-  //       depth: 1000,
-  //       modifier: 1,
-  //       slideShadows: true,
-  //     },
-  //     // preloadImages: true,
-  //     // autoHeight: true,
-  //     // updateOnImagesReady: true,
-  //     // updateOnWindowResize: true,
-  //     // breakpoints: {
-  //     // 	//when window width >=1440px
-  //     // 	1440: {
-  //     // 		// slidesPerView: 1,
-  //     // 		// spaceBetween: 10,
-  //     // 	},
-  //     // 	1300: {},
-  //     // 	1024: {},
-  //     // 	770: {},
-  //     // 	425: {},
-  //     // 	375: {},
-  //     // 	320: {},
-  //     // },
-  //   });
+  var swiper = new Swiper(".swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    speed: 300,
+    // slidesPerView: 3,
+    // spaceBetween: 20,
+    cardsEffect: {
+      slideShadows: true,
+    },
+    initialSlide: 1,
+    coverflow: {
+      rotate: 50,
+      stretch: 300,
+      depth: 1000,
+      modifier: 1,
+      slideShadows: true,
+    },
+    // preloadImages: true,
+    // autoHeight: true,
+    // updateOnImagesReady: true,
+    // updateOnWindowResize: true,
+    breakpoints: {
+      // 	//when window width >=1440px
+      // 	1440: {
+      // 		// slidesPerView: 1,
+      // 		// spaceBetween: 10,
+      // 	},
+      1300: { slidesPerView: 3.5, spaceBetween: 25 },
+      1024: { slidesPerView: 3, spaceBetween: 20 },
+      770: { slidesPerView: 2.2, spaceBetween: 15 },
+      425: { slidesPerView: 1.8, spaceBetween: 18 },
+      // 	375: {},
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 15,
+      },
+    },
+  });
 
   return (
     <ReactVisibilitySensor
@@ -87,33 +94,29 @@ const MyWorks = withRouter(({ history }) => {
       onChange={(isVisible) => setAnime(isVisible)}
     >
       <div className="homeProjects">
-        <Fade big triggerOnce> 
-        {/* // when={anime} */}
+        <Fade big triggerOnce>
+          {/* // when={anime} */}
           <div className="hero">
             <h3>case study</h3>
             <h1>latest works</h1>
           </div>
         </Fade>
-        {/* <Slide when={anime} bottom> */}
-        <div
-          className="swiper"
-          // onClick={() => {
-          // 	history.push('/Projects')
-          // }}
-        >
-          <div className="swiper-wrapper">
-            {projectSlides?.map((slide) => (
-              <div
-              key={slide.alt}
-                className="swiper-slide"
-                // style={bgStyles(slide.src)}
-              >
-                <img src={slide.src} alt={slide.alt} />
-              </div>
-            ))}
+        <Slide bottom triggerOnce>
+          <div
+            className="swiper"
+            onDoubleClick={() => {
+              history.push("/Projects");
+            }}
+          >
+            <div className="swiper-wrapper">
+              {projectSlides?.map((slide) => (
+                <div key={slide.alt} className="swiper-slide">
+                  <img src={slide.src} alt={slide.alt} />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        {/* </Slide> */}
+        </Slide>
       </div>
     </ReactVisibilitySensor>
   );

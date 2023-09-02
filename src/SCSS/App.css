@@ -104,6 +104,19 @@
     transform: translateY(0%) scaleY(1);
   }
 }
+.Loader {
+  @apply w-full h-[100vh];
+}
+.Loader > div {
+  @apply m-auto w-fit h-fit mt-[40vh];
+}
+.Loader > div svg {
+  @apply w-[12vw] mx-5;
+}
+.Loader .progress {
+  @apply h-1 w-[3rem] bg-gray-900 rounded my-3 transition-all duration-100 ease-in-out;
+}
+
 #home .rel {
   position: relative;
 }
@@ -119,13 +132,14 @@
   position: absolute;
   left: 9%;
   top: 33vh;
+  position: absolute;
+  top: 30vh;
+  left: 8%;
 }
 #home .intro .hero,
 #home .intro .h5Hold {
-  line-height: 0.5;
-  letter-spacing: 0.2px;
   word-spacing: 1px;
-  @apply w-fit text-white font-sans uppercase;
+  @apply leading-[0.5] tracking-[0.2px]  w-fit text-white font-sans uppercase;
 }
 #home .intro .hero {
   font-size: 11.5px;
@@ -155,16 +169,10 @@
   text-transform: uppercase;
   border-radius: 4px;
   padding: 10px 18px;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   border: 2px solid #135be8;
   cursor: pointer;
-  @apply rounded rounded-md mt-5 px-5 py-3 ease-in-out;
-}
-@media screen and (max-width: 1024px) {
-  #home .intro .btn {
-    padding: 7.5px 15px;
-    font-size: 0.6rem;
-  }
+  @apply rounded rounded-md mt-5 px-5 py-2 ease-in-out;
 }
 #home .intro .btn:focus {
   outline: none;
@@ -236,6 +244,7 @@
   background: linear-gradient(0rad, #000626, #00326f, #05438d);
 }
 #home .skills #tsparticles {
+  z-index: 0;
   @apply w-full h-[220vh] overflow-hidden;
 }
 #home .skills #tsparticles > canvas {
@@ -247,8 +256,32 @@
   left: 0;
   @apply w-full;
 }
+#home .skills .KeySkillsWrapper .keySkills {
+  z-index: 1;
+}
 #home .skills .KeySkillsWrapper .keySkills > div {
   @apply w-full;
+}
+#home .skills .KeySkillsWrapper .keySkills > div:last-of-type {
+  @apply mt-7 mx-auto my-1 w-fit;
+}
+#home .skills .KeySkillsWrapper .keySkills > div:last-of-type .btn {
+  background: transparent;
+  color: #135be8;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 0.7rem;
+  border: 2px solid #135be8;
+  cursor: pointer;
+  @apply w-fit rounded rounded-md px-5 py-1.5 ease-in-out;
+}
+#home .skills .KeySkillsWrapper .keySkills > div:last-of-type .btn:focus {
+  outline: none;
+}
+#home .skills .KeySkillsWrapper .keySkills > div:last-of-type .btn:hover {
+  color: #63a6ff;
+  background-color: rgba(19, 90, 232, 0.2666666667);
 }
 #home .skills .KeySkillsWrapper .keySkills h2 {
   @apply w-max my-4 mx-auto;
@@ -279,14 +312,14 @@
 }
 #home .skills .KeySkillsWrapper .keySkills .skillList .skillPill .skillName p {
   font-size: 0.7rem;
-  @apply py-[0.35rem] px-1.5 h-fit my-auto mx-auto;
+  @apply py-[0.3rem] px-1.5 h-fit my-auto mx-auto;
 }
 #home .skills .KeySkillsWrapper .keySkills .skillList .skillPill > div.progressBar {
   @apply w-[75%];
 }
 #home .skills .KeySkillsWrapper .keySkills .skillList .skillPill > div.progressBar .progress {
   transition: all 150ms ease-in-out;
-  @apply h-[28px] bg-blue-600;
+  @apply h-[27px] bg-blue-600;
 }
 #home .skills .KeySkillsWrapper .keySkills .skillList .skillPill:hover {
   box-shadow: 0 0 15px 0.5px rgba(9, 9, 80, 0.4666666667);
@@ -296,4 +329,90 @@
 }
 #home .skills .KeySkillsWrapper .keySkills .skillList .skillPill:hover > div.progressBar .progress {
   @apply bg-blue-500;
+}
+#home .skills .skillPoster {
+  z-index: 0;
+  @apply mt-[-1rem] mr-1  w-fit;
+}
+#home .skills .skillPoster > div svg {
+  @apply w-[110%] h-[110%];
+}
+#home .skills .tools p {
+  color: #e3f2f8;
+  font-family: montLight, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 0;
+  text-align: center;
+  font-size: 0.7rem;
+  @apply w-[240px] mx-auto mt-2;
+}
+#home .homeProjects h3 {
+  -webkit-text-stroke: 0.5px #064da5;
+  color: #064da5;
+  font-family: montLight, Verdana, sans-serif;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  text-align: center;
+  font-size: 0.75rem;
+  @apply uppercase mb-[-0.25rem] mt-8;
+}
+#home .homeProjects h1 {
+  @apply mb-8;
+  color: black;
+  font-family: montXBold, Verdana, sans-serif;
+  letter-spacing: -1px;
+  word-spacing: 0;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+}
+#home .homeProjects .swiper {
+  margin: 0 auto;
+  @apply w-[90%];
+}
+#home .homeProjects .swiper .swiper-wrapper {
+  @apply w-full;
+}
+#home .homeProjects .swiper .swiper-wrapper .swiper-slide {
+  box-shadow: 0px 2px 5px 0.1px #e3f2f8;
+  @apply h-[45vh] rounded rounded-md overflow-hidden;
+}
+#home .homeProjects .swiper .swiper-wrapper .swiper-slide:hover, #home .homeProjects .swiper .swiper-wrapper .swiper-slide:focus {
+  box-shadow: 0px 1px 15px 1px #eee;
+}
+#home .homeProjects .swiper .swiper-wrapper .swiper-slide:hover img, #home .homeProjects .swiper .swiper-wrapper .swiper-slide:focus img {
+  transform: scale(1.03);
+}
+#home .homeProjects .swiper .swiper-wrapper .swiper-slide img {
+  @apply object-contain rounded w-fit transition-all duration-75 ease-in-out;
+}
+
+.BottomColor {
+  background-color: #17298e;
+  @apply h-[1.5vh];
+}
+
+.foot {
+  background-color: rgba(14, 14, 14, 0.968627451);
+  color: #eee;
+  @apply px-3 py-3;
+}
+.foot .socials {
+  @apply flex justify-evenly mb-4;
+}
+.foot .socials > div {
+  @apply h-fit p-2;
+}
+.foot .socials .socialButton {
+  display: inline-block;
+  @apply p-1.5 rounded rounded-2xl text-gray-500 bg-gray-900 transition-all ease-in duration-75;
+}
+.foot .socials .socialButton svg {
+  @apply w-4 h-4;
+}
+.foot .socials .socialButton:hover svg, .foot .socials .socialButton:focus svg {
+  @apply text-gray-200;
+}
+.foot .copyx0 h5 {
+  @apply text-[11px] text-center font-sans text-gray-400;
 }

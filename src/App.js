@@ -10,7 +10,7 @@ import Loader from "./COMPONENTS/Loader";
 
 // config({ ssrFadeout: true });
 
-const loadDuration = 25.0;
+const loadDuration = 2000;
 
 const Home = lazy(async () => {
   const [moduleExports] = await Promise.all([
@@ -153,8 +153,8 @@ function App() {
             <Loader />
           }
         >
-          {/* <Layout theme={theme} setTheme={setTheme}> */}
-          <ErrorHandler>
+          <Layout theme={theme} setTheme={setTheme}>
+          {/* <ErrorHandler> */}
             <Switch>
               <Route exact path="/">
                 <Home />
@@ -170,8 +170,8 @@ function App() {
               </Route>
               <Route path="/*" component={Page404} />
             </Switch>
-          </ErrorHandler>
-          {/* </Layout> */}
+          {/* </ErrorHandler> */}
+          </Layout>
         </React.Suspense>
       </Router>
     </>

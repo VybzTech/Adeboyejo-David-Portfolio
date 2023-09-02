@@ -7,7 +7,7 @@ const KeySkills = withRouter(({ history }) => {
   return (
     <div className="keySkills">
       <div>
-      <h2>key skills</h2>
+        <h2>key skills</h2>
       </div>
       <div className="skillList">
         {SKILLS.map((ski) => {
@@ -28,13 +28,16 @@ const KeySkills = withRouter(({ history }) => {
           );
         })}
       </div>
-      <button
-        onClick={() => {
-          history.push("/Contact");
-        }}
-      >
-        HIRE ME
-      </button>
+      <div>
+        <button
+          onClick={() => {
+            history.push("/Contact");
+          }}
+          className="btn"
+        >
+          HIRE ME
+        </button>
+      </div>
     </div>
   );
 });

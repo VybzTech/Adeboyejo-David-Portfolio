@@ -9,7 +9,7 @@ class Typo extends React.Component {
       content: [
         "React Front End Developer",
         "Electronic & Computer Engineer",
-        "Asp .NET Backend Developer",
+        "Asp.NET core Backend Developer",
       ],
       currentText: 0,
       currentTextIndex: 0,
@@ -26,7 +26,7 @@ class Typo extends React.Component {
 
   render() {
     return (
-      <Fade bottom big delay={1300}>
+      <Fade bottom big delay={1000} triggerOnce>
         <div className="h5Hold">
           <p id="text" className="blinkAnime" />
         </div>

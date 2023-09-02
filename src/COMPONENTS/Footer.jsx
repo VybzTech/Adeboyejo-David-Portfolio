@@ -2,6 +2,7 @@ import React from "react";
 // import React, { useState, useEffect } from 'react'
 // import PortfolioPortal from '../MODALS/PortfolioPortal'
 import { socialLinks } from "../PAGES/Utils";
+import { Fade } from "react-awesome-reveal";
 // import { IconButton } from '@material-ui/core'
 
 const Footer = () => {
@@ -39,21 +40,21 @@ const Footer = () => {
       <div className="BottomColor"></div>
       <div className="foot">
         <div className="socials">
-          <div className="socialButtons">
+          <Fade big triggerOnce>
             {socialLinks.map((social) => {
               return (
-                // <IconButton
-                //   title={social.name}
-                //   href={social.href}
-                // >
-                <div
+                <a
                   key={social.name}
-
-                >{social?.icon}</div>
-                // </IconButton>
+                  className="socialButton"
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {social?.icon}
+                </a>
               );
             })}
-          </div>
+          </Fade>
         </div>
         <div className="copyx0">
           <h5>David's Portfolio &copy; 2021. All Rights Reserved.</h5>

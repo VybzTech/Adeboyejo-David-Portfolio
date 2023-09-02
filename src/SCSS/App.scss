@@ -8,6 +8,21 @@
 @import "./tablet";
 @import "./laptop";
 
+//--------- LOADER
+.Loader {
+  @apply w-full h-[100vh];
+  & > div {
+    @apply m-auto w-fit h-fit mt-[40vh];
+    svg {
+      @apply w-[12vw] mx-5;
+    }
+  }
+  .progress {
+    @apply h-1 w-[3rem] bg-gray-900 rounded my-3 transition-all duration-100 ease-in-out;
+  }
+}
+
+//--------- HOME
 #home {
   .rel {
     position: relative;
@@ -21,18 +36,16 @@
       object-fit: cover;
     }
   }
-
   // INTRO EDIT (320x480)
   .intro {
     position: absolute;
     left: 9%;
     top: 33vh;
+    @include goLeft($left: 8%, $top: 30vh);
     .hero,
     .h5Hold {
-      line-height: 0.5;
-      letter-spacing: 0.2px;
       word-spacing: 1px;
-      @apply w-fit text-white font-sans uppercase;
+      @apply leading-[0.5] tracking-[0.2px]  w-fit text-white font-sans uppercase;
     }
     .hero {
       font-size: 11.5px;
@@ -56,15 +69,14 @@
       );
     }
     .btn {
-      @include outlineBtn;
-      @apply rounded rounded-md mt-5 px-5 py-3 ease-in-out;
+      @include outlineBtn($size: 0.65rem);
+      @apply rounded rounded-md mt-5 px-5 py-2 ease-in-out;
       &:hover {
         color: $themeLightBlue;
         background-color: $themeBlueAlpha;
       }
     }
   }
-
   // LIL ABOUT (320X480)
   .lilAbout {
     background: $themeWhite2;
@@ -122,22 +134,34 @@
       }
     }
   }
+  // KEY SKILLS (320X480)
   .skills {
     background: linear-gradient(0rad, #000626, #00326f, #05438d);
     #tsparticles {
+      z-index: 0;
       @apply w-full h-[220vh] overflow-hidden;
       & > canvas {
         position: absolute !important;
       }
     }
     .KeySkillsWrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
+      @include goLeft();
       @apply w-full;
       .keySkills {
+        z-index: 1;
         > div {
           @apply w-full;
+          &:last-of-type {
+            @apply mt-7 mx-auto my-1 w-fit;
+            .btn {
+              @include outlineBtn;
+              @apply w-fit rounded rounded-md px-5 py-1.5 ease-in-out;
+              &:hover {
+                color: $themeLightBlue;
+                background-color: $themeBlueAlpha;
+              }
+            }
+          }
         }
         h2 {
           @apply w-max my-4 mx-auto;
@@ -163,7 +187,7 @@
               @apply min-w-[25%] uppercase text-slate-200 bg-blue-400 text-center;
               p {
                 font-size: 0.7rem;
-                @apply py-[0.35rem] px-1.5 h-fit my-auto mx-auto;
+                @apply py-[0.3rem] px-1.5 h-fit my-auto mx-auto;
               }
             }
             //PROGRESS BAR
@@ -171,7 +195,7 @@
               @apply w-[75%];
               .progress {
                 @include trans(150ms);
-                @apply h-[28px] bg-blue-600;
+                @apply h-[27px] bg-blue-600;
               }
             }
             //  HOVER EFFECTS
@@ -181,13 +205,112 @@
                 box-shadow: 5px 0 10px 0 $themeBlueShadow;
                 .progress {
                   @apply bg-blue-500;
-                  // background-color: #0054fb;
                 }
               }
             }
           }
         }
       }
+    }
+    .skillPoster {
+      z-index: 0;
+      @apply mt-[-1rem] mr-1  w-fit;
+      & > div svg {
+        @apply w-[110%] h-[110%];
+      }
+    }
+    //TOOLS
+    .tools {
+      img {
+      }
+      p {
+        @include LightText(
+          $size: 0.7rem,
+          $align: center,
+          $color: $themeWhitishBlue
+        );
+        @apply w-[240px] mx-auto mt-2;
+      }
+    }
+  }
+  //PROJECTS  (320X480)
+  .homeProjects {
+    h3 {
+      -webkit-text-stroke: 0.5px $themeCoarseBlue;
+      @include LightText(
+        $color: $themeCoarseBlue,
+        $align: center,
+        $size: 0.75rem,
+        $word: 2px,
+        $letter: 0.5px
+      );
+      @apply uppercase mb-[-0.25rem] mt-8;
+    }
+    h1 {
+      @apply mb-8;
+      @include BoldText(
+        $case: capitalize,
+        $align: center,
+        $size: 1.8rem,
+        $letter: -1px
+      );
+    }
+    .swiper {
+      margin: 0 auto;
+      @apply w-[90%];
+      .swiper-wrapper {
+        @apply w-full;
+        .swiper-slide {
+          box-shadow: 0px 2px 5px 0.1px $themeWhitishBlue;
+          @apply h-[45vh] rounded rounded-md overflow-hidden;
+          &:hover,
+          &:focus {
+            box-shadow: 0px 1px 15px 1px $offWhite;
+            img {
+              transform: scale(1.03);
+            }
+          }
+          img {
+            @apply object-contain rounded w-fit transition-all duration-75 ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+//--------- FOOTER
+.BottomColor {
+  background-color: $themeBottomBlue;
+  @apply h-[1.5vh];
+}
+.foot {
+  background-color: $themeBlackBg;
+  color: $offWhite;
+  @apply px-3 py-3;
+  .socials {
+    @apply flex justify-evenly mb-4;
+    > div {
+      @apply h-fit p-2;
+    }
+    .socialButton {
+      display: inline-block;
+      @apply p-1.5 rounded rounded-2xl text-gray-500 bg-gray-900 transition-all ease-in duration-75;
+      svg {
+        @apply w-4 h-4;
+      }
+      &:hover,
+      &:focus {
+        svg {
+          @apply text-gray-200;
+        }
+      }
+    }
+  }
+  .copyx0 {
+    // @apply m-auto;
+    & h5 {
+      @apply text-[11px] text-center font-sans text-gray-400;
     }
   }
 }
@@ -605,66 +728,66 @@
 //         margin-bottom: 1rem;
 //         @include BoldText($case: capitalize, $align: center);
 //       }
-//       .swiper {
-//         // margin-bottom: -0.5rem;
-//         width: 90%;
-//         margin: 0 auto;
-//         .swiper-wrapper {
-//           width: 100%;
-//           .swiper-slide {
-//             box-shadow: 0px 2px 10px 1px $themeWhitishBlue;
-//             background-position: center;
-//             background-size: cover;
-//             // background: $themeBlack;
-//             // width: 300px;
-//             height: 55vh;
-//             // 	objectFit: 'contain',
-//             // 	objectPosition: 'center',
-//             // 	backgroundRepeat: 'no-repeat',
-//             // backgroundSize: 'cover',
-//             // 	backgroundAttachment: 'fixed',
-//             // 	// height: 100vh,
-//             // max-width: 100%;
-//             // object-position: center;
-//             img {
-//               object-fit: contain;
-//               // width: 100%;
-//               border-radius: 3px;
-//               width: inherit;
-//               max-width: -webkit-fill-available;
-//             }
-//             // display: block;
-//             // &.bgImg {
-//             // background-repeat: no-repeat;
-//             // background-size: cover;
-//             // object-fit: contain;
-//             // background-attachment: fixed;
-//             // }
-//             // img {
-//             // 	width: 30%;
-//             // }
+//     .swiper {
+//       // margin-bottom: -0.5rem;
+//       width: 90%;
+//       margin: 0 auto;
+//       .swiper-wrapper {
+//         width: 100%;
+//         .swiper-slide {
+//           box-shadow: 0px 2px 10px 1px $themeWhitishBlue;
+//           background-position: center;
+//           background-size: cover;
+//           // background: $themeBlack;
+//           // width: 300px;
+//           height: 55vh;
+//           // 	objectFit: 'contain',
+//           // 	objectPosition: 'center',
+//           // 	backgroundRepeat: 'no-repeat',
+//           // backgroundSize: 'cover',
+//           // 	backgroundAttachment: 'fixed',
+//           // 	// height: 100vh,
+//           // max-width: 100%;
+//           // object-position: center;
+//           img {
+//             object-fit: contain;
+//             // width: 100%;
+//             border-radius: 3px;
+//             width: inherit;
+//             max-width: -webkit-fill-available;
 //           }
+//           // display: block;
+//           // &.bgImg {
+//           // background-repeat: no-repeat;
+//           // background-size: cover;
+//           // object-fit: contain;
+//           // background-attachment: fixed;
+//           // }
+//           // img {
+//           // 	width: 30%;
+//           // }
 //         }
-//         // 	// cursor: pointer;
-//         // 	// width: 13%;
-//         // 	&.mid {
-//         // 		// width: 20%;
-//         // 		// z-index: 1;
-//         // }
-//         // 	&.large {
-//         // 		// width: 35%;
-//         // 		// z-index: 2;
-//         // 	}
-//         // 	&:nth-of-type(2n) {
-//         // 		// margin: 0 -2.5rem;
-//         // 	}
-//         // 	&:first-child {
-//         // 		// padding-left: 4.5rem;
-//         // 	}
-//         // }
 //       }
+//       // 	// cursor: pointer;
+//       // 	// width: 13%;
+//       // 	&.mid {
+//       // 		// width: 20%;
+//       // 		// z-index: 1;
+//       // }
+//       // 	&.large {
+//       // 		// width: 35%;
+//       // 		// z-index: 2;
+//       // 	}
+//       // 	&:nth-of-type(2n) {
+//       // 		// margin: 0 -2.5rem;
+//       // 	}
+//       // 	&:first-child {
+//       // 		// padding-left: 4.5rem;
+//       // 	}
+//       // }
 //     }
 //   }
+// }
 
 //   //---------PROJECTS
 //   #projects {

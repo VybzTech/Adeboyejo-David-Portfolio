@@ -5,7 +5,7 @@ function SkillSvg() {
 		<div className="skillPoster">
 			{/* SVG IMAGE */}
 			<div>
-				<svg
+				<svg className=" w-fit"
 					viewBox="0 0 720 720"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
@@ -626,12 +626,7 @@ function SkillSvg() {
 					</defs>
 				</svg>
 			</div>
-			<p>
-				Coding is today's language of creativity.
-				All our children deserve a chance to
-				become creators instead of consumers of
-				computer science.
-			</p>
+			
 		</div>
 	);
 }

@@ -26,10 +26,8 @@ const Navbar = withRouter(({ history }) => {
 			<Fade
 				left
 				big
-				appear
-				spy={navBg}
-				duration={600}
-				delay={150}
+				// duration={600}
+				// delay={150}
 			>
 				<div
 					className='logo'
@@ -37,10 +35,11 @@ const Navbar = withRouter(({ history }) => {
 						history.push('/')
 					}}
 				>
-					<Logo />
+					<Logo svgWidth={"5vw"} /> 
+					{/* svgWidth, svgFill, AFill  */}
 				</div>
 			</Fade>
-			<>
+			{/* <>
 				<Zoom
 					right
 					big
@@ -74,9 +73,9 @@ const Navbar = withRouter(({ history }) => {
 						)}
 					</button>
 				</Zoom>
-			</>
+			</> */}
 
-			<div
+			{/* <div
 				className={`navigation ${
 					navControl && 'show'
 				}`}
@@ -92,7 +91,7 @@ const Navbar = withRouter(({ history }) => {
 						setNavControl={setNavControl}
 					/>
 				</Flip>
-			</div>
+			</div> */}
 		</div>
 	)
 })

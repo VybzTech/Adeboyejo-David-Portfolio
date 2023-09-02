@@ -14,11 +14,11 @@ const Loader = () => {
   // }, [])
 
   return (
-    <div className="Loader w-full h-[100vh]">
-      <div className="m-auto w-fit h-fit mt-[40vh]">
+    <div className="Loader">
+      <div className="">
         <Logo svgWidth="7vw" svgFill={"#222"} AFill={"#135be8"} />
         <div
-          className={`progress h-1 bg-gray-900 rounded my-3 duration-300 ease`}
+          className={`progress`}
         />
       </div>
     </div>
