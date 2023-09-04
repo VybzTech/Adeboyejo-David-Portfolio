@@ -37,7 +37,7 @@ const Navigation = withRouter((props) => {
           </button>
         );
       })}
-      <NavContextual setNavControl={setNavControl} />
+      {/* <NavContextual setNavControl={setNavControl} /> */}
     </div>
   );
 });

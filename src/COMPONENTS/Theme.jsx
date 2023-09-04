@@ -1,24 +1,21 @@
 import React, { useEffect } from "react";
+import Moon from "../ICONS/Moon";
+import Sun from "../ICONS/Sun";
 // import { LightSpeed } from "react-awesome-reveal";
 // import {
 // 	Brightness7,
 // 	Brightness3,
 // } from '@material-ui/icons'
-import {
-  Tooltip,
-  initTE,
-} from "tw-elements";
-
+// import { Tooltip, initTE } from "tw-elements";
 
 const Theme = ({ theme, setTheme }) => {
-  useEffect(
-()=>{
-    initTE({ Tooltip })
-  },[])
+  // useEffect(() => {
+  //   initTE({ Tooltip });
+  // }, []);
 
   return (
     <div className="theme">
-{/* <p>
+      {/* <p>
   Hover the link to see the
   <a
     href="#"
@@ -41,6 +38,7 @@ const Theme = ({ theme, setTheme }) => {
           setTheme((t) => !t);
         }}
       >
+        {theme ? <Moon /> : <Sun />}
         {/* {theme ? (
 						// <Brightness3 />
 						

@@ -117,6 +117,66 @@
   @apply h-1 w-[3rem] bg-gray-900 rounded my-3 transition-all duration-100 ease-in-out;
 }
 
+#light .navbar {
+  border-radius: 0 0 11px 11px;
+  z-index: 50;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  transition: all 350ms ease-in-out;
+  @apply h-[11vh] fixed w-full p-2.5;
+}
+#light .navbar .theme {
+  @apply w-fit mr-[5px];
+}
+#light .navbar .theme button {
+  @apply bg-transparent rounded rounded-3xl p-2 text-gray-300 hover:bg-[#eee2] focus:bg-[#eee2] hover:text-gray-100 focus:text-gray-100;
+}
+#light .navbar .navBtn {
+  @apply [&>svg]:w-5 [&>svg]:h-5 [&>svg]:text-gray-200 
+      bg-transparent rounded rounded-3xl p-2 
+      hover:bg-[#eee2] focus:bg-[#eee2] hover:text-gray-100
+      focus:text-gray-100;
+}
+#light .navbar.white {
+  box-shadow: 0 -1px 10px #eee;
+  @apply bg-white;
+}
+#light .navbar.white .navBtn {
+  @apply [&>svg]:text-gray-700;
+}
+#light .navbar.white .theme button {
+  @apply [&>svg]:text-gray-700;
+}
+#light .navbar.white .navigation > div > div .nav {
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.9333333333);
+  color: rgba(0, 0, 0, 0.9333333333);
+}
+#light .navbar.white .navigation.show {
+  @apply bg-[#fff7];
+}
+#light .navbar .navigation {
+  @apply absolute top-[30vh] left-0 m-0 h-0 w-[0%] hidden;
+  transition: all 400ms ease-in-out;
+}
+#light .navbar .navigation > div > div {
+  @apply my-auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#light .navbar .navigation > div > div .nav {
+  -webkit-text-stroke: 0.25px white;
+  font-size: 0.9rem;
+  font-family: montLight;
+  @apply my-2.5 px-5 pt-3 pb-0.5 rounded mx-auto text-white uppercase;
+}
+#light .navbar .navigation.show {
+  @apply bg-[#1114] absolute top-[12vh] h-auto rounded rounded-xl left-4 w-[96%] left-[2%] py-7 m-0 backdrop-blur block;
+}
+
 #home .rel {
   position: relative;
 }

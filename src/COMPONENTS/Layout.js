@@ -7,8 +7,8 @@ const Layout = (props) => {
 
   return (
     <div id="light" className={`${theme ? "dark" : ""}`}>
-      <Navbar />
-      <Theme theme={theme} setTheme={setTheme} />
+      <Navbar theme={theme} setTheme={setTheme}/>
+      {/* <Theme theme={theme} setTheme={setTheme} /> */}
       {children}
       <div id="portals" />
     </div>
