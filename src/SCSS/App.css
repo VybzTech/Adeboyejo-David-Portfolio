@@ -144,10 +144,10 @@
   @apply bg-white;
 }
 #light .navbar.white .navBtn {
-  @apply [&>svg]:text-gray-700;
+  @apply [&>svg]:text-gray-700 hover:bg-[#eee9] focus:bg-[#eee9];
 }
 #light .navbar.white .theme button {
-  @apply [&>svg]:text-gray-700;
+  @apply [&>svg]:text-gray-700 hover:bg-[#eee9] focus:bg-[#eee9];
 }
 #light .navbar.white .navigation > div > div .nav {
   -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.9333333333);

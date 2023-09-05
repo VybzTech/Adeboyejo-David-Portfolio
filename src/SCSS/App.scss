@@ -49,10 +49,10 @@
       @apply bg-white;
 
       .navBtn {
-        @apply [&>svg]:text-gray-700;
+        @apply [&>svg]:text-gray-700 hover:bg-[#eee9] focus:bg-[#eee9];
       }
       .theme button {
-        @apply [&>svg]:text-gray-700;
+        @apply [&>svg]:text-gray-700 hover:bg-[#eee9] focus:bg-[#eee9] ;;
       }
       .navigation {
         > div {

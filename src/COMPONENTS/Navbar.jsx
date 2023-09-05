@@ -22,7 +22,7 @@ const Navbar = withRouter((props) => {
 
   return (
     <div className={`navbar ${navBg && "white"}`}>
-      <Fade left big triggerOnce>
+      <Fade left big triggerOnce delay={750}>
         <div
           className="logo p-2.5"
           onClick={() => {
@@ -34,12 +34,12 @@ const Navbar = withRouter((props) => {
       </Fade>
       <div className="flex">
         <>
-          <Fade up big triggerOnce>
+          <Fade up big triggerOnce delay={750}>
             <Theme theme={theme} setTheme={setTheme} />
           </Fade>
         </>
         <>
-          <Fade up big triggerOnce>
+          <Fade up big triggerOnce delay={750}>
             <button
               className="navBtn"
               onClick={() => {
@@ -48,15 +48,13 @@ const Navbar = withRouter((props) => {
             >
               {!navControl ? ( // MENU
                 <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                  //   fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   focusable="false"
                   aria-hidden="true"
-                    stroke="currentColor"
-                    fill="currentColor"
-                    // class="w-6 h-6"
+                  stroke="currentColor"
+                  fill="currentColor"
                 >
                   <path
                     stroke-linecap="round"
@@ -64,13 +62,13 @@ const Navbar = withRouter((props) => {
                     d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                   />
                 </svg>
-              ) : ( // X
+              ) : (
+                // X
                 <svg
                   stroke-width="1.5"
                   focusable="false"
-                    // stroke="currentColor"
-                    fill="currentColor"
-					viewBox="0 0 24 24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
                   <path
@@ -86,17 +84,15 @@ const Navbar = withRouter((props) => {
       </div>
 
       <div className={`navigation ${navControl && "show"}`}>
-        {/* <Flip
-					top
-					appear
-					spy={navBg}
-					duration={950}
-					delay={150}
-				> */}
         <JackInTheBox>
           <Navigation setNavControl={setNavControl} />
+          <div
+            className="space w-max h-max"
+            onClick={() => {
+              setNavControl((c) => !c);
+            }}
+          ></div>
         </JackInTheBox>
-        {/* </Flip> */}
       </div>
     </div>
   );
