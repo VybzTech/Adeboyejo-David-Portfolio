@@ -1,6 +1,4 @@
 import React from "react";
-// import { Button } from '@material-ui/core'
-import NavContextual from "./NavContextual";
 import { withRouter } from "react-router-dom";
 
 const Navs = [
@@ -37,7 +35,7 @@ const Navigation = withRouter((props) => {
           </button>
         );
       })}
-      {/* <NavContextual setNavControl={setNavControl} /> */}
+      {/* <button className="close">Close</button> */}
     </div>
   );
 });

@@ -10,7 +10,7 @@ const Resume = (props) => {
 	const handleDownload = () => {
 		return FileSaver.saveAs(
 			process.env.PUBLIC_URL + 'dist/RESUME.pdf',
-			"David's Resume.pdf"
+			"Adeboyejo David's Resume.pdf"
 		)
 	}
 

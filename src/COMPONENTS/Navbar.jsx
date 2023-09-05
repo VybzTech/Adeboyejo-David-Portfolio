@@ -8,7 +8,6 @@ import Theme from "./Theme";
 const Navbar = withRouter((props) => {
   const { theme, setTheme, history } = props;
   const [navBg, setNavBg] = useState(false);
-  //   console.log(props);
   const [navControl, setNavControl] = useState(false);
 
   useEffect(() => {
@@ -22,7 +21,7 @@ const Navbar = withRouter((props) => {
 
   return (
     <div className={`navbar ${navBg && "white"}`}>
-      <Fade left big triggerOnce delay={750}>
+      <Fade left big triggerOnce>
         <div
           className="logo p-2.5"
           onClick={() => {
@@ -34,12 +33,12 @@ const Navbar = withRouter((props) => {
       </Fade>
       <div className="flex">
         <>
-          <Fade up big triggerOnce delay={750}>
+          <Fade up big triggerOnce>
             <Theme theme={theme} setTheme={setTheme} />
           </Fade>
         </>
         <>
-          <Fade up big triggerOnce delay={750}>
+          <Fade up big triggerOnce>
             <button
               className="navBtn"
               onClick={() => {
@@ -82,16 +81,9 @@ const Navbar = withRouter((props) => {
           </Fade>
         </>
       </div>
-
       <div className={`navigation ${navControl && "show"}`}>
         <JackInTheBox>
           <Navigation setNavControl={setNavControl} />
-          <div
-            className="space w-max h-max"
-            onClick={() => {
-              setNavControl((c) => !c);
-            }}
-          ></div>
         </JackInTheBox>
       </div>
     </div>

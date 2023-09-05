@@ -49,10 +49,10 @@
       @apply bg-white;
 
       .navBtn {
-        @apply [&>svg]:text-gray-700 hover:bg-[#eee9] focus:bg-[#eee9];
+        @apply [&>svg]:text-gray-700;
       }
       .theme button {
-        @apply [&>svg]:text-gray-700 hover:bg-[#eee9] focus:bg-[#eee9] ;;
+        @apply [&>svg]:text-gray-700;
       }
       .navigation {
         > div {
@@ -70,6 +70,8 @@
         }
       }
     }
+
+    //  INITIAL NAVBAR STYLES
     .navigation {
       @apply absolute top-[30vh] left-0 m-0 h-0 w-[0%] hidden;
       @include trans(400ms);
@@ -87,7 +89,7 @@
       }
       //SHOWN
       &.show {
-        @apply bg-[#1114] absolute top-[12vh] h-auto rounded rounded-xl left-4 w-[96%] left-[2%] py-7 m-0 backdrop-blur block;
+        @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl left-4 w-[96%] left-[2%] py-7 m-0 backdrop-blur block ;
       }
     }
   }
