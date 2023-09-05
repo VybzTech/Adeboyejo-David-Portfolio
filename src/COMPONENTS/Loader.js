@@ -5,7 +5,7 @@ const Loader = () => {
   return (
     <div className="Loader">
       <div className="">
-        span
+        
         <Logo svgWidth="7vw" svgFill={"#222"} AFill={"#135be8"} />
         <div className={`progress`} />
       </div>
