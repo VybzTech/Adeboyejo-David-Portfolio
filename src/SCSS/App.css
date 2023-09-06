@@ -114,7 +114,7 @@
   @apply w-[12vw] mx-5;
 }
 .Loader .progress {
-  @apply h-1 w-[3rem] bg-gray-900 rounded my-3 transition-all duration-100 ease-in-out;
+  @apply h-1 w-[3rem] bg-gray-900 rounded my-7 transition-all duration-100 ease-in-out;
 }
 
 #light .navbar {
@@ -173,8 +173,18 @@
   font-family: montLight;
   @apply my-2.5 px-5 pt-3 pb-0.5 rounded mx-auto text-white uppercase;
 }
+#light .navbar .navigation > div > button {
+  font-size: 0.8rem;
+  -webkit-text-stroke: 0.01px white;
+  background: transparent;
+  @apply tracking-wide;
+  @apply rounded rounded-3xl px-32 py-3 mx-2 my-8 mb-0 bg-slate-700 text-gray-300;
+}
+#light .navbar .navigation > div > button:hover, #light .navbar .navigation > div > button:focus, #light .navbar .navigation > div > button:focus-within, #light .navbar .navigation > div > button:focus-visible {
+  -webkit-text-stroke: 0.1px white;
+}
 #light .navbar .navigation.show {
-  @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl left-4 w-[96%] left-[2%] py-7 m-0 backdrop-blur block;
+  @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl left-4 w-[96%] left-[2%] py-7 m-0 backdrop-blur block shadow-lg;
 }
 
 #home .rel {

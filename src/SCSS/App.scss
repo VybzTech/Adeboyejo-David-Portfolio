@@ -18,7 +18,7 @@
     }
   }
   .progress {
-    @apply h-1 w-[3rem] bg-gray-900 rounded my-3 transition-all duration-100 ease-in-out;
+    @apply h-1 w-[3rem] bg-gray-900 rounded my-7 transition-all duration-100 ease-in-out;
   }
 }
 
@@ -47,7 +47,6 @@
     &.white {
       box-shadow: 0 -1px 10px $offWhite;
       @apply bg-white;
-
       .navBtn {
         @apply [&>svg]:text-gray-700;
       }
@@ -86,10 +85,52 @@
             @apply my-2.5 px-5 pt-3 pb-0.5 rounded mx-auto text-white uppercase;
           }
         }
+        & > button {
+          font-size: 0.8rem;
+          -webkit-text-stroke: 0.01px white;
+          background: transparent;
+          // background: linear-gradient(-15deg, #0005, #1113);
+          @apply tracking-wide;
+
+          // .css-button-neumorphic {
+          // min-width: 130px;
+          // height: 40px;
+          // color: #fff;
+          // padding: 5px 10px;
+          // font-weight: bold;
+          // cursor: pointer;
+          // transition: all 0.3s ease;
+          // position: relative;
+          // display: inline-block;
+          // outline: none;
+          // border-radius: 5px;
+          // border: none;
+          // background: #efefef;
+          // box-shadow: 2px 2px 4px #c8d0e7, -1px -1px 3px #fff;
+          // color: #585858;
+
+          // }
+          //  [&>svg]: [&:active]
+          // @apply shadow-[0px 0px 5px #544];
+          // }
+
+          //font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase ;
+          &:hover,
+          &:focus,
+          &:focus-within,
+          &:focus-visible {
+            // background: linear-gradient(-15deg, #153290, #1e40af);
+            -webkit-text-stroke: 0.1px white;
+          }
+          // }
+
+          @apply rounded rounded-3xl px-32 py-3 mx-2 my-8 mb-0 bg-slate-700 text-gray-300;
+        }
       }
       //SHOWN
       &.show {
-        @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl left-4 w-[96%] left-[2%] py-7 m-0 backdrop-blur block ;
+        @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl left-4 w-[96%] left-[2%] py-7 m-0 backdrop-blur block shadow-lg;
+        // border:1.2px solid #0005;
       }
     }
   }
