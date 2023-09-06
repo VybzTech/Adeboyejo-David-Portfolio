@@ -37,7 +37,9 @@ const Navigation = withRouter((props) => {
           );
         })}
       </div>
-      <button className="close">Close</button>
+      <div>
+        <button className="close">Close</button>
+      </div>
     </>
   );
 });

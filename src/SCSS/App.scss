@@ -85,28 +85,28 @@
             @apply my-2.5 px-5 pt-3 pb-0.5 rounded mx-auto text-white uppercase;
           }
         }
-        & > button {
+        & > div:last-of-type button {
           font-size: 0.8rem;
-          -webkit-text-stroke: 0.01px white;
+          -webkit-text-stroke: 0.02px white;
           background: transparent;
-          // background: linear-gradient(-15deg, #0005, #1113);
-          @apply tracking-wide;
+          @apply tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-12 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
+          // background-color: #000;
 
+          background: linear-gradient(-15deg, #000a, #0003);
           // .css-button-neumorphic {
-          // min-width: 130px;
+          min-width: 130px;
           // height: 40px;
           // color: #fff;
           // padding: 5px 10px;
           // font-weight: bold;
-          // cursor: pointer;
-          // transition: all 0.3s ease;
-          // position: relative;
-          // display: inline-block;
-          // outline: none;
+          @include trans(300ms);
+          position: relative;
+          display: inline-block;
+          outline: none;
           // border-radius: 5px;
-          // border: none;
+          border: none;
           // background: #efefef;
-          // box-shadow: 2px 2px 4px #c8d0e7, -1px -1px 3px #fff;
+          box-shadow: 2px 2px 7px 0.5px #2225, -1px -1px 4px #111a;
           // color: #585858;
 
           // }
@@ -115,16 +115,15 @@
           // }
 
           //font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase ;
-          &:hover,
-          &:focus,
-          &:focus-within,
-          &:focus-visible {
-            // background: linear-gradient(-15deg, #153290, #1e40af);
-            -webkit-text-stroke: 0.1px white;
-          }
+          // &:hover,
+          // &:focus,
+          // &:focus-within,
+          // &:focus-visible {
+          //   // background: linear-gradient(-15deg, #153290, #1e40af);
+          //   -webkit-text-stroke: 0.1px white;
           // }
+          // // }
 
-          @apply rounded rounded-3xl px-32 py-3 mx-2 my-8 mb-0 bg-slate-700 text-gray-300;
         }
       }
       //SHOWN
