@@ -153,6 +153,18 @@
   -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.9333333333);
   color: rgba(0, 0, 0, 0.9333333333);
 }
+#light .navbar.white .navigation > div > div:last-of-type button {
+  @apply text-gray-700;
+  -webkit-text-stroke: 0.02px rgba(0, 0, 0, 0.9333333333);
+  color: rgba(0, 0, 0, 0.9333333333);
+  box-shadow: 2px 2px 8px 0.75px rgba(238, 238, 238, 0.6666666667), -1px -1px 4px rgba(255, 255, 255, 0.8666666667);
+  background: linear-gradient(-15deg, rgba(255, 255, 255, 0.8), rgba(221, 221, 221, 0.4666666667));
+}
+#light .navbar.white .navigation > div > div:last-of-type button:hover, #light .navbar.white .navigation > div > div:last-of-type button:focus, #light .navbar.white .navigation > div > div:last-of-type button:focus-within, #light .navbar.white .navigation > div > div:last-of-type button:focus-visible {
+  box-shadow: 2px 2px 8px 1px rgba(204, 204, 204, 0.6666666667), -1px -1px 4px rgba(221, 221, 221, 0.8666666667);
+  -webkit-text-stroke: 0.75px rgba(0, 0, 0, 0.9333333333);
+  background: linear-gradient(-15deg, rgba(255, 255, 255, 0.8), rgba(221, 221, 221, 0.4666666667));
+}
 #light .navbar.white .navigation.show {
   @apply bg-[#fff7];
 }
@@ -177,7 +189,7 @@
   font-size: 0.8rem;
   -webkit-text-stroke: 0.02px white;
   background: transparent;
-  @apply tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-12 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
+  @apply tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-16 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
   background: linear-gradient(-15deg, rgba(0, 0, 0, 0.6666666667), rgba(0, 0, 0, 0.2));
   min-width: 130px;
   transition: all 300ms ease-in-out;
@@ -186,6 +198,11 @@
   outline: none;
   border: none;
   box-shadow: 2px 2px 7px 0.5px rgba(34, 34, 34, 0.3333333333), -1px -1px 4px rgba(17, 17, 17, 0.6666666667);
+}
+#light .navbar .navigation > div > div:last-of-type button:hover, #light .navbar .navigation > div > div:last-of-type button:focus, #light .navbar .navigation > div > div:last-of-type button:focus-within, #light .navbar .navigation > div > div:last-of-type button:focus-visible {
+  box-shadow: 2px 2px 8px 0.75px rgba(34, 34, 34, 0.6666666667), -1px -1px 4px rgba(17, 17, 17, 0.8666666667);
+  -webkit-text-stroke: 0.05px white;
+  background: linear-gradient(-15deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4666666667));
 }
 #light .navbar .navigation.show {
   @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl left-4 w-[96%] left-[2%] py-7 m-0 backdrop-blur block shadow-lg;
@@ -306,9 +323,8 @@
   @apply w-fit mx-auto mt-7;
 }
 #home .lilAbout .about > div.more .btn {
-  font-size: 11px;
   background: linear-gradient(-15deg, #1e40af, #2563eb);
-  @apply border border-blue-600 font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase w-fit;
+  @apply text-[11px] border border-blue-600 font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase w-fit;
 }
 #home .lilAbout .about > div.more .btn:hover, #home .lilAbout .about > div.more .btn:focus, #home .lilAbout .about > div.more .btn:focus-within, #home .lilAbout .about > div.more .btn:focus-visible {
   background: linear-gradient(-15deg, #153290, #1e40af);
@@ -461,6 +477,42 @@
   @apply object-contain rounded w-fit transition-all duration-75 ease-in-out;
 }
 
+#about .bg {
+  @apply h-[110vh];
+  background-image: url("../IMAGES/AboutBackground.jpg");
+}
+#about .bg h1 {
+  @apply pt-12;
+  -webkit-text-stroke: 0.5px white;
+  color: white;
+  font-family: montXBold, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.05rem;
+}
+#about .content {
+  color: #e5e5e5;
+  font-family: montLight, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 2px;
+  text-align: left;
+  font-size: 0.78rem;
+  @apply overflow-y-auto leading-[2] text-justify px-4 max-h-[75vh];
+}
+#about .content p::first-letter {
+  @apply pl-3;
+}
+#about .btn {
+  background: linear-gradient(-15deg, #076278, #079ab0);
+  @apply text-[11px] border border-cyan-700 font-sans rounded rounded-md text-white px-5 py-3 mx-auto ease-in-out uppercase w-fit;
+}
+#about .btn:hover, #about .btn:focus, #about .btn:focus-within, #about .btn:focus-visible {
+  background: linear-gradient(-15deg, #086d7c, #21a9ca);
+  -webkit-text-stroke: 0.05px white;
+}
+
 .BottomColor {
   background-color: #17298e;
   @apply h-[1.5vh];
@@ -479,13 +531,13 @@
 }
 .foot .socials .socialButton {
   display: inline-block;
-  @apply p-1.5 rounded rounded-2xl text-gray-500 bg-gray-900 transition-all ease-in duration-75;
+  @apply p-1.5 rounded rounded-2xl text-stone-500 bg-zinc-900 transition-all ease-in duration-75;
 }
 .foot .socials .socialButton svg {
   @apply w-4 h-4;
 }
 .foot .socials .socialButton:hover svg, .foot .socials .socialButton:focus svg {
-  @apply text-gray-200;
+  @apply text-stone-200;
 }
 .foot .copyx0 h5 {
   @apply text-[11px] text-center font-sans text-gray-400;

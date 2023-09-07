@@ -61,11 +61,26 @@
               color: $themeBlack;
             }
           }
+          & > div:last-of-type button {
+            @apply text-gray-700;
+            -webkit-text-stroke: 0.02px $themeBlack;
+            color: $themeBlack;
+            // box-shadow: 2px 2px 7px 0.5px #1115, -1px -1px 4px #222a;
+            box-shadow: 2px 2px 8px 0.75px #eeea, -1px -1px 4px #fffd;
+            background: linear-gradient(-15deg, #fffc, #ddd7);
+            &:hover,
+            &:focus,
+            &:focus-within,
+            &:focus-visible {
+              box-shadow: 2px 2px 8px 1px #ccca, -1px -1px 4px #dddd;
+              -webkit-text-stroke: 0.75px $themeBlack;
+              background: linear-gradient(-15deg, #fffc, #ddd7);
+            }
+          }
         }
         //SHOWN
         &.show {
           @apply bg-[#fff7]; //border
-          // @apply bg-[#1114] absolute top-[12vh] h-[60vh] rounded rounded-xl left-4 w-[96%] left-[2%] p-4 m-0 backdrop-blur block;
         }
       }
     }
@@ -89,41 +104,23 @@
           font-size: 0.8rem;
           -webkit-text-stroke: 0.02px white;
           background: transparent;
-          @apply tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-12 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
-          // background-color: #000;
-
+          @apply tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-16 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
           background: linear-gradient(-15deg, #000a, #0003);
-          // .css-button-neumorphic {
           min-width: 130px;
-          // height: 40px;
-          // color: #fff;
-          // padding: 5px 10px;
-          // font-weight: bold;
           @include trans(300ms);
           position: relative;
           display: inline-block;
           outline: none;
-          // border-radius: 5px;
           border: none;
-          // background: #efefef;
           box-shadow: 2px 2px 7px 0.5px #2225, -1px -1px 4px #111a;
-          // color: #585858;
-
-          // }
-          //  [&>svg]: [&:active]
-          // @apply shadow-[0px 0px 5px #544];
-          // }
-
-          //font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase ;
-          // &:hover,
-          // &:focus,
-          // &:focus-within,
-          // &:focus-visible {
-          //   // background: linear-gradient(-15deg, #153290, #1e40af);
-          //   -webkit-text-stroke: 0.1px white;
-          // }
-          // // }
-
+          &:hover,
+          &:focus,
+          &:focus-within,
+          &:focus-visible {
+            box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
+            -webkit-text-stroke: 0.05px white;
+            background: linear-gradient(-15deg, #000c, #0007);
+          }
         }
       }
       //SHOWN
@@ -230,9 +227,8 @@
       > div.more {
         @apply w-fit mx-auto mt-7;
         .btn {
-          font-size: 11px;
           background: linear-gradient(-15deg, #1e40af, #2563eb);
-          @apply border border-blue-600 font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase w-fit;
+          @apply text-[11px] border border-blue-600 font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase w-fit;
           &:hover,
           &:focus,
           &:focus-within,
@@ -389,6 +385,44 @@
   }
 }
 
+//--------- ABOUT
+#about {
+  .bg {
+    @apply h-[110vh];
+    background-image: url("../IMAGES/AboutBackground.jpg");
+    h1 {
+      @apply pt-12;
+      -webkit-text-stroke: 0.5px white;
+      @include BoldText(
+        $align: center,
+        $color: white,
+        $size: 2.05rem,
+        $word: 7px
+      );
+    }
+  }
+  .content {
+    @include LightText($size: 0.78rem, $word: 2px, $color: $gray);
+    @apply overflow-y-auto leading-[2] text-justify px-4 max-h-[75vh];
+
+    p::first-letter {
+      @apply pl-3;
+    }
+  }
+  .btn {
+    background: linear-gradient(-15deg, #076278, #079ab0);
+    @apply text-[11px] border border-cyan-700 font-sans rounded rounded-md text-white px-5 py-3 mx-auto ease-in-out uppercase w-fit;
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+      background: linear-gradient(-15deg, #086d7c, #21a9ca);
+      -webkit-text-stroke: 0.05px white;
+    }
+  }
+  
+}
+
 //--------- FOOTER
 .BottomColor {
   background-color: $themeBottomBlue;
@@ -405,14 +439,14 @@
     }
     .socialButton {
       display: inline-block;
-      @apply p-1.5 rounded rounded-2xl text-gray-500 bg-gray-900 transition-all ease-in duration-75;
+      @apply p-1.5 rounded rounded-2xl text-stone-500 bg-zinc-900 transition-all ease-in duration-75;
       svg {
         @apply w-4 h-4;
       }
       &:hover,
       &:focus {
         svg {
-          @apply text-gray-200;
+          @apply text-stone-200;
         }
       }
     }

@@ -46,22 +46,13 @@ const Intro = () => {
       window.removeEventListener("scroll", () => {});
     };
   }, [showCV]);
-  // body.children.home
   return (
+    <>
     <div className="intro">
-      <>
-        {/* I am Intro */}
-        {/* // 	delay: , */}
+      <Slide triggerOnce delay={200} left>
         <Slide delay={7000} direction="down" duration={250} triggerOnce reverse>
           <p className="hero ">Hello I'm</p>
         </Slide>
-        {/* <Zoom delay={1200}> */}
-        {/* <animated.div
-						className='hero'
-						style={hero}
-					>
-        Hello I'm
-					</animated.div> */}
         <h1>Adeboyejo David</h1>
         <Typo />
         <button
@@ -73,7 +64,6 @@ const Intro = () => {
           }}
           className="btn"
           variant="outlined"
-          // disableElevation={false}
         >
           download cv
         </button>
@@ -81,8 +71,9 @@ const Intro = () => {
           </Pulse> */}
         {/* </Zoom> */}
         {/* <Resume showCV={showCV} setShowCV={setShowCV} /> */}
-      </>
+      </Slide>
     </div>
+  </>
   );
 };
 

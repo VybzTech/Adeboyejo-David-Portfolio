@@ -38,7 +38,9 @@ const Navigation = withRouter((props) => {
         })}
       </div>
       <div>
-        <button className="close">Close</button>
+        <button className="close" onClick={() => setNavControl((n) => !n)}>
+          Close
+        </button>
       </div>
     </>
   );

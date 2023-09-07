@@ -13,18 +13,18 @@ const Home = () => {
   return (
     <div id="home">
       <ErrorHandler>
-          <Video vid={homeVideo} img={homeBg} imgName="HomeBg" />
-          <Intro /> 
-      <ErrorHandler>
-        <LilAbout />
-      </ErrorHandler>
-      <ErrorHandler>
-        <Skills />
-      </ErrorHandler>
-      <ErrorHandler>
-        <MyWorks />
-      </ErrorHandler>
-      <Footer />
+        <Video vid={homeVideo} img={homeBg} imgName="HomeBg" />
+          <Intro />
+        <ErrorHandler>
+          <LilAbout />
+        </ErrorHandler>
+        <ErrorHandler>
+          <Skills />
+        </ErrorHandler>
+        <ErrorHandler>
+          <MyWorks />
+        </ErrorHandler>
+        <Footer />
       </ErrorHandler>
     </div>
   );

@@ -29,7 +29,7 @@ const About = () => {
       });
     }
 
-    observer.observe(document?.querySelector("section"));
+    // observer.observe(document?.querySelector("section"));
 
     window.addEventListener("scroll", () => {
       if (document.documentElement.scrollTop === 0) {
@@ -45,29 +45,46 @@ const About = () => {
   return (
     <div id="about">
       <div className="bg">
-        <Zoom big duration={750} delay={1200} cascade={true}>
+        <Zoom triggerOnce big duration={750} delay={1200}>
           <h1>about me</h1>
         </Zoom>
-        <div className="content">
-          <Fade big duration={750} delay={1200}>
+        <blockquote className="content">
+          <Fade triggerOnce cascade big duration={750} delay={1500}>
             <p>
-              Hello, my name is Adeboyejo David and i'm a young, enthusiatic &
-              hardworking engineer. My interest in website development started
-              in 2021 after a training programme I'd say, changed my perspective
-              of the technical world. Based on some programming languages like
-              HTML, CSS & Javascript I could orchestrate a functional website
-              and integrate web tools like Bootstrap, Jquery and Super CSS to
-              achieve an amazing interface and user experience. Although my
-              current focus is on React JS, I have some basic knowledge in
-              back-end development using Php, Node JS or Firebase. I am a
-              graduate of Lagos State University LASU, majored in Electronics
-              and Computer Engineering and a certified member of the NSE. you
-              can click the button below to read more about me or download my
-              resume.
+              Dear Reader, I extend my warm greetings to you. My name is
+              Adeboyejo David, and I am an engineer known for my unwavering
+              commitment, production of high-quality work and my enthusiasm for
+              scalable solutions. My journey into the world of website
+              development began in early 2020, when I participated in a
+              transformative training program that completely reshaped my
+              perception of the dynamic tech industry.
+            </p>
+            <p>
+              As a skilled developer, I can create fully functional React
+              websites using HTML, CSS, JavaScript, TypeScript, and SCSS. I'm
+              experienced in integrating tools like Bootstrap, JQuery, Super
+              CSS, and Tailwind CSS to create amazing user interfaces.
+              Currently, I'm focused on working with the Asp .NET Core Framework
+              and using C# for database manipulation.I also have a solid
+              foundation in back-end development, particularly using Backend as
+              a Service (BAAS) solutions like Firebase.
+            </p>
+            <p>
+              I am a graduate of Lagos State University (LASU), where I majored
+              in Electronic & Computer Engineering. Additionally, I have
+              obtained certification as a React developer, showcasing my
+              expertise in the field. My genuine eagerness lies in applying my
+              skills to enhance software development initiatives for employers
+              or tech startups. Together, let us collaborate to build advanced
+              and innovative solutions that meet your unique needs!
             </p>
           </Fade>
-          {/* <RubberBand spy={top}> */}
+        </blockquote>
+        <div 
+            className="w-fit mx-auto my-3"
+            >
           <button
+            className="btn"
             onClick={() => {
               setShowCV((cv) => !cv);
               setTimeout(() => {
@@ -77,16 +94,15 @@ const About = () => {
           >
             download cv
           </button>
-          {/* </RubberBand> */}
         </div>
       </div>
-      <ScrollUp />
-      <Resume showCV={showCV} setShowCV={setShowCV} />
+      {/* <ScrollUp /> */}
+      {/* <Resume showCV={showCV} setShowCV={setShowCV} /> */}
       <section>
-        <Zoom when={anime}>
+        <Zoom>
           <ImageMe />
         </Zoom>
-        <AboutMe anime={anime} />
+        <AboutMe />
       </section>
       <MyServices />
       <Footer />
