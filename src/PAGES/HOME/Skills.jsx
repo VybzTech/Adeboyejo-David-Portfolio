@@ -1,8 +1,8 @@
-import { Params } from "../Utils";
 import SkillSvg from "./SkillSvg";
 import Tools from "./Tools";
 import KeySkills from "./KeySkills";
 import React, { useState } from "react";
+import { Params } from "../Utils";
 import Particles from "react-tsparticles";
 import { Fade, Slide } from "react-awesome-reveal";
 import ReactVisibilitySensor from "react-visibility-sensor";

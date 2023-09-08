@@ -3,7 +3,13 @@ import Twitter from "../ICONS/Twitter";
 import Github from "../ICONS/Github";
 import LinkedIn from "../ICONS/LinkedIn";
 import Facebook from "../ICONS/Facebook";
-import Whatsapp from "../ICONS/Whatsapp";
+// import Whatsapp from "../ICONS/Whatsapp";
+import DEBUG from "../ICONS/SERVICES/DEBUG.png";
+import DEVELOPMENT from "../ICONS/SERVICES/DEVELOPMENT.png";
+import MAINTENANCE from "../ICONS/SERVICES/MAINTENANCE.png";
+import DESIGN from "../ICONS/SERVICES/DESIGN.png";
+import SEO from "../ICONS/SERVICES/SEO.png";
+import CODE from "../ICONS/SERVICES/CODE.png";
 // 	Phone,
 // 	LinkedIn,
 // 	Instagram,
@@ -399,31 +405,37 @@ export const SERVICES = [
     name: "DESIGN",
     content:
       "I create designs that suit cleint's requirements by utilizing specific design tools to achieve an attractive user interface that converts visitors to customers across devices.",
+    img: DESIGN,
   },
   {
     name: "SEO RESEARCH",
     content:
       "Search Engine Optimization is an essential feature clients who hope for their sites to rank on Google search (top 10) or other search engines. I use web analytic tools to measure site trafffic to better optimize SEO and improve marketing.",
+    img: SEO,
   },
   {
     name: "MAINTENANCE",
     content:
       "I will ensure every software product under my care is properly secured & maintained. I'll also make use of web analytic tools to measure site traffic to optimize performance for better marketing strategies.",
+    img: MAINTENANCE,
   },
   {
     name: "CODE",
     content:
       "I specialize in writing clean commented code which works well when integrating a library, managing open source documentation and maintaining of Company legacy code alongside a team of developers. I ensure my code is cross-browser compatible & W3 tested.",
+    img: CODE,
   },
   {
     name: "DEVELOPMENT",
     content:
       "I develop projects following the development life cycles which emcompasses the google standard requirements (through meta tags, description etc.) for outputting the best software product to clients.",
+    img: DEVELOPMENT,
   },
   {
     name: "DEBUG",
     content:
       "I debug twice as hard as writing the code in the first place, having my softwares undergo several tests to ensure they are scable. Thus, preventing situations where a software product breaks down due to unforeseen actions by a user.",
+    img: DEBUG,
   },
 ];
 
@@ -435,19 +447,19 @@ export const socialLinks = [
     href: "https://www.twitter.com/djay_vybz",
   },
   {
-	name: "Facebook",
-	icon: <Facebook />,
-	href: "https://www.facebook.com/david-adeyinka",
-},
+    name: "Facebook",
+    icon: <Facebook />,
+    href: "https://www.facebook.com/david-adeyinka",
+  },
   {
-	  name: "Instagram",
-	  icon: <Instagram />,
-	  href: "https://www.instagram.com/vybz.tech",
-	},
-{
-	name: "LinkedIn",
-	icon: <LinkedIn />,
-	href: "https://www.LinkedIn.com/in/VybzTech",
+    name: "Instagram",
+    icon: <Instagram />,
+    href: "https://www.instagram.com/vybz.tech",
+  },
+  {
+    name: "LinkedIn",
+    icon: <LinkedIn />,
+    href: "https://www.LinkedIn.com/in/VybzTech",
   },
   {
     name: "Github",

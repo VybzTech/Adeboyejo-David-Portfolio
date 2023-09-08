@@ -404,7 +404,6 @@
   .content {
     @include LightText($size: 0.78rem, $word: 2px, $color: $gray);
     @apply overflow-y-auto leading-[2] text-justify px-4 max-h-[75vh];
-
     p::first-letter {
       @apply pl-3;
     }
@@ -420,7 +419,77 @@
       -webkit-text-stroke: 0.05px white;
     }
   }
-  
+  section {
+    .imgX2 {
+      @apply w-[80%] rounded-xl overflow-hidden my-3 mt-8 mx-auto;
+      img {
+        @apply w-full;
+        @include trans(450ms);
+        &:hover {
+          transform: scale(1.037);
+        }
+      }
+    }
+    .aboutMe {
+      @include LightText($size: 0.78rem, $word: 2px);
+      @apply leading-[2.1] text-justify px-4 pt-3 pb-6;
+      p {
+        @apply [&>a]:font-bold;
+        &::first-letter {
+          @apply pl-3;
+        }
+      }
+    }
+  }
+  .myServices {
+    @apply relative;
+    background: linear-gradient(0rad, #000626, #00326f, #05438d);
+    #tsparticles {
+      z-index: 0;
+      @apply w-full h-[150vh] overflow-hidden; // 120vh
+      & > canvas {
+        position: absolute !important;
+      }
+    }
+    .serviceWrapper {
+      @apply w-full px-4;
+      @include goLeft();
+      h2 {
+        @apply pt-4;
+        -webkit-text-stroke: 0.25px white;
+        @include BoldText($align: center, $color: white, $size: 1.8rem);
+      }
+      .serviceList {
+        h4 {
+          -webkit-text-stroke: 0.7px white;
+          @include BoldText($align: center, $color: white, $size: 1.1rem);
+          font-family: montReg;
+        }
+        p {
+          @include LightText(
+            $align: center,
+            $size: 0.75rem,
+            $word: 2px,
+            $color: $themeWhite
+          );
+        }
+      }
+    }
+
+    // > div {
+    //   //           padding-left: 3.5rem;
+    // }
+    // span {
+    //   //           color: $themeBlueOptic;
+    //   //           -webkit-text-stroke: 0.5px transparent;
+    //   //           @include trans(350ms);
+    //   &:hover {
+    //     //             cursor: pointer;
+    //     //             -webkit-text-stroke-color: $themeBlueDeep;
+    //     //             color: $themeBlueDeep;
+    //   }
+    // }
+  }
 }
 
 //--------- FOOTER
