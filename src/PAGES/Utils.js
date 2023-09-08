@@ -4,12 +4,12 @@ import Github from "../ICONS/Github";
 import LinkedIn from "../ICONS/LinkedIn";
 import Facebook from "../ICONS/Facebook";
 // import Whatsapp from "../ICONS/Whatsapp";
-import DEBUG from "../ICONS/SERVICES/DEBUG.png";
-import DEVELOPMENT from "../ICONS/SERVICES/DEVELOPMENT.png";
-import MAINTENANCE from "../ICONS/SERVICES/MAINTENANCE.png";
-import DESIGN from "../ICONS/SERVICES/DESIGN.png";
-import SEO from "../ICONS/SERVICES/SEO.png";
-import CODE from "../ICONS/SERVICES/CODE.png";
+import DEBUG from "../ICONS/SERVICES/DEBUG.svg";
+import DEVELOPMENT from "../ICONS/SERVICES/DEVELOPMENT.svg";
+import MAINTENANCE from "../ICONS/SERVICES/MAINTENANCE.svg";
+import DESIGN from "../ICONS/SERVICES/DESIGN.svg";
+import SEO from "../ICONS/SERVICES/SEO.svg";
+import CODE from "../ICONS/SERVICES/CODE.svg";
 // 	Phone,
 // 	LinkedIn,
 // 	Instagram,
