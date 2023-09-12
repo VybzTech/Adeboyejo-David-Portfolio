@@ -118,7 +118,7 @@
 }
 
 #light .navbar {
-  border-radius: 0 0 11px 11px;
+  border-radius: 0 0 15px 15px;
   z-index: 50;
   align-items: center;
   display: flex;
@@ -565,8 +565,16 @@
   text-transform: uppercase;
   font-size: 1.8rem;
 }
-#about .myServices .serviceWrapper .serviceList h4 {
-  -webkit-text-stroke: 0.7px white;
+#about .myServices .serviceWrapper .serviceList .service {
+  @apply m-0;
+  transition: all 400ms ease-in-out;
+}
+#about .myServices .serviceWrapper .serviceList .service img {
+  @apply my-2.5 px-5 pt-3 pb-0.5 rounded w-8 h-8;
+}
+#about .myServices .serviceWrapper .serviceList .service h4 {
+  -webkit-text-stroke: 0.5px white;
+  font-family: montReg;
   color: white;
   font-family: montXBold, Verdana, sans-serif;
   letter-spacing: 0;
@@ -574,15 +582,14 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 1.1rem;
-  font-family: montReg;
 }
-#about .myServices .serviceWrapper .serviceList p {
+#about .myServices .serviceWrapper .serviceList .service p {
   color: #f9f9fa;
   font-family: montLight, Verdana, sans-serif;
   letter-spacing: 0;
   word-spacing: 2px;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 .BottomColor {

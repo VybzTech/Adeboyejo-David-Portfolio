@@ -2,12 +2,11 @@ import React from "react";
 
 const ServiceCard = ({ service }) => {
   const { name, content, img } = service;
-  console.log(img)
+  console.log(img);
   return (
     <div className="service">
-<>{img}</>
-      {/* <img src={img} alt={name} srcset={name} /> */}
-	  <h4>{name}</h4>
+      <img className="w-full w-10 text-green-300" src={img} alt={name} />
+      <h4>{name}</h4>
       <p>{content}</p>
     </div>
   );

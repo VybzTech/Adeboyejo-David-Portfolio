@@ -25,7 +25,7 @@
 //--------- NAVBAR
 #light {
   .navbar {
-    border-radius: 0 0 11px 11px;
+    border-radius: 0 0 15px 15px;
     z-index: 50;
     @include flex($justify: space-between);
     @include trans(350ms);
@@ -460,18 +460,25 @@
         @include BoldText($align: center, $color: white, $size: 1.8rem);
       }
       .serviceList {
-        h4 {
-          -webkit-text-stroke: 0.7px white;
-          @include BoldText($align: center, $color: white, $size: 1.1rem);
-          font-family: montReg;
-        }
-        p {
-          @include LightText(
-            $align: center,
-            $size: 0.75rem,
-            $word: 2px,
-            $color: $themeWhite
-          );
+        .service {
+          @apply m-0;
+          @include trans(400ms);
+          img {
+            @apply my-2.5 px-5 pt-3 pb-0.5 rounded w-8 h-8;
+          }
+          h4 {
+            -webkit-text-stroke: 0.5px white;
+            font-family: montReg;
+            @include BoldText($align: center, $color: white, $size: 1.1rem);
+          }
+          p {
+            @include LightText(
+              $align: center,
+              $size: 0.7rem,
+              $word: 2px,
+              $color: $themeWhite
+            );
+          }
         }
       }
     }
