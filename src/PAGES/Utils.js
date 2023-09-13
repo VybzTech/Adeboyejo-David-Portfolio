@@ -438,7 +438,7 @@ export const Params2 = {
       },
     },
     size: {
-      value: 2.1,
+      value: 2.5,
       random: true,
       anim: {
         enable: true,
@@ -449,14 +449,14 @@ export const Params2 = {
     },
     line_linked: {
       enable: true,
-      distance: 300,
+      distance: 200,
       color: "#333333",
       opacity: 0.1,
       width: 0.5,
     },
     move: {
       enable: true,
-      speed: 5,
+      speed: 3,
       direction: "none",
       random: true,
       straight: false,
@@ -501,7 +501,7 @@ export const Params2 = {
         duration: 0.5,
       },
       push: {
-        particles_nb: 3,
+        particles_nb: 1,
       },
       remove: {
         particles_nb: 2,

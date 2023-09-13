@@ -539,11 +539,11 @@
 }
 #about .myServices {
   @apply relative;
-  background: linear-gradient(0rad, #f2f2f2, #f9f9f9, #fafafa);
+  background: linear-gradient(0rad, #f2f2f2, #fafafa);
 }
 #about .myServices #tsparticles {
   z-index: 0;
-  @apply w-full h-[400vh] overflow-hidden;
+  @apply w-full h-[430vh] overflow-hidden;
 }
 #about .myServices #tsparticles > canvas {
   position: absolute !important;
@@ -556,20 +556,20 @@
 }
 #about .myServices .serviceWrapper h2 {
   @apply pt-6;
-  -webkit-text-stroke: 0.45px #222;
+  -webkit-text-stroke: 0.5px #111;
   color: #222;
   font-family: montXBold, Verdana, sans-serif;
-  letter-spacing: 0;
+  letter-spacing: -1px;
   word-spacing: 0;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 #about .myServices .serviceWrapper .serviceList {
   @apply mt-6;
 }
 #about .myServices .serviceWrapper .serviceList .service {
-  @apply mb-5 pl-7 pr-4 py-7 pb-10 bg-white rounded rounded-3xl;
+  @apply mb-5 pl-7 pr-4 py-7 pb-10 bg-white rounded rounded-3xl overflow-hidden;
   box-shadow: 1px 2px 10px 0.5px rgba(221, 221, 221, 0.1333333333);
   transition: all 400ms ease-in-out;
 }
@@ -592,15 +592,24 @@
   word-spacing: 0;
   text-align: left;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 #about .myServices .serviceWrapper .serviceList .service p {
+  z-index: 1;
   color: #222;
   font-family: montLight, Verdana, sans-serif;
   letter-spacing: 0;
   word-spacing: 1px;
   text-align: left;
   font-size: 0.75rem;
+}
+#about .myServices .serviceWrapper .serviceList .service .backdrop {
+  margin: -3.3rem -1rem -3.2rem auto;
+  @apply w-fit;
+}
+#about .myServices .serviceWrapper .serviceList .service .backdrop svg {
+  fill: #f7f7f7;
+  @apply w-32 h-32 object-contain;
 }
 
 .BottomColor {

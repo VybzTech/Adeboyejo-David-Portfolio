@@ -444,10 +444,10 @@
   .myServices {
     @apply relative;
     // background: linear-gradient(0rad, #000626, #00326f, #05438d);
-    background: linear-gradient(0rad, #f2f2f2, #f9f9f9, #fafafa);
+    background: linear-gradient(0rad, #f2f2f2, #fafafa);
     #tsparticles {
       z-index: 0;
-      @apply w-full h-[400vh] overflow-hidden; // 120vh
+      @apply w-full h-[430vh] overflow-hidden; // 120vh
       & > canvas {
         position: absolute !important;
       }
@@ -457,13 +457,13 @@
       @include goLeft();
       h2 {
         @apply pt-6;
-        -webkit-text-stroke: 0.45px $themeBlack2;
-        @include BoldText($align: center, $color: $themeBlack2, $size: 1.8rem);
+        -webkit-text-stroke: 0.5px $themeBlack1;
+        @include BoldText($align: center, $color: $themeBlack2, $size: 1.9rem,$letter:-1px);
       }
       .serviceList {
         @apply mt-6;
         .service {
-          @apply mb-5 pl-7 pr-4 py-7 pb-10 bg-white rounded rounded-3xl;
+          @apply mb-5 pl-7 pr-4 py-7 pb-10 bg-white rounded rounded-3xl overflow-hidden;
           box-shadow: 1px 2px 10px 0.5px #ddd2;
           @include trans(400ms);
           &:hover {
@@ -471,27 +471,30 @@
           }
           .icon {
             @apply mb-3 rounded rounded-xl bg-blue-100 w-fit py-2 px-[.55rem]; // w-14 h-14  px-2 py-3;
-            svg {
-              // fill: linear-gradient(15deg, #0ea2c8, #05438d);
-              fill: $themeCoarseBlue;
+            svg { fill: $themeCoarseBlue;
               @apply object-contain  w-10 h-10; // mx-2 my-5;
-            }
-            // .img {
-            //   @apply text-gray-200;
-            //   // @apply my-2.5 px-5 pt-3 pb-0.5 rounded w-8 h-8;
-            // }
-          }
+            }          }
           h4 {
             -webkit-text-stroke: 0.5px $themeBlack2;
             font-family: montReg;
-            @include BoldText($color: $themeBlack2, $size: 1.1rem);
+            @include BoldText($color: $themeBlack2, $size: 1.2rem);
           }
           p {
+            z-index: 1;
             @include LightText(
               $size: 0.75rem,
               $word: 1px,
               $color: $themeBlack2
             );
+          }
+          .backdrop {
+            margin: -3.3rem -1rem -3.2rem auto;
+            @apply w-fit;
+            svg {
+              fill:  #f7f7f7,;
+              @apply w-32 h-32 object-contain;
+              // width: 5rem;
+            }
           }
         }
       }
@@ -512,6 +515,9 @@
     // }
   }
 }
+
+//--------- PROJECT
+#projects{}
 
 //--------- FOOTER
 .BottomColor {

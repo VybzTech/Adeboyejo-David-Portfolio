@@ -14,6 +14,9 @@ const ServiceCard = ({ service }) => {
       </div>
       <h4>{name}</h4>
       <p>{content}</p>
+      <div className="backdrop">
+        {img}
+      </div>
     </div>
   );
 };
