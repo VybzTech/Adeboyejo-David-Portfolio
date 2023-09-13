@@ -1,5 +1,5 @@
 import { SERVICES } from "../Utils";
-import { Params } from "../Utils";
+import { Params,Params2 } from "../Utils";
 import Particles from "react-tsparticles";
 import { Fade, Zoom } from "react-awesome-reveal";
 import ServiceCard from "./ServiceCard";
@@ -16,7 +16,7 @@ function MyServices() {
   return (
     <div className="myServices">
       <Fade big triggerOnce>
-        <Particles params={Params} />
+        <Particles params={Params2} />
       </Fade>
       <div className="serviceWrapper">
         <Zoom big duration={750} cascade={true} triggerOnce>

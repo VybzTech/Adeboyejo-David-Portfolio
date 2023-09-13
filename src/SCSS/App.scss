@@ -443,10 +443,11 @@
   }
   .myServices {
     @apply relative;
-    background: linear-gradient(0rad, #000626, #00326f, #05438d);
+    // background: linear-gradient(0rad, #000626, #00326f, #05438d);
+    background: linear-gradient(0rad, #f2f2f2, #f9f9f9, #fafafa);
     #tsparticles {
       z-index: 0;
-      @apply w-full h-[150vh] overflow-hidden; // 120vh
+      @apply w-full h-[400vh] overflow-hidden; // 120vh
       & > canvas {
         position: absolute !important;
       }
@@ -455,28 +456,41 @@
       @apply w-full px-4;
       @include goLeft();
       h2 {
-        @apply pt-4;
-        -webkit-text-stroke: 0.25px white;
-        @include BoldText($align: center, $color: white, $size: 1.8rem);
+        @apply pt-6;
+        -webkit-text-stroke: 0.45px $themeBlack2;
+        @include BoldText($align: center, $color: $themeBlack2, $size: 1.8rem);
       }
       .serviceList {
+        @apply mt-6;
         .service {
-          @apply m-0;
+          @apply mb-5 pl-7 pr-4 py-7 pb-10 bg-white rounded rounded-3xl;
+          box-shadow: 1px 2px 10px 0.5px #ddd2;
           @include trans(400ms);
-          img {
-            @apply my-2.5 px-5 pt-3 pb-0.5 rounded w-8 h-8;
+          &:hover {
+            @apply shadow-lg;
+          }
+          .icon {
+            @apply mb-3 rounded rounded-xl bg-blue-100 w-fit py-2 px-[.55rem]; // w-14 h-14  px-2 py-3;
+            svg {
+              // fill: linear-gradient(15deg, #0ea2c8, #05438d);
+              fill: $themeCoarseBlue;
+              @apply object-contain  w-10 h-10; // mx-2 my-5;
+            }
+            // .img {
+            //   @apply text-gray-200;
+            //   // @apply my-2.5 px-5 pt-3 pb-0.5 rounded w-8 h-8;
+            // }
           }
           h4 {
-            -webkit-text-stroke: 0.5px white;
+            -webkit-text-stroke: 0.5px $themeBlack2;
             font-family: montReg;
-            @include BoldText($align: center, $color: white, $size: 1.1rem);
+            @include BoldText($color: $themeBlack2, $size: 1.1rem);
           }
           p {
             @include LightText(
-              $align: center,
-              $size: 0.7rem,
-              $word: 2px,
-              $color: $themeWhite
+              $size: 0.75rem,
+              $word: 1px,
+              $color: $themeBlack2
             );
           }
         }
@@ -1502,6 +1516,7 @@
 //         @include BoldText(
 //           $color: white,
 //           $size: 3.5rem,
+
 //           $align: center,
 //           $letter: 1px
 //         );

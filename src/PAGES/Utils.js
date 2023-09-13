@@ -4,12 +4,12 @@ import Github from "../ICONS/Github";
 import LinkedIn from "../ICONS/LinkedIn";
 import Facebook from "../ICONS/Facebook";
 // import Whatsapp from "../ICONS/Whatsapp";
-import Debug from "../ICONS/SERVICES/DEBUG.png";
-import Development from "../ICONS/SERVICES/DEVELOPMENT.png";
-import Maintenance from "../ICONS/SERVICES/MAINTENANCE.png";
-import Design from "../ICONS/SERVICES/DESIGN.png";
-import Seo from "../ICONS/SERVICES/SEO.png";
-import Code from "../ICONS/SERVICES/CODE.png";
+import Debug from "../ICONS/SERVICES/Debug";
+import Development from "../ICONS/SERVICES/Development";
+import Maintenance from "../ICONS/SERVICES/Maintenance";
+import Design from "../ICONS/SERVICES/Design";
+import Seo from "../ICONS/SERVICES/Seo";
+import Code from "../ICONS/SERVICES/Code";
 // 	Phone,
 // 	LinkedIn,
 // 	Instagram,
@@ -400,43 +400,153 @@ export const Params = {
   },
   retina_detect: false,
 };
+export const Params2 = {
+  particles: {
+    number: {
+      value: 40,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+    color: {
+      value: "#222222",
+    },
+    shape: {
+      type: "star",
+      stroke: {
+        width: 1.5,
+        color: "#222222",
+      },
+      polygon: {
+        nb_sides: 4,
+      },
+      image: {
+        src: "img/github.svg",
+        width: 100,
+        height: 100,
+      },
+    },
+    opacity: {
+      value: 0.5,
+      random: true,
+      anim: {
+        enable: true,
+        speed: 0.7,
+        opacity_min: 0.001,
+        sync: false,
+      },
+    },
+    size: {
+      value: 2.1,
+      random: true,
+      anim: {
+        enable: true,
+        speed: 3,
+        size_min: 0.005,
+        sync: false,
+      },
+    },
+    line_linked: {
+      enable: true,
+      distance: 300,
+      color: "#333333",
+      opacity: 0.1,
+      width: 0.5,
+    },
+    move: {
+      enable: true,
+      speed: 5,
+      direction: "none",
+      random: true,
+      straight: false,
+      out_mode: "bounce",
+      bounce: false,
+      attract: {
+        enable: true,
+        rotateX: 700,
+        rotateY: 1200,
+      },
+    },
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "grab",
+      },
+      onclick: {
+        enable: true,
+        mode: "push",
+      },
+      resize: true,
+    },
+    modes: {
+      grab: {
+        distance: 100,
+        line_linked: {
+          opacity: 0.3,
+        },
+      },
+      bubble: {
+        distance: 40,
+        size: 12,
+        duration: 1.5,
+        opacity: 0.6,
+        speed: 3,
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.5,
+      },
+      push: {
+        particles_nb: 3,
+      },
+      remove: {
+        particles_nb: 2,
+      },
+    },
+  },
+  retina_detect: false,
+};
 
 export const SERVICES = [
   {
     name: "DESIGN",
     content:
       "I create designs that suit cleint's requirements by utilizing specific design tools to achieve an attractive user interface that converts visitors to customers across devices.",
-    img: Design,
+    img: <Design />,
   },
   {
     name: "CODE",
     content:
       "I specialize in writing clean commented code which works well when integrating a library, managing open source documentation and maintaining of Company legacy code alongside a team of developers. I ensure my code is cross-browser compatible & W3 tested.",
-    img: Code,
+    img: <Code />,
   },
   {
     name: "DEBUG",
     content:
       "I debug twice as hard as writing the code in the first place, having my softwares undergo several tests to ensure they are scable. Thus, preventing situations where a software product breaks down due to unforeseen actions by a user.",
-    img: Debug,
+    img: <Debug />,
   },
   {
     name: "SEO RESEARCH",
     content:
       "Search Engine Optimization is an essential feature clients who hope for their sites to rank on Google search (top 10) or other search engines. I use web analytic tools to measure site trafffic to better optimize SEO and improve marketing.",
-    img: Seo,
+    img: <Seo />,
   },
   {
     name: "DEVELOPMENT",
     content:
       "I develop projects following the development life cycles which emcompasses the google standard requirements (through meta tags, description etc.) for outputting the best software product to clients.",
-    img: Development,
+    img: <Development />,
   },
   {
     name: "MAINTENANCE",
     content:
       "I will ensure every software product under my care is properly secured & maintained. I'll also make use of web analytic tools to measure site traffic to optimize performance for better marketing strategies.",
-    img: Maintenance,
+    img: <Maintenance />,
   },
 ];
 

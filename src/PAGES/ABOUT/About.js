@@ -46,11 +46,11 @@ const About = () => {
   return (
     <div id="about">
       <div className="bg">
-        <Zoom triggerOnce big duration={750} delay={1200}>
+        <Zoom triggerOnce big delay={1200}>
           <h1>about me</h1>
         </Zoom>
         <Intro />
-        <Slide className="w-fit mx-auto my-3" bottom triggerOnce delay={1500}>
+        <Zoom className="w-fit mx-auto my-4" bottom triggerOnce delay={1200}>
           <button
             className="btn"
             onClick={() => {
@@ -62,12 +62,12 @@ const About = () => {
           >
             download cv
           </button>
-        </Slide>
+        </Zoom>
       </div>
       {/* <ScrollUp /> */}
       {/* <Resume showCV={showCV} setShowCV={setShowCV} /> */}
       <section>
-        <Zoom triggerOnce big duration={750} delay={500}>
+        <Zoom triggerOnce big delay={500}>
           <ImageMe />
         </Zoom>
         <AboutMe />

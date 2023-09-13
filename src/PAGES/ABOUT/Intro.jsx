@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 const Intro = () => {
   return (
     <blockquote className="content">
-      <Fade triggerOnce cascade big delay={900}>
+      <Fade triggerOnce cascade big delay={1200}>
         <p>
           Dear Reader, I extend my warm greetings to you. My name is Adeboyejo
           David, and I am an engineer known for my unwavering commitment,
