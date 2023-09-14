@@ -7,6 +7,7 @@ import Facebook from "../ICONS/Facebook";
 import Debug from "../ICONS/SERVICES/Debug";
 import Development from "../ICONS/SERVICES/Development";
 import Maintenance from "../ICONS/SERVICES/Maintenance";
+// import InProgress from "../ICONS/InProgress";
 import Design from "../ICONS/SERVICES/Design";
 import Seo from "../ICONS/SERVICES/Seo";
 import Code from "../ICONS/SERVICES/Code";
@@ -193,54 +194,54 @@ export const PROJECTS = [
     content:
       "When you think validation, you think Javascript ! That's why this project utilizes Javascript to validate through the form's required fields.",
   },
-  {
-    id: 2,
-    name: "Graph Task Manager",
-    status: "completed",
-    utilities: ["CHART JS", "REACT JS", "FIREBASE"],
-    git: "https://github.com/Dharvo/Task-Manager",
-    link: "https://taskmanager-e694e.web.app",
-    img1: TaskManager1,
-    tag: ["All", "Completed", "React"],
-    content:
-      "Handling an Organization enlapses loads on time but it could be easier if management could easily access the projects' information, graphically acknowledging their level of importance and make decisions based on team performance.",
-  },
-  {
-    id: 3,
-    name: "Netflix Clone",
-    status: "completed",
-    utilities: ["CSS", "REACT JS", "FIREBASE"],
-    git: "https://github.com/Dharvo/Netflex",
-    link: "https://netflex-eb4ee.web.app",
-    img1: Netflex1,
-    tag: ["All", "Completed", "React"],
-    content:
-      "If you've ever tried Netflix you'd love their awesome movie selections, quality and User Interface; Well this project was built using React. It possess their basic Landing Page features and more.",
-  },
-  {
-    id: 4,
-    name: "Sammmie's Art",
-    status: "completed",
-    utilities: ["REACT JS", "SWIPER", "SCSS"],
-    git: "https://github.com/Dharvo/my-protfolio",
-    link: "https://sammie-art.web.app",
-    img1: SammieArt1,
-    tag: ["All", "Completed", "React"],
-    content:
-      "Sammie's Art is an Artistic retailer that draws, frame and delivers asthetic portraits to customers anywhere around the world.",
-  },
-  {
-    id: 5,
-    name: "Wha'Todo",
-    status: "completed",
-    utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
-    git: "https://github.com/Dharvo/whatodo",
-    link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
-    img1: WhaTodoDesktop,
-    tag: ["All", "Flutter", "Completed", "UI/UX"],
-    content:
-      "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
-  },
+  // {
+  //   id: 2,
+  //   name: "Graph Task Manager",
+  //   status: "completed",
+  //   utilities: ["CHART JS", "REACT JS", "FIREBASE"],
+  //   git: "https://github.com/Dharvo/Task-Manager",
+  //   link: "https://taskmanager-e694e.web.app",
+  //   img1: TaskManager1,
+  //   tag: ["All", "Completed", "React"],
+  //   content:
+  //     "Handling an Organization enlapses loads on time but it could be easier if management could easily access the projects' information, graphically acknowledging their level of importance and make decisions based on team performance.",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Netflix Clone",
+  //   status: "completed",
+  //   utilities: ["CSS", "REACT JS", "FIREBASE"],
+  //   git: "https://github.com/Dharvo/Netflex",
+  //   link: "https://netflex-eb4ee.web.app",
+  //   img1: Netflex1,
+  //   tag: ["All", "Completed", "React"],
+  //   content:
+  //     "If you've ever tried Netflix you'd love their awesome movie selections, quality and User Interface; Well this project was built using React. It possess their basic Landing Page features and more.",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Sammmie's Art",
+  //   status: "completed",
+  //   utilities: ["REACT JS", "SWIPER", "SCSS"],
+  //   git: "https://github.com/Dharvo/my-protfolio",
+  //   link: "https://sammie-art.web.app",
+  //   img1: SammieArt1,
+  //   tag: ["All", "Completed", "React"],
+  //   content:
+  //     "Sammie's Art is an Artistic retailer that draws, frame and delivers asthetic portraits to customers anywhere around the world.",
+  // },
+  // {
+  //   id: 5,
+  //   name: "Wha'Todo",
+  //   status: "completed",
+  //   utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
+  //   git: "https://github.com/Dharvo/whatodo",
+  //   link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
+  //   img1: WhaTodoDesktop,
+  //   tag: ["All", "Flutter", "Completed", "UI/UX"],
+  //   content:
+  //     "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
+  // },
 ];
 
 // INFO FOR CONTACT PAGE

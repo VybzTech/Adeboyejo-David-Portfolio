@@ -42,6 +42,7 @@
     width: 100%;
   }
 }
+#projects .bg,
 #about .bg,
 #contact .bg {
   background-repeat: no-repeat;
@@ -49,19 +50,8 @@
   background-attachment: local;
   height: 100vh;
   width: 100%;
-}
-@media screen and (max-width: 1024px) {
-  #about .bg,
-  #contact .bg {
-    background-size: cover;
-  }
-}
-@media screen and (max-width: 450px) {
-  #about .bg,
-  #contact .bg {
-    background-size: auto 100%;
-    background-position: top;
-  }
+  background-size: auto 100%;
+  background-position: top;
 }
 
 @font-face {
@@ -479,7 +469,7 @@
 
 #about .bg {
   @apply h-[110vh];
-  background-image: url("../IMAGES/AboutBackground.jpg");
+  background-image: linear-gradient(15deg, rgba(0, 0, 0, 0.4666666667), rgba(17, 17, 17, 0.0666666667)), url("../IMAGES/AboutBackground.jpg");
 }
 #about .bg h1 {
   @apply pt-12;
@@ -610,6 +600,42 @@
 #about .myServices .serviceWrapper .serviceList .service .backdrop svg {
   fill: #f7f7f7;
   @apply w-32 h-32 object-contain;
+}
+
+#projects .bg {
+  @apply h-[100vh];
+  background-image: linear-gradient(-15deg, rgba(0, 0, 0, 0.6666666667), rgba(17, 17, 17, 0.0666666667)), url("../IMAGES/ProjectsBackground.png");
+}
+#projects .bg .explore {
+  @apply top-28;
+}
+#projects .bg .explore h1 {
+  -webkit-text-stroke: 0.5px white;
+  color: white;
+  font-family: montXBold, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.05rem;
+}
+#projects .bg .explore .sub {
+  color: white;
+  font-family: montLight, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 1px;
+  text-align: center;
+  font-size: 0.7rem;
+  @apply m-7;
+}
+#projects .bg .explore .sub span {
+  line-break: strict;
+}
+#projects .projectNav {
+  @apply h-full w-[10vw];
+}
+#projects .projectNav button {
+  @apply px-2 py-5 mx-4 my-4;
 }
 
 .BottomColor {

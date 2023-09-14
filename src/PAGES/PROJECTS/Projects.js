@@ -54,24 +54,10 @@ const Projects = () => {
 
   return (
     <div id="projects">
-      <div className="bg">
-        {/* 
-        
-        <div className="bg">
-        <Zoom triggerOnce big delay={1200}>
-          <h1>about me</h1>
-        </Zoom>
-        <Intro />
-        */}
-        <Video
-          // vid={projectsVideo}
-          img={projectsBg}
-          imgName="ProjectsBg"
-        />
-        <Explore />
-      </div>
+      <div className="bg" children={<Explore />
+      } />
       {/* <ScrollUp /> */}
-      {/* <ReactVisibilitySensor
+      <ReactVisibilitySensor
         resizeCheck={true}
         delayedCall={true}
         scrollCheck={true}
@@ -83,7 +69,7 @@ const Projects = () => {
       >
         <main>
           <ProjectNav anime={anime} nav={nav} setNav={setNav} />
-          <section>
+          {/* <section>
             {nav === "UI/UX" ? (
               <Masonry
                 breakpointCols={breakPoints}
@@ -121,9 +107,9 @@ const Projects = () => {
                 })}
               </div>
             )}
-          </section>
+          </section> */}
         </main>
-      </ReactVisibilitySensor> */}
+      </ReactVisibilitySensor>
       <Footer />
     </div>
   );

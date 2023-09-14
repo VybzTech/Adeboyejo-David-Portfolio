@@ -389,7 +389,8 @@
 #about {
   .bg {
     @apply h-[110vh];
-    background-image: url("../IMAGES/AboutBackground.jpg");
+    background-image: linear-gradient(15deg, #0007, #1111),
+      url("../IMAGES/AboutBackground.jpg");
     h1 {
       @apply pt-12;
       -webkit-text-stroke: 0.5px white;
@@ -458,7 +459,12 @@
       h2 {
         @apply pt-6;
         -webkit-text-stroke: 0.5px $themeBlack1;
-        @include BoldText($align: center, $color: $themeBlack2, $size: 1.9rem,$letter:-1px);
+        @include BoldText(
+          $align: center,
+          $color: $themeBlack2,
+          $size: 1.9rem,
+          $letter: -1px
+        );
       }
       .serviceList {
         @apply mt-6;
@@ -471,9 +477,11 @@
           }
           .icon {
             @apply mb-3 rounded rounded-xl bg-blue-100 w-fit py-2 px-[.55rem]; // w-14 h-14  px-2 py-3;
-            svg { fill: $themeCoarseBlue;
+            svg {
+              fill: $themeCoarseBlue;
               @apply object-contain  w-10 h-10; // mx-2 my-5;
-            }          }
+            }
+          }
           h4 {
             -webkit-text-stroke: 0.5px $themeBlack2;
             font-family: montReg;
@@ -491,7 +499,7 @@
             margin: -3.3rem -1rem -3.2rem auto;
             @apply w-fit;
             svg {
-              fill:  #f7f7f7,;
+              fill: #f7f7f7;
               @apply w-32 h-32 object-contain;
               // width: 5rem;
             }
@@ -517,7 +525,43 @@
 }
 
 //--------- PROJECT
-#projects{}
+#projects {
+  .bg {
+    @apply h-[100vh];
+    background-image: linear-gradient(-15deg, #000a, #1111),
+      url("../IMAGES/ProjectsBackground.png");
+    .explore {
+      @apply top-28;
+      h1 {
+        -webkit-text-stroke: 0.5px white;
+        @include BoldText(
+          $align: center,
+          $color: white,
+          $size: 2.05rem,
+          $word: 7px
+        );
+      }
+      .sub {
+        @include LightText(
+          $align: center,
+          $color: white,
+          $size: 0.7rem,
+          $word: 1px
+        );
+        @apply m-7;
+        span {
+          line-break: strict;
+        }
+      }
+    }
+  }
+  .projectNav {
+    @apply h-full w-[10vw];
+    button {
+      @apply px-2 py-5 mx-4 my-4;
+    }
+  }
+}
 
 //--------- FOOTER
 .BottomColor {
