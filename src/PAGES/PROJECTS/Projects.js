@@ -9,7 +9,7 @@ import projectsBg from "../../IMAGES/ProjectsBackground.png";
 // import projectsVideo from "../VIDEOS/Projects-Background.mp4";
 import Masonry from "react-masonry-css";
 import { UIs, PROJECTS } from "../Utils";
-import MainProjects from "./MainProjects";
+import MainProject from "./MainProject";
 import UIProjects from "./UIProjects";
 import ReactVisibilitySensor from "react-visibility-sensor";
 import ErrorHandler from "../../COMPONENTS/ErrorHandler";
@@ -54,8 +54,7 @@ const Projects = () => {
 
   return (
     <div id="projects">
-      <div className="bg" children={<Explore />
-      } />
+      <div className="bg" children={<Explore />} />
       {/* <ScrollUp /> */}
       <ReactVisibilitySensor
         resizeCheck={true}
@@ -69,8 +68,23 @@ const Projects = () => {
       >
         <main>
           <ProjectNav anime={anime} nav={nav} setNav={setNav} />
-          {/* <section>
-            {nav === "UI/UX" ? (
+          <section>
+            {nav !== "UI/UX" ? (
+              <div className="gridSection">
+                {NewProjects.map((project) => {
+                  return (
+                    <ErrorHandler>
+                      <MainProject
+                        key={project.id}
+                        // anime={anime}
+                        nav={nav}
+                        project={project}
+                      />
+                    </ErrorHandler>
+                  );
+                })}
+              </div>
+            ) : (
               <Masonry
                 breakpointCols={breakPoints}
                 className="UI-UX"
@@ -91,23 +105,8 @@ const Projects = () => {
                   );
                 })}
               </Masonry>
-            ) : (
-              <div className="gridSection">
-                {NewProjects.map((project) => {
-                  return (
-                    <ErrorHandler>
-                      <MainProjects
-                        key={project.id}
-                        project={project}
-                        anime={anime}
-                        nav={nav}
-                      />
-                    </ErrorHandler>
-                  );
-                })}
-              </div>
             )}
-          </section> */}
+          </section>
         </main>
       </ReactVisibilitySensor>
       <Footer />

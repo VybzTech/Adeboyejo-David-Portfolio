@@ -318,3 +318,15 @@ $themeBlueShadow: #09095077;
     transform: translateY(0%) scaleY(1);
   }
 }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

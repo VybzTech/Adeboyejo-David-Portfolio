@@ -9,7 +9,7 @@ const UIProjects = ({ nav, anime, img, i }) => {
   if (prev && img === UIs[i]) {
     return (
       <>
-        <Zoom when={anime} big spy={nav} duration={1200}>
+        <Zoom triggerOnce big delay={1700}>
           <img
             onClick={() => {
               set((p) => !p);
@@ -24,7 +24,7 @@ const UIProjects = ({ nav, anime, img, i }) => {
   } else {
     return (
       <>
-        <Zoom when={anime} big spy={nav} duration={1200}>
+        <Zoom triggerOnce big delay={1700}>
           <img
             onClick={() => {
               set((p) => !p);

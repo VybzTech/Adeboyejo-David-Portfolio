@@ -94,6 +94,17 @@
     transform: translateY(0%) scaleY(1);
   }
 }
+@keyframes bounce {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 .Loader {
   @apply w-full h-[100vh];
 }
@@ -144,16 +155,16 @@
   color: rgba(0, 0, 0, 0.9333333333);
 }
 #light .navbar.white .navigation > div > div:last-of-type button {
-  @apply text-gray-700;
   -webkit-text-stroke: 0.02px rgba(0, 0, 0, 0.9333333333);
-  color: rgba(0, 0, 0, 0.9333333333);
-  box-shadow: 2px 2px 8px 0.75px rgba(238, 238, 238, 0.6666666667), -1px -1px 4px rgba(255, 255, 255, 0.8666666667);
   background: linear-gradient(-15deg, rgba(255, 255, 255, 0.8), rgba(221, 221, 221, 0.4666666667));
+  box-shadow: 2px 2px 8px 0.75px rgba(238, 238, 238, 0.6666666667), -1px -1px 4px rgba(255, 255, 255, 0.8666666667);
+  color: rgba(0, 0, 0, 0.9333333333);
+  @apply text-gray-700;
 }
 #light .navbar.white .navigation > div > div:last-of-type button:hover, #light .navbar.white .navigation > div > div:last-of-type button:focus, #light .navbar.white .navigation > div > div:last-of-type button:focus-within, #light .navbar.white .navigation > div > div:last-of-type button:focus-visible {
-  box-shadow: 2px 2px 8px 1px rgba(204, 204, 204, 0.6666666667), -1px -1px 4px rgba(221, 221, 221, 0.8666666667);
   -webkit-text-stroke: 0.75px rgba(0, 0, 0, 0.9333333333);
   background: linear-gradient(-15deg, rgba(255, 255, 255, 0.8), rgba(221, 221, 221, 0.4666666667));
+  box-shadow: 2px 2px 8px 1px rgba(204, 204, 204, 0.6666666667), -1px -1px 4px rgba(221, 221, 221, 0.8666666667);
 }
 #light .navbar.white .navigation.show {
   @apply bg-[#fff7];
@@ -176,23 +187,23 @@
   @apply my-2.5 px-5 pt-3 pb-0.5 rounded mx-auto text-white uppercase;
 }
 #light .navbar .navigation > div > div:last-of-type button {
-  font-size: 0.8rem;
+  transition: all 300ms ease-in-out;
   -webkit-text-stroke: 0.02px white;
   background: transparent;
-  @apply tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-16 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
   background: linear-gradient(-15deg, rgba(0, 0, 0, 0.6666666667), rgba(0, 0, 0, 0.2));
-  min-width: 130px;
-  transition: all 300ms ease-in-out;
-  position: relative;
-  display: inline-block;
-  outline: none;
   border: none;
   box-shadow: 2px 2px 7px 0.5px rgba(34, 34, 34, 0.3333333333), -1px -1px 4px rgba(17, 17, 17, 0.6666666667);
+  display: inline-block;
+  font-size: 0.8rem;
+  min-width: 130px;
+  position: relative;
+  outline: none;
+  @apply tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-16 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
 }
 #light .navbar .navigation > div > div:last-of-type button:hover, #light .navbar .navigation > div > div:last-of-type button:focus, #light .navbar .navigation > div > div:last-of-type button:focus-within, #light .navbar .navigation > div > div:last-of-type button:focus-visible {
-  box-shadow: 2px 2px 8px 0.75px rgba(34, 34, 34, 0.6666666667), -1px -1px 4px rgba(17, 17, 17, 0.8666666667);
   -webkit-text-stroke: 0.05px white;
   background: linear-gradient(-15deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4666666667));
+  box-shadow: 2px 2px 8px 0.75px rgba(34, 34, 34, 0.6666666667), -1px -1px 4px rgba(17, 17, 17, 0.8666666667);
 }
 #light .navbar .navigation.show {
   @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl left-4 w-[96%] left-[2%] py-7 m-0 backdrop-blur block shadow-lg;
@@ -559,12 +570,9 @@
   @apply mt-6;
 }
 #about .myServices .serviceWrapper .serviceList .service {
-  @apply mb-5 pl-7 pr-4 py-7 pb-10 bg-white rounded rounded-3xl overflow-hidden;
-  box-shadow: 1px 2px 10px 0.5px rgba(221, 221, 221, 0.1333333333);
   transition: all 400ms ease-in-out;
-}
-#about .myServices .serviceWrapper .serviceList .service:hover {
-  @apply shadow-lg;
+  box-shadow: 1px 2px 10px 0.5px rgba(221, 221, 221, 0.1333333333);
+  @apply mb-5 pl-7 pr-4 py-7 pb-10 bg-white rounded rounded-3xl overflow-hidden hover:shadow-lg;
 }
 #about .myServices .serviceWrapper .serviceList .service .icon {
   @apply mb-3 rounded rounded-xl bg-blue-100 w-fit py-2 px-[.55rem];
@@ -604,6 +612,7 @@
 
 #projects .bg {
   @apply h-[100vh];
+  z-index: 3;
   background-image: linear-gradient(-15deg, rgba(0, 0, 0, 0.6666666667), rgba(17, 17, 17, 0.0666666667)), url("../IMAGES/ProjectsBackground.png");
 }
 #projects .bg .explore {
@@ -631,19 +640,52 @@
 #projects .bg .explore .sub span {
   line-break: strict;
 }
-#projects .projectNav {
-  @apply h-full w-[10vw];
+#projects .bg .explore > div {
+  height: max-content;
 }
-#projects .projectNav button {
-  @apply px-2 py-5 mx-4 my-4;
+#projects .bg .explore img {
+  @apply my-28 mx-auto opacity-80;
+  width: 6%;
+  animation: bounce 2s 100ms ease-in-out infinite forwards !important;
 }
-
+#projects main {
+  @apply relative bg-slate-50;
+}
+#projects main .projectNav {
+  box-shadow: 1px 2px 10px 0.5px rgba(221, 221, 221, 0.1333333333);
+  z-index: 2;
+  @apply absolute h-full bg-white w-[22%] overflow-hidden;
+}
+#projects main .projectNav > div {
+  @apply fixed w-[22%] top-14 left-0;
+}
+#projects main .projectNav > div .Nav {
+  @apply mx-[5px] p-1 rounded rounded-lg mb-1.5  opacity-40 hover:bg-gray-100 focus:bg-gray-100;
+}
+#projects main .projectNav > div .Nav img {
+  @apply pb-0.5 w-[55%] object-contain m-auto;
+}
+#projects main .projectNav > div .Nav span {
+  color: #333;
+  font-family: montLight, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 0;
+  text-align: center;
+  font-size: 0.6em;
+  line-break: strict;
+  z-index: 1;
+}
+#projects main section {
+  @apply w-[70%] ml-[22%];
+}
 .BottomColor {
   background-color: #17298e;
   @apply h-[1.5vh];
+  z-index: 3;
 }
 
 .foot {
+  z-index: 3;
   background-color: rgba(14, 14, 14, 0.968627451);
   color: #eee;
   @apply px-3 py-3;
