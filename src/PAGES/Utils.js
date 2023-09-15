@@ -208,7 +208,7 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    name: "Netflix Clone",
+    name: "Netflex (Netflix Clone)",
     status: "completed",
     utilities: ["CSS", "REACT JS", "FIREBASE"],
     git: "https://github.com/Dharvo/Netflex",
@@ -220,7 +220,7 @@ export const PROJECTS = [
   },
   {
     id: 4,
-    name: "Sammmie's Art",
+    name: "Sammie's Art Gallery",
     status: "completed",
     utilities: ["REACT JS", "SWIPER", "SCSS"],
     git: "https://github.com/Dharvo/my-protfolio",
@@ -232,7 +232,7 @@ export const PROJECTS = [
   },
   {
     id: 5,
-    name: "Wha'Todo",
+    name: "Wha'Todo App",
     status: "completed",
     utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
     git: "https://github.com/Dharvo/whatodo",

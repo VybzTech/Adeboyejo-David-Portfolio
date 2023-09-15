@@ -15,11 +15,12 @@ function Explore() {
           definition, not smart enough to debug it "<br />- Brian W. Kernighan.
         </p>
       </Fade>
-      <Slide bottom big triggerOnce delay={1400}>
+      <Fade triggerOnce delay={1400}>
         <img src={mouse} alt="mouse" />
-      </Slide>
+      </Fade>
     </div>
   );
+  // left right up down
 }
 
 export default Explore;

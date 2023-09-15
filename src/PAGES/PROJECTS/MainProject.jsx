@@ -3,7 +3,7 @@ import Project from "./Project";
 import { Zoom } from "react-awesome-reveal";
 
 const MainProject = ({ nav, project }) => {
-  const { content, utilities, img1, git, link } = project;
+  const { name, content, utilities, img1, git, link } = project;
   return (
     <Zoom
       key={project.id}
@@ -14,7 +14,11 @@ const MainProject = ({ nav, project }) => {
       delay={1500}
       // when={anime}
       spy={nav}
+      className="MainProject"
     >
+      <div className="img">
+        
+      </div>
       {/* <div
       className="img"
       style={{
@@ -22,7 +26,8 @@ const MainProject = ({ nav, project }) => {
       }}
     > */}
       <div className="contentWrapper">
-        {/* <p>{content.length > 200 ? content.substr(0, 190) + "..." : content}</p> */}
+        <h4>{name}</h4>
+        <p>{content.length > 200 ? content.substr(0, 50) + "..." : content}</p>
         {/* <div className="actions">
           <button
             onClick={() => {
@@ -31,6 +36,7 @@ const MainProject = ({ nav, project }) => {
           >
             <></>
           </button>
+          https://www.figma.com/file/NNPdiNOfJKjTqvE7apPNHw/David's-Portfolio?type=design&node-id=220-633&mode=design
           <button
             onClick={() => {
               window.open(link, "_blank");
