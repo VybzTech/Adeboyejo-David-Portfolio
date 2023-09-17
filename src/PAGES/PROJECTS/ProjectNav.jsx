@@ -10,10 +10,10 @@ const ProjectNav = ({ nav, setNav, anime }) => {
   const FILTERS = [
     { name: "All", img: All },
     { name: "Completed", img: Completed },
-    // { name: "In-Progress", img: InProgress },
+    { name: "In-Progress", img: InProgress },
     { name: "React", img: ReactImg },
     { name: "UI/UX", img: UIUX },
-    // { name: "Briefcase", img: Briefcase },
+    { name: "Briefcase", img: Briefcase },
   ];
   const [stick, stickNav] = useState(false);
 

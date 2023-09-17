@@ -641,12 +641,9 @@
 #projects .bg .explore .sub span {
   line-break: strict;
 }
-#projects .bg .explore > div {
-  height: max-content;
-}
 #projects .bg .explore img {
+  width: 5.5%;
   @apply my-28 mx-auto opacity-80;
-  width: 6%;
   animation: bounce 2s 100ms ease-in-out infinite forwards !important;
 }
 #projects main {
@@ -658,16 +655,16 @@
   @apply absolute h-full bg-white w-[22%] overflow-hidden;
 }
 #projects main .projectNav > div {
-  @apply fixed w-[22%] top-16 left-0;
+  @apply fixed w-[22%] top-[3.75rem] left-0;
 }
 #projects main .projectNav > div .Nav {
-  @apply mx-[5px] p-1 rounded rounded-lg mb-2.5 duration-150 ease-in-out transition-all opacity-30 hover:bg-slate-50 focus:bg-slate-50 hover:opacity-60 focus:opacity-70 [&.active]:opacity-100 [&.active>span]:text-black [&.active>span]:text-[0.55rem] [&.active>span]:leading-tight [&.active>img]:mb-[-.3rem];
+  @apply mx-[5px] p-1 rounded rounded-lg mb-2 duration-150 ease-in-out transition-all opacity-30 hover:bg-slate-50 focus:bg-slate-50 hover:opacity-60 focus:opacity-70 [&.active]:opacity-100 [&.active>span]:text-black [&.active>span]:text-[0.55rem] [&.active>span]:leading-tight [&.active>img]:mb-[-.35rem];
 }
 #projects main .projectNav > div .Nav img {
-  @apply pt-0.5 mb-[-.4rem] w-[60%] object-contain m-auto;
+  @apply pt-0.5 mb-[-.45rem] w-[60%] object-contain m-auto;
 }
 #projects main .projectNav > div .Nav span {
-  color: #333;
+  color: #e5e5e5;
   font-family: montLight, Verdana, sans-serif;
   letter-spacing: 0;
   word-spacing: 0;
@@ -677,16 +674,40 @@
   z-index: 1;
 }
 #projects main section {
-  @apply w-[75%] ml-[22%];
+  @apply w-[75%] ml-[22%] min-h-[90vh];
 }
 #projects main section .gridSection {
-  @apply py-4 px-2;
+  @apply pt-10 pb-5 px-2.5;
 }
 #projects main section .gridSection .MainProject {
-  box-shadow: 1px 2px 10px 0.5px rgba(221, 221, 221, 0.1333333333);
-  @apply my-2 bg-white rounded rounded-2xl p-2 py-6 hover:shadow-lg [&.contentWrapper]:px-4;
+  box-shadow: 0 3px 10px 0.5px rgba(204, 204, 204, 0.1333333333);
+  @apply mt-1 mb-8 bg-white rounded rounded-2xl  pb-6 overflow-hidden;
 }
-#projects main section .gridSection .MainProject h4 {
+#projects main section .gridSection .MainProject:hover {
+  box-shadow: 0 3px 15px 1.5px rgba(204, 204, 204, 0.3333333333);
+}
+#projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+  z-index: 1;
+}
+#projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide::after {
+  z-index: 2;
+  content: "";
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1333333333), rgba(255, 255, 255, 0.4666666667), white);
+  @apply absolute top-0 left-0 w-full h-full;
+}
+#projects main section .gridSection .MainProject .swiper [class^=swiper-button] {
+  @apply w-8 h-8 top-[30%] opacity-40 [&::after]:text-[14px] px-2 py-0.5  [&:hover]:bg-slate-50 [&::after]:text-gray-600 rounded rounded-3xl;
+}
+#projects main section .gridSection .MainProject .swiper [class^=swiper-button][class$=-prev] {
+  @apply left-0.5;
+}
+#projects main section .gridSection .MainProject .swiper [class^=swiper-button][class$=-next] {
+  @apply right-0.5;
+}
+#projects main section .gridSection .MainProject .contentWrapper {
+  @apply pr-1 pl-3;
+}
+#projects main section .gridSection .MainProject .contentWrapper h4 {
   color: #333;
   font-family: montXBold, Verdana, sans-serif;
   letter-spacing: 0;
@@ -696,13 +717,20 @@
   font-size: 0.9rem;
   @apply capitalize underline tracking-tight;
 }
-#projects main section .gridSection .MainProject p {
+#projects main section .gridSection .MainProject .contentWrapper p {
   color: black;
   font-family: montLight, Verdana, sans-serif;
   letter-spacing: 0;
   word-spacing: 0;
   text-align: left;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+  @apply leading-[1.75];
+}
+#projects main section .gridSection .MainProject .contentWrapper .actions {
+  @apply flex justify-between;
+}
+#projects main section .gridSection .MainProject .contentWrapper .actions button {
+  @apply p-1 bg-gray-50 rounded rounded-3xl mr-2 mt-2 [&>svg]:text-gray-400 w-6 h-6;
 }
 
 .BottomColor {

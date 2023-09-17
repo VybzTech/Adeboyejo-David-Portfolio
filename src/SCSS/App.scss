@@ -524,7 +524,6 @@
   .bg {
     @apply h-[100vh];
     box-shadow: 0 10px 12px 0.75px #ddd3;
-
     z-index: 3;
     background-image: linear-gradient(-15deg, #000a, #1111),
       url("../IMAGES/ProjectsBackground.png");
@@ -551,15 +550,9 @@
           line-break: strict;
         }
       }
-      > div {
-        height: max-content;
-      }
       img {
-        // left: 50%;
+        width: 5.5%;
         @apply my-28 mx-auto opacity-80;
-        // bottom: 4vh;
-        // z-index: 2;
-        width: 6%;
         animation: bounce 2s 100ms ease-in-out infinite forwards !important;
       }
     }
@@ -572,45 +565,78 @@
       z-index: 2;
       @apply absolute h-full bg-white w-[22%] overflow-hidden;
       > div {
-        @apply fixed w-[22%] top-16 left-0;
+        @apply fixed w-[22%] top-[3.75rem] left-0;
         .Nav {
           //  EACH BUTTON
-          @apply mx-[5px] p-1 rounded rounded-lg mb-2.5 duration-150 ease-in-out transition-all opacity-30 hover:bg-slate-50 focus:bg-slate-50 hover:opacity-60 focus:opacity-70 [&.active]:opacity-100 [&.active>span]:text-black [&.active>span]:text-[0.55rem] [&.active>span]:leading-tight [&.active>img]:mb-[-.3rem];
+          @apply mx-[5px] p-1 rounded rounded-lg mb-2 duration-150 ease-in-out transition-all opacity-30 hover:bg-slate-50 focus:bg-slate-50 hover:opacity-60 focus:opacity-70 [&.active]:opacity-100 [&.active>span]:text-black [&.active>span]:text-[0.55rem] [&.active>span]:leading-tight [&.active>img]:mb-[-.35rem];
           img {
-            @apply pt-0.5 mb-[-.4rem] w-[60%] object-contain m-auto;
+            @apply pt-0.5 mb-[-.45rem] w-[60%] object-contain m-auto;
           }
           span {
-            @include LightText(
-              $size: 0.5rem,
-              $color: $themeBlack3,
-              $align: center
-            );
+            @include LightText($size: 0.5rem, $color: $gray, $align: center);
             line-break: strict;
             z-index: 1;
-          }
-          &.active {
           }
         }
       }
     }
     section {
-      @apply w-[75%] ml-[22%];
+      @apply w-[75%] ml-[22%] min-h-[90vh];
       .gridSection {
-        @apply py-4 px-2;
+        @apply pt-10 pb-5 px-2.5;
         .MainProject {
-          box-shadow: 1px 2px 10px 0.5px #ddd2;
-          @apply my-2 bg-white rounded rounded-2xl p-2 py-6 hover:shadow-lg [&.contentWrapper]:px-4;
-
-         .img{
-          
-         } 
-          h4 {
-            @include BoldText($size: 0.9rem, $color: $themeBlack3);
-            @apply capitalize underline tracking-tight;
+          box-shadow: 0 3px 10px 0.5px #ccc2;
+          @apply mt-1 mb-8 bg-white rounded rounded-2xl  pb-6 overflow-hidden;
+          &:hover {
+            box-shadow: 0 3px 15px 1.5px #ccc5;
           }
-          p {
-            @include LightText($size: 0.7rem);
-            // @apply ;
+          .swiper {
+            .swiper-wrapper {
+              .swiper-slide {
+                img {
+                  z-index: 1;
+                }
+                &::after {
+                  z-index: 2;
+                  content: "";
+                  background: linear-gradient(
+                    180deg,
+                    transparent,
+                    #fff2,
+                    #fff7,
+                    white
+                  );
+                  @apply absolute top-0 left-0 w-full h-full;
+                }
+              }
+            }
+            //  SWIPER BUTTONS
+            [class^="swiper-button"] {
+              @apply w-8 h-8 top-[30%] opacity-40 [&::after]:text-[14px] px-2 py-0.5  [&:hover]:bg-slate-50 [&::after]:text-gray-600 rounded rounded-3xl;
+              &[class$="-prev"] {
+                @apply left-0.5;
+              }
+              &[class$="-next"] {
+                @apply right-0.5;
+              }
+            }
+          }
+          .contentWrapper {
+            @apply pr-1 pl-3;
+            h4 {
+              @include BoldText($size: 0.9rem, $color: $themeBlack3);
+              @apply capitalize underline tracking-tight;
+            }
+            p {
+              @include LightText($size: 0.6rem);
+              @apply leading-[1.75];
+            }
+            .actions {
+              @apply flex justify-between;
+              button {
+                @apply p-1 bg-gray-50 rounded rounded-3xl mr-2 mt-2 [&>svg]:text-gray-400 w-6 h-6;
+              }
+            }
           }
         }
       }

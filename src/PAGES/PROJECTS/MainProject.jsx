@@ -2,56 +2,115 @@ import React from "react";
 import Project from "./Project";
 import { Zoom } from "react-awesome-reveal";
 
+import Github from "../../ICONS/Github";
+import ArrowRight from "../../ICONS/ArrowRight";
+import Link from "../../ICONS/PROJECTS/Link";
+import Tools from "../../ICONS/PROJECTS/Tools";
+import "swiper/css/bundle";
+import "swiper/css/navigation";
+import "swiper/css/effect-fade";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+// import { Navigation } from "swiper/modules";
+// import "swiper/css/navigation";
+// import Swiper, { Navigation, Pagination, Scrollbar } from "swiper";
+
 const MainProject = ({ nav, project }) => {
-  const { name, content, utilities, img1, git, link } = project;
+  const { name, content, utilities, images, git, link } = project;
+
+  // var swiper = new Swiper(".swiper", {
+  // autoHeight: true,
+  // autoplay: { delay: 1500 },
+  // centeredSlides: true,
+  // effect: "fade",
+  // fadeEffect: {
+  //   crossFade: true,
+  // },
+  // grabCursor: true,
+  // initialSlide: 0,
+  // loop: true,
+  // modules: [Navigation],
+  // slidesPerView: 1,
+  // spaceBetween: 0,
+  // speed: 500,
+  // // navigation: {
+  // //   nextEl: ".swiper-button-next",
+  // //   prevEl: ".swiper-button-prev",
+  // // },
+  // });
+
   return (
     <Zoom
       key={project.id}
       big
       triggerOnce
       left
-      // duration={1200}
       delay={1500}
-      // when={anime}
       spy={nav}
       className="MainProject"
     >
-      <div className="img">
-        
-      </div>
-      {/* <div
-      className="img"
-      style={{
-        backgroundImage: `linear-gradient(180deg, #0001, #0002),url(${img1})`,
-      }}
-    > */}
-      <div className="contentWrapper">
-        <h4>{name}</h4>
-        <p>{content.length > 200 ? content.substr(0, 50) + "..." : content}</p>
-        {/* <div className="actions">
-          <button
-            onClick={() => {
-              window.open(git, "_blank");
-            }}
-          >
-            <></>
-          </button>
-          https://www.figma.com/file/NNPdiNOfJKjTqvE7apPNHw/David's-Portfolio?type=design&node-id=220-633&mode=design
-          <button
-            onClick={() => {
-              window.open(link, "_blank");
-            }}
-          >
-            <></>
-          </button>
-        </div> */}
-        {/* <ul>
-          {utilities?.map((util) => {
-            return <li key={util}>{util}</li>;
-          })}
-        </ul> */}
-      </div>
-      {/* </div> */}
+      <>
+        {/*   PROJECT IMAGES SWIPER */}
+        <Swiper
+          modules={[Navigation]}
+          slidesPerView={1}
+          spaceBetween={0}
+          speed={500}
+          navigation
+          effect={"fade"}
+          // fadeEffect={{ crossFade: true }}
+          loop={true}
+          // autoplay={true}
+          grabCursor={true}
+        >
+          <div className="swiper-wrapper">
+            {images?.map((Img, id) => (
+              <SwiperSlide key={id} className="swiper-slide">
+                <img src={Img} alt={`${name}-${id}`} />
+              </SwiperSlide>
+            ))}
+          </div>
+        </Swiper>
+        {/*   PROJECT CONTENTS */}
+        <div className="contentWrapper">
+          <h4>{name}</h4>
+          <p>
+            {content.length > 200 ? content.substr(0, 100) + "..." : content}
+          </p>
+          <div className="actions">
+            <>
+              <button>
+                <Tools />
+              </button>
+              <button
+                onClick={() => {
+                  window.open(link, "_blank");
+                }}
+              >
+                <Link />
+              </button>
+              <button
+                onClick={() => {
+                  window.open(git, "_blank");
+                }}
+              >
+                <Github />
+              </button>
+            </>
+            <div className="more">
+              <button>
+                <ArrowRight />
+              </button>
+            </div>
+            {/* https://www.figma.com/file/NNPdiNOfJKjTqvE7apPNHw/David's-Portfolio?type=design&node-id=220-633&mode=design */}
+          </div>
+        </div>
+      </>
+      <ul>
+        {utilities?.map((util) => {
+          return <li key={util}>{util}</li>;
+        })}
+      </ul>
     </Zoom>
   );
 };

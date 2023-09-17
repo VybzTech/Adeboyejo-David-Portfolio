@@ -70,8 +70,10 @@ import UI47 from "../IMAGES/UI/PRICE CARD 3.png";
 import Netflex1 from "../IMAGES/PROJECTS/Netflex1.png";
 import SammieArt1 from "../IMAGES/PROJECTS/SammieArt1.png";
 import ReportForm1 from "../IMAGES/PROJECTS/ReportForm1.png";
+import ReportForm2 from "../IMAGES/PROJECTS/ReportForm2.png";
 import TaskManager1 from "../IMAGES/PROJECTS/TaskManager1.png";
-// import WhaTodo from '../IMAGES/UI/WHATODO-Land.png'
+import TaskManager2 from "../IMAGES/PROJECTS/TaskManager2.png";
+import WhaTodo from "../IMAGES/UI/WHATODO-Land.png";
 import WhaTodoDesktop from "../IMAGES/PROJECTS/Whatodo-Desktop-Size.png";
 
 // import NetflexProject from '../IMAGES/NetFlex-Project.png'
@@ -189,7 +191,7 @@ export const PROJECTS = [
     utilities: ["HTML", "CSS", "JAVASCRIPT"],
     git: "https://github.com/Dharvo/Report-Form",
     link: "https://division-report-form.netlify.app",
-    img1: ReportForm1,
+    images: [ReportForm1, ReportForm2],
     tag: ["All", "Completed"],
     content:
       "When you think validation, you think Javascript ! That's why this project utilizes Javascript to validate through the form's required fields.",
@@ -201,7 +203,7 @@ export const PROJECTS = [
     utilities: ["CHART JS", "REACT JS", "FIREBASE"],
     git: "https://github.com/Dharvo/Task-Manager",
     link: "https://taskmanager-e694e.web.app",
-    img1: TaskManager1,
+    images: [TaskManager1, TaskManager2],
     tag: ["All", "Completed", "React"],
     content:
       "Handling an Organization enlapses loads on time but it could be easier if management could easily access the projects' information, graphically acknowledging their level of importance and make decisions based on team performance.",
@@ -213,7 +215,7 @@ export const PROJECTS = [
     utilities: ["CSS", "REACT JS", "FIREBASE"],
     git: "https://github.com/Dharvo/Netflex",
     link: "https://netflex-eb4ee.web.app",
-    img1: Netflex1,
+    images: [Netflex1],
     tag: ["All", "Completed", "React"],
     content:
       "If you've ever tried Netflix you'd love their awesome movie selections, quality and User Interface; Well this project was built using React. It possess their basic Landing Page features and more.",
@@ -225,7 +227,7 @@ export const PROJECTS = [
     utilities: ["REACT JS", "SWIPER", "SCSS"],
     git: "https://github.com/Dharvo/my-protfolio",
     link: "https://sammie-art.web.app",
-    img1: SammieArt1,
+    images: [SammieArt1],
     tag: ["All", "Completed", "React"],
     content:
       "Sammie's Art is an Artistic retailer that draws, frame and delivers asthetic portraits to customers anywhere around the world.",
@@ -237,7 +239,7 @@ export const PROJECTS = [
     utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
     git: "https://github.com/Dharvo/whatodo",
     link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
-    img1: WhaTodoDesktop,
+    images: [WhaTodoDesktop, WhaTodo],
     tag: ["All", "Flutter", "Completed", "UI/UX"],
     content:
       "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
@@ -375,7 +377,7 @@ export const Params = {
     },
     modes: {
       grab: {
-        distance: 100,
+        distance: 250,
         line_linked: {
           opacity: 0.2,
         },
@@ -485,7 +487,7 @@ export const Params2 = {
     },
     modes: {
       grab: {
-        distance: 100,
+        distance: 225,
         line_linked: {
           opacity: 0.3,
         },
