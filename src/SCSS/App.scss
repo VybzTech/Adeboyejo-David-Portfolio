@@ -558,7 +558,7 @@
     }
   }
   main {
-    @apply relative bg-slate-50; // flex
+    @apply relative bg-slate-100; // flex
     .projectNav {
       // WHITE BACKGROUND SIDE NAV
       box-shadow: 1px 2px 10px 0.5px #ddd2;
@@ -584,18 +584,16 @@
       @apply w-[75%] ml-[22%] min-h-[90vh];
       .gridSection {
         @apply pt-10 pb-5 px-2.5;
+        // EACH PROJECT DIV
         .MainProject {
           box-shadow: 0 3px 10px 0.5px #ccc2;
-          @apply mt-1 mb-8 bg-white rounded rounded-2xl  pb-6 overflow-hidden;
+          @apply mt-1 mb-8 bg-white rounded rounded-2xl  pb-5 overflow-hidden;
           &:hover {
             box-shadow: 0 3px 15px 1.5px #ccc5;
           }
           .swiper {
             .swiper-wrapper {
               .swiper-slide {
-                img {
-                  z-index: 1;
-                }
                 &::after {
                   z-index: 2;
                   content: "";
@@ -612,7 +610,7 @@
             }
             //  SWIPER BUTTONS
             [class^="swiper-button"] {
-              @apply w-8 h-8 top-[30%] opacity-40 [&::after]:text-[14px] px-2 py-0.5  [&:hover]:bg-slate-50 [&::after]:text-gray-600 rounded rounded-3xl;
+              @apply w-8 h-8 top-[35%] opacity-40 [&::after]:text-[14px] px-2 py-0.5  [&:hover]:bg-slate-50 [&::after]:text-gray-600 rounded rounded-3xl;
               &[class$="-prev"] {
                 @apply left-0.5;
               }
@@ -628,17 +626,108 @@
               @apply capitalize underline tracking-tight;
             }
             p {
-              @include LightText($size: 0.6rem);
+              @include LightText($size: 0.65rem);
               @apply leading-[1.75];
             }
             .actions {
               @apply flex justify-between;
               button {
-                @apply p-1 bg-gray-50 rounded rounded-3xl mr-2 mt-2 [&>svg]:text-gray-400 w-6 h-6;
+                @apply p-1.5 pb-5 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700;
               }
             }
           }
+          // USED TOOLS DIV
+          // BORDER WHERE BOTTOM IS 10PX LEFT & RIGHT ARE HIDDEN AND TOP IS 0
+          .tools {
+            @apply hidden;
+            &.show {
+              @apply block;
+            }
+          }
         }
+      }
+    }
+  }
+}
+
+//--------- CONTACT
+#contact {
+  .bg {
+    @apply h-[100vh];
+    box-shadow: 0 10px 12px 0.75px #ddd3;
+    z-index: 3;
+    background-image: linear-gradient(-15deg, #000a, #1111),
+      url("../IMAGES/ContactBackground.jpg");
+    .Pleasantries {
+      @apply top-32;
+      h1 {
+        -webkit-text-stroke: 0.5px white;
+        @include BoldText(
+          $align: center,
+          $color: white,
+          $size: 2.05rem,
+          $word: 7px
+        );
+      }
+      .sub {
+        @include LightText(
+          $align: center,
+          $color: white,
+          $size: 0.8rem,
+          $word: 1px
+        );
+        @apply m-8 opacity-90 leading-[1.9];
+      }
+    }
+  }
+  main {
+    // width: 100%;
+    .hero {
+      width: fit-content;
+      // margin-left: 4rem;
+      // @include flex;
+      @apply flex mx-auto;
+      > div {
+        @apply w-7 h-0.5 mx-1 opacity-80 my-auto rounded bg-slate-700;
+        // height: 3px;
+        // background-color: $themeBlack1;
+        // align-self: flex-end ;
+        // margin-right: 2px;
+        // margin-bottom: 5px;
+      }
+      h3 {
+        @apply uppercase;
+        @include BoldText($color: $themeBlack2, $size: 1.1rem);
+      }
+    }
+    .socials {
+      // width: fit-content;
+      // padding: 1.7rem 1.5rem 1rem 5rem;
+      @apply flex w-fit p-4;
+      button,
+      a {
+        @apply bg-transparent ; 
+        // padding: 2px;
+        // margin: 0 15px;
+        // border: 2px solid $themeBlack2;
+        // border-radius: 50%;
+        // color: $themeBlack2;
+        // @include trans(300ms);
+        svg {
+          @apply w-6 h-6 object-contain;
+          // margin: 0;
+          // width: auto;
+          // height: 1.6rem;
+          // padding: 5px;
+          // @include trans(280ms);
+        }
+        // &:hover,
+        // &:focus {
+        //   border-color: $themeCoarseBlue;
+        //   svg {
+        //     color: $themeCoarseBlue;
+        //   }
+        // }
       }
     }
   }

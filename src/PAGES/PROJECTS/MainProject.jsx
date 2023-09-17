@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Project from "./Project";
 import { Zoom } from "react-awesome-reveal";
 
@@ -18,6 +18,8 @@ import { Navigation } from "swiper";
 const MainProject = ({ nav, project }) => {
   const { name, content, utilities, images, git, link } = project;
 
+  const [show, set] = useState(false);
+  const [details, setDetails] = useState(false);
   // var swiper = new Swiper(".swiper", {
   // autoHeight: true,
   // autoplay: { delay: 1500 },
@@ -75,19 +77,12 @@ const MainProject = ({ nav, project }) => {
         <div className="contentWrapper">
           <h4>{name}</h4>
           <p>
-            {content.length > 200 ? content.substr(0, 100) + "..." : content}
+            {content.length > 120 ? content.substr(0, 100) + "..." : content}
           </p>
           <div className="actions">
-            <>
-              <button>
+            <div>
+              <button onClick={() => set((s) => (s = !s))}>
                 <Tools />
-              </button>
-              <button
-                onClick={() => {
-                  window.open(link, "_blank");
-                }}
-              >
-                <Link />
               </button>
               <button
                 onClick={() => {
@@ -96,21 +91,28 @@ const MainProject = ({ nav, project }) => {
               >
                 <Github />
               </button>
-            </>
+              <button
+                onClick={() => {
+                  window.open(link, "_blank");
+                }}
+              >
+                <Link />
+              </button>
+            </div>
             <div className="more">
-              <button>
+              <button onClick={() => setDetails((d) => (d = !d))}>
                 <ArrowRight />
               </button>
             </div>
             {/* https://www.figma.com/file/NNPdiNOfJKjTqvE7apPNHw/David's-Portfolio?type=design&node-id=220-633&mode=design */}
           </div>
         </div>
-      </>
-      <ul>
+      <ul className={`tools ${show && "show"}`}>
         {utilities?.map((util) => {
           return <li key={util}>{util}</li>;
         })}
       </ul>
+        </>
     </Zoom>
   );
 };
