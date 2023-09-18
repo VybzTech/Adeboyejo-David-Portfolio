@@ -729,13 +729,6 @@
     }
     .ContactMeWrapper {
       .ContactMe {
-        // width: 65%;
-        // margin: 4rem auto;
-        // border-radius: 7px;
-        // padding: 2.2rem 3rem;
-        // box-shadow: 0 0 15px $offWhite;
-        // background-color: white;
-        // z-index: 2;
         box-shadow: 0 3px 10px 0.5px #ccc2;
         @apply mx-5 mt-2 mb-8 bg-white rounded rounded-2xl  pb-5 overflow-hidden min-h-[70vh];
         &:hover {
@@ -747,9 +740,10 @@
             @include BoldText($align: center, $size: 1.1rem, $word: 2px);
             @apply my-3;
           }
-        svg{
-          @apply w-8 h-8 mr-4;
-        }}
+          svg {
+            @apply w-8 h-8 mr-4;
+          }
+        }
         form {
           .formControl {
             // margin-bottom: 0.5rem;
