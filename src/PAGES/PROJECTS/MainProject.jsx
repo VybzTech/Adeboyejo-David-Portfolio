@@ -81,7 +81,10 @@ const MainProject = ({ nav, project }) => {
           </p>
           <div className="actions">
             <div>
-              <button onClick={() => set((s) => (s = !s))}>
+              <button
+                className={`${show && "active"}`}
+                onClick={() => set((s) => (s = !s))}
+              >
                 <Tools />
               </button>
               <button
@@ -107,12 +110,17 @@ const MainProject = ({ nav, project }) => {
             {/* https://www.figma.com/file/NNPdiNOfJKjTqvE7apPNHw/David's-Portfolio?type=design&node-id=220-633&mode=design */}
           </div>
         </div>
-      <ul className={`tools ${show && "show"}`}>
-        {utilities?.map((util) => {
-          return <li key={util}>{util}</li>;
-        })}
-      </ul>
-        </>
+      </>
+        <ul className={`tools ${show && "show"}`}>
+          <span className="arrow" />
+          {utilities?.map(({ name, img }) => {
+            return (
+              <li key={name}>
+                <img src={img} alt={name} />
+              </li>
+            );
+          })}
+        </ul>
     </Zoom>
   );
 };

@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import React, { useRef } from "react";
 import { Form, Formik } from "formik";
 import FormControl from "../../COMPONENTS/FormControl";
+import Inbox from "../../ICONS/Inbox";
 // import { Button } from '@material-ui/core'
 
 const ContactMe = () => {
@@ -46,8 +47,12 @@ const ContactMe = () => {
   return (
     <div className="ContactMeWrapper">
       <div className="ContactMe">
-        <h2>get in touch !</h2>
-        <Formik
+        {/* <h2>get in touch !</h2> */}
+        <div className="intro">
+          <Inbox />
+          <h2>Drop a Mail Inbox!</h2>
+        </div>
+        {/* <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={deliverMsg}
@@ -100,7 +105,7 @@ const ContactMe = () => {
               </Form>
             );
           }}
-        </Formik>
+        </Formik> */}
       </div>
       <div className="circleWrapper" />
     </div>

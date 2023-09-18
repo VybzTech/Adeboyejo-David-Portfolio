@@ -1,24 +1,19 @@
+//  ICON IMPORTS
 import Instagram from "../ICONS/Instagram";
 import Twitter from "../ICONS/Twitter";
 import Github from "../ICONS/Github";
+import Youtube from "../ICONS/Youtube";
 import LinkedIn from "../ICONS/LinkedIn";
+import Globe from "../ICONS/Globe";
 import Facebook from "../ICONS/Facebook";
-// import Whatsapp from "../ICONS/Whatsapp";
 import Debug from "../ICONS/SERVICES/Debug";
 import Development from "../ICONS/SERVICES/Development";
 import Maintenance from "../ICONS/SERVICES/Maintenance";
-// import InProgress from "../ICONS/InProgress";
 import Design from "../ICONS/SERVICES/Design";
 import Seo from "../ICONS/SERVICES/Seo";
 import Code from "../ICONS/SERVICES/Code";
-// 	Phone,
-// 	LinkedIn,
-// 	Instagram,
-// 	GitHub,
-// 	Twitter,
-// 	YouTube,
-// 	Facebook,
-// } from '@material-ui/icons'
+import PhoneIn from "../ICONS/PhoneIn";
+//  USER INTERFACE IMPORTS
 import UI1 from "../IMAGES/UI/ABOUT.png";
 import UI2 from "../IMAGES/UI/ADD TODO.png";
 import UI3 from "../IMAGES/UI/CONTACT PAGE NEW.png";
@@ -66,7 +61,7 @@ import UI44 from "../IMAGES/UI/PRICING.png";
 import UI45 from "../IMAGES/UI/PAY PANEL.png";
 import UI46 from "../IMAGES/UI/PRICE CARD 2.png";
 import UI47 from "../IMAGES/UI/PRICE CARD 3.png";
-
+//  PROJECTS IMPORTS
 import Netflex1 from "../IMAGES/PROJECTS/Netflex1.png";
 import SammieArt1 from "../IMAGES/PROJECTS/SammieArt1.png";
 import ReportForm1 from "../IMAGES/PROJECTS/ReportForm1.png";
@@ -75,15 +70,16 @@ import TaskManager1 from "../IMAGES/PROJECTS/TaskManager1.png";
 import TaskManager2 from "../IMAGES/PROJECTS/TaskManager2.png";
 import WhaTodo from "../IMAGES/UI/WHATODO-Land.png";
 import WhaTodoDesktop from "../IMAGES/PROJECTS/Whatodo-Desktop-Size.png";
-
-// import NetflexProject from '../IMAGES/NetFlex-Project.png'
 import SammieArtProject from "../IMAGES/Sammie-Art-Project.png";
 import SammieArtProject2 from "../IMAGES/SammieArt-Project.png";
 import DivisionFormProject from "../IMAGES/DivisionForm-Project.png";
 import TaskManagerProject from "../IMAGES/TaskManager1-Project.png";
 import WhatodoProject from "../IMAGES/Whatodo-Project.png";
-
-// import TaskManager from '../../IMAGES/TaskManager2-Project.png'
+//  TOOLS IMAGES IMPORTS
+import Html5 from "../IMAGES/TOOLS/HTML5.png";
+import Css from "../IMAGES/TOOLS/CSS.png";
+import JS from "../IMAGES/TOOLS/JS.jpg";
+import VSCode from "../IMAGES/TOOLS/Visual-Studio-code.png";
 
 //HOME PAGE SKILLS
 export const SKILLS = [
@@ -188,7 +184,12 @@ export const PROJECTS = [
     id: 1,
     name: "Division Report Form",
     status: "completed",
-    utilities: ["HTML", "CSS", "JAVASCRIPT"],
+    utilities: [
+      { name: "HTML", img: Html5 },
+      { name: "CSS", img: Css },
+      { name: "JavaScript", img: JS },
+    ],
+    // utilities: ["HTML", "CSS", "JAVASCRIPT"],
     git: "https://github.com/Dharvo/Report-Form",
     link: "https://division-report-form.netlify.app",
     images: [ReportForm1, ReportForm2],
@@ -200,7 +201,7 @@ export const PROJECTS = [
     id: 2,
     name: "Graph Task Manager",
     status: "completed",
-    utilities: ["CHART JS", "REACT JS", "FIREBASE"],
+    // utilities: ["CHART JS", "REACT JS", "FIREBASE"],
     git: "https://github.com/Dharvo/Task-Manager",
     link: "https://taskmanager-e694e.web.app",
     images: [TaskManager1, TaskManager2],
@@ -212,7 +213,7 @@ export const PROJECTS = [
     id: 3,
     name: "Netflex (Netflix Clone)",
     status: "completed",
-    utilities: ["CSS", "REACT JS", "FIREBASE"],
+    // utilities: ["CSS", "REACT JS", "FIREBASE"],
     git: "https://github.com/Dharvo/Netflex",
     link: "https://netflex-eb4ee.web.app",
     images: [Netflex1],
@@ -224,7 +225,7 @@ export const PROJECTS = [
     id: 4,
     name: "Sammie's Art Gallery",
     status: "completed",
-    utilities: ["REACT JS", "SWIPER", "SCSS"],
+    // utilities: ["REACT JS", "SWIPER", "SCSS"],
     git: "https://github.com/Dharvo/my-protfolio",
     link: "https://sammie-art.web.app",
     images: [SammieArt1],
@@ -236,7 +237,7 @@ export const PROJECTS = [
     id: 5,
     name: "Wha'Todo App",
     status: "completed",
-    utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
+    // utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
     git: "https://github.com/Dharvo/whatodo",
     link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
     images: [WhaTodoDesktop, WhaTodo],
@@ -250,45 +251,43 @@ export const PROJECTS = [
 export const contactList = [
   {
     name: "Phone Number",
-    // icon: <Phone />,
-    icon: <></>,
+    icon: <PhoneIn />,
     fnc: +2348121820645,
   },
   {
     name: "Linked In",
-    // icon: <LinkedIn />,
-    icon: <></>,
-    fnc: "http://LinkedIn/in/vybztech/",
+    icon: <LinkedIn />,
+    fnc: "https://LinkedIn/in/VybzTech/",
   },
   {
     name: "Twitter",
-    // icon: <Twitter />,
-    icon: <></>,
-    fnc: "http://Twitter.com/djay_vybz/",
+    icon: <Twitter />,
+    fnc: "https://Twitter.com/djay_vybz/",
   },
   {
     name: "GitHub",
-    // icon: <GitHub />,
-    icon: <></>,
-    fnc: "http://github.com/dharvo/",
+    icon: <Github />,
+    fnc: "https://github.com/VybzTech/",
   },
   {
     name: "Instagram",
-    // icon: <Instagram />,
-    icon: <></>,
-    fnc: "http://instagram.com/vybz.tech/",
+    icon: <Instagram />,
+    fnc: "https://instagram.com/vybz.tech/",
   },
   {
     name: "YouTube",
-    // icon: <YouTube />,
-    icon: <></>,
-    fnc: "http://YouTube.com/djay_vybz/",
+    icon: <Youtube />,
+    fnc: "https://YouTube.com/djay_vybz/",
   },
   {
     name: "Facebook",
-    // icon: <Facebook />,
-    icon: <></>,
-    fnc: "http://Facebook.com/david.adeyinka.94/",
+    icon: <Facebook />,
+    fnc: "https://Facebook.com/david.adeyinka.94/",
+  },
+  {
+    name: "Online CV",
+    icon: <Globe />,
+    fnc: "https://Read.cv/VybzTech/",
   },
 ];
 

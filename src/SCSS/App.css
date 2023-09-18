@@ -677,11 +677,14 @@
   @apply w-[75%] ml-[22%] min-h-[90vh];
 }
 #projects main section .gridSection {
-  @apply pt-10 pb-5 px-2.5;
+  @apply pt-10 pb-5 px-2.5 relative;
+  position: relative;
 }
 #projects main section .gridSection .MainProject {
+  position: static;
   box-shadow: 0 3px 10px 0.5px rgba(204, 204, 204, 0.1333333333);
-  @apply mt-1 mb-8 bg-white rounded rounded-2xl  pb-5 overflow-hidden;
+  @apply mt-1 mb-8 bg-white rounded rounded-2xl pb-5
+           overflow-hidden;
 }
 #projects main section .gridSection .MainProject:hover {
   box-shadow: 0 3px 15px 1.5px rgba(204, 204, 204, 0.3333333333);
@@ -727,13 +730,27 @@
   @apply flex justify-between;
 }
 #projects main section .gridSection .MainProject .contentWrapper .actions button {
-  @apply p-1.5 pb-5 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700;
+  @apply p-1.5 pb-5 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
 }
 #projects main section .gridSection .MainProject .tools {
   @apply hidden;
 }
 #projects main section .gridSection .MainProject .tools.show {
-  @apply block;
+  box-shadow: 0 3px 10px 0.5px rgba(204, 204, 204, 0.2);
+  z-index: 2;
+  @apply overflow-visible p-3 block top-[94%] left-2 absolute flex bg-white rounded rounded-2xl;
+}
+#projects main section .gridSection .MainProject .tools .arrow {
+  z-index: 15;
+  border: 10px solid white;
+  border-top-width: 0px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  @apply h-5 absolute top-[-1rem] left-2;
+}
+#projects main section .gridSection .MainProject .tools img {
+  @apply w-10 h-10 object-contain;
 }
 
 #contact .bg {
@@ -765,15 +782,14 @@
   @apply m-8 opacity-90 leading-[1.9];
 }
 #contact main .hero {
-  width: fit-content;
-  @apply flex mx-auto;
+  @apply w-fit flex mx-auto;
 }
 #contact main .hero > div {
-  @apply w-7 h-0.5 mx-1 opacity-80 my-auto rounded bg-slate-700;
+  @apply w-7 h-0.5 mx-0.5 opacity-80 my-auto rounded rounded-xl bg-slate-700;
 }
 #contact main .hero h3 {
   @apply uppercase;
-  color: #222;
+  color: #333;
   font-family: montXBold, Verdana, sans-serif;
   letter-spacing: 0;
   word-spacing: 0;
@@ -782,17 +798,50 @@
   font-size: 1.1rem;
 }
 #contact main .socials {
-  @apply flex w-fit p-4;
+  @apply flex w-fit p-4 flex-wrap;
 }
 #contact main .socials button,
 #contact main .socials a {
-  @apply bg-transparent;
+  @apply rounded rounded-3xl mx-2 mb-1.5 bg-transparent border-gray-600 transition-all ease-in;
+  border: 2px solid #333;
+}
+#contact main .socials button:hover, #contact main .socials button:focus,
+#contact main .socials a:hover,
+#contact main .socials a:focus {
+  border-color: #064da5;
+}
+#contact main .socials button:hover svg, #contact main .socials button:focus svg,
+#contact main .socials a:hover svg,
+#contact main .socials a:focus svg {
+  color: #064da5;
 }
 #contact main .socials button svg,
 #contact main .socials a svg {
-  @apply w-6 h-6 object-contain;
+  @apply w-8 h-8 p-1.5 text-gray-800 object-contain transition-all ease-in;
 }
-
+#contact main .ContactMeWrapper .ContactMe {
+  box-shadow: 0 3px 10px 0.5px rgba(204, 204, 204, 0.1333333333);
+  @apply mx-5 mt-2 mb-8 bg-white rounded rounded-2xl  pb-5 overflow-hidden min-h-[70vh];
+}
+#contact main .ContactMeWrapper .ContactMe:hover {
+  box-shadow: 0 3px 15px 1.5px rgba(204, 204, 204, 0.3333333333);
+}
+#contact main .ContactMeWrapper .ContactMe .intro {
+  @apply flex items-center my-3 mx-auto;
+}
+#contact main .ContactMeWrapper .ContactMe .intro h2 {
+  color: black;
+  font-family: montXBold, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  @apply my-3;
+}
+#contact main .ContactMeWrapper .ContactMe .intro svg {
+  @apply w-8 h-8 mr-4;
+}
 .BottomColor {
   background-color: #17298e;
   @apply h-[1.5vh];

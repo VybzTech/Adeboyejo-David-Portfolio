@@ -5,10 +5,15 @@ const InProgress = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
+      fill="currentColor"
       width="48"
       height="48"
       preserveAspectRatio="xMidYMid meet"
-      style={{width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);}}
+      style={{
+        width: "100%",
+        height: "100%",
+        transform: "translate3d(0px, 0px, 0px)",
+      }}
     >
       <defs>
         <clipPath id="__lottie_element_2">
@@ -19,7 +24,7 @@ const InProgress = () => {
         <g
           transform="matrix(0.9702957272529602,-0.24192190170288086,0.24192190170288086,0.9702957272529602,24,24)"
           opacity="1"
-          style="display: block;"
+          style={{ display: "block" }}
         >
           <g opacity="1" transform="matrix(1,0,0,1,0,0)">
             <path
@@ -38,7 +43,7 @@ const InProgress = () => {
         <g
           transform="matrix(1,0,0,1,24,24)"
           opacity="1"
-          style="display: block;"
+          style={{ display: "block" }}
         >
           <g opacity="1" transform="matrix(1,0,0,1,0,0)">
             <path
@@ -53,7 +58,7 @@ const InProgress = () => {
           </g>
         </g>
         <g
-          style="display: none;"
+          style={{ display: "none" }}
           transform="matrix(1,0,0,1,24,24.5)"
           opacity="1"
         >
@@ -72,7 +77,7 @@ const InProgress = () => {
         <g
           transform="matrix(1,0,0,1,24,24.5)"
           opacity="1"
-          style="display: block;"
+          style={{ display: "block" }}
         >
           <g opacity="1" transform="matrix(1,0,0,1,0,0)">
             <path

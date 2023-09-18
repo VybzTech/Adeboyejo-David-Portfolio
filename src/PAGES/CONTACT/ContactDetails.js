@@ -1,7 +1,6 @@
 import React from "react";
 import { contactList } from "../Utils";
 import { Slide, Zoom } from "react-awesome-reveal";
-// import { IconButton } from '@material-ui/core'
 
 const ContactDetails = () => {
   return (
@@ -15,7 +14,6 @@ const ContactDetails = () => {
       </Slide>
       <div className="socials">
         <Zoom triggerOnce cascade>
-          {/* delay={1500} */}
           {contactList?.map((cont) => {
             if (typeof cont.fnc === "number") {
               return (

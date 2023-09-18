@@ -33,11 +33,9 @@ const Contact = () => {
       <div className="bg" children={<Pleasantries />} />
       {/*  AttentionSeeker  Bounce  Fade  Flip Hinge JackInTheBox Roll Rotate Slide Zoom */}
       <main>
-        <ContactImage />  
+        {/* <ContactImage />   */}
         {/* </Fade> */}
-        {/* <Flip top big triggerOnce>
-          <ContactMe />
-        </Flip> */}
+        <ContactMe />
       </main>
       <Footer />
     </div>
