@@ -52,7 +52,7 @@ const ContactMe = () => {
           <Inbox />
           <h2>Drop a Mail Inbox!</h2>
         </div>
-        {/* <Formik
+        <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={deliverMsg}
@@ -105,7 +105,7 @@ const ContactMe = () => {
               </Form>
             );
           }}
-        </Formik> */}
+        </Formik>
       </div>
       <div className="circleWrapper" />
     </div>

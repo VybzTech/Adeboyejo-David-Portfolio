@@ -681,9 +681,8 @@
   position: relative;
 }
 #projects main section .gridSection .MainProject {
-  position: static;
   box-shadow: 0 3px 10px 0.5px rgba(204, 204, 204, 0.1333333333);
-  @apply mt-1 mb-8 bg-white rounded rounded-2xl pb-5
+  @apply mt-1 mb-6 bg-white rounded rounded-2xl pb-5
            overflow-hidden;
 }
 #projects main section .gridSection .MainProject:hover {
@@ -732,25 +731,25 @@
 #projects main section .gridSection .MainProject .contentWrapper .actions button {
   @apply p-1.5 pb-5 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
 }
-#projects main section .gridSection .MainProject .tools {
+#projects main section .tools {
   @apply hidden;
 }
-#projects main section .gridSection .MainProject .tools.show {
+#projects main section .tools.show {
   box-shadow: 0 3px 10px 0.5px rgba(204, 204, 204, 0.2);
   z-index: 2;
-  @apply overflow-visible p-3 block top-[94%] left-2 absolute flex bg-white rounded rounded-2xl;
+  @apply mt-[-1rem] mb-5 flex bg-white p-2 rounded rounded-xl;
 }
-#projects main section .gridSection .MainProject .tools .arrow {
+#projects main section .tools .arrow {
   z-index: 15;
   border: 10px solid white;
   border-top-width: 0px;
   border-top-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;
-  @apply h-5 absolute top-[-1rem] left-2;
+  @apply h-6 absolute top-[-1.95rem] left-2;
 }
-#projects main section .gridSection .MainProject .tools img {
-  @apply w-10 h-10 object-contain;
+#projects main section .tools img {
+  @apply mr-1 w-8 h-8 rounded rounded-sm object-contain;
 }
 
 #contact .bg {
@@ -827,7 +826,7 @@
   box-shadow: 0 3px 15px 1.5px rgba(204, 204, 204, 0.3333333333);
 }
 #contact main .ContactMeWrapper .ContactMe .intro {
-  @apply flex items-center my-3 mx-auto;
+  @apply flex justify-center items-center my-4 mx-auto;
 }
 #contact main .ContactMeWrapper .ContactMe .intro h2 {
   color: black;
@@ -841,6 +840,24 @@
 }
 #contact main .ContactMeWrapper .ContactMe .intro svg {
   @apply w-8 h-8 mr-4;
+}
+#contact main .ContactMeWrapper .ContactMe form button {
+  /*
+      > div.more {
+    @apply w-fit mx-auto mt-7;
+    .btn {
+      background: linear-gradient(-15deg, #1e40af, #2563eb);
+      @apply text-[11px] border border-blue-600 font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase w-fit;
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        background: linear-gradient(-15deg, #153290, #1e40af);
+        -webkit-text-stroke: 0.05px white;
+      }
+    }
+  }
+  */
 }
 .BottomColor {
   background-color: #17298e;

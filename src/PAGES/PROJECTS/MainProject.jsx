@@ -42,75 +42,77 @@ const MainProject = ({ nav, project }) => {
   // });
 
   return (
-    <Zoom
-      key={project.id}
-      big
-      triggerOnce
-      left
-      delay={1500}
-      spy={nav}
-      className="MainProject"
-    >
-      <>
-        {/*   PROJECT IMAGES SWIPER */}
-        <Swiper
-          modules={[Navigation]}
-          slidesPerView={1}
-          spaceBetween={0}
-          speed={500}
-          navigation
-          effect={"fade"}
-          // fadeEffect={{ crossFade: true }}
-          loop={true}
-          // autoplay={true}
-          grabCursor={true}
-        >
-          <div className="swiper-wrapper">
-            {images?.map((Img, id) => (
-              <SwiperSlide key={id} className="swiper-slide">
-                <img src={Img} alt={`${name}-${id}`} />
-              </SwiperSlide>
-            ))}
-          </div>
-        </Swiper>
-        {/*   PROJECT CONTENTS */}
-        <div className="contentWrapper">
-          <h4>{name}</h4>
-          <p>
-            {content.length > 120 ? content.substr(0, 100) + "..." : content}
-          </p>
-          <div className="actions">
-            <div>
-              <button
-                className={`${show && "active"}`}
-                onClick={() => set((s) => (s = !s))}
-              >
-                <Tools />
-              </button>
-              <button
-                onClick={() => {
-                  window.open(git, "_blank");
-                }}
-              >
-                <Github />
-              </button>
-              <button
-                onClick={() => {
-                  window.open(link, "_blank");
-                }}
-              >
-                <Link />
-              </button>
+    <>
+      <Zoom
+        key={project.id}
+        big
+        triggerOnce
+        left
+        delay={1500}
+        className="MainProject"
+      >
+        <>
+          {/*   PROJECT IMAGES SWIPER */}
+          <Swiper
+            modules={[Navigation]}
+            slidesPerView={1}
+            spaceBetween={0}
+            speed={500}
+            navigation
+            effect={"fade"}
+            // fadeEffect={{ crossFade: true }}
+            loop={true}
+            // autoplay={true}
+            grabCursor={true}
+          >
+            <div className="swiper-wrapper">
+              {images?.map((Img, id) => (
+                <SwiperSlide key={id} className="swiper-slide">
+                  <img src={Img} alt={`${name}-${id}`} />
+                </SwiperSlide>
+              ))}
             </div>
-            <div className="more">
-              <button onClick={() => setDetails((d) => (d = !d))}>
-                <ArrowRight />
-              </button>
+          </Swiper>
+          {/*   PROJECT CONTENTS */}
+          <div className="contentWrapper">
+            <h4>{name}</h4>
+            <p>
+              {content.length > 120 ? content.substr(0, 100) + "..." : content}
+            </p>
+            <div className="actions">
+              <div>
+                <button
+                  className={`${show && "active"}`}
+                  onClick={() => set((s) => (s = !s))}
+                >
+                  <Tools />
+                </button>
+                <button
+                  onClick={() => {
+                    window.open(git, "_blank");
+                  }}
+                >
+                  <Github />
+                </button>
+                <button
+                  onClick={() => {
+                    window.open(link, "_blank");
+                  }}
+                >
+                  <Link />
+                </button>
+              </div>
+              <div className="more">
+                <button onClick={() => setDetails((d) => (d = !d))}>
+                  <ArrowRight />
+                </button>
+              </div>
+              {/* https://www.figma.com/file/NNPdiNOfJKjTqvE7apPNHw/David's-Portfolio?type=design&node-id=220-633&mode=design */}
             </div>
-            {/* https://www.figma.com/file/NNPdiNOfJKjTqvE7apPNHw/David's-Portfolio?type=design&node-id=220-633&mode=design */}
           </div>
-        </div>
-      </>
+        </>
+      </Zoom>
+      <Zoom big cascade triggerOnce delay={500}>
         <ul className={`tools ${show && "show"}`}>
           <span className="arrow" />
           {utilities?.map(({ name, img }) => {
@@ -121,7 +123,8 @@ const MainProject = ({ nav, project }) => {
             );
           })}
         </ul>
-    </Zoom>
+      </Zoom>
+    </>
   );
 };
 

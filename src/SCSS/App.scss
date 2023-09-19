@@ -3,10 +3,10 @@
 @tailwind utilities;
 @import "./startup";
 
-@import "./smPhone";
-@import "./phone";
-@import "./tablet";
-@import "./laptop";
+// @import "./smPhone";
+// @import "./phone";
+// @import "./tablet";
+// @import "./laptop";
 
 //--------- LOADER
 .Loader {
@@ -587,9 +587,9 @@
         position: relative;
         // EACH PROJECT DIV
         .MainProject {
-          position: static;
+          // position: static;
           box-shadow: 0 3px 10px 0.5px #ccc2;
-          @apply mt-1 mb-8 bg-white rounded rounded-2xl pb-5
+          @apply mt-1 mb-6 bg-white rounded rounded-2xl pb-5
            overflow-hidden;
           &:hover {
             box-shadow: 0 3px 15px 1.5px #ccc5;
@@ -639,30 +639,32 @@
               }
             }
           }
-          // USED TOOLS DIV
-          // BORDER WHERE BOTTOM IS 10PX LEFT & RIGHT ARE HIDDEN AND TOP IS 0
-          .tools {
-            @apply hidden;
-            &.show {
-              box-shadow: 0 3px 10px 0.5px #ccc3; // mx-5 mt-2 mb-8
-              z-index: 2;
-              @apply overflow-visible p-3 block top-[94%] left-2 absolute flex bg-white rounded rounded-2xl;
-            }
-            .arrow {
-              z-index: 15;
-              // box-shadow: 0 3px 10px 0.5px #ccc3; // mx-5 mt-2 mb-8
-              border: 10px solid white;
-              border-top-width: 0px;
-              border-top-color: transparent;
-              border-left-color: transparent;
-              border-right-color: transparent;
-              @apply h-5 absolute top-[-1rem] left-2;
-            }
-            img {
-              @apply w-10 h-10 object-contain;
-            }
-          }
         }
+      }
+      // USED TOOLS DIV
+      // BORDER WHERE BOTTOM IS 10PX LEFT & RIGHT ARE HIDDEN AND TOP IS 0
+      // .MainProject
+      .tools {
+        @apply hidden;
+        &.show {
+          box-shadow: 0 3px 10px 0.5px #ccc3; // mx-5 mt-2 mb-8
+          z-index: 2;
+          // @apply overflow-visible block top-[94%] left-2 absolute;
+          @apply mt-[-1rem] mb-5 flex bg-white p-2 rounded rounded-xl;
+        }
+        .arrow {
+          z-index: 15;
+          // box-shadow: 0 3px 10px 0.5px #ccc3; // mx-5 mt-2 mb-8
+          border: 10px solid white;
+          border-top-width: 0px;
+          border-top-color: transparent;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          @apply h-6 absolute top-[-1.95rem] left-2;
+        }
+          img {
+            @apply mr-1 w-8 h-8 rounded rounded-sm object-contain;
+          }
       }
     }
   }
@@ -735,7 +737,7 @@
           box-shadow: 0 3px 15px 1.5px #ccc5;
         }
         .intro {
-          @apply flex items-center my-3 mx-auto;
+          @apply flex justify-center items-center my-4 mx-auto;
           h2 {
             @include BoldText($align: center, $size: 1.1rem, $word: 2px);
             @apply my-3;
@@ -805,6 +807,22 @@
             }
           }
           button {
+          /*
+          > div.more {
+        @apply w-fit mx-auto mt-7;
+        .btn {
+          background: linear-gradient(-15deg, #1e40af, #2563eb);
+          @apply text-[11px] border border-blue-600 font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase w-fit;
+          &:hover,
+          &:focus,
+          &:focus-within,
+          &:focus-visible {
+            background: linear-gradient(-15deg, #153290, #1e40af);
+            -webkit-text-stroke: 0.05px white;
+          }
+        }
+      }
+      */
             // color: $themeWhite;
             // font-family: montLight;
             // background-color: $themeBlue;

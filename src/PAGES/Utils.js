@@ -79,7 +79,8 @@ import WhatodoProject from "../IMAGES/Whatodo-Project.png";
 import Html5 from "../IMAGES/TOOLS/HTML5.png";
 import Css from "../IMAGES/TOOLS/CSS.png";
 import JS from "../IMAGES/TOOLS/JS.jpg";
-import VSCode from "../IMAGES/TOOLS/Visual-Studio-code.png";
+// import VSCode from "../IMAGES/TOOLS/Visual-Studio-code.png";
+import Bootstrap from "../IMAGES/TOOLS/Bootstrap.png";
 
 //HOME PAGE SKILLS
 export const SKILLS = [
@@ -188,6 +189,8 @@ export const PROJECTS = [
       { name: "HTML", img: Html5 },
       { name: "CSS", img: Css },
       { name: "JavaScript", img: JS },
+      { name: "Bootstrap", img: Bootstrap },
+      // { name: "VS Code", img: VSCode },
     ],
     // utilities: ["HTML", "CSS", "JAVASCRIPT"],
     git: "https://github.com/Dharvo/Report-Form",
