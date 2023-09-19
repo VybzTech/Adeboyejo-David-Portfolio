@@ -112,9 +112,9 @@ const MainProject = ({ nav, project }) => {
           </div>
         </>
       </Zoom>
+          {/*   PROJECT TOOLS */}
       <Zoom big cascade triggerOnce delay={500}>
         <ul className={`tools ${show && "show"}`}>
-          <span className="arrow" />
           {utilities?.map(({ name, img }) => {
             return (
               <li key={name}>

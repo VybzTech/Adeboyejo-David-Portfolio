@@ -66,6 +66,7 @@ import Netflex1 from "../IMAGES/PROJECTS/Netflex1.png";
 import SammieArt1 from "../IMAGES/PROJECTS/SammieArt1.png";
 import ReportForm1 from "../IMAGES/PROJECTS/ReportForm1.png";
 import ReportForm2 from "../IMAGES/PROJECTS/ReportForm2.png";
+import ReportForm3 from "../IMAGES/PROJECTS/ReportForm3.jpg";
 import TaskManager1 from "../IMAGES/PROJECTS/TaskManager1.png";
 import TaskManager2 from "../IMAGES/PROJECTS/TaskManager2.png";
 import WhaTodo from "../IMAGES/UI/WHATODO-Land.png";
@@ -77,10 +78,23 @@ import TaskManagerProject from "../IMAGES/TaskManager1-Project.png";
 import WhatodoProject from "../IMAGES/Whatodo-Project.png";
 //  TOOLS IMAGES IMPORTS
 import Html5 from "../IMAGES/TOOLS/HTML5.png";
-import Css from "../IMAGES/TOOLS/CSS.png";
-import JS from "../IMAGES/TOOLS/JS.jpg";
-// import VSCode from "../IMAGES/TOOLS/Visual-Studio-code.png";
+import Css from "../IMAGES/TOOLS/CSS3.png";
+import JS from "../IMAGES/TOOLS/JS.png";
+import VSCode from "../IMAGES/TOOLS/VS-Code.png";
 import Bootstrap from "../IMAGES/TOOLS/Bootstrap.png";
+import Jquery from "../IMAGES/TOOLS/Jquery.png";
+import GithubImg from "../IMAGES/TOOLS/Github.png";
+import CSharp from "../IMAGES/TOOLS/C-sharp.png";
+// import Jquery from "../IMAGES/TOOLS/Jquery.png";
+import Figma from "../IMAGES/TOOLS/Figma.png";
+import MaterialUI from "../IMAGES/TOOLS/Material-ui.png";
+import ReactImg from "../IMAGES/TOOLS/React.png";
+import NodeJS from "../IMAGES/TOOLS/Node.png";
+import ChartJS from "../IMAGES/TOOLS/Chartjs.svg";
+import Php from "../IMAGES/TOOLS/Php.png";
+import Firebase from "../IMAGES/TOOLS/Firebase.png";
+import Swiper from "../IMAGES/TOOLS/Swiper.svg";
+import Photoshop from "../IMAGES/TOOLS/Photoshop-cc.png";
 
 //HOME PAGE SKILLS
 export const SKILLS = [
@@ -190,12 +204,13 @@ export const PROJECTS = [
       { name: "CSS", img: Css },
       { name: "JavaScript", img: JS },
       { name: "Bootstrap", img: Bootstrap },
-      // { name: "VS Code", img: VSCode },
+      { name: "VS Code", img: VSCode },
+      { name: "Jquery", img: Jquery },
+      { name: "Github", img: GithubImg },
     ],
-    // utilities: ["HTML", "CSS", "JAVASCRIPT"],
-    git: "https://github.com/Dharvo/Report-Form",
+    git: "https://github.com/VybzTech/Report-Form",
     link: "https://division-report-form.netlify.app",
-    images: [ReportForm1, ReportForm2],
+    images: [ReportForm1, ReportForm2, ReportForm3],
     tag: ["All", "Completed"],
     content:
       "When you think validation, you think Javascript ! That's why this project utilizes Javascript to validate through the form's required fields.",
@@ -204,7 +219,17 @@ export const PROJECTS = [
     id: 2,
     name: "Graph Task Manager",
     status: "completed",
-    // utilities: ["CHART JS", "REACT JS", "FIREBASE"],
+    utilities: [
+      { name: "HTML", img: Html5 },
+      { name: "CSS", img: Css },
+      { name: "JavaScript", img: JS },
+      { name: "Jquery", img: Jquery },
+      { name: "ChartJS", img: ChartJS },
+      { name: "Bootstrap", img: Bootstrap },
+      { name: "Github", img: GithubImg },
+      { name: "Php", img: Php },
+      { name: "VS Code", img: VSCode },
+    ],
     git: "https://github.com/Dharvo/Task-Manager",
     link: "https://taskmanager-e694e.web.app",
     images: [TaskManager1, TaskManager2],
@@ -216,7 +241,16 @@ export const PROJECTS = [
     id: 3,
     name: "Netflex (Netflix Clone)",
     status: "completed",
-    // utilities: ["CSS", "REACT JS", "FIREBASE"],
+    utilities: [
+      { name: "CSS", img: Css },
+      { name: "JavaScript", img: JS },
+      { name: "Github", img: GithubImg },
+      { name: "VS Code", img: VSCode },
+      // { name: "Material UI", img: MaterialUI },
+      { name: "React", img: ReactImg },
+      { name: "Node JS", img: NodeJS },
+      { name: "Firebase", img: Firebase },
+    ],
     git: "https://github.com/Dharvo/Netflex",
     link: "https://netflex-eb4ee.web.app",
     images: [Netflex1],
@@ -228,8 +262,19 @@ export const PROJECTS = [
     id: 4,
     name: "Sammie's Art Gallery",
     status: "completed",
-    // utilities: ["REACT JS", "SWIPER", "SCSS"],
-    git: "https://github.com/Dharvo/my-protfolio",
+    utilities: [
+      { name: "CSS", img: Css },
+      { name: "Figma", img: Figma },
+      { name: "Firebase", img: Firebase },
+      { name: "Github", img: GithubImg },
+      { name: "Material UI", img: MaterialUI },
+      { name: "Node JS", img: NodeJS },
+      { name: "React", img: ReactImg },
+      { name: "SCSS", img: Css },
+      { name: "Swiper", img: Swiper },
+      { name: "VS Code", img: VSCode },
+    ],
+    git: "https://github.com/Dharvo/my-portfolio",
     link: "https://sammie-art.web.app",
     images: [SammieArt1],
     tag: ["All", "Completed", "React"],
@@ -241,6 +286,13 @@ export const PROJECTS = [
     name: "Wha'Todo App",
     status: "completed",
     // utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
+    utilities: [
+      { name: "Figma", img: Figma },
+      { name: "Firebase", img: Firebase },
+      { name: "Github", img: GithubImg },
+      { name: "Material UI", img: MaterialUI },
+      { name: "VS Code", img: VSCode },
+    ],
     git: "https://github.com/Dharvo/whatodo",
     link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
     images: [WhaTodoDesktop, WhaTodo],

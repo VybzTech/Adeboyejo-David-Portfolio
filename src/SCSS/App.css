@@ -105,6 +105,20 @@
     transform: translateY(0%);
   }
 }
+@keyframes effect {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px 1px transparent;
+  }
+  50% {
+    transform: scale(0.975);
+    box-shadow: 0 0 15px 1px #e3f2f8;
+  }
+  100% {
+    transform: scale(1.005);
+    box-shadow: 0 0 17px 0.5px #f5f5f9;
+  }
+}
 .Loader {
   @apply w-full h-[100vh];
 }
@@ -221,12 +235,7 @@
   object-fit: cover;
 }
 #home .intro {
-  position: absolute;
-  left: 9%;
-  top: 33vh;
-  position: absolute;
-  top: 30vh;
-  left: 8%;
+  @apply absolute left-[9%] top-[30vh];
 }
 #home .intro .hero,
 #home .intro .h5Hold {
@@ -342,10 +351,7 @@
   position: absolute !important;
 }
 #home .skills .KeySkillsWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  @apply w-full;
+  @apply w-full absolute top-0 left-0;
 }
 #home .skills .KeySkillsWrapper .keySkills {
   z-index: 1;
@@ -550,10 +556,7 @@
   position: absolute !important;
 }
 #about .myServices .serviceWrapper {
-  @apply w-full px-4;
-  position: absolute;
-  top: 0;
-  left: 0;
+  @apply w-full px-4 absolute top-0 left-0;
 }
 #about .myServices .serviceWrapper h2 {
   @apply pt-6;
@@ -694,6 +697,9 @@
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1333333333), rgba(255, 255, 255, 0.4666666667), white);
   @apply absolute top-0 left-0 w-full h-full;
 }
+#projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+  @apply object-contain max-h-[27vh] m-auto;
+}
 #projects main section .gridSection .MainProject .swiper [class^=swiper-button] {
   @apply w-8 h-8 top-[35%] opacity-40 [&::after]:text-[14px] px-2 py-0.5  [&:hover]:bg-slate-50 [&::after]:text-gray-600 rounded rounded-3xl;
 }
@@ -735,21 +741,36 @@
   @apply hidden;
 }
 #projects main section .tools.show {
-  box-shadow: 0 3px 10px 0.5px rgba(204, 204, 204, 0.2);
+  box-shadow: 0 2px 12px 0.75px rgba(187, 187, 187, 0.3333333333);
   z-index: 2;
-  @apply mt-[-1rem] mb-5 flex bg-white p-2 rounded rounded-xl;
+  @apply mt-[-1.1rem] mb-5 flex-wrap flex bg-white p-2 pb-0 rounded rounded-xl;
 }
-#projects main section .tools .arrow {
-  z-index: 15;
+#projects main section .tools.show::before {
+  content: "";
   border: 10px solid white;
   border-top-width: 0px;
   border-top-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;
-  @apply h-6 absolute top-[-1.95rem] left-2;
+  @apply h-6 absolute top-[-1.4rem] left-3.5;
 }
-#projects main section .tools img {
-  @apply mr-1 w-8 h-8 rounded rounded-sm object-contain;
+#projects main section .tools.show li {
+  @apply mr-2 mb-2;
+}
+#projects main section .tools.show li img {
+  @apply w-8 h-8 rounded rounded-sm object-contain;
+}
+#projects main section .UI-UX {
+  @apply py-5 pl-4 pr-2;
+}
+#projects main section .UI-UX .UI_image {
+  @apply [&>div]:mb-4;
+}
+#projects main section .UI-UX .UI_image img {
+  @apply rounded rounded-md;
+}
+#projects main section .UI-UX .UI_image img:hover, #projects main section .UI-UX .UI_image img:focus, #projects main section .UI-UX .UI_image img:focus-within, #projects main section .UI-UX .UI_image img:focus-visible {
+  animation: effect 0.5s ease-in-out 10ms 1 alternate forwards;
 }
 
 #contact .bg {
