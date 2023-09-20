@@ -4,7 +4,6 @@ import React, { useRef } from "react";
 import { Form, Formik } from "formik";
 import FormControl from "../../COMPONENTS/FormControl";
 import Inbox from "../../ICONS/Inbox";
-// import { Button } from '@material-ui/core'
 
 const ContactMe = () => {
   const initialValues = {

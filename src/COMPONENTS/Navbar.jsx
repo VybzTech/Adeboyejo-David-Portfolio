@@ -19,6 +19,8 @@ const Navbar = withRouter((props) => {
     return window.removeEventListener("scroll", () => {});
   }, []);
 
+// FIX BUG THAT DETECTS AFTER LOADING IF THE SCROLL BAR IS ALREADY > 100 SO IT'LL ADD CLASS EVEN WIHTOUT SCROLLING INITIALLY
+
   return (
     <div className={`navbar ${navBg && "white"}`}>
       <Fade left big triggerOnce>

@@ -67,7 +67,7 @@
     height: 100vh;
     width: 100%;
     background-size: auto 100%;
-      background-position: top;
+    background-position: top;
     // background-size: cover;
     // @media screen and (max-width: 1024px) {
     // }
@@ -280,11 +280,11 @@ $themeBlueShadow: #09095077;
 //       fill: $themeRed;
 //     }
 //   }
-  // //ADJUSTMENTS
-  // @media screen and (max-width: 1300px) {
-  // }
-  // @media screen and (max-width: 1024px) {
-  // }
+// //ADJUSTMENTS
+// @media screen and (max-width: 1300px) {
+// }
+// @media screen and (max-width: 1024px) {
+// }
 // }
 
 //---------ANIMATIONS
@@ -332,16 +332,16 @@ $themeBlueShadow: #09095077;
 }
 
 @keyframes effect {
-                0% {
-                  transform: scale(1);
-                  box-shadow: 0 0 15px 1px transparent;
-                }
-                50% {
-                  transform: scale(0.975);
-                  box-shadow: 0 0 15px 1px $themeWhitishBlue;
-                }
-                100% {
-                  transform: scale(1.005);
-                  box-shadow: 0 0 17px 0.5px $themeWhite2;
-                }
-                }
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px 1px transparent;
+  }
+  50% {
+    transform: scale(0.975);
+    box-shadow: 0 0 15px 1px $themeWhitishBlue;
+  }
+  100% {
+    transform: scale(1.005);
+    box-shadow: 0 0 17px 0.5px $themeWhite2;
+  }
+}

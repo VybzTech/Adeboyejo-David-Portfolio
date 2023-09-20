@@ -743,7 +743,7 @@
     .ContactMeWrapper {
       .ContactMe {
         box-shadow: 0 3px 10px 0.5px #ccc2;
-        @apply mx-5 mt-2 mb-8 bg-white rounded rounded-2xl  pb-5 overflow-hidden min-h-[70vh];
+        @apply mx-3 mt-2 mb-8 bg-white rounded rounded-2xl  pb-5 overflow-hidden min-h-[70vh];
         &:hover {
           box-shadow: 0 3px 15px 1.5px #ccc5;
         }
@@ -762,22 +762,20 @@
             // margin-bottom: 0.5rem;
             label {
               // margin-left: 2px;
-              // @include SemiBoldText($letter: -0.35px, $size: 0.95rem);
+              @include LightText($letter: -0.35px, $size: 0.95rem);
+              @apply font-bold;
               span {
-                // color: $themeCoarseRed;
-                // font-size: 1.2rem;
-                // font-family: montLight;
-                // margin-left: 1.5px;
+                color: $themeCoarseRed;
+                @apply text-xs font-sans ml-0.5 mt-[-10px];
               }
             }
             input,
             textarea {
+              @apply mt-5 px-1 py-1.5 rounded rounded-md transition-all ease-in bg-gray-50 hover:bg-slate-50 focus:bg-slate-50;
               // margin-top: 3.5px;
               // width: 96%;
               // padding: 9px 7px;
-              // border-radius: 2px;
-              // border: 1px solid $themeWhite2;
-              // @include trans(300ms);
+              border: 1px solid $themeWhite2;
               &::placeholder {
                 // @include LightText($size: 0.8rem);
               }

@@ -1,20 +1,15 @@
 import React, { useState } from "react";
-import Project from "./Project";
 import { Zoom } from "react-awesome-reveal";
-
 import Github from "../../ICONS/Github";
 import ArrowRight from "../../ICONS/ArrowRight";
 import Link from "../../ICONS/PROJECTS/Link";
 import Tools from "../../ICONS/PROJECTS/Tools";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 import "swiper/css/bundle";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
-// import { Navigation } from "swiper/modules";
-// import "swiper/css/navigation";
-// import Swiper, { Navigation, Pagination, Scrollbar } from "swiper";
-
+ 
 const MainProject = ({ nav, project }) => {
   const { name, content, utilities, images, git, link } = project;
 
