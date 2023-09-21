@@ -63,7 +63,7 @@ const ContactMe = () => {
                   err={formik.errors}
                   name="name"
                   type="text"
-                  label="Name"
+                  label="Name :"
                   placeholder="Adeboyejo David"
                   autoComplete="off"
                   data-fnt={true}
@@ -73,7 +73,7 @@ const ContactMe = () => {
                   err={formik.errors}
                   name="email"
                   type="email"
-                  label="Email"
+                  label="Email :"
                   autoComplete="off"
                   placeholder="official-mail@yahoo.com"
                   star={true}
@@ -82,7 +82,7 @@ const ContactMe = () => {
                   err={formik.errors}
                   name="subject"
                   type="text"
-                  label="Subject"
+                  label="Subject :"
                   autoComplete="off"
                   placeholder="New E-commerce Site"
                 />
@@ -90,7 +90,7 @@ const ContactMe = () => {
                   err={formik.errors}
                   name="message"
                   control="textarea"
-                  label="Message"
+                  label="Message :"
                   autoComplete="off"
                   placeholder="Hey David, I have a project 'X' I would really love to be online. How soon can you get on it ?"
                   star={true}

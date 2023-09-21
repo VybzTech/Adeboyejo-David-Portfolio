@@ -759,25 +759,23 @@
         }
         form {
           .formControl {
-            // margin-bottom: 0.5rem;
-            label {
-              // margin-left: 2px;
-              @include LightText($letter: -0.35px, $size: 0.95rem);
-              @apply font-bold;
-              span {
-                color: $themeCoarseRed;
-                @apply text-xs font-sans ml-0.5 mt-[-10px];
+            @apply mx-2.5;
+            >div{
+              @apply flex items-center justify-center mt-5 px-1.5 py-0.5 rounded rounded-md transition-all ease-in bg-gray-50 hover:bg-slate-50 focus:bg-slate-50;
+              label {
+                @include LightText($letter: -0.5px, $size: 0.8rem ,$align:right);
+                @apply font-bold text-gray-400 pr-2 min-w-[26%] w-fit;
+                sup {
+                  color: $themeCoarseRed;
+                  @apply text-xs font-sans ml-[-0.4rem];
+                }
               }
-            }
-            input,
-            textarea {
-              @apply mt-5 px-1 py-1.5 rounded rounded-md transition-all ease-in bg-gray-50 hover:bg-slate-50 focus:bg-slate-50;
-              // margin-top: 3.5px;
-              // width: 96%;
-              // padding: 9px 7px;
-              border: 1px solid $themeWhite2;
+              input,
+              textarea {
+                @apply bg-transparent px-2 py-1 w-[-webkit-fill-available] ;// 96%;
+              border: 1px solid $themeWhite;
               &::placeholder {
-                // @include LightText($size: 0.8rem);
+                @include LightText($size: 0.7rem,$color:$gray);
               }
               &:hover {
                 // background-color: $offWhite;
@@ -792,15 +790,21 @@
                   // opacity: 0;
                 }
               }
+
             }
             textarea {
               // resize: vertical;
               // min-height: 80px;
             }
+            &:hover{
+
+            }
+                }
             > span {
+              @apply text-xs ;
               // height: 20px;
               // font-size: 0.75rem;
-              // color: $themeCoarseRed;
+              color: $themeCoarseRed;
               // opacity: 0;
               // @include trans(750ms);
               // transform: translateY(50%);
@@ -816,23 +820,23 @@
             }
           }
           button {
+            @apply mx-auto text-[12.5px] border border-blue-600 font-sans rounded rounded-md items-center text-gray-300 px-5 py-3 ease-in-out uppercase w-[90%] justify-center flex  mt-7;
+            // @apply ;
+            background: linear-gradient(-15deg, #1e40af, #2563eb);
+            &:hover,
+            &:focus,
+            &:focus-within,
+            &:focus-visible {
+              background: linear-gradient(-15deg, #153290, #1e40af);
+              -webkit-text-stroke: 0.05px white;
+            }
             /*
           > div.more {
-        @apply w-fit mx-auto mt-7;
         .btn {
-          background: linear-gradient(-15deg, #1e40af, #2563eb);
-          @apply text-[11px] border border-blue-600 font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase w-fit;
-          &:hover,
-          &:focus,
-          &:focus-within,
-          &:focus-visible {
-            background: linear-gradient(-15deg, #153290, #1e40af);
-            -webkit-text-stroke: 0.05px white;
-          }
         }
       }
       */
-            // color: $themeWhite;
+            // color: $themeWhite; 
             // font-family: montLight;
             // background-color: $themeBlue;
             // width: 100%;
@@ -846,11 +850,15 @@
               // background-color: $themeCoarseBlue;
               // background-color: $themeBlueDeep;
               // color: white;
+
+              @apply text-white ;
               & svg {
+                @apply w-3.5 fill-white;
                 // fill: White;
               }
             }
             svg {
+              @apply w-3 fill-gray-300 ml-1 transition-all ease-in;
               // width: 0.75rem;
               // fill: $offWhite;
               // margin-left: 5px;
