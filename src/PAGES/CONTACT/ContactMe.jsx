@@ -36,17 +36,15 @@ const ContactMe = () => {
   };
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("Enter your Name"),
+    name: Yup.string().required("Kindly enter your Name"),
     email: Yup.string()
-      .email("Please Enter a valid Email format")
-      .required("Enter your Email"),
-    message: Yup.string().required("Type in your Message"),
+      .email("Please enter a valid Email format")
+      .required("Kindly enter your Email"),
   });
 
   return (
     <div className="ContactMeWrapper">
       <div className="ContactMe">
-        {/* <h2>get in touch !</h2> */}
         <div className="intro">
           <Inbox />
           <h2>Drop a Mail Inbox!</h2>
@@ -91,9 +89,8 @@ const ContactMe = () => {
                   name="message"
                   control="textarea"
                   label="Message :"
+                  placeholder="Hey David, I have a project titled 'X' I would love you to get on quickly"
                   autoComplete="off"
-                  placeholder="Hey David, I have a project 'X' I would really love to be online. How soon can you get on it ?"
-                  star={true}
                 />
                 <button type="submit" className="msgBtn">
                   Send

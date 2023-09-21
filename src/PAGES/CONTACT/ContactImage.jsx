@@ -1,9 +1,8 @@
 import React from "react";
-import ContactDetails from "./ContactDetails";
 import { Fade } from "react-awesome-reveal";
+import ContactDetails from "./ContactDetails.jsX";
 
 const ContactImage = () => {
-  // <Fade  big triggerOnce cascade={true} className='svg'>
   return (
     <>
       <Fade delay={1700} big triggerOnce cascade={true} className="svg">

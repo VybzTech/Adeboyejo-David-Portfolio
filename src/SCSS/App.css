@@ -860,13 +860,13 @@
   @apply my-3;
 }
 #contact main .ContactMeWrapper .ContactMe .intro svg {
-  @apply w-8 h-8 mr-4;
+  @apply w-7 h-7 mr-3.5;
 }
 #contact main .ContactMeWrapper .ContactMe form .formControl {
   @apply mx-2.5;
 }
 #contact main .ContactMeWrapper .ContactMe form .formControl > div {
-  @apply flex items-center justify-center mt-5 px-1.5 py-0.5 rounded rounded-md transition-all ease-in bg-gray-50 hover:bg-slate-50 focus:bg-slate-50;
+  @apply flex items-center justify-center mt-3.5 px-1.5 py-1 rounded rounded-md transition-all ease-in bg-gray-50 hover:bg-slate-100 focus:bg-slate-100;
 }
 #contact main .ContactMeWrapper .ContactMe form .formControl > div label {
   color: black;
@@ -879,11 +879,17 @@
 }
 #contact main .ContactMeWrapper .ContactMe form .formControl > div label sup {
   color: #ff333c;
-  @apply text-xs font-sans ml-[-0.4rem];
+  @apply text-xs font-sans ml-[-0.15rem];
 }
 #contact main .ContactMeWrapper .ContactMe form .formControl > div input,
 #contact main .ContactMeWrapper .ContactMe form .formControl > div textarea {
-  @apply bg-transparent px-2 py-1 w-[-webkit-fill-available];
+  color: #222;
+  font-family: montLight, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 0;
+  text-align: left;
+  font-size: 12px;
+  @apply rounded rounded-lg bg-transparent px-2 py-1 w-[-webkit-fill-available];
   border: 1px solid #f9f9fa;
 }
 #contact main .ContactMeWrapper .ContactMe form .formControl > div input::placeholder,
@@ -895,19 +901,46 @@
   text-align: left;
   font-size: 0.7rem;
 }
+#contact main .ContactMeWrapper .ContactMe form .formControl > div input:hover, #contact main .ContactMeWrapper .ContactMe form .formControl > div input:focus, #contact main .ContactMeWrapper .ContactMe form .formControl > div input:focus-visible, #contact main .ContactMeWrapper .ContactMe form .formControl > div input:focus-within,
+#contact main .ContactMeWrapper .ContactMe form .formControl > div textarea:hover,
+#contact main .ContactMeWrapper .ContactMe form .formControl > div textarea:focus,
+#contact main .ContactMeWrapper .ContactMe form .formControl > div textarea:focus-visible,
+#contact main .ContactMeWrapper .ContactMe form .formControl > div textarea:focus-within {
+  @apply text-gray-700 outline-none;
+}
+#contact main .ContactMeWrapper .ContactMe form .formControl > div input:hover::placeholder, #contact main .ContactMeWrapper .ContactMe form .formControl > div input:focus::placeholder, #contact main .ContactMeWrapper .ContactMe form .formControl > div input:focus-visible::placeholder, #contact main .ContactMeWrapper .ContactMe form .formControl > div input:focus-within::placeholder,
+#contact main .ContactMeWrapper .ContactMe form .formControl > div textarea:hover::placeholder,
+#contact main .ContactMeWrapper .ContactMe form .formControl > div textarea:focus::placeholder,
+#contact main .ContactMeWrapper .ContactMe form .formControl > div textarea:focus-visible::placeholder,
+#contact main .ContactMeWrapper .ContactMe form .formControl > div textarea:focus-within::placeholder {
+  @apply text-slate-400;
+}
+#contact main .ContactMeWrapper .ContactMe form .formControl > div textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+#contact main .ContactMeWrapper .ContactMe form .formControl > div:hover label, #contact main .ContactMeWrapper .ContactMe form .formControl > div:focus label {
+  color: rgba(0, 0, 0, 0.9333333333);
+}
 #contact main .ContactMeWrapper .ContactMe form .formControl > span {
-  @apply text-xs;
   color: #ff333c;
+  font-family: montLight, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 0;
+  text-align: left;
+  font-size: 10.5px;
+  transition: all 750ms ease-in-out;
+  @apply font-bold flex items-center mt-1 ml-1;
+}
+#contact main .ContactMeWrapper .ContactMe form .formControl > span svg {
+  @apply w-[0.9rem] mr-1;
 }
 #contact main .ContactMeWrapper .ContactMe form button {
-  @apply mx-auto text-[12.5px] border border-blue-600 font-sans rounded rounded-md items-center text-gray-300 px-5 py-3 ease-in-out uppercase w-[90%] justify-center flex  mt-7;
+  @apply mx-auto text-[12.5px] border border-blue-600 font-sans rounded rounded-md items-center text-gray-300 px-5 py-3 ease-in-out uppercase w-[90%] justify-center flex  mt-5;
   background: linear-gradient(-15deg, #1e40af, #2563eb);
-  /*
-      > div.more {
-    .btn {
-    }
-  }
-  */
+}
+#contact main .ContactMeWrapper .ContactMe form button svg {
+  @apply w-3 fill-gray-300 ml-1 transition-all ease-in;
 }
 #contact main .ContactMeWrapper .ContactMe form button:hover, #contact main .ContactMeWrapper .ContactMe form button:focus, #contact main .ContactMeWrapper .ContactMe form button:focus-within, #contact main .ContactMeWrapper .ContactMe form button:focus-visible {
   background: linear-gradient(-15deg, #153290, #1e40af);
@@ -919,9 +952,12 @@
 #contact main .ContactMeWrapper .ContactMe form button:hover svg, #contact main .ContactMeWrapper .ContactMe form button:focus svg {
   @apply w-3.5 fill-white;
 }
-#contact main .ContactMeWrapper .ContactMe form button svg {
-  @apply w-3 fill-gray-300 ml-1 transition-all ease-in;
+#contact main .ContactMeWrapper .circleWrapper {
+  clip-path: circle(9rem);
+  z-index: -1;
+  @apply min-w-full h-[58vh] opacity-90 w-full bg-blue-500 mb-[-7rem] mt-[-10rem] mr-[-5rem] ml-auto;
 }
+
 .BottomColor {
   background-color: #17298e;
   @apply h-[1.5vh];

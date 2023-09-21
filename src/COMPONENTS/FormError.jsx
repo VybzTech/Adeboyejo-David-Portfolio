@@ -1,14 +1,13 @@
 import React from "react";
-// import { ErrorOutlineTwoTone } from "@material-ui/icons";
+import Exclamation from "../ICONS/Exclamation";
 
 const FormError = (props) => {
   return (
     <>
-      {/* <ErrorOutlineTwoTone /> */}
-      {props.children}
+      <Exclamation />
+      <span>{props.children}</span>
     </>
   );
 };
 
 export default FormError;
- 

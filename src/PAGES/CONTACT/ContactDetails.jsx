@@ -5,7 +5,7 @@ import { Slide, Zoom } from "react-awesome-reveal";
 const ContactDetails = () => {
   return (
     <>
-      <Slide className="hero">
+      <Slide className="hero" triggerOnce>
         <>
           <div />
           <h3>let's get social</h3>
