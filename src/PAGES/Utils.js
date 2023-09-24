@@ -281,7 +281,7 @@ export const PROJECTS = [
     content:
       "Sammie's Art is an Artistic retailer that draws, frame and delivers asthetic portraits to customers anywhere around the world.",
   },
-  {
+  { 
     id: 5,
     name: "Wha'Todo App",
     status: "completed",

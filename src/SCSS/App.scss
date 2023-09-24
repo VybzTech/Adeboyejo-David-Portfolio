@@ -34,14 +34,14 @@
     .theme {
       @apply w-fit mr-[5px];
       button {
-        @apply bg-transparent rounded rounded-3xl p-2 text-gray-300 hover:bg-[#eee2] focus:bg-[#eee2] hover:text-gray-100 focus:text-gray-100;
+        @apply bg-transparent rounded rounded-3xl p-2 text-gray-300 hover:bg-[#eee2] focus:bg-[#eee2] hover:text-gray-100 focus:text-gray-100 outline-none;
       }
     }
     .navBtn {
       @apply [&>svg]:w-5 [&>svg]:h-5 [&>svg]:text-gray-200 
       bg-transparent rounded rounded-3xl p-2 
       hover:bg-[#eee2] focus:bg-[#eee2] hover:text-gray-100
-      focus:text-gray-100;
+      focus:text-gray-100 outline-none;
     }
     //NAVBAR STYLES ON SCROLL DOWN
     &.white {
@@ -71,6 +71,7 @@
             &:focus,
             &:focus-within,
             &:focus-visible {
+              outline: none;
               -webkit-text-stroke: 0.75px $themeBlack;
               background: linear-gradient(-15deg, #fffc, #ddd7);
               box-shadow: 2px 2px 8px 1px #ccca, -1px -1px 4px #dddd;
@@ -116,6 +117,7 @@
           &:focus,
           &:focus-within,
           &:focus-visible {
+            outline: none;
             -webkit-text-stroke: 0.05px white;
             background: linear-gradient(-15deg, #000c, #0007);
             box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
@@ -125,7 +127,6 @@
       //SHOWN
       &.show {
         @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl left-4 w-[96%] left-[2%] py-7 m-0 backdrop-blur block shadow-lg;
-        // border:1.2px solid #0005;
       }
     }
   }
@@ -229,6 +230,7 @@
           &:focus,
           &:focus-within,
           &:focus-visible {
+            outline: none;
             background: linear-gradient(-15deg, #153290, #1e40af);
             -webkit-text-stroke: 0.05px white;
           }
@@ -411,6 +413,7 @@
     &:focus,
     &:focus-within,
     &:focus-visible {
+      outline: none;
       background: linear-gradient(-15deg, #086d7c, #21a9ca);
       -webkit-text-stroke: 0.05px white;
     }
@@ -497,20 +500,6 @@
         }
       }
     }
-
-    // > div {
-    //   //           padding-left: 3.5rem;
-    // }
-    // span {
-    //   //           color: $themeBlueOptic;
-    //   //           -webkit-text-stroke: 0.5px transparent;
-    //   //           @include trans(350ms);
-    //   &:hover {
-    //     //             cursor: pointer;
-    //     //             -webkit-text-stroke-color: $themeBlueDeep;
-    //     //             color: $themeBlueDeep;
-    //   }
-    // }
   }
 }
 
@@ -673,6 +662,7 @@
             &:focus,
             &:focus-within,
             &:focus-visible {
+              outline: none;
               animation: effect 0.5s ease-in-out 10ms 1 alternate forwards;
             }
           }
@@ -825,6 +815,7 @@
             &:focus,
             &:focus-within,
             &:focus-visible {
+              outline: none;
               background: linear-gradient(-15deg, #153290, #1e40af);
               -webkit-text-stroke: 0.05px white;
             }
@@ -870,7 +861,10 @@
         @apply w-4 h-4;
       }
       &:hover,
-      &:focus {
+      &:focus,
+      &:focus-visible,
+      &:focus-within {
+        outline: none;
         svg {
           @apply text-stone-200;
         }

@@ -1,7 +1,6 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import ContactDetails from "./ContactDetails.jsX";
-
+import ContactDetails from "./ContactDetails";
 const ContactImage = () => {
   return (
     <>

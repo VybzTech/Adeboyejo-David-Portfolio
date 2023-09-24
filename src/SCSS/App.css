@@ -146,13 +146,13 @@
   @apply w-fit mr-[5px];
 }
 #light .navbar .theme button {
-  @apply bg-transparent rounded rounded-3xl p-2 text-gray-300 hover:bg-[#eee2] focus:bg-[#eee2] hover:text-gray-100 focus:text-gray-100;
+  @apply bg-transparent rounded rounded-3xl p-2 text-gray-300 hover:bg-[#eee2] focus:bg-[#eee2] hover:text-gray-100 focus:text-gray-100 outline-none;
 }
 #light .navbar .navBtn {
   @apply [&>svg]:w-5 [&>svg]:h-5 [&>svg]:text-gray-200 
       bg-transparent rounded rounded-3xl p-2 
       hover:bg-[#eee2] focus:bg-[#eee2] hover:text-gray-100
-      focus:text-gray-100;
+      focus:text-gray-100 outline-none;
 }
 #light .navbar.white {
   box-shadow: 0 -1px 10px #eee;
@@ -176,6 +176,7 @@
   @apply text-gray-700;
 }
 #light .navbar.white .navigation > div > div:last-of-type button:hover, #light .navbar.white .navigation > div > div:last-of-type button:focus, #light .navbar.white .navigation > div > div:last-of-type button:focus-within, #light .navbar.white .navigation > div > div:last-of-type button:focus-visible {
+  outline: none;
   -webkit-text-stroke: 0.75px rgba(0, 0, 0, 0.9333333333);
   background: linear-gradient(-15deg, rgba(255, 255, 255, 0.8), rgba(221, 221, 221, 0.4666666667));
   box-shadow: 2px 2px 8px 1px rgba(204, 204, 204, 0.6666666667), -1px -1px 4px rgba(221, 221, 221, 0.8666666667);
@@ -215,6 +216,7 @@
   @apply tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-16 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
 }
 #light .navbar .navigation > div > div:last-of-type button:hover, #light .navbar .navigation > div > div:last-of-type button:focus, #light .navbar .navigation > div > div:last-of-type button:focus-within, #light .navbar .navigation > div > div:last-of-type button:focus-visible {
+  outline: none;
   -webkit-text-stroke: 0.05px white;
   background: linear-gradient(-15deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4666666667));
   box-shadow: 2px 2px 8px 0.75px rgba(34, 34, 34, 0.6666666667), -1px -1px 4px rgba(17, 17, 17, 0.8666666667);
@@ -337,6 +339,7 @@
   @apply text-[11px] border border-blue-600 font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase w-fit;
 }
 #home .lilAbout .about > div.more .btn:hover, #home .lilAbout .about > div.more .btn:focus, #home .lilAbout .about > div.more .btn:focus-within, #home .lilAbout .about > div.more .btn:focus-visible {
+  outline: none;
   background: linear-gradient(-15deg, #153290, #1e40af);
   -webkit-text-stroke: 0.05px white;
 }
@@ -516,6 +519,7 @@
   @apply text-[11px] border border-cyan-700 font-sans rounded rounded-md text-white px-5 py-3 mx-auto ease-in-out uppercase w-fit;
 }
 #about .btn:hover, #about .btn:focus, #about .btn:focus-within, #about .btn:focus-visible {
+  outline: none;
   background: linear-gradient(-15deg, #086d7c, #21a9ca);
   -webkit-text-stroke: 0.05px white;
 }
@@ -770,6 +774,7 @@
   @apply rounded rounded-md;
 }
 #projects main section .UI-UX .UI_image img:hover, #projects main section .UI-UX .UI_image img:focus, #projects main section .UI-UX .UI_image img:focus-within, #projects main section .UI-UX .UI_image img:focus-visible {
+  outline: none;
   animation: effect 0.5s ease-in-out 10ms 1 alternate forwards;
 }
 
@@ -943,6 +948,7 @@
   @apply w-3 fill-gray-300 ml-1 transition-all ease-in;
 }
 #contact main .ContactMeWrapper .ContactMe form button:hover, #contact main .ContactMeWrapper .ContactMe form button:focus, #contact main .ContactMeWrapper .ContactMe form button:focus-within, #contact main .ContactMeWrapper .ContactMe form button:focus-visible {
+  outline: none;
   background: linear-gradient(-15deg, #153290, #1e40af);
   -webkit-text-stroke: 0.05px white;
 }
@@ -983,7 +989,10 @@
 .foot .socials .socialButton svg {
   @apply w-4 h-4;
 }
-.foot .socials .socialButton:hover svg, .foot .socials .socialButton:focus svg {
+.foot .socials .socialButton:hover, .foot .socials .socialButton:focus, .foot .socials .socialButton:focus-visible, .foot .socials .socialButton:focus-within {
+  outline: none;
+}
+.foot .socials .socialButton:hover svg, .foot .socials .socialButton:focus svg, .foot .socials .socialButton:focus-visible svg, .foot .socials .socialButton:focus-within svg {
   @apply text-stone-200;
 }
 .foot .copyx0 h5 {
