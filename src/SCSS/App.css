@@ -551,7 +551,8 @@
 }
 #about .myServices #tsparticles {
   z-index: 0;
-  @apply w-full h-[430vh] overflow-hidden;
+  height: 450vh;
+  @apply w-full overflow-hidden;
 }
 #about .myServices #tsparticles > canvas {
   position: absolute !important;
@@ -647,7 +648,9 @@
 }
 #projects .bg .explore img {
   width: 5.5%;
-  @apply my-28 mx-auto opacity-80;
+  margin-top: 6.2rem;
+  margin-bottom: 1rem;
+  @apply mx-auto opacity-80;
   animation: bounce 2s 100ms ease-in-out infinite forwards !important;
 }
 #projects main {
@@ -1005,7 +1008,7 @@
   @apply p-4 pb-1;
 }
 #portals .ResumeDwn {
-  @apply flex items-center justify-end mr-7;
+  @apply flex items-center justify-end mr-5;
 }
 #portals .ResumeDwn button {
   border: none;
@@ -1019,7 +1022,7 @@
 }
 #portals .ResumeDwn [title="Download Resume"] {
   @apply tracking-normal uppercase 
-      rounded-lg px-4 py-3 mr-5 text-xs bg-slate-700 
+      rounded-lg px-4 py-2.5 mr-7 mb-1 text-[10px] bg-slate-700 
       opacity-80 text-gray-300;
 }
 #portals .ResumeDwn [title="Download Resume"]:hover, #portals .ResumeDwn [title="Download Resume"]:focus, #portals .ResumeDwn [title="Download Resume"]:focus-within, #portals .ResumeDwn [title="Download Resume"]:focus-visible {

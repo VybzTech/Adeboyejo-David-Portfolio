@@ -95,7 +95,6 @@ const MyWorks = withRouter(({ history }) => {
     >
       <div className="homeProjects">
         <Fade big triggerOnce>
-          {/* // when={anime} */}
           <div className="hero">
             <h3>case study</h3>
             <h1>latest works</h1>

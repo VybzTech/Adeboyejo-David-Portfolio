@@ -381,6 +381,7 @@
 
 //--------- ABOUT
 #about {
+  $serviceHeight:450vh;
   .bg {
     @apply h-[110vh];
     background-image: linear-gradient(15deg, #0007, #1111),
@@ -443,7 +444,8 @@
     background: linear-gradient(0rad, #f2f2f2, #fafafa);
     #tsparticles {
       z-index: 0;
-      @apply w-full h-[430vh] overflow-hidden; // 120vh
+      height: $serviceHeight;
+      @apply w-full overflow-hidden; // 120vh
       & > canvas {
         position: absolute !important;
       }
@@ -533,7 +535,9 @@
       }
       img {
         width: 5.5%;
-        @apply my-28 mx-auto opacity-80;
+        margin-top: 6.2rem;
+        margin-bottom: 1rem;
+        @apply mx-auto opacity-80;
         animation: bounce 2s 100ms ease-in-out infinite forwards !important;
       }
     }
@@ -882,7 +886,7 @@
     @apply p-4 pb-1;
   }
   .ResumeDwn {
-    @apply flex items-center justify-end mr-7;
+    @apply flex items-center justify-end mr-5;
     button {
       border: none;
       box-shadow: 2px 2px 7px 0.5px #2225, -1px -1px 4px #111a;
@@ -898,7 +902,7 @@
     }
     [title="Download Resume"] {
       @apply tracking-normal uppercase 
-      rounded-lg px-4 py-3 mr-5 text-xs bg-slate-700 
+      rounded-lg px-4 py-2.5 mr-7 mb-1 text-[10px] bg-slate-700 
       opacity-80 text-gray-300;
       &:hover,
       &:focus,

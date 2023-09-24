@@ -73,9 +73,9 @@ const Projects = () => {
               <div className="gridSection">
                 {NewProjects.map((project) => {
                   return (
-                    <ErrorHandler>
+                    <ErrorHandler key={project.id}>
                       <MainProject
-                        key={project.id}
+                        
                         // anime={anime}
                         nav={nav}
                         project={project}
