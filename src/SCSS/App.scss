@@ -109,10 +109,7 @@
           box-shadow: 2px 2px 7px 0.5px #2225, -1px -1px 4px #111a;
           display: inline-block;
           font-size: 0.8rem;
-          min-width: 130px;
-          position: relative;
-          outline: none;
-          @apply tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-16 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
+          @apply outline-none relative min-w-[130px] tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-16 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
           &:hover,
           &:focus,
           &:focus-within,
@@ -873,6 +870,55 @@
   }
   .copyx0 h5 {
     @apply text-[11px] text-center font-sans text-gray-400;
+  }
+}
+
+//--------- PORTALS
+#portals {
+  backdrop-filter: blur(3px);
+  @apply bg-[#000a] fixed top-0 left-0 fixed;
+  z-index: 50;
+  .ResumeImg {
+    @apply p-4 pb-1;
+  }
+  .ResumeDwn {
+    @apply flex items-center justify-end mr-7;
+    button {
+      border: none;
+      box-shadow: 2px 2px 7px 0.5px #2225, -1px -1px 4px #111a;
+      @apply transition-all ease-in relative rounded cursor-pointer;
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        outline: none;
+        -webkit-text-stroke: 0.02px white;
+        box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
+      }
+    }
+    [title="Download Resume"] {
+      @apply tracking-normal uppercase 
+      rounded-lg px-4 py-3 mr-5 text-xs bg-slate-700 
+      opacity-80 text-gray-300;
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        @apply text-white opacity-100 bg-slate-800;
+      }
+    }
+    //       CLOSE BTN
+    [title="Close"] {
+      background: linear-gradient(-15deg, #000a, #0003);
+      @apply rounded rounded-3xl py-3 px-3.5 mb-2  [&>svg]:w-6 [&>svg]:fill-gray-300 [&>svg]:inline-block;
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        background: linear-gradient(-15deg, #000c, #0007);
+        @apply [&>svg]:fill-red-500;
+      }
+    }
   }
 }
 

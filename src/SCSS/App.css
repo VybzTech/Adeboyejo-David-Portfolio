@@ -210,10 +210,7 @@
   box-shadow: 2px 2px 7px 0.5px rgba(34, 34, 34, 0.3333333333), -1px -1px 4px rgba(17, 17, 17, 0.6666666667);
   display: inline-block;
   font-size: 0.8rem;
-  min-width: 130px;
-  position: relative;
-  outline: none;
-  @apply tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-16 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
+  @apply outline-none relative min-w-[130px] tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-16 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
 }
 #light .navbar .navigation > div > div:last-of-type button:hover, #light .navbar .navigation > div > div:last-of-type button:focus, #light .navbar .navigation > div > div:last-of-type button:focus-within, #light .navbar .navigation > div > div:last-of-type button:focus-visible {
   outline: none;
@@ -997,4 +994,42 @@
 }
 .foot .copyx0 h5 {
   @apply text-[11px] text-center font-sans text-gray-400;
+}
+
+#portals {
+  backdrop-filter: blur(3px);
+  @apply bg-[#000a] fixed top-0 left-0 fixed;
+  z-index: 50;
+}
+#portals .ResumeImg {
+  @apply p-4 pb-1;
+}
+#portals .ResumeDwn {
+  @apply flex items-center justify-end mr-7;
+}
+#portals .ResumeDwn button {
+  border: none;
+  box-shadow: 2px 2px 7px 0.5px rgba(34, 34, 34, 0.3333333333), -1px -1px 4px rgba(17, 17, 17, 0.6666666667);
+  @apply transition-all ease-in relative rounded cursor-pointer;
+}
+#portals .ResumeDwn button:hover, #portals .ResumeDwn button:focus, #portals .ResumeDwn button:focus-within, #portals .ResumeDwn button:focus-visible {
+  outline: none;
+  -webkit-text-stroke: 0.02px white;
+  box-shadow: 2px 2px 8px 0.75px rgba(34, 34, 34, 0.6666666667), -1px -1px 4px rgba(17, 17, 17, 0.8666666667);
+}
+#portals .ResumeDwn [title="Download Resume"] {
+  @apply tracking-normal uppercase 
+      rounded-lg px-4 py-3 mr-5 text-xs bg-slate-700 
+      opacity-80 text-gray-300;
+}
+#portals .ResumeDwn [title="Download Resume"]:hover, #portals .ResumeDwn [title="Download Resume"]:focus, #portals .ResumeDwn [title="Download Resume"]:focus-within, #portals .ResumeDwn [title="Download Resume"]:focus-visible {
+  @apply text-white opacity-100 bg-slate-800;
+}
+#portals .ResumeDwn [title=Close] {
+  background: linear-gradient(-15deg, rgba(0, 0, 0, 0.6666666667), rgba(0, 0, 0, 0.2));
+  @apply rounded rounded-3xl py-3 px-3.5 mb-2  [&>svg]:w-6 [&>svg]:fill-gray-300 [&>svg]:inline-block;
+}
+#portals .ResumeDwn [title=Close]:hover, #portals .ResumeDwn [title=Close]:focus, #portals .ResumeDwn [title=Close]:focus-within, #portals .ResumeDwn [title=Close]:focus-visible {
+  background: linear-gradient(-15deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4666666667));
+  @apply [&>svg]:fill-red-500;
 }

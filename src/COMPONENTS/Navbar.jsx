@@ -11,6 +11,7 @@ const Navbar = withRouter((props) => {
   const [navControl, setNavControl] = useState(false);
 
   useEffect(() => {
+    //check scroll position
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 50) {
         setNavBg(true);

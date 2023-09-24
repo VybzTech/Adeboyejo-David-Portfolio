@@ -193,6 +193,7 @@ export const UIs = [
 ];
 
 //FILES INFO FOR PROJECT PAGE
+// My Portfolio - Include into projects
 export const PROJECTS = [
   // ["All", "Completed", "In-Progress", "React", "UI/UX"];
   {

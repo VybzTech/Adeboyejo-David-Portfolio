@@ -14,7 +14,7 @@ const Intro = () => {
   // 		velocity: 5,
   // 		tension: 300,
   // 		duration: 500,
-  // 	},
+  // 	},SWQ2ESWSDX
   // 	delay: 6000,
   // 	from: {
   // 		opacity: 1,
@@ -48,32 +48,40 @@ const Intro = () => {
   }, [showCV]);
   return (
     <>
-    <div className="intro">
-      <Slide triggerOnce delay={200} left>
-        <Slide delay={7000} direction="down" duration={250} triggerOnce reverse>
-          <p className="hero ">Hello I'm</p>
-        </Slide>
-        <h1>Adeboyejo David</h1>
-        <Typo />
-        <button
-          onClick={() => {
-            setShowCV((cv) => !cv);
-            setTimeout(() => {
-              document.documentElement.scrollTop = 0;
-            }, 450);
-          }}
-          className="btn"
-          variant="outlined"
-        >
-          download cv
-        </button>
-        {/* <Pulse delay={500} appear spy={top} duration={750}>
+      <div className="intro">
+        <Slide triggerOnce delay={200} left>
+          <Slide
+            delay={7000}
+            direction="down"
+            duration={250}
+            triggerOnce
+            reverse
+          >
+            <p className="hero ">Hello I'm</p>
+          </Slide>
+          <h1>Adeboyejo David</h1>
+          <Typo />
+          <button
+            onClick={() => {
+              setShowCV((cv) => !cv);
+              setTimeout(() => {
+                document.documentElement.scrollTop = 0;
+                // showCV &&
+                //   document.getElementById("portals").classList.add("show");
+              }, 450);
+            }}
+            className="btn"
+            variant="outlined"
+          >
+            download cv
+          </button>
+          {/* <Pulse delay={500} appear spy={top} duration={750}>
           </Pulse> */}
-        {/* </Zoom> */}
-        {/* <Resume showCV={showCV} setShowCV={setShowCV} /> */}
-      </Slide>
-    </div>
-  </>
+          {/* </Zoom> */}
+          <Resume showCV={showCV} setShowCV={setShowCV} />
+        </Slide>
+      </div>
+    </>
   );
 };
 

@@ -3,6 +3,9 @@ import React from "react";
 const Tools = () => {
   return (
     <div className="tools">
+      <div className="images">
+        
+      </div>
       {/* <img src="" alt="React logo" />
       <img src="" alt="Redux logo" />
       <img src="" alt="Tailwind logo" />
