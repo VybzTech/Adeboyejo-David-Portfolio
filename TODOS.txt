@@ -1,0 +1,128 @@
+Design Dark Mode 
+About Page Resume
+Maybe REwrite serviceList
+Rewrite projects content 
+Can Home page case study
+Change Lil about image 
+Change homeProjects images
+Crosscheck social handles
+Cross check contact form sending
+Work on projects delivery
+Projects UI UX Image resize
+
+
+
+Design Screen Sizes
+
+SM PHONE 
+//  Small iPhone 2 - iPhone4
+@media screen and (min-width: 320px) and (min-height: 551px) and (max-height: 750px) {
+  // ?
+  // ?
+ 
+}
+
+//   ******************************************* LANDSCAPE *******************************************
+
+// PHONE LANDSCAPE   iPhone , Nexus 6, Samsung Galaxy S8+
+@media screen and (min-height: 350px) and (max-width: 750px) and (orientation: Landscape) {
+  // ?
+  // ?
+}
+// PHONE LANDSCAPE   iPhone 4, iPhone 5/SE (-100px),
+@media screen and (min-height: 320px) and (max-width: 580px) and (orientation: Landscape) {
+  // ?
+  // ?
+}
+// PHONE LANDSCAPE   iPhone 4 Edit,
+@media screen and (min-height: 320px) and (max-width: 480px) and (orientation: Landscape) {
+  // ?
+  // ?
+}
+
+
+
+PHONE
+  // iPhone 6/7/8 and similar devices:
+  @media screen and (min-width: 375px) and (max-height: 667px) {
+    // ?
+    // ?
+  }
+  // For iPhone X and similar devices:
+  @media only screen and (min-width: 375px) and (min-height: 730px) and (max-height: 850px) {
+    // ?
+    // ?
+  }
+  // For iPhone 6+/7+/8+ and similar devices: Nexus 6, iPhone XR
+  @media screen and (min-width: 410px) and (max-width: 480px) and (min-height: 730px) {
+    // ?
+    // ?
+  }
+  // Longer phone iPhone XR
+  @media only screen and (min-height: 850px) {
+    // ?
+    // ?
+  }
+
+//   ******************************************* LANDSCAPE ******************************************* 
+  // PHONE LANDSCAPE   iPhone SE, iPhone 6,7,8, iPhone X
+  @media screen and (min-height: 375px) and (orientation: Landscape) {
+    // ?
+    // ?
+  }
+  // PHONE LANDSCAPE   iPhone X Edits
+  @media screen and (min-height: 375px) and (min-width: 800px) and (orientation: Landscape) {
+    // ?
+    // ?
+  }
+  // PHONE LANDSCAPE   iPhone 12 Pro, Nexus 6
+  @media screen and (min-height: 390px) and (orientation: Landscape) {
+    // ?
+    // ?
+  }
+  // PHONE LANDSCAPE   iPhone XR, iPhone 6+,7+,8+,
+  @media screen and (min-height: 414px) and (min-width: 700px) and (orientation: Landscape) {
+    // ?
+    // ?
+  }
+  // PHONE LANDSCAPE   iPhone XR Edits
+  @media screen and (min-height: 414px) and (min-width: 890px) and (orientation: Landscape) {
+    // ?
+    // ?
+  }
+
+
+
+
+TABLET
+
+// For iPads, Tablets Sizes: iPad , iPad Mini
+@media screen and (min-width: 481px) and (max-width: 768px) and (max-height: 1024px) {
+  // ?
+  // ?
+}
+// For Small screens, Laptops Sizes: iPad Air, Surface Pro
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  // ?
+  // ?
+}
+// For Desktops, Large screens, Extra large screens, TVs: iPad Pro, iPad Air, Surface Pro 7
+@media screen and (min-width: 800px) and (min-height: 1100px) {
+  // ?
+  // ?
+}
+
+
+
+LAPTOP
+
+  // For Desktops, Large screens, Extra large screens, TVs
+  @media screen and (min-width: 1024px) and (height: 768px) {
+    // ?
+    // ?
+  }
+  // For Desktops 1.3K+
+  @media screen and (min-width: 1025px) and (max-width: 5000px) {
+    // ?
+    // ?
+  }

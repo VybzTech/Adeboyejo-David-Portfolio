@@ -464,7 +464,7 @@
   font-size: 1.8rem;
 }
 #home .homeProjects .swiper {
-  margin: 0 auto;
+  margin: 0 auto 0.5rem;
   @apply w-[90%];
 }
 #home .homeProjects .swiper .swiper-wrapper {
@@ -478,10 +478,10 @@
   box-shadow: 0px 1px 15px 1px #eee;
 }
 #home .homeProjects .swiper .swiper-wrapper .swiper-slide:hover img, #home .homeProjects .swiper .swiper-wrapper .swiper-slide:focus img {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 #home .homeProjects .swiper .swiper-wrapper .swiper-slide img {
-  @apply object-contain rounded w-fit transition-all duration-75 ease-in-out;
+  @apply object-fill rounded rounded-lg w-fit transition-all duration-75 ease-in-out h-[inherit];
 }
 
 #about .bg {

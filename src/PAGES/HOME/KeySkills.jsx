@@ -6,6 +6,7 @@ const KeySkills = withRouter(({ history }) => {
   return (
     <div className="keySkills">
       <div>
+        <h2>Key Skills</h2>
       </div>
       <div className="skillList">
         {SKILLS.map((ski) => {

@@ -72,7 +72,7 @@ import TaskManager2 from "../IMAGES/PROJECTS/TaskManager2.png";
 import WhaTodo from "../IMAGES/UI/WHATODO-Land.png";
 import WhaTodoDesktop from "../IMAGES/PROJECTS/Whatodo-Desktop-Size.png";
 import SammieArtProject from "../IMAGES/Sammie-Art-Project.png";
-import SammieArtProject2 from "../IMAGES/SammieArt-Project.png";
+// import SammieArtProject2 from "../IMAGES/SammieArt-Project.png";
 import DivisionFormProject from "../IMAGES/DivisionForm-Project.png";
 import TaskManagerProject from "../IMAGES/TaskManager1-Project.png";
 import WhatodoProject from "../IMAGES/Whatodo-Project.png";
@@ -282,7 +282,7 @@ export const PROJECTS = [
     content:
       "Sammie's Art is an Artistic retailer that draws, frame and delivers asthetic portraits to customers anywhere around the world.",
   },
-  { 
+  {
     id: 5,
     name: "Wha'Todo App",
     status: "completed",

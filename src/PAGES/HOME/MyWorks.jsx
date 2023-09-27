@@ -49,17 +49,35 @@ const MyWorks = withRouter(({ history }) => {
     speed: 300,
     // slidesPerView: 3,
     // spaceBetween: 20,
-    cardsEffect: {
-      slideShadows: true,
+    // cardsEffect: {
+    //   slideShadows: true,
+    // },
+    initialSlide: 0,
+    // coverflow: {
+    //   rotate: 50,
+    //   stretch: 300,
+    //   depth: 500,
+    //   modifier: 1,
+    //   slideShadows: true,
+    // },
+
+    // loop: true,
+    // speed: 1000,
+    autoplay: {
+      delay: 1000,
     },
-    initialSlide: 1,
-    coverflow: {
+    // effect: 'coverflow',
+    // grabCursor: true,
+    // centeredSlides: true,
+    // slidesPerView: 'auto',
+    coverflowEffect: {
       rotate: 50,
-      stretch: 300,
-      depth: 1000,
-      modifier: 1,
+      stretch: 500,
+      depth: 10000,
+      modifier: 3,
       slideShadows: true,
     },
+
     // preloadImages: true,
     // autoHeight: true,
     // updateOnImagesReady: true,
@@ -76,8 +94,8 @@ const MyWorks = withRouter(({ history }) => {
       425: { slidesPerView: 1.8, spaceBetween: 18 },
       // 	375: {},
       320: {
-        slidesPerView: 1.5,
-        spaceBetween: 15,
+        slidesPerView: 1.6,
+        spaceBetween: 13,
       },
     },
   });

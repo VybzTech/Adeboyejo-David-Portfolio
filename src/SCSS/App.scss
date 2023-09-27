@@ -356,7 +356,7 @@
       );
     }
     .swiper {
-      margin: 0 auto;
+      margin: 0 auto .5rem;
       @apply w-[90%];
       .swiper-wrapper {
         @apply w-full;
@@ -367,11 +367,11 @@
           &:focus {
             box-shadow: 0px 1px 15px 1px $offWhite;
             img {
-              transform: scale(1.03);
+              transform: scale(1.05);
             }
           }
           img {
-            @apply object-contain rounded w-fit transition-all duration-75 ease-in-out;
+            @apply object-fill rounded rounded-lg w-fit transition-all duration-75 ease-in-out h-[inherit];
           }
         }
       }
