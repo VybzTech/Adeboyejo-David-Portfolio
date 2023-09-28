@@ -475,13 +475,13 @@ export const Params2 = {
       },
     },
     color: {
-      value: "#222222",
+      value: "#333333",
     },
     shape: {
       type: "star",
       stroke: {
         width: 1.5,
-        color: "#222222",
+        color: "#4444444",
       },
       polygon: {
         nb_sides: 4,
