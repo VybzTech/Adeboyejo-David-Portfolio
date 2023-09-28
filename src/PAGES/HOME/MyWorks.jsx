@@ -71,10 +71,9 @@ const MyWorks = withRouter(({ history }) => {
     // centeredSlides: true,
     // slidesPerView: 'auto',
     coverflowEffect: {
-      rotate: 50,
+      rotate: 30,
       stretch: 500,
-      depth: 10000,
-      modifier: 3,
+      depth: 700,
       slideShadows: true,
     },
 

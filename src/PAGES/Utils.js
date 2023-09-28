@@ -76,6 +76,9 @@ import SammieArtProject from "../IMAGES/Sammie-Art-Project.png";
 import DivisionFormProject from "../IMAGES/DivisionForm-Project.png";
 import TaskManagerProject from "../IMAGES/TaskManager1-Project.png";
 import WhatodoProject from "../IMAGES/Whatodo-Project.png";
+import NetflexLoading from "../IMAGES/Netflex-Loading.png";
+// import NetflexProject from "../IMAGES/Netflex-Loading.png";
+import MinersProject from "../IMAGES/Miners-Project.png";
 //  TOOLS IMAGES IMPORTS
 import Html5 from "../IMAGES/TOOLS/HTML5.png";
 import Css from "../IMAGES/TOOLS/CSS3.png";
@@ -120,6 +123,10 @@ export const projectSlides = [
   // 	src: NetflexProject,
   // },
   {
+    alt: 'Netflix 1 Project',
+    src: NetflexLoading,
+  },
+  {
     alt: "Whatodo Project",
     src: WhatodoProject,
   },
@@ -135,10 +142,10 @@ export const projectSlides = [
     alt: "TaskManager Project",
     src: TaskManagerProject,
   },
-  // {
-  // 	alt: 'SammieArt 2 Project',
-  // 	src: SammieArtProject2,
-  // },
+  {
+  	alt: 'Miners Project',
+  	src: MinersProject,
+  },
 ];
 
 //PROJECT PAGE UIs

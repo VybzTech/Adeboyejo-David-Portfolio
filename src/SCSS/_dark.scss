@@ -1,314 +1,313 @@
 // //---------NAVBAR THEME DARK HOME PAGE
-// #light.dark {
-// 	//---------NAVBAR THEME DARK HOME PAGE
-// 	.navbar {
-// 		.logo {
-// 			svg {
-// 				path {
-// 					fill: $offWhite;
-// 					&:first-of-type {
-// 						fill: $themeRed;
-// 						border: 1px solid $themeRed;
-// 					}
-// 				}
-// 			}
-// 		}
-// 		&.white {
-// 			background-color: $themeBlack1;
-// 			box-shadow: 0 -1px 10px $themeBlack;
-// 		}
+#light.dark {
+  .navbar {
+    .logo {
+      svg {
+        path {
+          fill: $themeBlack3;
+          &:first-of-type {
+            fill: $themeRed;
+            border: 1px solid $themeRed;
+          }
+        }
+      }
+    }
+    &.white {
+      background-color: $themeBlack1;
+      box-shadow: 0 -1px 10px $themeBlack;
+    }
 
-// 		.navigation {
-// 			.nav {
-// 				color: white;
-// 				-webkit-text-stroke: 0.3px white;
-// 				&.active {
-// 					border-bottom-color: $themeBlueDeep;
-// 				}
-// 				&:hover {
-// 					border-bottom-color: $themeBlueDeep;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	.theme {
-// 		button {
-// 			background-color: transparent;
-// 			color: $themeBlueDeep;
-// 			&:hover {
-// 				background-color: $themeBlueAlpha;
-// 				box-shadow: 0 0 4px 1px $themeBlueAlpha;
-// 			}
-// 		}
-// 	}
+    // .navigation {
+    //   .nav {
+    //     color: white;
+    //     -webkit-text-stroke: 0.3px white;
+    //     &.active {
+    //       border-bottom-color: $themeBlueDeep;
+    //     }
+    //     &:hover {
+    //       border-bottom-color: $themeBlueDeep;
+    //     }
+    //   }
+    // }
+  }
+  // 	.theme {
+  // 		button {
+  // 			background-color: transparent;
+  // 			color: $themeBlueDeep;
+  // 			&:hover {
+  // 				background-color: $themeBlueAlpha;
+  // 				box-shadow: 0 0 4px 1px $themeBlueAlpha;
+  // 			}
+  // 		}
+  // 	}
 
-// 	//---------DARK HOME DEN
-// 	#home {
-// 		.bg [alt='Home Page Background'],
-// 		video {
-// 			filter: brightness(0.8);
-// 		}
-// 		.lilAbout {
-// 			background-color: $themeBlackBg;
-// 			// background-color: $themeBlack;
-// 			.img {
-// 				background-color: $themeBlackBg;
-// 				box-shadow: 0 0 14px 2.5px #0003;
-// 			}
-// 			.about {
-// 				.hero {
-// 					h2 {
-// 						color: $offWhite !important;
-// 					}
-// 					.line {
-// 						background-color: $themeDGray;
-// 					}
-// 				}
-// 				p {
-// 					color: $themeWhite2;
-// 				}
-// 			}
-// 		}
-// 		.skills {
-// 			background: linear-gradient(
-// 				0rad,
-// 				#01041a,
-// 				#02244d,
-// 				#033169
-// 			);
-// 		}
+  // 	//---------DARK HOME DEN
+  // 	#home {
+  // 		.bg [alt='Home Page Background'],
+  // 		video {
+  // 			filter: brightness(0.8);
+  // 		}
+  // 		.lilAbout {
+  // 			background-color: $themeBlackBg;
+  // 			// background-color: $themeBlack;
+  // 			.img {
+  // 				background-color: $themeBlackBg;
+  // 				box-shadow: 0 0 14px 2.5px #0003;
+  // 			}
+  // 			.about {
+  // 				.hero {
+  // 					h2 {
+  // 						color: $offWhite !important;
+  // 					}
+  // 					.line {
+  // 						background-color: $themeDGray;
+  // 					}
+  // 				}
+  // 				p {
+  // 					color: $themeWhite2;
+  // 				}
+  // 			}
+  // 		}
+  // 		.skills {
+  // 			background: linear-gradient(
+  // 				0rad,
+  // 				#01041a,
+  // 				#02244d,
+  // 				#033169
+  // 			);
+  // 		}
 
-// 		.homeProjects {
-// 			background-color: $themeBlackBg;
-// 			h3 {
-// 				-webkit-text-stroke: 0.5px $themeBlueDeep;
-// 				color: $themeBlueDeep;
-// 			}
-// 			h1 {
-// 				color: $themeWhite;
-// 			}
-// 			.swiper {
-// 				.swiper-wrapper .swiper-slide {
-// 					box-shadow: 0px 2px 7px 1px $themeDGray;
-// 				}
-// 				// .projectView {
-// 				img {
-// 					filter: brightness(0.85);
-// 				}
-// 			}
-// 		}
-// 	}
+  // 		.homeProjects {
+  // 			background-color: $themeBlackBg;
+  // 			h3 {
+  // 				-webkit-text-stroke: 0.5px $themeBlueDeep;
+  // 				color: $themeBlueDeep;
+  // 			}
+  // 			h1 {
+  // 				color: $themeWhite;
+  // 			}
+  // 			.swiper {
+  // 				.swiper-wrapper .swiper-slide {
+  // 					box-shadow: 0px 2px 7px 1px $themeDGray;
+  // 				}
+  // 				// .projectView {
+  // 				img {
+  // 					filter: brightness(0.85);
+  // 				}
+  // 			}
+  // 		}
+  // 	}
 
-// 	//---------DARK PROJECTS
-// 	#projects {
-// 		.bg video {
-// 			filter: brightness(0.77);
-// 		}
+  // 	//---------DARK PROJECTS
+  // 	#projects {
+  // 		.bg video {
+  // 			filter: brightness(0.77);
+  // 		}
 
-// 		main {
-// 			background-color: $themeBlack;
-// 			.projectNav {
-// 				background-color: $themeBlack1;
-// 				border-bottom-color: #0a0a0a;
-// 				button {
-// 					color: $themeGray;
-// 					&.active {
-// 						background-color: #0a0a0a;
-// 						color: $themeWhite;
-// 						border-bottom-color: #555;
-// 					}
-// 					&:hover {
-// 						background-color: #1a1a1a;
-// 						color: $themeWhite2;
-// 					}
-// 				}
-// 			}
-// 			section > div .img .contentWrapper ul li {
-// 				background-color: #fff7;
-// 				background-color: $themeGray;
-// 				color: black;
-// 				box-shadow: 0 0 3px $themeDGray;
-// 			}
-// 		}
-// 	}
+  // 		main {
+  // 			background-color: $themeBlack;
+  // 			.projectNav {
+  // 				background-color: $themeBlack1;
+  // 				border-bottom-color: #0a0a0a;
+  // 				button {
+  // 					color: $themeGray;
+  // 					&.active {
+  // 						background-color: #0a0a0a;
+  // 						color: $themeWhite;
+  // 						border-bottom-color: #555;
+  // 					}
+  // 					&:hover {
+  // 						background-color: #1a1a1a;
+  // 						color: $themeWhite2;
+  // 					}
+  // 				}
+  // 			}
+  // 			section > div .img .contentWrapper ul li {
+  // 				background-color: #fff7;
+  // 				background-color: $themeGray;
+  // 				color: black;
+  // 				box-shadow: 0 0 3px $themeDGray;
+  // 			}
+  // 		}
+  // 	}
 
-// 	//---------CONTACT THE DARK SIDE
-// 	#contact {
-// 		.bg {
-// 			background-image: linear-gradient(
-// 					180deg,
-// 					#0002,
-// 					#0007
-// 				),
-// 				url('../IMAGES/ContactBackground.jpg');
-// 		}
-// 		main {
-// 			background-color: $themeBlack;
-// 			.svg {
-// 				section {
-// 					.hero {
-// 						> div {
-// 							background-color: $themeGray;
-// 						}
-// 						h3 {
-// 							color: $offWhite;
-// 						}
-// 					}
-// 					.socials > button,
-// 					a {
-// 						border: 2px solid $themeWhite2;
-// 						color: $themeWhite2;
-// 						&:hover,
-// 						&:focus {
-// 							border-color: $themeBlueDeep;
-// 							svg {
-// 								color: $themeBlueDeep;
-// 							}
-// 						}
-// 					}
-// 				}
-// 			}
+  // 	//---------CONTACT THE DARK SIDE
+  // 	#contact {
+  // 		.bg {
+  // 			background-image: linear-gradient(
+  // 					180deg,
+  // 					#0002,
+  // 					#0007
+  // 				),
+  // 				url('../IMAGES/ContactBackground.jpg');
+  // 		}
+  // 		main {
+  // 			background-color: $themeBlack;
+  // 			.svg {
+  // 				section {
+  // 					.hero {
+  // 						> div {
+  // 							background-color: $themeGray;
+  // 						}
+  // 						h3 {
+  // 							color: $offWhite;
+  // 						}
+  // 					}
+  // 					.socials > button,
+  // 					a {
+  // 						border: 2px solid $themeWhite2;
+  // 						color: $themeWhite2;
+  // 						&:hover,
+  // 						&:focus {
+  // 							border-color: $themeBlueDeep;
+  // 							svg {
+  // 								color: $themeBlueDeep;
+  // 							}
+  // 						}
+  // 					}
+  // 				}
+  // 			}
 
-// 			.ContactMeWrapper {
-// 				.ContactMe {
-// 					box-shadow: 0 0 15px Black;
-// 					background-color: $offWhite;
-// 					form {
-// 						.formControl {
-// 							label span {
-// 								color: $themeRed;
-// 							}
-// 							input,
-// 							textarea {
-// 								border: 1px solid #cdcdcd;
-// 								&::placeholder {
-// 									@include LightText(
-// 										$size: 0.8rem
-// 									);
-// 								}
-// 								&:hover {
-// 									background-color: $offWhite;
-// 									&::placeholder {
-// 										color: $themeBlack2;
-// 									}
-// 								}
-// 								&:focus {
-// 									border: 1px solid $themeGray;
-// 								}
-// 							}
-// 							> span {
-// 								color: $themeRed;
-// 							}
-// 						}
-// 						button {
-// 							color: $themeWhite2;
-// 							background-color: $themeBlueDeep;
-// 							-webkit-text-stroke: 0.25px
-// 								$themeWhite2;
-// 							svg {
-// 								fill: $themeWhite2;
-// 							}
-// 							&:hover,
-// 							&:focus {
-// 								background-color: $themeBottomBlue;
-// 								color: White;
-// 								-webkit-text-stroke: 0.25px White;
-// 								& svg {
-// 									fill: White;
-// 								}
-// 							}
-// 						}
-// 					}
-// 				}
-// 				.circleWrapper {
-// 					background-color: $themeBlueDeep;
-// 					opacity: 0.8;
-// 				}
-// 			}
-// 		}
-// 	}
+  // 			.ContactMeWrapper {
+  // 				.ContactMe {
+  // 					box-shadow: 0 0 15px Black;
+  // 					background-color: $offWhite;
+  // 					form {
+  // 						.formControl {
+  // 							label span {
+  // 								color: $themeRed;
+  // 							}
+  // 							input,
+  // 							textarea {
+  // 								border: 1px solid #cdcdcd;
+  // 								&::placeholder {
+  // 									@include LightText(
+  // 										$size: 0.8rem
+  // 									);
+  // 								}
+  // 								&:hover {
+  // 									background-color: $offWhite;
+  // 									&::placeholder {
+  // 										color: $themeBlack2;
+  // 									}
+  // 								}
+  // 								&:focus {
+  // 									border: 1px solid $themeGray;
+  // 								}
+  // 							}
+  // 							> span {
+  // 								color: $themeRed;
+  // 							}
+  // 						}
+  // 						button {
+  // 							color: $themeWhite2;
+  // 							background-color: $themeBlueDeep;
+  // 							-webkit-text-stroke: 0.25px
+  // 								$themeWhite2;
+  // 							svg {
+  // 								fill: $themeWhite2;
+  // 							}
+  // 							&:hover,
+  // 							&:focus {
+  // 								background-color: $themeBottomBlue;
+  // 								color: White;
+  // 								-webkit-text-stroke: 0.25px White;
+  // 								& svg {
+  // 									fill: White;
+  // 								}
+  // 							}
+  // 						}
+  // 					}
+  // 				}
+  // 				.circleWrapper {
+  // 					background-color: $themeBlueDeep;
+  // 					opacity: 0.8;
+  // 				}
+  // 			}
+  // 		}
+  // 	}
 
-// 	//----------- ABOUT THE DARK VADER
+  // 	//----------- ABOUT THE DARK VADER
 
-// 	#about {
-// 		.bg {
-// 			background-image: linear-gradient(
-// 					180deg,
-// 					#0003,
-// 					#0008
-// 				),
-// 				url('../IMAGES/AboutBackground.jpg');
-// 		}
-// 		main {
-// 			background-color: $themeBlack;
-// 			.imgX2 img {
-// 				filter: brightness(0.97);
-// 			}
-// 			.aboutMe {
-// 				color: $themeWhite;
-// 			}
-// 		}
-// 		section {
-// 			background-color: $themeBlack;
-// 			.aboutMe {
-// 				color: $themeWhite;
-// 			}
-// 		}
-// 		.myServices {
-// 			background: linear-gradient(
-// 					180deg,
-// 					#0008,
-// 					#000b
-// 				),
-// 				linear-gradient(
-// 					180deg,
-// 					$themeBlue,
-// 					$themeBottomBlue
-// 				);
-// 			.serviceList {
-// 				.service {
-// 					border: 2px solid $themeBlueOptic;
-// 					background: linear-gradient(
-// 							180deg,
-// 							#00000001,
-// 							#00000044
-// 						),
-// 						linear-gradient(
-// 							180deg,
-// 							#4d85cee3,
-// 							$themeBlueAlpha
-// 						);
-// 					h4 {
-// 						margin: -0.5rem 0 1rem 0;
-// 						@include BoldText(
-// 							$color: $offWhite,
-// 							$size: 1.8rem,
-// 							$align: center
-// 						);
-// 					}
-// 					img {
-// 						width: 20%;
-// 						display: block;
-// 					}
-// 					p {
-// 						line-height: 1.45;
-// 						@include LightText(
-// 							$size: 0.8rem,
-// 							$color: $themeWhitishBlue,
-// 							$word: 3px
-// 						);
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// 	//--------- 404 PAGE
-// 	#P404 {
-// 		background-image: linear-gradient(
-// 				0deg,
-// 				#000a,
-// 				transparent
-// 			),
-// 			url('../IMAGES/404Background.jpg');
-// 	}
-// }
+  // 	#about {
+  // 		.bg {
+  // 			background-image: linear-gradient(
+  // 					180deg,
+  // 					#0003,
+  // 					#0008
+  // 				),
+  // 				url('../IMAGES/AboutBackground.jpg');
+  // 		}
+  // 		main {
+  // 			background-color: $themeBlack;
+  // 			.imgX2 img {
+  // 				filter: brightness(0.97);
+  // 			}
+  // 			.aboutMe {
+  // 				color: $themeWhite;
+  // 			}
+  // 		}
+  // 		section {
+  // 			background-color: $themeBlack;
+  // 			.aboutMe {
+  // 				color: $themeWhite;
+  // 			}
+  // 		}
+  // 		.myServices {
+  // 			background: linear-gradient(
+  // 					180deg,
+  // 					#0008,
+  // 					#000b
+  // 				),
+  // 				linear-gradient(
+  // 					180deg,
+  // 					$themeBlue,
+  // 					$themeBottomBlue
+  // 				);
+  // 			.serviceList {
+  // 				.service {
+  // 					border: 2px solid $themeBlueOptic;
+  // 					background: linear-gradient(
+  // 							180deg,
+  // 							#00000001,
+  // 							#00000044
+  // 						),
+  // 						linear-gradient(
+  // 							180deg,
+  // 							#4d85cee3,
+  // 							$themeBlueAlpha
+  // 						);
+  // 					h4 {
+  // 						margin: -0.5rem 0 1rem 0;
+  // 						@include BoldText(
+  // 							$color: $offWhite,
+  // 							$size: 1.8rem,
+  // 							$align: center
+  // 						);
+  // 					}
+  // 					img {
+  // 						width: 20%;
+  // 						display: block;
+  // 					}
+  // 					p {
+  // 						line-height: 1.45;
+  // 						@include LightText(
+  // 							$size: 0.8rem,
+  // 							$color: $themeWhitishBlue,
+  // 							$word: 3px
+  // 						);
+  // 					}
+  // 				}
+  // 			}
+  // 		}
+  // 	}
+  // 	//--------- 404 PAGE
+  // 	#P404 {
+  // 		background-image: linear-gradient(
+  // 				0deg,
+  // 				#000a,
+  // 				transparent
+  // 			),
+  // 			url('../IMAGES/404Background.jpg');
+  // 	}
+}

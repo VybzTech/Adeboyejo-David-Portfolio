@@ -472,7 +472,7 @@
 }
 #home .homeProjects .swiper .swiper-wrapper .swiper-slide {
   box-shadow: 0px 2px 5px 0.1px #e3f2f8;
-  @apply h-[45vh] rounded rounded-md overflow-hidden;
+  @apply h-[43vh] rounded rounded-md overflow-hidden;
 }
 #home .homeProjects .swiper .swiper-wrapper .swiper-slide:hover, #home .homeProjects .swiper .swiper-wrapper .swiper-slide:focus {
   box-shadow: 0px 1px 15px 1px #eee;
@@ -481,7 +481,13 @@
   transform: scale(1.05);
 }
 #home .homeProjects .swiper .swiper-wrapper .swiper-slide img {
-  @apply object-fill rounded rounded-lg w-fit transition-all duration-75 ease-in-out h-[inherit];
+  @apply object-cover rounded rounded-lg w-fit transition-all duration-75 ease-in-out h-[inherit];
+}
+#home .homeProjects .swiper .swiper-wrapper .swiper-slide-prev {
+  transform: skewY(-1.5deg) translate(3px, 4px);
+}
+#home .homeProjects .swiper .swiper-wrapper .swiper-slide-next {
+  transform: skewY(1.5deg) translate(-3px, 4px);
 }
 
 #about .bg {
@@ -1035,4 +1041,16 @@
 #portals .ResumeDwn [title=Close]:hover, #portals .ResumeDwn [title=Close]:focus, #portals .ResumeDwn [title=Close]:focus-within, #portals .ResumeDwn [title=Close]:focus-visible {
   background: linear-gradient(-15deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4666666667));
   @apply [&>svg]:fill-red-500;
+}
+
+#light.dark .navbar .logo svg path {
+  fill: #333;
+}
+#light.dark .navbar .logo svg path:first-of-type {
+  fill: #f22;
+  border: 1px solid #f22;
+}
+#light.dark .navbar.white {
+  background-color: #111;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.9333333333);
 }
