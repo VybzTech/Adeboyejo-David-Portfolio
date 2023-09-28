@@ -98,6 +98,12 @@
             font-size: 0.9rem;
             font-family: montLight;
             @apply my-2.5 px-5 pt-3 pb-0.5 rounded mx-auto text-white uppercase;
+            &:hover,
+            &:focus,
+            &:focus-within,
+            &:focus-visible {
+              outline: none;
+            }
           }
         }
         & > div:last-of-type button {
@@ -344,7 +350,7 @@
         $word: 2px,
         $letter: 0.5px
       );
-      @apply uppercase mb-[-0.25rem] mt-8;
+      @apply uppercase pt-8 pb-[-0.25rem]; 
     }
     h1 {
       @apply mb-8;
@@ -356,8 +362,7 @@
       );
     }
     .swiper {
-      margin: 0 auto 0.5rem;
-      @apply w-[90%];
+      @apply w-[90%] pb-2 my-0 mx-auto;
       .swiper-wrapper {
         @apply w-full;
         .swiper-slide {
@@ -374,10 +379,10 @@
             @apply object-cover rounded rounded-lg w-fit transition-all duration-75 ease-in-out h-[inherit];
           }
           &-prev {
-            transform: skewY(-1.5deg) translate(3px, 4px);
+            transform: skewY(-0.85deg) translate(2px, 3px);
           }
           &-next {
-            transform: skewY(1.5deg) translate(-3px, 4px);
+            transform: skewY(1deg) translate(-2px, 3px);
           }
         }
       }
@@ -423,8 +428,9 @@
     }
   }
   section {
+    @apply py-3 pt-8;
     .imgX2 {
-      @apply w-[80%] rounded-xl overflow-hidden my-3 mt-8 mx-auto;
+      @apply w-[80%] rounded-xl overflow-hidden  mx-auto;
       img {
         @apply w-full;
         @include trans(450ms);

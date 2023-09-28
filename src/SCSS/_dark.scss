@@ -29,6 +29,34 @@
     //     }
     //   }
     // }
+
+    //  INITIAL DARK NAVBAR STYLES
+    .navigation {
+      > div {
+        > div .nav {
+          -webkit-text-stroke: 0.25px white;
+          @apply text-white;
+        }
+        & > div:last-of-type button {
+          background: transparent;
+          background: linear-gradient(-15deg, #000a, #0003);
+          box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
+          @apply bg-slate-700 text-gray-200;
+          &:hover,
+          &:focus,
+          &:focus-within,
+          &:focus-visible {
+            -webkit-text-stroke: 0.05px $themeBlack1;
+            background: linear-gradient(-15deg, #000c, #0007);
+            box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
+          }
+        }
+      }
+      //SHOWN
+      &.show {
+        @apply bg-[#1116];
+      }
+    }
   }
   // 	.theme {
   // 		button {
@@ -41,62 +69,130 @@
   // 		}
   // 	}
 
-  // 	//---------DARK HOME DEN
-  // 	#home {
-  // 		.bg [alt='Home Page Background'],
-  // 		video {
-  // 			filter: brightness(0.8);
-  // 		}
-  // 		.lilAbout {
-  // 			background-color: $themeBlackBg;
-  // 			// background-color: $themeBlack;
-  // 			.img {
-  // 				background-color: $themeBlackBg;
-  // 				box-shadow: 0 0 14px 2.5px #0003;
-  // 			}
-  // 			.about {
-  // 				.hero {
-  // 					h2 {
-  // 						color: $offWhite !important;
-  // 					}
-  // 					.line {
-  // 						background-color: $themeDGray;
-  // 					}
-  // 				}
-  // 				p {
-  // 					color: $themeWhite2;
-  // 				}
-  // 			}
-  // 		}
-  // 		.skills {
-  // 			background: linear-gradient(
-  // 				0rad,
-  // 				#01041a,
-  // 				#02244d,
-  // 				#033169
-  // 			);
-  // 		}
+  //---------DARK HOME DEN
+  #home {
+    .bg [alt="Home Page Background"],
+    video {
+      filter: brightness(0.8);
+    }
+    .lilAbout {
+      background-color: $themeBlackBg;
+      .circleImg {
+          background-color: $themeBlackBg;
+          box-shadow: 0 0 14px 2.5px #0003;
+      }
+      .about {
+        .hero {
+          h2 {
+            color: $offWhite !important;
+          }
+          .line {
+            background-color: $themeDGray;
+          }
+        }
+        p {
+          color: $themeWhite2;
+        }
+      }
+    }
+    .skills {
+      background: linear-gradient(0rad, #01041a, #02244d, #033169);
+    }
 
-  // 		.homeProjects {
-  // 			background-color: $themeBlackBg;
-  // 			h3 {
-  // 				-webkit-text-stroke: 0.5px $themeBlueDeep;
-  // 				color: $themeBlueDeep;
-  // 			}
-  // 			h1 {
-  // 				color: $themeWhite;
-  // 			}
-  // 			.swiper {
-  // 				.swiper-wrapper .swiper-slide {
-  // 					box-shadow: 0px 2px 7px 1px $themeDGray;
-  // 				}
-  // 				// .projectView {
-  // 				img {
-  // 					filter: brightness(0.85);
-  // 				}
-  // 			}
-  // 		}
-  // 	}
+    .homeProjects {
+      background-color: $themeBlackBg;
+      h3 {
+        -webkit-text-stroke: 0.5px $themeBlueDeep;
+        color: $themeBlueDeep;
+      }
+      h1 {
+        color: $themeWhite;
+      }
+      .swiper {
+        .swiper-wrapper .swiper-slide {
+          box-shadow: 0px 2px 7px 1px $themeDGray;
+        }
+        img {
+          filter: brightness(0.85);
+        }
+      }
+    }
+  }
+
+  	//----------- ABOUT THE DARK VADER
+
+  	#about {
+  		// .bg {
+  		// 	background-image: linear-gradient(
+  		// 			180deg,
+  		// 			#0003,
+  		// 			#0008
+  		// 		),
+  		// 		url('../IMAGES/AboutBackground.jpg');
+  		// }
+  		// main {
+  		// 	background-color: $themeBlack;
+  		// 	.imgX2 img {
+  		// 		filter: brightness(0.97);
+  		// 	}
+  		// 	.aboutMe {
+  		// 		color: $themeWhite;
+  		// 	}
+  		// }
+  		section {
+  			background-color: $themeBlack;
+  			.aboutMe {
+  				color: $themeWhite;
+  			}
+  		}
+  		.myServices {
+  			// background: linear-gradient(
+  			// 		180deg,
+  			// 		#0008,
+  			// 		#000b
+  			// 	),
+  			// 	linear-gradient(
+  			// 		180deg,
+  			// 		$themeBlue,
+  			// 		$themeBottomBlue
+  			// 	);
+  			.serviceList {
+  				.service {
+  					// border: 2px solid $themeBlueOptic;
+  					// background: linear-gradient(
+  					// 		180deg,
+  					// 		#00000001,
+  					// 		#00000044
+  					// 	),
+  					// 	linear-gradient(
+  					// 		180deg,
+  					// 		#4d85cee3,
+  					// 		$themeBlueAlpha
+  					// 	);
+  					// h4 {
+  					// 	margin: -0.5rem 0 1rem 0;
+  					// 	@include BoldText(
+  					// 		$color: $offWhite,
+  					// 		$size: 1.8rem,
+  					// 		$align: center
+  					// 	);
+  					// }
+  					// img {
+  					// 	width: 20%;
+  					// 	display: block;
+  					// }
+  					// p {
+  					// 	line-height: 1.45;
+  					// 	@include LightText(
+  					// 		$size: 0.8rem,
+  					// 		$color: $themeWhitishBlue,
+  					// 		$word: 3px
+  					// 	);
+  					// }
+  				}
+  			}
+  		}
+  	}
 
   // 	//---------DARK PROJECTS
   // 	#projects {
@@ -227,80 +323,7 @@
   // 		}
   // 	}
 
-  // 	//----------- ABOUT THE DARK VADER
-
-  // 	#about {
-  // 		.bg {
-  // 			background-image: linear-gradient(
-  // 					180deg,
-  // 					#0003,
-  // 					#0008
-  // 				),
-  // 				url('../IMAGES/AboutBackground.jpg');
-  // 		}
-  // 		main {
-  // 			background-color: $themeBlack;
-  // 			.imgX2 img {
-  // 				filter: brightness(0.97);
-  // 			}
-  // 			.aboutMe {
-  // 				color: $themeWhite;
-  // 			}
-  // 		}
-  // 		section {
-  // 			background-color: $themeBlack;
-  // 			.aboutMe {
-  // 				color: $themeWhite;
-  // 			}
-  // 		}
-  // 		.myServices {
-  // 			background: linear-gradient(
-  // 					180deg,
-  // 					#0008,
-  // 					#000b
-  // 				),
-  // 				linear-gradient(
-  // 					180deg,
-  // 					$themeBlue,
-  // 					$themeBottomBlue
-  // 				);
-  // 			.serviceList {
-  // 				.service {
-  // 					border: 2px solid $themeBlueOptic;
-  // 					background: linear-gradient(
-  // 							180deg,
-  // 							#00000001,
-  // 							#00000044
-  // 						),
-  // 						linear-gradient(
-  // 							180deg,
-  // 							#4d85cee3,
-  // 							$themeBlueAlpha
-  // 						);
-  // 					h4 {
-  // 						margin: -0.5rem 0 1rem 0;
-  // 						@include BoldText(
-  // 							$color: $offWhite,
-  // 							$size: 1.8rem,
-  // 							$align: center
-  // 						);
-  // 					}
-  // 					img {
-  // 						width: 20%;
-  // 						display: block;
-  // 					}
-  // 					p {
-  // 						line-height: 1.45;
-  // 						@include LightText(
-  // 							$size: 0.8rem,
-  // 							$color: $themeWhitishBlue,
-  // 							$word: 3px
-  // 						);
-  // 					}
-  // 				}
-  // 			}
-  // 		}
-  // 	}
+  
   // 	//--------- 404 PAGE
   // 	#P404 {
   // 		background-image: linear-gradient(

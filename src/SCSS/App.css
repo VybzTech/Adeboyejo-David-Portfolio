@@ -201,6 +201,9 @@
   font-family: montLight;
   @apply my-2.5 px-5 pt-3 pb-0.5 rounded mx-auto text-white uppercase;
 }
+#light .navbar .navigation > div > div .nav:hover, #light .navbar .navigation > div > div .nav:focus, #light .navbar .navigation > div > div .nav:focus-within, #light .navbar .navigation > div > div .nav:focus-visible {
+  outline: none;
+}
 #light .navbar .navigation > div > div:last-of-type button {
   transition: all 300ms ease-in-out;
   -webkit-text-stroke: 0.02px white;
@@ -451,7 +454,7 @@
   word-spacing: 2px;
   text-align: center;
   font-size: 0.75rem;
-  @apply uppercase mb-[-0.25rem] mt-8;
+  @apply uppercase pt-8 pb-[-0.25rem];
 }
 #home .homeProjects h1 {
   @apply mb-8;
@@ -464,8 +467,7 @@
   font-size: 1.8rem;
 }
 #home .homeProjects .swiper {
-  margin: 0 auto 0.5rem;
-  @apply w-[90%];
+  @apply w-[90%] pb-2 my-0 mx-auto;
 }
 #home .homeProjects .swiper .swiper-wrapper {
   @apply w-full;
@@ -484,10 +486,10 @@
   @apply object-cover rounded rounded-lg w-fit transition-all duration-75 ease-in-out h-[inherit];
 }
 #home .homeProjects .swiper .swiper-wrapper .swiper-slide-prev {
-  transform: skewY(-1.5deg) translate(3px, 4px);
+  transform: skewY(-0.85deg) translate(2px, 3px);
 }
 #home .homeProjects .swiper .swiper-wrapper .swiper-slide-next {
-  transform: skewY(1.5deg) translate(-3px, 4px);
+  transform: skewY(1deg) translate(-2px, 3px);
 }
 
 #about .bg {
@@ -526,8 +528,11 @@
   background: linear-gradient(-15deg, #086d7c, #21a9ca);
   -webkit-text-stroke: 0.05px white;
 }
+#about section {
+  @apply py-3 pt-8;
+}
 #about section .imgX2 {
-  @apply w-[80%] rounded-xl overflow-hidden my-3 mt-8 mx-auto;
+  @apply w-[80%] rounded-xl overflow-hidden  mx-auto;
 }
 #about section .imgX2 img {
   @apply w-full;
@@ -1053,4 +1058,67 @@
 #light.dark .navbar.white {
   background-color: #111;
   box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.9333333333);
+}
+#light.dark .navbar .navigation > div > div .nav {
+  -webkit-text-stroke: 0.25px white;
+  @apply text-white;
+}
+#light.dark .navbar .navigation > div > div:last-of-type button {
+  background: transparent;
+  background: linear-gradient(-15deg, rgba(0, 0, 0, 0.6666666667), rgba(0, 0, 0, 0.2));
+  box-shadow: 2px 2px 8px 0.75px rgba(34, 34, 34, 0.6666666667), -1px -1px 4px rgba(17, 17, 17, 0.8666666667);
+  @apply bg-slate-700 text-gray-200;
+}
+#light.dark .navbar .navigation > div > div:last-of-type button:hover, #light.dark .navbar .navigation > div > div:last-of-type button:focus, #light.dark .navbar .navigation > div > div:last-of-type button:focus-within, #light.dark .navbar .navigation > div > div:last-of-type button:focus-visible {
+  -webkit-text-stroke: 0.05px #111;
+  background: linear-gradient(-15deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4666666667));
+  box-shadow: 2px 2px 8px 0.75px rgba(34, 34, 34, 0.6666666667), -1px -1px 4px rgba(17, 17, 17, 0.8666666667);
+}
+#light.dark .navbar .navigation.show {
+  @apply bg-[#1116];
+}
+#light.dark #home .bg [alt="Home Page Background"],
+#light.dark #home video {
+  filter: brightness(0.8);
+}
+#light.dark #home .lilAbout {
+  background-color: rgba(14, 14, 14, 0.968627451);
+}
+#light.dark #home .lilAbout .circleImg {
+  background-color: rgba(14, 14, 14, 0.968627451);
+  box-shadow: 0 0 14px 2.5px rgba(0, 0, 0, 0.2);
+}
+#light.dark #home .lilAbout .about .hero h2 {
+  color: #eee !important;
+}
+#light.dark #home .lilAbout .about .hero .line {
+  background-color: rgba(51, 51, 51, 0.6666666667);
+}
+#light.dark #home .lilAbout .about p {
+  color: #f5f5f9;
+}
+#light.dark #home .skills {
+  background: linear-gradient(0rad, #01041a, #02244d, #033169);
+}
+#light.dark #home .homeProjects {
+  background-color: rgba(14, 14, 14, 0.968627451);
+}
+#light.dark #home .homeProjects h3 {
+  -webkit-text-stroke: 0.5px #021db8;
+  color: #021db8;
+}
+#light.dark #home .homeProjects h1 {
+  color: #f9f9fa;
+}
+#light.dark #home .homeProjects .swiper .swiper-wrapper .swiper-slide {
+  box-shadow: 0px 2px 7px 1px rgba(51, 51, 51, 0.6666666667);
+}
+#light.dark #home .homeProjects .swiper img {
+  filter: brightness(0.85);
+}
+#light.dark #about section {
+  background-color: rgba(0, 0, 0, 0.9333333333);
+}
+#light.dark #about section .aboutMe {
+  color: #f9f9fa;
 }
