@@ -855,6 +855,9 @@
 #contact main .socials a svg {
   @apply w-8 h-8 p-1.5 text-gray-800 object-contain transition-all ease-in;
 }
+#contact main .ContactMeWrapper {
+  z-index: 1;
+}
 #contact main .ContactMeWrapper .ContactMe {
   box-shadow: 0 3px 10px 0.5px rgba(204, 204, 204, 0.1333333333);
   @apply mx-3 mt-2 mb-8 bg-white rounded rounded-2xl  pb-5 overflow-hidden min-h-[70vh];
@@ -946,7 +949,7 @@
   text-align: left;
   font-size: 10.5px;
   transition: all 750ms ease-in-out;
-  @apply font-bold flex items-center mt-1 ml-1;
+  @apply font-bold flex items-center justify-end mt-0 mr-1;
 }
 #contact main .ContactMeWrapper .ContactMe form .formControl > span svg {
   @apply w-[0.9rem] mr-1;
@@ -1012,11 +1015,14 @@
 
 #portals {
   backdrop-filter: blur(3px);
-  @apply bg-[#000a] fixed top-0 left-0 fixed;
+  @apply bg-[#000a] fixed top-0 left-0 fixed w-[100%] h-[100%];
   z-index: 50;
 }
 #portals .ResumeImg {
-  @apply p-4 pb-1;
+  @apply p-3 pb-1;
+}
+#portals .ResumeImg img {
+  @apply max-h-[50%];
 }
 #portals .ResumeDwn {
   @apply flex items-center justify-end mr-5;
@@ -1151,4 +1157,146 @@
 }
 #light.dark #about .myServices .serviceWrapper .serviceList .service .backdrop svg {
   fill: #333;
+}
+#light.dark #projects .bg {
+  box-shadow: 0 10px 12px 0.75px rgba(119, 119, 119, 0.2);
+}
+#light.dark #projects .bg video {
+  filter: brightness(0.77);
+}
+#light.dark #projects main {
+  background-color: #222;
+}
+#light.dark #projects main .projectNav {
+  background-color: #111;
+}
+#light.dark #projects main .projectNav > div .Nav {
+  @apply hover:bg-gray-800 focus:bg-gray-800
+           [&.active>span]:text-gray-200;
+}
+#light.dark #projects main .projectNav > div .Nav img {
+  filter: invert(0.7);
+}
+#light.dark #projects main .projectNav > div .Nav span {
+  color: #e5e5e5;
+}
+#light.dark #projects main section .gridSection .MainProject {
+  box-shadow: 0 3px 12px 0.75px #222;
+  background: #111;
+}
+#light.dark #projects main section .gridSection .MainProject:hover {
+  box-shadow: 0 3px 12px 0.75px #222;
+}
+#light.dark #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide::after {
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.1333333333), rgba(17, 17, 17, 0.2666666667), rgba(17, 17, 17, 0.6666666667), #111);
+}
+#light.dark #projects main section .gridSection .MainProject .swiper [class^=swiper-button] {
+  @apply opacity-50 [&:hover]:bg-gray-500 [&::after]:text-gray-300;
+}
+#light.dark #projects main section .gridSection .MainProject .contentWrapper h4 {
+  color: #eee;
+}
+#light.dark #projects main section .gridSection .MainProject .contentWrapper p {
+  color: #aaa;
+}
+#light.dark #projects main section .gridSection .MainProject .contentWrapper .actions button {
+  @apply opacity-70 
+                  [&>svg]:fill-gray-600 hover:bg-gray-800
+                   hover:[&>svg]:fill-gray-100 [&.active>svg]:fill-gray-100;
+}
+#light.dark #projects main section .tools.show {
+  box-shadow: 0 2px 12px 0.75px #333;
+  background: #111;
+}
+#light.dark #projects main section .tools.show::before {
+  border-bottom-color: #111;
+  @apply h-6 absolute top-[-1.4rem] left-3.5;
+}
+#light.dark #projects main section .UI-UX .UI_image img:hover {
+  box-shadow: 0 2px 10px 0.5px #333;
+}
+#light.dark #contact {
+  /*
+  .bg {
+       background-image: linear-gradient(180deg, #0002, $themeBlack1),
+         url("../IMAGES/AboutBackground.jpg");
+     }
+       */
+}
+#light.dark #contact .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1333333333), #111), url("../IMAGES/ContactBackground.jpg");
+  box-shadow: 0 10px 12px 0.5px rgba(17, 17, 17, 0.6666666667);
+}
+#light.dark #contact main {
+  background-color: rgba(14, 14, 14, 0.968627451);
+}
+#light.dark #contact main .hero > div {
+  @apply bg-slate-100;
+}
+#light.dark #contact main .hero h3 {
+  color: #f5f5f9;
+}
+#light.dark #contact main .socials button,
+#light.dark #contact main .socials a {
+  border: 2px solid #333;
+}
+#light.dark #contact main .socials button:hover, #light.dark #contact main .socials button:focus,
+#light.dark #contact main .socials a:hover,
+#light.dark #contact main .socials a:focus {
+  border-color: #ff333c;
+  opacity: 0.6;
+}
+#light.dark #contact main .socials button:hover svg, #light.dark #contact main .socials button:focus svg,
+#light.dark #contact main .socials a:hover svg,
+#light.dark #contact main .socials a:focus svg {
+  color: #ff333c;
+}
+#light.dark #contact main .socials button svg,
+#light.dark #contact main .socials a svg {
+  @apply text-gray-500;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe {
+  box-shadow: 0 0 15px Black;
+  background-color: #111;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe .intro h2 {
+  color: #eee;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe .intro svg {
+  filter: invert(0.8);
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl > div {
+  background-color: #111;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl > div:hover label {
+  color: #eee;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl input,
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl textarea {
+  border: 1px solid #222;
+  color: #eee;
+  color: #eee;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl input::placeholder,
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl textarea::placeholder {
+  color: #333;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl input:hover,
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl textarea:hover {
+  background-color: #333;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl input:hover::placeholder,
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl textarea:hover::placeholder {
+  color: #333;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl input:focus,
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl textarea:focus {
+  border: 1px solid #aaa;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl > span {
+  color: #f22;
+}
+#light.dark #contact main .ContactMeWrapper .circleWrapper {
+  background: linear-gradient(133deg, rgba(19, 90, 232, 0.2666666667), #135be8, #021db8);
+  opacity: 0.6;
 }

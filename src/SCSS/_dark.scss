@@ -169,7 +169,7 @@
             }
             .backdrop {
               svg {
-                fill:$themeBlack3;
+                fill: $themeBlack3;
               }
             }
           }
@@ -178,134 +178,266 @@
     }
   }
 
-  // 	//---------DARK PROJECTS
-  // 	#projects {
-  // 		.bg video {
-  // 			filter: brightness(0.77);
-  // 		}
+  //---------DARK PROJECTS
+  #projects {
+    .bg {
+      box-shadow: 0 10px 12px 0.75px #7773;
+      video {
+        filter: brightness(0.77);
+      }
+    }
+    main {
+      background-color: $themeBlack2;
+      .projectNav {
+        background-color: $themeBlack1;
+        // border-bottom-color: #0a0a0a;
+        > div {
+          .Nav {
+            //  EACH BUTTON
+            @apply hover:bg-gray-800 focus:bg-gray-800
+           [&.active>span]:text-gray-200;
+            img {
+              filter: invert(0.7);
+            }
+            span {
+              color: $gray;
+            }
+          }
+        }
+        // button {
+        //   color: $themeGray;
+        //   &.active {
+        //     background-color: #0a0a0a;
+        //     color: $themeWhite;
+        //     border-bottom-color: #555;
+        //   }
+        //   &:hover {
+        //     background-color: #1a1a1a;
+        //     color: $themeWhite2;
+        //   }
+        // }
+      }
+      section {
+        .gridSection {
+          // EACH PROJECT DIV
+          .MainProject {
+            // box-shadow: 0 3px 10px 0.5px #ccc2;
+            box-shadow: 0 3px 12px 0.75px #222;
+            background: $themeBlack1;
+            &:hover {
+              box-shadow: 0 3px 12px 0.75px #222;
+            }
+            .swiper {
+              .swiper-wrapper {
+                .swiper-slide {
+                  &::after {
+                    background: linear-gradient(
+                      180deg,
+                      transparent,
+                      #0002,
+                      #1114,
+                      #111a,
+                      #111
+                    );
+                  }
+                  img {
+                  }
+                }
+              }
+              //  SWIPER BUTTONS
+              [class^="swiper-button"] {
+                @apply opacity-50 [&:hover]:bg-gray-500 [&::after]:text-gray-300;
+              }
+            }
+            .contentWrapper {
+              h4 {
+                color: $offWhite;
+              }
+              p {
+                color: $themeGray;
+                // color: $themeDGray;
+              }
+              .actions {
+                button {
+                  @apply opacity-70 
+                  [&>svg]:fill-gray-600 hover:bg-gray-800
+                   hover:[&>svg]:fill-gray-100 [&.active>svg]:fill-gray-100;
+                }
+              }
+            }
+          }
+        }
+        // USED TOOLS DIV
+        .tools {
+          &.show {
+            box-shadow: 0 2px 12px 0.75px $themeBlack3; // #444;
+            background: $themeBlack1;
+            &::before {
+              border-bottom-color: $themeBlack1;
+              @apply h-6 absolute top-[-1.4rem] left-3.5;
+            }
+            li {
+              img {
+              }
+            }
+          }
+        }
+        // UI IMAGES
+        .UI-UX {
+          .UI_image {
+            img:hover {
+              box-shadow: 0 2px 10px 0.5px $themeBlack3; // #444;
+            }
+          }
+        }
+      }
+    }
+  }
 
-  // 		main {
-  // 			background-color: $themeBlack;
-  // 			.projectNav {
-  // 				background-color: $themeBlack1;
-  // 				border-bottom-color: #0a0a0a;
-  // 				button {
-  // 					color: $themeGray;
-  // 					&.active {
-  // 						background-color: #0a0a0a;
-  // 						color: $themeWhite;
-  // 						border-bottom-color: #555;
-  // 					}
-  // 					&:hover {
-  // 						background-color: #1a1a1a;
-  // 						color: $themeWhite2;
-  // 					}
-  // 				}
-  // 			}
-  // 			section > div .img .contentWrapper ul li {
-  // 				background-color: #fff7;
-  // 				background-color: $themeGray;
-  // 				color: black;
-  // 				box-shadow: 0 0 3px $themeDGray;
-  // 			}
-  // 		}
-  // 	}
+  //---------CONTACT THE DARK SIDE
+  #contact {
+    /*
+ .bg {
+      background-image: linear-gradient(180deg, #0002, $themeBlack1),
+        url("../IMAGES/AboutBackground.jpg");
+    }
+      */
+    .bg {
+      background-image: linear-gradient(180deg, #0002, $themeBlack1),
+        url("../IMAGES/ContactBackground.jpg");
+      box-shadow: 0 10px 12px 0.5px #111a;
+    }
+    main {
+      background-color: $themeBlackBg;
+      // .svg {
+      // 	section {
+      // 		.hero {
+      // 			> div {
+      // 				background-color: $themeGray;
+      // 			}
+      // 			h3 {
+      // 				color: $offWhite;
+      // 			}
+      // 		}
 
-  // 	//---------CONTACT THE DARK SIDE
-  // 	#contact {
-  // 		.bg {
-  // 			background-image: linear-gradient(
-  // 					180deg,
-  // 					#0002,
-  // 					#0007
-  // 				),
-  // 				url('../IMAGES/ContactBackground.jpg');
-  // 		}
-  // 		main {
-  // 			background-color: $themeBlack;
-  // 			.svg {
-  // 				section {
-  // 					.hero {
-  // 						> div {
-  // 							background-color: $themeGray;
-  // 						}
-  // 						h3 {
-  // 							color: $offWhite;
-  // 						}
-  // 					}
-  // 					.socials > button,
-  // 					a {
-  // 						border: 2px solid $themeWhite2;
-  // 						color: $themeWhite2;
-  // 						&:hover,
-  // 						&:focus {
-  // 							border-color: $themeBlueDeep;
-  // 							svg {
-  // 								color: $themeBlueDeep;
-  // 							}
-  // 						}
-  // 					}
-  // 				}
-  // 			}
+      //     .socials > button,
+      // 		a {
+      // 		// 	border: 2px solid $themeWhite2;
+      // 		// 	color: $themeWhite2;
+      // 		// 	&:hover,
+      // 		// 	&:focus {
+      // 		// 		border-color: $themeBlueDeep;
+      // 		// 		svg {
+      // 		// 			color: $themeBlueDeep;
+      // 		// 		}
+      //     @apply opacity-70
+      //     [&>svg]:fill-gray-600 hover:bg-gray-800
+      //      hover:[&>svg]:fill-gray-100 [&.active>svg]:fill-gray-100;
 
-  // 			.ContactMeWrapper {
-  // 				.ContactMe {
-  // 					box-shadow: 0 0 15px Black;
-  // 					background-color: $offWhite;
-  // 					form {
-  // 						.formControl {
-  // 							label span {
-  // 								color: $themeRed;
-  // 							}
-  // 							input,
-  // 							textarea {
-  // 								border: 1px solid #cdcdcd;
-  // 								&::placeholder {
-  // 									@include LightText(
-  // 										$size: 0.8rem
-  // 									);
-  // 								}
-  // 								&:hover {
-  // 									background-color: $offWhite;
-  // 									&::placeholder {
-  // 										color: $themeBlack2;
-  // 									}
-  // 								}
-  // 								&:focus {
-  // 									border: 1px solid $themeGray;
-  // 								}
-  // 							}
-  // 							> span {
-  // 								color: $themeRed;
-  // 							}
-  // 						}
-  // 						button {
-  // 							color: $themeWhite2;
-  // 							background-color: $themeBlueDeep;
-  // 							-webkit-text-stroke: 0.25px
-  // 								$themeWhite2;
-  // 							svg {
-  // 								fill: $themeWhite2;
-  // 							}
-  // 							&:hover,
-  // 							&:focus {
-  // 								background-color: $themeBottomBlue;
-  // 								color: White;
-  // 								-webkit-text-stroke: 0.25px White;
-  // 								& svg {
-  // 									fill: White;
-  // 								}
-  // 							}
-  // 						}
-  // 					}
-  // 				}
-  // 				.circleWrapper {
-  // 					background-color: $themeBlueDeep;
-  // 					opacity: 0.8;
-  // 				}
-  // 			}
-  // 		}
-  // 	}
+      //   }
+      // 		// }
+
+      // 	}
+      // }
+      .hero {
+        > div {
+          @apply bg-slate-100;
+        }
+        h3 {
+          color: $themeWhite2;
+        }
+      }
+      .socials {
+        button,
+        a {
+          border: 2px solid $themeBlack3;
+          &:hover,
+          &:focus {
+            border-color: $themeCoarseRed;
+            opacity: 0.6;
+            svg {
+              color: $themeCoarseRed;
+            }
+          }
+          svg {
+            @apply text-gray-500;
+          }
+        }
+      }
+
+      .ContactMeWrapper {
+        .ContactMe {
+          box-shadow: 0 0 15px Black;
+          background-color: $themeBlack1;
+          .intro {
+            h2 {
+              color: $offWhite;
+            }
+            svg {
+              filter: invert(0.8);
+            }
+          }
+          form {
+            .formControl {
+              > div {
+                background-color: $themeBlack1;
+                &:hover label {
+                  color: $offWhite;
+                  sup {
+                  }
+                }
+
+                // label span {
+                //   // color: $themeRed;
+              }
+              input,
+              textarea {
+                border: 1px solid $themeBlack2;
+                color: $offWhite;
+                color: $offWhite;
+                &::placeholder {
+                  color: $themeBlack3;
+                }
+                &:hover {
+                  background-color: $themeBlack3;
+                  &::placeholder {
+                    color: $themeBlack3;
+                  }
+                }
+                &:focus {
+                  border: 1px solid $themeGray;
+                }
+              }
+              > span {
+                color: $themeRed;
+              }
+            }
+            button {
+              // color: $themeWhite2;
+              // background-color: $themeBlueDeep;
+              // -webkit-text-stroke: 0.25px $themeWhite2;
+              // svg {
+              //   fill: $themeWhite2;
+              // }
+              // &:hover,
+              // &:focus {
+              //   background-color: $themeBottomBlue;
+              //   color: White;
+              //   -webkit-text-stroke: 0.25px White;
+              //   & svg {
+              //     fill: White;
+              //   }
+              // }
+            }
+          }
+        }
+        .circleWrapper {
+          background: linear-gradient(133deg, $themeBlueAlpha, $themeBlue, $themeBlueDeep);
+          opacity: 0.6;
+        }
+      }
+    }
+  }
 
   // 	//--------- 404 PAGE
   // 	#P404 {
