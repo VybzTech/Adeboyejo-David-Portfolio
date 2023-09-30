@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Fade, Zoom } from "react-awesome-reveal";
 import FileSaver from "file-saver";
 import ResumePic from "../IMAGES/RESUME.png";
+import ArrowDownTray from "../ICONS/ArrowDownTray";
 const Resume = (props) => {
   const handleDownload = () => {
     return FileSaver.saveAs(
@@ -21,7 +22,10 @@ const Resume = (props) => {
         </Fade>
         <div className="ResumeDwn">
           <button onClick={handleDownload} title="Download Resume">
-            <span>Download resume</span>
+            <span className="flex items-center">
+              <ArrowDownTray />
+              Download resume
+            </span>
             {/* <CloudDownloadRounded /> */}
           </button>
           <button

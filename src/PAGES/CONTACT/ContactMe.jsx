@@ -16,6 +16,7 @@ const ContactMe = () => {
   const form = useRef();
 
   const deliverMsg = (msg, onSubmitProps) => {
+    console.log(form.current);
     emailjs
       .sendForm(
         "service_ho4swee",
@@ -29,10 +30,11 @@ const ContactMe = () => {
         },
         (error) => {
           console.log(error.text);
+          //set Toast
         }
       );
-    console.log(msg, form);
-    onSubmitProps.resetForm();
+    console.log(msg);
+    setTimeout(onSubmitProps.resetForm(), 2000);
   };
 
   const validationSchema = Yup.object({

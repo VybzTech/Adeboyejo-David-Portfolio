@@ -15,10 +15,14 @@ const Navbar = withRouter((props) => {
       setNavBg(true);
     } else setNavBg(false);
   };
+  const clean = () => {
+    window.removeEventListener("scroll", () => {});
+    window.removeEventListener("DOMContentLoaded", () => {});
+  };
   useEffect(() => {
     window.addEventListener("DOMContentLoaded", setNav());
     window.addEventListener("scroll", setNav);
-    return window.removeEventListener("scroll", () => {});
+    return clean();
   }, []);
 
   // FIX BUG THAT DETECTS AFTER LOADING IF THE SCROLL BAR IS ALREADY > 100 SO IT'LL ADD CLASS EVEN WIHTOUT SCROLLING INITIALLY

@@ -154,7 +154,7 @@ function App() {
           }
         >
           <Layout theme={theme} setTheme={setTheme}>
-          {/* <ErrorHandler> */}
+            {/* <ErrorHandler> */}
             <Switch>
               <Route exact path="/">
                 <Home />
@@ -170,7 +170,7 @@ function App() {
               </Route>
               <Route path="/*" component={Page404} />
             </Switch>
-          {/* </ErrorHandler> */}
+            {/* </ErrorHandler> */}
           </Layout>
         </React.Suspense>
       </Router>

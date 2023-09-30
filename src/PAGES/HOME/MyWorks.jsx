@@ -117,12 +117,13 @@ const MyWorks = withRouter(({ history }) => {
             <h1>latest works</h1>
           </div>
         </Fade>
-        <Slide bottom triggerOnce>
+        <Slide bottom triggerOnce onDoubleClick={() => {
+              history.push("/Projects");
+              document.documentElement.scrollTop = 0;
+            }}>
           <div
             className="swiper"
-            onDoubleClick={() => {
-              history.push("/Projects");
-            }}
+            
           >
             <div className="swiper-wrapper">
               {projectSlides?.map((slide) => (

@@ -7,41 +7,39 @@ import Resume from "../../COMPONENTS/Resume";
 import MyServices from "./MyServices";
 import ScrollUp from "../../COMPONENTS/ScrollUp";
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
+import Download from "../../ICONS/Download";
 // import RubberBand from 'react-reveal/RubberBand'
 
 const About = () => {
-  const [anime, setAnime] = useState(false);
+  // const [anime, setAnime] = useState(false);
   const [showCV, setShowCV] = useState(false);
-  const [top, setTop] = useState(false);
+  // const [top, setTop] = useState(false);
 
   useEffect(() => {
-    var observer = new IntersectionObserver(onIntersection, {
-      root: null,
-      threshold: 0.5,
-    });
-
-    function onIntersection(entries) {
-      entries.forEach(() => {
-        window.addEventListener("scroll", () => {
-          if (window.scrollY >= 30) {
-            setAnime(true);
-          }
-        });
-      });
-    }
-
-    // observer.observe(document?.querySelector("section"));
-
-    window.addEventListener("scroll", () => {
-      if (document.documentElement.scrollTop === 0) {
-        setTop((t) => !t);
-      } else {
-        setTop(false);
-      }
-    });
-    return () => {
-      window.removeEventListener("scroll", () => {});
-    };
+    // var observer = new IntersectionObserver(onIntersection, {
+    //   root: null,
+    //   threshold: 0.5,
+    // });
+    // function onIntersection(entries) {
+    //   entries.forEach(() => {
+    //     window.addEventListener("scroll", () => {
+    //       if (window.scrollY >= 30) {
+    //         setAnime(true);
+    //       }
+    //     });
+    //   });
+    // }
+    // // observer.observe(document?.querySelector("section"));
+    // window.addEventListener("scroll", () => {
+    //   if (document.documentElement.scrollTop === 0) {
+    //     setTop((t) => !t);
+    //   } else {
+    //     setTop(false);
+    //   }
+    // });
+    // return () => {
+    //   window.removeEventListener("scroll", () => {});
+    // };
   }, []);
   return (
     <div id="about">
@@ -65,7 +63,7 @@ const About = () => {
         </Zoom>
       </div>
       {/* <ScrollUp /> */}
-      {/* <Resume showCV={showCV} setShowCV={setShowCV} /> */}
+      <Resume showCV={showCV} setShowCV={setShowCV} />
       <section>
         <Zoom triggerOnce big delay={500}>
           <ImageMe />

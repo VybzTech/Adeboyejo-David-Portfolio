@@ -28,6 +28,7 @@ const LilAboutMe = withRouter(({ history }) => {
           className="btn flex"
           onClick={() => {
             history.push("/About");
+            document.documentElement.scrollTop = 0;
           }}
         >
           continue reading

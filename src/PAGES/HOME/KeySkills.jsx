@@ -31,6 +31,7 @@ const KeySkills = withRouter(({ history }) => {
         <button
           onClick={() => {
             history.push("/Contact");
+              document.documentElement.scrollTop = 0;
           }}
           className="btn"
         >
