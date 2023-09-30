@@ -1015,17 +1015,17 @@
 
 #portals {
   backdrop-filter: blur(3px);
-  @apply bg-[#000a] fixed top-0 left-0 fixed w-[100%] h-[100%];
+  @apply bg-[#000a] fixed top-0 left-0 fixed;
   z-index: 50;
 }
 #portals .ResumeImg {
   @apply p-3 pb-1;
 }
 #portals .ResumeImg img {
-  @apply max-h-[50%];
+  @apply w-[90%] object-contain my-0 mx-auto;
 }
 #portals .ResumeDwn {
-  @apply flex items-center justify-end mr-5;
+  @apply flex items-center justify-end mt-2 mr-5 mb-5;
 }
 #portals .ResumeDwn button {
   border: none;
