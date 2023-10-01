@@ -9,12 +9,14 @@ import { Navigation } from "swiper";
 import "swiper/css/bundle";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
- 
+import ProjectDets from "./ProjectDets";
+
 const MainProject = ({ nav, project }) => {
   const { name, content, utilities, images, git, link } = project;
 
   const [show, set] = useState(false);
-  const [details, setDetails] = useState(false);
+  // const [details, setDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
   // var swiper = new Swiper(".swiper", {
   // autoHeight: true,
   // autoplay: { delay: 1500 },
@@ -55,9 +57,7 @@ const MainProject = ({ nav, project }) => {
             speed={500}
             navigation
             effect={"fade"}
-            // fadeEffect={{ crossFade: true }}
             loop={true}
-            // autoplay={true}
             grabCursor={true}
           >
             <div className="swiper-wrapper">
@@ -98,7 +98,11 @@ const MainProject = ({ nav, project }) => {
                 </button>
               </div>
               <div className="more">
-                <button onClick={() => setDetails((d) => (d = !d))}>
+                <button
+                  onClick={() => {
+                    setShowDetails((d) => (d = !d));
+                  }}
+                >
                   <ArrowRight />
                 </button>
               </div>
@@ -107,7 +111,7 @@ const MainProject = ({ nav, project }) => {
           </div>
         </>
       </Zoom>
-          {/*   PROJECT TOOLS */}
+      {/*   PROJECT TOOLS */}
       <Zoom big cascade triggerOnce delay={500}>
         <ul className={`tools ${show && "show"}`}>
           {utilities?.map(({ name, img }) => {
@@ -118,6 +122,13 @@ const MainProject = ({ nav, project }) => {
             );
           })}
         </ul>
+      </Zoom>
+      <Zoom className="Details">
+        <ProjectDets
+        project={project}
+          showDetails={showDetails}
+          setShowDetails={setShowDetails}
+        />
       </Zoom>
     </>
   );

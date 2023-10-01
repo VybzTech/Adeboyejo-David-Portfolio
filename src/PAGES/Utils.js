@@ -222,7 +222,7 @@ export const PROJECTS = [
     tag: ["All", "Completed"],
     content:
       "When you think validation, you think Javascript ! That's why this project utilizes Javascript to validate through the form's required fields.",
-  },
+  position:'IT support intern',updated:5,timeline:'4 months'},
   {
     id: 2,
     name: "Graph Task Manager",

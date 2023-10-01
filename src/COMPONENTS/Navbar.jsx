@@ -34,6 +34,7 @@ const Navbar = withRouter((props) => {
           className="logo p-2.5"
           onClick={() => {
             history.push("/");
+            document.documentElement.scrollTop = 0;
           }}
         >
           <Logo svgWidth="8vw" svgFill={"#222"} AFill={"#135be8"} />

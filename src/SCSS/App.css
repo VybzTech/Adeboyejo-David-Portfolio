@@ -59,10 +59,6 @@
   src: url("../FONTS/Montserrat-Light.ttf");
 }
 @font-face {
-  font-family: montReg;
-  src: url("../FONTS/Montserrat-Regular.ttf");
-}
-@font-face {
   font-family: montXBold;
   src: url("../FONTS/Montserrat-ExtraBold.ttf");
 }
@@ -752,6 +748,9 @@
 #projects main section .gridSection .MainProject .contentWrapper .actions button {
   @apply p-1.5 pb-5 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
 }
+#projects main section .gridSection .MainProject .contentWrapper .actions button.more {
+  @apply [&>svg]:text-[10px];
+}
 #projects main section .tools {
   @apply hidden;
 }
@@ -782,7 +781,7 @@
   @apply [&>div]:mb-4;
 }
 #projects main section .UI-UX .UI_image img {
-  @apply rounded rounded-md;
+  @apply rounded rounded-md  max-h-[30vh];
 }
 #projects main section .UI-UX .UI_image img:hover, #projects main section .UI-UX .UI_image img:focus, #projects main section .UI-UX .UI_image img:focus-within, #projects main section .UI-UX .UI_image img:focus-visible {
   outline: none;
@@ -1055,6 +1054,107 @@
 #portals .ResumeDwn [title=Close]:hover, #portals .ResumeDwn [title=Close]:focus, #portals .ResumeDwn [title=Close]:focus-within, #portals .ResumeDwn [title=Close]:focus-visible {
   background: linear-gradient(-15deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4666666667));
   @apply [&>svg]:fill-red-500;
+}
+#portals .ProjectDets {
+  background-color: #f9f9fa;
+  background-color: #fbfbfb;
+  @apply m-auto max-w-[98vw] max-h-[96vh] p-3 mt-2 m-1 mb-2.5 rounded rounded-2xl overflow-y-auto overflow-x-hidden;
+}
+#portals .ProjectDets > button {
+  color: black;
+  font-family: montLight, Verdana, sans-serif;
+  letter-spacing: 0;
+  word-spacing: 0;
+  text-align: left;
+  font-size: 0.75rem;
+  @apply p-1.5 mb-1 font-bold flex items-center justify-between capitalize [&>svg]:mr-1 [&>svg]:w-[15px];
+}
+#portals .ProjectDets h3 {
+  color: black;
+  font-family: montXBold, Verdana, sans-serif;
+  letter-spacing: -0.5px;
+  word-spacing: 2px;
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  @apply pl-2 mt-1 mb-0.5 text-gray-800;
+}
+#portals .ProjectDets .images {
+  @apply overflow-hidden;
+}
+#portals .ProjectDets .images .swiper .swiper-wrapper .swiper-slide img {
+  @apply m-auto rounded rounded-lg w-[92%] max-h-[30vh] object-contain;
+}
+#portals .ProjectDets .images .swiper [class^=swiper-button] {
+  @apply w-8 h-8 top-[35%] opacity-40 [&::after]:text-[14px] px-2 py-0.5  [&:hover]:bg-slate-50 [&::after]:text-gray-600 rounded rounded-3xl;
+}
+#portals .ProjectDets .images .swiper [class^=swiper-button][class$=-prev] {
+  @apply left-[-0.75rem];
+}
+#portals .ProjectDets .images .swiper [class^=swiper-button][class$=-next] {
+  @apply right-[-0.75rem];
+}
+#portals .ProjectDets .images p,
+#portals .ProjectDets .images span {
+  color: #aaa;
+  font-family: montLight, Verdana, sans-serif;
+  letter-spacing: -0.75px;
+  word-spacing: 2px;
+  text-align: left;
+  font-size: 0.6rem;
+  @apply font-bold capitalize pl-3;
+}
+#portals .ProjectDets .images span {
+  @apply block font-normal mb-1 text-[8px] mt-[-0.15rem];
+}
+#portals .ProjectDets p.content {
+  color: #222;
+  font-family: montLight, Verdana, sans-serif;
+  letter-spacing: -0.5px;
+  word-spacing: 2px;
+  text-align: left;
+  font-size: 0.8rem;
+  @apply pt-1.5 p-2 text-justify;
+}
+#portals .ProjectDets p.content::first-letter {
+  @apply text-[.85rem] pl-2;
+}
+#portals .ProjectDets hr {
+  @apply opacity-50;
+}
+#portals .ProjectDets .milestone h4 {
+  color: rgba(0, 0, 0, 0.9333333333);
+  font-family: montXBold, Verdana, sans-serif;
+  letter-spacing: -0.5px;
+  word-spacing: 2px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 1rem;
+  @apply font-extralight capitalize  pt-2;
+}
+#portals .ProjectDets .tools {
+  @apply pt-2;
+}
+#portals .ProjectDets .tools li {
+  list-style: none;
+  @apply p-1.5  bg-slate-300 w-fit m-1.5 rounded rounded-lg;
+}
+#portals .ProjectDets .tools li img {
+  @apply w-5 h-5 object-contain;
+}
+#portals .ProjectDets .tools > div {
+  @apply flex items-center justify-center;
+}
+#portals .ProjectDets .tools > div p {
+  color: rgba(14, 14, 14, 0.968627451);
+  font-family: montLight, Verdana, sans-serif;
+  letter-spacing: -0.5px;
+  word-spacing: 2px;
+  text-align: left;
+  font-size: 0.55rem;
+}
+#portals .ProjectDets .tools > div p:first-of-type {
+  @apply font-bold text-[0.6rem] mb-[-.1rem];
 }
 
 #light.dark .navbar .logo svg path {

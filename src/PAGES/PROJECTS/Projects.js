@@ -69,10 +69,10 @@ const Projects = () => {
         <main>
           <ProjectNav anime={anime} nav={nav} setNav={setNav} />
           <section
-            className={NewProjects.length === 0 && "flex justify-center"}
+            className={NewProjects.length === 0 ? "flex justify-center":""}
           >
             {NewProjects.length === 0 ? (
-              <span className="my-[30vh] px-18 w-fit text-xs font-italic text-gray-500 opacity-35">
+              <span className="my-[30vh] px-18 w-fit text-xs font-italic text-gray-400 opacity-50">
                 There is no project here ! 😁
               </span>
             ) : nav !== "UI/UX" ? (
