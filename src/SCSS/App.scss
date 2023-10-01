@@ -951,11 +951,14 @@
   // PROJECT'S MORE DETAILS
   .ProjectDets {
     background-color: $themeWhite;
-    background-color: #fbfbfb;
-    @apply m-auto max-w-[98vw] max-h-[96vh] p-3 mt-2 m-1 mb-2.5 rounded rounded-2xl overflow-y-auto overflow-x-hidden;
+    background-color: #fcfcfc;
+    @apply m-auto max-w-[98vw] max-h-[96vh] p-3 pb-5 mt-2 m-1 mb-2.5 rounded rounded-2xl overflow-y-auto overflow-x-hidden;
     > button {
       @include LightText($size: 0.75rem);
       @apply p-1.5 mb-1 font-bold flex items-center justify-between capitalize [&>svg]:mr-1 [&>svg]:w-[15px];
+    }
+    hr {
+      @apply opacity-40;
     }
     h3 {
       @include BoldText(
@@ -964,7 +967,7 @@
         $size: 1.2rem,
         $case: capitalize
       );
-      @apply pl-2 mt-1 mb-0.5 text-gray-800;
+      @apply pl-3 mt-2 mb-1 text-gray-800;
     }
     .images {
       @apply overflow-hidden;
@@ -991,10 +994,10 @@
       p,
       span {
         @include LightText(
-          $word: 2px,
-          $letter: -0.75px,
-          $size: 0.6rem,
-          $color: $themeGray
+          $word: 1px,
+          $letter: -0.25px,
+          $size: 0.65rem,
+          $color: $themeBlack
         );
         @apply font-bold capitalize pl-3;
       }
@@ -1007,17 +1010,15 @@
       @include LightText(
         $word: 2px,
         $letter: -0.5px,
-        $size: 0.8rem,
+        $size: 0.76rem,
         $color: $themeBlack2
       );
       @apply pt-1.5 p-2 text-justify;
       &::first-letter {
-        @apply text-[.85rem] pl-2;
+        @apply text-[.82rem] pl-2;
       }
     }
-    hr {
-      @apply opacity-50;
-    }
+
     //  MILESTONES
     .milestone {
       h4 {
@@ -1027,35 +1028,58 @@
           $size: 1rem,
           $color: $themeBlack
         );
-
         @apply font-extralight capitalize  pt-2;
+      }
+      li {
+        @include LightText(
+          $word: 1.5px,
+          $letter: -0.25px,
+          $size: 0.7rem,
+          $color: $themeBlackBg
+        );
       }
     }
     .tools {
-      @apply pt-2 ;
+      @apply pt-2;
       li {
         list-style: none;
-        @apply p-1.5  bg-slate-300 w-fit m-1.5 rounded rounded-lg;
+        @apply p-1.5  bg-slate-100 w-fit m-1.5 rounded rounded-lg;
         img {
-          @apply w-5 h-5 object-contain;
+          min-width: 1.35rem;
+          @apply max-h-[1.35rem] object-contain;
         }
       }
       > div {
-        @apply flex items-center justify-center;
+        @apply flex items-center justify-start;
         p {
           @include LightText(
             $word: 2px,
-            $letter: -0.5px,
-            $size: 0.55rem,
+            $letter: 0.1px,
+            $size: 0.5rem,
             $color: $themeBlackBg
           );
+          // @apply w-[70%];
           &:first-of-type {
             @apply font-bold text-[0.6rem] mb-[-.1rem];
           }
         }
       }
     }
+    .actions {
+      @apply flex justify-between pl-2 pb-1.5;
+      button {
+        @apply p-1.5 pb-5 rounded rounded-3xl mr-2  opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
+        &.more {
+          @apply [&>svg]:text-[10px];
+        }
+      }
+    }
   }
+}
+
+//----------  TOAST EDITS
+[role="status"] {
+  @include LightText($size: 0.8rem);
 }
 
 @import "./dark";

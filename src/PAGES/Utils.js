@@ -123,7 +123,7 @@ export const projectSlides = [
   // 	src: NetflexProject,
   // },
   {
-    alt: 'Netflix 1 Project',
+    alt: "Netflix 1 Project",
     src: NetflexLoading,
   },
   {
@@ -143,8 +143,8 @@ export const projectSlides = [
     src: TaskManagerProject,
   },
   {
-  	alt: 'Miners Project',
-  	src: MinersProject,
+    alt: "Miners Project",
+    src: MinersProject,
   },
 ];
 
@@ -208,21 +208,94 @@ export const PROJECTS = [
     name: "Division Report Form",
     status: "completed",
     utilities: [
-      { name: "HTML", img: Html5 },
-      { name: "CSS", img: Css },
-      { name: "JavaScript", img: JS },
-      { name: "Bootstrap", img: Bootstrap },
-      { name: "VS Code", img: VSCode },
-      { name: "Jquery", img: Jquery },
-      { name: "Github", img: GithubImg },
+      {
+        name: "HTML5",
+        img: Html5,
+        aid: "Made changes to meta tags, and edit the DOM and apply styling.",
+      },
+      {
+        name: "CSS3",
+        img: Css,
+        aid: "Used html classes, id and attribute selectors to style elements across website.",
+      },
+      {
+        name: "JavaScript",
+        img: JS,
+        aid: "Customized methods to add/remove classnames, wrote various functions, and loops in the scripting language.",
+      },
+      {
+        name: "Bootstrap",
+        img: Bootstrap,
+        aid: "Downloaded bootstrap file and linked it to my stylesheet to make changes to the project.",
+      },
+      {
+        name: "VS-Code",
+        img: VSCode,
+        aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
+      },
+      {
+        name: "Jquery",
+        img: Jquery,
+        aid: "Fast tracked javascript code in various aspects of the code.",
+      },
+      {
+        name: "Github",
+        img: GithubImg,
+        aid: "Committed all my code to an Online repo on the Github platform.",
+      },
     ],
     git: "https://github.com/VybzTech/Report-Form",
     link: "https://division-report-form.netlify.app",
     images: [ReportForm1, ReportForm2, ReportForm3],
     tag: ["All", "Completed"],
-    content:
-      "When you think validation, you think Javascript ! That's why this project utilizes Javascript to validate through the form's required fields.",
-  position:'IT support intern',updated:5,timeline:'4 months'},
+    content: (
+      <span>
+        After barely three weeks of my internship at their company, I claimed to
+        have finished all the necessary front-end development coursework when my
+        mentor gave me the assignment for the <b>Division Report Form.</b> I had
+        completed a course from <b>Travesy</b>, watched and practiced some of{" "}
+        <b>
+          Angela Yu's fundamental Html, CSS, and Javascript tutorials on YouTube
+        </b>
+        , and perused the entirety of the <b>W3schools</b> library in the hopes
+        that I would have learned enough to build a fully functional website.
+        After experiencing some problems with Validation, I rapidly grew
+        acclimated to <b>Jquery</b>, which helped with several javascript
+        techniques. This led to the discovery of other libraries that improved
+        my progress. I overcame my anxiety of javscript at this point by
+        returning to my earlier grasp of variables, arrays, methods, objects,
+        and classes, among other fundamental concepts. All of which come in
+        handy till date. <br /> If you access the project, you will see the
+        loading page, which needed a significant amount of CSS style and was, to
+        put it mildly, time demanding. The project's design was supported by the
+        use of <b>Bootstrap</b>, which wasn't a particularly challenging attempt
+        for me since I've always been a designer. A user interface <b>(UI)</b>{" "}
+        example was also given to me, but the designs had to be tweaked to
+        adhere to specific rules. <br /> After the loading screen fades away,
+        various form fields are displayed. These fields are marked with an
+        asterisk (*) to indicate that certain values are necessary for the user
+        to proceed with the form. Before moving on to the next page, a function
+        that verifies the value of the mandatory field is not empty is called
+        when the next button is clicked. You can try filling out some
+        information and seeing what happens; the project is presently hosted on
+        the <b>Netlify platform. </b>
+        However, your information doesn't go anywhere, and you have the option
+        of editing it afterwards.
+      </span>
+    ),
+    position: "LIRS IT support intern",
+    updated: "1 day",
+    timeline: "4 months",
+    milestones: [
+      "Accessed the user interface and selected the appropriate tools.",
+      "Setup the html boilerplate, edited meta tags and linked css.",
+      "Installed bootstrap and Jquery with access to their files and not CDN link.",
+      'Learnt about the $(window).on("load", function that runs on initial render of a website.',
+      "Created form fields and styled entire page.",
+      "First commit was made and pushed to github.",
+      "Tested simple functions of jquery selecting required input fields",
+    ],
+  },
   {
     id: 2,
     name: "Graph Task Manager",
@@ -245,69 +318,69 @@ export const PROJECTS = [
     content:
       "Handling an Organization enlapses loads on time but it could be easier if management could easily access the projects' information, graphically acknowledging their level of importance and make decisions based on team performance.",
   },
-  {
-    id: 3,
-    name: "Netflex (Netflix Clone)",
-    status: "completed",
-    utilities: [
-      { name: "CSS", img: Css },
-      { name: "JavaScript", img: JS },
-      { name: "Github", img: GithubImg },
-      { name: "VS Code", img: VSCode },
-      // { name: "Material UI", img: MaterialUI },
-      { name: "React", img: ReactImg },
-      { name: "Node JS", img: NodeJS },
-      { name: "Firebase", img: Firebase },
-    ],
-    git: "https://github.com/Dharvo/Netflex",
-    link: "https://netflex-eb4ee.web.app",
-    images: [Netflex1],
-    tag: ["All", "Completed", "React"],
-    content:
-      "If you've ever tried Netflix you'd love their awesome movie selections, quality and User Interface; Well this project was built using React. It possess their basic Landing Page features and more.",
-  },
-  {
-    id: 4,
-    name: "Sammie's Art Gallery",
-    status: "completed",
-    utilities: [
-      { name: "CSS", img: Css },
-      { name: "Figma", img: Figma },
-      { name: "Firebase", img: Firebase },
-      { name: "Github", img: GithubImg },
-      { name: "Material UI", img: MaterialUI },
-      { name: "Node JS", img: NodeJS },
-      { name: "React", img: ReactImg },
-      { name: "SCSS", img: Css },
-      { name: "Swiper", img: Swiper },
-      { name: "VS Code", img: VSCode },
-    ],
-    git: "https://github.com/Dharvo/my-portfolio",
-    link: "https://sammie-art.web.app",
-    images: [SammieArt1],
-    tag: ["All", "Completed", "React"],
-    content:
-      "Sammie's Art is an Artistic retailer that draws, frame and delivers asthetic portraits to customers anywhere around the world.",
-  },
-  {
-    id: 5,
-    name: "Wha'Todo App",
-    status: "completed",
-    // utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
-    utilities: [
-      { name: "Figma", img: Figma },
-      { name: "Firebase", img: Firebase },
-      { name: "Github", img: GithubImg },
-      { name: "Material UI", img: MaterialUI },
-      { name: "VS Code", img: VSCode },
-    ],
-    git: "https://github.com/Dharvo/whatodo",
-    link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
-    images: [WhaTodoDesktop, WhaTodo],
-    tag: ["All", "Flutter", "Completed", "UI/UX"],
-    content:
-      "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
-  },
+  // {
+  //   id: 3,
+  //   name: "Netflex (Netflix Clone)",
+  //   status: "completed",
+  //   utilities: [
+  //     { name: "CSS", img: Css },
+  //     { name: "JavaScript", img: JS },
+  //     { name: "Github", img: GithubImg },
+  //     { name: "VS Code", img: VSCode },
+  //     // { name: "Material UI", img: MaterialUI },
+  //     { name: "React", img: ReactImg },
+  //     { name: "Node JS", img: NodeJS },
+  //     { name: "Firebase", img: Firebase },
+  //   ],
+  //   git: "https://github.com/Dharvo/Netflex",
+  //   link: "https://netflex-eb4ee.web.app",
+  //   images: [Netflex1],
+  //   tag: ["All", "Completed", "React"],
+  //   content:
+  //     "If you've ever tried Netflix you'd love their awesome movie selections, quality and User Interface; Well this project was built using React. It possess their basic Landing Page features and more.",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Sammie's Art Gallery",
+  //   status: "completed",
+  //   utilities: [
+  //     { name: "CSS", img: Css },
+  //     { name: "Figma", img: Figma },
+  //     { name: "Firebase", img: Firebase },
+  //     { name: "Github", img: GithubImg },
+  //     { name: "Material UI", img: MaterialUI },
+  //     { name: "Node JS", img: NodeJS },
+  //     { name: "React", img: ReactImg },
+  //     { name: "SCSS", img: Css },
+  //     { name: "Swiper", img: Swiper },
+  //     { name: "VS Code", img: VSCode },
+  //   ],
+  //   git: "https://github.com/Dharvo/my-portfolio",
+  //   link: "https://sammie-art.web.app",
+  //   images: [SammieArt1],
+  //   tag: ["All", "Completed", "React"],
+  //   content:
+  //     "Sammie's Art is an Artistic retailer that draws, frame and delivers asthetic portraits to customers anywhere around the world.",
+  // },
+  // {
+  //   id: 5,
+  //   name: "Wha'Todo App",
+  //   status: "completed",
+  //   // utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
+  //   utilities: [
+  //     { name: "Figma", img: Figma },
+  //     { name: "Firebase", img: Firebase },
+  //     { name: "Github", img: GithubImg },
+  //     { name: "Material UI", img: MaterialUI },
+  //     { name: "VS Code", img: VSCode },
+  //   ],
+  //   git: "https://github.com/Dharvo/whatodo",
+  //   link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
+  //   images: [WhaTodoDesktop, WhaTodo],
+  //   tag: ["All", "Flutter", "Completed", "UI/UX"],
+  //   content:
+  //     "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
+  // },
 ];
 
 // INFO FOR CONTACT PAGE

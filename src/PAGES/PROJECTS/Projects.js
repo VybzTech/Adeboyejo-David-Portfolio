@@ -13,7 +13,7 @@ import MainProject from "./MainProject";
 import UIProjects from "./UIProjects";
 import ReactVisibilitySensor from "react-visibility-sensor";
 import ErrorHandler from "../../COMPONENTS/ErrorHandler";
-
+import { Toaster } from "react-hot-toast";
 const Projects = () => {
   const [anime, setAnime] = useState(false);
   const [nav, setNav] = useState("All");
@@ -67,6 +67,7 @@ const Projects = () => {
         active={!anime}
       >
         <main>
+                  <Toaster position="bottom-left" reverseOrder={true} />
           <ProjectNav anime={anime} nav={nav} setNav={setNav} />
           <section
             className={NewProjects.length === 0 ? "flex justify-center":""}

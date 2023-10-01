@@ -72,7 +72,7 @@ const MainProject = ({ nav, project }) => {
           <div className="contentWrapper">
             <h4>{name}</h4>
             <p>
-              {content.length > 120 ? content.substr(0, 100) + "..." : content}
+              {content?.props?.children[0].length > 150 ? content?.props?.children[0].substr(0, 145) + "...." :content?.props?.children[0]}
             </p>
             <div className="actions">
               <div>
@@ -125,7 +125,7 @@ const MainProject = ({ nav, project }) => {
       </Zoom>
       <Zoom className="Details">
         <ProjectDets
-        project={project}
+          project={project}
           showDetails={showDetails}
           setShowDetails={setShowDetails}
         />

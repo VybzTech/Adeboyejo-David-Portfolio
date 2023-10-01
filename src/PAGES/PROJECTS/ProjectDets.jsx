@@ -11,6 +11,10 @@ import "swiper/css/bundle";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import Close from "../../ICONS/Close";
+import ViewFinder from "../../ICONS/ViewFinder";
+import Copy from "../../ICONS/Copy";
+import { useState } from "react";
+import toast from "react-hot-toast";
 const ProjectDets = ({ project, showDetails, setShowDetails }) => {
   const {
     name,
@@ -22,8 +26,9 @@ const ProjectDets = ({ project, showDetails, setShowDetails }) => {
     position,
     updated,
     timeline,
+    milestones,
   } = project;
-  console.log(project);
+  const [copied, setCopy] = useState(false);
   if (showDetails) {
     return ReactDOM.createPortal(
       <Zoom className="ProjectDets" triggerOnce big delay={1000}>
@@ -57,37 +62,15 @@ const ProjectDets = ({ project, showDetails, setShowDetails }) => {
                 ))}
               </div>
             </Swiper>
-            <p>
-              Updated {updated} days ago {position} Position
+            <p className="flex items-center">
+              Updated {updated} ago <ViewFinder />
+              {position} Position
             </p>
             <span>{timeline} completion.</span>
             {/* hr */}
           </div>
           <hr />
           <p className="content">{content}</p>
-          <div className="milestone pl-2">
-            <h4>Milestones:</h4>
-            <li>Some milestone</li>
-            <li>other milestone</li>
-          </div>
-          <hr />
-          <div className="tools pl-2">
-            {utilities?.map(({ name, img }) => {
-              return (
-                <div key={name}>
-                  <li>
-                    <img src={img} alt={name} />
-                  </li>
-                  <div className="">
-                    <p>HTML</p>
-                    <p>
-                      Using the markup lang. to edit the DOM and apply styling.
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
           <div className="actions">
             <div>
               <button
@@ -104,9 +87,68 @@ const ProjectDets = ({ project, showDetails, setShowDetails }) => {
               >
                 <Link />
               </button>
+              <button
+                onClick={() => {
+                  const textToCopy = "dfsvcascxsccsf";
+                  if (navigator.clipboard) {
+                    navigator.clipboard
+                      .writeText(textToCopy)
+                      .then(() => {
+                        setCopy(true);
+                        toast.success("Copied project link");
+                        setTimeout(() => {
+                          setCopy(false);
+                        }, 2000);
+                      })
+                      .catch((err) => {
+                        toast.error("Couldn't copy link");
+                        console.error("Unable to copy text: ", err);
+                      });
+                  } else {
+                    // Fallback for browsers that do not support Clipboard API
+                    const inputElement = document.createElement("input");
+                    inputElement.value = textToCopy;
+                    document.body.appendChild(inputElement);
+                    inputElement.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(inputElement);
+                    toast.success("Copied project link");
+                  }
+                  // setCopy(true);
+                  // toast.success("Copied project link");
+                  // document.execCommand("copy", "atemplegjnbfslfk");
+                  // setTimeout(() => {
+                  //   setCopy(false);
+                  // }, 2000);
+                }}
+              >
+                <Copy copied={copied} />
+              </button>
             </div>
           </div>
-          <p>kjisub kvvjskjvsvsjkvbfsvjubjfvbfsjvbfudvbfoujbrjvrvbsurjvbs</p>
+          <hr />
+          <div className="milestone pl-2">
+            <h4>Milestones :</h4>
+            {milestones?.map((stone, id) => (
+              <li key={id}>{stone}</li>
+            ))}
+          </div>
+          <hr />
+          <div className="tools pl-2">
+            {utilities?.map(({ name, img, aid }) => {
+              return (
+                <div key={name}>
+                  <li>
+                    <img src={img} alt={name} />
+                  </li>
+                  <div className="">
+                    <p>{name}</p>
+                    <p>{aid.length > 120 ? aid.substr(0, 100) + "..." : aid}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </>
       </Zoom>,
       document.getElementById("portals")

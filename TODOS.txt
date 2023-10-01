@@ -11,6 +11,10 @@ Work on projects delivery
 Projects UI UX Image resize
 
 
+In Projects 
+-Division Report form : Add * to required fields labels
+
+
 
 Design Screen Sizes
 
