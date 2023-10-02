@@ -129,9 +129,9 @@ const ProjectDets = ({ project, showDetails, setShowDetails }) => {
           <hr />
           <div className="milestone pl-2">
             <h4>Milestones :</h4>
-            {milestones?.map((stone, id) => (
-              <li key={id}>{stone}</li>
-            ))}
+            {milestones?.length === 0
+              ? "There are no Milestones"
+              : milestones?.map((stone, id) => <li key={id}>{stone}</li>)}
           </div>
           <hr />
           <div className="tools pl-2">

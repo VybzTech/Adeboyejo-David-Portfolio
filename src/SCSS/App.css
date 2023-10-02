@@ -721,7 +721,8 @@
   @apply right-0.5;
 }
 #projects main section .gridSection .MainProject .contentWrapper {
-  @apply pr-1 pl-3;
+  z-index: 3;
+  @apply pr-1 pl-3 mt-[-.3rem];
 }
 #projects main section .gridSection .MainProject .contentWrapper h4 {
   color: #333;
@@ -746,7 +747,7 @@
   @apply flex justify-between;
 }
 #projects main section .gridSection .MainProject .contentWrapper .actions button {
-  @apply p-1.5 pb-5 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
+  @apply p-1.5 pt-0 pb-5 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
 }
 #projects main section .gridSection .MainProject .contentWrapper .actions button.more {
   @apply [&>svg]:text-[10px];
@@ -1149,7 +1150,8 @@
 }
 #portals .ProjectDets .tools li img {
   min-width: 1.35rem;
-  @apply max-h-[1.35rem] object-contain;
+  min-height: 1.35rem;
+  @apply max-h-[1.35rem] w-[1.35rem] object-contain;
 }
 #portals .ProjectDets .tools > div {
   @apply flex items-center justify-start;

@@ -622,7 +622,8 @@
             }
           }
           .contentWrapper {
-            @apply pr-1 pl-3;
+            z-index: 3;
+            @apply pr-1 pl-3 mt-[-.3rem];
             h4 {
               @include BoldText($size: 0.9rem, $color: $themeBlack3);
               @apply capitalize underline tracking-tight;
@@ -634,7 +635,7 @@
             .actions {
               @apply flex justify-between;
               button {
-                @apply p-1.5 pb-5 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
+                @apply p-1.5 pt-0 pb-5 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
                 &.more {
                   @apply [&>svg]:text-[10px];
                 }
@@ -1046,7 +1047,8 @@
         @apply p-1.5  bg-slate-100 w-fit m-1.5 rounded rounded-lg;
         img {
           min-width: 1.35rem;
-          @apply max-h-[1.35rem] object-contain;
+          min-height: 1.35rem;
+          @apply max-h-[1.35rem] w-[1.35rem] object-contain;
         }
       }
       > div {

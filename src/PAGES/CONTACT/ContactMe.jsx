@@ -29,7 +29,7 @@ const ContactMe = () => {
         {
           loading: "Sending Email...",
           success: <b>Email sent!</b>,
-          error: <b>Try Again !</b>,
+          error: <b>Try Again! / Use socials 😁</b>,
         }
       )
       .then(

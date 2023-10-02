@@ -1,15 +1,16 @@
-Design Dark Mode 
-About Page Resume
-Maybe REwrite serviceList
-Rewrite projects content 
-Can Home page case study
+Design Dark Mode ✅
+About Page Resume ✅
+Maybe Rewrite serviceList
+Rewrite projects content  
+Can Home page case study ✅
 Change Lil about image 
-Change homeProjects images
+Change homeProjects images 
 Crosscheck social handles
 Cross check contact form sending
 Work on projects delivery
 Projects UI UX Image resize
 
+Toast Dark Mode
 
 In Projects 
 -Division Report form : Add * to required fields labels

@@ -63,6 +63,8 @@ import UI46 from "../IMAGES/UI/PRICE CARD 2.png";
 import UI47 from "../IMAGES/UI/PRICE CARD 3.png";
 //  PROJECTS IMPORTS
 import Netflex1 from "../IMAGES/PROJECTS/Netflex1.png";
+import Netflex2 from "../IMAGES/PROJECTS/Netflex2.png";
+import Netflex3 from "../IMAGES/PROJECTS/Netflex3.png";
 import SammieArt1 from "../IMAGES/PROJECTS/SammieArt1.png";
 import ReportForm1 from "../IMAGES/PROJECTS/ReportForm1.png";
 import ReportForm2 from "../IMAGES/PROJECTS/ReportForm2.png";
@@ -77,6 +79,7 @@ import DivisionFormProject from "../IMAGES/DivisionForm-Project.png";
 import TaskManagerProject from "../IMAGES/TaskManager1-Project.png";
 import WhatodoProject from "../IMAGES/Whatodo-Project.png";
 import NetflexLoading from "../IMAGES/Netflex-Loading.png";
+import NetflexLoaded from "../IMAGES/Netflex-Loaded.jpg";
 // import NetflexProject from "../IMAGES/Netflex-Loading.png";
 import MinersProject from "../IMAGES/Miners-Project.png";
 //  TOOLS IMAGES IMPORTS
@@ -241,7 +244,7 @@ export const PROJECTS = [
       {
         name: "Github",
         img: GithubImg,
-        aid: "Committed all my code to an Online repo on the Github platform.",
+        aid: "Committed all my code to an online repo on the Github platform.",
       },
     ],
     git: "https://github.com/VybzTech/Report-Form",
@@ -284,8 +287,8 @@ export const PROJECTS = [
       </span>
     ),
     position: "LIRS IT support intern",
-    updated: "1 day",
-    timeline: "4 months",
+    updated: "2 years",
+    timeline: "3 weeks",
     milestones: [
       "Accessed the user interface and selected the appropriate tools.",
       "Setup the html boilerplate, edited meta tags and linked css.",
@@ -301,67 +304,268 @@ export const PROJECTS = [
     name: "Graph Task Manager",
     status: "completed",
     utilities: [
-      { name: "HTML", img: Html5 },
-      { name: "CSS", img: Css },
-      { name: "JavaScript", img: JS },
-      { name: "Jquery", img: Jquery },
-      { name: "ChartJS", img: ChartJS },
-      { name: "Bootstrap", img: Bootstrap },
-      { name: "Github", img: GithubImg },
-      { name: "Php", img: Php },
-      { name: "VS Code", img: VSCode },
+      {
+        name: "HTML5",
+        img: Html5,
+        aid: "Made changes to meta tags, and edit the DOM and apply styling.",
+      },
+      {
+        name: "CSS3",
+        img: Css,
+        aid: "Used html classes, id and attribute selectors to style elements across website.",
+      },
+      {
+        name: "JavaScript",
+        img: JS,
+        aid: "Customized methods to add/remove classnames, wrote various functions, and loops in the scripting language.",
+      },
+      {
+        name: "Bootstrap",
+        img: Bootstrap,
+        aid: "Downloaded bootstrap file and linked it to my stylesheet to make changes to the project.",
+      },
+      {
+        name: "VS-Code",
+        img: VSCode,
+        aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
+      },
+      {
+        name: "Jquery",
+        img: Jquery,
+        aid: "Fast tracked javascript code in various aspects of the code.",
+      },
+      {
+        name: "Github",
+        img: GithubImg,
+        aid: "Committed all my code to an online repo on the Github platform.",
+      },
+      {
+        name: "ChartJS",
+        img: ChartJS,
+        aid: "Through Graphial representation displayed work rate data saved.",
+      },
+      {
+        name: "Php",
+        img: Php,
+        aid: "Converted html pages to php & sent form data uisng POST method",
+      },
     ],
     git: "https://github.com/Dharvo/Task-Manager",
     link: "https://taskmanager-e694e.web.app",
     images: [TaskManager1, TaskManager2],
-    tag: ["All", "Completed", "React"],
-    content:
-      "Handling an Organization enlapses loads on time but it could be easier if management could easily access the projects' information, graphically acknowledging their level of importance and make decisions based on team performance.",
+    tag: ["All", "Completed"],
+    content: (
+      <span>
+        Expanding a team within an organization can put a significant burden on
+        time management. However, this process could be made easier if the
+        management had easy access to the information related to the projects.
+        Keeping this in mind, I was assigned to work alongside three of my
+        colleagues in order to develop a website that would analyze and present
+        data for team assignments. The objective was to utilize graph
+        representation, and this is where <b>Chart JS</b> became an integral
+        part of my work. Initially, I was unsure about the idea of converting
+        something that is readily available on other application toolsets like
+        <b> Excel</b>. Nevertheless, I accepted the task and we coordinated
+        ourselves to plan and execute the project. <br /> We were able to design
+        a user-friendly interface that allowed users to input their team
+        assignment data. This data was then processed and analyzed using
+        <b> Chart JS</b>, a JavaScript library that enables the creation of
+        interactive and visually appealing charts and graphs, additionally we
+        had chart varieties like <b>Bar charts</b>, <b>Line charts</b>,
+        <b> Pie charts</b>, to decide from whilst modifying colors, labels,
+        tooltips, and other visual elements .
+        <br />I was given the responsibility of handling the data storage aspect
+        while my colleagues focused on the design and overall frontend
+        development. Meanwhile, the last team member was in charge of preparing
+        the presentation documents. On this faithful day, I started learning
+        about <b>Php</b> and <b>Http Request</b>, specifically how to send{" "}
+        <b>POST</b> and <b>GET API requests</b>. During this process, I also
+        came across a new technique called
+        <b> Ajax</b>. Despite facing numerous challenges and obstacles, we
+        eventually succeeded in building the platform. However, we encountered
+        an issue when trying to upload it to <b>Heroku</b>. Nevertheless, I have
+        created a mockup that provides an overview of the entire project
+        presentation, so you can take a look but remember, Dont Touch !
+      </span>
+    ),
+    // "Handling an Organization enlapses loads on time but it could be easier if management could easily access the projects' information, graphically acknowledging their level of importance and make decisions based on team performance.",
+    position: "LIRS IT support intern",
+    updated: "1 day",
+    timeline: "2 months",
+    milestones: [
+      "Delibated on the user interface selected and move forward to designing.",
+      "Enncountered a tool called Multi-Select which aided in selecting multiple users.",
+      "Setup the html boilerplate, edited meta tags and linked css.",
+      "Installed bootstrap and Jquery through their files in the file directory.",
+      "First commit was made and pushed to github.",
+      "Created form fields and logged user values to be sent via API.",
+      "Recreated html file to php to write <?php> code",
+      "Researched and Setup my own SQL database where I encountered SSMS.",
+      "Sent my first POST request successfully to the database and reviewed it.",
+      "Created a WHILE loop with Php in a table tag in order to show stored data.",
+      "Attempt to host database and site on heroku.",
+    ],
   },
-  // {
-  //   id: 3,
-  //   name: "Netflex (Netflix Clone)",
-  //   status: "completed",
-  //   utilities: [
-  //     { name: "CSS", img: Css },
-  //     { name: "JavaScript", img: JS },
-  //     { name: "Github", img: GithubImg },
-  //     { name: "VS Code", img: VSCode },
-  //     // { name: "Material UI", img: MaterialUI },
-  //     { name: "React", img: ReactImg },
-  //     { name: "Node JS", img: NodeJS },
-  //     { name: "Firebase", img: Firebase },
-  //   ],
-  //   git: "https://github.com/Dharvo/Netflex",
-  //   link: "https://netflex-eb4ee.web.app",
-  //   images: [Netflex1],
-  //   tag: ["All", "Completed", "React"],
-  //   content:
-  //     "If you've ever tried Netflix you'd love their awesome movie selections, quality and User Interface; Well this project was built using React. It possess their basic Landing Page features and more.",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Sammie's Art Gallery",
-  //   status: "completed",
-  //   utilities: [
-  //     { name: "CSS", img: Css },
-  //     { name: "Figma", img: Figma },
-  //     { name: "Firebase", img: Firebase },
-  //     { name: "Github", img: GithubImg },
-  //     { name: "Material UI", img: MaterialUI },
-  //     { name: "Node JS", img: NodeJS },
-  //     { name: "React", img: ReactImg },
-  //     { name: "SCSS", img: Css },
-  //     { name: "Swiper", img: Swiper },
-  //     { name: "VS Code", img: VSCode },
-  //   ],
-  //   git: "https://github.com/Dharvo/my-portfolio",
-  //   link: "https://sammie-art.web.app",
-  //   images: [SammieArt1],
-  //   tag: ["All", "Completed", "React"],
-  //   content:
-  //     "Sammie's Art is an Artistic retailer that draws, frame and delivers asthetic portraits to customers anywhere around the world.",
-  // },
+  {
+    id: 3,
+    name: "Netflex (Netflix Clone)",
+    status: "completed",
+    utilities: [
+      {
+        name: "CSS3",
+        img: Css,
+        aid: "Performed awesome styling in about three style sheets whilst also skimming off some codepens.",
+      },
+      {
+        name: "JavaScript",
+        img: JS,
+        aid: "Developed react components manages state and runs user functions.",
+      },
+      {
+        name: "Github",
+        img: GithubImg,
+        aid: "Extremely useful while storing all code in an online repo, Thank you Github.",
+      },
+      {
+        name: "VS-Code",
+        img: VSCode,
+        aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
+      },
+      {
+        name: "React",
+        img: ReactImg,
+        aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
+      },
+      {
+        name: "Node JS",
+        img: NodeJS,
+        aid: "Ran the React code on a development sever using the node package manager.",
+      },
+      {
+        name: "Firebase",
+        img: Firebase,
+        aid: "Provided tools to host and grow my application as quickly & securely as possible.",
+      },
+    ],
+    git: "https://github.com/Dharvo/Netflex",
+    link: "https://netflex-eb4ee.web.app",
+    images: [NetflexLoading, NetflexLoaded, Netflex1, Netflex2, Netflex3],
+    tag: ["All", "Completed", "React"],
+    content: (
+      <span>
+        In 2021, I elevated my career as a junior frontend developer with a
+        basic understanding of website technology. As I delved deeper into the
+        field, I encountered <b>React JS</b>, a library for dynamic and
+        interactive interfaces that allows for the integration of various tech
+        stacks, libraries, and tools. To enhance my skills in <b>React</b>, I
+        enrolled in a course offered by <b>Netninja</b> that covered the
+        fundamentals of the <b>React library.</b> Armed with this knowledge, I
+        began exploring other aspects of web development, particularly focusing
+        on <b> APIs. </b>With my newfound understanding of <b>APIs</b>, I
+        decided to utilize a movie API to create a replica of a popular
+        streaming service, known as<b> Netflix.</b>
+        <br />
+        <b>Netflix </b>was founded early in 1997 by
+        <b> Reed Hastings</b> and <b>Marc Randolph</b> in
+        <b> Scotts Valley, California</b> as a <i>DVD-by-mail</i> service;
+        Nevertheless, as of this moment <b> Netflix </b>
+        offers a vast collection of movies, TV shows, documentaries, and
+        original content to its users. The company's recommendation algorithm,
+        which analyzes user preferences and viewing habits, is a key feature
+        that sets it apart. To mimic this feature, I built an API using the
+        <b> DMDB movie API</b> and styled my components to resemble Netflix's
+        dominant presence in the entertainment industry.
+      </span>
+    ),
+    // "If you've ever tried Netflix you'd love their awesome movie selections, quality and User Interface; Well this project was built using React. It possess their basic Landing Page features and more.",
+    position: "Remote",
+    updated: "2 years",
+    timeline: "1 Month",
+    milestones: [
+      "Completed a React tutorial on youtube.",
+      "Reviewed notes, and created first React project with NPM.",
+      "Edited the main file App.js to accomodate other components.",
+      "Created Navbar, Header, Movies components according to a tutorial",
+      "Integrated API to the application in my useEffect block using AXIOS.",
+      "",
+      "Integrated firebase by instaling it and running the init function.",
+      "Crosschecked initialized application in my google console account.",
+      "",
+    ],
+  },
+  {
+    id: 4,
+    name: "Sammie's Art Gallery",
+    status: "completed",
+    utilities: [
+      {
+        name: "CSS3",
+        img: Css,
+        aid: "Used html classes, id and attribute selectors to style elements across website.",
+      },
+      {
+        name: "Figma",
+        img: Figma,
+        aid: "Switched my desing tool and used figma to design the new gallery.",
+      },
+      {
+        name: "Firebase",
+        img: Firebase,
+        aid: "Utilized the Backend as a service BAAS of google firebase to host the website.",
+      },
+      {
+        name: "Github",
+        img: GithubImg,
+        aid: "Committed all my code to an online repo on the Github platform.",
+      },
+      { name: "Material UI", img: MaterialUI, aid: "" },
+      {
+        name: "Node JS",
+        img: NodeJS,
+        aid: "Ran the React code on a development sever using the node package manager.",
+      },
+      { name: "SCSS", img: Css, aid: "" },
+      { name: "Swiper", img: Swiper, aid: "" },
+      {
+        name: "React JS",
+        img: ReactImg,
+        aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
+      },
+      {
+        name: "Firebase",
+        img: Firebase,
+        aid: "Provided tools to host and grow my application as quickly & securely as possible.",
+      },
+      {
+        name: "VS-Code",
+        img: VSCode,
+        aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
+      },
+    ],
+    git: "https://github.com/Dharvo/my-portfolio",
+    link: "https://sammie-art.web.app",
+    images: [SammieArt1],
+    tag: ["All", "Completed", "React"],
+    content: (
+      <span>
+        Adeboyejo Samuel is a young and talented artist who possesses a
+        multitude of skills. His ability to create hyper-realistic portraits
+        using graphite and charcoal pencils is a testament to his dedication,
+        experience, and training. Sammie's passion for art is evident in every
+        stroke of his pencil. His dedication to capturing the intricacies of
+        human expression and emotion is what makes his work truly exceptional.
+        Whether it be a portrait of an elderly woman with wrinkles etched deeply
+        into her face or a young child with eyes full of wonder, Sammie's
+        ability to convey depth and emotion is unparalleled.
+        <br />
+      </span>
+    ),
+    // "Sammie's Art is an Artistic retailer that draws, frame and delivers asthetic portraits to customers anywhere around the world.",
+    position: "Remote",
+    updated: "1 year",
+    timeline: "Multiple",
+    milestones: [],
+  },
   // {
   //   id: 5,
   //   name: "Wha'Todo App",
