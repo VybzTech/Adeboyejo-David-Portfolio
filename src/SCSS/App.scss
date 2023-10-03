@@ -585,7 +585,7 @@
         // EACH PROJECT DIV
         .MainProject {
           box-shadow: 0 3px 10px 0.5px #ccc2;
-          @apply mt-1 mb-6 bg-white rounded rounded-2xl pb-5
+          @apply mt-1 mb-6 bg-white rounded rounded-2xl pb-4
            overflow-hidden;
           &:hover {
             box-shadow: 0 3px 15px 1.5px #ccc5;
@@ -635,7 +635,7 @@
             .actions {
               @apply flex justify-between;
               button {
-                @apply p-1.5 pt-0 pb-5 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
+                @apply p-1.5 pb-2 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
                 &.more {
                   @apply [&>svg]:text-[10px];
                 }

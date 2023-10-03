@@ -696,7 +696,7 @@
 }
 #projects main section .gridSection .MainProject {
   box-shadow: 0 3px 10px 0.5px rgba(204, 204, 204, 0.1333333333);
-  @apply mt-1 mb-6 bg-white rounded rounded-2xl pb-5
+  @apply mt-1 mb-6 bg-white rounded rounded-2xl pb-4
            overflow-hidden;
 }
 #projects main section .gridSection .MainProject:hover {
@@ -747,7 +747,7 @@
   @apply flex justify-between;
 }
 #projects main section .gridSection .MainProject .contentWrapper .actions button {
-  @apply p-1.5 pt-0 pb-5 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
+  @apply p-1.5 pb-2 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
 }
 #projects main section .gridSection .MainProject .contentWrapper .actions button.more {
   @apply [&>svg]:text-[10px];
