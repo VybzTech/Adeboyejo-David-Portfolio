@@ -699,7 +699,7 @@ export const PROJECTS = [
         in creating a mobile application, followed by implementing advanced
         functions based on user interactions. After experiencing a significant
         amount of confusion and chaos, I managed to develop a simple application
-        for managing tasks, commonly known as a <b>Todo app. </b>This app allows
+        for managing tasks, commonly known as a <b>Todo App. </b>This app allows
         users to create and store their todos in organized classes, which
         include information such as the task name, priority level, due date, and
         even subtasks. To make it easily accessible to others, I compiled the
