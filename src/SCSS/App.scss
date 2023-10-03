@@ -1041,7 +1041,7 @@
       }
     }
     .tools {
-      @apply pt-2;
+      @apply pt-2 pb-4;
       li {
         list-style: none;
         @apply p-1.5  bg-slate-100 w-fit m-1.5 rounded rounded-lg;

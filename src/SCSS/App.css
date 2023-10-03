@@ -1142,7 +1142,7 @@
   font-size: 0.7rem;
 }
 #portals .ProjectDets .tools {
-  @apply pt-2;
+  @apply pt-2 pb-4;
 }
 #portals .ProjectDets .tools li {
   list-style: none;

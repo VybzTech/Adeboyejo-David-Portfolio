@@ -65,7 +65,12 @@ import UI47 from "../IMAGES/UI/PRICE CARD 3.png";
 import Netflex1 from "../IMAGES/PROJECTS/Netflex1.png";
 import Netflex2 from "../IMAGES/PROJECTS/Netflex2.png";
 import Netflex3 from "../IMAGES/PROJECTS/Netflex3.png";
-import SammieArt1 from "../IMAGES/PROJECTS/SammieArt1.png";
+import SammieArt from "../IMAGES/PROJECTS/SA-1.png";
+import SammieArt2 from "../IMAGES/PROJECTS/SA-Contact.png";
+import SammieArt4 from "../IMAGES/PROJECTS/SA-Nav.png";
+import SammieArt5 from "../IMAGES/PROJECTS/SA-404.png";
+import SammieArt6 from "../IMAGES/PROJECTS/SA-Main2.png";
+import SammieArt1 from "../IMAGES/PROJECTS/SA-Main.png";
 import ReportForm1 from "../IMAGES/PROJECTS/ReportForm1.png";
 import ReportForm2 from "../IMAGES/PROJECTS/ReportForm2.png";
 import ReportForm3 from "../IMAGES/PROJECTS/ReportForm3.jpg";
@@ -74,17 +79,22 @@ import TaskManager2 from "../IMAGES/PROJECTS/TaskManager2.png";
 import WhaTodo from "../IMAGES/UI/WHATODO-Land.png";
 import WhaTodoDesktop from "../IMAGES/PROJECTS/Whatodo-Desktop-Size.png";
 import SammieArtProject from "../IMAGES/Sammie-Art-Project.png";
-// import SammieArtProject2 from "../IMAGES/SammieArt-Project.png";
 import DivisionFormProject from "../IMAGES/DivisionForm-Project.png";
 import TaskManagerProject from "../IMAGES/TaskManager1-Project.png";
 import WhatodoProject from "../IMAGES/Whatodo-Project.png";
-import NetflexLoading from "../IMAGES/Netflex-Loading.png";
-import NetflexLoaded from "../IMAGES/Netflex-Loaded.jpg";
+import NetflexLoading from "../IMAGES/PROJECTS/Netflex-Loading.png";
 // import NetflexProject from "../IMAGES/Netflex-Loading.png";
 import MinersProject from "../IMAGES/Miners-Project.png";
+import PR from "../IMAGES/PROJECTS/HOME.png";
+import PRLoad from "../IMAGES/PROJECTS/Loading Page.png";
+import PRDark from "../IMAGES/PROJECTS/HOME – Dark Mode.png";
+import PRAdmin from "../IMAGES/PROJECTS/ADMIN Page.png";
+import PRAdmin2 from "../IMAGES/PROJECTS/ADMIN-Page.png";
+import PR404 from "../IMAGES/PROJECTS/404 Page.png";
 //  TOOLS IMAGES IMPORTS
 import Html5 from "../IMAGES/TOOLS/HTML5.png";
 import Css from "../IMAGES/TOOLS/CSS3.png";
+import Scss from "../IMAGES/TOOLS/SCSS.png";
 import JS from "../IMAGES/TOOLS/JS.png";
 import VSCode from "../IMAGES/TOOLS/VS-Code.png";
 import Bootstrap from "../IMAGES/TOOLS/Bootstrap.png";
@@ -94,12 +104,13 @@ import CSharp from "../IMAGES/TOOLS/C-sharp.png";
 // import Jquery from "../IMAGES/TOOLS/Jquery.png";
 import Figma from "../IMAGES/TOOLS/Figma.png";
 import MaterialUI from "../IMAGES/TOOLS/Material-ui.png";
-import ReactImg from "../IMAGES/TOOLS/React.png";
+import ReactImg from "../IMAGES/TOOLS/ReactJS.png";
 import NodeJS from "../IMAGES/TOOLS/Node.png";
 import ChartJS from "../IMAGES/TOOLS/Chartjs.svg";
 import Php from "../IMAGES/TOOLS/Php.png";
 import Firebase from "../IMAGES/TOOLS/Firebase.png";
 import Swiper from "../IMAGES/TOOLS/Swiper.svg";
+import Netlify from "../IMAGES/TOOLS/Netlify-Logo.png";
 import Photoshop from "../IMAGES/TOOLS/Photoshop-cc.png";
 
 //HOME PAGE SKILLS
@@ -148,6 +159,10 @@ export const projectSlides = [
   {
     alt: "Miners Project",
     src: MinersProject,
+  },
+  {
+    alt: "Ponle Richard Project",
+    src: PR,
   },
 ];
 
@@ -246,6 +261,11 @@ export const PROJECTS = [
         img: GithubImg,
         aid: "Committed all my code to an online repo on the Github platform.",
       },
+      {
+        name: "Netlify",
+        img: Netlify,
+        aid: "The Netlify platform was kind enough to host the project.",
+      },
     ],
     git: "https://github.com/VybzTech/Report-Form",
     link: "https://division-report-form.netlify.app",
@@ -291,18 +311,23 @@ export const PROJECTS = [
     timeline: "3 weeks",
     milestones: [
       "Accessed the user interface and selected the appropriate tools.",
-      "Setup the html boilerplate, edited meta tags and linked css.",
+      "Completed a setup of the html boilerplate, edited meta tags and linked css.",
       "Installed bootstrap and Jquery with access to their files and not CDN link.",
       'Learnt about the $(window).on("load", function that runs on initial render of a website.',
       "Created form fields and styled entire page.",
       "First commit was made and pushed to github.",
       "Tested simple functions of jquery selecting required input fields",
+      "Validated input fields according to their types.",
+      "Worked on the NEXT button function to verify data before proceeding.",
+      "Ensured data was still visible on return.",
+      "Tested Form for about 10+ more times to ensure it met all requirements.",
+      "Deployed completed project to Netlify after creating an account.",
     ],
   },
   {
     id: 2,
     name: "Graph Task Manager",
-    status: "completed",
+    status: "In-Progress",
     utilities: [
       {
         name: "HTML5",
@@ -394,8 +419,8 @@ export const PROJECTS = [
     timeline: "2 months",
     milestones: [
       "Delibated on the user interface selected and move forward to designing.",
-      "Enncountered a tool called Multi-Select which aided in selecting multiple users.",
-      "Setup the html boilerplate, edited meta tags and linked css.",
+      "Encountered a tool called Multi-Select which aided in selecting multiple users.",
+      "I did a html boilerplate setup, edited meta tags and linked css.",
       "Installed bootstrap and Jquery through their files in the file directory.",
       "First commit was made and pushed to github.",
       "Created form fields and logged user values to be sent via API.",
@@ -403,7 +428,7 @@ export const PROJECTS = [
       "Researched and Setup my own SQL database where I encountered SSMS.",
       "Sent my first POST request successfully to the database and reviewed it.",
       "Created a WHILE loop with Php in a table tag in order to show stored data.",
-      "Attempt to host database and site on heroku.",
+      "Attempted to host the developed database and website on heroku.",
     ],
   },
   {
@@ -449,7 +474,7 @@ export const PROJECTS = [
     ],
     git: "https://github.com/Dharvo/Netflex",
     link: "https://netflex-eb4ee.web.app",
-    images: [NetflexLoading, NetflexLoaded, Netflex1, Netflex2, Netflex3],
+    images: [NetflexLoading, Netflex1, Netflex2, Netflex3],
     tag: ["All", "Completed", "React"],
     content: (
       <span>
@@ -485,12 +510,12 @@ export const PROJECTS = [
       "Completed a React tutorial on youtube.",
       "Reviewed notes, and created first React project with NPM.",
       "Edited the main file App.js to accomodate other components.",
-      "Created Navbar, Header, Movies components according to a tutorial",
-      "Integrated API to the application in my useEffect block using AXIOS.",
-      "",
+      "Created Navbar, Header, Movies components according to a tutorial.",
+      "Integrated API to the application in the useEffect block using AXIOS.",
+      "Edited information provided by API to suite the project.",
       "Integrated firebase by instaling it and running the init function.",
       "Crosschecked initialized application in my google console account.",
-      "",
+      "Hosted the website on the Firebase platform.",
     ],
   },
   {
@@ -506,7 +531,7 @@ export const PROJECTS = [
       {
         name: "Figma",
         img: Figma,
-        aid: "Switched my desing tool and used figma to design the new gallery.",
+        aid: "Switched my design tool and used figma to design the new gallery.",
       },
       {
         name: "Firebase",
@@ -518,14 +543,26 @@ export const PROJECTS = [
         img: GithubImg,
         aid: "Committed all my code to an online repo on the Github platform.",
       },
-      { name: "Material UI", img: MaterialUI, aid: "" },
+      {
+        name: "Material UI",
+        img: MaterialUI,
+        aid: "Material UI offered a variety of useful UI tools that helped design the project faster.",
+      },
       {
         name: "Node JS",
         img: NodeJS,
         aid: "Ran the React code on a development sever using the node package manager.",
       },
-      { name: "SCSS", img: Css, aid: "" },
-      { name: "Swiper", img: Swiper, aid: "" },
+      {
+        name: "SCSS",
+        img: Scss,
+        aid: "This mature and powerful upgrade to CSS extension language is the world.",
+      },
+      {
+        name: "Swiper",
+        img: Swiper,
+        aid: "Swiper is a modern free and open source touch slider with nice transitions & amazing native behaviour.",
+      },
       {
         name: "React JS",
         img: ReactImg,
@@ -544,47 +581,229 @@ export const PROJECTS = [
     ],
     git: "https://github.com/Dharvo/my-portfolio",
     link: "https://sammie-art.web.app",
-    images: [SammieArt1],
+    images: [
+      SammieArt,
+      SammieArt1,
+      SammieArt2,
+      SammieArt6,
+      SammieArt4,
+      SammieArt5,
+    ],
     tag: ["All", "Completed", "React"],
     content: (
       <span>
         Adeboyejo Samuel is a young and talented artist who possesses a
         multitude of skills. His ability to create hyper-realistic portraits
-        using graphite and charcoal pencils is a testament to his dedication,
-        experience, and training. Sammie's passion for art is evident in every
-        stroke of his pencil. His dedication to capturing the intricacies of
-        human expression and emotion is what makes his work truly exceptional.
-        Whether it be a portrait of an elderly woman with wrinkles etched deeply
-        into her face or a young child with eyes full of wonder, Sammie's
+        using <i>graphite</i> and <i>charcoal </i> pencils is a testament to his
+        dedication, experience, and training.
+        <b> Sammie's </b>artistic journey has been shaped by his experiences,
+        inspirations, and training. He has dedicated countless hours to honing
+        his craft, constantly seeking new ways to improve and push the
+        boundaries of his abilities, through experimentation with different
+        techniques and materials, he has developed a unique style that sets him
+        apart from other artists. His passion for art is evident in every stroke
+        of his pencil as is his dedication to capturing the intricacies of human
+        expression and emotion is what makes his work truly exceptional. Whether
+        it be a portrait of an elderly woman with wrinkles etched deeply into
+        her face or a young child with eyes full of wonder, <b>Sammie's </b>
         ability to convey depth and emotion is unparalleled.
         <br />
+        Since the establishment of<b> Sammie's Art Gallery,</b> he has been able
+        to successfully deliver framed and commissioned artworks to clients
+        across the globe. Through his talent and dedication, Sammie has built a
+        reputation for producing high-quality and captivating pieces of art. His
+        ability to understand and fulfill the specific requirements of his
+        clients has made him a sought-after artist in the industry.
       </span>
     ),
     // "Sammie's Art is an Artistic retailer that draws, frame and delivers asthetic portraits to customers anywhere around the world.",
     position: "Remote",
-    updated: "1 year",
+    updated: "1.5 year",
     timeline: "Multiple",
-    milestones: [],
+    milestones: [
+      "Created the project with a basic HTML, CSS, JS folder.",
+      "Designed the project's first version and deployed on netlify",
+      "Got review from the client on first webpage.",
+      "Applied review on the previous webpage and deployed.",
+      "After learning React JS, executed plan to redesign website.",
+      "Redesigned and developed new web page with the React library.",
+      "Configured a email sending form using Email JS in the contact section.",
+      "Tested the software for bugs and corrected them accordingly.",
+      "Deployed finished version to Firebase and updated the project from time to time.",
+    ],
   },
-  // {
-  //   id: 5,
-  //   name: "Wha'Todo App",
-  //   status: "completed",
-  //   // utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
-  //   utilities: [
-  //     { name: "Figma", img: Figma },
-  //     { name: "Firebase", img: Firebase },
-  //     { name: "Github", img: GithubImg },
-  //     { name: "Material UI", img: MaterialUI },
-  //     { name: "VS Code", img: VSCode },
-  //   ],
-  //   git: "https://github.com/Dharvo/whatodo",
-  //   link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
-  //   images: [WhaTodoDesktop, WhaTodo],
-  //   tag: ["All", "Flutter", "Completed", "UI/UX"],
-  //   content:
-  //     "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
-  // },
+  {
+    id: 5,
+    name: "Wha'Todo App",
+    status: "completed",
+    // utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
+    utilities: [
+      {
+        name: "Figma",
+        img: Figma,
+        aid: "Practiced more on the design tool and designed a fantastic UI.",
+      },
+      {
+        name: "Firebase",
+        img: Firebase,
+        aid: "Provided tools to host and grow my application as quickly & securely as possible.",
+      },
+      {
+        name: "Material UI",
+        img: MaterialUI,
+        aid: "Material UI offered a variety of useful UI tools that helped design the project faster.",
+      },
+      {
+        name: "Github",
+        img: GithubImg,
+        aid: "Committed all my code to an online repo on the Github platform.",
+      },
+      {
+        name: "VS-Code",
+        img: VSCode,
+        aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
+      },
+      {
+        name: "Flutter",
+        img: VSCode,
+        aid: "Created the whole project writing the Dart language int he Flutter framework.",
+      },
+    ],
+    git: "https://github.com/Dharvo/whatodo",
+    link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
+    images: [WhaTodoDesktop, WhaTodo],
+    tag: ["All", "Flutter", "Completed", "UI/UX"],
+    content: (
+      <span>
+        A mobile application is not just about aesthetics; it also needs to
+        perform advanced functions based on user interactions. This involves
+        writing code that handles various user inputs and triggers appropriate
+        responses. For example, if a user taps on a button, the application
+        should be programmed to execute a specific action or display relevant
+        information. Implementing these advanced functions requires a deep
+        understanding of programming concepts and proficiency in using
+        frameworks like <b>Flutter.</b> <br />
+        During the <b>COVID-19</b> period in 2020, I took advantage of my free
+        time and boredom by immersing myself in learning <b>Dart</b> through the
+        <b> Flutter framework.</b> As the saying goes,
+        <i> "Curiosity killed the cat", </i>but I was determined to explore new
+        avenues and expand my knowledge. With the boredom that came with
+        isolation lockdown, I decided to delve into the fascinating world of
+        <b> Dart programming language</b> and the <b>Flutter framework, </b>
+        utilizing the resources available on <b>Flutter.Dev</b> online library.
+        Setting up an Emulator and designing a basic layout were crucial steps
+        in creating a mobile application, followed by implementing advanced
+        functions based on user interactions. After experiencing a significant
+        amount of confusion and chaos, I managed to develop a simple application
+        for managing tasks, commonly known as a <b>Todo app. </b>This app allows
+        users to create and store their todos in organized classes, which
+        include information such as the task name, priority level, due date, and
+        even subtasks. To make it easily accessible to others, I compiled the
+        app into an APK file and made it available for download on my
+        <b> GitHub repository.</b>
+      </span>
+    ),
+    // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
+    position: "Remote",
+    updated: "1 year",
+    timeline: "8 Months",
+    milestones: [
+      "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
+      "Designed the entire project on the Figma application after much sketches on a private canvas.",
+      "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
+      "Installed Andriod Studio and the Flutter SDK.",
+      "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
+      "Created my first Scaffold widget after battling with the Emulator setup.",
+      "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
+      "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
+      "Created a basic layout for the App and started including form fields as well as validations.",
+      "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
+      "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
+      "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
+      "Understood the function the Main() in the App's launch and execution.",
+      "Used the material Library to design iscon and other aspects of the application.",
+      "Handled error pages accordingly when requesting data from the Hive API.",
+      "Initialized Hive into the project to store User tasks in box on their mobile device.",
+      "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
+      "Initialized Firebase into the Mobile Application.",
+      "Came across Google Account page to Upload application to play store, but was unable...",
+      "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
+    ],
+  },
+  {
+    id: 6,
+    name: "Ponle Richard Photography",
+    status: "completed",
+    // utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
+    utilities: [
+      {
+        name: "Adobe XD",
+        img: Figma,
+        aid: "Designed a fantastic UI from scratch after much resourcing to come up with a view that meet requirements.",
+      },
+      {
+        name: "Firebase",
+        img: Firebase,
+        aid: "Provided tools to host and grow my application as quickly & securely as possible.",
+      },
+
+      {
+        name: "Github",
+        img: GithubImg,
+        aid: "Committed all my code to an online repo on the Github platform.",
+      },
+      {
+        name: "VS-Code",
+        img: VSCode,
+        aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
+      },
+    ],
+    git: "https://github.com/Dharvo/whatodo",
+    link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
+    images: [PRLoad, PR, PRDark, PRAdmin, PRAdmin2, PR404],
+    tag: ["All", "React", "Completed"],
+    content: (
+      <span>
+        Some conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
+        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
+        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc{" "}
+        <b>cs cjhschcb</b>
+        scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh
+        scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome
+        conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
+        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
+        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc
+        cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb
+        scch jsc skh sc
+      </span>
+    ),
+    // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
+    position: "Remote",
+    updated: "3 months ago",
+    timeline: "8 Months",
+    milestones: [
+      "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
+      "Designed the entire project on the Figma application after much sketches on a private canvas.",
+      "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
+      "Installed Andriod Studio and the Flutter SDK.",
+      "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
+      "Created my first Scaffold widget after battling with the Emulator setup.",
+      "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
+      "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
+      "Created a basic layout for the App and started including form fields as well as validations.",
+      "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
+      "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
+      "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
+      "Understood the function the Main() in the App's launch and execution.",
+      "Used the material Library to design iscon and other aspects of the application.",
+      "Handled error pages accordingly when requesting data from the Hive API.",
+      "Initialized Hive into the project to store User tasks in box on their mobile device.",
+      "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
+      "Initialized Firebase into the Mobile Application.",
+      "Came across Google Account page to Upload application to play store, but was unable...",
+      "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
+    ],
+  },
 ];
 
 // INFO FOR CONTACT PAGE
