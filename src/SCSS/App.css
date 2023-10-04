@@ -782,7 +782,7 @@
   @apply [&>div]:mb-4;
 }
 #projects main section .UI-UX .UI_image img {
-  @apply rounded rounded-md  max-h-[30vh];
+  @apply rounded rounded-md max-w-[80%] ml-4;
 }
 #projects main section .UI-UX .UI_image img:hover, #projects main section .UI-UX .UI_image img:focus, #projects main section .UI-UX .UI_image img:focus-within, #projects main section .UI-UX .UI_image img:focus-visible {
   outline: none;
@@ -1055,6 +1055,29 @@
 #portals .ResumeDwn [title=Close]:hover, #portals .ResumeDwn [title=Close]:focus, #portals .ResumeDwn [title=Close]:focus-within, #portals .ResumeDwn [title=Close]:focus-visible {
   background: linear-gradient(-15deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4666666667));
   @apply [&>svg]:fill-red-500;
+}
+#portals .UIZoom button {
+  border: none;
+  box-shadow: 2px 2px 7px 0.5px rgba(34, 34, 34, 0.3333333333), -1px -1px 4px rgba(17, 17, 17, 0.6666666667);
+  background: linear-gradient(-15deg, rgba(0, 0, 0, 0.6666666667), rgba(0, 0, 0, 0.2));
+  @apply transition-all ease-in relative rounded 
+      cursor-pointer rounded rounded-3xl 
+      py-2.5 px-3 m-auto mb-3 block mr-4 mt-[-7px]
+       [&>svg]:w-6 [&>svg]:fill-gray-300 
+       [&>svg]:inline-block;
+}
+#portals .UIZoom button:hover, #portals .UIZoom button:focus, #portals .UIZoom button:focus-within, #portals .UIZoom button:focus-visible {
+  outline: none;
+  -webkit-text-stroke: 0.02px white;
+  box-shadow: 2px 2px 8px 0.75px rgba(34, 34, 34, 0.6666666667), -1px -1px 4px rgba(17, 17, 17, 0.8666666667);
+  background: linear-gradient(-15deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4666666667));
+  @apply [&>svg]:fill-red-500;
+}
+#portals .UIZoom .zoomd {
+  @apply mt-2;
+}
+#portals .UIZoom .zoomd img {
+  @apply rounded rounded-md mx-auto my-0 object-contain max-h-[90vh] max-w-[90%];
 }
 #portals .ProjectDets {
   background-color: #f9f9fa;

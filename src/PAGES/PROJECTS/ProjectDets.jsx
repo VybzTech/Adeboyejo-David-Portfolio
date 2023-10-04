@@ -2,9 +2,7 @@ import React from "react";
 import { Zoom } from "react-awesome-reveal";
 import ReactDOM from "react-dom";
 import Github from "../../ICONS/Github";
-import ArrowRight from "../../ICONS/ArrowRight";
 import Link from "../../ICONS/PROJECTS/Link";
-import Tools from "../../ICONS/PROJECTS/Tools";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css/bundle";
@@ -114,12 +112,6 @@ const ProjectDets = ({ project, showDetails, setShowDetails }) => {
                     document.body.removeChild(inputElement);
                     toast.success("Copied project link");
                   }
-                  // setCopy(true);
-                  // toast.success("Copied project link");
-                  // document.execCommand("copy", "atemplegjnbfslfk");
-                  // setTimeout(() => {
-                  //   setCopy(false);
-                  // }, 2000);
                 }}
               >
                 <Copy copied={copied} />

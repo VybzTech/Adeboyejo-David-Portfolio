@@ -19,7 +19,6 @@ import UI2 from "../IMAGES/UI/ADD TODO.png";
 import UI3 from "../IMAGES/UI/CONTACT PAGE NEW.png";
 import UI4 from "../IMAGES/UI/HOME PAGE.png";
 import UI5 from "../IMAGES/UI/IMG_0483.jpg";
-import UI6 from "../IMAGES/UI/IMG_0504.jpg";
 import UI7 from "../IMAGES/UI/IMG_0523.jpg";
 import UI8 from "../IMAGES/UI/IMG_0524.jpg";
 import UI9 from "../IMAGES/UI/LOGIN (DAY).png";
@@ -55,7 +54,7 @@ import UI38 from "../IMAGES/UI/Sammie Art-Skeleton.png";
 import UI39 from "../IMAGES/UI/Sammie Art-SkelTop.png";
 import UI40 from "../IMAGES/UI/Sammie-Art-Main.png";
 import UI41 from "../IMAGES/UI/SETTINGS.png";
-import UI42 from "../IMAGES/UI/WHATODO HOME.png";
+import UI42 from "../IMAGES/UI/WHATODO-HOME.png";
 import UI43 from "../IMAGES/UI/WHATODO.png";
 import UI44 from "../IMAGES/UI/PRICING.png";
 import UI45 from "../IMAGES/UI/PAY PANEL.png";
@@ -78,6 +77,7 @@ import TaskManager1 from "../IMAGES/PROJECTS/TaskManager1.png";
 import TaskManager2 from "../IMAGES/PROJECTS/TaskManager2.png";
 import WhaTodo from "../IMAGES/UI/WHATODO-Land.png";
 import WhaTodoDesktop from "../IMAGES/PROJECTS/Whatodo-Desktop-Size.png";
+// import WhaTodoHome from "../IMAGES/PROJECTS/WHATODO-HOME.png";
 import SammieArtProject from "../IMAGES/Sammie-Art-Project.png";
 import DivisionFormProject from "../IMAGES/DivisionForm-Project.png";
 import TaskManagerProject from "../IMAGES/TaskManager1-Project.png";
@@ -116,7 +116,10 @@ import Php from "../IMAGES/TOOLS/Php.png";
 import Firebase from "../IMAGES/TOOLS/Firebase.png";
 import Swiper from "../IMAGES/TOOLS/Swiper.svg";
 import Netlify from "../IMAGES/TOOLS/Netlify-Logo.png";
-import Photoshop from "../IMAGES/TOOLS/Photoshop-cc.png";
+// import Photoshop from "../IMAGES/TOOLS/Photoshop-cc.png";
+import Flutter from "../IMAGES/TOOLS/Flutter.svg";
+import Dart from "../IMAGES/TOOLS/Dart.svg";
+import XD from "../IMAGES/TOOLS/Adobe-XD.png";
 
 //HOME PAGE SKILLS
 export const SKILLS = [
@@ -180,7 +183,7 @@ export const UIs = [
   UI5,
   UI47,
   UI40,
-  UI6,
+  // UI6,
   UI45,
   UI7,
   UI46,
@@ -538,11 +541,7 @@ export const PROJECTS = [
         img: Figma,
         aid: "Switched my design tool and used figma to design the new gallery.",
       },
-      {
-        name: "Firebase",
-        img: Firebase,
-        aid: "Utilized the Backend as a service BAAS of google firebase to host the website.",
-      },
+
       {
         name: "Github",
         img: GithubImg,
@@ -669,13 +668,18 @@ export const PROJECTS = [
       },
       {
         name: "Flutter",
-        img: VSCode,
+        img: Flutter,
         aid: "Created the whole project writing the Dart language int he Flutter framework.",
+      },
+      {
+        name: "Dart",
+        img: Dart,
+        aid: "Dark programming language is the basis which the Flutter Framework is built upon.",
       },
     ],
     git: "https://github.com/Dharvo/whatodo",
     link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
-    images: [WhaTodoDesktop, WhaTodo],
+    images: [UI42, UI43, UI17, UI15, UI12, UI21],
     tag: ["All", "Flutter", "Completed", "UI/UX"],
     content: (
       <span>
@@ -695,22 +699,23 @@ export const PROJECTS = [
         isolation lockdown, I decided to delve into the fascinating world of
         <b> Dart programming language</b> and the <b>Flutter framework, </b>
         utilizing the resources available on <b>Flutter.Dev</b> online library.
-        Setting up an Andriod Emulator and designing the App's basic layout were crucial steps
-        in creating a mobile application, followed by implementing advanced
-        functions based on user interactions. After experiencing a significant
-        amount of confusion and chaos, I managed to develop a simple application
-        for managing tasks, commonly known as a <b>Todo App. </b>This app allows
-        users to create and store their todos in organized classes, which
-        include information such as the task name, priority level, due date, and
-        even subtasks. To make it easily accessible to others, I compiled the
-        app into an APK file and made it available for download on my
+        Setting up an Andriod Emulator and designing the App's basic layout were
+        crucial steps in creating a mobile application, followed by implementing
+        advanced functions based on user interactions. After experiencing a
+        significant amount of confusion and chaos, I managed to develop a simple
+        application for managing tasks, commonly known as a <b>Todo App. </b>
+        This app allows users to create and store their todos in organized
+        classes, which include information such as the task name, priority
+        level, due date, and even subtasks. To make it easily accessible to
+        others, I compiled the app into an APK file and made it available for
+        download on my
         <b> GitHub repository.</b>
       </span>
     ),
     // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
     position: "Remote",
     updated: "1 year",
-    timeline: "8 Months",
+    timeline: "10 Months",
     milestones: [
       "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
       "Designed the entire project on the Figma application after much sketches on a private canvas.",
@@ -736,25 +741,28 @@ export const PROJECTS = [
   },
   {
     id: 6,
-    name: "Ponle Richard (PR)",
+    name: "PR. Photography",
     status: "completed",
-    // utilities: ["FLUTTER", "MATERIAL UI", "CUBIT", "HIVE"],
     utilities: [
       {
         name: "Adobe XD",
-        img: Figma,
+        img: XD,
         aid: "Designed a fantastic UI from scratch after much resourcing to come up with a view that meet requirements.",
       },
       {
         name: "Firebase",
         img: Firebase,
-        aid: "Provided tools to host and grow my application as quickly & securely as possible.",
+        aid: "Utilized the Backend as a service BAAS of google firebase to host the website.",
       },
-
       {
         name: "Github",
         img: GithubImg,
         aid: "Committed all my code to an online repo on the Github platform.",
+      },
+      {
+        name: "React JS",
+        img: ReactImg,
+        aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
       },
       {
         name: "VS-Code",
@@ -764,7 +772,7 @@ export const PROJECTS = [
     ],
     git: "https://github.com/Dharvo/whatodo",
     link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
-    images: [PRLoad, PR, PRDark, PRAdmin,PRContact, PRAdmin2, PR404],
+    images: [PRLoad, PR, PRDark, PRAdmin, PRContact, PRAdmin2, PR404],
     tag: ["All", "React", "Completed"],
     content: (
       <span>
@@ -852,7 +860,7 @@ export const PROJECTS = [
     ],
     git: "https://github.com/Dharvo/whatodo",
     link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
-    images: [Miners1, Miners2, Miners3, Miners4 ],
+    images: [Miners1, Miners2, Miners3, Miners4],
     tag: ["All", "React", "Completed"],
     content: (
       <span>
@@ -901,7 +909,7 @@ export const PROJECTS = [
   //   name: "Console To Web",
   //   status: "completed",
   //   utilities: [
-      
+
   //     {
   //       name: "C#",
   //       img: CSharp,
@@ -985,7 +993,7 @@ export const PROJECTS = [
   //   name: "Books",
   //   status: "completed",
   //   utilities: [
-      
+
   //     {
   //       name: "C#",
   //       img: CSharp,
@@ -1069,7 +1077,7 @@ export const PROJECTS = [
   //   name: "Whatodo",
   //   status: "completed",
   //   utilities: [
-      
+
   //     {
   //       name: "C#",
   //       img: CSharp,
@@ -1091,7 +1099,7 @@ export const PROJECTS = [
   //       img: GithubImg,
   //       aid: "Committed all my code to an online repo on the Github platform.",
   //     },
-      
+
   //     {
   //       name: "VS-Code",
   //       img: VSCode,
@@ -1100,7 +1108,7 @@ export const PROJECTS = [
   //   ],
   //   git: "https://github.com/Dharvo/whatodo",
   //   link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
-  //   images: [  ],
+  //   images: [WhaTodoDesktop  ],
   //   tag: ["All", "React", "Completed"],
   //   content: (
   //     <span>

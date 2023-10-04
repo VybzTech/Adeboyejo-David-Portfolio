@@ -674,7 +674,7 @@
         .UI_image {
           @apply [&>div]:mb-4;
           img {
-            @apply rounded rounded-md  max-h-[30vh];
+            @apply rounded rounded-md max-w-[80%] ml-4;
             &:hover,
             &:focus,
             &:focus-within,
@@ -946,6 +946,36 @@
       &:focus-visible {
         background: linear-gradient(-15deg, #000c, #0007);
         @apply [&>svg]:fill-red-500;
+      }
+    }
+  }
+
+  // UI PFROJECT'S
+  .UIZoom {
+    button {
+      border: none;
+      box-shadow: 2px 2px 7px 0.5px #2225, -1px -1px 4px #111a;
+      background: linear-gradient(-15deg, #000a, #0003);
+      @apply transition-all ease-in relative rounded 
+      cursor-pointer rounded rounded-3xl 
+      py-2.5 px-3 m-auto mb-3 block mr-4 mt-[-7px]
+       [&>svg]:w-6 [&>svg]:fill-gray-300 
+       [&>svg]:inline-block;
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        outline: none;
+        -webkit-text-stroke: 0.02px white;
+        box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
+        background: linear-gradient(-15deg, #000c, #0007);
+        @apply [&>svg]:fill-red-500;
+      }
+    }
+    .zoomd {
+      @apply mt-2;
+      img {
+        @apply  rounded rounded-md mx-auto my-0 object-contain max-h-[90vh] max-w-[90%];
       }
     }
   }
