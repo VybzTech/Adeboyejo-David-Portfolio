@@ -776,17 +776,39 @@ export const PROJECTS = [
     tag: ["All", "React", "Completed"],
     content: (
       <span>
-        Some conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc{" "}
-        <b>cs cjhschcb</b>
-        scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh
-        scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome
-        conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc
-        cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb
-        scch jsc skh sc
+        For my second gallery project, I initially embarked on a relatively
+        straightforward journey but as I began, reverting to my design skills on
+        <b> Adobe XD</b> I engaged the client to gather information about their
+        preferences and requirements on the website's interface. Based on this
+        input, I proceeded to design a user interface (UI) that would cater to
+        their specific needs. To implement the UI, I utilized React JS, a
+        JavaScript library c ommonly used for building dynamic user interfaces.
+        <br />
+        Upon the initial deployment of the website using React JS, the
+        Photographer Ponle Oluwagbenga Richard expressed some dissatisfaction
+        with it's optimization and identified several changes he desired to be
+        made. To address Richard's concerns, I carefully reviewed his feedback
+        and analyzed the existing code of the website. By identifying areas that
+        required improvement, I was able to devise a plan for enhancing the
+        optimization & implementation of the website and resolved to rebulding
+        the project with the React Framework that enables developers to create
+        full-stack Web applications by extending the latest React
+        functionalities. This involved making adjustments to the HTML structure,
+        ensuring proper semantic markup, optimizing elements by minimizing
+        unnecessary code and reducing file sizes where possible such as images
+        and scripts. Additionally, I implemented caching mechanisms to enhance
+        loading speed and reduce server requests. By utilizing browser caching,
+        I instructed visitors' browsers to store certain files locally so that
+        subsequent visits to the website would require fewer resources to load.
+        <br />
+        Furthermore, I optimized the website for different devices and screen
+        sizes by employing responsive design techniques. This ensured that users
+        accessing the gallery from various devices would have an optimal viewing
+        experience, thus ensuring compatibility across different web browsers.
+        Throughout this process, I maintained open communication with Richard to
+        ensure that his expectations were met; Aiming to create a website that
+        not only met Richard's requirements but also provided an enjoyable and
+        seamless user experience.
       </span>
     ),
     // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
@@ -794,7 +816,7 @@ export const PROJECTS = [
     updated: "3 months ago",
     timeline: "8 Months",
     milestones: [
-      "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
+      "Researhed photography and photographer website to enlighten myself on what to expect.",
       "Designed the entire project on the Figma application after much sketches on a private canvas.",
       "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
       "Installed Andriod Studio and the Flutter SDK.",

@@ -428,10 +428,13 @@
 }
 #home .skills .skillPoster {
   z-index: 0;
-  @apply mt-[-1rem] mr-1  w-fit;
+  @apply mt-[-1rem] mr-1;
+}
+#home .skills .skillPoster > div {
+  @apply w-full;
 }
 #home .skills .skillPoster > div svg {
-  @apply w-[110%] h-[110%];
+  @apply m-auto w-[110%] h-[110%];
 }
 #home .skills .tools p {
   color: #e3f2f8;
@@ -470,7 +473,7 @@
 }
 #home .homeProjects .swiper .swiper-wrapper .swiper-slide {
   box-shadow: 0px 2px 5px 0.1px #e3f2f8;
-  @apply h-[43vh] rounded rounded-md overflow-hidden;
+  @apply h-[43vh] rounded rounded-md overflow-hidden mb-2;
 }
 #home .homeProjects .swiper .swiper-wrapper .swiper-slide:hover, #home .homeProjects .swiper .swiper-wrapper .swiper-slide:focus {
   box-shadow: 0px 1px 15px 1px #eee;
@@ -1209,6 +1212,66 @@
   font-size: 0.8rem;
 }
 
+@media screen and (min-height: 320px) and (max-width: 480px) and (orientation: Landscape) {
+  #light .navbar {
+    @apply h-[13vh];
+  }
+  #light .navbar .logo {
+    @apply p-2;
+  }
+  #light .navbar .logo svg {
+    @apply w-6;
+  }
+  #light #home .intro h1 {
+    font-size: 2.2rem;
+  }
+  #light #home .lilAbout .circleImg {
+    @apply w-[50%] py-[1.8%] px-[1.8%] pb-[2%];
+  }
+  #light #home .lilAbout .about .hero h2 .line > div {
+    @apply h-[1.65vh];
+  }
+  #light #home .lilAbout .about p {
+    @apply leading-[2];
+  }
+  #light #home .lilAbout .about .more {
+    @apply my-5;
+  }
+  #light #home .skills #tsparticles {
+    @apply h-[300vh];
+  }
+  #light #home .skills .KeySkillsWrapper h2 {
+    @apply mb-2 mt-4;
+  }
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill {
+    @apply mb-3.5;
+  }
+  #light #home .skills .skillPoster {
+    @apply ml-5;
+  }
+  #light #home .skills .skillPoster > div svg {
+    @apply w-[80%];
+  }
+  #light #home .skills .tools p {
+    @apply w-[350px] mx-auto mt-2;
+  }
+  #light #home .homeProjects .swiper .swiper-slide {
+    @apply h-[55vh];
+  }
+  #light #home .homeProjects .swiper .swiper-slide img {
+    @apply mx-[auto]  min-w-full;
+  }
+  #light #about .bg h1 {
+    font-size: 1.85rem;
+    padding-top: 1.85rem;
+  }
+  #light #about .content {
+    @apply max-h-[62vh] px-6;
+  }
+  #light #about .bg > div:last-of-type {
+    @apply my-2.5;
+  }
+}
 #light.dark .navbar .logo svg path {
   fill: #333;
 }

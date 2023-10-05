@@ -6,7 +6,7 @@ function SkillSvg() {
       {/* SVG IMAGE */}
       <div>
         <svg
-          className=" w-fit"
+          className="w-fit"
           viewBox="0 0 720 720"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

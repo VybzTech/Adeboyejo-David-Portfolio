@@ -320,15 +320,17 @@
     }
     .skillPoster {
       z-index: 0;
-      @apply mt-[-1rem] mr-1  w-fit;
-      & > div svg {
-        @apply w-[110%] h-[110%];
+      @apply mt-[-1rem] mr-1;
+      // w-fit;
+      & > div {
+        @apply w-full;
+        svg {
+          @apply m-auto w-[110%] h-[110%];
+        }
       }
     }
     //TOOLS
     .tools {
-      img {
-      }
       p {
         @include LightText(
           $size: 0.7rem,
@@ -367,7 +369,7 @@
         @apply w-full;
         .swiper-slide {
           box-shadow: 0px 2px 5px 0.1px $themeWhitishBlue;
-          @apply h-[43vh] rounded rounded-md overflow-hidden;
+          @apply h-[43vh] rounded rounded-md overflow-hidden mb-2;
           &:hover,
           &:focus {
             box-shadow: 0px 1px 15px 1px $offWhite;
@@ -975,7 +977,7 @@
     .zoomd {
       @apply mt-2;
       img {
-        @apply  rounded rounded-md mx-auto my-0 object-contain max-h-[90vh] max-w-[90%];
+        @apply rounded rounded-md mx-auto my-0 object-contain max-h-[90vh] max-w-[90%];
       }
     }
   }
@@ -1113,6 +1115,8 @@
 [role="status"] {
   @include LightText($size: 0.8rem);
 }
+
+@import "./smPhone";
 
 @import "./dark";
 
