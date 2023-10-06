@@ -1,10 +1,10 @@
 import { SERVICES } from "../Utils";
-import { Params,Params2 } from "../Utils";
+import { Params, Params2 } from "../Utils";
 import Particles from "react-tsparticles";
 import { Fade, Zoom } from "react-awesome-reveal";
 import ServiceCard from "./ServiceCard";
 import Masonry from "react-masonry-css";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 function MyServices() {
   const breakPoints = {

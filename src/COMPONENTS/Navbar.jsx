@@ -91,7 +91,7 @@ const Navbar = withRouter((props) => {
         </>
       </div>
       <div className={`navigation ${navControl && "show"}`}>
-        <JackInTheBox>
+        <JackInTheBox triggerOnce>
           <Navigation setNavControl={setNavControl} />
         </JackInTheBox>
       </div>

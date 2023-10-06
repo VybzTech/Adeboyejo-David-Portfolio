@@ -15,7 +15,7 @@ import ReactVisibilitySensor from "react-visibility-sensor";
 import ErrorHandler from "../../COMPONENTS/ErrorHandler";
 import { Toaster } from "react-hot-toast";
 const Projects = () => {
-  const [anime, setAnime] = useState(false);
+  // const [anime, setAnime] = useState(false);
   const [nav, setNav] = useState("All");
   // const [previewUI, setPreviewUI] =
   // useState(false)
@@ -51,11 +51,9 @@ const Projects = () => {
   // 		document?.querySelector('main')
   // 	)
   // }, [nav])
-
   return (
     <div id="projects">
       <div className="bg" children={<Explore />} />
-      {/* <ScrollUp /> */}
       <ReactVisibilitySensor
         resizeCheck={true}
         delayedCall={true}
@@ -63,14 +61,14 @@ const Projects = () => {
         scrollDelay={150}
         partialVisibility={true}
         minTopValue={200}
-        onChange={(isVisible) => setAnime(isVisible)}
-        active={!anime}
+        // onChange={(isVisible) => setAnime(isVisible)}
+        // active={!anime}
       >
         <main>
-                  <Toaster position="bottom-left" reverseOrder={true} />
-          <ProjectNav anime={anime} nav={nav} setNav={setNav} />
+          <Toaster position="bottom-left" reverseOrder={true} />
+          <ProjectNav nav={nav} setNav={setNav} />
           <section
-            className={NewProjects.length === 0 ? "flex justify-center":""}
+            className={NewProjects.length === 0 ? "flex justify-center" : ""}
           >
             {NewProjects.length === 0 ? (
               <span className="my-[30vh] px-18 w-fit text-xs font-italic text-gray-400 opacity-50">
@@ -99,14 +97,7 @@ const Projects = () => {
                 {UIs?.map((img, i) => {
                   return (
                     <ErrorHandler key={i}>
-                      <UIProjects
-                        img={img}
-                        anime={anime}
-                        nav={nav}
-                        i={i}
-                        // prev={previewUI}
-                        // set={setPreviewUI}
-                      />
+                      <UIProjects img={img} nav={nav} i={i} />
                     </ErrorHandler>
                   );
                 })}

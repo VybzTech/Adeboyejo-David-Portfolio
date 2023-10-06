@@ -742,7 +742,7 @@ export const PROJECTS = [
   {
     id: 6,
     name: "PR. Photography",
-    status: "completed",
+    status: "In-Progress",
     utilities: [
       {
         name: "Adobe XD",
@@ -773,7 +773,7 @@ export const PROJECTS = [
     git: "https://github.com/Dharvo/whatodo",
     link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
     images: [PRLoad, PR, PRDark, PRAdmin, PRContact, PRAdmin2, PR404],
-    tag: ["All", "React", "Completed"],
+    tag: ["All", "React", "In-Progress"],
     content: (
       <span>
         For my second gallery project, I initially embarked on a relatively
@@ -926,254 +926,251 @@ export const PROJECTS = [
       "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
     ],
   },
-  // {
-  //   id: 8,
-  //   name: "Console To Web",
-  //   status: "completed",
-  //   utilities: [
+  {
+    id: 8,
+    name: "Console To Web",
+    status: "completed",
+    utilities: [
+      {
+        name: "C#",
+        img: CSharp,
+        aid: "The basic fundamental language that the ASP .NET Framework is built on.",
+      },
+      {
+        name: "React JS",
+        img: ReactImg,
+        aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
+      },
+      {
+        name: "Firebase",
+        img: Firebase,
+        aid: "Provided tools to host and grow my application as quickly & securely as possible.",
+      },
 
-  //     {
-  //       name: "C#",
-  //       img: CSharp,
-  //       aid: "The basic fundamental language that the ASP .NET Framework is built on.",
-  //     },
-  //     {
-  //       name: "React JS",
-  //       img: ReactImg,
-  //       aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
-  //     },
-  //     {
-  //       name: "Firebase",
-  //       img: Firebase,
-  //       aid: "Provided tools to host and grow my application as quickly & securely as possible.",
-  //     },
+      {
+        name: "Github",
+        img: GithubImg,
+        aid: "Committed all my code to an online repo on the Github platform.",
+      },
+      {
+        name: "Swiper",
+        img: Swiper,
+        aid: "Swiper is a modern free and open source touch slider with nice transitions & amazing native behaviour.",
+      },
+      {
+        name: "VS-Code",
+        img: VSCode,
+        aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
+      },
+    ],
+    git: "https://github.com/Dharvo/whatodo",
+    link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
+    images: [],
+    tag: ["All", "React", "Completed"],
+    content: (
+      <span>
+        Some conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
+        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
+        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc{" "}
+        <b>cs cjhschcb</b>
+        scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh
+        scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome
+        conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
+        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
+        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc
+        cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb
+        scch jsc skh sc
+      </span>
+    ),
+    // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
+    position: "Remote",
+    updated: "3 months ago",
+    timeline: "8 Months",
+    milestones: [
+      "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
+      "Designed the entire project on the Figma application after much sketches on a private canvas.",
+      "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
+      "Installed Andriod Studio and the Flutter SDK.",
+      "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
+      "Created my first Scaffold widget after battling with the Emulator setup.",
+      "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
+      "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
+      "Created a basic layout for the App and started including form fields as well as validations.",
+      "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
+      "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
+      "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
+      "Understood the function the Main() in the App's launch and execution.",
+      "Used the material Library to design iscon and other aspects of the application.",
+      "Handled error pages accordingly when requesting data from the Hive API.",
+      "Initialized Hive into the project to store User tasks in box on their mobile device.",
+      "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
+      "Initialized Firebase into the Mobile Application.",
+      "Came across Google Account page to Upload application to play store, but was unable...",
+      "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
+    ],
+  },
+  {
+    id: 9,
+    name: "Books",
+    status: "In-Progress",
+    utilities: [
+      {
+        name: "C#",
+        img: CSharp,
+        aid: "The basic fundamental language that the ASP .NET Framework is built on.",
+      },
+      {
+        name: "React JS",
+        img: ReactImg,
+        aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
+      },
+      {
+        name: "Firebase",
+        img: Firebase,
+        aid: "Provided tools to host and grow my application as quickly & securely as possible.",
+      },
 
-  //     {
-  //       name: "Github",
-  //       img: GithubImg,
-  //       aid: "Committed all my code to an online repo on the Github platform.",
-  //     },
-  //     {
-  //       name: "Swiper",
-  //       img: Swiper,
-  //       aid: "Swiper is a modern free and open source touch slider with nice transitions & amazing native behaviour.",
-  //     },
-  //     {
-  //       name: "VS-Code",
-  //       img: VSCode,
-  //       aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
-  //     },
-  //   ],
-  //   git: "https://github.com/Dharvo/whatodo",
-  //   link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
-  //   images: [  ],
-  //   tag: ["All", "React", "Completed"],
-  //   content: (
-  //     <span>
-  //       Some conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-  //       tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-  //       dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc{" "}
-  //       <b>cs cjhschcb</b>
-  //       scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh
-  //       scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome
-  //       conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-  //       tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-  //       dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc
-  //       cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb
-  //       scch jsc skh sc
-  //     </span>
-  //   ),
-  //   // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
-  //   position: "Remote",
-  //   updated: "3 months ago",
-  //   timeline: "8 Months",
-  //   milestones: [
-  //     "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
-  //     "Designed the entire project on the Figma application after much sketches on a private canvas.",
-  //     "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
-  //     "Installed Andriod Studio and the Flutter SDK.",
-  //     "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
-  //     "Created my first Scaffold widget after battling with the Emulator setup.",
-  //     "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
-  //     "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
-  //     "Created a basic layout for the App and started including form fields as well as validations.",
-  //     "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
-  //     "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
-  //     "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
-  //     "Understood the function the Main() in the App's launch and execution.",
-  //     "Used the material Library to design iscon and other aspects of the application.",
-  //     "Handled error pages accordingly when requesting data from the Hive API.",
-  //     "Initialized Hive into the project to store User tasks in box on their mobile device.",
-  //     "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
-  //     "Initialized Firebase into the Mobile Application.",
-  //     "Came across Google Account page to Upload application to play store, but was unable...",
-  //     "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
-  //   ],
-  // },
-  // {
-  //   id: 9,
-  //   name: "Books",
-  //   status: "completed",
-  //   utilities: [
+      {
+        name: "Github",
+        img: GithubImg,
+        aid: "Committed all my code to an online repo on the Github platform.",
+      },
+      {
+        name: "Swiper",
+        img: Swiper,
+        aid: "Swiper is a modern free and open source touch slider with nice transitions & amazing native behaviour.",
+      },
+      {
+        name: "VS-Code",
+        img: VSCode,
+        aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
+      },
+    ],
+    git: "https://github.com/Dharvo/whatodo",
+    link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
+    images: [],
+    tag: ["All", "React", "In-Progress"],
+    content: (
+      <span>
+        Some conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
+        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
+        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc{" "}
+        <b>cs cjhschcb</b>
+        scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh
+        scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome
+        conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
+        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
+        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc
+        cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb
+        scch jsc skh sc
+      </span>
+    ),
+    // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
+    position: "Remote",
+    updated: "3 months ago",
+    timeline: "8 Months",
+    milestones: [
+      "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
+      "Designed the entire project on the Figma application after much sketches on a private canvas.",
+      "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
+      "Installed Andriod Studio and the Flutter SDK.",
+      "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
+      "Created my first Scaffold widget after battling with the Emulator setup.",
+      "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
+      "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
+      "Created a basic layout for the App and started including form fields as well as validations.",
+      "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
+      "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
+      "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
+      "Understood the function the Main() in the App's launch and execution.",
+      "Used the material Library to design iscon and other aspects of the application.",
+      "Handled error pages accordingly when requesting data from the Hive API.",
+      "Initialized Hive into the project to store User tasks in box on their mobile device.",
+      "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
+      "Initialized Firebase into the Mobile Application.",
+      "Came across Google Account page to Upload application to play store, but was unable...",
+      "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
+    ],
+  },
+  {
+    id: 10,
+    name: "Whatodo",
+    status: "In-Progress",
+    utilities: [
+      {
+        name: "C#",
+        img: CSharp,
+        aid: "The basic fundamental language that the ASP .NET Framework is built on.",
+      },
+      {
+        name: "React JS",
+        img: ReactImg,
+        aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
+      },
+      {
+        name: "Firebase",
+        img: Firebase,
+        aid: "Provided tools to host and grow my application as quickly & securely as possible.",
+      },
 
-  //     {
-  //       name: "C#",
-  //       img: CSharp,
-  //       aid: "The basic fundamental language that the ASP .NET Framework is built on.",
-  //     },
-  //     {
-  //       name: "React JS",
-  //       img: ReactImg,
-  //       aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
-  //     },
-  //     {
-  //       name: "Firebase",
-  //       img: Firebase,
-  //       aid: "Provided tools to host and grow my application as quickly & securely as possible.",
-  //     },
+      {
+        name: "Github",
+        img: GithubImg,
+        aid: "Committed all my code to an online repo on the Github platform.",
+      },
 
-  //     {
-  //       name: "Github",
-  //       img: GithubImg,
-  //       aid: "Committed all my code to an online repo on the Github platform.",
-  //     },
-  //     {
-  //       name: "Swiper",
-  //       img: Swiper,
-  //       aid: "Swiper is a modern free and open source touch slider with nice transitions & amazing native behaviour.",
-  //     },
-  //     {
-  //       name: "VS-Code",
-  //       img: VSCode,
-  //       aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
-  //     },
-  //   ],
-  //   git: "https://github.com/Dharvo/whatodo",
-  //   link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
-  //   images: [  ],
-  //   tag: ["All", "React", "Completed"],
-  //   content: (
-  //     <span>
-  //       Some conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-  //       tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-  //       dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc{" "}
-  //       <b>cs cjhschcb</b>
-  //       scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh
-  //       scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome
-  //       conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-  //       tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-  //       dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc
-  //       cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb
-  //       scch jsc skh sc
-  //     </span>
-  //   ),
-  //   // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
-  //   position: "Remote",
-  //   updated: "3 months ago",
-  //   timeline: "8 Months",
-  //   milestones: [
-  //     "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
-  //     "Designed the entire project on the Figma application after much sketches on a private canvas.",
-  //     "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
-  //     "Installed Andriod Studio and the Flutter SDK.",
-  //     "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
-  //     "Created my first Scaffold widget after battling with the Emulator setup.",
-  //     "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
-  //     "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
-  //     "Created a basic layout for the App and started including form fields as well as validations.",
-  //     "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
-  //     "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
-  //     "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
-  //     "Understood the function the Main() in the App's launch and execution.",
-  //     "Used the material Library to design iscon and other aspects of the application.",
-  //     "Handled error pages accordingly when requesting data from the Hive API.",
-  //     "Initialized Hive into the project to store User tasks in box on their mobile device.",
-  //     "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
-  //     "Initialized Firebase into the Mobile Application.",
-  //     "Came across Google Account page to Upload application to play store, but was unable...",
-  //     "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
-  //   ],
-  // },
-  // {
-  //   id: 10,
-  //   name: "Whatodo",
-  //   status: "completed",
-  //   utilities: [
-
-  //     {
-  //       name: "C#",
-  //       img: CSharp,
-  //       aid: "The basic fundamental language that the ASP .NET Framework is built on.",
-  //     },
-  //     {
-  //       name: "React JS",
-  //       img: ReactImg,
-  //       aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
-  //     },
-  //     {
-  //       name: "Firebase",
-  //       img: Firebase,
-  //       aid: "Provided tools to host and grow my application as quickly & securely as possible.",
-  //     },
-
-  //     {
-  //       name: "Github",
-  //       img: GithubImg,
-  //       aid: "Committed all my code to an online repo on the Github platform.",
-  //     },
-
-  //     {
-  //       name: "VS-Code",
-  //       img: VSCode,
-  //       aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
-  //     },
-  //   ],
-  //   git: "https://github.com/Dharvo/whatodo",
-  //   link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
-  //   images: [WhaTodoDesktop  ],
-  //   tag: ["All", "React", "Completed"],
-  //   content: (
-  //     <span>
-  //       Some conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-  //       tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-  //       dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc{" "}
-  //       <b>cs cjhschcb</b>
-  //       scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh
-  //       scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome
-  //       conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-  //       tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-  //       dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc
-  //       cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb
-  //       scch jsc skh sc
-  //     </span>
-  //   ),
-  //   // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
-  //   position: "Remote",
-  //   updated: "3 months ago",
-  //   timeline: "8 Months",
-  //   milestones: [
-  //     "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
-  //     "Designed the entire project on the Figma application after much sketches on a private canvas.",
-  //     "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
-  //     "Installed Andriod Studio and the Flutter SDK.",
-  //     "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
-  //     "Created my first Scaffold widget after battling with the Emulator setup.",
-  //     "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
-  //     "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
-  //     "Created a basic layout for the App and started including form fields as well as validations.",
-  //     "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
-  //     "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
-  //     "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
-  //     "Understood the function the Main() in the App's launch and execution.",
-  //     "Used the material Library to design iscon and other aspects of the application.",
-  //     "Handled error pages accordingly when requesting data from the Hive API.",
-  //     "Initialized Hive into the project to store User tasks in box on their mobile device.",
-  //     "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
-  //     "Initialized Firebase into the Mobile Application.",
-  //     "Came across Google Account page to Upload application to play store, but was unable...",
-  //     "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
-  //   ],
-  // },
+      {
+        name: "VS-Code",
+        img: VSCode,
+        aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
+      },
+    ],
+    git: "https://github.com/Dharvo/whatodo",
+    link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
+    images: [WhaTodoDesktop],
+    tag: ["All", "React", "In-Progress"],
+    content: (
+      <span>
+        Some conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
+        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
+        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc{" "}
+        <b>cs cjhschcb</b>
+        scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh
+        scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome
+        conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
+        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
+        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc
+        cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb
+        scch jsc skh sc
+      </span>
+    ),
+    // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
+    position: "Remote",
+    updated: "3 months ago",
+    timeline: "8 Months",
+    milestones: [
+      "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
+      "Designed the entire project on the Figma application after much sketches on a private canvas.",
+      "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
+      "Installed Andriod Studio and the Flutter SDK.",
+      "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
+      "Created my first Scaffold widget after battling with the Emulator setup.",
+      "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
+      "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
+      "Created a basic layout for the App and started including form fields as well as validations.",
+      "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
+      "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
+      "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
+      "Understood the function the Main() in the App's launch and execution.",
+      "Used the material Library to design iscon and other aspects of the application.",
+      "Handled error pages accordingly when requesting data from the Hive API.",
+      "Initialized Hive into the project to store User tasks in box on their mobile device.",
+      "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
+      "Initialized Firebase into the Mobile Application.",
+      "Came across Google Account page to Upload application to play store, but was unable...",
+      "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
+    ],
+  },
 ];
 
 // INFO FOR CONTACT PAGE

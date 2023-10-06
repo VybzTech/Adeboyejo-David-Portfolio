@@ -6,7 +6,7 @@ import InProgress from "../../ICONS/PROJECTS/InProgress.png";
 import ReactImg from "../../ICONS/PROJECTS/React.png";
 import Completed from "../../ICONS/PROJECTS/Completed.png";
 import UIUX from "../../ICONS/PROJECTS/UI-UX.png";
-const ProjectNav = ({ nav, setNav, anime }) => {
+const ProjectNav = ({ nav, setNav }) => {
   const FILTERS = [
     { name: "All", img: All },
     { name: "Completed", img: Completed },
@@ -15,29 +15,30 @@ const ProjectNav = ({ nav, setNav, anime }) => {
     { name: "UI/UX", img: UIUX },
     { name: "Briefcase", img: Briefcase },
   ];
-  const [stick, stickNav] = useState(false);
+  // const [stick, stickNav] = useState(false);
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (
-        document.documentElement.scrollTop >=
-        document.documentElement.clientHeight - 30
-      ) {
-        stickNav(true);
-      } else {
-        stickNav(false);
-      }
-    });
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     if (
+  //       document.documentElement.scrollTop >=
+  //       document.documentElement.clientHeight - 30
+  //     ) {
+  //       stickNav(true);
+  //     } else {
+  //       stickNav(false);
+  //     }
+  //   });
 
-    return () => {
-      window.removeEventListener("scroll", () => {});
-    };
-  }, [stick]);
+  //   return () => {
+  //     window.removeEventListener("scroll", () => {});
+  //   };
+  // }, [stick]);
 
   return (
-    <nav className={`projectNav ${stick && "stick"}`}>
+    // <nav className={`projectNav ${stick && "stick"}`}>
+    <nav className='projectNav'>
       <div>
-        <Slide left spy={anime} triggerOnce delay={1500}>
+        <Slide left   triggerOnce delay={1500}>
           {FILTERS.map(({ name, img }) => {
             return (
               <button

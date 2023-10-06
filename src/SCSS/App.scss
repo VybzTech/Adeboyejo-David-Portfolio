@@ -129,7 +129,7 @@
       }
       //SHOWN
       &.show {
-        @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl left-4 w-[96%] left-[2%] py-7 m-0 backdrop-blur block shadow-lg;
+        @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl w-[96%] left-[2%] py-7 m-0 backdrop-blur block shadow-lg;
       }
     }
   }
@@ -463,6 +463,7 @@
       & > canvas {
         position: absolute !important;
       }
+  
     }
     .serviceWrapper {
       @apply w-full px-4 absolute top-0 left-0;
@@ -510,9 +511,13 @@
               @apply w-32 h-32 object-contain;
             }
           }
+  
         }
+  
       }
+  
     }
+  
   }
 }
 
@@ -525,7 +530,7 @@
     background-image: linear-gradient(-15deg, #000a, #1111),
       url("../IMAGES/ProjectsBackground.png");
     .explore {
-      @apply top-28;
+      @apply top-7 flex flex-col justify-evenly items-center h-full;
       h1 {
         -webkit-text-stroke: 0.5px white;
         @include BoldText(
@@ -548,10 +553,11 @@
         }
       }
       img {
-        width: 5.5%;
-        margin-top: 6.2rem;
-        margin-bottom: 1rem;
-        @apply mx-auto opacity-80;
+        // width: 5.5%;
+        // margin-top: 6.2rem;
+        // margin-bottom: 1rem;
+        // @apply mx-auto opacity-80;
+        @apply opacity-80;
         animation: bounce 2s 100ms ease-in-out infinite forwards !important;
       }
     }
@@ -583,7 +589,6 @@
       @apply w-[75%] ml-[22%] min-h-[90vh];
       .gridSection {
         @apply pt-10 pb-5 px-2.5 relative;
-        position: relative;
         // EACH PROJECT DIV
         .MainProject {
           box-shadow: 0 3px 10px 0.5px #ccc2;
@@ -625,7 +630,7 @@
           }
           .contentWrapper {
             z-index: 3;
-            @apply pr-1 pl-3 mt-[-.3rem];
+            @apply pr-1 pl-3 mt-[-.4rem];
             h4 {
               @include BoldText($size: 0.9rem, $color: $themeBlack3);
               @apply capitalize underline tracking-tight;
@@ -952,7 +957,7 @@
     }
   }
 
-  // UI PFROJECT'S
+  // UI PROJECT'S
   .UIZoom {
     button {
       border: none;

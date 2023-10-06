@@ -218,7 +218,7 @@
   box-shadow: 2px 2px 8px 0.75px rgba(34, 34, 34, 0.6666666667), -1px -1px 4px rgba(17, 17, 17, 0.8666666667);
 }
 #light .navbar .navigation.show {
-  @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl left-4 w-[96%] left-[2%] py-7 m-0 backdrop-blur block shadow-lg;
+  @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl w-[96%] left-[2%] py-7 m-0 backdrop-blur block shadow-lg;
 }
 
 #home .rel {
@@ -632,7 +632,7 @@
   background-image: linear-gradient(-15deg, rgba(0, 0, 0, 0.6666666667), rgba(17, 17, 17, 0.0666666667)), url("../IMAGES/ProjectsBackground.png");
 }
 #projects .bg .explore {
-  @apply top-28;
+  @apply top-7 flex flex-col justify-evenly items-center h-full;
 }
 #projects .bg .explore h1 {
   -webkit-text-stroke: 0.5px white;
@@ -657,10 +657,7 @@
   line-break: strict;
 }
 #projects .bg .explore img {
-  width: 5.5%;
-  margin-top: 6.2rem;
-  margin-bottom: 1rem;
-  @apply mx-auto opacity-80;
+  @apply opacity-80;
   animation: bounce 2s 100ms ease-in-out infinite forwards !important;
 }
 #projects main {
@@ -695,7 +692,6 @@
 }
 #projects main section .gridSection {
   @apply pt-10 pb-5 px-2.5 relative;
-  position: relative;
 }
 #projects main section .gridSection .MainProject {
   box-shadow: 0 3px 10px 0.5px rgba(204, 204, 204, 0.1333333333);
@@ -725,7 +721,7 @@
 }
 #projects main section .gridSection .MainProject .contentWrapper {
   z-index: 3;
-  @apply pr-1 pl-3 mt-[-.3rem];
+  @apply pr-1 pl-3 mt-[-.4rem];
 }
 #projects main section .gridSection .MainProject .contentWrapper h4 {
   color: #333;
@@ -989,7 +985,7 @@
 
 .foot {
   z-index: 2;
-  background-color: rgba(14, 14, 14, 0.968627451);
+  background-color: rgba(14, 14, 14, 0.9764705882);
   color: #eee;
   @apply px-3 py-3;
 }
@@ -1160,7 +1156,7 @@
   @apply font-extralight capitalize  pt-2;
 }
 #portals .ProjectDets .milestone li {
-  color: rgba(14, 14, 14, 0.968627451);
+  color: rgba(14, 14, 14, 0.9764705882);
   font-family: montLight, Verdana, sans-serif;
   letter-spacing: -0.25px;
   word-spacing: 1.5px;
@@ -1183,7 +1179,7 @@
   @apply flex items-center justify-start;
 }
 #portals .ProjectDets .tools > div p {
-  color: rgba(14, 14, 14, 0.968627451);
+  color: rgba(14, 14, 14, 0.9764705882);
   font-family: montLight, Verdana, sans-serif;
   letter-spacing: 0.1px;
   word-spacing: 2px;
@@ -1221,6 +1217,16 @@
   }
   #light .navbar .logo svg {
     @apply w-6;
+  }
+  #light .navbar .navigation > div > div .nav {
+    -webkit-text-stroke: 0.2px white;
+    @apply my-1 px-10 pt-4 pb-1 mx-auto;
+  }
+  #light .navbar .navigation > div > div:last-of-type button {
+    @apply mt-3.5 mb-0 px-3 py-2.5;
+  }
+  #light .navbar .navigation.show {
+    @apply top-[14vh] w-[94%] left-[3%] py-3;
   }
   #light #home .intro h1 {
     font-size: 2.2rem;
@@ -1266,10 +1272,171 @@
     padding-top: 1.85rem;
   }
   #light #about .content {
-    @apply max-h-[62vh] px-6;
+    @apply max-h-[65vh] px-6;
   }
   #light #about .bg > div:last-of-type {
-    @apply my-2.5;
+    @apply mt-2.5 mb-0;
+  }
+  #light #about section .imgX2 {
+    @apply w-[50%];
+  }
+  #light #about section .aboutMe {
+    @apply px-7;
+  }
+  #light #about #tsparticles {
+    height: 380vh;
+  }
+  #light #about .myServices .serviceWrapper .serviceList {
+    @apply flex gap-4;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service {
+    @apply pl-4 pr-3 py-5 pb-9 w-fit;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service h3 {
+    @apply text-sm;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service .icon {
+    @apply p-1.5;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service p {
+    @apply max-w-[190px];
+  }
+  #light #projects .explore {
+    @apply top-12;
+  }
+  #light #projects .explore .sub {
+    @apply my-[-2rem];
+  }
+  #light #projects main .projectNav > div {
+    @apply top-[2.8rem];
+  }
+  #light #projects main .projectNav > div .Nav {
+    @apply flex items-center justify-start py-1 px-1 mb-1.5 
+              [&.active>span]:text-[0.61rem] font-bold [&.active>img]:mr-[.1rem];
+  }
+  #light #projects main .projectNav > div .Nav img {
+    @apply pb-0.5 w-[30%] m-0;
+  }
+  #light #projects main .projectNav > div .Nav span {
+    margin-left: 0.25rem;
+    color: rgba(51, 51, 51, 0.6666666667);
+  }
+  #light #projects main section .gridSection .MainProject {
+    @apply mx-7;
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+    @apply max-h-[45vh];
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper {
+    @apply pr-2 pl-4 mt-[-.3rem];
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper p {
+    padding-top: 3px;
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper .actions {
+    @apply flex justify-between;
+  }
+  #light #projects main section .tools.show {
+    @apply mt-[-1.25rem];
+  }
+  #light #projects main section .tools.show::before {
+    @apply h-6 left-12;
+  }
+  #light #projects main section .UI-UX {
+    @apply flex gap-5 px-2 py-7 pl-5;
+  }
+  #light #projects main section .UI-UX .UI_image img {
+    @apply max-w-[100%] ml-0;
+  }
+  #light #contact .bg .Pleasantries {
+    @apply top-24;
+  }
+  #light #contact main .svg {
+    @apply w-[65%] m-0 mx-auto;
+  }
+  #light #contact main .socials {
+    @apply m-0 mx-auto;
+  }
+  #light #contact main .ContactMeWrapper {
+    @apply px-8;
+  }
+  #light #contact main .ContactMeWrapper .ContactMe {
+    @apply px-5;
+  }
+  #light #contact main .ContactMeWrapper .circleWrapper {
+    @apply mt-[-11rem] mr-[-10.5rem] 
+            h-[90vh] mb-[-5.5rem];
+  }
+  #portals .ResumeImg {
+    @apply p-3 pb-1.5;
+  }
+  #portals .ResumeImg img {
+    @apply max-h-[80vh];
+  }
+  #portals .ResumeDwn {
+    @apply mt-[-.5rem] mr-[18%];
+  }
+  #portals .UIZoom button {
+    @apply mt-[-1.5rem];
+  }
+  #portals #portals .ResumeDwn {
+    @apply justify-center;
+  }
+}
+@media screen and (min-height: 320px) and (min-width: 450px) and (max-width: 580px) and (orientation: Landscape) {
+  #light .navbar {
+    @apply h-[14vh];
+  }
+  #light .navbar .logo svg {
+    @apply w-6;
+  }
+  #light .navbar .navigation > div > div .nav {
+    @apply my-1 px-10 pt-4 pb-1 mx-auto;
+  }
+  #light .navbar .navigation > div > div:last-of-type button {
+    @apply mt-3.5 mb-3;
+  }
+  #light .navbar .navigation.show {
+    @apply top-[14.5vh] py-0 w-[92%] left-[4%];
+  }
+  #light #home .lilAbout {
+    @apply py-4 px-10;
+  }
+  #light #home .lilAbout .circleImg {
+    @apply w-[45%] py-[1.8%] px-[1.8%] pb-[2%];
+  }
+  #light #home .lilAbout .about .hero h2 .line > div {
+    @apply h-[1.65vh];
+  }
+  #light #home .lilAbout .about p {
+    @apply leading-[2];
+  }
+  #light #home .lilAbout .about .more button {
+    @apply mb-5;
+  }
+  #light #home .skills #tsparticles {
+    @apply h-[270vh];
+  }
+  #light #home .KeySkillsWrapper .skillList {
+    @apply px-4 pl-8;
+  }
+  #light #home .KeySkillsWrapper .skillList .skillPill {
+    @apply mb-3;
+  }
+  #light #home .KeySkillsWrapper .skillList .skillPill .skillName {
+    @apply min-w-[22%];
+  }
+  #light #home .KeySkillsWrapper .skillList .skillPill .skillName p {
+    @apply py-[0.32rem];
+  }
+  #light #home .KeySkillsWrapper .skillList .skillPill > div.progressBar {
+    @apply w-[78%];
+  }
+  #light #home .skillPoster {
+    @apply mt-[-1.2rem] mr-[-1.0rem];
+  }
+  #light #home .skillPoster > div svg {
+    @apply w-[60%];
   }
 }
 #light.dark .navbar .logo svg path {
@@ -1306,10 +1473,10 @@
   filter: brightness(0.8);
 }
 #light.dark #home .lilAbout {
-  background-color: rgba(14, 14, 14, 0.968627451);
+  background-color: rgba(14, 14, 14, 0.9764705882);
 }
 #light.dark #home .lilAbout .circleImg {
-  background-color: rgba(14, 14, 14, 0.968627451);
+  background-color: rgba(14, 14, 14, 0.9764705882);
   box-shadow: 0 0 14px 2.5px rgba(0, 0, 0, 0.2);
 }
 #light.dark #home .lilAbout .about .hero h2 {
@@ -1325,7 +1492,7 @@
   background: linear-gradient(0rad, #01041a, #02244d, #033169);
 }
 #light.dark #home .homeProjects {
-  background-color: rgba(14, 14, 14, 0.968627451);
+  background-color: rgba(14, 14, 14, 0.9764705882);
 }
 #light.dark #home .homeProjects h3 {
   -webkit-text-stroke: 0.5px #021db8;
@@ -1350,7 +1517,7 @@
   color: #f9f9fa;
 }
 #light.dark #about .myServices {
-  background: linear-gradient(180deg, #222, rgba(14, 14, 14, 0.968627451));
+  background: linear-gradient(180deg, #222, rgba(14, 14, 14, 0.9764705882));
 }
 #light.dark #about .myServices .serviceWrapper h2 {
   -webkit-text-stroke: 0.2px #f9f9fa;
@@ -1446,7 +1613,7 @@
   box-shadow: 0 10px 12px 0.5px rgba(17, 17, 17, 0.6666666667);
 }
 #light.dark #contact main {
-  background-color: rgba(14, 14, 14, 0.968627451);
+  background-color: rgba(14, 14, 14, 0.9764705882);
 }
 #light.dark #contact main .hero > div {
   @apply bg-slate-100;
@@ -1556,4 +1723,7 @@
 }
 #light.dark #portals .ProjectDets .tools > div p {
   color: #e5e5e5;
+}
+#light.dark .foot {
+  background-color: #0e0e0e;
 }
