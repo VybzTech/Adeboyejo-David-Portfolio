@@ -1415,28 +1415,40 @@
     @apply mb-5;
   }
   #light #home .skills #tsparticles {
-    @apply h-[270vh];
+    @apply h-[280vh];
   }
-  #light #home .KeySkillsWrapper .skillList {
+  #light #home .skills .KeySkillsWrapper .skillList {
     @apply px-4 pl-8;
   }
-  #light #home .KeySkillsWrapper .skillList .skillPill {
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill {
     @apply mb-3;
   }
-  #light #home .KeySkillsWrapper .skillList .skillPill .skillName {
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill .skillName {
     @apply min-w-[22%];
   }
-  #light #home .KeySkillsWrapper .skillList .skillPill .skillName p {
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill .skillName p {
     @apply py-[0.32rem];
   }
-  #light #home .KeySkillsWrapper .skillList .skillPill > div.progressBar {
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill > div.progressBar {
     @apply w-[78%];
   }
-  #light #home .skillPoster {
+  #light #home .skills .skillPoster {
     @apply mt-[-1.2rem] mr-[-1.0rem];
   }
-  #light #home .skillPoster > div svg {
+  #light #home .skills .skillPoster > div svg {
     @apply w-[60%];
+  }
+  #light #home .skills .tools p {
+    @apply min-w-[500px] mt-[-1rem];
+  }
+  #light #home .skills .homeProjects .swiper .swiper-slide {
+    @apply h-[50vh] ml-1;
+  }
+  #light #home .skills .homeProjects .swiper .swiper-slide img {
+    @apply min-w-full;
+  }
+  #light .about .bg h1 {
+    padding-top: 0.85rem;
   }
 }
 #light.dark .navbar .logo svg path {

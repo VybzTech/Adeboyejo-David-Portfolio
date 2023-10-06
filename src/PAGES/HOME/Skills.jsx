@@ -45,10 +45,10 @@ const Skills = () => {
       <div className="skills">
         <Particles params={Params} />
         <div className="KeySkillsWrapper">
-          <Fade left>
+          <Fade left className="keySkills">
             <KeySkills />
           </Fade>
-          <Slide triggerOnce bottom>
+          <Slide triggerOnce bottom className="skillPoster">
             <SkillSvg />
           </Slide>
           <Slide triggerOnce bottom>

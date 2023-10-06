@@ -2,7 +2,7 @@ import React from "react";
 
 function SkillSvg() {
   return (
-    <div className="skillPoster">
+    <>
       {/* SVG IMAGE */}
       <div>
         <svg
@@ -624,7 +624,7 @@ function SkillSvg() {
           </defs>
         </svg>
       </div>
-    </div>
+    </>
   );
 }
 

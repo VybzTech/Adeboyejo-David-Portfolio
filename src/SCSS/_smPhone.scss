@@ -935,34 +935,47 @@
           }
         }
       }
-      .skills #tsparticles {
-        @apply h-[270vh];
-      }
-      .KeySkillsWrapper {
-        //  @apply flex;
-         
-        .skillList {
-          @apply px-4 pl-8;
-          .skillPill {
-            @apply mb-3;
-            .skillName {
-              @apply min-w-[22%];
-              p {
-                @apply py-[0.32rem];
+      .skills {
+        #tsparticles {
+          @apply h-[280vh];
+        }
+        .KeySkillsWrapper {
+          .skillList {
+            @apply px-4 pl-8;
+            .skillPill {
+              @apply mb-3;
+              .skillName {
+                @apply min-w-[22%];
+                p {
+                  @apply py-[0.32rem];
+                }
+              } //PROGRESS BAR
+              > div.progressBar {
+                @apply w-[78%];
               }
-            } //PROGRESS BAR
-            > div.progressBar {
-              @apply w-[78%];}
+            }
           }
         }
-      }
-      .skillPoster {
-        @apply mt-[-1.2rem] mr-[-1.0rem];
-        & > div {
-          svg {
+        .skillPoster {
+          @apply mt-[-1.2rem] mr-[-1.0rem];
+          & > div svg {
             @apply w-[60%];
           }
         }
+        .tools p {
+          @apply min-w-[500px] mt-[-1rem];
+        }
+        .homeProjects .swiper .swiper-slide {
+          @apply h-[50vh] ml-1;
+          img {
+            @apply min-w-full;
+          }
+        }
+      }
+    }
+    .about {
+      .bg h1 {
+        padding-top: 0.85rem;
       }
     }
   }

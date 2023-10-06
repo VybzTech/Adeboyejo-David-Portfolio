@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 
 const KeySkills = withRouter(({ history }) => {
   return (
-    <div className="keySkills">
+    <>
       <div>
         <h2>Key Skills</h2>
       </div>
@@ -38,7 +38,7 @@ const KeySkills = withRouter(({ history }) => {
           HIRE ME
         </button>
       </div>
-    </div>
+    </>
   );
 });
 
