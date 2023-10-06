@@ -1208,7 +1208,197 @@
   font-size: 0.8rem;
 }
 
+@media screen and (min-height: 320px) and (min-width: 450px) and (max-width: 580px) and (orientation: Landscape) {
+  .Loader > div svg {
+    @apply w-[7vw] mx-5;
+  }
+  .Loader .progress {
+    @apply h-1 w-[3rem] bg-gray-900 rounded my-7 transition-all duration-100 ease-in-out;
+  }
+  #light .navbar {
+    @apply h-[14vh];
+  }
+  #light .navbar .logo svg {
+    @apply w-6;
+  }
+  #light .navbar .navigation > div > div .nav {
+    @apply my-1 px-10 pt-4 pb-1 mx-auto;
+  }
+  #light .navbar .navigation > div > div:last-of-type button {
+    @apply mt-3.5 mb-3;
+  }
+  #light .navbar .navigation.show {
+    @apply top-[14.5vh] py-0 w-[92%] left-[4%];
+  }
+  #light #home .lilAbout {
+    @apply py-4 px-10;
+  }
+  #light #home .lilAbout .circleImg {
+    @apply w-[45%] py-[1.8%] px-[1.8%] pb-[2%];
+  }
+  #light #home .lilAbout .about .hero h2 .line > div {
+    @apply h-[1.65vh];
+  }
+  #light #home .lilAbout .about p {
+    @apply leading-[2];
+  }
+  #light #home .lilAbout .about .more button {
+    @apply mb-5;
+  }
+  #light #home .skills #tsparticles {
+    @apply h-[280vh];
+  }
+  #light #home .skills .KeySkillsWrapper .skillList {
+    @apply px-4 pl-8;
+  }
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill {
+    @apply mb-3;
+  }
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill .skillName {
+    @apply min-w-[22%];
+  }
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill .skillName p {
+    @apply py-[0.32rem];
+  }
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill > div.progressBar {
+    @apply w-[78%];
+  }
+  #light #home .skills .skillPoster {
+    @apply mt-[-1.2rem] mr-[-1.0rem];
+  }
+  #light #home .skills .skillPoster > div svg {
+    @apply w-[60%];
+  }
+  #light #home .skills .tools p {
+    @apply w-[500px] mt-[-1rem];
+  }
+  #light #home .skills .homeProjects .swiper .swiper-slide {
+    @apply h-[50vh] ml-1;
+  }
+  #light #home .skills .homeProjects .swiper .swiper-slide img {
+    @apply min-w-full;
+  }
+  #light #about .bg {
+    @apply h-[120vh];
+  }
+  #light #about .bg h1 {
+    padding-top: 1.2rem;
+  }
+  #light #about .bg > div:last-of-type {
+    @apply mt-2;
+  }
+  #light #about .content {
+    @apply max-h-[77vh] px-10;
+  }
+  #light #about section .imgX2 {
+    @apply w-[50%];
+  }
+  #light #about section .aboutMe {
+    @apply px-10;
+  }
+  #light #about #tsparticles {
+    height: 380vh;
+  }
+  #light #about .myServices .serviceWrapper h2 {
+    font-size: 2.2rem;
+  }
+  #light #about .myServices .serviceWrapper .serviceList {
+    @apply flex gap-4 p-4;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service {
+    @apply pl-5 pr-3.5 py-5 pb-10;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service .icon {
+    @apply p-2.5;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service p {
+    @apply max-w-[200px];
+  }
+  #light #projects .explore {
+    @apply top-8;
+  }
+  #light #projects .explore .sub {
+    @apply px-8 my-[-2rem];
+  }
+  #light #projects main .projectNav > div {
+    @apply top-[2.7rem];
+  }
+  #light #projects main .projectNav > div .Nav {
+    @apply flex items-center justify-start py-1 px-1 mb-2  [&.active>span]:text-[0.61rem] font-bold [&.active>img]:mr-[.1rem];
+  }
+  #light #projects main .projectNav > div .Nav img {
+    @apply pl-0.5 w-[27%] m-0;
+  }
+  #light #projects main .projectNav > div .Nav span {
+    margin-left: 0.25rem;
+    color: rgba(51, 51, 51, 0.6666666667);
+  }
+  #light #projects main section {
+    @apply px-8;
+  }
+  #light #projects main section .gridSection .MainProject {
+    @apply mr-5 ml-10;
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+    @apply max-h-[50vh];
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper {
+    @apply pr-2.5 pl-5 mt-[-.3rem];
+  }
+  #light #projects main section .tools.show {
+    @apply mt-[-1.25rem] ml-4;
+  }
+  #light #projects main section .tools.show::before {
+    @apply h-6 left-12;
+  }
+  #light #projects main section .UI-UX {
+    @apply flex gap-6 pr-1 py-7 pl-3;
+  }
+  #light #projects main section .UI-UX .UI_image img {
+    @apply max-w-[100%] ml-0;
+  }
+  #light #contact .bg {
+    @apply h-[120vh];
+  }
+  #light #contact .bg .Pleasantries {
+    @apply top-20;
+  }
+  #light #contact main .svg {
+    @apply w-[65%] m-0 mx-auto;
+  }
+  #light #contact main .socials {
+    @apply m-0 mx-auto;
+  }
+  #light #contact main .ContactMeWrapper {
+    @apply px-20;
+  }
+  #light #contact main .ContactMeWrapper .ContactMe {
+    @apply px-5;
+  }
+  #light #contact main .ContactMeWrapper .circleWrapper {
+    @apply mt-[-11rem] mr-[-12.5rem] 
+            h-[90vh] mb-[-5.5rem];
+  }
+  #light #portals .ResumeImg {
+    @apply p-2.5;
+  }
+  #light #portals .ResumeImg img {
+    @apply max-h-[80vh];
+  }
+  #light #portals .ResumeDwn {
+    @apply mt-[-.55rem] mr-[23%];
+  }
+  #light #portals .UIZoom button {
+    @apply mt-[-1.5rem];
+  }
+}
 @media screen and (min-height: 320px) and (max-width: 480px) and (orientation: Landscape) {
+  .Loader > div svg {
+    @apply w-[7vw] mx-5;
+  }
+  .Loader .progress {
+    @apply h-1 w-[3rem] bg-gray-900 rounded my-7 transition-all duration-100 ease-in-out;
+  }
   #light .navbar {
     @apply h-[13vh];
   }
@@ -1367,37 +1557,47 @@
     @apply mt-[-11rem] mr-[-10.5rem] 
             h-[90vh] mb-[-5.5rem];
   }
-  #portals .ResumeImg {
+  #light #portals .ResumeImg {
     @apply p-3 pb-1.5;
   }
-  #portals .ResumeImg img {
+  #light #portals .ResumeImg img {
     @apply max-h-[80vh];
   }
-  #portals .ResumeDwn {
-    @apply mt-[-.5rem] mr-[18%];
+  #light #portals .ResumeDwn {
+    @apply justify-center mt-[-.5rem] mr-[18%];
   }
-  #portals .UIZoom button {
+  #light #portals .UIZoom button {
     @apply mt-[-1.5rem];
   }
-  #portals #portals .ResumeDwn {
-    @apply justify-center;
-  }
 }
-@media screen and (min-height: 320px) and (min-width: 450px) and (max-width: 580px) and (orientation: Landscape) {
+@media screen and (min-height: 350px) and (max-width: 750px) and (orientation: Landscape) {
+  .Loader > div svg {
+    @apply w-[8vw] mx-5;
+  }
+  .Loader .progress {
+    @apply h-1 w-[3rem] bg-gray-900 rounded my-7 transition-all duration-100 ease-in-out;
+  }
   #light .navbar {
-    @apply h-[14vh];
+    @apply h-[15vh];
   }
   #light .navbar .logo svg {
-    @apply w-6;
+    @apply w-7;
+  }
+  #light .navbar .theme svg,
+  #light .navbar .navBtn svg {
+    @apply w-6 h-6;
   }
   #light .navbar .navigation > div > div .nav {
-    @apply my-1 px-10 pt-4 pb-1 mx-auto;
+    @apply my-1.5 px-14 pt-2 pb-1;
   }
   #light .navbar .navigation > div > div:last-of-type button {
-    @apply mt-3.5 mb-3;
+    @apply my-2;
   }
   #light .navbar .navigation.show {
-    @apply top-[14.5vh] py-0 w-[92%] left-[4%];
+    @apply top-[15.5vh] w-[94%] left-[3%];
+  }
+  #light #home .vid video {
+    @apply h-[auto];
   }
   #light #home .lilAbout {
     @apply py-4 px-10;
@@ -1415,7 +1615,7 @@
     @apply mb-5;
   }
   #light #home .skills #tsparticles {
-    @apply h-[280vh];
+    @apply h-[240vh];
   }
   #light #home .skills .KeySkillsWrapper .skillList {
     @apply px-4 pl-8;
@@ -1436,19 +1636,129 @@
     @apply mt-[-1.2rem] mr-[-1.0rem];
   }
   #light #home .skills .skillPoster > div svg {
-    @apply w-[60%];
+    @apply w-[50%];
   }
   #light #home .skills .tools p {
-    @apply min-w-[500px] mt-[-1rem];
+    @apply w-[500px] mt-0;
   }
-  #light #home .skills .homeProjects .swiper .swiper-slide {
-    @apply h-[50vh] ml-1;
+  #light #home .homeProjects .swiper .swiper-slide {
+    @apply h-[60vh] ml-2;
   }
-  #light #home .skills .homeProjects .swiper .swiper-slide img {
+  #light #home .homeProjects .swiper .swiper-slide img {
     @apply min-w-full;
   }
-  #light .about .bg h1 {
-    padding-top: 0.85rem;
+  #light #about .bg {
+    background-size: cover;
+  }
+  #light #about .bg h1 {
+    padding-top: 1.3rem;
+  }
+  #light #about .content {
+    @apply max-h-[75vh] px-12;
+  }
+  #light #about section .imgX2 {
+    @apply w-[50%];
+  }
+  #light #about section .aboutMe {
+    @apply px-16;
+  }
+  #light #about #tsparticles {
+    height: 330vh;
+  }
+  #light #about .myServices .serviceWrapper h2 {
+    font-size: 2.2rem;
+  }
+  #light #about .myServices .serviceWrapper .serviceList {
+    @apply flex gap-4 p-4;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service {
+    @apply pl-5 pr-3.5 py-5 pb-10;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service .icon {
+    @apply p-2.5;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service p {
+    @apply max-w-[200px];
+  }
+  #light #projects .explore {
+    @apply top-8;
+  }
+  #light #projects .explore .sub {
+    @apply px-8 my-[-2rem];
+  }
+  #light #projects main .projectNav > div {
+    @apply top-[2.7rem];
+  }
+  #light #projects main .projectNav > div .Nav {
+    @apply flex items-center justify-start py-1 px-1 mb-2  [&.active>span]:text-[0.61rem] font-bold [&.active>img]:mr-[.1rem];
+  }
+  #light #projects main .projectNav > div .Nav img {
+    @apply pl-0.5 w-[27%] m-0;
+  }
+  #light #projects main .projectNav > div .Nav span {
+    margin-left: 0.25rem;
+    color: rgba(51, 51, 51, 0.6666666667);
+  }
+  #light #projects main section {
+    @apply px-8;
+  }
+  #light #projects main section .gridSection .MainProject {
+    @apply mr-5 ml-10;
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+    @apply max-h-[50vh];
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper {
+    @apply pr-2.5 pl-5 mt-[-.3rem];
+  }
+  #light #projects main section .tools.show {
+    @apply mt-[-1.25rem] ml-4;
+  }
+  #light #projects main section .tools.show::before {
+    @apply h-6 left-12;
+  }
+  #light #projects main section .UI-UX {
+    @apply flex gap-6 pr-1 py-7 pl-3;
+  }
+  #light #projects main section .UI-UX .UI_image img {
+    @apply max-w-[100%] ml-0;
+  }
+  #light #contact .bg {
+    @apply h-[120vh];
+  }
+  #light #contact .bg .Pleasantries {
+    @apply top-20;
+  }
+  #light #contact main .svg {
+    @apply w-[65%] m-0 mx-auto;
+  }
+  #light #contact main .socials {
+    @apply m-0 mx-auto;
+  }
+  #light #contact main .ContactMeWrapper {
+    @apply px-20;
+  }
+  #light #contact main .ContactMeWrapper .ContactMe {
+    @apply px-5;
+  }
+  #light #contact main .ContactMeWrapper .circleWrapper {
+    @apply mt-[-11rem] mr-[-12.5rem] 
+            h-[90vh] mb-[-5.5rem];
+  }
+  #light #portals .ResumeImg {
+    @apply p-2.5;
+  }
+  #light #portals .ResumeImg img {
+    @apply max-h-[80vh];
+  }
+  #light #portals .ResumeDwn {
+    @apply mt-[-.55rem] mr-[25%];
+  }
+  #light #portals .ResumeDwn button:first-of-type {
+    @apply mr-14;
+  }
+  #light #portals .UIZoom button {
+    @apply mt-[-1.5rem];
   }
 }
 #light.dark .navbar .logo svg path {

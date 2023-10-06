@@ -1,4 +1,6 @@
-// // MID PHONE SIZE
+//ignore:unknown_at_rule_@applyscss
+
+// MID PHONE SIZE
 // @media screen and (max-width: 375px) {
 // 	#light {
 // 		//--------- NAVBAR
@@ -645,8 +647,261 @@
 
 //   ******************************************* LANDSCAPE *******************************************
 
+// PHONE LANDSCAPE   iPhone 4, iPhone 5/SE (-100px),
+@media screen and (min-height: 320px) and (min-width: 450px) and (max-width: 580px) and (orientation: Landscape) {
+  //--------- LOADER
+.Loader {
+  & > div {
+    svg {
+      @apply w-[7vw] mx-5;
+    }
+  }
+  .progress {
+    @apply h-1 w-[3rem] bg-gray-900 rounded my-7 transition-all duration-100 ease-in-out;
+  }
+}
+  #light {
+    //--------- NAVBAR
+    .navbar {
+      @apply h-[14vh];
+      .logo svg {
+        @apply w-6;
+      }
+      .navigation {
+        > div {
+          > div {
+            .nav {
+              @apply my-1 px-10 pt-4 pb-1 mx-auto;
+            }
+          }
+          & > div:last-of-type button {
+            @apply mt-3.5 mb-3; //px-3 py-2.5;
+          }
+        }
+        //SHOWN
+        &.show {
+          @apply top-[14.5vh] py-0 w-[92%] left-[4%];
+        }
+      }
+    }
+    #home {
+      .lilAbout {
+        @apply py-4 px-10;
+        .circleImg {
+          @apply w-[45%] py-[1.8%] px-[1.8%] pb-[2%];
+        }
+        .about {
+          .hero h2 .line > div {
+            @apply h-[1.65vh];
+          }
+          p {
+            @apply leading-[2];
+          }
+          .more button {
+            @apply mb-5;
+          }
+        }
+      }
+      .skills {
+        #tsparticles {
+          @apply h-[280vh];
+        }
+        .KeySkillsWrapper {
+          .skillList {
+            @apply px-4 pl-8;
+            .skillPill {
+              @apply mb-3;
+              .skillName {
+                @apply min-w-[22%];
+                p {
+                  @apply py-[0.32rem];
+                }
+              } //PROGRESS BAR
+              > div.progressBar {
+                @apply w-[78%];
+              }
+            }
+          }
+        }
+        .skillPoster {
+          @apply mt-[-1.2rem] mr-[-1.0rem];
+          & > div svg {
+            @apply w-[60%];
+          }
+        }
+        .tools p {
+          @apply w-[500px] mt-[-1rem];
+        }
+        .homeProjects .swiper .swiper-slide {
+          @apply h-[50vh] ml-1;
+          img {
+            @apply min-w-full;
+          }
+        }
+      }
+    }
+    #about {
+      .bg {
+        @apply h-[120vh];
+        h1 {
+          padding-top: 1.2rem;
+        }
+        > div:last-of-type {
+          @apply mt-2; // mb-0;
+        }
+      }
+      .content {
+        @apply max-h-[77vh] px-10;
+      }
+      section {
+        .imgX2 {
+          @apply w-[50%];
+        }
+        .aboutMe {
+          @apply px-10;
+        }
+      }
+      #tsparticles {
+        height: 380vh;
+      }
+      .myServices .serviceWrapper {
+        h2 {
+          font-size: 2.2rem;
+        }
+        .serviceList {
+          @apply flex gap-4 p-4;
+          .service {
+            @apply pl-5 pr-3.5 py-5 pb-10;
+            .icon {
+              @apply p-2.5;
+            }
+            p {
+              @apply max-w-[200px];
+            }
+          }
+        }
+      }
+    }
+    #projects {
+      .explore {
+        @apply top-8;
+        .sub {
+          @apply px-8 my-[-2rem];
+        }
+      }
+      main {
+        .projectNav {
+          // WHITE BACKGROUND SIDE NAV
+          > div {
+            @apply top-[2.7rem];
+            //  EACH BUTTON
+            .Nav {
+              @apply flex items-center justify-start py-1 px-1 mb-2  [&.active>span]:text-[0.61rem] font-bold [&.active>img]:mr-[.1rem];
+              img {
+                @apply pl-0.5 w-[27%] m-0;
+              }
+              span {
+                margin-left: 0.25rem;
+                color: $themeDGray;
+              }
+            }
+          }
+        }
+        section {
+          @apply px-8;
+          .gridSection {
+            // EACH PROJECT DIV
+            .MainProject {
+              @apply mr-5 ml-10;
+              .swiper .swiper-wrapper .swiper-slide img {
+                @apply max-h-[50vh];
+              }
+              .contentWrapper {
+                @apply pr-2.5 pl-5 mt-[-.3rem];
+              }
+            }
+          }
+          // USED TOOLS DIV
+          .tools {
+            &.show {
+              @apply mt-[-1.25rem] ml-4;
+              &::before {
+                @apply h-6 left-12;
+              }
+            }
+          }
+          // UI IMAGES
+          .UI-UX {
+            @apply flex gap-6 pr-1 py-7 pl-3;
+            .UI_image {
+              img {
+                @apply max-w-[100%] ml-0;
+              }
+            }
+          }
+        }
+      }
+    }
+    #contact {
+      .bg {
+        @apply h-[120vh];
+        .Pleasantries {
+          @apply top-20;
+        }
+      }
+      main {
+        .svg {
+          @apply w-[65%] m-0 mx-auto;
+        }
+        .socials {
+          @apply m-0 mx-auto;
+        }
+        .ContactMeWrapper {
+          @apply px-20;
+          .ContactMe {
+            @apply px-5;
+          }
+          .circleWrapper {
+            // display: none;
+            @apply mt-[-11rem] mr-[-12.5rem] 
+            h-[90vh] mb-[-5.5rem];
+          }
+        }
+      }
+    }
+    //--------- PORTALS
+    #portals {
+      // RESUME
+      .ResumeImg {
+        @apply p-2.5; // pb-1.5;
+        img {
+          @apply max-h-[80vh];
+        }
+      }
+      .ResumeDwn {
+        @apply mt-[-.55rem] mr-[23%];
+      }
+      // UI PROJECT'S
+      .UIZoom button {
+        @apply mt-[-1.5rem];
+      }
+    }
+  }
+}
+
 // PHONE LANDSCAPE - iPhone 4
 @media screen and (min-height: 320px) and (max-width: 480px) and (orientation: Landscape) {
+  //--------- LOADER
+.Loader {
+  & > div {
+    svg {
+      @apply w-[7vw] mx-5;
+    }
+  }
+  .progress {
+    @apply h-1 w-[3rem] bg-gray-900 rounded my-7 transition-all duration-100 ease-in-out;
+  }
+}
   #light {
     //--------- NAVBAR
     .navbar {
@@ -863,61 +1118,72 @@
         }
       }
     }
-  }
-  //--------- PORTALS
-  #portals {
-    // RESUME
-    .ResumeImg {
-      @apply p-3 pb-1.5;
-      img {
-        @apply max-h-[80vh];
+
+    //--------- PORTALS
+    #portals {
+      // RESUME
+      .ResumeImg {
+        @apply p-3 pb-1.5;
+        img {
+          @apply max-h-[80vh];
+        }
       }
-    }
-    .ResumeDwn {
-      @apply mt-[-.5rem] mr-[18%];
-    }
-    // UI PROJECT'S
-    .UIZoom button {
-      @apply mt-[-1.5rem];
-    }
-    #portals .ResumeDwn {
-      @apply justify-center;
+      .ResumeDwn {
+        @apply justify-center mt-[-.5rem] mr-[18%];
+      }
+      // UI PROJECT'S
+      .UIZoom button {
+        @apply mt-[-1.5rem];
+      }
     }
   }
 }
 
 // PHONE LANDSCAPE   iPhone , Nexus 6, Samsung Galaxy S8+
 @media screen and (min-height: 350px) and (max-width: 750px) and (orientation: Landscape) {
-  // ?
-  // ?
+ //--------- LOADER
+.Loader {
+  & > div {
+    svg {
+      @apply w-[8vw] mx-5;
+    }
+  }
+  .progress {
+    @apply h-1 w-[3rem] bg-gray-900 rounded my-7 transition-all duration-100 ease-in-out;
+  }
 }
-// PHONE LANDSCAPE   iPhone 4, iPhone 5/SE (-100px),
-@media screen and (min-height: 320px) and (min-width: 450px) and (max-width: 580px) and (orientation: Landscape) {
   #light {
     //--------- NAVBAR
     .navbar {
-      @apply h-[14vh];
+      @apply h-[15vh];
       .logo svg {
-        @apply w-6;
+        @apply w-7;
+      }
+      .theme svg,
+      .navBtn svg {
+        @apply w-6 h-6;
       }
       .navigation {
         > div {
           > div {
             .nav {
-              @apply my-1 px-10 pt-4 pb-1 mx-auto;
+              @apply my-1.5 px-14 pt-2 pb-1;
             }
           }
           & > div:last-of-type button {
-            @apply mt-3.5 mb-3; //px-3 py-2.5;
+            @apply my-2;
           }
         }
         //SHOWN
         &.show {
-          @apply top-[14.5vh] py-0 w-[92%] left-[4%];
+          @apply top-[15.5vh] w-[94%] left-[3%];
         }
       }
     }
     #home {
+      .vid video{
+        @apply h-[auto];
+      }
       .lilAbout {
         @apply py-4 px-10;
         .circleImg {
@@ -937,7 +1203,7 @@
       }
       .skills {
         #tsparticles {
-          @apply h-[280vh];
+          @apply h-[240vh];
         }
         .KeySkillsWrapper {
           .skillList {
@@ -959,23 +1225,169 @@
         .skillPoster {
           @apply mt-[-1.2rem] mr-[-1.0rem];
           & > div svg {
-            @apply w-[60%];
+            @apply w-[50%];
           }
         }
         .tools p {
-          @apply min-w-[500px] mt-[-1rem];
+          @apply w-[500px] mt-0;
+          // [-1rem];
         }
-        .homeProjects .swiper .swiper-slide {
-          @apply h-[50vh] ml-1;
-          img {
-            @apply min-w-full;
+      }
+      .homeProjects .swiper .swiper-slide {
+        @apply h-[60vh] ml-2;
+        img {
+          @apply min-w-full;
+        }
+      }
+    }
+    #about {
+      .bg {
+         background-size:cover;
+        h1 {
+          padding-top: 1.3rem;
+        }
+        > div:last-of-type {
+          // @apply mt-1.5; // mb-0;
+        }
+      }
+      .content {
+        @apply max-h-[75vh] px-12;
+      }
+      section {
+        .imgX2 {
+          @apply w-[50%];
+        }
+        .aboutMe {
+          @apply px-16;
+        }
+      }
+      #tsparticles {
+        height: 330vh;
+      }
+      .myServices .serviceWrapper {
+        h2 {
+          font-size: 2.2rem;
+        }
+        .serviceList {
+          @apply flex gap-4 p-4;
+          .service {
+            @apply pl-5 pr-3.5 py-5 pb-10;
+            .icon {
+              @apply p-2.5;
+            }
+            p {
+              @apply max-w-[200px];
+            }
           }
         }
       }
     }
-    .about {
-      .bg h1 {
-        padding-top: 0.85rem;
+    #projects {
+      .explore {
+        @apply top-8;
+        .sub {
+          @apply px-8 my-[-2rem];
+        }
+      }
+      main {
+        .projectNav {
+          // WHITE BACKGROUND SIDE NAV
+          > div {
+            @apply top-[2.7rem];
+            //  EACH BUTTON
+            .Nav {
+              @apply flex items-center justify-start py-1 px-1 mb-2  [&.active>span]:text-[0.61rem] font-bold [&.active>img]:mr-[.1rem];
+              img {
+                @apply pl-0.5 w-[27%] m-0;
+              }
+              span {
+                margin-left: 0.25rem;
+                color: $themeDGray;
+              }
+            }
+          }
+        }
+        section {
+          @apply px-8;
+          .gridSection {
+            // EACH PROJECT DIV
+            .MainProject {
+              @apply mr-5 ml-10;
+              .swiper .swiper-wrapper .swiper-slide img {
+                @apply max-h-[50vh];
+              }
+              .contentWrapper {
+                @apply pr-2.5 pl-5 mt-[-.3rem];
+              }
+            }
+          }
+          // USED TOOLS DIV
+          .tools {
+            &.show {
+              @apply mt-[-1.25rem] ml-4;
+              &::before {
+                @apply h-6 left-12;
+              }
+            }
+          }
+          // UI IMAGES
+          .UI-UX {
+            @apply flex gap-6 pr-1 py-7 pl-3;
+            .UI_image {
+              img {
+                @apply max-w-[100%] ml-0;
+              }
+            }
+          }
+        }
+      }
+    }
+    #contact {
+      .bg {
+        @apply h-[120vh];
+        .Pleasantries {
+          @apply top-20;
+        }
+      }
+      main {
+        .svg {
+          @apply w-[65%] m-0 mx-auto;
+        }
+        .socials {
+          @apply m-0 mx-auto;
+        }
+        .ContactMeWrapper {
+          @apply px-20;
+          .ContactMe {
+            @apply px-5;
+          }
+          .circleWrapper {
+            // display: none;
+            @apply mt-[-11rem] mr-[-12.5rem] 
+            h-[90vh] mb-[-5.5rem];
+          }
+        }
+      }
+    }
+    //--------- PORTALS
+    #portals {
+      // RESUME
+      .ResumeImg {
+        @apply p-2.5; // pb-1.5;
+        img {
+          @apply max-h-[80vh];
+        }
+      }
+      .ResumeDwn {
+        @apply mt-[-.55rem] mr-[25%];
+        button:first-of-type{
+          @apply mr-14;
+
+        }
+      }
+      // UI PROJECT'S
+      .UIZoom button {
+        @apply mt-[-1.5rem];
       }
     }
   }

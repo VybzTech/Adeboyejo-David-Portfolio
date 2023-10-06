@@ -281,10 +281,10 @@ export const PROJECTS = [
     tag: ["All", "Completed"],
     content: (
       <span>
-        After barely three weeks of my internship at their company, I claimed to
+        After barely three weeks of my internship at a company, I claimed to
         have finished all the necessary front-end development coursework when my
         mentor gave me the assignment for the <b>Division Report Form.</b> I had
-        completed a course from <b>Travesy</b>, watched and practiced some of{" "}
+        completed a course from <b>Travesy</b>, watched and practiced some of
         <b>
           Angela Yu's fundamental Html, CSS, and Javascript tutorials on YouTube
         </b>
@@ -300,7 +300,7 @@ export const PROJECTS = [
         loading page, which needed a significant amount of CSS style and was, to
         put it mildly, time demanding. The project's design was supported by the
         use of <b>Bootstrap</b>, which wasn't a particularly challenging attempt
-        for me since I've always been a designer. A user interface <b>(UI)</b>{" "}
+        for me since I've always been a designer. A user interface <b>(UI) </b>
         example was also given to me, but the designs had to be tweaked to
         adhere to specific rules. <br /> After the loading screen fades away,
         various form fields are displayed. These fields are marked with an

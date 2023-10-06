@@ -10,6 +10,9 @@ Cross check contact form sending
 Work on projects delivery
 Projects UI UX Image resize
 
+Edit Footer components
+
+
 Toast Dark Mode
 
 In Projects 
