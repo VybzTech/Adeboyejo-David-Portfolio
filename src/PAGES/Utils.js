@@ -262,7 +262,7 @@ export const PROJECTS = [
       {
         name: "Jquery",
         img: Jquery,
-        aid: "Fast tracked javascript code in various aspects of the code.",
+        aid: "Fast tracked javascript code in various aspects of the code using Jquery.",
       },
       {
         name: "Github",
@@ -365,7 +365,7 @@ export const PROJECTS = [
       {
         name: "Jquery",
         img: Jquery,
-        aid: "Fast tracked javascript code in various aspects of the code.",
+        aid: "Fast tracked javascript code in various aspects of the code using Jquery.",
       },
       {
         name: "Github",

@@ -3,11 +3,6 @@
 @tailwind utilities;
 @import "./startup";
 
-// @import "./smPhone";
-// @import "./phone";
-// @import "./tablet";
-// @import "./laptop";
-
 //--------- LOADER
 .Loader {
   @apply w-full h-[100vh];
@@ -1122,6 +1117,9 @@
 }
 
 @import "./smPhone";
+@import "./phone";
+@import "./tablet";
+@import "./laptop";
 
 @import "./dark";
 

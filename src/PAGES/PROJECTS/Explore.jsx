@@ -12,7 +12,8 @@ function Explore() {
         <p className="sub">
           "Debugging is twice as hard as writing the code in the first place.
           Therefore, if you write the code as cleverly as possible; You are by
-          definition, not smart enough to debug it "<br />- Brian W. Kernighan.
+          definition, the only person smart enough to debug it "<br />- Brian W.
+          Kernighan.
         </p>
       </Fade>
       <Fade triggerOnce delay={1400}>
