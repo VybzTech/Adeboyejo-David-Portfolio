@@ -1915,9 +1915,114 @@
     @apply my-4;
   }
 }
+@media screen and (min-width: 410px) and (max-width: 480px) and (min-height: 670px) {
+  #light .navbar {
+    @apply h-[9vh];
+  }
+  #light .navbar .logo svg {
+    @apply w-7 ml-0.5;
+  }
+  #light .navbar .navBtn svg,
+  #light .navbar .theme svg {
+    @apply w-6 h-6;
+  }
+  #light .navbar .navigation > div > div {
+    @apply py-7;
+  }
+  #light .navbar .navigation > div > div .nav {
+    @apply my-3 px-16 pt-5 pb-3 mx-auto text-[17px];
+  }
+  #light .navbar .navigation > div > div:last-of-type button {
+    @apply mt-28 mb-2;
+  }
+  #light .navbar .navigation.show {
+    @apply top-[9.3vh] w-[96%] left-[2%];
+  }
+  #light #home .intro h1 {
+    @apply text-[3rem];
+  }
+  #light #home .skills #tsparticles {
+    @apply h-[160vh];
+  }
+  #light #home .homeProjects {
+    @apply pt-14;
+  }
+  #light #home .homeProjects h1 {
+    @apply text-[2.75rem];
+  }
+  #light #home .homeProjects .swiper .swiper-slide {
+    @apply h-[40vh];
+  }
+  #light #about .bg {
+    @apply h-[100vh];
+  }
+  #light #about .bg h1 {
+    padding-top: 2.75rem;
+  }
+  #light #about .bg > div:last-of-type {
+    @apply mt-4;
+  }
+  #light #about .content {
+    @apply px-7 max-h-[77vh];
+  }
+  #light #about section .imgX2 {
+    @apply w-[60%];
+  }
+  #light #about section .aboutMe {
+    @apply mx-5;
+  }
+  #light #about #tsparticles {
+    height: 310vh;
+  }
+  #light #about .myServices .serviceWrapper .serviceList {
+    @apply p-7;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service {
+    @apply mb-8;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service .icon {
+    @apply py-3;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service p {
+    @apply max-w-[250px];
+  }
+  #light #projects .bg .explore {
+    @apply top-16;
+  }
+  #light #projects .bg .explore h1 {
+    @apply text-[2.4rem];
+  }
+  #light #projects .bg .explore .sub {
+    @apply px-8 pb-[4rem];
+  }
+  #light #projects main .projectNav > div {
+    @apply top-[5.5rem];
+  }
+  #light #projects main .projectNav > div .Nav {
+    @apply mb-5 [&.active>span]:text-[0.8rem];
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+    @apply max-h-[22vh];
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper {
+    @apply pl-4 pr-1.5;
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper p {
+    @apply text-[11.5px];
+  }
+}
 @media only screen and (min-height: 850px) {
-  * {
-    display: none;
+  #light #home .skills #tsparticles {
+    @apply h-[145vh];
+  }
+  #light #about .bg h1 {
+    padding-top: 4rem;
+  }
+  #light #about .content {
+    @apply min-h-[75vh];
+  }
+  #light #about #tsparticles {
+    height: 260vh;
   }
 }
 #light.dark .navbar .logo svg path {
