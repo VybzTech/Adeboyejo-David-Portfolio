@@ -123,19 +123,18 @@ import XD from "../IMAGES/TOOLS/Adobe-XD.png";
 
 //HOME PAGE SKILLS
 export const SKILLS = [
-  { id: 1, name: "html", progress: "94%" },
-  { id: 2, name: "css", progress: "97%" },
-  { id: 3, name: "javascript", progress: "88%" },
-  { id: 4, name: "tailwind", progress: "45%" },
-  { id: 6, name: "scss", progress: "85%" },
-  { id: 10, name: "next js", progress: "65%" },
-  // { id: 5, name: 'jquery', progress: '65%' },
-  { id: 7, name: "react js", progress: "85%" },
-  // { id: 8, name: 'node js', progress: '55%' },
-  { id: 5, name: "Flutter", progress: "80%" },
-  { id: 9, name: "asp.net", progress: "40%" },
-  // { id: 11, name: 'firebase', progress: '60%' },
-  // { id: 10, name: 'php', progress: '30%' },
+  { id: 1, name: "SCSS", progress: "87%" },
+  { id: 2, name: "Tailwind CSS", progress: "94%" },
+  { id: 3, name: "JavaScript", progress: "90%" },
+  // { id: 4, name: "TypeScript", progress: "64%" },
+  { id: 5, name: "React JS", progress: "92%" },
+  { id: 6, name: "Next JS", progress: "71%" },
+  // { id: 7, name: "C#", progress: "74%" },
+  { id: 8, name: "ASP .NET Core", progress: "59%" },
+  { id: 9, name: "Flutter", progress: "70%" },
+  // { id: 10, name: 'Firebase', progress: '79%' },
+  { id: 11, name: "Figma", progress: "74%" },
+  { id: 12, name: "Adobe XD", progress: "93%" },
 ];
 
 //HOME PROJECTS SLIDE

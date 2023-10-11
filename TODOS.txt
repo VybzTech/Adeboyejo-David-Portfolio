@@ -11,7 +11,8 @@ Work on projects delivery
 Projects UI UX Image resize
 
 Edit Footer components
-
+Compress irrelevant Images
+@apply ;
 
 Toast Dark Mode
 
@@ -21,6 +22,11 @@ In Projects
 
 
 Design Screen Sizes
+*****************************************
+Final Screen size checks - smPhone.scss for Key skills
+New Footer Go to Top design
+key skills
+
 
 SM PHONE 
 //  Small iPhone 2 - iPhone4

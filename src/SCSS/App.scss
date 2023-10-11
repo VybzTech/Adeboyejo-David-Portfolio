@@ -274,39 +274,33 @@
             $word: 8px
           );
         }
+        //---------- SKILL LIST
         .skillList {
           @apply mx-4 my-2;
-          //SKILL LIST
           .skillPill {
+            //----- PILLS
             background-color: $themeBlueAlpha;
-            @apply w-[90%] rounded rounded-md mb-5 overflow-hidden;
-            @include flex($justify: left);
+            @apply w-[90%] rounded rounded-lg mb-3 overflow-hidden;
             @include trans(150ms);
             .skillName {
-              -webkit-text-stroke: 0.05px white;
-              color: $themeWhite;
-              @apply min-w-[25%] uppercase text-slate-200 bg-blue-400 text-center;
-              p {
-                font-size: 0.7rem;
-                @apply py-[0.3rem] px-1.5 h-fit my-auto mx-auto;
-              }
+              font-size: 0.8rem;
+              font-family: montLight;
+              -webkit-text-stroke: 0.1px $themeWhitishBlue;
+              @apply py-[5px] pl-3.5 tracking-tight pr-0 text-slate-200;
             }
-            //PROGRESS BAR
-            > div.progressBar {
-              @apply w-[75%];
-              .progress {
-                @include trans(150ms);
-                @apply h-[27px] bg-blue-600;
-              }
+            //--------- PROGRESS BAR
+            > div.progress.Bar {
+              z-index: -1;
+              @apply h-[-webkit-fill-available] top-0  absolute bg-blue-700;
+              @include trans(150ms);
             }
             //  HOVER EFFECTS
-            &:hover {
-              box-shadow: 0 0 15px 0.5px $themeBlueShadow;
-              > div.progressBar {
-                box-shadow: 5px 0 10px 0 $themeBlueShadow;
-                .progress {
-                  @apply bg-blue-500;
-                }
+            &:hover,
+            &:focus {
+              box-shadow: 0 0 8px -0.05px $themeBlueShadow;
+              > div.progress.Bar {
+                box-shadow: 5px 0 8px -0.1px $themeBlueShadow;
+                @apply bg-blue-500;
               }
             }
           }
@@ -458,7 +452,6 @@
       & > canvas {
         position: absolute !important;
       }
-  
     }
     .serviceWrapper {
       @apply w-full px-4 absolute top-0 left-0;
@@ -506,13 +499,9 @@
               @apply w-32 h-32 object-contain;
             }
           }
-  
         }
-  
       }
-  
     }
-  
   }
 }
 
@@ -1116,11 +1105,10 @@
   @include LightText($size: 0.8rem);
 }
 
-@import "./smPhone";
-@import "./phone";
-@import "./tablet";
 @import "./laptop";
-
+@import "./tablet";
+@import "./phone";
+@import "./smPhone";
 @import "./dark";
 
 // #light {

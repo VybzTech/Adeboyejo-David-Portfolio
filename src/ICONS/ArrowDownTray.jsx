@@ -8,7 +8,7 @@ const ArrowDownTray = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-3.5 h-3.5 mr-1"
+      className="h-4 mr-1 object-contain"
     >
       <path
         strokeLinecap="round"

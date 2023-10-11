@@ -266,7 +266,7 @@
   background: transparent;
   color: #135be8;
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: 7px;
   padding: 10px 18px;
   font-size: 0.65rem;
   border: 2px solid #135be8;
@@ -365,7 +365,7 @@
   background: transparent;
   color: #135be8;
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: 7px;
   padding: 10px 18px;
   font-size: 0.7rem;
   border: 2px solid #135be8;
@@ -394,36 +394,25 @@
 }
 #home .skills .KeySkillsWrapper .keySkills .skillList .skillPill {
   background-color: rgba(19, 90, 232, 0.2666666667);
-  @apply w-[90%] rounded rounded-md mb-5 overflow-hidden;
-  align-items: center;
-  display: flex;
-  justify-content: left;
-  flex-direction: row;
+  @apply w-[90%] rounded rounded-lg mb-3 overflow-hidden;
   transition: all 150ms ease-in-out;
 }
 #home .skills .KeySkillsWrapper .keySkills .skillList .skillPill .skillName {
-  -webkit-text-stroke: 0.05px white;
-  color: #f9f9fa;
-  @apply min-w-[25%] uppercase text-slate-200 bg-blue-400 text-center;
+  font-size: 0.8rem;
+  font-family: montLight;
+  -webkit-text-stroke: 0.1px #e3f2f8;
+  @apply py-[5px] pl-3.5 tracking-tight pr-0 text-slate-200;
 }
-#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill .skillName p {
-  font-size: 0.7rem;
-  @apply py-[0.3rem] px-1.5 h-fit my-auto mx-auto;
-}
-#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill > div.progressBar {
-  @apply w-[75%];
-}
-#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill > div.progressBar .progress {
+#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill > div.progress.Bar {
+  z-index: -1;
+  @apply h-[-webkit-fill-available] top-0  absolute bg-blue-700;
   transition: all 150ms ease-in-out;
-  @apply h-[27px] bg-blue-600;
 }
-#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill:hover {
-  box-shadow: 0 0 15px 0.5px rgba(9, 9, 80, 0.4666666667);
+#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill:hover, #home .skills .KeySkillsWrapper .keySkills .skillList .skillPill:focus {
+  box-shadow: 0 0 8px -0.05px rgba(9, 9, 80, 0.3333333333);
 }
-#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill:hover > div.progressBar {
-  box-shadow: 5px 0 10px 0 rgba(9, 9, 80, 0.4666666667);
-}
-#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill:hover > div.progressBar .progress {
+#home .skills .KeySkillsWrapper .keySkills .skillList .skillPill:hover > div.progress.Bar, #home .skills .KeySkillsWrapper .keySkills .skillList .skillPill:focus > div.progress.Bar {
+  box-shadow: 5px 0 8px -0.1px rgba(9, 9, 80, 0.3333333333);
   @apply bg-blue-500;
 }
 #home .skills .skillPoster {
@@ -1208,6 +1197,769 @@
   font-size: 0.8rem;
 }
 
+@media screen and (min-width: 375px) and (max-height: 669px) {
+  #light .navbar {
+    @apply h-[10vh];
+  }
+  #light .navbar .logo svg {
+    @apply w-7 ml-0.5;
+  }
+  #light .navbar .navBtn svg,
+  #light .navbar .theme svg {
+    @apply w-6 h-6;
+  }
+  #light .navbar .navigation > div > div {
+    @apply py-7;
+  }
+  #light .navbar .navigation > div > div .nav {
+    @apply my-3 px-16 pt-5 pb-3 mx-auto  text-[17px];
+  }
+  #light .navbar .navigation > div > div:last-of-type button {
+    @apply mt-12 mb-2;
+  }
+  #light .navbar .navigation.show {
+    @apply top-[10.3vh] w-[96%] left-[2%];
+  }
+  #light #home h1 {
+    @apply text-[2.3rem];
+  }
+  #light #home #text {
+    @apply text-[15px] mt-5 mb-10;
+  }
+  #light #home .intro h1 {
+    @apply text-[2.8rem];
+  }
+  #light #home .intro .btn {
+    font-size: 0.725rem;
+    word-spacing: 4px;
+  }
+  #light #home .lilAbout .circleImg {
+    @apply w-[55%];
+  }
+  #light #home .lilAbout .about .hero h2 .line > div {
+    @apply h-[1vh];
+  }
+  #light #home .skills {
+    @apply mt-[-1px];
+  }
+  #light #home .skills #tsparticles {
+    @apply h-[170vh];
+  }
+  #light #home .skills .tools p {
+    @apply w-[300px] mt-[1rem];
+  }
+  #light #home .homeProjects {
+    @apply pt-10;
+  }
+  #light #home .homeProjects .swiper .swiper-slide {
+    @apply h-[30vh] ml-1;
+  }
+  #light #about .bg {
+    @apply h-[105vh];
+  }
+  #light #about .bg > div:last-of-type {
+    @apply mt-5;
+  }
+  #light #about .content {
+    @apply px-5 text-[0.825rem];
+    word-spacing: 1px;
+  }
+  #light #about section .imgX2 {
+    @apply w-[55%];
+  }
+  #light #about section .aboutMe {
+    @apply px-5;
+  }
+  #light #about #tsparticles {
+    height: 320vh;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service {
+    @apply mx-3.5 pl-6 pt-6 pb-14;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service .icon {
+    @apply p-2.5;
+  }
+  #light #projects .bg .explore {
+    @apply top-16;
+  }
+  #light #projects .bg .explore h1 {
+    @apply text-[2.5rem];
+  }
+  #light #projects .bg .explore .sub {
+    @apply text-[13px];
+  }
+  #light #projects main .projectNav > div {
+    @apply top-[5rem];
+  }
+  #light #projects main .projectNav > div .Nav {
+    @apply mb-3.5 [&.active>span]:text-[0.75rem];
+  }
+  #light #projects main .projectNav > div .Nav img {
+    @apply w-[65%] mb-1;
+  }
+  #light #projects main .projectNav > div .Nav span {
+    @apply text-[0.65rem];
+  }
+  #light #projects main section .gridSection {
+    @apply pl-2 pr-0 pt-8 pb-10;
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+    @apply max-h-[22vh];
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper {
+    @apply pl-3.5 pr-1;
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper p {
+    @apply text-[11.5px];
+  }
+  #light #contact .bg .Pleasantries {
+    @apply top-32;
+  }
+  #light #contact .bg .Pleasantries h1 {
+    @apply mb-[10rem] text-[2.5rem];
+  }
+  #light #contact .bg .Pleasantries .sub {
+    @apply text-[14px];
+  }
+  #light #contact main {
+    @apply mt-[-2px];
+  }
+  #light #contact main .svg {
+    @apply w-[84%] mx-auto;
+  }
+  #light #contact main .socials {
+    @apply mx-8 my-3;
+  }
+  #light #contact main .ContactMeWrapper {
+    @apply px-2.5;
+  }
+  #light #contact main .ContactMeWrapper .ContactMe {
+    @apply px-5;
+  }
+  #light #contact main .ContactMeWrapper .circleWrapper {
+    @apply mt-[-12rem] mr-[-9rem]
+            h-[45vh] mb-[-6rem];
+    clip-path: circle(9rem);
+  }
+  #light .BottomColor {
+    margin-bottom: -5px;
+  }
+  #light #portals .ResumeDwn {
+    @apply pt-[4rem] pb-[5%];
+  }
+  #light #portals .ResumeDwn [title="Download Resume"] {
+    @apply py-3.5 px-5 text-[12px];
+  }
+  #light #portals .UIZoom {
+    @apply pb-80;
+  }
+  #light #portals .UIZoom button {
+    @apply mt-2;
+  }
+  #light #portals .ProjectDets {
+    @apply my-4;
+  }
+}
+@media screen and (min-width: 410px) and (max-width: 480px) and (min-height: 670px) {
+  #light .navbar {
+    @apply h-[9vh];
+  }
+  #light .navbar .logo svg {
+    @apply w-7 ml-0.5;
+  }
+  #light .navbar .navBtn svg,
+  #light .navbar .theme svg {
+    @apply w-6 h-6;
+  }
+  #light .navbar .navigation > div > div {
+    @apply py-7;
+  }
+  #light .navbar .navigation > div > div .nav {
+    @apply my-3 px-16 pt-5 pb-3 mx-auto text-[17px];
+  }
+  #light .navbar .navigation > div > div:last-of-type button {
+    @apply mt-28 mb-2;
+  }
+  #light .navbar .navigation.show {
+    @apply top-[9.3vh] w-[96%] left-[2%];
+  }
+  #light #home #text {
+    @apply text-[14.5px] mt-5 mb-8;
+  }
+  #light #home .intro h1 {
+    @apply text-[3rem];
+  }
+  #light #home .intro .btn {
+    @apply text-[12.5px];
+  }
+  #light #home .lilAbout .circleImg {
+    @apply w-[48%] py-[1.8%] px-[1.8%] pb-[2%];
+  }
+  #light #home .lilAbout .about {
+    @apply px-4;
+  }
+  #light #home .lilAbout .about .hero h2 .line > div {
+    @apply h-[0.8vh];
+  }
+  #light #home .skills {
+    @apply my-[-1px];
+  }
+  #light #home .skills #tsparticles {
+    @apply h-[160vh];
+  }
+  #light #home .skills .KeySkillsWrapper .skillList {
+    @apply pl-2;
+  }
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill .skillName p {
+    @apply py-[0.325rem];
+  }
+  #light #home .skills .tools p {
+    @apply w-[300px];
+  }
+  #light #home .homeProjects {
+    @apply pt-14;
+  }
+  #light #home .homeProjects h1 {
+    @apply text-[2.75rem];
+  }
+  #light #home .homeProjects .swiper .swiper-slide {
+    @apply h-[40vh];
+  }
+  #light #about .bg {
+    @apply h-[100vh];
+  }
+  #light #about .bg h1 {
+    padding-top: 2.75rem;
+  }
+  #light #about .bg > div:last-of-type {
+    @apply mt-4;
+  }
+  #light #about .content {
+    @apply px-6 text-[0.83rem];
+    word-spacing: 0px;
+  }
+  #light #about section .imgX2 {
+    @apply w-[60%];
+  }
+  #light #about section .aboutMe {
+    @apply mx-3.5;
+  }
+  #light #about #tsparticles {
+    height: 310vh;
+  }
+  #light #about .myServices .serviceWrapper .serviceList {
+    @apply p-7;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service {
+    @apply mb-8;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service .icon {
+    @apply py-3;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service p {
+    @apply max-w-[250px];
+  }
+  #light #projects .bg .explore {
+    @apply top-20;
+  }
+  #light #projects .bg .explore h1 {
+    @apply text-[2.4rem];
+  }
+  #light #projects .bg .explore .sub {
+    @apply px-8 pb-[4rem];
+  }
+  #light #projects main .projectNav > div {
+    @apply top-[5.5rem];
+  }
+  #light #projects main .projectNav > div .Nav {
+    @apply mb-5 [&.active>span]:text-[0.8rem];
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+    @apply max-h-[22vh];
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper {
+    @apply pl-4 pr-1.5;
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper p {
+    @apply text-[11.5px];
+  }
+  #light #contact .bg .Pleasantries {
+    @apply top-36;
+  }
+  #light #contact .bg .Pleasantries h1 {
+    @apply mb-[10rem] text-[2.7rem];
+  }
+  #light #contact .bg .Pleasantries .sub {
+    @apply text-[14px];
+  }
+  #light #contact main {
+    @apply mt-[-2px];
+  }
+  #light #contact main .svg {
+    @apply w-[80%] mx-auto;
+  }
+  #light #contact main .socials {
+    @apply mx-10 my-3;
+  }
+  #light #contact main .ContactMeWrapper {
+    @apply px-4;
+  }
+  #light #contact main .ContactMeWrapper .ContactMe {
+    @apply px-2.5;
+  }
+  #light #contact main .ContactMeWrapper .circleWrapper {
+    @apply mt-[-12rem] mr-[-9rem]
+            h-[45vh] mb-[-7rem];
+    clip-path: circle(9rem);
+  }
+  #light .BottomColor {
+    @apply my-[-1px];
+  }
+  #light #portals .ResumeDwn {
+    @apply pt-[5rem] pb-[5%] mr-10;
+  }
+  #light #portals .ResumeDwn [title="Download Resume"] {
+    @apply mr-8 py-3.5 px-5 text-[12.5px];
+  }
+  #light #portals .ResumeDwn [title="Download Resume"] svg {
+    @apply w-6;
+  }
+  #light #portals .UIZoom {
+    @apply min-h-[90vh] max-h-[100vh] pb-52;
+  }
+  #light #portals .UIZoom button {
+    @apply mt-[auto];
+  }
+}
+@media only screen and (min-width: 410px) and (min-height: 850px) {
+  #light .navbar .navigation > div > div .nav {
+    @apply my-5 py-5 text-[18.5px];
+  }
+  #light .navbar .navigation > div > div:last-of-type button {
+    @apply mt-28 mb-8;
+  }
+  #light #home .skills #tsparticles {
+    @apply h-[140vh];
+  }
+  #light #home .homeProjects .swiper .swiper-wrapper .swiper-slide {
+    @apply h-[30vh] my-10;
+  }
+  #light #about .bg h1 {
+    padding-top: 4rem;
+  }
+  #light #about .content {
+    @apply min-h-[75vh];
+  }
+  #light #about #tsparticles {
+    height: 260vh;
+  }
+  #light #projects .bg .explore {
+    @apply top-28;
+  }
+  #light #projects main .projectNav > div {
+    @apply top-[8rem];
+  }
+  #light #projects main .projectNav > div .Nav {
+    @apply mb-8;
+  }
+  #light #contact main .ContactMeWrapper .ContactMe {
+    @apply min-h-[50vh];
+  }
+  #light #contact main .ContactMeWrapper .circleWrapper {
+    @apply mt-[-15rem];
+  }
+  #light #portals .ResumeImg {
+    @apply pt-20;
+  }
+  #light #portals .ResumeDwn {
+    @apply pt-[10rem];
+  }
+  #light #portals .ProjectDets {
+    @apply my-5;
+  }
+  #light #portals .UIZoom {
+    @apply pb-96;
+  }
+  #light #portals .UIZoom button {
+    @apply mt-3;
+  }
+}
+@media only screen and (min-width: 375px) and (height: 812px) and (max-height: 839px) {
+  #light .navbar {
+    @apply h-[10vh];
+  }
+  #light .navbar .logo svg {
+    @apply ml-2;
+  }
+  #light .navbar .navBtn,
+  #light .navbar .theme {
+    @apply mr-2;
+  }
+  #light .navbar .navBtn svg,
+  #light .navbar .theme svg {
+    @apply w-6 h-6;
+  }
+  #light .navbar .navigation > div > div {
+    @apply pt-20 pb-7;
+  }
+  #light .navbar .navigation > div > div .nav {
+    @apply my-2.5 px-16 py-5 text-[18px];
+  }
+  #light .navbar .navigation > div > div:last-of-type button {
+    @apply mt-10 mb-3 text-[17.5px];
+  }
+  #light .navbar .navigation.show {
+    @apply top-[10.2vh] w-[97%] left-[1.5%];
+  }
+  #light #home #text {
+    @apply text-[15.5px] mt-7 mb-14;
+  }
+  #light #home .intro h1 {
+    @apply text-[3rem];
+  }
+  #light #home .intro .hero {
+    @apply text-[.8rem];
+  }
+  #light #home .intro .btn {
+    @apply text-[0.725rem];
+    word-spacing: 3px;
+  }
+  #light #home .lilAbout .circleImg {
+    @apply w-[60%] p-[2.8%] pb-[3%];
+  }
+  #light #home .lilAbout .about .hero h2 {
+    @apply tracking-[-1px];
+  }
+  #light #home .lilAbout .about .hero h2 .line > div {
+    @apply h-[1vh];
+  }
+  #light #home .lilAbout .about p {
+    @apply text-[0.9rem];
+  }
+  #light #home .skills {
+    @apply pt-[1rem];
+  }
+  #light #home .skills #tsparticles {
+    @apply h-[135vh];
+  }
+  #light #home .skills .KeySkillsWrapper h2 {
+    @apply tracking-[-1px];
+  }
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill {
+    @apply mb-2.5;
+  }
+  #light #home .homeProjects {
+    @apply pt-5;
+  }
+  #light #home .homeProjects .swiper {
+    @apply pt-14 pb-3;
+  }
+  #light #home .homeProjects .swiper .swiper-slide {
+    @apply h-[35vh];
+  }
+  #light #about .bg {
+    @apply pt-1.5 h-[100vh];
+  }
+  #light #about .bg > div:last-of-type {
+    @apply mt-2.5;
+  }
+  #light #about .content {
+    @apply px-4 text-[0.85rem] max-h-[78vh];
+    word-spacing: 0px;
+  }
+  #light #about section .imgX2 {
+    @apply w-[55%];
+  }
+  #light #about section .aboutMe {
+    @apply px-6;
+  }
+  #light #about #tsparticles {
+    height: 270vh;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service {
+    @apply mx-4;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service .icon {
+    @apply p-2.5;
+  }
+  #light #projects .bg .explore {
+    @apply top-24;
+  }
+  #light #projects .bg .explore h1 {
+    @apply text-[2.5rem];
+  }
+  #light #projects .bg .explore .sub {
+    @apply text-[14px] my-[1rem];
+  }
+  #light #projects main .projectNav > div {
+    @apply top-[7rem];
+  }
+  #light #projects main .projectNav > div .Nav {
+    @apply mb-4 [&.active>span]:text-[0.75rem];
+  }
+  #light #projects main .projectNav > div .Nav img {
+    @apply w-[65%] mb-1;
+  }
+  #light #projects main .projectNav > div .Nav span {
+    @apply text-[0.65rem];
+  }
+  #light #projects main section {
+    @apply pt-5;
+  }
+  #light #projects main section .gridSection {
+    @apply pl-2 pr-0 pt-10 pb-10;
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+    @apply max-h-[22vh];
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide::after {
+    @apply h-[105%];
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper {
+    @apply pl-3.5 pr-1;
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper p {
+    @apply text-[11.5px];
+  }
+  #light #contact .bg .Pleasantries {
+    @apply top-60;
+  }
+  #light #contact .bg .Pleasantries h1 {
+    @apply mb-[10rem] text-[2.3rem];
+  }
+  #light #contact .bg .Pleasantries .sub {
+    @apply text-[14px];
+  }
+  #light #contact main {
+    @apply mt-[-3px];
+  }
+  #light #contact main .svg {
+    @apply w-[84%] mx-auto;
+  }
+  #light #contact main .socials {
+    @apply mx-8 my-3;
+  }
+  #light #contact main .ContactMeWrapper {
+    @apply mx-3;
+  }
+  #light #contact main .ContactMeWrapper .ContactMe {
+    @apply px-2.5 pb-10 min-h-[55vh];
+  }
+  #light #contact main .ContactMeWrapper .circleWrapper {
+    @apply mt-[-12rem] mr-[-8rem]
+            h-[40vh] mb-[-8rem];
+    clip-path: circle(9rem);
+  }
+  #light #portals .ResumeImg {
+    @apply p-2 pt-10;
+  }
+  #light #portals .ResumeDwn {
+    @apply pt-[9rem] pb-[10%];
+  }
+  #light #portals .ResumeDwn [title="Download Resume"] {
+    @apply py-3.5 px-5 text-[12px];
+  }
+  #light #portals .UIZoom {
+    @apply pb-80;
+  }
+  #light #portals .UIZoom button {
+    @apply mt-2;
+  }
+  #light #portals .ProjectDets {
+    @apply my-4;
+  }
+}
+@media only screen and (min-width: 390px) and (min-height: 840px) and (-webkit-device-pixel-ratio: 3) {
+  #light .navbar {
+    @apply h-[10vh];
+  }
+  #light .navbar .logo svg {
+    @apply ml-2;
+  }
+  #light .navbar .navBtn,
+  #light .navbar .theme {
+    @apply mr-2;
+  }
+  #light .navbar .navBtn svg,
+  #light .navbar .theme svg {
+    @apply w-6 h-6;
+  }
+  #light .navbar .navigation > div > div {
+    @apply pt-20 pb-7;
+  }
+  #light .navbar .navigation > div > div .nav {
+    @apply my-3 px-16 py-5 text-[18px];
+  }
+  #light .navbar .navigation > div > div:last-of-type button {
+    @apply mt-10 mb-5 text-[17.5px];
+  }
+  #light .navbar .navigation.show {
+    @apply top-[10.2vh] w-[97%] left-[1.5%];
+  }
+  #light #home #text {
+    @apply text-[15.5px] mt-7 mb-14;
+  }
+  #light #home .intro h1 {
+    @apply text-[3rem];
+  }
+  #light #home .intro .hero {
+    @apply text-[.8rem];
+  }
+  #light #home .intro .btn {
+    @apply text-[0.725rem];
+    word-spacing: 3px;
+  }
+  #light #home .lilAbout .circleImg {
+    @apply w-[58%] p-[2.8%] pb-[3%];
+  }
+  #light #home .lilAbout .about .hero h2 {
+    @apply tracking-[-1px];
+  }
+  #light #home .lilAbout .about .hero h2 .line > div {
+    @apply h-[0.8vh];
+  }
+  #light #home .lilAbout .about p {
+    @apply text-[0.9rem];
+  }
+  #light #home .skills {
+    @apply pt-[1.5rem];
+  }
+  #light #home .skills #tsparticles {
+    @apply h-[135vh];
+  }
+  #light #home .skills .KeySkillsWrapper h2 {
+    @apply tracking-[-1px];
+  }
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill {
+    @apply mb-2.5;
+  }
+  #light #home .skills .tools p {
+    @apply w-[300px];
+  }
+  #light #home .homeProjects {
+    @apply pt-7;
+  }
+  #light #home .homeProjects .swiper {
+    @apply pt-14 pb-3;
+  }
+  #light #home .homeProjects .swiper .swiper-slide {
+    @apply h-[33vh];
+  }
+  #light #about .bg {
+    @apply pt-1.5 h-[100vh];
+  }
+  #light #about .bg > div:last-of-type {
+    @apply mt-2.5;
+  }
+  #light #about .content {
+    @apply px-5 text-[0.85rem] max-h-[78vh];
+    word-spacing: 0px;
+  }
+  #light #about section .imgX2 {
+    @apply w-[55%];
+  }
+  #light #about section .aboutMe {
+    @apply px-6;
+  }
+  #light #about #tsparticles {
+    height: 260vh;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service {
+    @apply mx-4;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service .icon {
+    @apply p-2.5;
+  }
+  #light #projects .bg .explore {
+    @apply top-24;
+  }
+  #light #projects .bg .explore h1 {
+    @apply text-[2.5rem];
+  }
+  #light #projects .bg .explore .sub {
+    @apply text-[14px] my-[1rem];
+  }
+  #light #projects main .projectNav > div {
+    @apply top-[7rem];
+  }
+  #light #projects main .projectNav > div .Nav {
+    @apply mb-4 [&.active>span]:text-[0.75rem];
+  }
+  #light #projects main .projectNav > div .Nav img {
+    @apply w-[65%] mb-1;
+  }
+  #light #projects main .projectNav > div .Nav span {
+    @apply text-[0.65rem];
+  }
+  #light #projects main section {
+    @apply pt-5;
+  }
+  #light #projects main section .gridSection {
+    @apply pl-2 pr-0 pt-10 pb-10;
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+    @apply max-h-[22vh];
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide::after {
+    @apply h-[105%];
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper {
+    @apply pl-3.5 pr-1;
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper p {
+    @apply text-[11.5px];
+  }
+  #light #contact .bg .Pleasantries {
+    @apply top-60;
+  }
+  #light #contact .bg .Pleasantries h1 {
+    @apply mb-[10rem] text-[2.3rem];
+  }
+  #light #contact .bg .Pleasantries .sub {
+    @apply text-[14px];
+  }
+  #light #contact main {
+    @apply mt-[-3px];
+  }
+  #light #contact main .svg {
+    @apply w-[84%] mx-auto;
+  }
+  #light #contact main .socials {
+    @apply mx-8 my-3;
+  }
+  #light #contact main .ContactMeWrapper {
+    @apply mx-3;
+  }
+  #light #contact main .ContactMeWrapper .ContactMe {
+    @apply px-2.5 pb-10 min-h-[55vh];
+  }
+  #light #contact main .ContactMeWrapper .circleWrapper {
+    @apply mt-[-12rem] mr-[-8rem]
+            h-[40vh] mb-[-8rem];
+    clip-path: circle(9rem);
+  }
+  #light .BottomColor {
+    @apply mb-[-2px];
+  }
+  #light #portals .ResumeImg {
+    @apply p-2 pt-10;
+  }
+  #light #portals .ResumeDwn {
+    @apply pt-[9rem] pb-[10%];
+  }
+  #light #portals .ResumeDwn [title="Download Resume"] {
+    @apply py-3.5 px-5 text-[12px];
+  }
+  #light #portals .UIZoom {
+    @apply pb-80;
+  }
+  #light #portals .UIZoom button {
+    @apply mt-2;
+  }
+  #light #portals .ProjectDets {
+    @apply my-4;
+  }
+}
 @media screen and (min-height: 320px) and (min-width: 450px) and (max-width: 580px) and (orientation: Landscape) {
   .Loader > div svg {
     @apply w-[7vw] mx-5;
@@ -1788,241 +2540,6 @@
   }
   #light #portals .ProjectDets p.content {
     @apply text-[0.9rem];
-  }
-}
-@media screen and (min-width: 375px) and (max-height: 669px) {
-  #light .navbar {
-    @apply h-[10vh];
-  }
-  #light .navbar .logo svg {
-    @apply w-7 ml-0.5;
-  }
-  #light .navbar .navBtn svg,
-  #light .navbar .theme svg {
-    @apply w-6 h-6;
-  }
-  #light .navbar .navigation > div > div {
-    @apply py-7;
-  }
-  #light .navbar .navigation > div > div .nav {
-    @apply my-3 px-16 pt-5 pb-3 mx-auto  text-[17px];
-  }
-  #light .navbar .navigation > div > div:last-of-type button {
-    @apply mt-12 mb-2;
-  }
-  #light .navbar .navigation.show {
-    @apply top-[10.3vh] w-[96%] left-[2%];
-  }
-  #light #home h1 {
-    @apply text-[2.3rem];
-  }
-  #light #home #text {
-    @apply text-[15px] mt-5 mb-10;
-  }
-  #light #home .intro h1 {
-    @apply text-[3rem];
-  }
-  #light #home .intro .btn {
-    font-size: 0.725rem;
-    word-spacing: 4px;
-  }
-  #light #home .skills #tsparticles {
-    @apply h-[170vh];
-  }
-  #light #home .skills .tools p {
-    @apply w-[300px] mt-[1rem];
-  }
-  #light #home .homeProjects {
-    @apply pt-10;
-  }
-  #light #home .homeProjects .swiper .swiper-slide {
-    @apply h-[30vh] ml-1;
-  }
-  #light #about .bg {
-    @apply h-[105vh];
-  }
-  #light #about .bg > div:last-of-type {
-    @apply mt-5;
-  }
-  #light #about section .aboutMe {
-    @apply px-5;
-  }
-  #light #about #tsparticles {
-    height: 300vh;
-  }
-  #light #about .myServices .serviceWrapper .serviceList .service {
-    @apply mx-2 pl-7 py-7 pb-12;
-  }
-  #light #projects .bg .explore {
-    @apply top-16;
-  }
-  #light #projects .bg .explore h1 {
-    @apply text-[2.5rem];
-  }
-  #light #projects .bg .explore .sub {
-    @apply text-[13px];
-  }
-  #light #projects main .projectNav > div {
-    @apply top-[5rem];
-  }
-  #light #projects main .projectNav > div .Nav {
-    @apply mb-3.5 [&.active>span]:text-[0.75rem];
-  }
-  #light #projects main .projectNav > div .Nav img {
-    @apply w-[65%] mb-1;
-  }
-  #light #projects main .projectNav > div .Nav span {
-    @apply text-[0.65rem];
-  }
-  #light #projects main section .gridSection {
-    @apply pl-2 pr-0 pt-8 pb-10;
-  }
-  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
-    @apply max-h-[22vh];
-  }
-  #light #projects main section .gridSection .MainProject .contentWrapper {
-    @apply pl-3.5 pr-1;
-  }
-  #light #projects main section .gridSection .MainProject .contentWrapper p {
-    @apply text-[11.5px];
-  }
-  #light #contact .bg .Pleasantries {
-    @apply top-32;
-  }
-  #light #contact .bg .Pleasantries h1 {
-    @apply mb-[10rem] text-[2.5rem];
-  }
-  #light #contact .bg .Pleasantries .sub {
-    @apply text-[14px];
-  }
-  #light #contact main .ContactMeWrapper .circleWrapper {
-    @apply mt-[-12rem] mr-[-8rem]
-            h-[50vh] mb-[-7rem];
-  }
-  #light .BottomColor {
-    margin-bottom: -1px;
-  }
-  #light #portals .ResumeDwn {
-    @apply pt-[4rem] pb-[5%];
-  }
-  #light #portals .ResumeDwn [title="Download Resume"] {
-    @apply py-3.5 px-5 text-[12px];
-  }
-  #light #portals .UIZoom button {
-    @apply mt-[.3rem] mb-2;
-  }
-  #light #portals .ProjectDets {
-    @apply my-4;
-  }
-}
-@media screen and (min-width: 410px) and (max-width: 480px) and (min-height: 670px) {
-  #light .navbar {
-    @apply h-[9vh];
-  }
-  #light .navbar .logo svg {
-    @apply w-7 ml-0.5;
-  }
-  #light .navbar .navBtn svg,
-  #light .navbar .theme svg {
-    @apply w-6 h-6;
-  }
-  #light .navbar .navigation > div > div {
-    @apply py-7;
-  }
-  #light .navbar .navigation > div > div .nav {
-    @apply my-3 px-16 pt-5 pb-3 mx-auto text-[17px];
-  }
-  #light .navbar .navigation > div > div:last-of-type button {
-    @apply mt-28 mb-2;
-  }
-  #light .navbar .navigation.show {
-    @apply top-[9.3vh] w-[96%] left-[2%];
-  }
-  #light #home .intro h1 {
-    @apply text-[3rem];
-  }
-  #light #home .skills #tsparticles {
-    @apply h-[160vh];
-  }
-  #light #home .homeProjects {
-    @apply pt-14;
-  }
-  #light #home .homeProjects h1 {
-    @apply text-[2.75rem];
-  }
-  #light #home .homeProjects .swiper .swiper-slide {
-    @apply h-[40vh];
-  }
-  #light #about .bg {
-    @apply h-[100vh];
-  }
-  #light #about .bg h1 {
-    padding-top: 2.75rem;
-  }
-  #light #about .bg > div:last-of-type {
-    @apply mt-4;
-  }
-  #light #about .content {
-    @apply px-7 max-h-[77vh];
-  }
-  #light #about section .imgX2 {
-    @apply w-[60%];
-  }
-  #light #about section .aboutMe {
-    @apply mx-5;
-  }
-  #light #about #tsparticles {
-    height: 310vh;
-  }
-  #light #about .myServices .serviceWrapper .serviceList {
-    @apply p-7;
-  }
-  #light #about .myServices .serviceWrapper .serviceList .service {
-    @apply mb-8;
-  }
-  #light #about .myServices .serviceWrapper .serviceList .service .icon {
-    @apply py-3;
-  }
-  #light #about .myServices .serviceWrapper .serviceList .service p {
-    @apply max-w-[250px];
-  }
-  #light #projects .bg .explore {
-    @apply top-16;
-  }
-  #light #projects .bg .explore h1 {
-    @apply text-[2.4rem];
-  }
-  #light #projects .bg .explore .sub {
-    @apply px-8 pb-[4rem];
-  }
-  #light #projects main .projectNav > div {
-    @apply top-[5.5rem];
-  }
-  #light #projects main .projectNav > div .Nav {
-    @apply mb-5 [&.active>span]:text-[0.8rem];
-  }
-  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
-    @apply max-h-[22vh];
-  }
-  #light #projects main section .gridSection .MainProject .contentWrapper {
-    @apply pl-4 pr-1.5;
-  }
-  #light #projects main section .gridSection .MainProject .contentWrapper p {
-    @apply text-[11.5px];
-  }
-}
-@media only screen and (min-height: 850px) {
-  #light #home .skills #tsparticles {
-    @apply h-[145vh];
-  }
-  #light #about .bg h1 {
-    padding-top: 4rem;
-  }
-  #light #about .content {
-    @apply min-h-[75vh];
-  }
-  #light #about #tsparticles {
-    height: 260vh;
   }
 }
 #light.dark .navbar .logo svg path {
