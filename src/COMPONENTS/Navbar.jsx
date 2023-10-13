@@ -40,6 +40,11 @@ const Navbar = withRouter((props) => {
           <Logo svgWidth="8vw" svgFill={"#222"} AFill={"#135be8"} />
         </div>
       </Fade>
+      <div className={`navigation ${navControl && "show"}`}>
+        <JackInTheBox triggerOnce>
+          <Navigation setNavControl={setNavControl} />
+        </JackInTheBox>
+      </div>
       <div className="flex">
         <>
           <Fade up big triggerOnce>
@@ -89,11 +94,6 @@ const Navbar = withRouter((props) => {
             </button>
           </Fade>
         </>
-      </div>
-      <div className={`navigation ${navControl && "show"}`}>
-        <JackInTheBox triggerOnce>
-          <Navigation setNavControl={setNavControl} />
-        </JackInTheBox>
       </div>
     </div>
   );

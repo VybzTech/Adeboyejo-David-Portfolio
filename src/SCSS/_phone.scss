@@ -2731,9 +2731,14 @@
     }
     #contact main .ContactMeWrapper .circleWrapper {
       clip-path: circle(11rem);
-      margin-bottom: -7rem;
-      margin-right: -24rem;
-      height: 90vh;
+      @apply mb-[-7rem] mr-[-24rem] h-[90vh];
+    }
+    //--------- PORTALS
+    #portals {
+      // RESUME
+      .ResumeDwn {
+        @apply mr-[5%];
+      }
     }
   }
 }

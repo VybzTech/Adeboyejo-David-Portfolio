@@ -21,11 +21,11 @@ const Navigation = withRouter((props) => {
           return (
             <button
               key={nav.nav}
-              className={`nav ${
+              className={`nav${
                 history?.location?.pathname.toLowerCase() === nav.path
-                  ? "active"
+                  ? " active"
                   : ""
-              } `}
+              }`}
               onClick={() => {
                 history.push(nav.path);
                 document.documentElement.scrollTop = 0;

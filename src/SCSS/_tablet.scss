@@ -4,7 +4,7 @@
 // 	#light {
 // 		//--------- NAVBAR
 // 		.navbar {
-// 			padding: 0.5rem 0 0.25rem;
+// padding: 0.5rem 0 0.25rem;
 // 			.logo {
 // 				margin: 0.2rem 0 0 2rem;
 // 				svg {
@@ -488,19 +488,322 @@
 // 		}
 // 	}
 // }
-
-// For iPads, Tablets Sizes: iPad , iPad Mini
-@media screen and (min-width: 481px) and (max-width: 768px) and (max-height: 1024px) {
-  // ?
-  // ?
-}
 // For Small screens, Laptops Sizes: iPad Air, Surface Pro
-@media screen and (min-width: 769px) and (max-width: 1023px) {
-  // ?
-  // ?
+
+// For iPads, Tablets Sizes: iPad , iPad Mini,
+@media screen and (min-width: 768px) and (min-height: 1024px) {
+  #light {
+    //--------- NAVBAR
+    .navbar {
+      border-radius: 0 0 25px 25px;
+      // @apply h-[10vh];
+      .logo svg {
+        @apply w-10 ml-2.5;
+      }
+      .navBtn svg,
+      .theme svg {
+        // @apply w-6 h-6;
+      }
+      .navigation,
+      .navigation.show {
+        @apply static  bg-transparent w-auto h-auto min-h-[auto] 
+        flex-[auto] flex justify-end; // top-0 left-0;
+        > div {
+          > div {
+            &:first-child {
+              @apply py-2 flex-row;
+            }
+            button.nav {
+              @apply m-0 mb-1 p-2 mx-3 text-[17px];
+              // @apply my-3 px-16 pt-5 pb-3 mx-auto  text-[17px];
+              &.active::after {
+                content: "";
+                @apply absolute bottom-[-0.1rem] left-0 bg-blue-600 rounded rounded-lg h-1 w-full px-5;
+              }
+              &:hover::after{
+                @apply absolute bottom-[-0.1rem] left-0 bg-blue-50 rounded rounded-lg h-1 w-full px-5;
+              }
+            }
+          }
+          & > div:last-of-type button {
+            @apply hidden;
+          }
+        }
+        //SHOWN
+        &.show {
+          // @apply top-[10.3vh] w-[96%] left-[2%];
+        }
+      }
+      .menu {
+        @apply hidden;
+      }
+    }
+    #home {
+      h1 {
+        // @apply text-[2.3rem];
+      }
+      #text {
+        // @apply text-[15px] mt-5 mb-10;
+      }
+      .intro {
+        h1 {
+          // @apply text-[2.8rem];
+        }
+        .btn {
+          // font-size: 0.725rem;
+          // word-spacing: 4px;
+        }
+      }
+      .lilAbout {
+        // @apply py-4 px-10;
+        .circleImg {
+          // @apply w-[55%];
+          // py-[1.8%] px-[1.8%] pb-[2%];
+        }
+        .about {
+          .hero h2 .line > div {
+            // @apply h-[1vh];
+          }
+          p {
+            // @apply leading-[2];
+          }
+          .more button {
+            // @apply mb-5;
+          }
+        }
+      }
+      .skills {
+        // @apply mt-[-1px];
+        #tsparticles {
+          // @apply h-[170vh];
+        }
+        .KeySkillsWrapper .skillList {
+          // @apply px-4 pl-8;
+          .skillPill {
+            // @apply mb-3;
+            .skillName {
+              // @apply min-w-[22%];
+              // @apply py-[0.32rem];
+            } //PROGRESS BAR
+            > div.progress.Bar {
+              // @apply w-[78%];
+            }
+          }
+        }
+        .skillPoster {
+          // @apply mt-[-1.2rem] mr-[-1.0rem];
+          & > div svg {
+            // @apply w-[60%];
+          }
+        }
+        .tools p {
+          // @apply w-[300px] mt-[1rem];
+        }
+      }
+      .homeProjects {
+        // @apply pt-10;
+        .swiper .swiper-slide {
+          // @apply h-[30vh] ml-1;
+          img {
+            // @apply min-w-full;
+          }
+          // #home .homeProjects
+          // .swiper .swiper-wrapper .swiper-slide
+        }
+      }
+    }
+    #about {
+      .bg {
+        // @apply h-[105vh];
+        h1 {
+          // padding-top: 1.2rem;
+        }
+        > div:last-of-type {
+          // @apply mt-5; // mb-0;
+        }
+      }
+      .content {
+        // @apply px-5 text-[0.825rem];
+        // word-spacing: 1px;
+      }
+      section {
+        .imgX2 {
+          // @apply w-[55%];
+        }
+        .aboutMe {
+          // @apply px-5;
+        }
+      }
+      #tsparticles {
+        // height: 320vh;
+      }
+      .myServices .serviceWrapper {
+        h2 {
+          // font-size: 2.2rem;
+        }
+        .serviceList {
+          .service {
+            // @apply mx-3.5 pl-6 pt-6 pb-14;
+            .icon {
+              // @apply p-2.5;
+            }
+            p {
+              // @apply max-w-[200px];
+            }
+          }
+        }
+      }
+    }
+    #projects {
+      .bg .explore {
+        // @apply top-16;
+        h1 {
+          // @apply text-[2.5rem];
+        }
+        .sub {
+          // @apply text-[13px];
+          // @apply px-8 my-[-2rem];;
+        }
+      }
+      main {
+        .projectNav {
+          // WHITE BACKGROUND SIDE NAV
+          > div {
+            // @apply top-[5rem];
+            //  EACH BUTTON
+            .Nav {
+              // @apply mb-3.5 [&.active>span]:text-[0.75rem]; // mt-4;
+              // flex items-center justify-start
+              // py-1 px-1 mb-2 [&.active>span]:text-[0.61rem]
+              // font-bold [&.active>img]:mr-[.1rem];
+              img {
+                // @apply w-[65%] mb-1; // m-0; pl-0.5
+              }
+              span {
+                // @apply text-[0.65rem];
+                // margin-left: 0.25rem;
+                // color: $themeDGray;
+              }
+            }
+          }
+        }
+        section {
+          // @apply pl-2.5;
+          .gridSection {
+            // @apply pl-2 pr-0 pt-8 pb-10;
+            // EACH PROJECT DIV
+            .MainProject {
+              // @apply mr-5 ml-10;
+              .swiper .swiper-wrapper .swiper-slide img {
+                // @apply max-h-[22vh];
+              }
+              .contentWrapper {
+                // @apply pl-3.5 pr-1; //  mt-[-.3rem];
+                p {
+                  // @apply text-[11.5px];
+                }
+              }
+            }
+          }
+          // USED TOOLS DIV
+          .tools {
+            &.show {
+              // @apply mt-[-1.25rem] ml-4;
+              &::before {
+                // @apply h-6 left-12;
+              }
+            }
+          }
+          // UI IMAGES
+          .UI-UX {
+            // @apply flex gap-6 pr-1 py-7 pl-3;
+            .UI_image {
+              img {
+                // @apply max-w-[100%] ml-0;
+              }
+            }
+          }
+        }
+      }
+    }
+    #contact {
+      .bg {
+        // @apply h-[120vh];
+        .Pleasantries {
+          // @apply top-32;
+          h1 {
+            // @apply mb-[10rem] text-[2.5rem];
+          }
+          .sub {
+            // @apply text-[14px];
+          }
+        }
+      }
+      main {
+        // @apply mt-[-2px];
+        .svg {
+          // @apply w-[84%] mx-auto;
+          // m-0 ;
+        }
+        .socials {
+          // @apply mx-8 my-3;
+        }
+        .ContactMeWrapper {
+          // @apply px-2.5;
+          .ContactMe {
+            // @apply px-5;
+          }
+          .circleWrapper {
+            // @apply mt-[-12rem] mr-[-9rem]
+            // h-[45vh] mb-[-6rem];
+            // clip-path: circle(9rem);
+          }
+        }
+      }
+    }
+    .BottomColor {
+      // margin-bottom: -5px;
+    }
+    //--------- PORTALS
+    #portals {
+      // RESUME
+      .ResumeImg {
+        // // @apply p-2.5; // pb-1.5;
+        img {
+          // @apply max-h-[80vh];
+        }
+      }
+      .ResumeDwn {
+        // @apply pt-[4rem] pb-[5%];
+        // [title="Download Resume"] {
+        //   @apply py-3.5 px-5 text-[12px]; // [&>svg];
+        // }
+        // @apply mt-[-.55rem] mr-[23%];
+      }
+      // UI PROJECT'S
+      .UIZoom {
+        // @apply pb-80;
+        button {
+          // @apply mt-2;
+        }
+      }
+      .ProjectDets {
+        // @apply my-4;
+      }
+    }
+  }
 }
-// For Desktops, Large screens, Extra large screens, TVs: iPad Pro, iPad Air, Surface Pro 7
-@media screen and (min-width: 800px) and (min-height: 1100px) {
-  // ?
-  // ?
-}
+
+// @media screen and (min-width: 481px) and (max-width: 768px) and (max-height: 1024px) {
+//   // ?
+//   // ?
+// }
+// // For Desktops, Large screens, Extra large screens, TVs: iPad Pro(1024,1366), iPad Air(820,1180), Surface Pro 7(912,1368)
+// @media screen and (min-width: 800px) and (min-height: 1100px) {
+//   // ?
+//   // ?
+// }
+
+/* 
+Hello Oluwatimilehin Similoluwa, we offer our sincerely apologies for the delay in response but we have not attended because we can't find the attachment mentioned in other to confirm the payment. If you can kindly resend the proof of payment, once we can confirm it's reference ID your request will be processed accordingly, thank you. 
+*/

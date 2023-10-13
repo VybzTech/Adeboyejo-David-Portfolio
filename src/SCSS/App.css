@@ -181,7 +181,7 @@
   @apply bg-[#fff7];
 }
 #light .navbar .navigation {
-  @apply absolute top-[30vh] left-0 m-0 h-0 w-[0%] hidden;
+  @apply min-h-[70vh] absolute left-0 m-0 h-0 w-[0%] hidden;
   transition: all 400ms ease-in-out;
 }
 #light .navbar .navigation > div > div {
@@ -1197,6 +1197,46 @@
   font-size: 0.8rem;
 }
 
+@media screen and (min-width: 768px) and (min-height: 1024px) {
+  #light .navbar {
+    border-radius: 0 0 25px 25px;
+  }
+  #light .navbar .logo svg {
+    @apply w-10 ml-2.5;
+  }
+  #light .navbar .navigation,
+  #light .navbar .navigation.show {
+    @apply static  bg-transparent w-auto h-auto min-h-[auto] 
+        flex-[auto] flex justify-end;
+  }
+  #light .navbar .navigation > div > div:first-child,
+  #light .navbar .navigation.show > div > div:first-child {
+    @apply py-2 flex-row;
+  }
+  #light .navbar .navigation > div > div button.nav,
+  #light .navbar .navigation.show > div > div button.nav {
+    @apply m-0 mb-1 p-2 mx-3 text-[17px];
+  }
+  #light .navbar .navigation > div > div button.nav.active::after,
+  #light .navbar .navigation.show > div > div button.nav.active::after {
+    content: "";
+    @apply absolute bottom-[-0.1rem] left-0 bg-blue-600 rounded rounded-lg h-1 w-full px-5;
+  }
+  #light .navbar .navigation > div > div button.nav:hover::after,
+  #light .navbar .navigation.show > div > div button.nav:hover::after {
+    @apply absolute bottom-[-0.1rem] left-0 bg-blue-50 rounded rounded-lg h-1 w-full px-5;
+  }
+  #light .navbar .navigation > div > div:last-of-type button,
+  #light .navbar .navigation.show > div > div:last-of-type button {
+    @apply hidden;
+  }
+  #light .navbar .menu {
+    @apply hidden;
+  }
+}
+/* 
+Hello Oluwatimilehin Similoluwa, we offer our sincerely apologies for the delay in response but we have not attended because we can't find the attachment mentioned in other to confirm the payment. If you can kindly resend the proof of payment, once we can confirm it's reference ID your request will be processed accordingly, thank you. 
+*/
 @media screen and (min-height: 320px) and (orientation: Landscape) {
   .Loader > div svg {
     @apply w-[6.5vw] mx-5;
@@ -2899,9 +2939,10 @@
   }
   #light #contact main .ContactMeWrapper .circleWrapper {
     clip-path: circle(11rem);
-    margin-bottom: -7rem;
-    margin-right: -24rem;
-    height: 90vh;
+    @apply mb-[-7rem] mr-[-24rem] h-[90vh];
+  }
+  #light #portals .ResumeDwn {
+    @apply mr-[5%];
   }
 }
 #light.dark .navbar .logo svg path {

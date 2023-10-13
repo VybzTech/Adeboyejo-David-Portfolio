@@ -82,7 +82,7 @@
 
     //  INITIAL NAVBAR STYLES
     .navigation {
-      @apply absolute top-[30vh] left-0 m-0 h-0 w-[0%] hidden;
+      @apply min-h-[70vh] absolute left-0 m-0 h-0 w-[0%] hidden;
       @include trans(400ms);
       > div {
         > div {
