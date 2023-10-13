@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 import ContactDetails from "./ContactDetails";
 const ContactImage = () => {
   return (
-    <>
+    <figure>
       <Fade delay={1700} big triggerOnce cascade={true} className="svg">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
           {/* SVG IMAGE */}
@@ -1269,7 +1269,7 @@ const ContactImage = () => {
         </svg>
       </Fade>
       <ContactDetails />
-    </>
+    </figure>
   );
 };
 

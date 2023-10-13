@@ -163,15 +163,14 @@ export const projectSlides = [
     alt: "TaskManager Project",
     src: TaskManagerProject,
   },
-  {
-    alt: "Miners Project",
-    src: MinersProject,
-  },
-  {
+   {
     alt: "Ponle Richard Project",
     src: PR,
   },
-];
+  {
+    alt: "Miners Project",
+    src: MinersProject,
+  },];
 
 //PROJECT PAGE UIs
 export const UIs = [

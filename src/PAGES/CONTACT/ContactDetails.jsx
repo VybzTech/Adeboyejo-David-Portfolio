@@ -4,7 +4,7 @@ import { Slide, Zoom } from "react-awesome-reveal";
 
 const ContactDetails = () => {
   return (
-    <>
+    <div>
       <Slide className="hero" triggerOnce>
         <>
           <div />
@@ -40,7 +40,7 @@ const ContactDetails = () => {
           })}
         </Zoom>
       </div>
-    </>
+    </div>
   );
 };
 

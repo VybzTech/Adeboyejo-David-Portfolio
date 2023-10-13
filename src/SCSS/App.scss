@@ -213,7 +213,7 @@
         }
       }
       p {
-        @include LightText($size: 0.8em, $word: 2px);
+        @include LightText($size: 0.8rem, $word: 2px);
         @apply leading-[2.2] text-justify px-2;
         &::first-letter {
           @apply pl-3;
@@ -223,7 +223,7 @@
         @apply w-fit mx-auto mt-7;
         .btn {
           background: linear-gradient(-15deg, #1e40af, #2563eb);
-          @apply text-[11px] border border-blue-600 font-sans rounded rounded-md text-white px-5 py-3 ease-in-out uppercase w-fit;
+          @apply text-[11px] border border-blue-600 font-sans rounded rounded-lg text-white px-5 py-3 ease-in-out uppercase w-fit;
           &:hover,
           &:focus,
           &:focus-within,
@@ -1107,8 +1107,8 @@
 
 @import "./laptop";
 @import "./tablet";
-@import "./phone";
 @import "./smPhone";
+@import "./phone";
 @import "./dark";
 
 // #light {

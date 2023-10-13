@@ -9,7 +9,7 @@ Crosscheck social handles
 Cross check contact form sending
 Work on projects delivery
 Projects UI UX Image resize
-
+Project Copy function
 Edit Footer components
 Compress irrelevant Images
 @apply ;

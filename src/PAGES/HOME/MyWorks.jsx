@@ -87,9 +87,9 @@ const MyWorks = withRouter(({ history }) => {
       // 		// slidesPerView: 1,
       // 		// spaceBetween: 10,
       // 	},
-      1300: { slidesPerView: 3.5, spaceBetween: 25 },
-      1024: { slidesPerView: 3, spaceBetween: 20 },
-      770: { slidesPerView: 2.2, spaceBetween: 15 },
+      1300: { slidesPerView: 4.5, spaceBetween: 25 },
+      1024: { slidesPerView: 3, spaceBetween: 22 },
+      770: { slidesPerView: 2.2, spaceBetween: 20 },
       425: { slidesPerView: 1.8, spaceBetween: 18 },
       // 	375: {},
       320: {

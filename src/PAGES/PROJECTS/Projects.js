@@ -15,42 +15,21 @@ import ReactVisibilitySensor from "react-visibility-sensor";
 import ErrorHandler from "../../COMPONENTS/ErrorHandler";
 import { Toaster } from "react-hot-toast";
 const Projects = () => {
-  // const [anime, setAnime] = useState(false);
   const [nav, setNav] = useState("All");
-  // const [previewUI, setPreviewUI] =
-  // useState(false)
   const breakPoints = {
     default: 3,
-    800: 2,
-    450: 1,
+    950: 2,
+    500: 1,
+  };
+  const breakPoints2 = {
+    1024: 3,
+    950: 2,
+    500: 1,
   };
   //SET PROJECTS BASED ON NAVIGATION
   const NewProjects = PROJECTS.filter((pro) => {
     return pro?.tag?.includes(nav);
   });
-
-  // useEffect(() => {
-  // 	var observer = new IntersectionObserver(
-  // 		onIntersection,
-  // 		{
-  // 			root: null,
-  // 			threshold: 0.5,
-  // 		}
-  // 	)
-
-  // 	function onIntersection(entries) {
-  // 		entries.forEach(() => {
-  // 			window.addEventListener('scroll', () => {
-  // 				if (window.scrollY >= 30) {
-  // 					setAnime(true)
-  // 				}
-  // 			})
-  // 		})
-  // 	}
-  // 	observer.observe(
-  // 		document?.querySelector('main')
-  // 	)
-  // }, [nav])
   return (
     <div id="projects">
       <div className="bg" children={<Explore />} />
@@ -61,8 +40,6 @@ const Projects = () => {
         scrollDelay={150}
         partialVisibility={true}
         minTopValue={200}
-        // onChange={(isVisible) => setAnime(isVisible)}
-        // active={!anime}
       >
         <main>
           <Toaster position="bottom-left" reverseOrder={true} />
@@ -75,7 +52,11 @@ const Projects = () => {
                 There is no project here ! 😁
               </span>
             ) : nav !== "UI/UX" ? (
-              <div className="gridSection">
+              <Masonry
+                breakpointCols={breakPoints2}
+                className="gridSection"
+                columnClassName="gridSectionCol"
+              >
                 {NewProjects.map((project) => {
                   return (
                     <ErrorHandler key={project.id}>
@@ -87,7 +68,7 @@ const Projects = () => {
                     </ErrorHandler>
                   );
                 })}
-              </div>
+              </Masonry>
             ) : (
               <Masonry
                 breakpointCols={breakPoints}
