@@ -48,12 +48,14 @@ const Skills = () => {
           <Fade left className="keySkills">
             <KeySkills />
           </Fade>
-          <Slide triggerOnce bottom className="skillPoster">
-            <SkillSvg />
-          </Slide>
-          <Slide triggerOnce bottom>
-            <Tools />
-          </Slide>
+          <figure>
+            <Slide triggerOnce bottom className="skillPoster">
+              <SkillSvg />
+            </Slide>
+            <Slide triggerOnce bottom>
+              <Tools />
+            </Slide>
+          </figure>
         </div>
       </div>
     </ReactVisibilitySensor>

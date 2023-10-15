@@ -284,7 +284,7 @@ export const PROJECTS = [
         mentor gave me the assignment for the <b>Division Report Form.</b> I had
         completed a course from <b>Travesy</b>, watched and practiced some of
         <b>
-          Angela Yu's fundamental Html, CSS, and Javascript tutorials on YouTube
+          {" "} Angela Yu's fundamental Html, CSS, and Javascript tutorials on YouTube
         </b>
         , and perused the entirety of the <b>W3schools</b> library in the hopes
         that I would have learned enough to build a fully functional website.

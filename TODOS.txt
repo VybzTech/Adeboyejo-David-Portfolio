@@ -15,6 +15,7 @@ Compress irrelevant Images
 @apply ;
 
 Toast Dark Mode
+theme button tooltip dropdown
 
 In Projects 
 -Division Report form : Add * to required fields labels

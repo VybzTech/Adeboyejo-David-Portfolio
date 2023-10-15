@@ -16,7 +16,13 @@
       background-color: $themeBlack1;
       box-shadow: 0 -1px 10px $themeBlack;
     }
-
+    .navigation > div > div {
+      button.nav {
+        &::after {
+          @apply bg-red-600;
+        }
+      }
+    }
     // .navigation {
     //   .nav {
     //     color: white;
@@ -551,8 +557,8 @@
         // @apply pt-2;
         li {
           // list-style: none;
-      background-color: $themeDGray;
-      // @apply bg-slate-900;
+          background-color: $themeDGray;
+          // @apply bg-slate-900;
           // w-fit m-1.5 rounded rounded-lg;
           img {
             // min-width: 1.35rem;
@@ -589,8 +595,8 @@
   }
 
   //------------- FOOTER
-  .foot{
-  background-color: #0e0e0eff;
+  .foot {
+    background-color: #0e0e0eff;
   }
   // 	//--------- 404 PAGE
   // 	#P404 {
