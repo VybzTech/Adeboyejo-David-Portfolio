@@ -120,6 +120,7 @@ import Netlify from "../IMAGES/TOOLS/Netlify-Logo.png";
 import Flutter from "../IMAGES/TOOLS/Flutter.svg";
 import Dart from "../IMAGES/TOOLS/Dart.svg";
 import XD from "../IMAGES/TOOLS/Adobe-XD.png";
+import NextJS from "../IMAGES/TOOLS/next-js-seeklogo.com.svg";
 
 //HOME PAGE SKILLS
 export const SKILLS = [
@@ -163,14 +164,15 @@ export const projectSlides = [
     alt: "TaskManager Project",
     src: TaskManagerProject,
   },
-   {
+  {
     alt: "Ponle Richard Project",
     src: PR,
   },
   {
     alt: "Miners Project",
     src: MinersProject,
-  },];
+  },
+];
 
 //PROJECT PAGE UIs
 export const UIs = [
@@ -284,7 +286,8 @@ export const PROJECTS = [
         mentor gave me the assignment for the <b>Division Report Form.</b> I had
         completed a course from <b>Travesy</b>, watched and practiced some of
         <b>
-          {" "} Angela Yu's fundamental Html, CSS, and Javascript tutorials on YouTube
+          {" "}
+          Angela Yu's fundamental Html, CSS, and Javascript tutorials on YouTube
         </b>
         , and perused the entirety of the <b>W3schools</b> library in the hopes
         that I would have learned enough to build a fully functional website.
@@ -309,7 +312,7 @@ export const PROJECTS = [
         information and seeing what happens; the project is presently hosted on
         the <b>Netlify platform. </b>
         However, your information doesn't go anywhere, and you have the option
-        of editing it afterwards.
+        of editing it afterwards by goint back to the beginning.
       </span>
     ),
     position: "LIRS IT support intern",
@@ -675,7 +678,7 @@ export const PROJECTS = [
         aid: "Dark programming language is the basis which the Flutter Framework is built upon.",
       },
     ],
-    git: "https://github.com/Dharvo/whatodo",
+    git: "https://github.com/Dharvo/Whatodo-App",
     link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
     images: [UI42, UI43, UI17, UI15, UI12, UI21],
     tag: ["All", "Flutter", "Completed", "UI/UX"],
@@ -710,7 +713,6 @@ export const PROJECTS = [
         <b> GitHub repository.</b>
       </span>
     ),
-    // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
     position: "Remote",
     updated: "1 year",
     timeline: "10 Months",
@@ -740,7 +742,7 @@ export const PROJECTS = [
   {
     id: 6,
     name: "PR. Photography",
-    status: "In-Progress",
+    status: "Completed",
     utilities: [
       {
         name: "Adobe XD",
@@ -758,9 +760,19 @@ export const PROJECTS = [
         aid: "Committed all my code to an online repo on the Github platform.",
       },
       {
+        name: "SCSS",
+        img: Scss,
+        aid: "This mature and powerful upgrade to CSS extension language is the world.",
+      },
+      {
         name: "React JS",
         img: ReactImg,
         aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
+      },
+      {
+        name: "Next JS",
+        img: NextJS,
+        aid: "The JavaScript framework that supports SSR and other optimization methods in React.",
       },
       {
         name: "VS-Code",
@@ -768,10 +780,10 @@ export const PROJECTS = [
         aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
       },
     ],
-    git: "https://github.com/Dharvo/whatodo",
-    link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
+    git: "https://github.com/Dharvo/PR",
+    link: "https://github.com/Dharvo/PR/",
     images: [PRLoad, PR, PRDark, PRAdmin, PRContact, PRAdmin2, PR404],
-    tag: ["All", "React", "In-Progress"],
+    tag: ["All", "React", "Completed"],
     content: (
       <span>
         For my second gallery project, I initially embarked on a relatively
@@ -779,25 +791,30 @@ export const PROJECTS = [
         <b> Adobe XD</b> I engaged the client to gather information about their
         preferences and requirements on the website's interface. Based on this
         input, I proceeded to design a user interface (UI) that would cater to
-        their specific needs. To implement the UI, I utilized React JS, a
-        JavaScript library c ommonly used for building dynamic user interfaces.
+        their specific needs. To implement the UI, I utilized<b> React JS</b>, a
+        JavaScript library commonly used for building dynamic user interfaces.
         <br />
-        Upon the initial deployment of the website using React JS, the
-        Photographer Ponle Oluwagbenga Richard expressed some dissatisfaction
-        with it's optimization and identified several changes he desired to be
-        made. To address Richard's concerns, I carefully reviewed his feedback
-        and analyzed the existing code of the website. By identifying areas that
-        required improvement, I was able to devise a plan for enhancing the
-        optimization & implementation of the website and resolved to rebulding
-        the project with the React Framework that enables developers to create
-        full-stack Web applications by extending the latest React
-        functionalities. This involved making adjustments to the HTML structure,
-        ensuring proper semantic markup, optimizing elements by minimizing
-        unnecessary code and reducing file sizes where possible such as images
-        and scripts. Additionally, I implemented caching mechanisms to enhance
-        loading speed and reduce server requests. By utilizing browser caching,
-        I instructed visitors' browsers to store certain files locally so that
-        subsequent visits to the website would require fewer resources to load.
+        Upon the initial deployment of the website using React, the
+        <b> Photographer Ponle Oluwagbenga Richard </b> expressed some
+        dissatisfaction with it's optimization and identified several changes he
+        desired to be made. To address <b>Richard's </b> concerns, I carefully
+        reviewed his feedback and analyzed the existing code of the website. By
+        identifying areas that required improvement, I was able to devise a plan
+        for enhancing the optimization & implementation of the website and
+        resolved to rebulding the whole project with the new
+        <b> React Framework, Next JS. </b>This framework enables developers to
+        create full-stack Web applications by extending the latest
+        <i>
+          <b> React functionalities. </b>
+        </i>
+        This involved making adjustments to the HTML structure, ensuring proper
+        semantic markup, optimizing elements by minimizing unnecessary code and
+        reducing file sizes where possible such as <i>Images</i> and{" "}
+        <i>Scripts. </i>
+        Additionally, I implemented caching mechanisms to enhance loading speed
+        and reduce server requests. By utilizing browser caching, I instructed
+        visitors' browsers to store certain files locally so that subsequent
+        visits to the website would require fewer resources to load.
         <br />
         Furthermore, I optimized the website for different devices and screen
         sizes by employing responsive design techniques. This ensured that users
@@ -805,35 +822,26 @@ export const PROJECTS = [
         experience, thus ensuring compatibility across different web browsers.
         Throughout this process, I maintained open communication with Richard to
         ensure that his expectations were met; Aiming to create a website that
-        not only met Richard's requirements but also provided an enjoyable and
+        not only met Richard's requirements but also provides an enjoyable and
         seamless user experience.
       </span>
     ),
-    // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
     position: "Remote",
-    updated: "3 months ago",
+    updated: "11 months ago",
     timeline: "8 Months",
     milestones: [
-      "Researhed photography and photographer website to enlighten myself on what to expect.",
-      "Designed the entire project on the Figma application after much sketches on a private canvas.",
-      "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
-      "Installed Andriod Studio and the Flutter SDK.",
-      "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
-      "Created my first Scaffold widget after battling with the Emulator setup.",
-      "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
-      "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
-      "Created a basic layout for the App and started including form fields as well as validations.",
-      "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
-      "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
-      "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
-      "Understood the function the Main() in the App's launch and execution.",
-      "Used the material Library to design iscon and other aspects of the application.",
-      "Handled error pages accordingly when requesting data from the Hive API.",
-      "Initialized Hive into the project to store User tasks in box on their mobile device.",
-      "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
-      "Initialized Firebase into the Mobile Application.",
-      "Came across Google Account page to Upload application to play store, but was unable...",
-      "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
+      "Designed Intial view of the project using Adobe XD.",
+      "Reviewed Design, created project file folder and uploaded to Github.",
+      "Developed first design using React JS and uploaded to Firebase.",
+      "Consulted with client u=in a meeting and looked at Ups and Downs of proposed design.",
+      "Reviewed new design but still wasn't in content.",
+      "Furthered my knowledge in search of design patterns and optimization options.",
+      "Recreated my first NEXT JS project and recoded project to Next pages.js",
+      "Ran into SSR bugs and client-side perfection was immernent.",
+      "Fixed a few bugs and finally had a working application.",
+      "Redployed on Firebase and yet to get feedback from client.",
+      "Created an Admin page using Firebase APIs in performing CRUD operations to control the UI ",
+      "...",
     ],
   },
   {
@@ -847,7 +855,7 @@ export const PROJECTS = [
         aid: "This mature and powerful upgrade to CSS extension language is the world.",
       },
       {
-        name: "Adobe XD",
+        name: "Figma",
         img: Figma,
         aid: "Designed a fantastic UI from scratch after much resourcing to come up with a view that meet requirements.",
       },
@@ -861,7 +869,6 @@ export const PROJECTS = [
         img: Firebase,
         aid: "Provided tools to host and grow my application as quickly & securely as possible.",
       },
-
       {
         name: "Github",
         img: GithubImg,
@@ -878,50 +885,59 @@ export const PROJECTS = [
         aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
       },
     ],
-    git: "https://github.com/Dharvo/whatodo",
-    link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
+    git: "https://github.com/Dharvo/miners",
+    link: "https://platinum-miners.web.app",
     images: [Miners1, Miners2, Miners3, Miners4],
     tag: ["All", "React", "Completed"],
     content: (
       <span>
-        Some conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc{" "}
-        <b>cs cjhschcb</b>
-        scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh
-        scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome
-        conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc
-        cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb
-        scch jsc skh sc
+        Platinum Ville Mines Limited is a lithium mining company operating in
+        Nigeria. The company is comprised of astute professionals who have
+        ownership and control over licensed mining sites located in various
+        parts of the country. They enlisted the help of a consultant, referred
+        to them by a colleague of mine, to establish their online presence.
+        Through successful meetings with the consultant, they finalized the
+        details of their webpage. This consultant was responsible for creating
+        their public image and after productive discussions, an agreement was
+        reached regarding the content and design of their webpage. To ensure
+        that the webpage effectively communicates what
+        <b> Platinum Ville Mines Limited </b>has to offer, I conducted research
+        on professional user interfaces that could accurately convey the
+        company's services.
+        <br />
+        <b> Platinum Ville Mines </b>is a project that has been designed and
+        implemented using<b> React JS </b>to provide a comprehensive platform
+        for the mining industry. The project aims to streamline the mining
+        process, improve efficiency, and reduce costs. While the project has
+        been fully designed, the hosting and deployment were not included in the
+        contract. As a result, the projects has a version of the project on
+        <b> Firebase</b>, which hosts a limited number of functionalities. The
+        <b> Platinum Ville </b>landing page is a good starting point for anyone
+        interested in learning more about the project. The page provides an
+        overview of the project's features and capabilities, as well as contact
+        information for the project's creator.
       </span>
     ),
-    // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
     position: "Remote",
-    updated: "3 months ago",
-    timeline: "8 Months",
+    updated: "1 year 2 Months ago",
+    timeline: "3 months",
     milestones: [
-      "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
-      "Designed the entire project on the Figma application after much sketches on a private canvas.",
-      "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
-      "Installed Andriod Studio and the Flutter SDK.",
-      "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
-      "Created my first Scaffold widget after battling with the Emulator setup.",
-      "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
-      "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
-      "Created a basic layout for the App and started including form fields as well as validations.",
-      "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
-      "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
-      "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
-      "Understood the function the Main() in the App's launch and execution.",
-      "Used the material Library to design iscon and other aspects of the application.",
-      "Handled error pages accordingly when requesting data from the Hive API.",
-      "Initialized Hive into the project to store User tasks in box on their mobile device.",
-      "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
-      "Initialized Firebase into the Mobile Application.",
-      "Came across Google Account page to Upload application to play store, but was unable...",
-      "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
+      "Wrote a Technical content for project breakdown and requirements.",
+      "Engaged with a Project Manager expert to outsource these content and tools.",
+      "Recreated design on which project was determined after a meeting to review our status.",
+      "Installed Next JS and created project structure to suite React's needs and tested App.tsx.",
+      "Edited technical writeup to suite other requirements of the company and designs.",
+      "Developed project in accordance to slated design using the npx create-next-app.",
+      "Installed dependencies like React Icons, toastify, spinners, firebase etc.",
+      "Created Admin authentication system using Firebase Auth API and Google Auth provider.",
+      "Separated concerns and user's authorization before designing the Admin page.",
+      "Learnt about scoped, general and component styling using Scss with Typescript.",
+      "Construct an errorboundary component that acted as a 404 page for the whole application to prevent unknown subdomains.",
+      "Depended the project's styling on the SASS library in the Dev dependency of the project.",
+      "Added user cookies feature to application to authorize authenticated user within a time period.",
+      "Studied about SWR and implememted its high order nature throughout the Website.",
+      "Discovered a React Google Map API which I incorperated to the Contact's Page.",
+      "Finalization of Project and awaiting Client's directive...",
     ],
   },
   {
@@ -935,25 +951,20 @@ export const PROJECTS = [
         aid: "The basic fundamental language that the ASP .NET Framework is built on.",
       },
       {
-        name: "React JS",
-        img: ReactImg,
-        aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
+        name: ".NET",
+        img: CSharp,
+        // img: Dotnet,
+        aid: "The .NET framework is a microsoft runtime application software that was used to build the console application.",
       },
-      {
-        name: "Firebase",
-        img: Firebase,
-        aid: "Provided tools to host and grow my application as quickly & securely as possible.",
-      },
-
       {
         name: "Github",
         img: GithubImg,
         aid: "Committed all my code to an online repo on the Github platform.",
       },
       {
-        name: "Swiper",
+        name: "Youtube",
         img: Swiper,
-        aid: "Swiper is a modern free and open source touch slider with nice transitions & amazing native behaviour.",
+        aid: "Youtube tutorials aided the project by providing videos on C sharp basics and possible issues to encounter.",
       },
       {
         name: "VS-Code",
@@ -961,50 +972,58 @@ export const PROJECTS = [
         aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
       },
     ],
-    git: "https://github.com/Dharvo/whatodo",
-    link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
+    git: "https://github.com/Dharvo/ConsoleToWeb",
+    link: "https://github.com/Dharvo/ConsoleToWeb/",
     images: [],
-    tag: ["All", "React", "Completed"],
+    tag: ["All", "Completed"],
     content: (
       <span>
-        Some conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc{" "}
-        <b>cs cjhschcb</b>
-        scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh
-        scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome
-        conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc
-        cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb
-        scch jsc skh sc
+        'From Console to Web?' you might say _ Oh boy, let me tell you about
+        this wild project I built! The project initially started as an
+        <b> ASP .NET Console project</b> and later transformed into a
+        <b> Web API Project. </b>It all started at my first primary place of
+        assignment
+        <i> (sounds fancy, right?) </i>and given the task of studying the
+        <b> ASP .NET framework.</b> Now, keep in mind that I had already
+        mastered the <b>C# language </b> and its fundamentals. So, this tutorial
+        covered all the basics of creating <b>.NET projects. </b>I learned about
+        different project types like
+        <i>
+          <b> MVC </b>pattern projects,<b> Console </b>applications,
+          <b> Web Apps </b>and<b> Web APIs </b>package.
+        </i>
+        <br />
+        But wait, there's more! The tutor then decided to blow our minds by
+        showing us how to convert a boring old<b> Console application </b>into a
+        fancy
+        <b> Web API </b>Based application using Visual Studio. Now, I know what
+        you're thinking _ 'why would anyone want to do that?' Well, my friend,
+        sometimes life throws unexpected curveballs at you. Maybe someone
+        realized that their console app needed a little more pizzazz and decided
+        to take it to the web. Or perhaps they just wanted to show off their
+        coding skills to impress their friends. Who knows? The point is, we went
+        from typing commands in a black and white console window to creating
+        something that could be accessed through the vast world of the internet.
+        And there you have it - the epic transformation from
+        <b> Console to Web.</b>
       </span>
     ),
-    // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
     position: "Remote",
-    updated: "3 months ago",
-    timeline: "8 Months",
+    updated: "11 Months ago",
+    timeline: "2 months",
     milestones: [
-      "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
-      "Designed the entire project on the Figma application after much sketches on a private canvas.",
-      "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
-      "Installed Andriod Studio and the Flutter SDK.",
-      "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
-      "Created my first Scaffold widget after battling with the Emulator setup.",
-      "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
-      "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
-      "Created a basic layout for the App and started including form fields as well as validations.",
-      "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
-      "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
-      "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
-      "Understood the function the Main() in the App's launch and execution.",
-      "Used the material Library to design iscon and other aspects of the application.",
-      "Handled error pages accordingly when requesting data from the Hive API.",
-      "Initialized Hive into the project to store User tasks in box on their mobile device.",
-      "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
-      "Initialized Firebase into the Mobile Application.",
-      "Came across Google Account page to Upload application to play store, but was unable...",
-      "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
+      "Studied the .NET framework and briefly perused their Website.",
+      "Downloaded and Installed the enterprise version of Visual Studio",
+      "Installed SDK and Runtime with additional requirements.",
+      "Created my first Console application with the aid of the Latest Studio version.",
+      "Clicked on 'Create a new project' & selected the 'Console App(.NET Core)' template.",
+      "",
+      "",
+      "Test and debug your console application to ensure it functions correctly",
+      "",
+      "",
+      "Took advantage of the .NET features that were relevant to the application.",
+      "",
     ],
   },
   {
@@ -1018,77 +1037,47 @@ export const PROJECTS = [
         aid: "The basic fundamental language that the ASP .NET Framework is built on.",
       },
       {
-        name: "React JS",
-        img: ReactImg,
-        aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
+        name: ".NET",
+        img: CSharp,
+        // img: Dotnet,
+        aid: "The .NET framework is a microsoft runtime application software that was used to build the console application.",
       },
-      {
-        name: "Firebase",
-        img: Firebase,
-        aid: "Provided tools to host and grow my application as quickly & securely as possible.",
-      },
-
       {
         name: "Github",
         img: GithubImg,
         aid: "Committed all my code to an online repo on the Github platform.",
       },
       {
-        name: "Swiper",
+        name: "SQL",
         img: Swiper,
-        aid: "Swiper is a modern free and open source touch slider with nice transitions & amazing native behaviour.",
+        aid: "We a Code-First approach we were able to construct databse in the local Db using a SQL Management tool.",
       },
       {
         name: "VS-Code",
         img: VSCode,
         aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
       },
+      {
+        name: "VS-Studio",
+        img: VSCode,
+        aid: "This is where all the Backend magic happened.",
+      },
     ],
-    git: "https://github.com/Dharvo/whatodo",
-    link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
+    git: "https://github.com/Dharvo/Books",
+    link: "https://github.com/Dharvo/Books/",
     images: [],
-    tag: ["All", "React", "In-Progress"],
+    tag: ["All", "In-Progress"],
     content: (
       <span>
-        Some conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc{" "}
-        <b>cs cjhschcb</b>
-        scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh
-        scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome
-        conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc
-        cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb
-        scch jsc skh sc
+        A Books in a library project, this simple project was my first solely
+        created
+        <b> .NET Web API application</b> in the ASP framework
       </span>
     ),
-    // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
     position: "Remote",
-    updated: "3 months ago",
-    timeline: "8 Months",
-    milestones: [
-      "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
-      "Designed the entire project on the Figma application after much sketches on a private canvas.",
-      "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
-      "Installed Andriod Studio and the Flutter SDK.",
-      "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
-      "Created my first Scaffold widget after battling with the Emulator setup.",
-      "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
-      "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
-      "Created a basic layout for the App and started including form fields as well as validations.",
-      "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
-      "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
-      "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
-      "Understood the function the Main() in the App's launch and execution.",
-      "Used the material Library to design iscon and other aspects of the application.",
-      "Handled error pages accordingly when requesting data from the Hive API.",
-      "Initialized Hive into the project to store User tasks in box on their mobile device.",
-      "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
-      "Initialized Firebase into the Mobile Application.",
-      "Came across Google Account page to Upload application to play store, but was unable...",
-      "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
-    ],
+    updated: "9 months ago",
+    timeline: "1 Months",
+    milestones: ["", "", "", ""],
   },
   {
     id: 10,
@@ -1123,50 +1112,39 @@ export const PROJECTS = [
         aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
       },
     ],
-    git: "https://github.com/Dharvo/whatodo",
-    link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
+    git: "https://github.com/Dharvo/Whatodo",
+    link: "https://github.com/Dharvo/Whatodo/",
     images: [WhaTodoDesktop],
     tag: ["All", "React", "In-Progress"],
     content: (
       <span>
-        Some conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc{" "}
-        <b>cs cjhschcb</b>
-        scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh
-        scSome conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome
-        conten tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten
-        tkjefbhj dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj
-        dvhchjsc hc cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc
-        cs cjhschcb scch jsc skh scSome conten tkjefbhj dvhchjsc hc cs cjhschcb
-        scch jsc skh sc
+        I had built a mobile task management project using an Object oriented
+        proramming framework, Flutter it was called. But with my new focus in
+        building backend services, I wanted to rebuild the <b> Whatodo </b>
+        project into a<b> React JS .NET application </b>which uses
+        <i> Models, Repositories, Views, Controllers </i>and even the
+        <i> Entity Core framework </i>components to provide a safe cache/storage
+        and successful CRUD operations.
+        <br /> The project is yet to be completed or deployed on a live server;
+        Following a<i> Code-first Based approach </i> the application could
+        create a database in respect to the defined models and controllable
+        using function that were called in
+        <b> React's UseEffect Callback function </b>for side effects. The github
+        repo of the project is sectioned into three parts namely the Frontend,
+        Backend and of course the master which displays intially.
       </span>
     ),
-    // "The Wha'Todo App is an Advanced Todo list tracking Application that not only monitors your duties, but also sets reminders and send notifications, helping you to Monitor your daily activities.",
     position: "Remote",
-    updated: "3 months ago",
-    timeline: "8 Months",
+    updated: "5 months ago",
+    timeline: "2.5 Months",
     milestones: [
-      "Researhed & studied tutorials on the Dart language from FreeCodeCamp Academy.",
-      "Designed the entire project on the Figma application after much sketches on a private canvas.",
-      "Completed tutorials on the Flutter framework, improving my understanding of Classes & Widgets.",
-      "Installed Andriod Studio and the Flutter SDK.",
-      "Reviewed more information on the Pubspec.yaml file & edited to install packages.",
-      "Created my first Scaffold widget after battling with the Emulator setup.",
-      "Learnt how to stlye Flutter widget using other widgets like padding, color etc.",
-      "Highlighted some other uses of the Pubspec.yaml file like Fonts, Images, meta data etc.",
-      "Created a basic layout for the App and started including form fields as well as validations.",
-      "Delayed a while to learn DateTime and it's widget function properly for setting time and dates.",
-      "Stumbled upon Flutter animations, Cubit state management tool & Styling in Dart file; All of which lead to the Flutter.Dev library.",
-      "Managed App state and Logic using the Cubit state management tool & ensured there was a fallback loading screen.",
-      "Understood the function the Main() in the App's launch and execution.",
-      "Used the material Library to design iscon and other aspects of the application.",
-      "Handled error pages accordingly when requesting data from the Hive API.",
-      "Initialized Hive into the project to store User tasks in box on their mobile device.",
-      "Learnt a thing or two more about Filtering, Classes, Objects, Types and more JavaScript basically.",
-      "Initialized Firebase into the Mobile Application.",
-      "Came across Google Account page to Upload application to play store, but was unable...",
-      "Edited ReadME.md file ans Uploaded APK to Github repo for download.",
+      "Created repo to be initialized from Visual Studio code.",
+      "Initialized repo and created React app",
+      "Commited branch and created a backend branch for the API services.",
+      "",
+      "",
+      "",
+      "",
     ],
   },
 ];
@@ -1326,6 +1304,7 @@ export const Params = {
   },
   retina_detect: false,
 };
+
 export const Params2 = {
   particles: {
     number: {
@@ -1504,9 +1483,7 @@ export const socialLinks = [
     href: "https://www.github.com/VybzTech",
   },
 ];
-
-// no: document?.getElementById("donate")
-// 			?.scrollHeight,
+ 
 export const footLinks = [
   {
     name: "Donate",
@@ -1525,220 +1502,4 @@ export const footLinks = [
     title: "Job Pricing",
   },
 ];
-
-export const QUESTIONS = [
-  {
-    id: 1,
-    question: "What is Web Development / Design ?",
-    answer:
-      "Web development or website designs can be simplified as the whole process involved in creating a website. Website designs are the elements that determine the look and feel of a website, while web development on the other hand determines how a website functions and responds to user/admin interaction.",
-  },
-  {
-    id: 2,
-    question: "What are UI / UX Designs ?",
-    answer:
-      "UI/UX stands for User Interface design or User Experience design. It's basic skill that encompasses the view, feel of the presentation and the interactivity of a webpage. It is responsible for every element that shapes the experience and determines how it makes the user feel.",
-  },
-  {
-    id: 3,
-    question: "What kind of Developer are you ?",
-    answer:
-      "I am full stack web developer, that implements decency and efficiency in code, I create responsive designs.....",
-  },
-  {
-    id: 4,
-    question: "Do I own any website you Code ?",
-    answer:
-      "All jobs assigned by a Client, would be overseen carefully. Clients have full authority/access to their Webpage's files. Satisfied jobs would be sent to client upon request and a copy would be kept for safety purposes except stated otherwise before hire.",
-  },
-  {
-    id: 5,
-    question: "Can I be a Web Developer ?",
-    answer:
-      "To everyone asking theselves, 'Can I still become a web developer (thinking emoji)??' The answer is YES, you can and it's advicable to try it out and see if you have a passion for it, as the old saying goes, 'You dont know until you try !'",
-  },
-
-  {
-    id: 6,
-    question: "Do you code everyday ?",
-    answer:
-      "As a matter fact, Yes I do. I proud to say I can't go a day without coding or trying to improve my Skill in one way or the other.",
-  },
-  {
-    id: 7,
-    question: "How Long do you Code ?",
-    answer: "Web Dev............",
-  },
-  {
-    id: 8,
-    question: "How can I hire you ?",
-    answer:
-      "You can reach me through my contact or email address @ adedave77@gmail.com. Also my socials should be found at the bottom of the page.",
-  },
-  {
-    id: 9,
-    question: "Do I get SEO reviews ?",
-    answer: "Web Dev............",
-  },
-  {
-    id: 10,
-    question: "How much does a website cost ?",
-    answer: "Web Dev............",
-  },
-  {
-    id: 11,
-    question: "Will my website have, “.com” ?",
-    answer: "Web Dev............",
-  },
-  {
-    id: 12,
-    question: "Have you worked with other Languages besides React ?",
-    answer: "Web Dev............",
-  },
-  {
-    id: 13,
-    question: "How many programming Languages are there ?",
-    answer: "Web Dev............",
-  },
-  {
-    id: 14,
-    question: "Can I afford a basic website ?",
-    answer: "Web Dev............",
-  },
-  {
-    id: 15,
-    question: "How can I learn to Design ?",
-    answer: "Web Dev............",
-  },
-  {
-    id: 16,
-    question: "What tools do you make use of ?",
-    answer: "Web Dev............",
-  },
-];
-
-//PRICING LIST
-
-export const PRICING = [
-  {
-    Tag: "Individual",
-    subPackage: [
-      {
-        name: "starter",
-        intro: "The basics for personal projects, hobby sites and experiments",
-        features: [
-          "5 Pages",
-          "20 Images",
-          "Basic SEO Tools",
-          "Easy to customize",
-          "Public Repository",
-          "Responsive Web Designs",
-          "Cross Browser Compatible",
-          "Elegant Home Page Layout",
-          "Google fonts & Fonts Awesome Icons",
-          "Use of bootstrap/jquery Latest version & Much more...",
-        ],
-        button: "Get Started for free",
-        prices: {
-          left: "$100.00",
-          right: "N80k.00",
-        },
-      },
-      {
-        name: "Light",
-        intro:
-          "Light features for client defined applications and services on web platforms.",
-        featHead: "Starter features, plus:",
-        features: [
-          "30 Images",
-          "W3C Valid code",
-          "SEO Friendly Content",
-          "Flaticons Icons",
-          "Javascript Debugging",
-          "Community support",
-          "Image/Content Protection",
-          "Public/Private Repository",
-          "Self-hosted Github/Gitlab",
-        ],
-        button: "Go Light",
-        prices: {
-          left: "$15/hr",
-          right: "N15k/hr",
-        },
-      },
-      {
-        name: "pro",
-        intro:
-          "Advanced features & support for building pilot projects or small sites.",
-        featHead: "Light features, plus:",
-        features: [
-          "50 Images",
-          "Custom CSS Editing",
-          "Email support",
-          "Editing Legacy Code",
-          "Full SEO Optimization",
-          "Working Ajax Form ",
-          "500mb Online Project Storage",
-          "Instant rollbacks to any version",
-          "Password-protected sites",
-          "Client Gallery Imaging (Proofing)",
-          "Unlimited Forms, identity, & functions",
-        ],
-        button: "Buy pro",
-        prices: {
-          left: "$25/hr",
-          right: "N35k/hr",
-        },
-      },
-    ],
-  },
-  {
-    Tag: "Team",
-    subPackage: [
-      {
-        name: "Business",
-        intro:
-          "Collaboration, security, & compliance for scaling web apps and dev teams.",
-        featHead: "Pro features, plus:",
-        features: [
-          "Background functions",
-          "Audit logs with 7-day history",
-          "SAML single sign-on",
-          "Shared environment variables",
-          "Slack & email notifications",
-          "Role-based access control",
-          "Prioritize time-sensitive builds",
-          "Unlimited Forms, identity, & functions",
-          "Live site previews with a collaboration UI for team members",
-        ],
-        button: "Get In Business",
-        prices: {
-          left: "$20/hr",
-          right: "N30k/hr",
-        },
-      },
-      {
-        name: "Premium",
-        intro:
-          "A custom plan with services tailored to team and performance requirements. Contact Me",
-        featHead: "Business features, plus:",
-        features: [
-          "70 Images",
-          "1GB of Online Storage",
-          "24 x 7 premium support",
-          "Audit logs with full history",
-          "Security & compliance review",
-          "Unlimited Analytics for all sites",
-          "High performance builds with SLAs",
-          "Unlimited teams with org-level controls",
-          "Deploy static assests & dynamic serverless functions",
-        ],
-        button: "Free to Get Started",
-        prices: {
-          left: "$30/hr",
-          right: "N50k/hr",
-        },
-      },
-    ],
-  },
-];
+ 

@@ -49,10 +49,10 @@ const Skills = () => {
             <KeySkills />
           </Fade>
           <figure>
-            <Slide triggerOnce bottom className="skillPoster">
+            <Slide triggerOnce right className="skillPoster">
               <SkillSvg />
             </Slide>
-            <Slide triggerOnce bottom>
+            <Slide triggerOnce right>
               <Tools />
             </Slide>
           </figure>

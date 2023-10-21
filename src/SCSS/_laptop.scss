@@ -615,14 +615,797 @@
 // 	}
 // }
 
-// iPad Pro 
-  // For Desktops, Large screens, Extra large screens, TVs  -  iPad Air  and (height: 768px) 
-  @media screen and (min-width: 1024px) {
-    // ?
-    // ?
+// iPad Pro
+// For Desktops, Large screens, Extra large screens, TVs  -  iPad Air  and (height: 768px)
+@media screen and (min-width: 1024px) {
+  #light {
+    //--------- NAVBAR
+    div.navbar {
+      border-radius: 0;
+      @apply h-[10vh];
+      .logo > svg {
+        @apply w-9 ml-3.5;
+      }
+      .navBtn svg,
+      .theme svg {
+        @apply w-8;
+      }
+      .navigation,
+      .navigation.show {
+        @apply static bg-transparent w-auto h-auto min-h-[auto] 
+        flex-[auto] flex justify-end shadow-none backdrop-blur-0;
+        > div {
+          > div {
+            &:first-child {
+              @apply pt-2 flex-row;
+            }
+            button.nav {
+              @apply m-0 p-1 mx-2.5 text-[0.9rem];
+              &::after {
+                content: "";
+                @apply absolute bottom-[-0.1rem] left-0 bg-blue-600 rounded rounded-lg h-1;
+              }
+              &.active::after {
+                @apply w-full;
+              }
+              &:hover::after {
+                @apply w-full opacity-40;
+              }
+            }
+          }
+          & > div:last-of-type button {
+            @apply hidden;
+          }
+        }
+      }
+      .menu {
+        @apply hidden;
+      }
+    }
+    #home {
+      div.vid video {
+        @apply h-[100vh] w-auto;
+      }
+      // h1 {
+      //   // @apply text-[2.3rem];
+      // }
+      // #text {
+      //   @apply text-[18px] mt-7 mb-20; // mt-5 mb-10;
+      // }
+      div.intro {
+        @apply top-[30vh];
+        .hero,
+        #text {
+          @apply text-[1rem] my-2.5;
+        }
+        h1 {
+          @apply text-[6vw] mb-8;
+        }
+        .btn {
+          @apply text-[0.8rem] mt-7 px-7 pt-2.5 pb-3 rounded-lg;
+        }
+      }
+      div.lilAbout {
+        @apply flex items-center pt-10 pb-24 pl-3 pr-10 min-h-[90vh];
+        h2 {
+          font-size: 4.25vh;
+          -webkit-text-stroke: 1.25px $themeBlack;
+        }
+        .circleImg {
+          @apply w-[70%] py-[2.4%] px-[2.4%] pb-[2.55%];
+        }
+        > div:last-child {
+          flex-shrink: 1.4;
+        }
+        .about {
+          .hero h2 .line > div {
+            @apply h-[0.75vh];
+          }
+
+          p {
+            @apply leading-[5.5vh];
+          }
+          //     .more button {
+          //       // @apply mb-5;
+          //     }
+        }
+      }
+      div.skills {
+        div#tsparticles {
+          @apply h-[90vh];
+        }
+        .KeySkillsWrapper {
+          @apply px-1 flex items-center p-5;
+          & > div {
+            @apply w-full;
+            flex-shrink: 1.4;
+          }
+          .keySkills {
+            h2 {
+              @apply text-[5vh] mr-[-15%] pt-0 pb-7; // mr-[-2%] mb-14;
+            }
+            .skillList {
+              @apply px-0 pl-8;
+              .skillPill {
+                @apply w-full mb-3.5;
+                .skillName {
+                  // @apply min-w-[22%];
+                  @apply py-[0.3rem];
+                } //PROGRESS BAR
+                > div.progress.Bar {
+                  // @apply w-[78%];
+                }
+              }
+            }
+          }
+          figure {
+            // @apply w-full;
+            @apply w-[70%]  mb-[-5rem];
+          }
+        }
+        .skillPoster {
+          // @apply flex-col flex items-center;
+
+          @apply m-0 ml-[2rem]; // mt-[6rem] ml-[-4rem];
+          & > div svg {
+            //150
+            @apply w-full;
+            // @apply w-[70%];
+          }
+        }
+        .tools p {
+          @apply w-[350px];
+          // mt-[1rem];;
+        }
+      }
+      div.homeProjects {
+        @apply pt-24 pb-5 mt-[-2px];
+        h1 {
+          -webkit-text-stroke: 1px $themeBlack;
+          @apply text-[6vh] mt-2 mb-10;
+        }
+        .swiper {
+          @apply pt-20;
+          .swiper-wrapper div.swiper-slide {
+            @apply h-[30vh] m-0 mb-5 ml-0 rounded-xl;
+
+            img {
+              @apply min-w-full;
+            }
+            &-prev {
+              transform: skewY(-0.3deg) translate(1px, 1.5px);
+            }
+            &-next {
+              transform: skewY(0.3deg) translate(-1px, 1.5px);
+            }
+            // &-prev + div {
+            //   transform: skewY(-0.85deg) translate(2px, 3px);
+            // }
+            &-next + div {
+              transform: skewY(1deg) translate(-2px, 3px);
+            }
+            // #home .homeProjects
+            // .swiper .swiper-wrapper .swiper-slide
+          }
+        }
+      }
+    }
+    #about {
+      div.bg {
+        @apply h-[100vh] px-7;
+        h1 {
+          @apply pt-[10.5vh] pb-5 text-[5.25vh];
+        }
+        > div:last-of-type {
+          @apply mt-2 mb-5;
+          button {
+            @apply text-[1.55vh] px-8 rounded-lg py-2.5 pb-3;
+          }
+        }
+        .content {
+          @apply px-10 leading-[2.3] [&>div]:mb-2.5;
+          // word-spacing: 1px;
+          p {
+            @apply text-[1.9vh];
+          }
+        }
+      }
+      section {
+        @apply flex items-center pl-10 py-20;
+        div.imgX2 {
+          @apply w-[80%];
+        }
+        div.aboutMe {
+          flex-shrink: 1.2;
+          @apply pl-12 pr-14 text-[1.95vh] leading-[2.5];
+        }
+      }
+      div#tsparticles {
+        height: 115vh;
+      }
+      div.myServices .serviceWrapper {
+        h2 {
+          @apply pt-14 text-[5vh] pb-3.5;
+        }
+        .serviceList {
+          @apply px-3;
+          // flex items-center gap-7;
+          .service {
+            // @apply pr-5;
+            // @apply mx-3.5 pl-6 pt-6 pb-14;
+            .icon {
+              // @apply p-2.5;
+            }
+            p {
+              // @apply text-[1.3vh];
+              // @apply max-w-[200px];
+            }
+          }
+        }
+      }
+    }
+    div#projects {
+      div.bg .explore {
+        @apply top-32;
+        & > div {
+          align-self: flex-start;
+          @apply w-fit;
+          &:last-child {
+            align-self: center;
+          }
+        }
+        h1 {
+          @apply pl-28 text-[7vh] max-w-[50vw] text-left tracking-wide;
+        }
+        .sub {
+          @apply pl-28 text-[1.7vh] max-w-[50%] m-0 text-left mt-[-13vh] mb-[-5vh];
+        }
+        img {
+          @apply w-[2.5vw];
+        }
+      }
+      main {
+        nav.projectNav {
+          // WHITE BACKGROUND SIDE NAV
+          @apply w-[15%] px-2;
+          > div {
+            @apply w-[15%] top-[17vh]; //[&>div]:w-fit [&>div]:mx-auto;
+            // @apply [&>div]:w-[90%];
+            //  EACH BUTTON
+            button.Nav {
+              // @apply max-w-[85%];
+              // @apply px-4; // mx-auto;
+              @apply mx-[5%] w-[90%] mb-7 [&.active>span]:text-[1.7vh] [&.active>span]:ml-1.5 [&.active>img]:mr-0; // @apply mb-3.5 [&.active>span]:text-[0.75rem]; // mt-4;
+              // flex items-center justify-start
+              // py-1 px-1 mb-2
+              // font-bold [&.active>img]:mr-[.1rem];
+              img {
+                @apply w-[5.5vh] mb-0.5 pl-0.5 mr-2; // m-0; pl-0.5
+              }
+              span {
+                @apply text-[1.5vh] ml-0.5;
+                // margin-left: 0.25rem;
+                // color: $themeDGray;
+              }
+            }
+          }
+        }
+        > section {
+          @apply ml-[14%] pr-4;
+          //  padding: 1.5rem !important;
+          .gridSection {
+            // @apply flex items-center gap-7;
+            // @apply pt-16;
+            // @apply pl-2 pr-0 pt-5 pb-10;
+            // EACH PROJECT DIV
+            .MainProject {
+              // @apply mr-5 ml-10;
+              .swiper .swiper-wrapper .swiper-slide img {
+                @apply max-h-[20vh];
+              }
+              .contentWrapper {
+                @apply pl-3.5 pr-1; //  mt-[-.3rem];
+                p {
+                  @apply text-[1.55vh];
+                }
+              }
+            }
+          }
+          // USED TOOLS DIV
+          .tools {
+            &.show {
+              // @apply mt-[-1.25rem] ml-4;
+              &::before {
+                // @apply h-6 left-12;
+              }
+            }
+          }
+          // UI IMAGES
+          .UI-UX {
+            @apply flex items-center gap-7;
+            // @apply flex gap-6 pr-1 py-7 pl-3;
+            .UI_image {
+              img {
+                // @apply max-w-[100%] ml-0;
+              }
+            }
+          }
+        }
+      }
+    }
+    #contact {
+      .bg {
+        // @apply h-[120vh];
+        div.Pleasantries {
+          @apply top-[18rem];
+          // @apply top-[30vh];
+          h1 {
+            @apply pl-28 mb-[15vh] text-[7vh] max-w-[50vw] text-left tracking-wide;
+            // @apply text-[5.5vh] mb-[17.5vh];
+          }
+          .sub {
+            @apply pl-28 text-[1.7vh] max-w-[60%] m-0 text-left mt-[-13vh] mb-[-5vh];
+          }
+        }
+      }
+      main {
+        @apply flex items-center justify-evenly gap-10 pt-10 pb-5;
+        figure {
+          @apply mt-[-5rem] mx-0 pt-10 flex flex-col items-center justify-evenly gap-5;
+
+          div.svg {
+            @apply w-[85%] m-0 mx-auto;
+          }
+        }
+        .socials {
+          @apply m-0 mx-auto;
+        }
+        div.ContactMeWrapper {
+          flex-grow: 1.1;
+          @apply px-5;
+          .ContactMe {
+            @apply p-3 mx-2.5 mb-0;
+            form .formControl > div label {
+              @apply text-[0.9rem];
+            }
+          }
+          div.circleWrapper {
+            clip-path: circle(14rem);
+            @apply mr-[-7rem] mt-[-10rem]
+          h-[53vh] mb-[-8rem];
+          }
+        }
+      }
+    }
+    .BottomColor {
+      @apply mt-[-2px];
+    }
+    //--------- PORTALS
+    #portals {
+      // RESUME
+      div.ResumeImg {
+        // // @apply p-2.5; // pb-1.5;
+        img {
+          @apply max-h-[84vh];
+        }
+      }
+      div.ResumeDwn {
+        @apply pt-[2rem]; // pb-[5%];
+        [title="Download Resume"] {
+          @apply py-3.5 px-5 text-[17px]; // [&>svg];
+        }
+        // @apply mt-[-.55rem] mr-[23%];
+      }
+      // UI PROJECT'S
+      .UIZoom {
+        @apply pb-80;
+        button {
+          @apply mt-2;
+        }
+      }
+      div.ProjectDets {
+        @apply my-8 max-h-[92vh] px-10;
+        // &::-webkit-sc
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        h3 {
+          @apply m-2.5 mt-4;
+        }
+        .swiper .swiper-slide img {
+          @apply max-h-[60vh];
+        }
+      }
+    }
   }
-  // For Desktops 1.3K+
-  @media screen and (min-width: 1025px) and (max-width: 5000px) {
-    // ?
-    // ?
+}
+// For Desktops 1.4K+
+@media screen and (min-width: 1300px) {
+  #light {
+    //--------- NAVBAR
+    div.navbar {
+      // border-radius: 0;
+      @apply h-[12vh];
+      .logo > svg {
+        @apply w-10;
+      }
+      div.theme button {
+        @apply px-0.5;
+      }
+      .navigation,
+      .navigation.show {
+        // @apply static  bg-transparent w-auto h-auto min-h-[auto]
+        // flex-[auto] flex justify-end shadow-none backdrop-blur-0;
+        > div {
+          > div {
+            &:first-child {
+              // @apply pt-2 flex-row;
+            }
+            button.nav {
+              // @apply m-0 p-1 mx-2.5 text-[0.9rem];
+              &::after {
+                content: "";
+                // @apply absolute bottom-[-0.1rem] left-0 bg-blue-600 rounded rounded-lg h-1;
+              }
+              &.active::after {
+                // @apply w-full;
+              }
+              &:hover::after {
+                // @apply w-full opacity-40;
+              }
+            }
+          }
+          & > div:last-of-type button {
+            // @apply hidden;
+          }
+        }
+      }
+      .menu {
+        // @apply hidden;
+      }
+    }
+    #home {
+      div.vid video {
+        @apply w-full;
+        // @apply w-[100vw];
+      }
+      // h1 {
+      // @apply text-[2.3rem];
+      // }
+      // #text {
+      // @apply text-[18px] mt-7 mb-20; // mt-5 mb-10;
+      // }
+      div.intro {
+        // @apply top-[30vh];
+        .hero,
+        #text {
+          // @apply text-[1rem] my-2.5;
+        }
+        h1 {
+          // @apply text-[6.5vw] mb-8;
+        }
+        .btn {
+          // @apply text-[0.8rem] mt-7 px-7 pt-2.5 pb-3 rounded-lg;
+        }
+      }
+      div.lilAbout {
+        // @apply flex items-center pt-10 pb-24 pl-3 pr-10 min-h-[90vh];
+        h2 {
+          @apply text-[6vh] tracking-tight;
+          // -webkit-text-stroke: 1.25px $themeBlack;
+        }
+        .circleImg {
+          @apply w-[50%]; //py-[2.4%] px-[2.4%] pb-[2.55%];
+        }
+        > div:last-child {
+          flex-shrink: 1.8;
+        }
+        .about {
+          .hero h2 .line > div {
+            @apply h-[1vh];
+          }
+
+          p {
+            // @apply leading-[5.5vh];
+          }
+          //     .more button {
+          // @apply mb-5;
+          //     }
+        }
+      }
+      div.skills {
+        div#tsparticles {
+          @apply h-[125vh];
+        }
+        div.KeySkillsWrapper {
+          // @apply px-1 flex items-center p-5;
+          & > div {
+            // @apply w-full;
+            // flex-shrink: 1.4;
+          }
+          .keySkills {
+            h2 {
+              @apply text-[6.5vh] tracking-wide; // mr-[-15%] pt-0 pb-7; // mr-[-2%] mb-14;
+            }
+            .skillList {
+              // @apply px-0 pl-8;
+              .skillPill {
+                // @apply w-full mb-3.5;
+                .skillName {
+                  // @apply min-w-[22%];
+                  // @apply py-[0.3rem];
+                } //PROGRESS BAR
+                > div.progress.Bar {
+                  // @apply w-[78%];
+                }
+              }
+            }
+          }
+          figure {
+            @apply mt-10;
+            // @apply w-[70%]  mb-[-5rem];
+          }
+        }
+        .skillPoster {
+          // @apply flex-col flex items-center;
+
+          // @apply m-0 ml-[2rem]; // mt-[6rem] ml-[-4rem];
+          & > div svg {
+            //150
+            // @apply w-full;
+            // @apply w-[70%];
+          }
+        }
+        .tools p {
+          // @apply w-[350px];
+          // mt-[1rem];;
+        }
+      }
+      div.homeProjects {
+        // @apply pt-24 pb-5 mt-[-2px];
+        h1 {
+          // -webkit-text-stroke: 1px $themeBlack;
+          @apply text-[6.5vh];
+        }
+        .swiper {
+          // @apply pt-20;
+          .swiper-wrapper div.swiper-slide {
+            @apply h-[45vh];
+            // m-0 mb-5 ml-0 rounded-xl;
+
+            img {
+              // @apply min-w-full;
+            }
+            &-prev {
+              // transform: skewY(-0.3deg) translate(1px, 1.5px);
+            }
+            &-next {
+              // transform: skewY(0.3deg) translate(-1px, 1.5px);
+            }
+            // &-prev + div {
+            //   transform: skewY(-0.85deg) translate(2px, 3px);
+            // }
+            &-next + div {
+              // transform: skewY(1deg) translate(-2px, 3px);
+            }
+            // #home .homeProjects
+            // .swiper .swiper-wrapper .swiper-slide
+          }
+        }
+      }
+    }
+    #about {
+      div.bg {
+        //   @apply h-[100vh];
+        h1 {
+          @apply pt-[11vh] text-[8vh] tracking-wide pb-0;
+        }
+        & > div:last-of-type {
+          //     @apply mt-[-1.5rem] mb-5;
+          button {
+            @apply text-[11.5px];
+            // px-7 rounded-lg py-4 pb-5;
+          }
+        }
+        blockquote.content p {
+          @apply text-[2.5vh]; // leading-[2] [&>div]:mb-1.5;
+          //     // word-spacing: 1px;
+          //     @apply px-10 text-[1.7vh] leading-[2] [&>div]:mb-1.5;
+        }
+      }
+      section {
+        @apply mr-7; // flex items-center pl-10 py-20;
+        div.imgX2 {
+          @apply w-[55%];
+        }
+        div.aboutMe {
+          flex-shrink: 1.5;
+          @apply text-[2.55vh] leading-[2.75]; //px-10
+        }
+      }
+      div#tsparticles {
+        height: 170vh;
+      }
+      div.myServices div.serviceWrapper {
+        h2 {
+          word-spacing: 0.4rem;
+          @apply text-[6.25vh] tracking-wide;
+        }
+        .serviceList {
+          @apply px-14 gap-5;
+          .service {
+            @apply mb-10 pl-7 pt-7 pb-20;
+            // @apply mx-3.5 pl-6 pt-6 pb-14;
+            .icon {
+              @apply p-2;
+            }
+            p {
+              @apply text-[2.2vh] leading-[1.65] pt-1;
+              //         @apply ;
+              //         // @apply max-w-[200px];
+            }
+          }
+        }
+      }
+    }
+    div#projects {
+      div.bg .explore {
+        @apply top-24;
+        h1 {
+          @apply text-[8.5vh] tracking-wide;
+
+          //     @apply text-[6vh] px-10 tracking-wider;
+          //     word-spacing: 3rem;
+        }
+        .sub {
+          //     @apply text-[1.5vh] max-w-[70%] mx-auto;
+          //     // @apply text-[13px] ;
+          @apply text-[1.95vh];
+        }
+        img {
+          @apply w-[2vw];
+        }
+      }
+      main {
+        nav.projectNav {
+          //     // WHITE BACKGROUND SIDE NAV
+          //     @apply w-[15%];
+          > div {
+            //       @apply w-[15%] top-[17vh]; //[&>div]:w-fit [&>div]:mx-auto;
+            //       // @apply [&>div]:w-[90%];
+            //       //  EACH BUTTON
+            button.Nav {
+              //         // @apply max-w-[85%];
+              @apply px-3; // mx-auto;
+              //         @apply mx-[5%] w-[90%];
+              //         // @apply mb-3.5 [&.active>span]:text-[0.75rem]; // mt-4;
+              //         // flex items-center justify-start
+              //         // py-1 px-1 mb-2 [&.active>span]:text-[0.61rem]
+              //         // font-bold [&.active>img]:mr-[.1rem];
+              img {
+                // @apply pl-2;
+                // w-[5.5vh] mb-0.5; // m-0; pl-0.5
+              }
+              //         span {
+              //           @apply text-[1.3vh];
+              //           // margin-left: 0.25rem;
+              //           // color: $themeDGray;
+            }
+          }
+        }
+      }
+      section {
+        //     @apply ml-[18%];
+        //     @apply p-2.5;
+        div.gridSection {
+          @apply pt-14 gap-10;
+          //       // @apply pl-2 pr-0 pt-5 pb-10;
+          //       // EACH PROJECT DIV
+          .MainProject {
+            //         // @apply mr-5 ml-10;
+            div.swiper .swiper-wrapper div.swiper-slide img {
+              @apply max-h-[30vh];
+            }
+            .contentWrapper {
+              @apply pl-5 pr-2; //  mt-[-.3rem];
+              p {
+                @apply text-[2vh];
+              }
+            }
+          }
+        }
+        //     // USED TOOLS DIV
+        //     .tools {
+        //       &.show {
+        //         // @apply mt-[-1.25rem] ml-4;
+        //         &::before {
+        //           // @apply h-6 left-12;
+        //         }
+        //       }
+        //     }
+        //     // UI IMAGES
+        .UI-UX {
+          //       @apply flex items-center gap-7;
+          //       // @apply flex gap-6 pr-1 py-7 pl-3;
+          //       .UI_image {
+          //         img {
+          //           // @apply max-w-[100%] ml-0;
+          //         }
+          //       }
+          //     }
+        }
+      }
+    }
+    #contact {
+      .bg {
+        //   // @apply h-[120vh];
+        div.Pleasantries {
+          @apply top-[40vh];
+          h1 {
+            @apply text-[9.5vh] mb-[18vh];
+          }
+          .sub {
+            @apply text-[2.2vh] max-w-[45%]; //  max-w-[70%] mx-auto;
+          }
+        }
+      }
+      main {
+        @apply pt-20;
+        // figure {
+        //   @apply mx-7 pt-5 flex items-center justify-evenly gap-5;
+        // }
+        .svg {
+          @apply w-[85%]; // m-0 mx-auto;
+        }
+        // .socials {
+        //   @apply m-0 mx-auto;
+        // }
+        div.ContactMeWrapper {
+          flex-grow: 0.35;
+          //   @apply p-10 pb-0;
+          .ContactMe {
+            @apply mr-[-3rem];
+            //     form .formControl > div label {
+            //       @apply text-[0.9rem];
+          }
+          div.circleWrapper {
+            clip-path: circle(12.5rem);
+            @apply mr-[-16rem] mt-[-12.5rem]
+            h-[64vh] mb-[-8rem];
+          }
+        }
+      }
+    }
+    // .BottomColor {
+    //   @apply mt-[-2px];
+    // }
+    #portals {
+      // RESUME
+      div.ResumeImg {
+        // // @apply p-2.5; // pb-1.5;
+        img {
+          @apply max-h-[80vh];
+        }
+      }
+      div.ResumeDwn {
+        @apply ml-[25%];
+        button[title="Download Resume"] {
+          @apply mr-[12rem];
+        }
+        // @apply pt-[2rem];
+      }
+      div.ProjectDets {
+        @apply max-w-[92vw] mx-[3.5vw] py-6;
+        .images {
+          @apply [&>img]:object-contain;
+          p {
+            @apply mt-1.5 mb-0.5;
+          }
+        }
+        .content {
+          @apply leading-[1.7];
+        }
+      }
+    }
   }
+}

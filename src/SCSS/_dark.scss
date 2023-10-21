@@ -16,10 +16,44 @@
       background-color: $themeBlack1;
       box-shadow: 0 -1px 10px $themeBlack;
     }
-    .navigation > div > div {
-      button.nav {
-        &::after {
-          @apply bg-red-600;
+    .navigation,
+    .navigation.show {
+      // @apply static bg-transparent w-auto h-auto min-h-[auto]
+      // flex-[auto] flex justify-end shadow-none backdrop-blur-0;
+      > div {
+        > div {
+          &:first-child {
+            // @apply pt-2 flex-row;
+          }
+          button.nav {
+            // @apply m-0 p-1 mx-2.5 text-[0.9rem];
+            // &::after {
+            //   content: "";
+            //   @apply absolute bottom-[-0.1rem] left-0 bg-blue-600 rounded rounded-lg h-1;
+            // }
+            // &.active::after {
+            //   @apply w-full;
+            // }
+            // &:hover::after {
+            //   @apply w-full opacity-40;
+            // }
+          }
+        }
+        & > div:last-of-type button {
+          // @apply hidden;
+        }
+      }
+    }
+
+    div.navigation,
+    div.navigation.show {
+      @apply bg-transparent backdrop-blur-0;
+
+      & > div > div {
+        button.nav {
+          &::after {
+            @apply bg-red-600;
+          }
         }
       }
     }

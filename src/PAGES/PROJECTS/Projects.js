@@ -22,10 +22,11 @@ const Projects = () => {
     500: 1,
   };
   const breakPoints2 = {
-    1024: 3,
+    default: 3,
     950: 2,
     500: 1,
   };
+
   //SET PROJECTS BASED ON NAVIGATION
   const NewProjects = PROJECTS.filter((pro) => {
     return pro?.tag?.includes(nav);

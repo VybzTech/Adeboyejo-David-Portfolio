@@ -492,18 +492,19 @@
 
 // For iPads, Tablets Sizes: iPad , iPad Mini,
 @media screen and (min-width: 768px) and (min-height: 1024px) {
+// @media screen and (min-width: 768px) {
   #light {
-     //--------- LOADER
-  div.Loader {
-    & > div {
-      svg {
-        @apply w-[5vw] text-yellow-500;
+    //--------- LOADER
+    div.Loader {
+      & > div {
+        svg {
+          @apply w-[5vw] text-yellow-500;
+        }
       }
+      // .progress {
+      // @apply h-1 w-[3rem] bg-gray-900 rounded my-7 transition-all duration-100 ease-in-out;
+      // }
     }
-    // .progress {
-    // @apply h-1 w-[3rem] bg-gray-900 rounded my-7 transition-all duration-100 ease-in-out;
-    // }
-  }
     //--------- NAVBAR
     .navbar {
       border-radius: 0 0 25px 25px;
@@ -798,30 +799,30 @@
           }
         }
       }
-      main{
-      figure {
-        @apply mx-7 pt-5 flex items-center justify-evenly gap-5;
-      }
-      .svg {
-        @apply w-[65%] m-0 mx-auto;
-      }
-      .socials {
-        @apply m-0 mx-auto;
-      }
-      .ContactMeWrapper {
-        @apply p-10 pb-0;
-        .ContactMe {
-          @apply px-7 mx-28 mr-20 mb-0;
-          form .formControl > div label {
-            @apply text-[0.9rem];
+      main {
+        figure {
+          @apply mx-7 pt-5 flex items-center justify-evenly gap-5;
+        }
+        .svg {
+          @apply w-[65%] m-0 mx-auto;
+        }
+        .socials {
+          @apply m-0 mx-auto;
+        }
+        .ContactMeWrapper {
+          @apply p-10 pb-0;
+          .ContactMe {
+            @apply px-7 mx-28 mr-20 mb-0;
+            form .formControl > div label {
+              @apply text-[0.9rem];
+            }
+          }
+          div.circleWrapper {
+            clip-path: circle(15rem);
+            @apply mr-[-17rem] mt-[-14rem]
+          h-[48vh] mb-[-7.5rem];
           }
         }
-        div.circleWrapper {
-          clip-path: circle(15rem);
-          @apply mr-[-17rem] mt-[-14rem]
-          h-[48vh] mb-[-7.5rem];
-        }
-      }
       }
     }
     .BottomColor {
@@ -859,18 +860,19 @@
           @apply text-[3vh] pl-9;
         }
         .images {
-        p  {
-          @apply gap-1.5 mb-0.5;
-        }
-          
-          .swiper .swiper-wrapper .swiper-slide img {
-          @apply max-h-[35vh];
-        }}.content{
-          @apply text-[1.4vh] px-4;&::first-letter{
+          p {
+            @apply gap-1.5 mb-0.5;
+          }
 
+          .swiper .swiper-wrapper .swiper-slide img {
+            @apply max-h-[35vh];
+          }
+        }
+        .content {
+          @apply text-[1.4vh] px-4;
+          &::first-letter {
             @apply text-[1.55vh];
           }
-          
         }
       }
     }

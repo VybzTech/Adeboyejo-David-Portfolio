@@ -2,7 +2,7 @@ Design Dark Mode ✅
 About Page Resume ✅
 Maybe Rewrite serviceList
 Rewrite projects content  
-Can Home page case study ✅
+Change Home page case study ✅
 Change Lil about image 
 Change homeProjects images 
 Crosscheck social handles
@@ -12,7 +12,7 @@ Projects UI UX Image resize
 Project Copy function
 Edit Footer components
 Compress irrelevant Images
-@apply ;
+on Project load let it start from the top
 
 Toast Dark Mode
 theme button tooltip dropdown
