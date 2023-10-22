@@ -8,16 +8,17 @@ Cross check contact form sending ✅
 Work on projects delivery ✅
 Projects UI UX Image resize  ✅
 Project Copy function ✅
-Edit Footer components 
+Edit Footer components ✅
 on Project load let it start from the top ✅
 Toast Dark Mode ✅
-Rewrite projects content - 99% 
-Compress irrelevant Images
 Maybe Rewrite serviceList
 theme button tooltip dropdown
 Work on sectioning Key skills 
+Rewrite projects content - ✅ 
+Compress irrelevant Images 
 Include Analytics to monitor visitors
-Update link on profiles
+* Update link on profiles *
+* Bomb Jobs *
 
 
 

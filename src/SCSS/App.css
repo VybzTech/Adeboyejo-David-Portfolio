@@ -979,7 +979,7 @@
   @apply px-3 py-3;
 }
 .foot .socials {
-  @apply flex justify-evenly mb-4;
+  @apply flex justify-evenly mb-3;
 }
 .foot .socials > div {
   @apply h-fit p-2;

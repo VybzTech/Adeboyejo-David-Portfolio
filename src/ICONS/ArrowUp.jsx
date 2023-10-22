@@ -6,15 +6,15 @@ const ArrowDown = () => {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
+      strokeWidth={1.5}
       stroke="currentColor"
-      className="w-3.5 h-3.5 mr-1"
+      className="w-4 h-4 mx-auto transition-all ease-in-out mb-[-2px]"
     >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
-        d="M19 14l-7 7m0 0l-7-7m7 7V3"
-      ></path>
+        d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
+      />
     </svg>
   );
 };

@@ -859,7 +859,7 @@
   color: $offWhite;
   @apply px-3 py-3;
   .socials {
-    @apply flex justify-evenly mb-4;
+    @apply flex justify-evenly mb-3;
     > div {
       @apply h-fit p-2;
     }

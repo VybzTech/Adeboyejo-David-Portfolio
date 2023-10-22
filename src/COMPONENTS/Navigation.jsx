@@ -30,6 +30,9 @@ const Navigation = withRouter((props) => {
                 history.push(nav.path);
                 document.documentElement.scrollTop = 0;
                 setNavControl((n) => !n);
+                document.title = `Adeboyejo David | ${
+                  nav.nav !== "Home" ? nav.nav : "React .NET Developer"
+                }`;
               }}
             >
               {nav.nav}

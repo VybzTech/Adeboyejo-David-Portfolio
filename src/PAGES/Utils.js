@@ -77,14 +77,15 @@ import TaskManager1 from "../IMAGES/PROJECTS/TaskManager1.png";
 import TaskManager2 from "../IMAGES/PROJECTS/TaskManager2.png";
 import WhaTodo from "../IMAGES/UI/WHATODO-Land.png";
 import WhaTodoDesktop from "../IMAGES/PROJECTS/Whatodo-Desktop-Size.png";
-// import WhaTodoHome from "../IMAGES/PROJECTS/WHATODO-HOME.png";
+import WhaTodoUser from "../IMAGES/PROJECTS/Whatodo-User.png";
+// HOME PAGE PROJECT SLIDES
 import SammieArtProject from "../IMAGES/Sammie-Art-Project.png";
 import DivisionFormProject from "../IMAGES/DivisionForm-Project.png";
 import TaskManagerProject from "../IMAGES/TaskManager1-Project.png";
 import WhatodoProject from "../IMAGES/Whatodo-Project.png";
 import NetflexLoading from "../IMAGES/PROJECTS/Netflex-Loading.png";
-// import NetflexProject from "../IMAGES/Netflex-Loading.png";
 import MinersProject from "../IMAGES/Miners-Project.png";
+// import NetflexProject from "../IMAGES/Netflex-Loading.png";
 import PR from "../IMAGES/PROJECTS/HOME.png";
 import PRLoad from "../IMAGES/PROJECTS/Loading Page.png";
 import PRDark from "../IMAGES/PROJECTS/HOME – Dark Mode.png";
@@ -102,6 +103,7 @@ import Css from "../IMAGES/TOOLS/CSS3.png";
 import Scss from "../IMAGES/TOOLS/SCSS.png";
 import JS from "../IMAGES/TOOLS/JS.png";
 import VSCode from "../IMAGES/TOOLS/VS-Code.png";
+import VStudio from "../IMAGES/TOOLS/Visual_Studio.png";
 import Bootstrap from "../IMAGES/TOOLS/Bootstrap.png";
 import Jquery from "../IMAGES/TOOLS/Jquery.png";
 import GithubImg from "../IMAGES/TOOLS/Github.png";
@@ -118,9 +120,14 @@ import Swiper from "../IMAGES/TOOLS/Swiper.svg";
 import Netlify from "../IMAGES/TOOLS/Netlify-Logo.png";
 // import Photoshop from "../IMAGES/TOOLS/Photoshop-cc.png";
 import Flutter from "../IMAGES/TOOLS/Flutter.svg";
-import Dart from "../IMAGES/TOOLS/Dart.svg";
+import Dart from "../IMAGES/TOOLS/Dart-Logo.png";
 import XD from "../IMAGES/TOOLS/Adobe-XD.png";
-import NextJS from "../IMAGES/TOOLS/next-js-seeklogo.com.svg";
+import NextJS from "../IMAGES/TOOLS/Next-JS.svg";
+import ASP from "../IMAGES/TOOLS/DotNet-Framework.svg";
+import Tailwind from "../IMAGES/TOOLS/TailwindCSS.png";
+import DotNET from "../IMAGES/TOOLS/DOTNET-1.svg";
+import UTube from "../IMAGES/TOOLS/Youtube-96.png";
+import AndStudio from "../IMAGES/TOOLS/Android-studio.png";
 
 //HOME PAGE SKILLS
 export const SKILLS = [
@@ -677,6 +684,11 @@ export const PROJECTS = [
         img: Dart,
         aid: "Dark programming language is the basis which the Flutter Framework is built upon.",
       },
+      {
+        name: "Android Studio",
+        img: AndStudio,
+        aid: "Android Studio emulator enabled seamless testing of the application on a live environment.",
+      },
     ],
     git: "https://github.com/Dharvo/Whatodo-App",
     link: "https://github.com/Dharvo/whatodo/raw/main/Wha'todo.apk",
@@ -850,14 +862,14 @@ export const PROJECTS = [
     status: "completed",
     utilities: [
       {
-        name: "SCSS",
-        img: Scss,
-        aid: "This mature and powerful upgrade to CSS extension language is the world.",
-      },
-      {
         name: "Figma",
         img: Figma,
         aid: "Designed a fantastic UI from scratch after much resourcing to come up with a view that meet requirements.",
+      },
+      {
+        name: "SCSS",
+        img: Scss,
+        aid: "This mature and powerful upgrade to CSS extension language is the world.",
       },
       {
         name: "React JS",
@@ -952,8 +964,7 @@ export const PROJECTS = [
       },
       {
         name: ".NET",
-        img: CSharp,
-        // img: Dotnet,
+        img: DotNET,
         aid: "The .NET framework is a microsoft runtime application software that was used to build the console application.",
       },
       {
@@ -963,7 +974,7 @@ export const PROJECTS = [
       },
       {
         name: "Youtube",
-        img: Swiper,
+        img: UTube,
         aid: "Youtube tutorials aided the project by providing videos on C sharp basics and possible issues to encounter.",
       },
       {
@@ -1026,78 +1037,89 @@ export const PROJECTS = [
       "",
     ],
   },
-  {
-    id: 9,
-    name: "Books",
-    status: "In-Progress",
-    utilities: [
-      {
-        name: "C#",
-        img: CSharp,
-        aid: "The basic fundamental language that the ASP .NET Framework is built on.",
-      },
-      {
-        name: ".NET",
-        img: CSharp,
-        // img: Dotnet,
-        aid: "The .NET framework is a microsoft runtime application software that was used to build the console application.",
-      },
-      {
-        name: "Github",
-        img: GithubImg,
-        aid: "Committed all my code to an online repo on the Github platform.",
-      },
-      {
-        name: "SQL",
-        img: Swiper,
-        aid: "We a Code-First approach we were able to construct databse in the local Db using a SQL Management tool.",
-      },
-      {
-        name: "VS-Code",
-        img: VSCode,
-        aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
-      },
-      {
-        name: "VS-Studio",
-        img: VSCode,
-        aid: "This is where all the Backend magic happened.",
-      },
-    ],
-    git: "https://github.com/Dharvo/Books",
-    link: "https://github.com/Dharvo/Books/",
-    images: [],
-    tag: ["All", "In-Progress"],
-    content: (
-      <span>
-        A Books in a library project, this simple project was my first solely
-        created
-        <b> .NET Web API application</b> in the ASP framework
-      </span>
-    ),
-    position: "Remote",
-    updated: "9 months ago",
-    timeline: "1 Months",
-    milestones: ["", "", "", ""],
-  },
+  // {
+  //   id: 9,
+  //   name: "Books",
+  //   status: "In-Progress",
+  //   utilities: [
+  //     {
+  //       name: "C#",
+  //       img: CSharp,
+  //       aid: "The basic fundamental language that the ASP .NET Framework is built on.",
+  //     },
+  //     {
+  //       name: ".NET",
+  //       img: CSharp,
+  //       // img: Dotnet,
+  //       aid: "The .NET framework is a microsoft runtime application software that was used to build the console application.",
+  //     },
+  //     {
+  //       name: "Github",
+  //       img: GithubImg,
+  //       aid: "Committed all my code to an online repo on the Github platform.",
+  //     },
+  //     {
+  //       name: "SQL",
+  //       img: Swiper,
+  //       aid: "We a Code-First approach we were able to construct databse in the local Db using a SQL Management tool.",
+  //     },
+  //     {
+  //       name: "VS-Code",
+  //       img: VSCode,
+  //       aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
+  //     },
+  //     {
+  //       name: "VS-Studio",
+  //       img: VSCode,
+  //       aid: "This is where all the Backend magic happened.",
+  //     },
+  //   ],
+  //   git: "https://github.com/Dharvo/Books",
+  //   link: "https://github.com/Dharvo/Books/",
+  //   images: [],
+  //   tag: ["All", "In-Progress"],
+  //   content: (
+  //     <span>
+  //       A Books in a library project, this simple project was my first solely
+  //       created
+  //       <b> .NET Web API application</b> in the ASP framework
+  //     </span>
+  //   ),
+  //   position: "Remote",
+  //   updated: "9 months ago",
+  //   timeline: "1 Months",
+  //   milestones: ["", "", "", ""],
+  // },
   {
     id: 10,
     name: "Whatodo",
     status: "In-Progress",
     utilities: [
       {
+        name: "Tailwind CSS",
+        img: Tailwind,
+        aid: "The Tailwind CSS UI library was sparingly utilized through out the application.",
+      },
+      {
+        name: "React JS",
+        img: ReactImg,
+        aid: "React JS is a popular JavaScript library known for its component-based architecture and efficient rendering capabilities.",
+      },
+      {
+        name: "VS-Code",
+        img: VSCode,
+        aid: "This is where all the Frontend magic happened, my customized code editior that aids with templates from Emmet and other extensions.",
+      },
+      {
         name: "C#",
         img: CSharp,
         aid: "The basic fundamental language that the ASP .NET Framework is built on.",
       },
       {
-        name: "React JS",
-        img: ReactImg,
-        aid: "Built reusable components, managed each state of the application efficiently and rendered optimized virtual DOM elements.",
-      },
-      {
-        name: "Firebase",
-        img: Firebase,
-        aid: "Provided tools to host and grow my application as quickly & securely as possible.",
+        name: "ASP.NET",
+        img: ASP,
+        // img: DotNET,
+        aid: "ASP .NET provides a robust framework for building scalable and high-performance applications.",
       },
 
       {
@@ -1105,33 +1127,64 @@ export const PROJECTS = [
         img: GithubImg,
         aid: "Committed all my code to an online repo on the Github platform.",
       },
-
       {
-        name: "VS-Code",
-        img: VSCode,
-        aid: "This is where all the Magic happens, my customized code editior that aids with templates from Emmet and other extensions.",
+        name: "Visual Studio",
+        img: VStudio,
+        aid: "This is where all the Backend construction work too place.",
       },
     ],
-    git: "https://github.com/Dharvo/Whatodo",
-    link: "https://github.com/Dharvo/Whatodo/",
-    images: [WhaTodoDesktop],
+    git: "https://github.com/VybzTech/Whatodo",
+    link: "https://github.com/VybzTech/Whatodo/",
+    images: [WhaTodoDesktop, WhaTodoUser],
     tag: ["All", "React", "In-Progress"],
     content: (
       <span>
-        I had built a mobile task management project using an Object oriented
-        proramming framework, Flutter it was called. But with my new focus in
-        building backend services, I wanted to rebuild the <b> Whatodo </b>
-        project into a<b> React JS .NET application </b>which uses
-        <i> Models, Repositories, Views, Controllers </i>and even the
-        <i> Entity Core framework </i>components to provide a safe cache/storage
-        and successful CRUD operations.
+        I previously developed a mobile task management project called Whatodo
+        using the Flutter framework, which is based on object-oriented
+        programming. However, due to my shift in focus towards building backend
+        services, I decided to rebuild the
+        <b> Whatodo </b>project using
+        <b> React JS </b>
+        and
+        <b> .NET. </b>
+        {/* <b> .NET. </b> */}
+        {/* project into a<b> React JS .NET application </b>which uses */}
+        {/* <i> Models, Repositories, Views, Controllers </i>and even the */}
+        {/* <i> Entity Core framework </i>components to provide a safe cache/storage */}
+        This new application will utilize various components such as
+        <i>
+          <b> Models, Repositories, Views, Controllers, </b>and the
+          <b> Entity Core framework</b>.
+        </i>
+        These components will enable the application to provide a secure
+        cache/storage system and perform successful CRUD (Create, Read, Update,
+        Delete) operations. By using React JS and .NET, I aim to leverage the
+        benefits of these technologies in terms of scalability, performance, and
+        compatibility with backend services.
+        <br />
+        In the new application architecture,<b> Models </b>will represent the
+        data entities used in the system. These models define the structure and
+        behavior of the data objects and are responsible for data validation and
+        manipulation.<b> Repositories </b>act as an abstraction layer between
+        the application logic and data storage. They provide methods for
+        querying and manipulating data from various sources such as databases or
+        external APIs. Views are responsible for rendering the user interface
+        based on the data provided by the models. They encapsulate the
+        presentation logic and interact with controllers to handle user
+        interactions.<b> Controllers</b>handle user input and orchestrate the
+        flow of data between views and repositories. They contain business logic
+        that determines how data is processed and updated. Additionally, I plan
+        to incorporate the<b> Entity Core framework </b>into the application
+        architecture. It is an ORM (Object-Relational Mapping) framework that
+        simplifies database access by providing a higher-level abstraction over
+        database operations which allows developers to work with databases using
+        object-oriented principles, making it easier to perform CRUD operations
+        and manage database relationships. By utilizing these technologies and
+        architectural components, the new<b> Whatodo application </b>will have a
+        more robust and scalable backend.
         <br /> The project is yet to be completed or deployed on a live server;
-        Following a<i> Code-first Based approach </i> the application could
-        create a database in respect to the defined models and controllable
-        using function that were called in
-        <b> React's UseEffect Callback function </b>for side effects. The github
-        repo of the project is sectioned into three parts namely the Frontend,
-        Backend and of course the master which displays intially.
+        The GitHub repo of the project is sectioned into three parts namely the
+        Frontend, Backend, and of course, the master, which displays initially.
       </span>
     ),
     position: "Remote",
@@ -1141,10 +1194,17 @@ export const PROJECTS = [
       "Created repo to be initialized from Visual Studio code.",
       "Initialized repo and created React app",
       "Commited branch and created a backend branch for the API services.",
-      "",
-      "",
-      "",
-      "",
+      "Within React app, I installed dependies and recreated icons to be used from Heroicons",
+      "Developed my app's context for the Navbar etc. & reconfigured tailwind config.",
+      "Built initial Userr Interface UI and moved to the CRUD APIs.",
+      "Inaugurated MVC pattern folder template from the ASP framework.",
+      "Edited my CSPROJ file and Appsettings to enable certain dependencies.",
+      "Created Todos' models and relevant controllers to handle the API calls.",
+      "Crosschecked my Not found controller for the preview of undefined information.",
+      "Initialized database and created first Migrations folder from a Code-first approach.",
+      "Tested every API call and included folders to reflect update within the migration.",
+      "Re-evaluated my APIs and finalized testing which also affected the UI",
+      "Tested application again and awaiting deployment...",
     ],
   },
 ];
@@ -1483,7 +1543,7 @@ export const socialLinks = [
     href: "https://www.github.com/VybzTech",
   },
 ];
- 
+
 export const footLinks = [
   {
     name: "Donate",
@@ -1502,4 +1562,3 @@ export const footLinks = [
     title: "Job Pricing",
   },
 ];
- 

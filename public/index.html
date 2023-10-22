@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="theme-color" content="#000000" />
-		<meta
-			name="description"
-			content="Adeboyejo David Web developer & Programming portfolio. I am a specialized JavaScript Programmer, building strong back end Code basis & React Front End development in Lagos Nigeria. Designing User Interfaces, Awesome User Experience (UI/UX) and SEO optimized software products."
-		/>
-		<link rel="icon" href="./LOGO.png" type="png/ico" />
-		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-		<!--
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Adeboyejo David is an experienced software developer proficient in React JavaScript, object oriented programming, and recently started working with C# (C sharp) in ASP.NET framework for backend services & APIs. He is excited to use his skills to enhance software development projects through SEO and high fidelity User Interfaces(UI) to collaborate on innovative solutions. Review his portfolio and fantastic projects if you fancy his Code base please endeavor to hire or refer, Thank you."
+    />
+    <link rel="icon" href="./LOGO.png" type="png/ico" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
       Note %PUBLIC_URL% above, will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
     -->
-		<title>Adeboyejo David's Portfolio</title>
-	</head>
-	<body>
-		<noscript>You need to enable JavaScript to run this app.</noscript>
-		<div id="root"></div>
-	</body>
+    <title>Adeboyejo David | React .NET Developer</title>
+  </head>
+  <body>
+    <noscript
+      >You will need to enable JavaScript to run this awesome
+      application.</noscript
+    >
+    <div id="root"></div>
+  </body>
+  <script>
+    let namen = window.location.pathname;
+    let nav = namen.substr(1, namen.length);
+    window.addEventListener("load", () => {
+      document.title = `Adeboyejo David | ${
+        nav !== ""
+          ? `${nav.substr(0, 1).toUpperCase()}${nav.substr(1, nav.length)}`
+          : "React .NET Developer"
+      }`;
+    });
+    setTimeout(() => {
+      window.removeEventListener("load", () => {});
+    }, 2000);
+  </script>
 </html>
