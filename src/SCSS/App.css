@@ -3905,3 +3905,7 @@ Hello Oluwatimilehin Similoluwa, we offer our sincerely apologies for the delay 
 #light.dark .foot {
   background-color: #0e0e0e;
 }
+#light.dark [class^=go] > div {
+  background-color: rgba(14, 14, 14, 0.9764705882);
+  color: #f5f5f9;
+}

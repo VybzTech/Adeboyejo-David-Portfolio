@@ -641,4 +641,12 @@
   // 			),
   // 			url('../IMAGES/404Background.jpg');
   // 	}
+
+  //  ---------- TOAST DARK MODE
+  [class^="go"] {
+    > div {
+      background-color: $themeBlackBg;
+      color: $themeWhite2;
+    }
+  }
 }

@@ -13,6 +13,7 @@ import ViewFinder from "../../ICONS/ViewFinder";
 import Copy from "../../ICONS/Copy";
 import { useState } from "react";
 import toast from "react-hot-toast";
+
 const ProjectDets = ({ project, showDetails, setShowDetails }) => {
   const {
     name,
@@ -87,7 +88,7 @@ const ProjectDets = ({ project, showDetails, setShowDetails }) => {
               </button>
               <button
                 onClick={() => {
-                  const textToCopy = "dfsvcascxsccsf";
+                  const textToCopy = link;
                   if (navigator.clipboard) {
                     navigator.clipboard
                       .writeText(textToCopy)
