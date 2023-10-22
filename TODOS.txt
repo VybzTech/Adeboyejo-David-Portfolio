@@ -1,7 +1,5 @@
 Design Dark Mode ✅
 About Page Resume ✅
-Maybe Rewrite serviceList
-Rewrite projects content - 99% 
 Change Home page case study ✅
 Change Lil about image -  
 Change homeProjects images  ✅
@@ -11,9 +9,11 @@ Work on projects delivery ✅
 Projects UI UX Image resize  ✅
 Project Copy function ✅
 Edit Footer components 
-Compress irrelevant Images
 on Project load let it start from the top ✅
 Toast Dark Mode ✅
+Rewrite projects content - 99% 
+Compress irrelevant Images
+Maybe Rewrite serviceList
 theme button tooltip dropdown
 Work on sectioning Key skills 
 Include Analytics to monitor visitors
