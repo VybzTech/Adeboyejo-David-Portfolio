@@ -1,0 +1,347 @@
+// PAGE DEFAULTS
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  scroll-behavior: smooth !important;
+  &::selection {
+    background-color: #333a;
+  }
+}
+#root {
+  overflow-x: hidden;
+  --swiper-navigation-size: 0px !important;
+  // overflow: hidden; //SKILL CAUSED OVERFLOW
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// LOADER STYLES
+.Loader {
+  .AFill {
+    animation: Fade 900ms ease-in infinite alternate-reverse forwards;
+  }
+
+  .progress {
+    animation: Slide 900ms ease-in infinite alternate-reverse forwards;
+  }
+}
+@keyframes Fade {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 1%;
+  }
+}
+@keyframes Slide {
+  from {
+    width: 1%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+// #loader {
+// 	.progress {
+// 		@media screen and (max-width: 450px) {
+// 			height: 2.5px !important;
+// 		}
+// 		@media screen and (max-width: 350px) {
+// 			width: 0.4vw;
+// 			height: 2px !important;
+// 		}
+// 	}
+// }
+
+// CONTACT ND ABOUT BGs
+#projects,
+#about,
+#contact {
+  .bg {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: local;
+    height: 100vh;
+    width: 100%;
+    background-size: auto 100%;
+    background-position: top;
+    // background-size: cover;
+    // @media screen and (max-width: 1024px) {
+    // }
+    // @media screen and (max-width: 450px) {
+    // }
+  }
+}
+
+//FONTS
+@font-face {
+  font-family: montLight;
+  src: url("../FONTS/Montserrat-Light.ttf");
+}
+// @font-face {
+//   font-family: montReg;
+//   src: url("../FONTS/Montserrat-Regular.ttf");
+// }
+@font-face {
+  font-family: montXBold;
+  src: url("../FONTS/Montserrat-ExtraBold.ttf");
+}
+
+//COLORS
+$themeBlack: #000e;
+$themeBlackBg: #0e0e0ef9;
+$themeBlack1: #111;
+$themeBlack2: #222;
+$themeBlack3: #333;
+$themeDGray: #333a;
+$themeGray: #aaa;
+// $themeWhite: #fafafa;
+$themeWhite: #f9f9fa;
+$themeWhite2: #f5f5f9;
+$gray: #e5e5e5;
+$offWhite: #eee;
+$themeWhitishBlue: #e3f2f8;
+$themeBlueOptic: #2684ff;
+$themeLightBlue: #63a6ff;
+$themeBlue: #135be8;
+$themeBlueAlpha: #135ae844;
+$themeCoarseBlue: #064da5;
+$themeBlueDeep: #021db8;
+$themeBottomBlue: #17298e;
+$themeRed: #f22;
+$themeCoarseRed: #ff333c;
+$themeRedAlpha: #ff222255;
+$themeBlueShadow: #09095055;
+
+//MIIXINS
+@mixin flex($align: center, $justify: center, $dir: row) {
+  align-items: $align;
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $dir;
+}
+// @mixin goLeft($top: 0, $left: 0) {
+//   position: absolute;
+//   top: $top;
+//   left: $left;
+// }
+// @mixin goRight($top: 0, $right: 0) {
+//   position: absolute;
+//   top: $top;
+//   right: $right;
+// }
+// @mixin fixMeR($top: 0, $right: 0) {
+//   position: fixed;
+//   top: $top;
+//   right: $right;
+// }
+// @mixin floater($val) {
+//   float: $val;
+//   clear: $val;
+// }
+@mixin trans($speed) {
+  transition: all $speed ease-in-out;
+}
+//TEXTS
+@mixin LightText(
+  $font: montLight,
+  $letter: 0,
+  $word: 0,
+  $align: left,
+  $color: black,
+  $size: 1.2rem
+) {
+  color: $color;
+  font-family: $font, Verdana, sans-serif;
+  letter-spacing: $letter;
+  word-spacing: $word;
+  text-align: $align;
+  font-size: $size;
+}
+// @mixin SemiBoldText(
+//   $font: montReg,
+//   $letter: 0,
+//   $word: 0,
+//   $align: left,
+//   $color: black,
+//   $size: 1.5rem
+// ) {
+//   color: $color;
+//   font-family: $font, Verdana, sans-serif;
+//   letter-spacing: $letter;
+//   word-spacing: $word;
+//   text-align: $align;
+//   font-size: $size;
+// }
+@mixin BoldText(
+  $font: montXBold,
+  $letter: 0,
+  $word: 0,
+  $align: left,
+  $color: black,
+  $size: 3rem,
+  $case: uppercase
+) {
+  color: $color;
+  font-family: $font, Verdana, sans-serif;
+  letter-spacing: $letter;
+  word-spacing: $word;
+  text-align: $align;
+  text-transform: $case;
+  font-size: $size;
+}
+
+// @mixin portalSubHeading {
+//   h1 {
+//     border-bottom: 2px solid $themeDGray;
+//     color: $themeBlack2;
+//     font-family: montXBold;
+//     font-size: 2.7rem;
+//     margin: 1rem auto 1.55rem 3.5rem;
+//     padding: 3px 5px 0.5px 2px;
+//     text-align: left;
+//     width: fit-content;
+//     // @media screen and (max-width: 1300px) {
+//     //   font-size: 2.4rem;
+//     //   padding: 0 3px 0.2px 1.5px;
+//     //   margin-bottom: 1rem;
+//     // }
+//     // @media screen and (max-width: 1024px) {
+//     //   font-size: 2.3rem;
+//     //   margin-bottom: 1rem;
+//     // }
+//     // @media screen and (max-width: 770px) {
+//     //   font-size: 2rem;
+//     //   margin-bottom: 1.3rem;
+//     //   margin-left: 2.3rem;
+//     // }
+//     // @media screen and (max-width: 425px) {
+//     //   font-size: 1.5rem;
+//     //   margin-top: 0;
+//     //   margin-left: 0.5rem;
+//     // }
+//     // @media screen and (max-width: 320px) {
+//     //   font-size: 1.3rem;
+//     //   margin-left: 0.35rem;
+//     // }
+//   }
+// }
+
+//BUTTONS
+@mixin outlineBtn(
+  $bg: transparent,
+  $color: $themeBlue,
+  $size: 0.7rem,
+  $size2: 0.6rem,
+  $pad: 10px 18px,
+  $pad2: 7.5px 15px
+) {
+  background: $bg;
+  color: $color;
+  text-transform: uppercase;
+  border-radius: 9px;
+  padding: $pad;
+  font-size: $size;
+  border: 2px solid $color;
+  cursor: pointer;
+  // @media screen and (max-width: 1024px) {
+  //   padding: $pad2;
+  //   font-size: $size2;
+  // }
+  &:focus {
+    outline: none;
+  }
+}
+
+// @mixin closeBtn {
+//   padding: 6.45px 7px 4.5px;
+//   background: none;
+//   border: none;
+//   border-radius: 50%;
+//   @include goRight($top: 1.5rem, $right: 4rem);
+//   @include trans(350ms);
+//   svg {
+//     width: 1.5rem;
+//     fill: $themeGray;
+//   }
+//   &:hover {
+//     background: #0a0a0a55;
+//     svg {
+//       transform: scale(1.01);
+//       fill: $themeCoarseRed;
+//     }
+//   }
+//   &:focus {
+//     outline: none;
+//     svg {
+//       fill: $themeRed;
+//     }
+//   }
+// //ADJUSTMENTS
+// @media screen and (max-width: 1300px) {
+// }
+// @media screen and (max-width: 1024px) {
+// }
+// }
+
+//---------ANIMATIONS
+
+@keyframes toRightFade {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.03;
+  }
+  50% {
+    transform: translateX(45%);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.03;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0%) scaleY(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes effect {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px 1px transparent;
+  }
+  50% {
+    transform: scale(0.975);
+    box-shadow: 0 0 15px 1px $themeWhitishBlue;
+  }
+  100% {
+    transform: scale(1.005);
+    box-shadow: 0 0 17px 0.5px $themeWhite2;
+  }
+}

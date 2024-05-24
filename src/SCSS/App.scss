@@ -1,0 +1,1112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./startup";
+
+//--------- LOADER
+.Loader {
+  @apply w-full h-[100vh];
+  & > div {
+    @apply m-auto w-fit h-fit mt-[40vh];
+    svg {
+      @apply w-[12vw] mx-5;
+    }
+  }
+  .progress {
+    @apply h-1 w-[3rem] bg-gray-900 rounded my-7 transition-all duration-100 ease-in-out;
+  }
+}
+
+//--------- NAVBAR
+#light {
+  .navbar {
+    border-radius: 0 0 15px 15px;
+    z-index: 50;
+    @include flex($justify: space-between);
+    @include trans(350ms);
+    @apply h-[11vh] fixed w-full p-2.5;
+    //---------	THEME
+    .theme {
+      @apply w-fit mr-[5px];
+      button {
+        @apply bg-transparent rounded rounded-3xl p-2 text-gray-300 hover:bg-[#eee2] focus:bg-[#eee2] hover:text-gray-100 focus:text-gray-100 outline-none;
+      }
+    }
+    .navBtn {
+      @apply [&>svg]:w-5 [&>svg]:h-5 [&>svg]:text-gray-200 
+      bg-transparent rounded rounded-3xl p-2 
+      hover:bg-[#eee2] focus:bg-[#eee2] hover:text-gray-100
+      focus:text-gray-100 outline-none;
+    }
+    //NAVBAR STYLES ON SCROLL DOWN
+    &.white {
+      box-shadow: 0 -1px 10px $offWhite;
+      @apply bg-white;
+      .navBtn {
+        @apply [&>svg]:text-gray-700;
+      }
+      .theme button {
+        @apply [&>svg]:text-gray-700;
+      }
+      .navigation {
+        > div {
+          > div {
+            .nav {
+              -webkit-text-stroke: 0.5px $themeBlack;
+              color: $themeBlack;
+            }
+          }
+          & > div:last-of-type button {
+            -webkit-text-stroke: 0.02px $themeBlack;
+            background: linear-gradient(-15deg, #fffc, #ddd7);
+            box-shadow: 2px 2px 8px 0.75px #eeea, -1px -1px 4px #fffd;
+            color: $themeBlack;
+            @apply text-gray-700;
+            &:hover,
+            &:focus,
+            &:focus-within,
+            &:focus-visible {
+              outline: none;
+              -webkit-text-stroke: 0.75px $themeBlack;
+              background: linear-gradient(-15deg, #fffc, #ddd7);
+              box-shadow: 2px 2px 8px 1px #ccca, -1px -1px 4px #dddd;
+            }
+          }
+        }
+        //SHOWN
+        &.show {
+          @apply bg-[#fff7]; //border
+        }
+      }
+    }
+
+    //  INITIAL NAVBAR STYLES
+    .navigation {
+      @apply min-h-[70vh] absolute left-0 m-0 h-0 w-[0%] hidden;
+      @include trans(400ms);
+      > div {
+        > div {
+          @apply my-auto;
+          @include flex($dir: column);
+          .nav {
+            -webkit-text-stroke: 0.25px white;
+            font-size: 0.9rem;
+            font-family: montLight;
+            @apply my-2.5 px-5 pt-3 pb-0.5 rounded mx-auto text-white uppercase;
+            &:hover,
+            &:focus,
+            &:focus-within,
+            &:focus-visible {
+              outline: none;
+            }
+          }
+        }
+        & > div:last-of-type button {
+          @include trans(300ms);
+          -webkit-text-stroke: 0.02px white;
+          background: transparent;
+          background: linear-gradient(-15deg, #000a, #0003);
+          border: none;
+          box-shadow: 2px 2px 7px 0.5px #2225, -1px -1px 4px #111a;
+          display: inline-block;
+          font-size: 0.8rem;
+          @apply outline-none relative min-w-[130px] tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-16 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
+          &:hover,
+          &:focus,
+          &:focus-within,
+          &:focus-visible {
+            outline: none;
+            -webkit-text-stroke: 0.05px white;
+            background: linear-gradient(-15deg, #000c, #0007);
+            box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
+          }
+        }
+      }
+      //SHOWN
+      &.show {
+        @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl w-[96%] left-[2%] py-7 m-0 backdrop-blur block shadow-lg;
+      }
+    }
+  }
+
+  //--------- HOME
+  #home {
+    .rel {
+      position: relative;
+    }
+    // VIDEO EDIT (320x480)
+    .bg {
+      background: radial-gradient(#2225, #1118);
+    }
+    img {
+      width: auto;
+      height: 100vh;
+      object-fit: cover;
+    }
+    // INTRO EDIT (320x480)
+    .intro {
+      @apply absolute left-[9%] top-[30vh];
+      .hero,
+      .h5Hold {
+        word-spacing: 1px;
+        @apply leading-[0.5] tracking-[0.2px]  w-fit text-white font-sans uppercase;
+      }
+      .hero {
+        font-size: 11.5px;
+        @apply pl-1 mb-2;
+      }
+      .h5Hold {
+        border-right: 2px solid $themeRed;
+        & > p {
+          font-size: 13px;
+          -webkit-text-stroke: 0.05px white;
+          @apply pt-1 pr-[0.1rem] h-[14.5px] mt-2;
+        }
+      }
+      h1 {
+        line-height: 1.05;
+        @include BoldText(
+          $case: capitalize,
+          $color: white,
+          $size: 2.5rem,
+          $word: 0
+        );
+      }
+      .btn {
+        @include outlineBtn($size: 0.65rem);
+        @apply rounded rounded-md mt-5 px-5 py-2 ease-in-out;
+        &:hover {
+          color: $themeLightBlue;
+          background-color: $themeBlueAlpha;
+        }
+      }
+    }
+    // LIL ABOUT (320X480)
+    .lilAbout {
+      background: $themeWhite2;
+      @apply pt-6 px-3 pb-16;
+      .circleImg {
+        background-color: $themeWhite;
+        box-shadow: 0 0 15px 0.5px $gray;
+        @apply rounded rounded-[50%] w-[70%] my-3 mx-auto py-[3.1%] px-[3.1%] pb-[3.4%];
+        img {
+          border-radius: 50%;
+          width: 100%;
+          @apply duration-75 transition-all ease-in;
+        }
+      }
+      .about {
+        .hero {
+          @apply w-max mx-auto;
+          h2 {
+            @apply mt-1;
+            @include BoldText($word: 4px, $size: 1.85rem);
+            .line {
+              background: $offWhite;
+              @apply rounded rounded-sm  mb-6 overflow-hidden;
+              > div {
+                background: $themeBlueDeep;
+                @apply w-[40%] h-[1.2vh];
+              }
+            }
+          }
+        }
+        p {
+          @include LightText($size: 0.8rem, $word: 2px);
+          @apply leading-[2.2] text-justify px-2;
+          &::first-letter {
+            @apply pl-3;
+          }
+        }
+        > div.more {
+          @apply w-fit mx-auto mt-7;
+          .btn {
+            background: linear-gradient(-15deg, #1e40af, #2563eb);
+            @apply text-[11px] border border-blue-600 font-sans rounded rounded-lg text-white px-5 py-3 ease-in-out uppercase w-fit;
+            &:hover,
+            &:focus,
+            &:focus-within,
+            &:focus-visible {
+              outline: none;
+              background: linear-gradient(-15deg, #153290, #1e40af);
+              -webkit-text-stroke: 0.05px white;
+            }
+          }
+        }
+      }
+    }
+    // KEY SKILLS (320X480)
+    .skills {
+      background: linear-gradient(0rad, #000626, #00326f, #05438d);
+      #tsparticles {
+        z-index: 0;
+        @apply w-full h-[220vh] overflow-hidden;
+        & > canvas {
+          position: absolute !important;
+        }
+      }
+      .KeySkillsWrapper {
+        @apply w-full absolute top-0 left-0;
+        .keySkills {
+          z-index: 1;
+          > div {
+            @apply w-full;
+            &:last-of-type {
+              @apply mt-7 mx-auto my-1 w-fit;
+              .btn {
+                @include outlineBtn;
+                @apply w-fit rounded rounded-md px-5 py-1.5 ease-in-out;
+                &:hover {
+                  color: $themeLightBlue;
+                  background-color: $themeBlueAlpha;
+                }
+              }
+            }
+          }
+          h2 {
+            @apply w-max my-4 mx-auto;
+            @include BoldText(
+              $size: 1.85rem,
+              $color: white,
+              $align: center,
+              $letter: 0.75px,
+              $word: 8px
+            );
+          }
+          //---------- SKILL LIST
+          .skillList {
+            @apply mx-4 my-2;
+            .skillPill {
+              //----- PILLS
+              background-color: $themeBlueAlpha;
+              @apply w-[90%] rounded rounded-lg mb-3 overflow-hidden;
+              @include trans(150ms);
+              .skillName {
+                font-size: 0.8rem;
+                font-family: montLight;
+                -webkit-text-stroke: 0.1px $themeWhitishBlue;
+                @apply py-[5px] pl-3.5 tracking-tight pr-0 text-slate-200;
+              }
+              //--------- PROGRESS BAR
+              > div.progress.Bar {
+                z-index: -1;
+                @apply h-[-webkit-fill-available] top-0  absolute bg-blue-700;
+                @include trans(150ms);
+              }
+              //  HOVER EFFECTS
+              &:hover,
+              &:focus {
+                box-shadow: 0 0 8px -0.05px $themeBlueShadow;
+                > div.progress.Bar {
+                  box-shadow: 5px 0 8px -0.1px $themeBlueShadow;
+                  @apply bg-blue-500;
+                }
+              }
+            }
+          }
+        }
+      }
+      .skillPoster {
+        z-index: 0;
+        @apply mt-[-1rem] mr-1;
+        // w-fit;
+        & > div {
+          @apply w-full;
+          svg {
+            @apply m-auto w-[110%] h-[110%];
+          }
+        }
+      }
+      //TOOLS
+      .tools {
+        p {
+          @include LightText(
+            $size: 0.7rem,
+            $align: center,
+            $color: $themeWhitishBlue
+          );
+          @apply w-[240px] mx-auto mt-2;
+        }
+      }
+    }
+    //PROJECTS  (320X480)
+    .homeProjects {
+      h3 {
+        -webkit-text-stroke: 0.5px $themeCoarseBlue;
+        @include LightText(
+          $color: $themeCoarseBlue,
+          $align: center,
+          $size: 0.75rem,
+          $word: 2px,
+          $letter: 0.5px
+        );
+        @apply uppercase pt-8 pb-[-0.25rem];
+      }
+      h1 {
+        @apply mb-8;
+        @include BoldText(
+          $case: capitalize,
+          $align: center,
+          $size: 1.8rem,
+          $letter: -1px
+        );
+      }
+      .swiper {
+        @apply w-[90%] pb-2 my-0 mx-auto;
+        .swiper-wrapper {
+          @apply w-full;
+          .swiper-slide {
+            box-shadow: 0px 2px 5px 0.1px $themeWhitishBlue;
+            @apply h-[43vh] rounded rounded-md overflow-hidden mb-2;
+            &:hover,
+            &:focus {
+              box-shadow: 0px 1px 15px 1px $offWhite;
+              img {
+                transform: scale(1.05);
+              }
+            }
+            img {
+              @apply object-cover rounded rounded-lg w-fit transition-all duration-75 ease-in-out h-[inherit];
+            }
+            &-prev {
+              transform: skewY(-0.85deg) translate(2px, 3px);
+            }
+            &-next {
+              transform: skewY(1deg) translate(-2px, 3px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //--------- ABOUT
+  #about {
+    $serviceHeight: 430vh;
+    .bg {
+      @apply h-[110vh];
+      background-image: linear-gradient(15deg, #0007, #1111),
+        url("../IMAGES/AboutBackground.jpg");
+      h1 {
+        @apply pt-12;
+        -webkit-text-stroke: 0.5px white;
+        @include BoldText(
+          $align: center,
+          $color: white,
+          $size: 2.05rem,
+          $word: 7px
+        );
+      }
+    }
+    .content {
+      @include LightText($size: 0.78rem, $word: 2px, $color: $gray);
+      @apply overflow-y-auto leading-[2] text-justify px-4 max-h-[75vh];
+      p::first-letter {
+        @apply pl-3;
+      }
+    }
+    .btn {
+      background: linear-gradient(-15deg, #076278, #079ab0);
+      @apply text-[11px] border border-cyan-700 font-sans rounded rounded-md text-white px-5 py-3 mx-auto ease-in-out uppercase w-fit;
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:focus-visible {
+        outline: none;
+        background: linear-gradient(-15deg, #086d7c, #21a9ca);
+        -webkit-text-stroke: 0.05px white;
+      }
+    }
+    section {
+      @apply py-3 pt-8;
+      .imgX2 {
+        @apply w-[80%] rounded-xl overflow-hidden  mx-auto;
+        img {
+          @apply w-full;
+          @include trans(450ms);
+          &:hover {
+            transform: scale(1.037);
+          }
+        }
+      }
+      .aboutMe {
+        @include LightText($size: 0.78rem, $word: 2px);
+        @apply leading-[2.1] text-justify px-4 pt-3 pb-6;
+        p {
+          @apply [&>a]:font-bold;
+          &::first-letter {
+            @apply pl-3;
+          }
+        }
+      }
+    }
+    .myServices {
+      @apply relative;
+      // background: linear-gradient(0rad, #000626, #00326f, #05438d);
+      background: linear-gradient(0rad, #f2f2f2, #fafafa);
+      #tsparticles {
+        z-index: 0;
+        height: $serviceHeight;
+        @apply w-full overflow-hidden; // 120vh
+        & > canvas {
+          position: absolute !important;
+        }
+      }
+      .serviceWrapper {
+        @apply w-full px-4 absolute top-0 left-0;
+        h2 {
+          @apply pt-6;
+          -webkit-text-stroke: 0.5px $themeBlack1;
+          @include BoldText(
+            $align: center,
+            $color: $themeBlack2,
+            $size: 1.9rem,
+            $letter: -1px
+          );
+        }
+        .serviceList {
+          @apply mt-6;
+          .service {
+            @include trans(400ms);
+            box-shadow: 1px 2px 10px 0.5px #ddd2;
+            @apply mb-5 pl-7 pr-4 py-7 pb-10 bg-white rounded rounded-3xl overflow-hidden  hover:shadow-lg;
+            .icon {
+              @apply mb-3 rounded rounded-xl bg-blue-100 w-fit py-2 px-[.55rem]; // w-14 h-14  px-2 py-3;
+              svg {
+                fill: $themeCoarseBlue;
+                @apply object-contain  w-10 h-10; // mx-2 my-5;
+              }
+            }
+            h4 {
+              -webkit-text-stroke: 0.5px $themeBlack2;
+              font-family: montReg;
+              @include BoldText($color: $themeBlack2, $size: 1.2rem);
+            }
+            p {
+              z-index: 1;
+              @include LightText(
+                $size: 0.75rem,
+                $word: 1px,
+                $color: $themeBlack2
+              );
+            }
+            .backdrop {
+              margin: -3.3rem -1rem -3.2rem auto;
+              @apply w-fit;
+              svg {
+                fill: #f7f7f7;
+                @apply w-32 h-32 object-contain;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //--------- PROJECT
+  #projects {
+    .bg {
+      @apply h-[100vh];
+      box-shadow: 0 10px 12px 0.75px #ddd3;
+      z-index: 3;
+      background-image: linear-gradient(-15deg, #000a, #1111),
+        url("../IMAGES/ProjectsBackground.png");
+      .explore {
+        @apply top-7 flex flex-col justify-evenly items-center h-full;
+        h1 {
+          -webkit-text-stroke: 0.5px white;
+          @include BoldText(
+            $align: center,
+            $color: white,
+            $size: 2.05rem,
+            $word: 7px
+          );
+        }
+        .sub {
+          @include LightText(
+            $align: center,
+            $color: white,
+            $size: 0.7rem,
+            $word: 1px
+          );
+          @apply m-7;
+          span {
+            line-break: strict;
+          }
+        }
+        img {
+          // width: 5.5%;
+          // margin-top: 6.2rem;
+          // margin-bottom: 1rem;
+          // @apply mx-auto opacity-80;
+          @apply opacity-80;
+          animation: bounce 2s 100ms ease-in-out infinite forwards !important;
+        }
+      }
+    }
+    main {
+      @apply relative bg-slate-100;
+      .projectNav {
+        // WHITE BACKGROUND SIDE NAV
+        box-shadow: 1px 2px 10px 0.5px #ddd2;
+        z-index: 2;
+        @apply absolute h-full bg-white w-[22%] overflow-hidden;
+        > div {
+          @apply fixed w-[22%] top-[3.75rem] left-0;
+          .Nav {
+            //  EACH BUTTON
+            @apply mx-[5px] p-1 rounded rounded-lg mb-2 duration-150 ease-in-out transition-all opacity-30 hover:bg-slate-50 focus:bg-slate-50 hover:opacity-60 focus:opacity-70 [&.active]:opacity-100 [&.active>span]:text-black [&.active>span]:text-[0.55rem] [&.active>span]:leading-tight [&.active>img]:mb-[-.35rem];
+            img {
+              @apply pt-0.5 mb-[-.45rem] w-[60%] object-contain m-auto;
+            }
+            span {
+              @include LightText($size: 0.5rem, $color: $gray, $align: center);
+              line-break: strict;
+              z-index: 1;
+            }
+          }
+        }
+      }
+      section {
+        @apply w-[75%] ml-[22%] min-h-[90vh];
+        .gridSection {
+          @apply pt-10 pb-5 px-2.5 relative;
+          // EACH PROJECT DIV
+          .MainProject {
+            box-shadow: 0 3px 10px 0.5px #ccc2;
+            @apply mt-1 mb-6 bg-white rounded rounded-2xl pb-4
+           overflow-hidden;
+            &:hover {
+              box-shadow: 0 3px 15px 1.5px #ccc5;
+            }
+            .swiper {
+              .swiper-wrapper {
+                .swiper-slide {
+                  &::after {
+                    z-index: 2;
+                    content: "";
+                    background: linear-gradient(
+                      180deg,
+                      transparent,
+                      #fff2,
+                      #fff7,
+                      white
+                    );
+                    @apply absolute top-0 left-0 w-full h-full;
+                  }
+                  img {
+                    @apply object-contain max-h-[27vh] m-auto;
+                  }
+                }
+              }
+              //  SWIPER BUTTONS
+              [class^="swiper-button"] {
+                @apply w-8 h-8 top-[35%] opacity-40 [&::after]:text-[14px] px-2 py-0.5  [&:hover]:bg-slate-50 [&::after]:text-gray-600 rounded rounded-3xl;
+                &[class$="-prev"] {
+                  @apply left-0.5;
+                }
+                &[class$="-next"] {
+                  @apply right-0.5;
+                }
+              }
+            }
+            .contentWrapper {
+              z-index: 3;
+              @apply pr-1 pl-3 mt-[-.4rem];
+              h4 {
+                @include BoldText($size: 0.9rem, $color: $themeBlack3);
+                @apply capitalize underline tracking-tight;
+              }
+              p {
+                @include LightText($size: 0.65rem);
+                @apply leading-[1.75];
+              }
+              .actions {
+                @apply flex justify-between;
+                button {
+                  @apply p-1.5 pb-2 rounded rounded-3xl mr-2 mt-2 opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
+                  &.more {
+                    @apply [&>svg]:text-[10px];
+                  }
+                }
+              }
+            }
+          }
+        }
+        // USED TOOLS DIV
+        .tools {
+          @apply hidden;
+          &.show {
+            box-shadow: 0 2px 12px 0.75px #bbb5;
+            z-index: 2;
+            @apply mt-[-1.1rem] mb-5 flex-wrap flex bg-white p-2 pb-0 rounded rounded-xl;
+            &::before {
+              content: "";
+              border: 10px solid white;
+              border-top-width: 0px;
+              border-top-color: transparent;
+              border-left-color: transparent;
+              border-right-color: transparent;
+              @apply h-6 absolute top-[-1.4rem] left-3.5;
+            }
+            li {
+              @apply mr-2 mb-2;
+              img {
+                @apply w-8 h-8 rounded rounded-sm object-contain;
+              }
+            }
+          }
+        }
+        // UI IMAGES
+        .UI-UX {
+          @apply py-5 pl-4 pr-2;
+          .UI_image {
+            @apply [&>div]:mb-4;
+            img {
+              @apply rounded rounded-md max-w-[80%] ml-4;
+              &:hover,
+              &:focus,
+              &:focus-within,
+              &:focus-visible {
+                outline: none;
+                animation: effect 0.5s ease-in-out 10ms 1 alternate forwards;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //--------- CONTACT
+  #contact {
+    .bg {
+      @apply h-[100vh];
+      box-shadow: 0 10px 12px 0.75px #ddd3;
+      z-index: 3;
+      background-image: linear-gradient(-15deg, #000a, #1111),
+        url("../IMAGES/ContactBackground.jpg");
+      .Pleasantries {
+        @apply top-32;
+        h1 {
+          -webkit-text-stroke: 0.5px white;
+          @include BoldText(
+            $align: center,
+            $color: white,
+            $size: 2.05rem,
+            $word: 7px
+          );
+        }
+        .sub {
+          @include LightText(
+            $align: center,
+            $color: white,
+            $size: 0.8rem,
+            $word: 1px
+          );
+          @apply m-8 opacity-90 leading-[1.9];
+        }
+      }
+    }
+    main {
+      .hero {
+        @apply w-fit flex mx-auto;
+        > div {
+          @apply w-7 h-0.5 mx-0.5 opacity-80 my-auto rounded rounded-xl bg-slate-700;
+        }
+        h3 {
+          @apply uppercase;
+          @include BoldText($color: $themeBlack3, $size: 1.1rem);
+        }
+      }
+      .socials {
+        @apply flex w-fit p-4 flex-wrap;
+        button,
+        a {
+          @apply rounded rounded-3xl mx-2 mb-1.5 bg-transparent border-gray-600 transition-all ease-in;
+          border: 2px solid $themeBlack3;
+          &:hover,
+          &:focus {
+            border-color: $themeCoarseBlue;
+            svg {
+              color: $themeCoarseBlue;
+            }
+          }
+          svg {
+            @apply w-8 h-8 p-1.5 text-gray-800 object-contain transition-all ease-in;
+          }
+        }
+      }
+      .ContactMeWrapper {
+        z-index: 1;
+        .ContactMe {
+          box-shadow: 0 3px 10px 0.5px #ccc2;
+          @apply mx-3 mt-2 mb-8 bg-white rounded rounded-2xl  pb-5 overflow-hidden min-h-[70vh];
+          &:hover {
+            box-shadow: 0 3px 15px 1.5px #ccc5;
+          }
+          .intro {
+            @apply flex justify-center items-center my-4 mx-auto;
+            h2 {
+              @include BoldText($align: center, $size: 1.1rem, $word: 2px);
+              @apply my-3;
+            }
+            svg {
+              @apply w-7 h-7 mr-3.5;
+            }
+          }
+          form {
+            .formControl {
+              @apply mx-2.5;
+              > div {
+                @apply flex items-center justify-center mt-3.5 px-1.5 py-1 rounded rounded-md transition-all ease-in bg-gray-50 hover:bg-slate-100 focus:bg-slate-100;
+                label {
+                  @include LightText(
+                    $letter: -0.5px,
+                    $size: 0.8rem,
+                    $align: right
+                  );
+                  @apply font-bold text-gray-400 pr-2 min-w-[26%] w-fit;
+                  sup {
+                    color: $themeCoarseRed;
+                    @apply text-xs font-sans ml-[-0.15rem];
+                  }
+                }
+                input,
+                textarea {
+                  @include LightText($size: 12px, $color: $themeBlack2);
+                  @apply rounded rounded-lg bg-transparent px-2 py-1 w-[-webkit-fill-available]; // 96%;
+                  border: 1px solid $themeWhite;
+                  &::placeholder {
+                    @include LightText($size: 0.7rem, $color: $gray);
+                  }
+                  &:hover,
+                  &:focus,
+                  &:focus-visible,
+                  &:focus-within {
+                    @apply text-gray-700 outline-none;
+                    &::placeholder {
+                      @apply text-slate-400;
+                    }
+                  }
+                }
+                textarea {
+                  resize: vertical;
+                  min-height: 5rem;
+                }
+
+                //  INPUTS HOVER EFFECTS
+                &:hover,
+                &:focus {
+                  label {
+                    color: $themeBlack;
+                  }
+                }
+              }
+              > span {
+                @include LightText($color: $themeCoarseRed, $size: 10.5px);
+                @include trans(750ms);
+                @apply font-bold flex items-center justify-end mt-0 mr-1;
+                svg {
+                  @apply w-[0.9rem] mr-1;
+                }
+              }
+            }
+            button {
+              @apply mx-auto text-[12.5px] border border-blue-600 font-sans rounded rounded-md items-center text-gray-300 px-5 py-3 ease-in-out uppercase w-[90%] justify-center flex  mt-5;
+              background: linear-gradient(-15deg, #1e40af, #2563eb);
+              svg {
+                @apply w-3 fill-gray-300 ml-1 transition-all ease-in;
+              }
+              &:hover,
+              &:focus,
+              &:focus-within,
+              &:focus-visible {
+                outline: none;
+                background: linear-gradient(-15deg, #153290, #1e40af);
+                -webkit-text-stroke: 0.05px white;
+              }
+              &:hover,
+              &:focus {
+                @apply text-white;
+                & svg {
+                  @apply w-3.5 fill-white;
+                }
+              }
+            }
+          }
+        }
+        .circleWrapper {
+          clip-path: circle(9rem);
+          z-index: -1;
+          @apply min-w-full h-[58vh] opacity-90 w-full bg-blue-500 mb-[-7rem] mt-[-10rem] mr-[-5rem] ml-auto;
+        }
+      }
+    }
+  }
+
+  //--------- FOOTER
+  .BottomColor {
+    background-color: $themeBottomBlue;
+    @apply h-[1.5vh];
+    z-index: 3;
+  }
+  .foot {
+    z-index: 2;
+    background-color: $themeBlackBg;
+    color: $offWhite;
+    @apply px-3 py-3;
+    .socials {
+      @apply flex justify-evenly mb-3;
+      > div {
+        @apply h-fit p-2;
+      }
+      .socialButton {
+        display: inline-block;
+        @apply p-1.5 rounded rounded-2xl text-stone-500 bg-zinc-900 transition-all ease-in duration-75;
+        svg {
+          @apply w-4 h-4;
+        }
+        &:hover,
+        &:focus,
+        &:focus-visible,
+        &:focus-within {
+          outline: none;
+          svg {
+            @apply text-stone-200;
+          }
+        }
+      }
+    }
+    .copyx0 h5 {
+      @apply text-[11px] text-center font-sans text-gray-400;
+    }
+  }
+
+  //--------- PORTALS
+  #portals {
+    backdrop-filter: blur(3px);
+    @apply bg-[#000a] fixed top-0 left-0 fixed;
+    z-index: 50;
+    & > div {
+      @apply w-[100vw];
+    }
+    // RESUME
+    .ResumeImg {
+      @apply p-3 pb-1.5;
+      img {
+        @apply object-contain my-0 mx-auto max-h-[85vh];
+        // w-[90%];
+      }
+    }
+    .ResumeDwn {
+      @apply flex items-center justify-end mr-5 mb-5;
+      button {
+        border: none;
+        box-shadow: 2px 2px 7px 0.5px #2225, -1px -1px 4px #111a;
+        @apply transition-all ease-in relative rounded cursor-pointer;
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:focus-visible {
+          outline: none;
+          -webkit-text-stroke: 0.02px white;
+          box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
+        }
+      }
+      [title="Download Resume"] {
+        @apply tracking-normal uppercase 
+      rounded-lg px-4 py-2.5 mr-7 mb-1 text-[10px] bg-slate-700 
+      opacity-80 text-gray-300;
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:focus-visible {
+          @apply text-white opacity-100 bg-slate-800;
+        }
+      }
+      //       CLOSE BTN
+      [title="Close"] {
+        background: linear-gradient(-15deg, #000a, #0003);
+        @apply rounded rounded-3xl py-3 px-3.5 mb-2  [&>svg]:w-6 [&>svg]:fill-gray-300 [&>svg]:inline-block;
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:focus-visible {
+          background: linear-gradient(-15deg, #000c, #0007);
+          @apply [&>svg]:fill-red-500;
+        }
+      }
+    }
+
+    // UI PROJECT'S
+    .UIZoom {
+      button {
+        border: none;
+        box-shadow: 2px 2px 7px 0.5px #2225, -1px -1px 4px #111a;
+        background: linear-gradient(-15deg, #000a, #0003);
+        @apply transition-all ease-in relative rounded 
+      cursor-pointer rounded rounded-3xl 
+      py-2.5 px-3 m-auto mb-3 block mr-4 mt-[-7px]
+       [&>svg]:w-6 [&>svg]:fill-gray-300 
+       [&>svg]:inline-block;
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:focus-visible {
+          outline: none;
+          -webkit-text-stroke: 0.02px white;
+          box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
+          background: linear-gradient(-15deg, #000c, #0007);
+          @apply [&>svg]:fill-red-500;
+        }
+      }
+      .zoomd {
+        @apply mt-2;
+        img {
+          @apply rounded rounded-md mx-auto my-0 object-contain max-h-[90vh] max-w-[90%];
+        }
+      }
+    }
+    // PROJECT'S MORE DETAILS
+    .ProjectDets {
+      background-color: $themeWhite;
+      background-color: #fcfcfc;
+      @apply m-auto max-w-[98vw] max-h-[96vh] p-3 pb-5 mt-2 m-1 mb-2.5 rounded rounded-2xl overflow-y-auto overflow-x-hidden;
+      > button {
+        @include LightText($size: 0.75rem);
+        @apply p-1.5 mb-1 font-bold flex items-center justify-between capitalize [&>svg]:mr-1 [&>svg]:w-[15px];
+      }
+      hr {
+        @apply opacity-40;
+      }
+      h3 {
+        @include BoldText(
+          $word: 2px,
+          $letter: -0.5px,
+          $size: 1.2rem,
+          $case: capitalize
+        );
+        @apply pl-3 mt-2 mb-1 text-gray-800;
+      }
+      .images {
+        @apply overflow-hidden;
+        .swiper {
+          .swiper-wrapper {
+            .swiper-slide {
+              img {
+                // width: 50%;
+                @apply m-auto rounded rounded-lg w-[92%] max-h-[30vh] object-contain;
+              }
+            }
+          }
+          //  SWIPER BUTTONS
+          [class^="swiper-button"] {
+            @apply w-8 h-8 top-[35%] opacity-40 [&::after]:text-[14px] px-2 py-0.5  [&:hover]:bg-slate-50 [&::after]:text-gray-600 rounded rounded-3xl;
+            &[class$="-prev"] {
+              @apply left-[-0.75rem];
+            }
+            &[class$="-next"] {
+              @apply right-[-0.75rem];
+            }
+          }
+        }
+        p,
+        span {
+          @include LightText(
+            $word: 1px,
+            $letter: -0.25px,
+            $size: 0.65rem,
+            $color: $themeBlack
+          );
+          @apply font-bold capitalize pl-3;
+        }
+        span {
+          @apply block font-normal mb-1 text-[8px] mt-[-0.15rem];
+        }
+      }
+      // ABOUT CONTENT
+      p.content {
+        @include LightText(
+          $word: 2px,
+          $letter: -0.5px,
+          $size: 0.76rem,
+          $color: $themeBlack2
+        );
+        @apply pt-1.5 p-2 text-justify;
+        &::first-letter {
+          @apply text-[.82rem] pl-2;
+        }
+      }
+
+      //  MILESTONES
+      .milestone {
+        h4 {
+          @include BoldText(
+            $word: 2px,
+            $letter: -0.5px,
+            $size: 1rem,
+            $color: $themeBlack
+          );
+          @apply font-extralight capitalize  pt-2;
+        }
+        li {
+          @include LightText(
+            $word: 1.5px,
+            $letter: -0.25px,
+            $size: 0.7rem,
+            $color: $themeBlackBg
+          );
+        }
+      }
+      .tools {
+        @apply pt-2 pb-4;
+        li {
+          list-style: none;
+          @apply p-1.5  bg-slate-100 w-fit m-1.5 rounded rounded-lg;
+          img {
+            min-width: 1.35rem;
+            min-height: 1.35rem;
+            @apply max-h-[1.35rem] w-[1.35rem] object-contain;
+          }
+        }
+        > div {
+          @apply flex items-center justify-start;
+          p {
+            @include LightText(
+              $word: 2px,
+              $letter: 0.1px,
+              $size: 0.5rem,
+              $color: $themeBlackBg
+            );
+            // @apply w-[70%];
+            &:first-of-type {
+              @apply font-bold text-[0.6rem] mb-[-.1rem];
+            }
+          }
+        }
+      }
+      .actions {
+        @apply flex justify-between pl-2 pb-1.5;
+        button {
+          @apply p-1.5 pb-5 rounded rounded-3xl mr-2  opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
+          &.more {
+            @apply [&>svg]:text-[10px];
+          }
+        }
+      }
+    }
+  }
+
+  //----------  TOAST EDITS
+  [role="status"] {
+    @include LightText($size: 0.8rem);
+  }
+}
+
+@import "./laptop";
+@import "./tablet";
+@import "./smPhone";
+@import "./phone";
+@import "./dark";

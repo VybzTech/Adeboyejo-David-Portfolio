@@ -1,0 +1,652 @@
+// //---------NAVBAR THEME DARK HOME PAGE
+#light.dark {
+  .navbar {
+    .logo {
+      svg {
+        path {
+          fill: $themeBlack3;
+          &:first-of-type {
+            fill: $themeRed;
+            border: 1px solid $themeRed;
+          }
+        }
+      }
+    }
+    &.white {
+      background-color: $themeBlack1;
+      box-shadow: 0 -1px 10px $themeBlack;
+    }
+    .navigation,
+    .navigation.show {
+      // @apply static bg-transparent w-auto h-auto min-h-[auto]
+      // flex-[auto] flex justify-end shadow-none backdrop-blur-0;
+      > div {
+        > div {
+          &:first-child {
+            // @apply pt-2 flex-row;
+          }
+          button.nav {
+            // @apply m-0 p-1 mx-2.5 text-[0.9rem];
+            // &::after {
+            //   content: "";
+            //   @apply absolute bottom-[-0.1rem] left-0 bg-blue-600 rounded rounded-lg h-1;
+            // }
+            // &.active::after {
+            //   @apply w-full;
+            // }
+            // &:hover::after {
+            //   @apply w-full opacity-40;
+            // }
+          }
+        }
+        & > div:last-of-type button {
+          // @apply hidden;
+        }
+      }
+    }
+
+    div.navigation,
+    div.navigation.show {
+      @apply bg-transparent backdrop-blur-0;
+
+      & > div > div {
+        button.nav {
+          &::after {
+            @apply bg-red-600;
+          }
+        }
+      }
+    }
+    // .navigation {
+    //   .nav {
+    //     color: white;
+    //     -webkit-text-stroke: 0.3px white;
+    //     &.active {
+    //       border-bottom-color: $themeBlueDeep;
+    //     }
+    //     &:hover {
+    //       border-bottom-color: $themeBlueDeep;
+    //     }
+    //   }
+    // }
+
+    //  INITIAL DARK NAVBAR STYLES
+    .navigation {
+      > div {
+        > div .nav {
+          -webkit-text-stroke: 0.25px white;
+          @apply text-white;
+        }
+        & > div:last-of-type button {
+          background: transparent;
+          background: linear-gradient(-15deg, #000a, #0003);
+          box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
+          @apply bg-slate-700 text-gray-200;
+          &:hover,
+          &:focus,
+          &:focus-within,
+          &:focus-visible {
+            -webkit-text-stroke: 0.05px $themeBlack1;
+            background: linear-gradient(-15deg, #000c, #0007);
+            box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
+          }
+        }
+      }
+      //SHOWN
+      &.show {
+        @apply bg-[#1116];
+      }
+    }
+  }
+  // 	.theme {
+  // 		button {
+  // 			background-color: transparent;
+  // 			color: $themeBlueDeep;
+  // 			&:hover {
+  // 				background-color: $themeBlueAlpha;
+  // 				box-shadow: 0 0 4px 1px $themeBlueAlpha;
+  // 			}
+  // 		}
+  // 	}
+
+  //---------DARK HOME DEN
+  #home {
+    .bg [alt="Home Page Background"],
+    video {
+      filter: brightness(0.8);
+    }
+    .lilAbout {
+      background-color: $themeBlackBg;
+      .circleImg {
+        background-color: $themeBlackBg;
+        box-shadow: 0 0 14px 2.5px #0003;
+      }
+      .about {
+        .hero {
+          h2 {
+            color: $offWhite !important;
+          }
+          .line {
+            background-color: $themeDGray;
+          }
+        }
+        p {
+          color: $themeWhite2;
+        }
+      }
+    }
+    .skills {
+      background: linear-gradient(0rad, #01041a, #02244d, #033169);
+    }
+
+    .homeProjects {
+      background-color: $themeBlackBg;
+      h3 {
+        -webkit-text-stroke: 0.5px $themeBlueDeep;
+        color: $themeBlueDeep;
+      }
+      h1 {
+        color: $themeWhite;
+      }
+      .swiper {
+        .swiper-wrapper .swiper-slide {
+          box-shadow: 0px 2px 7px 1px $themeDGray;
+        }
+        img {
+          filter: brightness(0.85);
+        }
+      }
+    }
+  }
+
+  //----------- ABOUT THE DARK VADER
+
+  #about {
+    .bg {
+      background-image: linear-gradient(180deg, #0002, $themeBlack1),
+        url("../IMAGES/AboutBackground.jpg");
+    }
+    // main {
+    // 	background-color: $themeBlack;
+    // 	.imgX2 img {
+    // 		filter: brightness(0.97);
+    // 	}
+    // 	.aboutMe {
+    // 		color: $themeWhite;
+    // 	}
+    // }
+    section {
+      background-color: $themeBlack2; // $themeBlack2
+      .aboutMe {
+        color: $themeWhite;
+      }
+    }
+    .myServices {
+      background: linear-gradient(180deg, $themeBlack2, $themeBlackBg);
+      #tsparticles {
+      }
+      .serviceWrapper {
+        h2 {
+          -webkit-text-stroke: 0.2px $themeWhite;
+          color: $themeWhite;
+        }
+        .serviceList {
+          .service {
+            box-shadow: 1px 2px 10px 0.5px #333;
+            background: $themeBlack1;
+            .icon {
+              @apply bg-red-100;
+              svg {
+                fill: $themeCoarseRed;
+              }
+            }
+            h4 {
+              -webkit-text-stroke: 0.2px $offWhite;
+              color: $offWhite;
+            }
+            p {
+              color: $themeGray;
+            }
+            .backdrop {
+              svg {
+                fill: $themeBlack3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //---------DARK PROJECTS
+  #projects {
+    .bg {
+      box-shadow: 0 10px 12px 0.75px #7773;
+      video {
+        filter: brightness(0.77);
+      }
+    }
+    main {
+      background-color: $themeBlack2;
+      .projectNav {
+        background-color: $themeBlack1;
+        // border-bottom-color: #0a0a0a;
+        > div {
+          .Nav {
+            //  EACH BUTTON
+            @apply hover:bg-gray-800 focus:bg-gray-800
+           [&.active>span]:text-gray-200;
+            img {
+              filter: invert(0.7);
+            }
+            span {
+              color: $gray;
+            }
+          }
+        }
+        // button {
+        //   color: $themeGray;
+        //   &.active {
+        //     background-color: #0a0a0a;
+        //     color: $themeWhite;
+        //     border-bottom-color: #555;
+        //   }
+        //   &:hover {
+        //     background-color: #1a1a1a;
+        //     color: $themeWhite2;
+        //   }
+        // }
+      }
+      section {
+        .gridSection {
+          // EACH PROJECT DIV
+          .MainProject {
+            // box-shadow: 0 3px 10px 0.5px #ccc2;
+            box-shadow: 0 3px 12px 0.75px #222;
+            background: $themeBlack1;
+            &:hover {
+              box-shadow: 0 3px 12px 0.75px #222;
+            }
+            .swiper {
+              .swiper-wrapper {
+                .swiper-slide {
+                  &::after {
+                    background: linear-gradient(
+                      180deg,
+                      transparent,
+                      #0002,
+                      #1114,
+                      #111a,
+                      #111
+                    );
+                  }
+                  img {
+                  }
+                }
+              }
+              //  SWIPER BUTTONS
+              [class^="swiper-button"] {
+                @apply opacity-50 [&:hover]:bg-gray-500 [&::after]:text-gray-300;
+              }
+            }
+            .contentWrapper {
+              h4 {
+                color: $offWhite;
+              }
+              p {
+                color: $themeGray;
+                // color: $themeDGray;
+              }
+              .actions {
+                button {
+                  @apply opacity-70 
+                  [&>svg]:fill-gray-600 hover:bg-gray-800
+                   hover:[&>svg]:fill-gray-100 [&.active>svg]:fill-gray-100;
+                }
+              }
+            }
+          }
+        }
+        // USED TOOLS DIV
+        .tools {
+          &.show {
+            box-shadow: 0 2px 12px 0.75px $themeBlack3; // #444;
+            background: $themeBlack1;
+            &::before {
+              border-bottom-color: $themeBlack1;
+              @apply h-6 absolute top-[-1.4rem] left-3.5;
+            }
+            li {
+              img {
+              }
+            }
+          }
+        }
+        // UI IMAGES
+        .UI-UX {
+          .UI_image {
+            img:hover {
+              box-shadow: 0 2px 10px 0.5px $themeBlack3; // #444;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //---------CONTACT THE DARK SIDE
+  #contact {
+    /*
+ .bg {
+      background-image: linear-gradient(180deg, #0002, $themeBlack1),
+        url("../IMAGES/AboutBackground.jpg");
+    }
+      */
+    .bg {
+      background-image: linear-gradient(180deg, #0002, $themeBlack1),
+        url("../IMAGES/ContactBackground.jpg");
+      box-shadow: 0 10px 12px 0.5px #111a;
+    }
+    main {
+      background-color: $themeBlackBg;
+      // .svg {
+      // 	section {
+      // 		.hero {
+      // 			> div {
+      // 				background-color: $themeGray;
+      // 			}
+      // 			h3 {
+      // 				color: $offWhite;
+      // 			}
+      // 		}
+
+      //     .socials > button,
+      // 		a {
+      // 		// 	border: 2px solid $themeWhite2;
+      // 		// 	color: $themeWhite2;
+      // 		// 	&:hover,
+      // 		// 	&:focus {
+      // 		// 		border-color: $themeBlueDeep;
+      // 		// 		svg {
+      // 		// 			color: $themeBlueDeep;
+      // 		// 		}
+      //     @apply opacity-70
+      //     [&>svg]:fill-gray-600 hover:bg-gray-800
+      //      hover:[&>svg]:fill-gray-100 [&.active>svg]:fill-gray-100;
+
+      //   }
+      // 		// }
+
+      // 	}
+      // }
+      .hero {
+        > div {
+          @apply bg-slate-100;
+        }
+        h3 {
+          color: $themeWhite2;
+        }
+      }
+      .socials {
+        button,
+        a {
+          border: 2px solid $themeBlack3;
+          &:hover,
+          &:focus {
+            border-color: $themeCoarseRed;
+            opacity: 0.6;
+            svg {
+              color: $themeCoarseRed;
+            }
+          }
+          svg {
+            @apply text-gray-500;
+          }
+        }
+      }
+
+      .ContactMeWrapper {
+        .ContactMe {
+          box-shadow: 0 0 15px Black;
+          background-color: $themeBlack1;
+          .intro {
+            h2 {
+              color: $offWhite;
+            }
+            svg {
+              filter: invert(0.8);
+            }
+          }
+          form {
+            .formControl {
+              > div {
+                background-color: $themeBlack1;
+                &:hover label {
+                  color: $offWhite;
+                  sup {
+                  }
+                }
+
+                // label span {
+                //   // color: $themeRed;
+              }
+              input,
+              textarea {
+                border: 1px solid $themeBlack2;
+                color: $offWhite;
+                color: $offWhite;
+                &::placeholder {
+                  color: $themeBlack3;
+                }
+                &:hover {
+                  background-color: $themeBlack3;
+                  &::placeholder {
+                    color: $themeBlack3;
+                  }
+                }
+                &:focus {
+                  border: 1px solid $themeGray;
+                }
+              }
+              > span {
+                color: $themeRed;
+              }
+            }
+            button {
+              // color: $themeWhite2;
+              // background-color: $themeBlueDeep;
+              // -webkit-text-stroke: 0.25px $themeWhite2;
+              // svg {
+              //   fill: $themeWhite2;
+              // }
+              // &:hover,
+              // &:focus {
+              //   background-color: $themeBottomBlue;
+              //   color: White;
+              //   -webkit-text-stroke: 0.25px White;
+              //   & svg {
+              //     fill: White;
+              //   }
+              // }
+            }
+          }
+        }
+        .circleWrapper {
+          background: linear-gradient(
+            133deg,
+            $themeBlueAlpha,
+            $themeBlue,
+            $themeBlueDeep
+          );
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  //------------- PORTAL
+  #portals {
+    .ProjectDets {
+      background-color: $themeDGray;
+      // background-color: #fcfcfc;
+      // @apply m-auto max-w-[98vw] max-h-[96vh] p-3 pb-5 mt-2 m-1 mb-2.5 rounded rounded-2xl overflow-y-auto overflow-x-hidden;
+      > button {
+        color: $themeCoarseRed;
+        @apply opacity-60 hover:opacity-100 focus:opacity-100;
+        // fill: $themeCoarseRed;
+        // @include LightText($size: 0.75rem);
+        // @apply p-1.5 mb-1 font-bold flex items-center justify-between capitalize [&>svg]:mr-1 [&>svg]:w-[15px];
+      }
+      hr {
+        @apply opacity-10;
+      }
+      h3 {
+        color: $offWhite;
+        // @include BoldText(
+        // $word: 2px,
+        // $letter: -0.5px,
+        // $size: 1.2rem,
+        // $case: capitalize
+        // );
+        // @apply pl-3 mt-2 mb-1 text-gray-800;
+      }
+      .images {
+        // @apply overflow-hidden;
+        .swiper {
+          .swiper-wrapper {
+            .swiper-slide {
+              img {
+                filter: brightness(0.75);
+                // @apply m-auto rounded rounded-lg w-[92%] max-h-[30vh] object-contain;
+              }
+            }
+          }
+          //  SWIPER BUTTONS
+          [class^="swiper-button"] {
+            // @apply w-8 h-8 top-[35%] opacity-40 [&::after]:text-[14px] px-2 py-0.5  [&:hover]:bg-slate-50 [&::after]:text-gray-600 rounded rounded-3xl;
+            &[class$="-prev"] {
+              // @apply left-[-0.75rem];
+            }
+            &[class$="-next"] {
+              // @apply right-[-0.75rem];
+            }
+          }
+        }
+        p,
+        span {
+          color: $themeWhite;
+          color: $gray;
+
+          // @include LightText(
+          // $word: 2px,
+          // $letter: -0.75px,
+          // $size: 0.65rem,
+          // $color: $themeBlack
+          // );
+          // @apply font-bold capitalize pl-3;
+        }
+        span {
+          color: $themeGray;
+          // @apply block font-normal mb-1 text-[8px] mt-[-0.15rem];
+        }
+      }
+      // ABOUT CONTENT
+      p.content {
+        color: $offWhite;
+        // @include LightText(
+        // $word: 2px,
+        // $letter: -0.5px,
+        // $size: 0.76rem,
+        // $color: $themeBlack2
+        // );
+        // @apply pt-1.5 p-2 text-justify;
+        &::first-letter {
+          // @apply text-[.82rem] pl-2;
+        }
+      }
+
+      //  MILESTONES
+      .milestone {
+        h4 {
+          @apply text-slate-100;
+          // @include BoldText(
+          // $word: 2px,
+          // $letter: -0.5px,
+          // $size: 1rem,
+          // $color: $themeBlack
+          // );
+          // @apply font-extralight capitalize  pt-2;
+        }
+        li {
+          color: $themeGray;
+          // @include LightText(
+          // $word: 1.5px,
+          // $letter: -0.25px,
+          // $size: 0.7rem,
+          // $color: $themeBlackBg
+          // );
+        }
+      }
+      .tools {
+        // @apply pt-2;
+        li {
+          // list-style: none;
+          background-color: $themeDGray;
+          // @apply bg-slate-900;
+          // w-fit m-1.5 rounded rounded-lg;
+          img {
+            // min-width: 1.35rem;
+            // @apply max-h-[1.35rem] object-contain;
+          }
+        }
+        > div {
+          // @apply flex items-center justify-start;
+          p {
+            color: $gray;
+            // @include LightText(
+            //   $word: 2px,
+            //   $letter: -0.5px,
+            //   $size: 0.55rem,
+            //   $color: $themeBlackBg
+            // );
+            // @apply w-[70%];
+            &:first-of-type {
+              // @apply font-bold text-[0.6rem] mb-[-.1rem];
+            }
+          }
+        }
+      }
+      .actions {
+        // @apply flex justify-between pl-2 pb-1.5;
+        button {
+          // @apply p-1.5 pb-5 rounded rounded-3xl mr-2  opacity-70 [&>svg]:fill-gray-300 w-7 h-7 hover:bg-gray-100 hover:[&>svg]:fill-gray-700 [&.active>svg]:fill-gray-700;
+          &.more {
+            // @apply [&>svg]:text-[10px];
+          }
+        }
+      }
+    }
+  }
+
+  //------------- FOOTER
+  .foot {
+    background-color: #0e0e0eff;
+  }
+  // 	//--------- 404 PAGE
+  // 	#P404 {
+  // 		background-image: linear-gradient(
+  // 				0deg,
+  // 				#000a,
+  // 				transparent
+  // 			),
+  // 			url('../IMAGES/404Background.jpg');
+  // 	}
+
+  //  ---------- TOAST DARK MODE
+  [class^="go"] {
+    > div {
+      background-color: $themeBlackBg;
+      color: $themeWhite2;
+    }
+  }
+}

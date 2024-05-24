@@ -1,0 +1,894 @@
+// // TABLET SIZE
+// @media screen and (max-width: 770px) {
+// 	//768
+// 	#light {
+// 		//--------- NAVBAR
+// 		.navbar {
+// padding: 0.5rem 0 0.25rem;
+// 			.logo {
+// 				margin: 0.2rem 0 0 2rem;
+// 				svg {
+// 					width: 28px;
+// 				}
+// 			}
+// 			.navigation {
+// 				margin: 1rem 1.7rem auto auto;
+// 				.nav {
+// 					margin-right: 5px;
+// 					font-size: 10px;
+// 					padding: 0;
+// 				}
+// 			}
+// 		}
+// 		//---------	THEME BUTTN
+// 		.theme {
+// 			top: 1.55rem;
+// 			right: 0.55rem;
+// 			button svg {
+// 				font-size: 0.85rem;
+// 			}
+// 		}
+
+// 		//---------	SCROLL UP TOP
+// 		.scrollUp {
+// 			right: 45.5%;
+// 			svg {
+// 				width: 20px;
+// 			}
+// 		}
+
+// 		//--------- HOME
+// 		#home {
+// 			.intro {
+// 				top: 28vh;
+// 				left: 10%;
+// 				h1 {
+// 					font-size: 3.5rem;
+// 				}
+// 				.hero {
+// 					font-size: 0.7rem;
+// 				}
+// 				.h5Hold {
+// 					font-size: 0.7rem;
+// 					height: 14px;
+// 					margin: 1rem auto 2rem 0rem;
+// 				}
+// 			}
+// 			.lilAbout {
+// 				.img {
+// 					padding: 2.3% 2.5% 1.4%;
+// 					width: 52%;
+// 				}
+// 				.about {
+// 					margin-left: -1rem;
+// 					.hero {
+// 						margin-left: 0.5rem;
+// 						width: 64%;
+// 						h2 {
+// 							font-size: 2rem;
+// 						}
+// 					}
+// 					p {
+// 						padding-right: 1.8rem;
+// 						font-size: 0.8rem;
+// 						line-height: 1.9;
+// 					}
+// 				}
+// 			}
+// 			.skills {
+// 				.KeySkillsWrapper {
+// 					.keySkills {
+// 						h2 {
+// 							-webkit-text-stroke: 1px white;
+// 							font-size: 2rem;
+// 						}
+// 						.skillList {
+// 							margin: 1.5rem -0.25rem 1.5rem 2.5rem;
+// 							& > div {
+// 								margin-bottom: 10px;
+// 								p {
+// 									font-size: 0.7rem;
+// 									padding: 5.8px 0 7px;
+// 									width: 21%;
+// 								}
+// 								.skillName {
+// 									-webkit-text-stroke: 0.01px
+// 										white;
+// 									letter-spacing: 0.35px;
+// 									> p {
+// 										font-size: 0.65rem;
+// 									}
+// 								}
+// 								.skillName,
+// 								> div .progress {
+// 									height: 20px;
+// 								}
+// 							}
+// 						}
+// 					}
+// 					.skillPoster {
+// 						margin: -6rem 0 0 0.7rem;
+// 						& > div svg {
+// 							width: 420px;
+// 						}
+// 						p {
+// 							font-size: 0.7rem;
+// 							margin: -1rem 2.8rem 0 auto;
+// 							width: 230px;
+// 						}
+// 					}
+// 				}
+// 			}
+// 			//--------- HOME PAGE BUTTONS EDIT
+// 			.intro button,
+// 			.lilAbout .about button {
+// 				font-size: 10px;
+// 				padding: 9px 17px;
+// 			}
+// 			.skills
+// 				.KeySkillsWrapper
+// 				.keySkills
+// 				button {
+// 				font-size: 10px;
+// 				padding: 6.5px 19px;
+// 			}
+// 			.homeProjects {
+// 				h1 {
+// 					-webkit-text-stroke: 1px black;
+// 					@include BoldText(
+// 						$case: capitalize,
+// 						$align: center
+// 					);
+// 				}
+// 			}
+// 		}
+
+// 		//--------- PROJECTS
+// 		#projects {
+// 			.explore {
+// 				top: 30vh;
+// 				left: 10%;
+// 				h1 {
+// 					width: 80%;
+// 					-webkit-text-stroke: 0.8px white;
+// 					font-size: 3.2rem;
+// 				}
+// 				.sub {
+// 					font-size: 0.7rem;
+// 					margin-top: 10vh;
+// 					width: 300px;
+// 				}
+// 			}
+// 			main {
+// 				.projectNav > div button {
+// 					font-size: 0.72rem;
+// 					margin: 0 0.5rem -1px;
+// 				}
+// 				section {
+// 					padding: 4rem 1rem;
+// 					.gridSection {
+// 						> div {
+// 							margin: 0 0.8rem 3.5rem;
+// 							.img {
+// 								background-size: 100% 21vh;
+// 								height: 21vh;
+// 								.contentWrapper {
+// 									p {
+// 										line-height: 1.5;
+// 										font-size: 10px;
+// 									}
+// 									.actions {
+// 										margin-bottom: 0;
+// 										button {
+// 											padding: 4px;
+// 											svg {
+// 												font-size: 0.87rem;
+// 											}
+// 										}
+// 									}
+// 									ul {
+// 										margin: 0.53rem auto -0.1rem;
+// 										font-size: 0.45rem;
+// 										li {
+// 											padding: 1px 8px 3px;
+// 										}
+// 									}
+// 								}
+// 							}
+// 						}
+// 					} //UI DESIGNS
+// 					.UI-UX {
+// 						padding: 1.5rem 5rem 5rem;
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		//--------- CONTACT
+// 		#contact {
+// 			.bg {
+// 				header {
+// 					top: 35vh;
+// 					left: 8.5%;
+// 					h1 {
+// 						font-size: 3.4rem;
+// 					}
+// 					.sub {
+// 						width: 350px;
+// 						font-size: 0.7rem;
+// 					}
+// 				}
+// 			}
+// 			main {
+// 				flex-direction: column;
+// 				> div {
+// 					width: 100% !important;
+// 				}
+// 				.svg {
+// 					flex-direction: row;
+// 					svg {
+// 						margin: 1.5rem auto 0;
+// 						width: 47vw;
+// 					}
+// 					section {
+// 						width: 45%;
+// 						.hero {
+// 							margin-left: 2rem;
+// 							> div {
+// 								width: 30px;
+// 							}
+// 							h3 {
+// 								font-size: 1.2rem;
+// 							}
+// 						}
+// 						.socials {
+// 							padding: 1.2rem;
+// 							display: grid;
+// 							grid-template-columns: repeat(
+// 								4,
+// 								1fr
+// 							);
+// 							grid-gap: 1rem;
+// 							& > button {
+// 								margin: 0 10px;
+// 								svg {
+// 									height: 1.3rem;
+// 								}
+// 							}
+// 						}
+// 					}
+// 				}
+// 				.ContactMeWrapper {
+// 					.ContactMe {
+// 						margin: 2rem auto 10rem;
+// 						padding: 1.5rem 2.5rem 3rem 1.5rem;
+// 						h2 {
+// 							font-size: 2rem;
+// 							-webkit-text-stroke: 0.5px black;
+// 						}
+// 						form {
+// 							.formControl label {
+// 								font-size: 0.85rem;
+// 							}
+// 							button {
+// 								font-size: 0.7rem;
+// 								svg {
+// 									margin-left: 7px;
+// 									width: 0.67rem;
+// 								}
+// 							}
+// 						}
+// 					}
+// 					.circleWrapper {
+// 						margin: -32rem 0 -31rem 16rem;
+// 						clip-path: circle(19rem);
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		//---------ABOUT
+// 		#about {
+// 			.bg {
+// 				h1 {
+// 					font-size: 3.4rem;
+// 					padding-top: 12vh;
+// 				}
+// 				.content {
+// 					padding-top: 0;
+// 					margin: 0 auto 2rem;
+// 					width: 80%;
+// 					font-size: 0.9rem;
+// 					word-spacing: 2px;
+// 					line-height: 3.3;
+// 				}
+// 			}
+// 			section {
+// 				.imgX2 {
+// 					margin: auto 2rem;
+// 					width: 90%;
+// 				}
+// 				.aboutMe {
+// 					width: 60%;
+// 					font-size: 0.87rem;
+// 					word-spacing: 1.5px;
+// 					line-height: 2.5;
+// 					p {
+// 						padding: 2rem 1.85rem 0 2.5rem;
+// 					}
+// 				}
+// 			}
+// 			.myServices {
+// 				margin-bottom: -2px;
+// 				h2 {
+// 					font-size: 2.5rem;
+// 					padding-top: 1.5rem;
+// 				}
+// 				.serviceList {
+// 					padding: 1rem 2.7rem 3rem 1.2rem;
+// 					.serviceListCol {
+// 						> div .service {
+// 							padding: 1rem 1.5rem 3rem 1.5rem;
+// 							h4 {
+// 								font-size: 1.35rem;
+// 							}
+// 							p {
+// 								font-size: 0.7rem;
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		//-------- FOOTER
+// 		.foot {
+// 			padding: 0.5rem 0 2rem;
+// 			.leftPanel {
+// 				padding: 2% 0 0 7%;
+// 				& > button {
+// 					font-size: 13px;
+// 					margin-right: 2.5%;
+// 				}
+// 			}
+// 			.socials .socialButtons {
+// 				margin: 1% -15% 0 0;
+// 				a {
+// 					margin: 0 2%;
+// 					svg {
+// 						font-size: 1.2rem;
+// 					}
+// 				}
+// 			}
+
+// 			.copyx0 h5 {
+// 				font-size: 12px;
+// 			}
+// 		}
+
+// 		//-------- PORTALS
+// 		#portals {
+// 			//-------- RESUEM VIEW
+// 			#Resume {
+// 				.ResumeImg img {
+// 					height: 80vh;
+// 				}
+// 				.ResumeDwn {
+// 					right: 1.2rem;
+// 				}
+// 			}
+
+// 			//--------- MAIN PORTAL
+// 			#portfolioPortal {
+// 				.clsArea {
+// 					height: 400rem;
+// 				}
+// 				.portalContent {
+// 					min-width: 82%;
+// 					margin-bottom: 5rem;
+// 					border-radius: 10px 10px 5px 5px;
+// 					header {
+// 						h1 {
+// 							margin: 0 2.5rem 0 auto;
+// 							font-size: 1.4rem;
+// 						}
+// 						button[title="Close"] {
+// 							top: -1.2rem;
+// 							right: -0.2rem;
+// 							padding: 5px 5.15px 3px 5px;
+// 							svg {
+// 								width: 1rem;
+// 							}
+// 						}
+// 					}
+// 					blockquote {
+// 						font-size: 0.85rem;
+// 						word-spacing: 1px;
+// 						line-height: 2.5;
+// 						padding: 2.5% 2.6% 3% 3.5%;
+// 						p::first-letter {
+// 							padding-left: 2rem;
+// 						}
+// 					}
+// 					hr {
+// 						margin: 0.2rem 43% 4rem;
+// 					}
+// 					#donate {
+// 						form {
+// 							padding: 1.5% 0 0 5%;
+// 							width: 90%;
+// 							button {
+// 								margin: 2.5rem auto 4rem;
+// 								padding: 8px 0;
+// 								width: 20%;
+// 							}
+// 						}
+// 					}
+// 					#FAQs .FAquestions {
+// 						padding: 1.5% 5% 7%;
+// 						.questionDiv {
+// 							> div[class^="question"] div {
+// 								button {
+// 									svg {
+// 										width: 1.4rem;
+// 									}
+// 								}
+// 								p {
+// 									font-size: 0.95rem;
+// 									word-spacing: 0.5px;
+// 									letter-spacing: -0.5px;
+// 								}
+// 							}
+// 							div[class^="answer"] p {
+// 								font-size: 0.8rem;
+// 								&::first-letter {
+// 									font-size: 0.85rem;
+// 								}
+// 							}
+// 						}
+// 					}
+// 					#privacy {
+// 						h3 {
+// 							margin-bottom: -5px;
+// 							padding-left: 2.5rem;
+// 							font-size: 1.025rem;
+// 						}
+// 						blockquote {
+// 							font-size: 0.85rem;
+// 							&:last-of-type {
+// 								margin-bottom: 2rem;
+// 							}
+// 						}
+// 					}
+// 					#pricing {
+// 						.viewBtns {
+// 							width: 34%;
+// 							button {
+// 								font-size: 0.7rem;
+// 							}
+// 						}
+// 						section {
+// 							padding: 3rem 2rem;
+// 							grid-gap: 2rem;
+// 							.card .cardHeader {
+// 								padding: 1rem 0 2.25rem;
+// 								p {
+// 									line-height: 2;
+// 								}
+
+// 								h3 {
+// 									letter-spacing: -0.9px;
+// 									font-size: 1.4rem;
+// 								}
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+// For Small screens, Laptops Sizes: iPad Air, Surface Pro
+
+// For iPads, Tablets Sizes: iPad , iPad Mini,
+@media screen and (min-width: 768px) and (min-height: 1024px) {
+// @media screen and (min-width: 768px) {
+  #light {
+    //--------- LOADER
+    div.Loader {
+      & > div {
+        svg {
+          @apply w-[5vw] text-yellow-500;
+        }
+      }
+      // .progress {
+      // @apply h-1 w-[3rem] bg-gray-900 rounded my-7 transition-all duration-100 ease-in-out;
+      // }
+    }
+    //--------- NAVBAR
+    .navbar {
+      border-radius: 0 0 25px 25px;
+      // @apply h-[10vh];
+      .logo svg {
+        @apply w-10 ml-2.5;
+      }
+      .navBtn svg,
+      .theme svg {
+        // @apply w-6 h-6;
+      }
+      .navigation,
+      .navigation.show {
+        @apply static  bg-transparent w-auto h-auto min-h-[auto] 
+        flex-[auto] flex justify-end shadow-none backdrop-blur-0;
+        > div {
+          > div {
+            &:first-child {
+              @apply py-2 flex-row;
+            }
+            button.nav {
+              @apply m-0 mb-1 p-1 mx-3 text-[1rem];
+              // @apply my-3 px-16 pt-5 pb-3 mx-auto  text-[17px];
+              &::after {
+                content: "";
+                @apply absolute bottom-[-0.1rem] left-0 bg-blue-600 rounded rounded-lg h-1;
+              }
+              &.active::after {
+                @apply w-full;
+              }
+              &:hover::after {
+                @apply w-full opacity-40;
+              }
+            }
+          }
+          & > div:last-of-type button {
+            @apply hidden;
+          }
+        }
+        //SHOWN
+        &.show {
+          // @apply top-[10.3vh] w-[96%] left-[2%];
+        }
+      }
+      .menu {
+        @apply hidden;
+      }
+    }
+    #home {
+      h1 {
+        // @apply text-[2.3rem];
+      }
+      #text {
+        @apply text-[18px] mt-7 mb-20; // mt-5 mb-10;
+      }
+      .intro {
+        @apply top-[40vh];
+        h1 {
+          @apply text-[5.5vh];
+        }
+        .btn {
+          @apply text-[0.9rem];
+          // word-spacing: 4px;
+        }
+      }
+      .lilAbout {
+        @apply flex items-center pt-10 pb-24 pl-3 pr-10;
+        .circleImg {
+          // @apply w-[55%];
+          // py-[1.8%] px-[1.8%] pb-[2%];
+        }
+        > div:last-child {
+          flex-shrink: 1.2;
+        }
+        .about {
+          // @apply
+          .hero h2 .line > div {
+            @apply h-[0.75vh];
+          }
+          p {
+            // @apply leading-[2];
+          }
+          .more button {
+            // @apply mb-5;
+          }
+        }
+      }
+      .skills {
+        div#tsparticles {
+          @apply h-[75vh];
+        }
+        // @apply mt-[-1px];
+        .KeySkillsWrapper {
+          @apply px-1 flex items-center p-5 [&>div]:w-full;
+          .keySkills {
+            flex-shrink: 4;
+            h2 {
+              @apply text-[3.5vh] mr-[-2%] mb-14;
+            }
+            .skillList {
+              // @apply px-4 pl-8;
+              .skillPill {
+                // @apply mb-3;
+                .skillName {
+                  // @apply min-w-[22%];
+                  // @apply py-[0.32rem];
+                } //PROGRESS BAR
+                > div.progress.Bar {
+                  // @apply w-[78%];
+                }
+              }
+            }
+          }
+        }
+        .skillPoster {
+          // @apply flex-col flex items-center;
+
+          @apply mt-[6rem] mr-[4rem] ml-[-4rem];
+          & > div svg {
+            //150
+            @apply w-[150%];
+          }
+        }
+        .tools p {
+          @apply w-[250px];
+          // mt-[1rem];;
+        }
+      }
+      .homeProjects {
+        @apply pt-14;
+        h1 {
+          -webkit-text-stroke: 1px $themeBlack;
+          @apply text-[4vh] mt-2 mb-14;
+        }
+        .swiper .swiper-wrapper div.swiper-slide {
+          @apply h-[37vh] m-0 mb-5 ml-1.5 rounded-xl;
+
+          img {
+            @apply min-w-full;
+          }
+          // #home .homeProjects
+          // .swiper .swiper-wrapper .swiper-slide
+        }
+      }
+    }
+    #about {
+      div.bg {
+        @apply h-[100vh];
+        h1 {
+          @apply pt-[10.5vh] text-[3.75vh];
+        }
+        > div:last-of-type {
+          @apply mt-[-1.5rem] mb-5;
+          button {
+            @apply text-[1.35vh] px-7 rounded-lg py-4 pb-5;
+          }
+        }
+        .content {
+          @apply px-10 text-[1.7vh] leading-[2] [&>div]:mb-1.5;
+          // word-spacing: 1px;
+        }
+      }
+      section {
+        @apply flex items-center pl-10 py-20;
+        .imgX2 {
+          @apply w-[100%];
+        }
+        .aboutMe {
+          flex-shrink: 1.15;
+          @apply px-10 text-[1.5vh];
+        }
+      }
+      div#tsparticles {
+        height: 120vh;
+      }
+      .myServices .serviceWrapper {
+        h2 {
+          @apply pt-14 text-[4vh];
+        }
+        .serviceList {
+          @apply px-7 flex items-center gap-7;
+          .service {
+            @apply pr-5;
+            // @apply mx-3.5 pl-6 pt-6 pb-14;
+            .icon {
+              // @apply p-2.5;
+            }
+            p {
+              @apply text-[1.3vh];
+              // @apply max-w-[200px];
+            }
+          }
+        }
+      }
+    }
+    #projects {
+      div.bg .explore {
+        @apply top-32;
+        h1 {
+          @apply text-[6vh] px-10 tracking-wider;
+          word-spacing: 3rem;
+        }
+        .sub {
+          @apply text-[1.5vh] max-w-[70%] mx-auto;
+          // @apply text-[13px];
+          // @apply px-8 my-[-2rem];;
+        }
+        img {
+          @apply w-[4.45vw];
+        }
+      }
+      main {
+        nav.projectNav {
+          // WHITE BACKGROUND SIDE NAV
+          @apply w-[15%];
+          > div {
+            @apply w-[15%] top-[17vh]; //[&>div]:w-fit [&>div]:mx-auto;
+            // @apply [&>div]:w-[90%];
+            //  EACH BUTTON
+            .Nav {
+              // @apply max-w-[85%];
+              // @apply px-4; // mx-auto;
+              @apply mx-[5%] w-[90%];
+              // @apply mb-3.5 [&.active>span]:text-[0.75rem]; // mt-4;
+              // flex items-center justify-start
+              // py-1 px-1 mb-2 [&.active>span]:text-[0.61rem]
+              // font-bold [&.active>img]:mr-[.1rem];
+              img {
+                @apply w-[5.5vh] mb-0.5; // m-0; pl-0.5
+              }
+              span {
+                @apply text-[1.3vh];
+                // margin-left: 0.25rem;
+                // color: $themeDGray;
+              }
+            }
+          }
+        }
+        section {
+          @apply ml-[18%];
+          @apply p-2.5;
+          .gridSection {
+            @apply flex items-center gap-7;
+            @apply pt-16;
+            // @apply pl-2 pr-0 pt-5 pb-10;
+            // EACH PROJECT DIV
+            .MainProject {
+              // @apply mr-5 ml-10;
+              .swiper .swiper-wrapper .swiper-slide img {
+                @apply max-h-[15vh];
+              }
+              .contentWrapper {
+                // @apply pl-3.5 pr-1; //  mt-[-.3rem];
+                p {
+                  @apply text-[1.1vh];
+                }
+              }
+            }
+          }
+          // USED TOOLS DIV
+          .tools {
+            &.show {
+              // @apply mt-[-1.25rem] ml-4;
+              &::before {
+                // @apply h-6 left-12;
+              }
+            }
+          }
+          // UI IMAGES
+          .UI-UX {
+            @apply flex items-center gap-7;
+            // @apply flex gap-6 pr-1 py-7 pl-3;
+            .UI_image {
+              img {
+                // @apply max-w-[100%] ml-0;
+              }
+            }
+          }
+        }
+      }
+    }
+    #contact {
+      .bg {
+        // @apply h-[120vh];
+        .Pleasantries {
+          @apply top-[30vh];
+          h1 {
+            @apply text-[5.5vh] mb-[17.5vh];
+          }
+          .sub {
+            @apply text-[1.4vh] max-w-[70%] mx-auto;
+          }
+        }
+      }
+      main {
+        figure {
+          @apply mx-7 pt-5 flex items-center justify-evenly gap-5;
+        }
+        .svg {
+          @apply w-[65%] m-0 mx-auto;
+        }
+        .socials {
+          @apply m-0 mx-auto;
+        }
+        .ContactMeWrapper {
+          @apply p-10 pb-0;
+          .ContactMe {
+            @apply px-7 mx-28 mr-20 mb-0;
+            form .formControl > div label {
+              @apply text-[0.9rem];
+            }
+          }
+          div.circleWrapper {
+            clip-path: circle(15rem);
+            @apply mr-[-17rem] mt-[-14rem]
+          h-[48vh] mb-[-7.5rem];
+          }
+        }
+      }
+    }
+    .BottomColor {
+      @apply mb-[-2px];
+    }
+    //--------- PORTALS
+    #portals {
+      // RESUME
+      div.ResumeImg {
+        @apply pt-5 p-2.5; // pb-1.5;
+        img {
+          @apply max-h-[90vh];
+        }
+      }
+      div.ResumeDwn {
+        @apply pt-2 pb-5 mr-[10%];
+        [title="Download Resume"] {
+          @apply py-3.5 px-5 text-[1.5vh] mr-32;
+          svg {
+            @apply h-5;
+          }
+        }
+        // @apply mt-[-.55rem] mr-[23%];
+      }
+      // UI PROJECT'S
+      .UIZoom {
+        // @apply pb-80;
+        button {
+          // @apply mt-2;
+        }
+      }
+      .ProjectDets {
+        @apply mx-[3vw] max-w-[94vw];
+        h3 {
+          @apply text-[3vh] pl-9;
+        }
+        .images {
+          p {
+            @apply gap-1.5 mb-0.5;
+          }
+
+          .swiper .swiper-wrapper .swiper-slide img {
+            @apply max-h-[35vh];
+          }
+        }
+        .content {
+          @apply text-[1.4vh] px-4;
+          &::first-letter {
+            @apply text-[1.55vh];
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (min-width: 481px) and (max-width: 768px) and (max-height: 1024px) {
+//   // ?
+//   // ?
+// }
+// // For Desktops, Large screens, Extra large screens, TVs: iPad Pro(1024,1366), iPad Air(820,1180), Surface Pro 7(912,1368)
+// @media screen and (min-width: 800px) and (min-height: 1100px) {
+//   // ?
+//   // ?
+// }
+
+/* 
+Hello Oluwatimilehin Similoluwa, we offer our sincerely apologies for the delay in response but we have not attended because we can't find the attachment mentioned in other to confirm the payment. If you can kindly resend the proof of payment, once we can confirm it's reference ID your request will be processed accordingly, thank you. 
+*/
