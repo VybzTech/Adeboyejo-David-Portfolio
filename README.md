@@ -79,6 +79,8 @@ USE CHAT GPT TO WRITE THE READ.ME TEMP
 https://facebook.github.io/create-react-app/docs/troubleshooting#
 
 
+git remote add origin https://github.com/VybzTech/Adeboyejo-David-Portfolio.git
+
 - Navigation on scroll has no Bg.
 
 Add to Portfolio code, body{overflow hidden } ..sectionsscroll-snap-type:y mandatory} .sectscroll-snap-align:star{}
