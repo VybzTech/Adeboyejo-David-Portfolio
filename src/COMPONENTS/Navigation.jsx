@@ -31,7 +31,7 @@ const Navigation = ({ setNavControl }) => {
                 document.documentElement.scrollTop = 0;
                 setNavControl((n) => !n);
                 document.title = `Adeboyejo David | ${
-                  nav.nav !== "Home" ? nav.nav : "React .NET Developer"
+                  nav.nav !== "Home" ? nav.nav : "React JS Developer"
                 }`;
               }}
             >

@@ -181,7 +181,7 @@
   @apply bg-[#fff7];
 }
 #light .navbar .navigation {
-  @apply min-h-[70vh] absolute left-0 m-0 h-0 w-[0%] hidden;
+  @apply absolute left-0 m-0 h-0 w-[0%] hidden;
   transition: all 400ms ease-in-out;
 }
 #light .navbar .navigation > div > div {
@@ -195,7 +195,7 @@
   -webkit-text-stroke: 0.25px white;
   font-size: 0.9rem;
   font-family: montLight;
-  @apply my-2.5 px-5 pt-3 pb-0.5 rounded mx-auto text-white uppercase;
+  @apply my-3.5 px-10 pt-3 pb-0.5 rounded mx-auto text-white uppercase;
 }
 #light .navbar .navigation > div > div .nav:hover, #light .navbar .navigation > div > div .nav:focus, #light .navbar .navigation > div > div .nav:focus-within, #light .navbar .navigation > div > div .nav:focus-visible {
   outline: none;
@@ -208,17 +208,21 @@
   border: none;
   box-shadow: 2px 2px 7px 0.5px rgba(34, 34, 34, 0.3333333333), -1px -1px 4px rgba(17, 17, 17, 0.6666666667);
   display: inline-block;
-  font-size: 0.8rem;
-  @apply outline-none relative min-w-[130px] tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-16 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
+  font-size: 0.9rem;
+  @apply outline-none relative min-w-[150px] tracking-wide rounded rounded-3xl px-8 py-3.5 mx-auto mt-24 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
 }
 #light .navbar .navigation > div > div:last-of-type button:hover, #light .navbar .navigation > div > div:last-of-type button:focus, #light .navbar .navigation > div > div:last-of-type button:focus-within, #light .navbar .navigation > div > div:last-of-type button:focus-visible {
   outline: none;
+  color: white;
   -webkit-text-stroke: 0.05px white;
   background: linear-gradient(-15deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4666666667));
   box-shadow: 2px 2px 8px 0.75px rgba(34, 34, 34, 0.6666666667), -1px -1px 4px rgba(17, 17, 17, 0.8666666667);
 }
 #light .navbar .navigation.show {
-  @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl w-[96%] left-[2%] py-7 m-0 backdrop-blur block shadow-lg;
+  @apply min-h-[80vh] bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl w-[96%] left-[2%] pt-16 pb-10 m-0 backdrop-blur block shadow-lg;
+}
+#light .navbar .navigation.show > div {
+  @apply flex flex-col gap-[10vh] justify-end items-center;
 }
 #light #home .rel {
   position: relative;
@@ -270,7 +274,7 @@
   font-size: 0.65rem;
   border: 2px solid #135be8;
   cursor: pointer;
-  @apply rounded rounded-md mt-5 px-5 py-2 ease-in-out;
+  @apply rounded rounded-md mt-8 px-5 py-2 ease-in-out;
 }
 #light #home .intro .btn:focus {
   outline: none;
@@ -995,8 +999,8 @@
   @apply text-[11px] text-center font-sans text-gray-400;
 }
 #light #portals {
-  backdrop-filter: blur(3px);
-  @apply bg-[#000a] fixed top-0 left-0 fixed;
+  backdrop-filter: blur(5px);
+  @apply bg-[#0005] fixed top-0 left-0 fixed min-h-full;
   z-index: 50;
 }
 #light #portals > div {

@@ -82,7 +82,7 @@
 
     //  INITIAL NAVBAR STYLES
     .navigation {
-      @apply min-h-[70vh] absolute left-0 m-0 h-0 w-[0%] hidden;
+      @apply  absolute left-0 m-0 h-0 w-[0%] hidden;
       @include trans(400ms);
       > div {
         > div {
@@ -92,7 +92,7 @@
             -webkit-text-stroke: 0.25px white;
             font-size: 0.9rem;
             font-family: montLight;
-            @apply my-2.5 px-5 pt-3 pb-0.5 rounded mx-auto text-white uppercase;
+            @apply my-3.5 px-10 pt-3 pb-0.5 rounded mx-auto text-white uppercase;
             &:hover,
             &:focus,
             &:focus-within,
@@ -109,13 +109,14 @@
           border: none;
           box-shadow: 2px 2px 7px 0.5px #2225, -1px -1px 4px #111a;
           display: inline-block;
-          font-size: 0.8rem;
-          @apply outline-none relative min-w-[130px] tracking-wide rounded rounded-3xl px-5 py-3.5 mx-auto my-16 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
+          font-size: 0.9rem;
+          @apply outline-none relative min-w-[150px] tracking-wide rounded rounded-3xl px-8 py-3.5 mx-auto mt-24 mb-0 bg-slate-700 text-gray-200 cursor-pointer;
           &:hover,
           &:focus,
           &:focus-within,
           &:focus-visible {
             outline: none;
+            color:white;
             -webkit-text-stroke: 0.05px white;
             background: linear-gradient(-15deg, #000c, #0007);
             box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
@@ -124,7 +125,10 @@
       }
       //SHOWN
       &.show {
-        @apply bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl w-[96%] left-[2%] py-7 m-0 backdrop-blur block shadow-lg;
+        @apply min-h-[80vh] bg-[#1116] absolute top-[12vh] h-auto rounded rounded-xl w-[96%] left-[2%] pt-16 pb-10 m-0 backdrop-blur block shadow-lg;
+        & > div {
+          @apply flex flex-col gap-[10vh] justify-end items-center;
+        }
       }
     }
   }
@@ -174,7 +178,7 @@
       }
       .btn {
         @include outlineBtn($size: 0.65rem);
-        @apply rounded rounded-md mt-5 px-5 py-2 ease-in-out;
+        @apply rounded rounded-md mt-8 px-5 py-2 ease-in-out;
         &:hover {
           color: $themeLightBlue;
           background-color: $themeBlueAlpha;
@@ -886,8 +890,8 @@
 
   //--------- PORTALS
   #portals {
-    backdrop-filter: blur(3px);
-    @apply bg-[#000a] fixed top-0 left-0 fixed;
+    backdrop-filter: blur(5px);
+    @apply bg-[#0005] fixed top-0 left-0 fixed min-h-full;
     z-index: 50;
     & > div {
       @apply w-[100vw];

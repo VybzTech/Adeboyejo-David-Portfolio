@@ -8,34 +8,9 @@ import React, { useState, useEffect } from "react";
 const Intro = () => {
   const [showCV, setShowCV] = useState(false);
   const [top, setTop] = useState(false);
-
-  // const hero = useSpring({
-  // 	config: {
-  // 		velocity: 5,
-  // 		tension: 300,
-  // 		duration: 500,
-  // 	},SWQ2ESWSDX
-  // 	delay: 6000,
-  // 	from: {
-  // 		opacity: 1,
-  // 		transform: 'translateY(0%) scale(1)',
-  // 	},
-  // 	to: {
-  // 		opacity: 0,
-  // 		transform: 'translateY(100%) scale(0.85)',
-  // 	},
-  // })
-
-  // const body = document.getElementById("light");
-
+ 
   useEffect(() => {
-    // showCV
-    // 	? (body.children.home.style.display =
-    // 			"none")
-    // 	: (body.children.home.style.display =
-    // 			"block");
-
-    window.addEventListener("scroll", () => {
+       window.addEventListener("scroll", () => {
       if (document.documentElement.scrollTop === 0) {
         setTop((t) => !t);
       } else {
@@ -66,8 +41,6 @@ const Intro = () => {
               setShowCV((cv) => !cv);
               setTimeout(() => {
                 document.documentElement.scrollTop = 0;
-                // showCV &&
-                //   document.getElementById("portals").classList.add("show");
               }, 450);
             }}
             className="btn"
