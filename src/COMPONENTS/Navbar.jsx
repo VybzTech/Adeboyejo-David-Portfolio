@@ -37,7 +37,7 @@ const Navbar = ({ theme, setTheme }) => {
             document.documentElement.scrollTop = 0;
           }}
         >
-          <Logo svgWidth="8vw" svgFill={"#222"} AFill={"#135be8"} />
+          <Logo svgWidth="9vw" svgFill={"#333"} AFill={"#135be8"} />
         </div>
       </Fade>
       <div className={`navigation ${navControl && "show"}`}>

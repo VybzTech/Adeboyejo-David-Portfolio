@@ -5,7 +5,7 @@ import AboutMe from "./AboutMe";
 import Intro from "./Intro";
 import Resume from "../../COMPONENTS/Resume";
 import MyServices from "./MyServices";
-import ScrollUp from "../../del/ScrollUp";
+// import ScrollUp from "../../del/ScrollUp";
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
 import Download from "../../ICONS/Download";
 // import RubberBand from 'react-reveal/RubberBand'

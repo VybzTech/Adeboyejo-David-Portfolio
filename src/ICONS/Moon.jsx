@@ -8,7 +8,7 @@ const Moon = () => {
       strokeWidth="1.5"
       stroke="currentColor"
       fill="none"
-      className="w-5 h-5"
+      className="w-6 h-6"
     >
       <path
         strokeLinecap="round"

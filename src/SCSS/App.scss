@@ -20,7 +20,7 @@
 //--------- NAVBAR
 #light {
   .navbar {
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 1rem 1rem;
     z-index: 50;
     @include flex($justify: space-between);
     @include trans(350ms);
@@ -33,7 +33,7 @@
       }
     }
     .navBtn {
-      @apply [&>svg]:w-5 [&>svg]:h-5 [&>svg]:text-gray-200 
+      @apply [&>svg]:w-6 [&>svg]:h-6 [&>svg]:text-gray-200 
       bg-transparent rounded rounded-3xl p-2 
       hover:bg-[#eee2] focus:bg-[#eee2] hover:text-gray-100
       focus:text-gray-100 outline-none;
@@ -187,7 +187,7 @@
       @apply pt-6 px-3 pb-16;
       .circleImg {
         background-color: $themeWhite;
-        box-shadow: 0 0 15px 0.5px $gray;
+        box-shadow: 0 0 1rem 0.5px $gray;
         @apply rounded rounded-[50%] w-[70%] my-3 mx-auto py-[3.1%] px-[3.1%] pb-[3.4%];
         img {
           border-radius: 50%;
@@ -1105,8 +1105,8 @@
   }
 }
 
-@import "./laptop";
-@import "./tablet";
-@import "./smPhone";
-@import "./phone";
-@import "./dark";
+// @import "./laptop";
+// @import "./tablet";
+// @import "./smPhone";
+// @import "./phone";
+// @import "./dark";
