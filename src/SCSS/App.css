@@ -136,10 +136,10 @@
   justify-content: space-between;
   flex-direction: row;
   transition: all 350ms ease-in-out;
-  @apply h-[11vh] fixed w-full p-2.5;
+  @apply h-[11vh] fixed w-full p-2.5 px-4;
 }
 #light .navbar .theme {
-  @apply w-fit mr-[5px];
+  @apply w-fit mr-[0.7rem];
 }
 #light .navbar .theme button {
   @apply bg-transparent rounded rounded-3xl p-2 text-gray-300 hover:bg-[#eee2] focus:bg-[#eee2] hover:text-gray-100 focus:text-gray-100 outline-none;
