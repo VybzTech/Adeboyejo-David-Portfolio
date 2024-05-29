@@ -1192,3 +1192,749 @@
   text-align: left;
   font-size: 0.8rem;
 }
+
+@media screen and (min-width: 1024px) {
+  #light div.navbar {
+    border-radius: 0;
+    @apply h-[10vh];
+  }
+  #light div.navbar .logo > svg {
+    @apply w-9 ml-3.5;
+  }
+  #light div.navbar .navBtn svg,
+  #light div.navbar .theme svg {
+    @apply w-8;
+  }
+  #light div.navbar .navigation,
+  #light div.navbar .navigation.show {
+    @apply static bg-transparent w-auto h-auto min-h-[auto] 
+        flex-[auto] flex justify-end shadow-none backdrop-blur-0;
+  }
+  #light div.navbar .navigation > div > div:first-child,
+  #light div.navbar .navigation.show > div > div:first-child {
+    @apply pt-2 flex-row;
+  }
+  #light div.navbar .navigation > div > div button.nav,
+  #light div.navbar .navigation.show > div > div button.nav {
+    @apply m-0 p-1 mx-2.5 text-[0.9rem];
+  }
+  #light div.navbar .navigation > div > div button.nav::after,
+  #light div.navbar .navigation.show > div > div button.nav::after {
+    content: "";
+    @apply absolute bottom-[-0.1rem] left-0 bg-blue-600 rounded rounded-lg h-1;
+  }
+  #light div.navbar .navigation > div > div button.nav.active::after,
+  #light div.navbar .navigation.show > div > div button.nav.active::after {
+    @apply w-full;
+  }
+  #light div.navbar .navigation > div > div button.nav:hover::after,
+  #light div.navbar .navigation.show > div > div button.nav:hover::after {
+    @apply w-full opacity-40;
+  }
+  #light div.navbar .navigation > div > div:last-of-type button,
+  #light div.navbar .navigation.show > div > div:last-of-type button {
+    @apply hidden;
+  }
+  #light div.navbar .menu {
+    @apply hidden;
+  }
+  #light #home div.vid video {
+    @apply h-[100vh] w-auto;
+  }
+  #light #home div.intro {
+    @apply top-[30vh];
+  }
+  #light #home div.intro .hero,
+  #light #home div.intro #text {
+    @apply text-[1rem] my-2.5;
+  }
+  #light #home div.intro h1 {
+    @apply text-[6vw] mb-8;
+  }
+  #light #home div.intro .btn {
+    @apply text-[0.8rem] mt-7 px-7 pt-2.5 pb-3 rounded-lg;
+  }
+  #light #home div.lilAbout {
+    @apply flex items-center pt-10 pb-24 pl-3 pr-10 min-h-[90vh];
+  }
+  #light #home div.lilAbout h2 {
+    font-size: 4.25vh;
+    -webkit-text-stroke: 1.25px rgba(0, 0, 0, 0.9333333333);
+  }
+  #light #home div.lilAbout .circleImg {
+    @apply w-[70%] py-[2.4%] px-[2.4%] pb-[2.55%];
+  }
+  #light #home div.lilAbout > div:last-child {
+    flex-shrink: 1.4;
+  }
+  #light #home div.lilAbout .about .hero h2 .line > div {
+    @apply h-[0.75vh];
+  }
+  #light #home div.lilAbout .about p {
+    @apply leading-[5.5vh];
+  }
+  #light #home div.skills div#tsparticles {
+    @apply h-[90vh];
+  }
+  #light #home div.skills .KeySkillsWrapper {
+    @apply px-1 flex items-center p-5;
+  }
+  #light #home div.skills .KeySkillsWrapper > div {
+    @apply w-full;
+    flex-shrink: 1.4;
+  }
+  #light #home div.skills .KeySkillsWrapper .keySkills h2 {
+    @apply text-[5vh] mr-[-15%] pt-0 pb-7;
+  }
+  #light #home div.skills .KeySkillsWrapper .keySkills .skillList {
+    @apply px-0 pl-8;
+  }
+  #light #home div.skills .KeySkillsWrapper .keySkills .skillList .skillPill {
+    @apply w-full mb-3.5;
+  }
+  #light #home div.skills .KeySkillsWrapper .keySkills .skillList .skillPill .skillName {
+    @apply py-[0.3rem];
+  }
+  #light #home div.skills .KeySkillsWrapper figure {
+    @apply w-[70%]  mb-[-5rem];
+  }
+  #light #home div.skills .skillPoster {
+    @apply m-0 ml-[2rem];
+  }
+  #light #home div.skills .skillPoster > div svg {
+    @apply w-full;
+  }
+  #light #home div.skills .tools p {
+    @apply w-[350px];
+  }
+  #light #home div.homeProjects {
+    @apply pt-24 pb-5 mt-[-2px];
+  }
+  #light #home div.homeProjects h1 {
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.9333333333);
+    @apply text-[6vh] mt-2 mb-10;
+  }
+  #light #home div.homeProjects .swiper {
+    @apply pt-20;
+  }
+  #light #home div.homeProjects .swiper .swiper-wrapper div.swiper-slide {
+    @apply h-[30vh] m-0 mb-5 ml-0 rounded-xl;
+  }
+  #light #home div.homeProjects .swiper .swiper-wrapper div.swiper-slide img {
+    @apply min-w-full;
+  }
+  #light #home div.homeProjects .swiper .swiper-wrapper div.swiper-slide-prev {
+    transform: skewY(-0.3deg) translate(1px, 1.5px);
+  }
+  #light #home div.homeProjects .swiper .swiper-wrapper div.swiper-slide-next {
+    transform: skewY(0.3deg) translate(-1px, 1.5px);
+  }
+  #light #home div.homeProjects .swiper .swiper-wrapper div.swiper-slide-next + div {
+    transform: skewY(1deg) translate(-2px, 3px);
+  }
+  #light #about div.bg {
+    @apply h-[100vh] px-7;
+  }
+  #light #about div.bg h1 {
+    @apply pt-[10.5vh] pb-5 text-[5.25vh];
+  }
+  #light #about div.bg > div:last-of-type {
+    @apply mt-2 mb-5;
+  }
+  #light #about div.bg > div:last-of-type button {
+    @apply text-[1.55vh] px-8 rounded-lg py-2.5 pb-3;
+  }
+  #light #about div.bg .content {
+    @apply px-10 leading-[2.3] [&>div]:mb-2.5;
+  }
+  #light #about div.bg .content p {
+    @apply text-[1.9vh];
+  }
+  #light #about section {
+    @apply flex items-center pl-10 py-20;
+  }
+  #light #about section div.imgX2 {
+    @apply w-[80%];
+  }
+  #light #about section div.aboutMe {
+    flex-shrink: 1.2;
+    @apply pl-12 pr-14 text-[1.95vh] leading-[2.5];
+  }
+  #light #about div#tsparticles {
+    height: 115vh;
+  }
+  #light #about div.myServices .serviceWrapper h2 {
+    @apply pt-14 text-[5vh] pb-3.5;
+  }
+  #light #about div.myServices .serviceWrapper .serviceList {
+    @apply px-3;
+  }
+  #light div#projects div.bg .explore {
+    @apply top-32;
+  }
+  #light div#projects div.bg .explore > div {
+    align-self: flex-start;
+    @apply w-fit;
+  }
+  #light div#projects div.bg .explore > div:last-child {
+    align-self: center;
+  }
+  #light div#projects div.bg .explore h1 {
+    @apply pl-28 text-[7vh] max-w-[50vw] text-left tracking-wide;
+  }
+  #light div#projects div.bg .explore .sub {
+    @apply pl-28 text-[1.7vh] max-w-[50%] m-0 text-left mt-[-13vh] mb-[-5vh];
+  }
+  #light div#projects div.bg .explore img {
+    @apply w-[2.5vw];
+  }
+  #light div#projects main nav.projectNav {
+    @apply w-[15%] px-2;
+  }
+  #light div#projects main nav.projectNav > div {
+    @apply w-[15%] top-[17vh];
+  }
+  #light div#projects main nav.projectNav > div button.Nav {
+    @apply mx-[5%] w-[90%] mb-7 [&.active>span]:text-[1.7vh] [&.active>span]:ml-1.5 [&.active>img]:mr-0;
+  }
+  #light div#projects main nav.projectNav > div button.Nav img {
+    @apply w-[5.5vh] mb-0.5 pl-0.5 mr-2;
+  }
+  #light div#projects main nav.projectNav > div button.Nav span {
+    @apply text-[1.5vh] ml-0.5;
+  }
+  #light div#projects main > section {
+    @apply ml-[14%] pr-4;
+  }
+  #light div#projects main > section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+    @apply max-h-[20vh];
+  }
+  #light div#projects main > section .gridSection .MainProject .contentWrapper {
+    @apply pl-3.5 pr-1;
+  }
+  #light div#projects main > section .gridSection .MainProject .contentWrapper p {
+    @apply text-[1.55vh];
+  }
+  #light div#projects main > section .UI-UX {
+    @apply flex items-center gap-7;
+  }
+  #light #contact .bg div.Pleasantries {
+    @apply top-[18rem];
+  }
+  #light #contact .bg div.Pleasantries h1 {
+    @apply pl-28 mb-[15vh] text-[7vh] max-w-[50vw] text-left tracking-wide;
+  }
+  #light #contact .bg div.Pleasantries .sub {
+    @apply pl-28 text-[1.7vh] max-w-[60%] m-0 text-left mt-[-13vh] mb-[-5vh];
+  }
+  #light #contact main {
+    @apply flex items-center justify-evenly gap-10 pt-10 pb-5;
+  }
+  #light #contact main figure {
+    @apply mt-[-5rem] mx-0 pt-10 flex flex-col items-center justify-evenly gap-5;
+  }
+  #light #contact main figure div.svg {
+    @apply w-[85%] m-0 mx-auto;
+  }
+  #light #contact main .socials {
+    @apply m-0 mx-auto;
+  }
+  #light #contact main div.ContactMeWrapper {
+    flex-grow: 1.1;
+    @apply px-5;
+  }
+  #light #contact main div.ContactMeWrapper .ContactMe {
+    @apply p-3 mx-2.5 mb-0;
+  }
+  #light #contact main div.ContactMeWrapper .ContactMe form .formControl > div label {
+    @apply text-[0.9rem];
+  }
+  #light #contact main div.ContactMeWrapper div.circleWrapper {
+    clip-path: circle(14rem);
+    @apply mr-[-7rem] mt-[-10rem]
+          h-[53vh] mb-[-8rem];
+  }
+  #light .BottomColor {
+    @apply mt-[-2px];
+  }
+  #light #portals div.ResumeImg img {
+    @apply max-h-[84vh];
+  }
+  #light #portals div.ResumeDwn {
+    @apply pt-[2rem];
+  }
+  #light #portals div.ResumeDwn [title="Download Resume"] {
+    @apply py-3.5 px-5 text-[17px];
+  }
+  #light #portals .UIZoom {
+    @apply pb-80;
+  }
+  #light #portals .UIZoom button {
+    @apply mt-2;
+  }
+  #light #portals div.ProjectDets {
+    @apply my-8 max-h-[92vh] px-10;
+  }
+  #light #portals div.ProjectDets::-webkit-scrollbar {
+    display: none;
+  }
+  #light #portals div.ProjectDets h3 {
+    @apply m-2.5 mt-4;
+  }
+  #light #portals div.ProjectDets .swiper .swiper-slide img {
+    @apply max-h-[60vh];
+  }
+}
+@media screen and (min-width: 1300px) {
+  #light div.navbar {
+    @apply h-[12vh];
+  }
+  #light div.navbar .logo > svg {
+    @apply w-10;
+  }
+  #light div.navbar div.theme button {
+    @apply px-0.5;
+  }
+  #light div.navbar .navigation > div > div button.nav::after,
+  #light div.navbar .navigation.show > div > div button.nav::after {
+    content: "";
+  }
+  #light #home div.vid video {
+    @apply w-full;
+  }
+  #light #home div.lilAbout h2 {
+    @apply text-[6vh] tracking-tight;
+  }
+  #light #home div.lilAbout .circleImg {
+    @apply w-[50%];
+  }
+  #light #home div.lilAbout > div:last-child {
+    flex-shrink: 1.8;
+  }
+  #light #home div.lilAbout .about .hero h2 .line > div {
+    @apply h-[1vh];
+  }
+  #light #home div.skills div#tsparticles {
+    @apply h-[125vh];
+  }
+  #light #home div.skills div.KeySkillsWrapper .keySkills h2 {
+    @apply text-[6.5vh] tracking-wide;
+  }
+  #light #home div.skills div.KeySkillsWrapper figure {
+    @apply mt-10;
+  }
+  #light #home div.homeProjects h1 {
+    @apply text-[6.5vh];
+  }
+  #light #home div.homeProjects .swiper .swiper-wrapper div.swiper-slide {
+    @apply h-[45vh];
+  }
+  #light #about div.bg h1 {
+    @apply pt-[11vh] text-[8vh] tracking-wide pb-0;
+  }
+  #light #about div.bg > div:last-of-type button {
+    @apply text-[11.5px];
+  }
+  #light #about div.bg blockquote.content p {
+    @apply text-[2.5vh];
+  }
+  #light #about section {
+    @apply mr-7;
+  }
+  #light #about section div.imgX2 {
+    @apply w-[55%];
+  }
+  #light #about section div.aboutMe {
+    flex-shrink: 1.5;
+    @apply text-[2.55vh] leading-[2.75];
+  }
+  #light #about div#tsparticles {
+    height: 170vh;
+  }
+  #light #about div.myServices div.serviceWrapper h2 {
+    word-spacing: 0.4rem;
+    @apply text-[6.25vh] tracking-wide;
+  }
+  #light #about div.myServices div.serviceWrapper .serviceList {
+    @apply px-14 gap-5;
+  }
+  #light #about div.myServices div.serviceWrapper .serviceList .service {
+    @apply mb-10 pl-7 pt-7 pb-20;
+  }
+  #light #about div.myServices div.serviceWrapper .serviceList .service .icon {
+    @apply p-2;
+  }
+  #light #about div.myServices div.serviceWrapper .serviceList .service p {
+    @apply text-[2.2vh] leading-[1.65] pt-1;
+  }
+  #light div#projects div.bg .explore {
+    @apply top-24;
+  }
+  #light div#projects div.bg .explore h1 {
+    @apply text-[8.5vh] tracking-wide;
+  }
+  #light div#projects div.bg .explore .sub {
+    @apply text-[1.95vh];
+  }
+  #light div#projects div.bg .explore img {
+    @apply w-[2vw];
+  }
+  #light div#projects main nav.projectNav > div button.Nav {
+    @apply px-3;
+  }
+  #light div#projects section div.gridSection {
+    @apply pt-14 gap-10;
+  }
+  #light div#projects section div.gridSection .MainProject div.swiper .swiper-wrapper div.swiper-slide img {
+    @apply max-h-[30vh];
+  }
+  #light div#projects section div.gridSection .MainProject .contentWrapper {
+    @apply pl-5 pr-2;
+  }
+  #light div#projects section div.gridSection .MainProject .contentWrapper p {
+    @apply text-[2vh];
+  }
+  #light #contact .bg div.Pleasantries {
+    @apply top-[40vh];
+  }
+  #light #contact .bg div.Pleasantries h1 {
+    @apply text-[9.5vh] mb-[18vh];
+  }
+  #light #contact .bg div.Pleasantries .sub {
+    @apply text-[2.2vh] max-w-[45%];
+  }
+  #light #contact main {
+    @apply pt-20;
+  }
+  #light #contact main .svg {
+    @apply w-[85%];
+  }
+  #light #contact main div.ContactMeWrapper {
+    flex-grow: 0.35;
+  }
+  #light #contact main div.ContactMeWrapper .ContactMe {
+    @apply mr-[-3rem];
+  }
+  #light #contact main div.ContactMeWrapper div.circleWrapper {
+    clip-path: circle(12.5rem);
+    @apply mr-[-16rem] mt-[-12.5rem]
+            h-[64vh] mb-[-8rem];
+  }
+  #light #portals div.ResumeImg img {
+    @apply max-h-[80vh];
+  }
+  #light #portals div.ResumeDwn {
+    @apply ml-[25%];
+  }
+  #light #portals div.ResumeDwn button[title="Download Resume"] {
+    @apply mr-[12rem];
+  }
+  #light #portals div.ProjectDets {
+    @apply max-w-[92vw] mx-[3.5vw] py-6;
+  }
+  #light #portals div.ProjectDets .images {
+    @apply [&>img]:object-contain;
+  }
+  #light #portals div.ProjectDets .images p {
+    @apply mt-1.5 mb-0.5;
+  }
+  #light #portals div.ProjectDets .content {
+    @apply leading-[1.7];
+  }
+}
+#light.dark .navbar .logo svg path {
+  fill: #333;
+}
+#light.dark .navbar .logo svg path:first-of-type {
+  fill: #f22;
+  border: 1px solid #f22;
+}
+#light.dark .navbar.white {
+  background-color: #111;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.9333333333);
+}
+#light.dark .navbar div.navigation > div > div button.nav::after,
+#light.dark .navbar div.navigation.show > div > div button.nav::after {
+  @apply bg-red-600;
+}
+#light.dark .navbar .navigation > div > div .nav {
+  -webkit-text-stroke: 0.25px white;
+  @apply text-white;
+}
+#light.dark .navbar .navigation > div > div:last-of-type button {
+  background: transparent;
+  background: linear-gradient(-15deg, rgba(0, 0, 0, 0.6666666667), rgba(0, 0, 0, 0.2));
+  box-shadow: 2px 2px 8px 0.75px rgba(34, 34, 34, 0.6666666667), -1px -1px 4px rgba(17, 17, 17, 0.8666666667);
+  @apply bg-slate-700 text-gray-200;
+}
+#light.dark .navbar .navigation > div > div:last-of-type button:hover, #light.dark .navbar .navigation > div > div:last-of-type button:focus, #light.dark .navbar .navigation > div > div:last-of-type button:focus-within, #light.dark .navbar .navigation > div > div:last-of-type button:focus-visible {
+  -webkit-text-stroke: 0.05px #111;
+  background: linear-gradient(-15deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4666666667));
+  box-shadow: 2px 2px 8px 0.75px rgba(34, 34, 34, 0.6666666667), -1px -1px 4px rgba(17, 17, 17, 0.8666666667);
+}
+#light.dark .navbar .navigation.show {
+  @apply bg-[#1116];
+}
+#light.dark #home .bg [alt="Home Page Background"],
+#light.dark #home video {
+  filter: brightness(0.8);
+}
+#light.dark #home .lilAbout {
+  background-color: rgba(14, 14, 14, 0.9764705882);
+}
+#light.dark #home .lilAbout .circleImg {
+  background-color: rgba(14, 14, 14, 0.9764705882);
+  box-shadow: 0 0 14px 2.5px rgba(0, 0, 0, 0.2);
+}
+#light.dark #home .lilAbout .about .hero h2 {
+  color: #eee !important;
+}
+#light.dark #home .lilAbout .about .hero .line {
+  background-color: rgba(51, 51, 51, 0.6666666667);
+}
+#light.dark #home .lilAbout .about p {
+  color: #f5f5f9;
+}
+#light.dark #home .skills {
+  background: linear-gradient(0rad, #01041a, #02244d, #033169);
+}
+#light.dark #home .homeProjects {
+  background-color: rgba(14, 14, 14, 0.9764705882);
+}
+#light.dark #home .homeProjects h3 {
+  -webkit-text-stroke: 0.5px #021db8;
+  color: #021db8;
+}
+#light.dark #home .homeProjects h1 {
+  color: #f9f9fa;
+}
+#light.dark #home .homeProjects .swiper .swiper-wrapper .swiper-slide {
+  box-shadow: 0px 2px 7px 1px rgba(51, 51, 51, 0.6666666667);
+}
+#light.dark #home .homeProjects .swiper img {
+  filter: brightness(0.85);
+}
+#light.dark #about .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1333333333), #111), url("../IMAGES/AboutBackground.jpg");
+}
+#light.dark #about section {
+  background-color: #222;
+}
+#light.dark #about section .aboutMe {
+  color: #f9f9fa;
+}
+#light.dark #about .myServices {
+  background: linear-gradient(180deg, #222, rgba(14, 14, 14, 0.9764705882));
+}
+#light.dark #about .myServices .serviceWrapper h2 {
+  -webkit-text-stroke: 0.2px #f9f9fa;
+  color: #f9f9fa;
+}
+#light.dark #about .myServices .serviceWrapper .serviceList .service {
+  box-shadow: 1px 2px 10px 0.5px #333;
+  background: #111;
+}
+#light.dark #about .myServices .serviceWrapper .serviceList .service .icon {
+  @apply bg-red-100;
+}
+#light.dark #about .myServices .serviceWrapper .serviceList .service .icon svg {
+  fill: #ff333c;
+}
+#light.dark #about .myServices .serviceWrapper .serviceList .service h4 {
+  -webkit-text-stroke: 0.2px #eee;
+  color: #eee;
+}
+#light.dark #about .myServices .serviceWrapper .serviceList .service p {
+  color: #aaa;
+}
+#light.dark #about .myServices .serviceWrapper .serviceList .service .backdrop svg {
+  fill: #333;
+}
+#light.dark #projects .bg {
+  box-shadow: 0 10px 12px 0.75px rgba(119, 119, 119, 0.2);
+}
+#light.dark #projects .bg video {
+  filter: brightness(0.77);
+}
+#light.dark #projects main {
+  background-color: #222;
+}
+#light.dark #projects main .projectNav {
+  background-color: #111;
+}
+#light.dark #projects main .projectNav > div .Nav {
+  @apply hover:bg-gray-800 focus:bg-gray-800
+           [&.active>span]:text-gray-200;
+}
+#light.dark #projects main .projectNav > div .Nav img {
+  filter: invert(0.7);
+}
+#light.dark #projects main .projectNav > div .Nav span {
+  color: #e5e5e5;
+}
+#light.dark #projects main section .gridSection .MainProject {
+  box-shadow: 0 3px 12px 0.75px #222;
+  background: #111;
+}
+#light.dark #projects main section .gridSection .MainProject:hover {
+  box-shadow: 0 3px 12px 0.75px #222;
+}
+#light.dark #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide::after {
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.1333333333), rgba(17, 17, 17, 0.2666666667), rgba(17, 17, 17, 0.6666666667), #111);
+}
+#light.dark #projects main section .gridSection .MainProject .swiper [class^=swiper-button] {
+  @apply opacity-50 [&:hover]:bg-gray-500 [&::after]:text-gray-300;
+}
+#light.dark #projects main section .gridSection .MainProject .contentWrapper h4 {
+  color: #eee;
+}
+#light.dark #projects main section .gridSection .MainProject .contentWrapper p {
+  color: #aaa;
+}
+#light.dark #projects main section .gridSection .MainProject .contentWrapper .actions button {
+  @apply opacity-70 
+                  [&>svg]:fill-gray-600 hover:bg-gray-800
+                   hover:[&>svg]:fill-gray-100 [&.active>svg]:fill-gray-100;
+}
+#light.dark #projects main section .tools.show {
+  box-shadow: 0 2px 12px 0.75px #333;
+  background: #111;
+}
+#light.dark #projects main section .tools.show::before {
+  border-bottom-color: #111;
+  @apply h-6 absolute top-[-1.4rem] left-3.5;
+}
+#light.dark #projects main section .UI-UX .UI_image img:hover {
+  box-shadow: 0 2px 10px 0.5px #333;
+}
+#light.dark #contact {
+  /*
+  .bg {
+       background-image: linear-gradient(180deg, #0002, $themeBlack1),
+         url("../IMAGES/AboutBackground.jpg");
+     }
+       */
+}
+#light.dark #contact .bg {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1333333333), #111), url("../IMAGES/ContactBackground.jpg");
+  box-shadow: 0 10px 12px 0.5px rgba(17, 17, 17, 0.6666666667);
+}
+#light.dark #contact main {
+  background-color: rgba(14, 14, 14, 0.9764705882);
+}
+#light.dark #contact main .hero > div {
+  @apply bg-slate-100;
+}
+#light.dark #contact main .hero h3 {
+  color: #f5f5f9;
+}
+#light.dark #contact main .socials button,
+#light.dark #contact main .socials a {
+  border: 2px solid #333;
+}
+#light.dark #contact main .socials button:hover, #light.dark #contact main .socials button:focus,
+#light.dark #contact main .socials a:hover,
+#light.dark #contact main .socials a:focus {
+  border-color: #ff333c;
+  opacity: 0.6;
+}
+#light.dark #contact main .socials button:hover svg, #light.dark #contact main .socials button:focus svg,
+#light.dark #contact main .socials a:hover svg,
+#light.dark #contact main .socials a:focus svg {
+  color: #ff333c;
+}
+#light.dark #contact main .socials button svg,
+#light.dark #contact main .socials a svg {
+  @apply text-gray-500;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe {
+  box-shadow: 0 0 15px Black;
+  background-color: #111;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe .intro h2 {
+  color: #eee;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe .intro svg {
+  filter: invert(0.8);
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl > div {
+  background-color: #111;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl > div:hover label {
+  color: #eee;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl input,
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl textarea {
+  border: 1px solid #222;
+  color: #eee;
+  color: #eee;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl input::placeholder,
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl textarea::placeholder {
+  color: #333;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl input:hover,
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl textarea:hover {
+  background-color: #333;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl input:hover::placeholder,
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl textarea:hover::placeholder {
+  color: #333;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl input:focus,
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl textarea:focus {
+  border: 1px solid #aaa;
+}
+#light.dark #contact main .ContactMeWrapper .ContactMe form .formControl > span {
+  color: #f22;
+}
+#light.dark #contact main .ContactMeWrapper .circleWrapper {
+  background: linear-gradient(133deg, rgba(19, 90, 232, 0.2666666667), #135be8, #021db8);
+  opacity: 0.6;
+}
+#light.dark #portals .ProjectDets {
+  background-color: rgba(51, 51, 51, 0.6666666667);
+}
+#light.dark #portals .ProjectDets > button {
+  color: #ff333c;
+  @apply opacity-60 hover:opacity-100 focus:opacity-100;
+}
+#light.dark #portals .ProjectDets hr {
+  @apply opacity-10;
+}
+#light.dark #portals .ProjectDets h3 {
+  color: #eee;
+}
+#light.dark #portals .ProjectDets .images .swiper .swiper-wrapper .swiper-slide img {
+  filter: brightness(0.75);
+}
+#light.dark #portals .ProjectDets .images p,
+#light.dark #portals .ProjectDets .images span {
+  color: #f9f9fa;
+  color: #e5e5e5;
+}
+#light.dark #portals .ProjectDets .images span {
+  color: #aaa;
+}
+#light.dark #portals .ProjectDets p.content {
+  color: #eee;
+}
+#light.dark #portals .ProjectDets .milestone h4 {
+  @apply text-slate-100;
+}
+#light.dark #portals .ProjectDets .milestone li {
+  color: #aaa;
+}
+#light.dark #portals .ProjectDets .tools li {
+  background-color: rgba(51, 51, 51, 0.6666666667);
+}
+#light.dark #portals .ProjectDets .tools > div p {
+  color: #e5e5e5;
+}
+#light.dark .foot {
+  background-color: #0e0e0e;
+}
+#light.dark [class^=go] > div {
+  background-color: rgba(14, 14, 14, 0.9764705882);
+  color: #f5f5f9;
+}

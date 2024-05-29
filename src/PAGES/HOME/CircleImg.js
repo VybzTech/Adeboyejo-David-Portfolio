@@ -1,5 +1,5 @@
 import React from "react";
-import passport from "../../IMAGES/ME.jpg";
+import passport from "../../IMAGES/David.jpg";
 
 const CircleImg = () => (
   <div className="circleImg">

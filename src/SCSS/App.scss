@@ -82,7 +82,7 @@
 
     //  INITIAL NAVBAR STYLES
     .navigation {
-      @apply  absolute left-0 m-0 h-0 w-[0%] hidden;
+      @apply absolute left-0 m-0 h-0 w-[0%] hidden;
       @include trans(400ms);
       > div {
         > div {
@@ -116,7 +116,7 @@
           &:focus-within,
           &:focus-visible {
             outline: none;
-            color:white;
+            color: white;
             -webkit-text-stroke: 0.05px white;
             background: linear-gradient(-15deg, #000c, #0007);
             box-shadow: 2px 2px 8px 0.75px #222a, -1px -1px 4px #111d;
@@ -1109,8 +1109,8 @@
   }
 }
 
-// @import "./laptop";
+@import "./laptop";
 // @import "./tablet";
 // @import "./smPhone";
 // @import "./phone";
-// @import "./dark";
+@import "./dark";
