@@ -24,7 +24,7 @@ const Resume = (props) => {
           <button onClick={handleDownload} title="Download Resume">
             <span className="flex items-center">
               <ArrowDownTray />
-              Download resume
+              <p>Download resume</p>
             </span>
             {/* <CloudDownloadRounded /> */}
           </button>

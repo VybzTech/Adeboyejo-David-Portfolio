@@ -12,7 +12,8 @@ import Maintenance from "../ICONS/SERVICES/Maintenance";
 import Design from "../ICONS/SERVICES/Design";
 import Seo from "../ICONS/SERVICES/Seo";
 import Code from "../ICONS/SERVICES/Code";
-import PhoneIn from "../ICONS/PhoneIn";import { RiTwitterXFill } from "react-icons/ri";
+import PhoneIn from "../ICONS/PhoneIn";
+// import { RiTwitterXFill } from "react-icons/ri";
 //  USER INTERFACE IMPORTS
 import UI1 from "../IMAGES/UI/ABOUT.png";
 import UI2 from "../IMAGES/UI/ADD TODO.png";
@@ -128,7 +129,6 @@ import Tailwind from "../IMAGES/TOOLS/TailwindCSS.png";
 import DotNET from "../IMAGES/TOOLS/DOTNET-1.svg";
 import UTube from "../IMAGES/TOOLS/Youtube-96.png";
 import AndStudio from "../IMAGES/TOOLS/Android-studio.png";
-
 
 //HOME PAGE SKILLS
 export const SKILLS = [
@@ -1520,7 +1520,7 @@ export const SERVICES = [
 export const socialLinks = [
   {
     name: "Twitter",
-    icon: <RiTwitterXFill />,
+    icon: <Twitter />,
 
     href: "https://www.twitter.com/djay_vybz",
   },
@@ -1529,11 +1529,7 @@ export const socialLinks = [
     icon: <Facebook />,
     href: "https://www.facebook.com/david-adeyinka",
   },
-  {
-    name: "Instagram",
-    icon: <Instagram />,
-    href: "https://www.instagram.com/vybz.tech",
-  },
+
   {
     name: "LinkedIn",
     icon: <LinkedIn />,
@@ -1543,6 +1539,11 @@ export const socialLinks = [
     name: "Github",
     icon: <Github />,
     href: "https://www.github.com/VybzTech",
+  },
+  {
+    name: "Instagram",
+    icon: <Instagram />,
+    href: "https://www.instagram.com/vybz.tech",
   },
 ];
 
@@ -1564,4 +1565,3 @@ export const footLinks = [
     title: "Job Pricing",
   },
 ];
-

@@ -926,8 +926,11 @@
       }
       [title="Download Resume"] {
         @apply tracking-normal uppercase 
-      rounded-lg px-4 py-2.5 mr-7 mb-1 text-[10px] bg-slate-700 
+      rounded-lg px-3 py-2 mr-7 mb-1 text-[10px] bg-slate-700 
       opacity-80 text-gray-300;
+        & span svg {
+          @apply h-4 w-4 mr-1 object-contain;
+        }
         &:hover,
         &:focus,
         &:focus-within,
@@ -1115,7 +1118,7 @@
 }
 
 @import "./laptop";
-// @import "./tablet";
-// @import "./smPhone";
-// @import "./phone";
+@import "./tablet";
+@import "./smPhone";
+@import "./phone";
 @import "./dark";

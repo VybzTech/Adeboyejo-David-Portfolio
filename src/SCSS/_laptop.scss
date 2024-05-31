@@ -1,16 +1,3 @@
-// // LAPTOP SIZE
-// @media screen and (max-width: 1440px) {
-// 	//PORTAL MINOR ADJUSTMENT
-// 	#light #portals #portfolioPortal {
-// 		padding: 5% 0 10%;
-// 		.portalContent {
-// 			margin-bottom: 42.1rem;
-// 		}
-// 	}
-// }
-
-// @media screen and (max-width: 1300px) {
-
 // For Desktops, Large screens, Extra large screens, TVs  -  iPad Air  and (height: 768px)
 @media screen and (min-width: 1024px) {
   //--------- LOADER
@@ -118,9 +105,9 @@
           p {
             @apply text-[0.9rem] leading-[5.5vh];
           }
-              .more button {
-                @apply mt-8;
-              }
+          .more button {
+            @apply mt-8;
+          }
         }
       }
       div.skills {
@@ -206,21 +193,22 @@
     }
     #about {
       div.bg {
-        @apply h-[100vh] px-7;
+        @apply h-[100vh] px-10;
+        background-size: 100%;
         h1 {
-          @apply pt-[10.5vh] pb-5 text-[5.25vh];
+          @apply pt-[10.5vh] pb-5 text-[8vh];
         }
         > div:last-of-type {
           @apply mt-2 mb-5;
           button {
-            @apply text-[1.55vh] px-8 rounded-lg py-2.5 pb-3;
+            @apply text-[1.8vh] px-8 rounded-lg py-2.5 pb-3;
           }
         }
         .content {
           @apply px-10 leading-[2.3] [&>div]:mb-2.5;
           // word-spacing: 1px;
           p {
-            @apply text-[1.9vh];
+            @apply text-[0.9rem];
           }
         }
       }
@@ -404,11 +392,21 @@
         }
       }
       div.ResumeDwn {
-        @apply pt-[2rem]; // pb-[5%];
-        [title="Download Resume"] {
-          @apply py-3.5 px-5 text-[17px]; // [&>svg];
+        @apply mr-24;
+        // pt-[2rem]; // pb-[5%];
+        button[title="Download Resume"] {
+          @apply rounded-2xl mr-3.5;
+          & span svg {
+            @apply h-10 w-8 py-2 mr-0; // py-0.5 px-2.5;
+          }
+          &  span p {
+            @apply hidden;
+          }
         }
-        // @apply mt-[-.55rem] mr-[23%];
+         //       CLOSE BTN
+      [title="Close"] {
+        @apply py-3 px-3.5 mb-0 [&>svg]:w-7}
+        
       }
       // UI PROJECT'S
       .UIZoom {
@@ -434,7 +432,7 @@
   }
 }
 // For Desktops 1.4K+
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1440px) {
   #light {
     //--------- NAVBAR
     div.navbar {
