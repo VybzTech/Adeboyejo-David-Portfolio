@@ -12,7 +12,7 @@ import Maintenance from "../ICONS/SERVICES/Maintenance";
 import Design from "../ICONS/SERVICES/Design";
 import Seo from "../ICONS/SERVICES/Seo";
 import Code from "../ICONS/SERVICES/Code";
-import PhoneIn from "../ICONS/PhoneIn";
+import PhoneIn from "../ICONS/PhoneIn";import { RiTwitterXFill } from "react-icons/ri";
 //  USER INTERFACE IMPORTS
 import UI1 from "../IMAGES/UI/ABOUT.png";
 import UI2 from "../IMAGES/UI/ADD TODO.png";
@@ -1520,7 +1520,8 @@ export const SERVICES = [
 export const socialLinks = [
   {
     name: "Twitter",
-    icon: <Twitter />,
+    icon: <RiTwitterXFill />,
+
     href: "https://www.twitter.com/djay_vybz",
   },
   {
