@@ -10,27 +10,6 @@ import ReactVisibilitySensor from "react-visibility-sensor";
 const Skills = () => {
   const [anime, setAnime] = useState(false);
 
-  //OLD VIEW PORT CODE
-
-  // useEffect(() => {
-  // 	const onIntersection = (entries) => {
-  // 		entries.forEach(() => {
-  // 			setAnime(true);
-  // 		});
-  // 	};
-  // 	var observer = new IntersectionObserver(
-  // 		onIntersection,
-  // 		{
-  // 			root: null,
-  // 			threshold: 0.5,
-  // 		}
-  // 	);
-
-  // 	observer.observe(
-  // 		document?.querySelector(".KeySkillsWrapper")
-  // 	);
-  // }, []);
-
   return (
     <ReactVisibilitySensor
       resizeCheck={true}
@@ -49,10 +28,8 @@ const Skills = () => {
             <KeySkills />
           </Fade>
           <figure>
-            <Slide triggerOnce right className="skillPoster">
+            <Slide triggerOnce left className="skillPoster">
               <SkillSvg />
-            </Slide>
-            <Slide triggerOnce right>
               <Tools />
             </Slide>
           </figure>

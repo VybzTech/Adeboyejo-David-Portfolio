@@ -1,9 +1,9 @@
 import React from "react";
-// import { Button } from '@material-ui/core'
-// import { withRouter } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-// const LilAboutMe = withRouter(({ history }) => {
 const LilAboutMe = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="about">
       <div className="hero">
@@ -28,8 +28,7 @@ const LilAboutMe = () => {
         <button
           className="btn flex"
           onClick={() => {
-            window.location.pathname = "/About";
-            // history.push("/About");
+            navigate("/About");
             document.documentElement.scrollTop = 0;
           }}
         >

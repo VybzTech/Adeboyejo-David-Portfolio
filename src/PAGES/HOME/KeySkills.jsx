@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { SKILLS } from "../Utils";
-// import { withRouter } from "react-ro uter-dom";
+import { useNavigate } from "react-router-dom";
 import SkillPill from "./SkillPill";
 
 const KeySkills = () => {
-  // const KeySkills = withRouter(({ history }) => {
-  // const refill = (val) => {
-  //   set(val);
-  // };
+  const navigate = useNavigate();
+
   return (
     <>
       <div>
@@ -21,11 +19,11 @@ const KeySkills = () => {
       <div>
         <button
           onClick={() => {
-            // history.push("/Contact");
-            // history.push("/Contact");
+            navigate("/Contact");
             document.documentElement.scrollTop = 0;
           }}
           className="btn"
+          variant="outlined"
         >
           HIRE ME
         </button>

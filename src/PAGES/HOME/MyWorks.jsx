@@ -1,35 +1,14 @@
 import React, { useState } from "react";
 import { Fade, Slide } from "react-awesome-reveal";
 import ReactVisibilitySensor from "react-visibility-sensor";
-// import { withRouter } from "react-router-dom";
-// import Netflex from '../../IMAGES/NetFlex-Project.png'
-// import SammieArt from '../../IMAGES/SammieArt-Project.png'
-// import DivisionForm from '../../IMAGES/DivisionForm-Project.png'
-// import TaskManager1 from '../../IMAGES/TaskManager1-Project.png'
-// import TaskManager2 from '../../IMAGES/TaskManager2-Project.png'
-// import Swiper from "swiper";
-//c:/Users/DHARVO/Desktop/PROGRAMMING/PROGRAMS/REACT/portfolio/node_modules/swiper/react/
-// import {
-// 	Swiper,
-// 	// SwiperSlide,
-// } from 'swiper/react/swiper-react'
-// import {
-// 	EffectCoverflow,
-// 	Mousewheel,
-// 	Autoplay,
-// 	EffectCards,
-// } from 'swiper'
-// import "swiper/swiper.min.css";
-// import "node_modules/swiper/swiper-bundle.min.css"
-// import "swiper/swiper-bundle.min.css"
-// import "swiper/swiper-bundle.css";
+import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import { projectSlides } from "../Utils";
 import Swiper from "swiper";
 
-const MyWorks =() => {
+const MyWorks = () => {
   const [anime, setAnime] = useState(false);
- 
+  const navigate = useNavigate();
 
   var swiper = new Swiper(".swiper", {
     effect: "coverflow",
@@ -50,7 +29,7 @@ const MyWorks =() => {
     //   modifier: 1,
     //   slideShadows: true,
     // },
-
+  
     // loop: true,
     // speed: 1000,
     autoplay: {
@@ -66,7 +45,7 @@ const MyWorks =() => {
       depth: 700,
       slideShadows: true,
     },
-
+  
     preloadImages: true,
     updateOnWindowResize: true,
     breakpoints: {
@@ -99,14 +78,15 @@ const MyWorks =() => {
             <h1>latest works</h1>
           </div>
         </Fade>
-        <Slide bottom triggerOnce onDoubleClick={() => {
-              // history.push("/Projects");
-              document.documentElement.scrollTop = 0;
-            }}>
-          <div
-            className="swiper"
-            
-          >
+        <Slide
+          bottom
+          triggerOnce
+          onDoubleClick={() => {
+            navigate("/Projects");
+            document.documentElement.scrollTop = 0;
+          }}
+        >
+          <div className="swiper">
             <div className="swiper-wrapper">
               {projectSlides?.map((slide) => (
                 <div key={slide.alt} className="swiper-slide">
@@ -117,7 +97,7 @@ const MyWorks =() => {
           </div>
         </Slide>
       </div>
-        </ReactVisibilitySensor>
+    </ReactVisibilitySensor>
   );
 };
 

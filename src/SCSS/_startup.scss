@@ -44,18 +44,6 @@
   }
 }
 
-// #loader {
-// 	.progress {
-// 		@media screen and (max-width: 450px) {
-// 			height: 2.5px !important;
-// 		}
-// 		@media screen and (max-width: 350px) {
-// 			width: 0.4vw;
-// 			height: 2px !important;
-// 		}
-// 	}
-// }
-
 // CONTACT ND ABOUT BGs
 #projects,
 #about,
@@ -68,11 +56,6 @@
     width: 100%;
     background-size: auto 100%;
     background-position: top;
-    // background-size: cover;
-    // @media screen and (max-width: 1024px) {
-    // }
-    // @media screen and (max-width: 450px) {
-    // }
   }
 }
 
@@ -81,10 +64,6 @@
   font-family: montLight;
   src: url("../FONTS/Montserrat-Light.ttf");
 }
-// @font-face {
-//   font-family: montReg;
-//   src: url("../FONTS/Montserrat-Regular.ttf");
-// }
 @font-face {
   font-family: montXBold;
   src: url("../FONTS/Montserrat-ExtraBold.ttf");
@@ -98,7 +77,6 @@ $themeBlack2: #222;
 $themeBlack3: #333;
 $themeDGray: #333a;
 $themeGray: #aaa;
-// $themeWhite: #fafafa;
 $themeWhite: #f9f9fa;
 $themeWhite2: #f5f5f9;
 $gray: #e5e5e5;
@@ -123,25 +101,6 @@ $themeBlueShadow: #09095055;
   justify-content: $justify;
   flex-direction: $dir;
 }
-// @mixin goLeft($top: 0, $left: 0) {
-//   position: absolute;
-//   top: $top;
-//   left: $left;
-// }
-// @mixin goRight($top: 0, $right: 0) {
-//   position: absolute;
-//   top: $top;
-//   right: $right;
-// }
-// @mixin fixMeR($top: 0, $right: 0) {
-//   position: fixed;
-//   top: $top;
-//   right: $right;
-// }
-// @mixin floater($val) {
-//   float: $val;
-//   clear: $val;
-// }
 @mixin trans($speed) {
   transition: all $speed ease-in-out;
 }
@@ -155,27 +114,12 @@ $themeBlueShadow: #09095055;
   $size: 1.2rem
 ) {
   color: $color;
-  font-family: $font, Verdana, sans-serif;
+  font-family: $font, Inter, system-ui, sans-serif;
   letter-spacing: $letter;
   word-spacing: $word;
   text-align: $align;
   font-size: $size;
 }
-// @mixin SemiBoldText(
-//   $font: montReg,
-//   $letter: 0,
-//   $word: 0,
-//   $align: left,
-//   $color: black,
-//   $size: 1.5rem
-// ) {
-//   color: $color;
-//   font-family: $font, Verdana, sans-serif;
-//   letter-spacing: $letter;
-//   word-spacing: $word;
-//   text-align: $align;
-//   font-size: $size;
-// }
 @mixin BoldText(
   $font: montXBold,
   $letter: 0,
@@ -186,49 +130,13 @@ $themeBlueShadow: #09095055;
   $case: uppercase
 ) {
   color: $color;
-  font-family: $font, Verdana, sans-serif;
+  font-family: $font, Inter, system-ui, sans-serif;
   letter-spacing: $letter;
   word-spacing: $word;
   text-align: $align;
   text-transform: $case;
   font-size: $size;
 }
-
-// @mixin portalSubHeading {
-//   h1 {
-//     border-bottom: 2px solid $themeDGray;
-//     color: $themeBlack2;
-//     font-family: montXBold;
-//     font-size: 2.7rem;
-//     margin: 1rem auto 1.55rem 3.5rem;
-//     padding: 3px 5px 0.5px 2px;
-//     text-align: left;
-//     width: fit-content;
-//     // @media screen and (max-width: 1300px) {
-//     //   font-size: 2.4rem;
-//     //   padding: 0 3px 0.2px 1.5px;
-//     //   margin-bottom: 1rem;
-//     // }
-//     // @media screen and (max-width: 1024px) {
-//     //   font-size: 2.3rem;
-//     //   margin-bottom: 1rem;
-//     // }
-//     // @media screen and (max-width: 770px) {
-//     //   font-size: 2rem;
-//     //   margin-bottom: 1.3rem;
-//     //   margin-left: 2.3rem;
-//     // }
-//     // @media screen and (max-width: 425px) {
-//     //   font-size: 1.5rem;
-//     //   margin-top: 0;
-//     //   margin-left: 0.5rem;
-//     // }
-//     // @media screen and (max-width: 320px) {
-//     //   font-size: 1.3rem;
-//     //   margin-left: 0.35rem;
-//     // }
-//   }
-// }
 
 //BUTTONS
 @mixin outlineBtn(
@@ -247,45 +155,10 @@ $themeBlueShadow: #09095055;
   font-size: $size;
   border: 2px solid $color;
   cursor: pointer;
-  // @media screen and (max-width: 1024px) {
-  //   padding: $pad2;
-  //   font-size: $size2;
-  // }
   &:focus {
     outline: none;
   }
 }
-
-// @mixin closeBtn {
-//   padding: 6.45px 7px 4.5px;
-//   background: none;
-//   border: none;
-//   border-radius: 50%;
-//   @include goRight($top: 1.5rem, $right: 4rem);
-//   @include trans(350ms);
-//   svg {
-//     width: 1.5rem;
-//     fill: $themeGray;
-//   }
-//   &:hover {
-//     background: #0a0a0a55;
-//     svg {
-//       transform: scale(1.01);
-//       fill: $themeCoarseRed;
-//     }
-//   }
-//   &:focus {
-//     outline: none;
-//     svg {
-//       fill: $themeRed;
-//     }
-//   }
-// //ADJUSTMENTS
-// @media screen and (max-width: 1300px) {
-// }
-// @media screen and (max-width: 1024px) {
-// }
-// }
 
 //---------ANIMATIONS
 

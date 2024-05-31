@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navs = [
   { nav: "Home", path: "/" },
@@ -11,8 +12,8 @@ const Navs = [
 ];
 
 const Navigation = ({ setNavControl }) => {
-  // const Navigation = withRouter((props) => {
-  // const { history, setNavControl } = props;
+  const navigate = useNavigate();
+
   return (
     <>
       <div>
@@ -27,7 +28,7 @@ const Navigation = ({ setNavControl }) => {
                   : ""
               }`}
               onClick={() => {
-                // history.push(nav.path);
+                navigate(nav.path);
                 document.documentElement.scrollTop = 0;
                 setNavControl((n) => !n);
                 document.title = `Adeboyejo David | ${

@@ -142,6 +142,16 @@ const ProjectDets = ({ project, showDetails, setShowDetails }) => {
               );
             })}
           </div>
+          <button
+            style={{ padding: "0.65rem 1rem", color: "#fa4160" }}
+            className="w-full hover:bg-stone-100 rounded-md"
+            onClick={() => {
+              setShowDetails((d) => (d = !d));
+            }}
+          >
+            {`Close "${name}" Project`}
+            <Close />
+          </button>
         </>
       </Zoom>,
       document.getElementById("portals")

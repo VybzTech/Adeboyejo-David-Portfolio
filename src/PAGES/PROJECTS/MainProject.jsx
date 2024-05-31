@@ -15,28 +15,7 @@ const MainProject = ({ nav, project }) => {
   const { name, content, utilities, images, git, link } = project;
 
   const [show, set] = useState(false);
-  // const [details, setDetails] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
-  // var swiper = new Swiper(".swiper", {
-  // autoHeight: true,
-  // autoplay: { delay: 1500 },
-  // centeredSlides: true,
-  // effect: "fade",
-  // fadeEffect: {
-  //   crossFade: true,
-  // },
-  // grabCursor: true,
-  // initialSlide: 0,
-  // loop: true,
-  // modules: [Navigation],
-  // slidesPerView: 1,
-  // spaceBetween: 0,
-  // speed: 500,
-  // // navigation: {
-  // //   nextEl: ".swiper-button-next",
-  // //   prevEl: ".swiper-button-prev",
-  // // },
-  // });
 
   return (
     <>

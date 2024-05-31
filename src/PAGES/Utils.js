@@ -116,7 +116,7 @@ import NodeJS from "../IMAGES/TOOLS/Node.png";
 import ChartJS from "../IMAGES/TOOLS/Chartjs.svg";
 import Php from "../IMAGES/TOOLS/Php.png";
 import Firebase from "../IMAGES/TOOLS/Firebase.png";
-import Swiper from "../IMAGES/TOOLS/Swiper.svg";
+import SwiperImg from "../IMAGES/TOOLS/Swiper.svg";
 import Netlify from "../IMAGES/TOOLS/Netlify-Logo.png";
 // import Photoshop from "../IMAGES/TOOLS/Photoshop-cc.png";
 import Flutter from "../IMAGES/TOOLS/Flutter.svg";
@@ -128,6 +128,7 @@ import Tailwind from "../IMAGES/TOOLS/TailwindCSS.png";
 import DotNET from "../IMAGES/TOOLS/DOTNET-1.svg";
 import UTube from "../IMAGES/TOOLS/Youtube-96.png";
 import AndStudio from "../IMAGES/TOOLS/Android-studio.png";
+
 
 //HOME PAGE SKILLS
 export const SKILLS = [
@@ -572,7 +573,7 @@ export const PROJECTS = [
       },
       {
         name: "Swiper",
-        img: Swiper,
+        img: SwiperImg,
         aid: "Swiper is a modern free and open source touch slider with nice transitions & amazing native behaviour.",
       },
       {
@@ -888,7 +889,7 @@ export const PROJECTS = [
       },
       {
         name: "Swiper",
-        img: Swiper,
+        img: SwiperImg,
         aid: "Swiper is a modern free and open source touch slider with nice transitions & amazing native behaviour.",
       },
       {
@@ -1562,3 +1563,4 @@ export const footLinks = [
     title: "Job Pricing",
   },
 ];
+
