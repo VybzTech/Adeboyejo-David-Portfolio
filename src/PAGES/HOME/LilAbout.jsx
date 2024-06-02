@@ -15,14 +15,14 @@ const LilAbout = () => {
       partialVisibility={true}
       minTopValue={200}
     >
-      <div className="lilAbout">
+      <section className="lilAbout">
         <Zoom big triggerOnce>
           <CircleImg />
         </Zoom>
         <Slide right triggerOnce>
           <LilAboutMe />
         </Slide>
-      </div>
+      </section>
     </ReactVisibilitySensor>
   );
 };

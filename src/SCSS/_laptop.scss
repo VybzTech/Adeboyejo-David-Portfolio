@@ -26,9 +26,11 @@
       }
       .navigation,
       .navigation.show {
-        @apply static bg-transparent w-auto h-auto min-h-[auto] 
-        flex-[auto] flex justify-end shadow-none backdrop-blur-0;
+        background-color: transparent !important;
+        @apply static w-auto h-auto min-h-[auto] flex-[auto]
+        flex justify-end shadow-none backdrop-blur-0;
         > div {
+          gap: 0;
           > div {
             &:first-child {
               @apply pt-2 flex-row;
@@ -116,10 +118,11 @@
           @apply h-[120vh];
         }
         .KeySkillsWrapper {
-          @apply px-1 flex items-center p-5;
+          @apply flex items-center p-5 justify-center;
           & > div {
             @apply w-full;
-            flex-shrink: 1.4;
+            // flex-shrink:2;
+            flex-grow: 1.25;
           }
           .keySkills {
             h2 {
@@ -140,8 +143,8 @@
             }
           }
           figure {
-            // @apply w-full;
-            @apply w-[70%]  mb-[-5rem];
+            @apply w-[85%] ml-14;
+            // @apply w-[68%] mb-[-5rem] ml-8;
           }
         }
         .skillPoster {
@@ -215,24 +218,28 @@
       section {
         @apply flex items-center pl-10 py-20;
         div.imgX2 {
-          @apply w-[80%];
+          @apply w-[60%];
         }
         div.aboutMe {
-          flex-shrink: 1.2;
-          @apply pl-12 pr-14 text-[1.95vh] leading-[2.5];
+          flex-shrink: 1.5;
+          @apply pr-24 text-[2.4vh] leading-[3.2];
         }
       }
-      div#tsparticles {
-        height: 115vh;
+      .myServices div#tsparticles {
+        // height: 115vh;
+        height: 150vh;
       }
       div.myServices .serviceWrapper {
         h2 {
-          @apply pt-14 text-[5vh] pb-3.5;
+          @apply pt-14 text-[7vh] pb-5;
         }
         .serviceList {
-          @apply px-3;
+          @apply px-16 gap-4;
           // flex items-center gap-7;
           .service {
+            h3 {
+              @apply text-[2rem] pb-3.5;
+            }
             // @apply pr-5;
             // @apply mx-3.5 pl-6 pt-6 pb-14;
             .icon {
@@ -248,7 +255,7 @@
     }
     div#projects {
       div.bg .explore {
-        @apply top-32;
+        @apply top-24;
         & > div {
           align-self: flex-start;
           @apply w-fit;
@@ -257,13 +264,14 @@
           }
         }
         h1 {
-          @apply pl-28 text-[7vh] max-w-[50vw] text-left tracking-wide;
+          @apply pl-28 text-[9vh] max-w-[50vw] text-left tracking-wide;
         }
         .sub {
-          @apply pl-28 text-[1.7vh] max-w-[50%] m-0 text-left mt-[-13vh] mb-[-5vh];
+          @apply pl-28 text-[2vh] max-w-[50%] m-0 text-left mt-[-13vh] mb-[-5vh];
         }
         img {
-          @apply w-[2.5vw];
+          @apply w-[1.7vw] mb-2;
+          // mb-[-1rem];
         }
       }
       main {
@@ -339,14 +347,14 @@
       .bg {
         // @apply h-[120vh];
         div.Pleasantries {
-          @apply top-[18rem];
+          @apply pl-32 top-[12rem];
           // @apply top-[30vh];
           h1 {
-            @apply pl-28 mb-[15vh] text-[7vh] max-w-[50vw] text-left tracking-wide;
+            @apply mb-[15vh] text-[9vh] max-w-[50vw] text-left tracking-wide;
             // @apply text-[5.5vh] mb-[17.5vh];
           }
           .sub {
-            @apply pl-28 text-[1.7vh] max-w-[60%] m-0 text-left mt-[-13vh] mb-[-5vh];
+            @apply pl-0 text-[2vh] max-w-[50%] m-0 text-left mt-[-13vh] mb-[-5vh];
           }
         }
       }
@@ -363,8 +371,8 @@
           @apply m-0 mx-auto;
         }
         div.ContactMeWrapper {
-          flex-grow: 1.1;
-          @apply px-5;
+          // flex-grow: 1.9;
+          @apply px-5 w-[40%];
           .ContactMe {
             @apply p-3 mx-2.5 mb-0;
             form .formControl > div label {
@@ -372,9 +380,9 @@
             }
           }
           div.circleWrapper {
-            clip-path: circle(14rem);
-            @apply mr-[-7rem] mt-[-10rem]
-          h-[53vh] mb-[-8rem];
+            clip-path: circle(13rem);
+            @apply mr-[-14rem] mt-[-14rem]
+          h-[67vh] mb-[-8rem];
           }
         }
       }
@@ -399,14 +407,14 @@
           & span svg {
             @apply h-10 w-8 py-2 mr-0; // py-0.5 px-2.5;
           }
-          &  span p {
+          & span p {
             @apply hidden;
           }
         }
-         //       CLOSE BTN
-      [title="Close"] {
-        @apply py-3 px-3.5 mb-0 [&>svg]:w-7}
-        
+        //       CLOSE BTN
+        [title="Close"] {
+          @apply py-3 px-3.5 mb-0 [&>svg]:w-7;
+        }
       }
       // UI PROJECT'S
       .UIZoom {

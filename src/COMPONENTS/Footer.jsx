@@ -6,8 +6,8 @@ import ArrowUp from "../ICONS/ArrowUp";
 const Footer = () => {
   return (
     <React.Fragment>
-      <div className="BottomColor"></div>
-      <div className="foot">
+      <section className="BottomColor"></section>
+      <section className="foot">
         <div className="socials">
           <Fade big triggerOnce>
             {socialLinks.map((social) => {
@@ -36,7 +36,7 @@ const Footer = () => {
         <div className="copyx0">
           <h5>David's Portfolio &copy; 2021. All Rights Reserved.</h5>
         </div>
-      </div>
+      </section>
     </React.Fragment>
   );
 };
