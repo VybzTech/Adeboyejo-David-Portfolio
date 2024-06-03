@@ -87,7 +87,7 @@
           @apply text-[0.8rem] mt-7 px-7 pt-2.5 pb-3 rounded-lg;
         }
       }
-      div.lilAbout {
+      .lilAbout {
         @apply pt-14 pb-24 px-10 pr-24 flex items-center min-h-[110vh];
         h2 {
           font-size: 7vh;
@@ -112,7 +112,7 @@
           }
         }
       }
-      div.skills {
+      .skills {
         div#tsparticles {
           // @apply h-full;
           @apply h-[120vh];
@@ -230,13 +230,14 @@
         height: 150vh;
       }
       div.myServices .serviceWrapper {
+
         h2 {
           @apply pt-14 text-[7vh] pb-5;
         }
         .serviceList {
-          @apply px-16 gap-4;
-          // flex items-center gap-7;
+          @apply px-16 gap-4 flex items-center;
           .service {
+            @apply mb-5;
             h3 {
               @apply text-[2rem] pb-3.5;
             }
@@ -270,14 +271,14 @@
           @apply pl-28 text-[2vh] max-w-[50%] m-0 text-left mt-[-13vh] mb-[-5vh];
         }
         img {
-          @apply w-[1.7vw] mb-2;
+          @apply w-[1.8vw] mb-[-4rem];
           // mb-[-1rem];
         }
       }
       main {
         nav.projectNav {
           // WHITE BACKGROUND SIDE NAV
-          @apply w-[15%] px-2;
+          @apply w-[15%] px-2; 
           > div {
             @apply w-[15%] top-[17vh]; //[&>div]:w-fit [&>div]:mx-auto;
             // @apply [&>div]:w-[90%];
