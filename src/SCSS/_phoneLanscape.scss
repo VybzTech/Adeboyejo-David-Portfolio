@@ -1,6 +1,6 @@
 //   ******************************************* LANDSCAPE *******************************************
 // PHONE LANDSCAPE   iPhone SE, iPhone 6,7,8, iPhone X
-@media screen and (min-width: 667px)  and (min-height: 375px) and (orientation: Landscape) {
+@media screen and (min-width: 667px) and (min-height: 375px) and (orientation: Landscape) {
   //--------- LOADER
   .Loader {
     @apply w-full max-h-[100vh];
@@ -36,7 +36,7 @@
             }
           }
           & > div:last-of-type button {
-            @apply my-0 text-[12px] px-7 py-3; 
+            @apply my-0 text-[12px] px-7 py-3;
           }
         }
         //SHOWN
@@ -156,7 +156,7 @@
           font-size: 2.2rem;
         }
         .serviceList {
-          @apply gap-1 p-0;
+          @apply gap-0 px-1 flex;
           .service {
             @apply pl-5 pr-3.5 py-5 pb-14;
             .icon {
@@ -185,13 +185,14 @@
         .projectNav {
           // WHITE BACKGROUND SIDE NAV
           > div {
-            @apply top-[3.55rem];
+            @apply top-[17vh];
             //  EACH BUTTON
             .Nav {
-              @apply flex items-center justify-start p-1 mb-2 pl-3   
-                [&.active>span]:text-[0.65rem] font-bold [&.active>img]:mr-[.15rem];
+              @apply flex items-center justify-start p-1 mb-3 pl-3   
+              [&.active>span]:text-[0.65rem] font-bold 
+              [&.active>img]:mr-[.15rem] [&.active]:pb-2;
               img {
-                @apply pl-0.5 w-[24%] m-0;
+                @apply pl-0.5 w-[24%] m-0 pb-1;
               }
               span {
                 margin-left: 0.25rem;
@@ -262,10 +263,10 @@
           @apply w-[65%] m-0 mx-auto;
         }
         .socials {
-          //         @apply m-0 mx-auto;
+          @apply m-0 mx-auto;
         }
         .ContactMeWrapper {
-          //         @apply px-20;
+          @apply px-14;
           .ContactMe {
             //           @apply px-7 mx-7;
             form .formControl > div label {
@@ -273,10 +274,11 @@
             }
           }
           .circleWrapper {
-            //           clip-path: circle(10rem);
-            //           @apply mt-[-12rem] mr-[-16rem]
-            //           h-[90vh] mb-[-6.5rem];
+                      clip-path: circle(10rem);
+            @apply mt-[-12rem] mr-[-16rem]
+            h-[90vh] mb-[-6.5rem];
           }
+          // mb-[1.5rem]
         }
       }
     }
@@ -289,15 +291,15 @@
     }
     //--------- PORTALS
     #portals {
-      //     // RESUME
-      //     .ResumeImg {
-      //       @apply p-2.5;
-      //       img {
-      //         @apply max-h-[80vh];
-      //       }
-      //     }
+          // RESUME
+          .ResumeImg {
+            @apply p-2.5;
+            img {
+              @apply max-h-[80vh];
+            }
+          }
       .ResumeDwn {
-        @apply pt-0 m-0 mr-[-14%]; // justify-end;
+        @apply pt-0 m-0 mr-[-14%] justify-center;
         // mt-[-.55rem] mx-auto ml-[20%] pt-1;
         button:first-of-type {
           @apply px-6 py-2.5 mt-0 text-[11px] rounded-lg mr-10;
@@ -306,7 +308,7 @@
       }
       //     // UI PROJECT'S
       .UIZoom button {
-        @apply mt-[-1.5rem] mb-2;
+        @apply mt-[-2.5rem] mr-6;
       }
       .ProjectDets {
         @apply max-w-[90vw] px-[1rem] py-2 mx-10 my-2;
@@ -333,7 +335,7 @@
 // PROJECTS - home BG, masonary to two, Circle Wrapper (Recheck XR) | Home skills height (11 pro)
 
 //   // PHONE LANDSCAPE   iPhone X  : For 11 Pro, XR, 13 mini, Xs,
-//   @media screen and (min-height: 375px) and (min-width: 800px) and (orientation: Landscape) {
+//   @media screen and (min-width: 800px) and (min-height: 375px) and (orientation: Landscape) {
 //     #light {
 //       //--------- NAVBAR
 //       .navbar {

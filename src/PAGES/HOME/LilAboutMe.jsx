@@ -7,7 +7,7 @@ const LilAboutMe = () => {
   return (
     <div className="about">
       <div className="hero">
-        <h2>
+        <h2 className="headings">
           Who i am
           <div className="line">
             <div />

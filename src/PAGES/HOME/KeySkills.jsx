@@ -9,7 +9,7 @@ const KeySkills = () => {
   return (
     <>
       <div>
-        <h2>Key Skills</h2>
+        <h2 className="headings">Key Skills</h2>
       </div>
       <div className="skillList">
         {SKILLS.map((ski) => {

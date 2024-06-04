@@ -479,26 +479,26 @@
             @include trans(400ms);
             box-shadow: 1px 2px 10px 0.5px #ddd2;
             @apply mb-5 pl-7 pr-4 py-7 pb-10 bg-white
-            rounded-3xl overflow-hidden hover:shadow-lg;
+            rounded-3xl overflow-hidden duration-300 transition-all ease-in-out;
             .icon {
-              @apply mb-3 rounded rounded-xl bg-blue-100 w-fit py-2 px-[.55rem]; // w-14 h-14  px-2 py-3;
+              @apply mb-3 rounded-xl bg-blue-50 w-fit py-2 px-[.5rem] duration-300 transition-all ease-in-out; // w-14 h-14  px-2 py-3;
               svg {
-                fill: $themeCoarseBlue;
-                @apply object-contain  w-10 h-10; // mx-2 my-5;
+                fill: $themeBlueOptic;
+                @apply object-contain w-10 h-10 opacity-80 duration-300 transition-all ease-in-out;
               }
             }
             h4 {
-              // -webkit-text-stroke: 0.5px $themeBlack2;
+              @apply duration-300 transition-all ease-in-out;
               font-family: montReg;
-              @include BoldText($color: $themeBlack2, $size: 1.2rem);
+              @include BoldText($color: $themeBlack3, $size: 1.2rem);
             }
             p {
-              @apply leading-[1.8];
+              @apply leading-[1.8] duration-300 transition-all ease-in-out;
               z-index: 1;
               @include LightText(
                 $size: 0.8rem,
                 $word: 1px,
-                $color: $themeBlack2
+                $color: $themeBlack3
               );
             }
             .backdrop {
@@ -506,7 +506,28 @@
               @apply w-fit;
               svg {
                 fill: #f7f7f7;
-                @apply w-32 h-32 object-contain;
+                @apply w-32 h-32 object-contain duration-300 transition-all ease-in-out;
+              }
+            }
+            &:hover {
+              @apply shadow-lg;
+              cursor: grab;
+              h4 {
+                @apply text-black;
+              }
+              p {
+                color: $themeBlack;
+              }
+              .icon {
+                @apply bg-blue-100;
+                svg {
+                  fill: $themeBlue;
+                  @apply opacity-100;
+                }
+              }
+              .backdrop svg {
+                fill: $themeWhitishBlue;
+                opacity: 0.4;
               }
             }
           }

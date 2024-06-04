@@ -75,7 +75,7 @@ const MyWorks = () => {
         <Fade big triggerOnce>
           <div className="hero">
             <h3>case study</h3>
-            <h1>latest works</h1>
+            <h1 className="headings">latest works</h1>
           </div>
         </Fade>
         <Slide
