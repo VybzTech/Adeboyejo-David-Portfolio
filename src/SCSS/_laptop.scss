@@ -188,7 +188,7 @@
       section {
         @apply flex items-center pl-10 py-20;
         div.imgX2 {
-          @apply w-[60%];
+          @apply w-[65%] rounded-2xl;
         }
         div.aboutMe {
           flex-shrink: 1.5;
