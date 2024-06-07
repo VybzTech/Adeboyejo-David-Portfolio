@@ -179,7 +179,6 @@
           $word: 0
         );
       }
-      // .KeySkillsWrapper div.keySkills .skills .btn[variant="outlined"],
       .btn {
         @include outlineBtn($size: 0.65rem);
         @apply rounded rounded-md mt-8 px-5 py-2 ease-in-out;
