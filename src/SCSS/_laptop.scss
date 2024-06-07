@@ -102,7 +102,7 @@
       }
       .skills {
         div#tsparticles {
-          @apply h-[120vh];
+          @apply h-[100vh];
         }
         .KeySkillsWrapper {
           @apply flex items-center p-5 justify-center;
@@ -168,9 +168,9 @@
     #about {
       div.bg {
         @apply h-[100vh] px-10;
-        background-size: 100%;
+        background-size: 100% 100vh;
         h1 {
-          @apply pt-[10.5vh] pb-5 text-[8vh];
+          @apply pt-[10.5vh] pb-0;// text-[8vh];
         }
         > div:last-of-type {
           @apply mt-2 mb-5;
@@ -181,18 +181,21 @@
         .content {
           @apply px-10 leading-[2.3] [&>div]:mb-2.5;
           p {
-            @apply text-[0.9rem];
+            @apply text-[0.95rem];
           }
+        }
+        > div:last-of-type{
+          @apply mt-0;
         }
       }
       section {
-        @apply flex items-center pl-10 py-20;
+        @apply flex items-center pl-10 py-20 [&>div]:w-[45%];
         div.imgX2 {
-          @apply w-[65%] rounded-2xl;
+          @apply w-[75%] rounded-2xl;
         }
-        div.aboutMe {
-          flex-shrink: 1.5;
-          @apply pr-24 text-[2.4vh] leading-[3.2];
+       > div.aboutMe {
+          // flex-shrink: 1.5;
+          @apply w-[55%] pr-20 pl-0 text-[1.2vw] leading-[4vw];
         }
       }
       .myServices div#tsparticles {
@@ -224,10 +227,10 @@
           }
         }
         h1 {
-          @apply pl-28 text-[9vh] max-w-[50vw] text-left tracking-wide;
+          @apply pl-28 text-[9vh] max-w-[60vw] text-left tracking-wide;
         }
         .sub {
-          @apply pl-28 text-[2vh] max-w-[50%] m-0 text-left mt-[-13vh] mb-[-5vh];
+          @apply pl-28 text-[2vh] max-w-[55%] m-0 text-left mt-[-13vh] mb-[-5vh];
         }
         img {
           @apply w-[1.8vw] mb-[-1rem];
@@ -236,9 +239,9 @@
       main {
         nav.projectNav {
           // WHITE BACKGROUND SIDE NAV
-          @apply w-[15%] px-2;
+          @apply w-[18%] px-2;
           > div {
-            @apply w-[15%] top-[20vh]; 
+            @apply w-[18%] top-[20vh]; 
             //  EACH BUTTON
             button.Nav {
               @apply mx-[5%] w-[90%] mb-7 
@@ -344,7 +347,7 @@
         }
       }
       div.ResumeDwn {
-        @apply mr-24;
+        @apply w-full;
         button[title="Download Resume"] {
           @apply rounded-2xl mr-3.5 px-3.5 py-2;
           & span svg {

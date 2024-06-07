@@ -96,8 +96,8 @@
     opacity: 1;
   }
   60% {
-    transform: translateY(80%);
-    opacity: 0.5;
+    transform: translateY(100%);
+    opacity: 0.35;
   }
   100% {
     transform: translateY(0%);
@@ -679,7 +679,7 @@
 }
 #light #projects .bg .explore img {
   @apply opacity-80 w-6 mb-[-2.5rem];
-  animation: bounce 2s 100ms ease-in-out infinite forwards !important;
+  animation: bounce 1.6s 100ms ease-in-out infinite forwards !important;
 }
 #light #projects main {
   @apply relative bg-slate-100;
@@ -1031,8 +1031,9 @@
 }
 #light #portals {
   backdrop-filter: blur(5px);
-  @apply bg-[#0005] fixed top-0 left-0 fixed min-h-full;
   z-index: 50;
+  @apply bg-[#0005] fixed top-0 left-0 min-h-full 
+     flex flex-col gap-2 justify-center;
 }
 #light #portals > div {
   @apply w-[100vw];
@@ -1389,9 +1390,6 @@
   #light .BottomColor {
     margin-bottom: -5px;
   }
-  #light #portals .ResumeDwn {
-    @apply pt-[4rem] pb-[5%];
-  }
   #light #portals .ResumeDwn [title="Download Resume"] {
     @apply py-3.5 px-5 text-[12px];
   }
@@ -1403,6 +1401,244 @@
   }
   #light #portals .ProjectDets {
     @apply my-4;
+  }
+}
+@media only screen and (min-width: 375px) and (min-height: 730px) and (max-height: 844px) {
+  #light h1.headings {
+    font-size: 4.5vh !important;
+  }
+  #light .headings {
+    font-size: 4vh !important;
+  }
+  #light #home .intro h1 {
+    @apply text-[3.7rem];
+  }
+  #light #home .lilAbout .about .hero h2 .line > div {
+    @apply h-[0.75vh];
+  }
+  #light #home .lilAbout .about p {
+    @apply text-[0.875rem];
+  }
+  #light #home .skills #tsparticles {
+    @apply h-[160vh];
+  }
+  #light #home .skills .skillPoster .tools {
+    @apply ml-0;
+  }
+  #light #about .content {
+    @apply max-h-[85vh] text-[0.875rem] px-6;
+  }
+  #light #about section .aboutMe {
+    @apply px-6 text-[0.8rem];
+  }
+  #light #about .myServices #tsparticles {
+    height: 288vh;
+  }
+  #light #about .myServices .serviceWrapper {
+    @apply px-8;
+  }
+  #light #projects .bg .explore {
+    @apply top-[3rem];
+  }
+  #light #projects .bg .explore h1 {
+    @apply text-[2.6rem];
+  }
+  #light #projects main .projectNav > div {
+    @apply top-[8rem];
+  }
+  #light #projects main .projectNav > div .Nav {
+    @apply mb-7 [&.active>span]:text-[0.75rem];
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+    @apply max-h-[20vh];
+  }
+  #light #contact .bg .Pleasantries {
+    @apply top-48;
+  }
+  #light #contact .bg .Pleasantries h1 {
+    @apply text-[2.4rem];
+  }
+  #light #contact .bg .Pleasantries .sub {
+    @apply mt-32 text-[0.9rem];
+  }
+  #light #contact main .socials {
+    @apply mx-8 my-3;
+  }
+  #light #contact main .ContactMeWrapper {
+    @apply mx-3;
+  }
+  #light #contact main .ContactMeWrapper .ContactMe {
+    @apply px-2.5 pb-10 min-h-[55vh];
+  }
+  #light #contact main .ContactMeWrapper .circleWrapper {
+    @apply mt-[-11rem] mr-[-8rem]
+            h-[40vh] mb-[-8rem];
+    clip-path: circle(10rem);
+  }
+  #light #portals .UIZoom {
+    @apply pb-80;
+  }
+  #light #portals .UIZoom button {
+    @apply mt-2;
+  }
+  #light #portals .ProjectDets {
+    @apply my-4;
+  }
+}
+@media only screen and (min-width: 390px) and (min-height: 845px) and (-webkit-device-pixel-ratio: 3) {
+  #light h1.headings {
+    font-size: 4.5vh !important;
+  }
+  #light .headings {
+    font-size: 3.75vh !important;
+  }
+  #light .navbar .navigation > div > div .nav {
+    @apply my-3 px-16 py-5 text-[18px];
+  }
+  #light .navbar .navigation > div > div:last-of-type button {
+    @apply mb-14 text-[17.5px];
+  }
+  #light #home #text {
+    @apply text-[1rem] mt-8 mb-14;
+  }
+  #light #home .intro h1 {
+    @apply text-[3.15rem];
+  }
+  #light #home .intro .hero {
+    @apply text-[.8rem];
+  }
+  #light #home .intro .btn {
+    @apply text-[0.725rem] rounded-lg;
+    word-spacing: 3px;
+  }
+  #light #home .lilAbout .circleImg {
+    @apply w-[75%] p-[2.6%] pb-[2.85%];
+  }
+  #light #home .lilAbout .about .hero h2 .line > div {
+    @apply h-[0.78vh];
+  }
+  #light #home .lilAbout .about p {
+    @apply text-[0.9rem];
+  }
+  #light #home .skills {
+    @apply pt-[1.5rem];
+  }
+  #light #home .skills #tsparticles {
+    @apply h-[140vh];
+  }
+  #light #home .skills .KeySkillsWrapper h2 {
+    @apply tracking-[-1px];
+  }
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill {
+    @apply mb-2.5;
+  }
+  #light #home .skills .skillPoster div.tools {
+    @apply ml-0;
+  }
+  #light #home .skills .skillPoster div.tools p {
+    @apply w-[300px];
+  }
+  #light #home .homeProjects {
+    @apply pt-7;
+  }
+  #light #home .homeProjects .swiper {
+    @apply pt-14 pb-3;
+  }
+  #light #home .homeProjects .swiper .swiper-slide {
+    @apply h-[33vh];
+  }
+  #light #about .bg > div:last-of-type {
+    @apply mt-5;
+  }
+  #light #about .content {
+    @apply px-7 text-[0.9rem] max-h-[85vh];
+    word-spacing: 0px;
+  }
+  #light #about section .imgX2 {
+    @apply w-[70%];
+  }
+  #light #about section .aboutMe {
+    @apply px-7 text-[0.925rem];
+  }
+  #light #about .myServices #tsparticles {
+    height: 240vh;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service {
+    @apply mx-4;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service .icon {
+    @apply p-2.5;
+  }
+  #light #projects .bg .explore {
+    @apply top-20;
+  }
+  #light #projects .bg .explore h1 {
+    @apply text-[2.85rem];
+  }
+  #light #projects .bg .explore .sub {
+    @apply text-[0.9rem] mx-[1rem];
+  }
+  #light #projects main .projectNav > div {
+    @apply top-[8.75rem];
+  }
+  #light #projects main .projectNav > div .Nav {
+    @apply mb-4 [&.active>span]:text-[0.75rem];
+  }
+  #light #projects main .projectNav > div .Nav img {
+    @apply w-[65%] mb-1 py-3;
+  }
+  #light #projects main .projectNav > div .Nav span {
+    @apply text-[0.65rem];
+  }
+  #light #projects main section {
+    @apply pt-5;
+  }
+  #light #projects main section .gridSection {
+    @apply pl-2 pr-0 pt-10 pb-10;
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+    @apply max-h-[22vh];
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide::after {
+    @apply h-[105%];
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper {
+    @apply pl-3.5 pr-1;
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper p {
+    @apply text-[11.5px];
+  }
+  #light #contact .bg .Pleasantries {
+    @apply top-60;
+  }
+  #light #contact .bg .Pleasantries h1 {
+    @apply mb-[7rem] text-[2.55rem];
+  }
+  #light #contact .bg .Pleasantries .sub {
+    @apply text-[0.9rem];
+  }
+  #light #contact main {
+    @apply mt-[-3px];
+  }
+  #light #contact main .svg {
+    @apply mt-10;
+  }
+  #light #contact main .socials {
+    @apply mx-10 my-3.5;
+  }
+  #light #contact main .ContactMeWrapper {
+    @apply mx-3;
+  }
+  #light #contact main .ContactMeWrapper .ContactMe {
+    @apply px-2.5 pb-10 min-h-[55vh];
+  }
+  #light #contact main .ContactMeWrapper .circleWrapper {
+    @apply mt-[-11rem] mr-[-8rem]
+            h-[40vh] mb-[-8rem];
+    clip-path: circle(10rem);
+  }
+  #light .BottomColor {
+    @apply mb-[-2px];
   }
 }
 @media screen and (min-width: 667px) and (min-height: 375px) and (orientation: Landscape) {
@@ -1647,6 +1883,124 @@
     @apply px-3 text-[0.8rem];
   }
 }
+@media screen and (min-width: 800px) and (min-height: 375px) and (orientation: Landscape) {
+  #light .navbar {
+    @apply h-[13vh] px-4;
+  }
+  #light .navbar .navigation.show {
+    @apply top-[13.3vh];
+  }
+  #light #home .vid video {
+    @apply h-[auto];
+  }
+  #light #home .intro h1 {
+    @apply text-[3.1rem];
+  }
+  #light #home .lilAbout .about p {
+    @apply text-[0.9rem];
+  }
+  #light #home .skills #tsparticles {
+    @apply h-[275vh];
+  }
+  #light #about .bg {
+    @apply bg-cover;
+  }
+  #light #about section {
+    @apply flex items-center pl-14 pb-10;
+  }
+  #light #about section .imgX2 {
+    @apply w-full;
+  }
+  #light #about #tsparticles {
+    height: 250vh;
+  }
+  #light #about .myServices .serviceWrapper .serviceList {
+    @apply gap-2.5;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service {
+    @apply m-0 mb-4 pb-10;
+  }
+  #light #projects .bg .explore {
+    @apply top-8;
+  }
+  #light #projects .bg .explore .sub {
+    @apply my-3;
+  }
+  #light #projects main .projectNav {
+    @apply w-[18%] px-5;
+  }
+  #light #projects main .projectNav > div {
+    @apply w-[18%];
+  }
+  #light #projects main .projectNav > div .Nav {
+    @apply px-1;
+    @apply [&.active>img]:mr-2.5;
+  }
+  #light #projects main .projectNav > div .Nav img {
+    @apply mr-2;
+  }
+  #light #contact main .ContactMeWrapper .circleWrapper {
+    clip-path: circle(11.5rem);
+    @apply mr-[-20rem]
+              h-[100vh] mb-[-5.5rem];
+  }
+}
+@media screen and (min-height: 414px) and (min-width: 890px) and (orientation: Landscape) {
+  #light .navbar .theme,
+  #light .navbar .navBtn {
+    @apply mr-2.5;
+  }
+  #light .navbar .navigation > div > div .nav {
+    @apply text-[15px] my-2.5;
+  }
+  #light .navbar .navigation > div > div:last-of-type button {
+    @apply text-[13px];
+  }
+  #light #home .lilAbout .about p {
+    @apply text-[0.975rem];
+  }
+  #light #home .skills .KeySkillsWrapper h2 {
+    @apply text-[2.4rem] tracking-tight pt-7;
+  }
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill {
+    @apply mb-3;
+  }
+  #light #home .skills .KeySkillsWrapper .skillList .skillPill .skillName {
+    @apply text-[0.925rem] py-1.5;
+  }
+  #light #home .skills .tools p {
+    @apply text-[0.85rem] py-5;
+  }
+  #light #about .bg p {
+    @apply text-[0.95rem];
+  }
+  #light #about #tsparticles {
+    height: 225vh;
+  }
+  #light #about section .aboutMe {
+    flex-shrink: 1.1;
+    font-size: 0.9rem;
+  }
+  #light #about .myServices .serviceWrapper .serviceList .service p {
+    font-size: 0.85rem;
+  }
+  #light #projects .bg .explore {
+    top: 2.8rem;
+  }
+  #light #projects main section .gridSection .MainProject .swiper .swiper-wrapper .swiper-slide img {
+    @apply max-h-[40vh];
+  }
+  #light #projects main section .gridSection .MainProject .contentWrapper p {
+    @apply text-[0.8rem];
+  }
+  #light #contact main .ContactMeWrapper .circleWrapper {
+    clip-path: circle(11rem);
+    @apply mb-[-7rem] mr-[-24rem] h-[90vh];
+  }
+  #light #portals .ResumeDwn {
+    @apply mr-[5%];
+  }
+}
 @media screen and (min-width: 1024px) {
   .Loader > div svg {
     @apply w-[6vw];
@@ -1746,7 +2100,7 @@
     @apply mt-8;
   }
   #light #home .skills div#tsparticles {
-    @apply h-[120vh];
+    @apply h-[100vh];
   }
   #light #home .skills .KeySkillsWrapper {
     @apply flex items-center p-5 justify-center;
@@ -1806,10 +2160,10 @@
   }
   #light #about div.bg {
     @apply h-[100vh] px-10;
-    background-size: 100%;
+    background-size: 100% 100vh;
   }
   #light #about div.bg h1 {
-    @apply pt-[10.5vh] pb-5 text-[8vh];
+    @apply pt-[10.5vh] pb-0;
   }
   #light #about div.bg > div:last-of-type {
     @apply mt-2 mb-5;
@@ -1821,17 +2175,19 @@
     @apply px-10 leading-[2.3] [&>div]:mb-2.5;
   }
   #light #about div.bg .content p {
-    @apply text-[0.9rem];
+    @apply text-[0.95rem];
+  }
+  #light #about div.bg > div:last-of-type {
+    @apply mt-0;
   }
   #light #about section {
-    @apply flex items-center pl-10 py-20;
+    @apply flex items-center pl-10 py-20 [&>div]:w-[45%];
   }
   #light #about section div.imgX2 {
-    @apply w-[65%] rounded-2xl;
+    @apply w-[75%] rounded-2xl;
   }
-  #light #about section div.aboutMe {
-    flex-shrink: 1.5;
-    @apply pr-24 text-[2.4vh] leading-[3.2];
+  #light #about section > div.aboutMe {
+    @apply w-[55%] pr-20 pl-0 text-[1.2vw] leading-[4vw];
   }
   #light #about .myServices div#tsparticles {
     height: 150vh;
@@ -1859,19 +2215,19 @@
     align-self: center;
   }
   #light div#projects div.bg .explore h1 {
-    @apply pl-28 text-[9vh] max-w-[50vw] text-left tracking-wide;
+    @apply pl-28 text-[9vh] max-w-[60vw] text-left tracking-wide;
   }
   #light div#projects div.bg .explore .sub {
-    @apply pl-28 text-[2vh] max-w-[50%] m-0 text-left mt-[-13vh] mb-[-5vh];
+    @apply pl-28 text-[2vh] max-w-[55%] m-0 text-left mt-[-13vh] mb-[-5vh];
   }
   #light div#projects div.bg .explore img {
     @apply w-[1.8vw] mb-[-1rem];
   }
   #light div#projects main nav.projectNav {
-    @apply w-[15%] px-2;
+    @apply w-[18%] px-2;
   }
   #light div#projects main nav.projectNav > div {
-    @apply w-[15%] top-[20vh];
+    @apply w-[18%] top-[20vh];
   }
   #light div#projects main nav.projectNav > div button.Nav {
     @apply mx-[5%] w-[90%] mb-7 
@@ -1948,7 +2304,7 @@
     @apply max-h-[84vh];
   }
   #light #portals div.ResumeDwn {
-    @apply mr-24;
+    @apply w-full;
   }
   #light #portals div.ResumeDwn button[title="Download Resume"] {
     @apply rounded-2xl mr-3.5 px-3.5 py-2;

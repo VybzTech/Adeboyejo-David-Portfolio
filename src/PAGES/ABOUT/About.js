@@ -45,7 +45,7 @@ const About = () => {
     <div id="about">
       <div className="bg">
         <Zoom triggerOnce big delay={1200}>
-          <h1>about me</h1>
+          <h1 className="headings">about me</h1>
         </Zoom>
         <Intro />
         <Zoom className="w-fit mx-auto my-4" bottom triggerOnce delay={1200}>
