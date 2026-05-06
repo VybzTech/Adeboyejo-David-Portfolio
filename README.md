@@ -1,104 +1,219 @@
-# Adeboyejo David
+# Adeboyejo David - Portfolio v2.0
 
-Adeboyejo david is a 24 years old computer engineering specialist in lagos nigeria. His focused has been built aro'und front end development, backend development and Mobile application built with Flutter or React Native.
-This project was built on the [React Library](https://react.dev/) with React's [Create React App](https://github.com/facebook/create-react-app) architecture. Here are the ways/code you can run in this [repo]()
+A beautifully crafted full-stack developer portfolio built with **Next.js 15**, **Tailwind CSS 4**, and **Framer Motion**. Features a neo-skeuomorphic dark mode design with smooth animations and interactive elements.
 
-## Available Scripts
+## 🚀 Features
 
-Clone the
-In the project directory, you can run:
+- **Next.js 15 App Router** - Modern server-first architecture with TypeScript
+- **Responsive Design** - Mobile-first approach with adaptive layouts
+- **Neo-Skeuomorphic UI** - Physical, tactile design with depth and shadows
+- **Smooth Animations** - Powered by Framer Motion for delightful interactions
+- **Dark Mode** - Professional dark theme with cyan (#00f0ff) accent color
+- **Interactive Components**:
+  - Typewriter effect on hero section
+  - Scroll-triggered animations
+  - Project modals with details
+  - Experience timeline
+  - Contact form
+  - Floating chat widget
+- **SEO Optimized** - Proper metadata, Open Graph, and structured data
+- **Accessibility** - Semantic HTML, ARIA labels, and keyboard navigation
 
-### `npm start`
+## 📁 Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+├── app/
+│   ├── api/
+│   │   └── chat/
+│   │       └── route.ts          # Chat API endpoint
+│   ├── globals.css                # Global styles with Tailwind
+│   ├── layout.tsx                 # Root layout with metadata
+│   └── page.tsx                   # Home page
+├── components/
+│   ├── Navigation.tsx             # Sticky navigation with mobile menu
+│   ├── Hero.tsx                   # Hero section with typewriter
+│   ├── About.tsx                  # About section with skills
+│   ├── Work.tsx                   # Projects showcase grid
+│   ├── Experience.tsx             # Work experience timeline
+│   ├── Contact.tsx                # Contact form & info
+│   ├── ChatWidget.tsx             # Floating chat widget
+│   └── Footer.tsx                 # Footer with links
+├── public/
+│   └── logo.png                   # VybzTech logo
+├── next.config.js                 # Next.js configuration
+├── tailwind.config.ts             # Tailwind CSS config with tokens
+├── postcss.config.js              # PostCSS with Tailwind plugin
+└── tsconfig.json                  # TypeScript configuration
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🎨 Design System
 
-### `npm test`
+### Color Palette
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Background**: `rgb(10, 10, 18)` - Deep navy
+- **Foreground**: `rgb(240, 240, 245)` - Off-white
+- **Primary**: `rgb(0, 240, 255)` - Bright cyan
+- **Secondary**: `rgb(80, 100, 255)` - Deep blue
+- **Accent**: `rgb(0, 240, 255)` - Cyan glow
+- **Muted**: `rgb(60, 70, 100)` - Desaturated blue
 
-### `npm run build`
+### Custom Effects
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Neumorphic Shadows**: Dual-layer shadows for depth
+- **Glow Effects**: Cyan glow on interactive elements
+- **Grain Overlay**: Subtle texture for tactile feel
+- **Glassmorphism**: Frosted glass effects on components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Technology Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend
+- **Next.js 15** - React framework with App Router
+- **React 19 RC** - Latest React capabilities
+- **TypeScript** - Type-safe development
+- **Tailwind CSS 4** - Utility-first styling
+- **Framer Motion** - Advanced animations
+- **GSAP** - Timeline animations (ready to use)
 
-if the `npm run build` command fails to minify the code upon build you can contact this section here: [npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Backend
+- **Next.js API Routes** - Serverless functions
+- **TypeScript** - Type safety
 
-### `npm run eject`
+### DevTools
+- **ESLint** - Code linting
+- **Turbopack** - Fast bundler (built into Next.js 15)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📦 Installation & Setup
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+# Install dependencies
+npm install --legacy-peer-deps
 
-## Learn More
+# Run development server
+npm run dev
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Build for production
+npm run build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Start production server
+npm start
+```
 
-### Code Splitting
+The app will be available at `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 Deployment
 
-### Analyzing the Bundle Size
+### Deploy to Vercel (Recommended)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Vercel automatically deploys on push to main
 
-### Making a Progressive Web App
+```bash
+# Or deploy via Vercel CLI
+npm install -g vercel
+vercel
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Environment Variables
 
-### Advanced Configuration
+No environment variables required for the current implementation. To integrate Claude AI Chat:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+ANTHROPIC_API_KEY=your_key_here
+```
 
-### Deployment
+## 📝 Customization Guide
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Update Personal Info
 
-### `npm run build` fails to minify
+Edit the following components to add your information:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Hero**: Update name and description in `components/Hero.tsx`
+- **About**: Modify skills and bio in `components/About.tsx`
+- **Work**: Add your projects in `components/Work.tsx`
+- **Experience**: Update work history in `components/Experience.tsx`
+- **Contact**: Update email and social links in `components/Contact.tsx`
 
-<!-- MAINTAIN CHANGES MADE THROUGH OUT BUILD OF THE APPLICATION
-USE CHAT GPT TO WRITE THE READ.ME TEMP
+### Customize Colors
 
-https://facebook.github.io/create-react-app/docs/troubleshooting#
+Edit design tokens in:
+1. `app/globals.css` - CSS custom properties (root)
+2. `tailwind.config.ts` - Tailwind color extensions
 
+### Add New Sections
 
-git remote add origin https://github.com/VybzTech/Adeboyejo-David-Portfolio.git
+Create new components in `components/` and import them in `app/page.tsx`:
 
-- Navigation on scroll has no Bg.
+```tsx
+// components/YourSection.tsx
+'use client';
+import { motion } from 'framer-motion';
 
-Add to Portfolio code, body{overflow hidden } ..sectionsscroll-snap-type:y mandatory} .sectscroll-snap-align:star{}
+export default function YourSection() {
+  return (
+    <section id="your-id" className="py-20">
+      {/* Your content */}
+    </section>
+  );
+}
 
+// app/page.tsx
+import YourSection from '@/components/YourSection';
 
+export default function Home() {
+  return (
+    <main>
+      {/* ... other sections */}
+      <YourSection />
+    </main>
+  );
+}
+```
 
-ROADMAP
-requirements gathering, design, implementation, testing, deployment, and maintenance
-Projects
-Testing
-Security
-Scalability
-Accessibility
-Maintenance
+## 🎬 Animations
 
+All animations respect `prefers-reduced-motion` for accessibility:
 
-import { Outlet, useLocation } from "react-router-dom";
+- **Scroll Triggers**: Components animate when scrolled into view
+- **Stagger Effects**: Child elements animate sequentially
+- **Hover States**: Interactive elements respond to user interaction
+- **Typewriter**: Smooth character-by-character text effect
 
-  const location = useLocation();
+## 📱 Responsive Breakpoints
 
--->
+- **Mobile**: Default styles
+- **Tablet** (md): 768px
+- **Desktop** (lg): 1024px
+- **Large Desktop** (xl): 1280px
+
+## 🔍 SEO
+
+- Dynamic metadata in `app/layout.tsx`
+- Open Graph support for social sharing
+- Structured semantic HTML
+- Mobile viewport optimization
+- Theme color configuration
+
+## 📄 License
+
+This portfolio is open source and available for personal use.
+
+## 🤝 Contributing
+
+Feel free to fork and customize this portfolio for your own use!
+
+## 📞 Contact
+
+- Email: hello@adeboyejo.dev
+- GitHub: [@VybzTech](https://github.com)
+- LinkedIn: [Adeboyejo David](https://linkedin.com)
+
+---
+
+Built with ❤️ using Next.js 15 and Tailwind CSS 4
