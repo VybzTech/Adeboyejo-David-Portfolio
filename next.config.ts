@@ -11,10 +11,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  transpilePackages: ["@phosphor-icons/react", "@react-three/drei", "framer-motion"],
   experimental: {
-    optimizePackageImports: ["@phosphor-icons/react", "lucide-react", "framer-motion"],
+    optimizePackageImports: ["@phosphor-icons/react", "framer-motion"],
   },
 };
+
 
 export default withBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
