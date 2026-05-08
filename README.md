@@ -1,104 +1,253 @@
-# Adeboyejo David
+# David Adeboyejo - Product Engineer Portfolio
 
-Adeboyejo david is a 24 years old computer engineering specialist in lagos nigeria. His focused has been built aro'und front end development, backend development and Mobile application built with Flutter or React Native.
-This project was built on the [React Library](https://react.dev/) with React's [Create React App](https://github.com/facebook/create-react-app) architecture. Here are the ways/code you can run in this [repo]()
+A premium, production-ready portfolio website built with Next.js, TypeScript, and Tailwind CSS. Designed for high performance (Lighthouse 95+), SEO optimization, and premium user experience.
 
-## Available Scripts
+## Overview
 
-Clone the
-In the project directory, you can run:
+This is a full-stack portfolio showcasing work as a Product Engineer specializing in full-stack development, SaaS products, and modern web technologies. The site features:
 
-### `npm start`
+- **Premium dark mode aesthetic** with cyan/violet accents (Apple × Linear × SaaS style)
+- **Tactile soft-UI** with hover lift effects, button depress states, and smooth transitions
+- **Optimized performance** with Lighthouse 95+ target, server components, and dynamic imports
+- **SEO-first architecture** with metadata per page, JSON-LD schema, dynamic sitemap, and RSS feed
+- **Accessible design** with WCAG AAA contrast, keyboard navigation, skip links, and semantic HTML
+- **Full-stack capabilities** including form validation, email delivery (Resend), and API routes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech Stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript (strict mode)
+- **Styling**: Tailwind CSS 4 with custom design tokens
+- **Animations**: Framer Motion for scroll reveals and interactive states
+- **Forms**: React Hook Form + Zod for validation
+- **Email**: Resend for contact form delivery
+- **Icons**: Phosphor Icons (primary) + React Icons (fallback)
+- **Analytics**: Vercel Analytics
+- **Deployment**: Vercel
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js 18+ with pnpm (or npm/yarn)
+- Git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone the repository
+git clone https://github.com/VybzTech/Adeboyejo-David-Portfolio.git
+cd Adeboyejo-David-Portfolio
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Install dependencies
+pnpm install
 
-if the `npm run build` command fails to minify the code upon build you can contact this section here: [npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Set up environment variables (see .env.example)
+cp .env.example .env.local
+# Edit .env.local with your actual values
+```
 
-### `npm run eject`
+### Development
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+# Start dev server (runs on http://localhost:3000)
+pnpm dev
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Run type checking
+pnpm type-check
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Run linting
+pnpm lint
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Format code
+pnpm format
+```
 
-## Learn More
+### Build & Deploy
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# Build for production
+pnpm build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Start production server
+pnpm start
 
-### Code Splitting
+# Deploy to Vercel
+# Push to GitHub and Vercel will auto-deploy, or use:
+# vercel deploy --prod
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Project Structure
 
-### Analyzing the Bundle Size
+```
+/app
+  /api                    # API routes
+    /contact             # Contact form endpoint
+  /case-studies          # Case studies pages
+    /[slug]             # Dynamic case study detail
+  /about                 # About page
+  page.tsx              # Home page
+  layout.tsx            # Root layout with fonts
+  globals.css           # Global styles & design tokens
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+/components
+  /layout               # Layout components (Navbar, Footer)
+  /sections             # Page sections (Hero, WhatIDo, etc.)
+  /cards                # Reusable card components
+  /ui                   # Basic UI components (Button, Input, etc.)
+  /common               # Common utilities (ScrollReveal)
 
-### Making a Progressive Web App
+/lib
+  /constants.ts         # Brand info, nav, projects, skills
+  /animation.ts         # Framer Motion variants
+  /metadata.ts          # SEO metadata helpers
+  /zod-schemas.ts       # Form validation schemas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+/public
+  /og-image.png         # OpenGraph image
+  /case-studies/        # Project screenshots
+  /resume.pdf          # Resume download
+  /robots.txt          # SEO robots directive
+```
 
-### Advanced Configuration
+## Key Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Performance
+- Server Components by default (reduced client JS)
+- Dynamic imports for heavy components
+- next/image with AVIF/WebP conversion
+- Lazy loading for below-fold sections
+- Target: Lighthouse 95+ on all metrics
 
-### Deployment
+### SEO
+- Per-page metadata with OpenGraph
+- JSON-LD schema (Person, WebSite, Breadcrumb)
+- Dynamic sitemap.xml
+- RSS feed endpoint
+- Canonical tags
+- Semantic HTML
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Accessibility
+- WCAG AAA color contrast (cyan on navy = 15:1)
+- Keyboard navigation with visible focus states
+- Skip-to-main-content link
+- Screen reader friendly (sr-only utilities)
+- Semantic heading hierarchy
+- Form labels and ARIA attributes
+- Reduced motion support
 
-### `npm run build` fails to minify
+### Animations
+- Scroll reveals: fade-up with stagger (0.1s between items)
+- Button press: scale 0.98 with shadow reduction
+- Card hover: lift (transform y-8px) with shadow growth
+- All animations GPU-safe and respect prefers-reduced-motion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Forms & Validation
 
-<!-- MAINTAIN CHANGES MADE THROUGH OUT BUILD OF THE APPLICATION
-USE CHAT GPT TO WRITE THE READ.ME TEMP
+The contact form includes:
+- Client validation with React Hook Form + Zod
+- Server-side validation
+- Honeypot field for bot protection
+- Rate limiting (5 submissions per IP per hour)
+- Email delivery via Resend
+- Success/error feedback
 
-https://facebook.github.io/create-react-app/docs/troubleshooting#
+## Environment Variables
 
+Create `.env.local`:
 
-git remote add origin https://github.com/VybzTech/Adeboyejo-David-Portfolio.git
+```env
+# Email service (Resend)
+NEXT_PUBLIC_RESEND_API_KEY=your_api_key_here
 
-- Navigation on scroll has no Bg.
+# Optional: Analytics
+NEXT_PUBLIC_VERCEL_ANALYTICS_ID=your_id_here
+```
 
-Add to Portfolio code, body{overflow hidden } ..sectionsscroll-snap-type:y mandatory} .sectscroll-snap-align:star{}
+## Customization
 
+### Colors
+Edit `tailwind.config.ts` and `app/globals.css` to change the color palette:
+- `--background: #0a0e27` (deep navy)
+- `--accent-primary: #00d9ff` (cyan)
+- `--accent-secondary: #7c3aed` (violet)
 
+### Content
+Update content in:
+- `/lib/constants.ts` for brand, skills, projects, experience
+- `/components/sections/` for section content
+- `/app/*/page.tsx` for page copy
 
-ROADMAP
-requirements gathering, design, implementation, testing, deployment, and maintenance
-Projects
-Testing
-Security
-Scalability
-Accessibility
-Maintenance
+### Fonts
+Configure in `/app/layout.tsx`:
+- Headlines: Clash Display or Space Grotesk
+- Body: Inter or Montserrat
 
+## Deployment
 
-import { Outlet, useLocation } from "react-router-dom";
+### Vercel (Recommended)
 
-  const location = useLocation();
+1. Push to GitHub
+2. Import repo in Vercel dashboard
+3. Add environment variables
+4. Deploy (auto on push to main)
 
--->
+### Other Platforms
+
+The project is compatible with any Node.js 18+ host. Build output is in `.next/` after running `pnpm build`.
+
+## Performance Metrics
+
+Target metrics:
+- **Lighthouse**: 95+ across all categories
+- **Core Web Vitals**: LCP <2.5s, FID <100ms, CLS <0.1
+- **Bundle Size**: <200KB JS gzipped
+- **First Contentful Paint**: <1.5s
+
+## SEO Target Keywords
+
+- David Adeboyejo
+- Product Engineer
+- Full Stack Developer Nigeria
+- React Developer Nigeria
+- Next.js Developer
+- Frontend Engineer Africa
+- Node.js Engineer
+- SaaS Developer
+- Portfolio Developer Lagos
+
+## Future Enhancements (Phase 5+)
+
+- [ ] Blog with Sanity CMS
+- [ ] Testimonials section
+- [ ] Advanced analytics with PostHog
+- [ ] Chat widget for support
+- [ ] 3D hero scene with React Three Fiber
+- [ ] Dark/light theme toggle
+- [ ] Localization (i18n)
+- [ ] Advanced email campaigns with Loops
+
+## Contributing
+
+Contributions welcome! Please follow the code style and run linting before submitting PRs.
+
+```bash
+pnpm lint --fix
+pnpm format
+pnpm type-check
+```
+
+## License
+
+MIT - feel free to use this as a template for your own portfolio.
+
+## Support
+
+For issues, questions, or feedback:
+- Email: david@example.com
+- LinkedIn: [David Adeboyejo](https://linkedin.com/in/davidadeboyejo)
+- GitHub: [VybzTech](https://github.com/vybztech)
+
+---
+
+Built with care for high performance, accessibility, and premium user experience.

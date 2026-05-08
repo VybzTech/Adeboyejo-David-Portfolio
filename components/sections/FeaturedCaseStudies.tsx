@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
@@ -13,6 +14,7 @@ export default function FeaturedCaseStudies() {
     {
       slug: 'project-1',
       title: 'SaaS Dashboard',
+      image: '/case-studies/saas-dashboard.png',
       role: 'Lead Developer',
       problem: 'Building a real-time analytics platform',
       stack: ['Next.js', 'TypeScript', 'PostgreSQL'],
@@ -21,6 +23,7 @@ export default function FeaturedCaseStudies() {
     {
       slug: 'project-2',
       title: 'Mobile App',
+      image: '/case-studies/mobile-app.png',
       role: 'Full Stack',
       problem: 'Cross-platform app with offline sync',
       stack: ['React Native', 'Node.js', 'Firebase'],
@@ -29,6 +32,7 @@ export default function FeaturedCaseStudies() {
     {
       slug: 'project-3',
       title: 'AI Integration',
+      image: '/case-studies/ai-integration.png',
       role: 'Backend Lead',
       problem: 'LLM-powered automation tool',
       stack: ['Next.js', 'OpenAI', 'Stripe'],
@@ -67,8 +71,16 @@ export default function FeaturedCaseStudies() {
                   variants={cardHoverVariants}
                   className="h-full bg-background border border-border rounded-2xl p-6 md:p-8 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
                 >
-                  {/* Placeholder Image */}
-                  <div className="w-full h-40 bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 rounded-xl mb-6"></div>
+                  {/* Project Image */}
+                  <div className="relative w-full h-40 mb-6 rounded-xl overflow-hidden bg-surface">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
 
                   <div className="space-y-4">
                     <div>
