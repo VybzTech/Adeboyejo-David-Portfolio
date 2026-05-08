@@ -65,7 +65,7 @@ export default function WhatIDo() {
                 <p className="text-text-muted flex-grow mb-6">{service.description}</p>
 
                 {/* CTA */}
-                <Button variant="ghost" size="sm" className="text-left w-max">
+                <Button variant="outline" size="sm" className="text-left w-max">
                   Learn more →
                 </Button>
               </div>

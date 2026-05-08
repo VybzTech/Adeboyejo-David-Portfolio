@@ -77,6 +77,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} bg-background`}
     >
+      {/* Skip to main content link for keyboard users */}
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -109,7 +110,16 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {/* Skip to main link */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-accent-primary focus:text-background focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold"
+        >
+          Skip to main content
+        </a>
+        {children}
+      </body>
     </html>
   );
 }

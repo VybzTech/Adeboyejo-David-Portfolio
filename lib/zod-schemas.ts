@@ -17,6 +17,7 @@ export const contactFormSchema = z.object({
     ),
   serviceType: z
     .enum(['frontend', 'backend', 'full-stack', 'product', 'other'])
+    .optional()
     .default('full-stack'),
   budget: z
     .enum(['under-1k', '1-5k', '5-10k', '10k-plus', 'not-sure'])

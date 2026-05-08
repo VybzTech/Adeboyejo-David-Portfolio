@@ -15,7 +15,9 @@ export function generatePageMetadata(
     title: fullTitle,
     description,
     metadataBase: new URL(BRAND.url),
-    canonical: url,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title: fullTitle,
       description,

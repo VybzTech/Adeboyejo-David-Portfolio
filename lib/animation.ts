@@ -83,10 +83,9 @@ export const heroVisualVariants: Variants = {
 
 // Card Animations
 export const cardHoverVariants: Variants = {
-  initial: { y: 0, shadow: '0 10px 30px rgba(0, 0, 0, 0.3)' },
+  initial: { y: 0 },
   hover: {
     y: -8,
-    shadow: '0 20px 50px rgba(0, 0, 0, 0.4)',
     transition: {
       duration: 0.3,
       ease: [0.4, 0, 0.2, 1],

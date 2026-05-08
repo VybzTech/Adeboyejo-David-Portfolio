@@ -86,15 +86,11 @@ const Button = ({
           className,
         })}
         disabled={isDisabled}
-        ref={ref}
         {...props}
       >
         {isLoading ? loadingText : children}
       </button>
     );
-  }
-);
-
-Button.displayName = 'Button';
+  };
 
 export default Button;
