@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "David Adeboyejo | Product Engineer",
     description: "Senior Product Engineer specializing in high-performance web applications.",
-    creator: "@davidadeboyejo",
+    creator: "@djay_vybz",
   },
   robots: {
     index: true,
@@ -74,15 +74,15 @@ export default function RootLayout({
     <html lang="en" className={cn(spaceGrotesk.variable, montserrat.variable, "scroll-smooth")}>
       <body className="bg-background text-text-primary font-body antialiased selection:bg-primary/30">
         <div className="noise-bg" />
-          <LenisProvider>
-        <ThemeProvider>
+        <LenisProvider>
+          <ThemeProvider>
             <div className="relative flex min-h-screen flex-col">
               <Navbar />
               <main className="flex-1">{children}</main>
               <Footer />
             </div>
-        </ThemeProvider>
-          </LenisProvider>
+          </ThemeProvider>
+        </LenisProvider>
       </body>
     </html>
   );

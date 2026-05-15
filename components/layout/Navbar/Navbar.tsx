@@ -32,6 +32,10 @@ export function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  console.log(theme, "theme");
+  console.log(isScrolled, "isScrolled");
+  console.log(isMobileMenuOpen, "isMobileMenuOpen");
+
   return (
     <>
       <header
