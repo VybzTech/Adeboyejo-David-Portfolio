@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Montserrat } from "next/font/google";
 import "./globals.css";
-import { LenisProvider } from "@/components/providers/lenis-provider";
+import { LenisProvider } from "@/components/providers/LenisProvider";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
 
 const spaceGrotesk = Space_Grotesk({
@@ -61,8 +62,8 @@ export const viewport: Viewport = {
 };
 
 
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 export default function RootLayout({
   children,
@@ -73,13 +74,15 @@ export default function RootLayout({
     <html lang="en" className={cn(spaceGrotesk.variable, montserrat.variable, "scroll-smooth")}>
       <body className="bg-background text-text-primary font-body antialiased selection:bg-primary/30">
         <div className="noise-bg" />
-        <LenisProvider>
-          <div className="relative flex min-h-screen flex-col">
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-        </LenisProvider>
+          <LenisProvider>
+        <ThemeProvider>
+            <div className="relative flex min-h-screen flex-col">
+              <Navbar />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+        </ThemeProvider>
+          </LenisProvider>
       </body>
     </html>
   );

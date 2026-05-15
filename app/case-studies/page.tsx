@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { PROJECTS } from "@/lib/data";
-import { ScrollReveal } from "@/components/common/scroll-reveal";
+import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";

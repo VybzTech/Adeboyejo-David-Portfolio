@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/Button";
-import { ScrollReveal } from "@/components/common/scroll-reveal";
+import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { BRAND_INFO } from "@/lib/data";
 import Link from "next/link";
 import { ArrowRight } from "@phosphor-icons/react";

@@ -1,6 +1,6 @@
 import { PROJECTS } from "@/lib/data";
 import { notFound } from "next/navigation";
-import { ScrollReveal } from "@/components/common/scroll-reveal";
+import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 import Link from "next/link";

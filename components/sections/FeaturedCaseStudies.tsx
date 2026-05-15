@@ -2,7 +2,7 @@
 
 import { PROJECTS } from "@/lib/data";
 import { Card } from "@/components/ui/Card";
-import { ScrollReveal } from "@/components/common/scroll-reveal";
+import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import Image from "next/image";

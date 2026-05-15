@@ -1,8 +1,8 @@
 "use client";
 
 import { Card } from "@/components/ui/Card";
-import { ScrollReveal } from "@/components/common/scroll-reveal";
-import { ContactForm } from "./contact-form";
+import { ScrollReveal } from "@/components/common/ScrollReveal";
+import { ContactForm } from "./ContactForm";
 import { BRAND_INFO } from "@/lib/data";
 import { EnvelopeSimpleIcon, PhoneIcon, MapPinIcon, CopyIcon } from "@phosphor-icons/react";
 import { useState } from "react";

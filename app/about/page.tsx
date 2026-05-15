@@ -1,6 +1,6 @@
 "use client";
 
-import { ScrollReveal } from "@/components/common/scroll-reveal";
+import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { BRAND_INFO, SKILLS } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";

@@ -1,7 +1,15 @@
 {
-  "name": "da",
+  "name": "David Adeboyejo",
   "version": "0.1.0",
   "private": true,
+  "author": "David Adeboyejo",
+  "license": "MIT",
+  "type": "module",
+  "description": "Portfolio of David Adeboyejo, a software engineer with a passion for building innovative and user-friendly applications.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adeboyejodavid/Adeboyejo-David-Portfolio.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
