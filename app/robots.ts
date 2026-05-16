@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://davidadeboyejo.com/sitemap.xml",
+    sitemap: "https://david-adeboyejo.web.app/sitemap.xml",
   };
 }

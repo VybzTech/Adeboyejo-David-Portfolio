@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://davidadeboyejo.com",
+    url: "https://david-adeboyejo.web.app",
     title: "David Adeboyejo | Product Engineer",
     description: "Senior Product Engineer specializing in high-performance web applications.",
     siteName: "David Adeboyejo Portfolio",
