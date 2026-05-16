@@ -7,7 +7,7 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 export default function Home() {
   return (
     <div className="flex flex-col">
-      {/* <Hero /> */}
+      <Hero />
       {/* <WhatIDo />
       <AboutPreview />
       <FeaturedCaseStudies />

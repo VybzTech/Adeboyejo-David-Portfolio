@@ -2,31 +2,35 @@
 
 import Link from "next/link";
 import { BRAND_INFO } from "@/lib/data";
-import { GithubLogo, LinkedinLogo, TwitterLogo, InstagramLogo, EnvelopeSimple, Phone } from "@phosphor-icons/react";
+import { GithubLogoIcon, LinkedinLogoIcon, TwitterLogoIcon, InstagramLogoIcon, EnvelopeSimple, Phone } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
+import Logo from "./Navbar/Logo";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <GithubLogo size={24} />, href: BRAND_INFO.github, label: "GitHub" },
-    { icon: <LinkedinLogo size={24} />, href: BRAND_INFO.linkedin, label: "LinkedIn" },
-    { icon: <TwitterLogo size={24} />, href: BRAND_INFO.twitter, label: "Twitter" },
-    { icon: <InstagramLogo size={24} />, href: BRAND_INFO.instagram, label: "Instagram" },
+    { icon: <GithubLogoIcon size={24} />, href: BRAND_INFO.github, label: "GitHub" },
+    { icon: <LinkedinLogoIcon size={24} />, href: BRAND_INFO.linkedin, label: "LinkedIn" },
+    { icon: <TwitterLogoIcon size={24} />, href: BRAND_INFO.twitter, label: "Twitter" },
+    { icon: <InstagramLogoIcon size={24} />, href: BRAND_INFO.instagram, label: "Instagram" },
   ];
 
   return (
-    <footer className="bg-[var(--background)] border-t border-[var(--border)] pt-20 pb-10 px-6 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto">
+    <footer className="relative bg-[var(--background)] border-t border-[var(--border)] pt-20 pb-10 px-6 transition-all duration-500 overflow-hidden">
+      {/* Intense Deep Blue Glows */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(19,91,232,0.12),transparent_30%)] pointer-events-none" />
+      {/* <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-primary/25 blur-[130px] rounded-full pointer-events-none opacity-60" /> */}
+      <div className="absolute -top-60 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/15 blur-[150px] rounded-full pointer-events-none opacity-40" />
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6 group">
-              <div className="w-10 h-10 bg-[var(--accent-primary)] rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg group-hover:rotate-6 transition-transform">
-                DA
-              </div>
-              <span className="font-heading text-xl font-bold tracking-tight">
-                {BRAND_INFO.brand}
+              <Logo svgWidth="9vw" svgFill={"#5559"} AFill={"#135be8"} theme={"light"} />
+              <span className="font-heading text-2xl font-bold tracking-[-0.02em]">
+                {BRAND_INFO.name}
               </span>
             </Link>
             <p className="text-[var(--text-muted)] max-w-sm mb-8 leading-relaxed">
@@ -51,7 +55,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="font-heading font-bold text-[var(--text-primary)] mb-6 uppercase tracking-wider text-sm">Navigation</h4>
+            <h4 className="font-heading font-bold text-[var(--text-primary)] mb-6 uppercase tracking-wider text-md">Site map</h4>
             <ul className="flex flex-col gap-4 text-[var(--text-muted)]">
               <li><Link href="/" className="hover:text-[var(--accent-primary)] transition-colors">Home</Link></li>
               <li><Link href="/about" className="hover:text-[var(--accent-primary)] transition-colors">About</Link></li>
@@ -62,7 +66,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading font-bold text-[var(--text-primary)] mb-6 uppercase tracking-wider text-sm">Contact</h4>
+            <h4 className="font-heading font-bold text-[var(--text-primary)] mb-6 uppercase tracking-wider text-md">Contact</h4>
             <ul className="flex flex-col gap-4 text-[var(--text-muted)]">
               <li className="flex items-center gap-3">
                 <EnvelopeSimple size={20} className="text-[var(--accent-primary)]" />

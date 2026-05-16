@@ -8,10 +8,13 @@
   --color-secondary: var(--accent-secondary);
   --color-text-primary: var(--text-primary);
   --color-text-muted: var(--text-muted);
-  
+
+  --font-heading: var(--font-clash);
+  --font-body: var(--font-montserrat);
+
   --shadow-premium: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
   --shadow-glow: 0 0 20px rgba(0, 217, 255, 0.15);
-  
+
   --radius-premium: 1.25rem;
 }
 
@@ -19,10 +22,8 @@
   /* Common variables */
   --glass-blur: 12px;
   --transition-premium: cubic-bezier(0.4, 0, 0.2, 1);
-  
-  /* Fonts from layout.tsx */
-  --font-heading: var(--font-heading);
-  --font-body: var(--font-body);
+
+  /* Fonts from layout.tsx are already defined in html tag */
 }
 
 /* Light Theme Variables */
@@ -40,7 +41,8 @@
 }
 
 /* Dark Theme Variables (Default) */
-:root, [data-theme="dark"] {
+:root,
+[data-theme="dark"] {
   --background: #0e0e0ef9;
   --surface: #1a1a1a;
   --surface-elevated: #2a2a2a;
@@ -51,13 +53,20 @@
   --border: rgba(255, 255, 255, 0.1);
   --glass-bg: rgba(14, 14, 14, 0.7);
   --glass-border: rgba(255, 255, 255, 0.1);
+  outline: none !important;
 }
 
 @layer base {
   * {
     border-color: var(--border);
+    outline: none !important;
   }
-  
+
+  *:focus-visible,
+  *:focus-within {
+    outline: none !important;
+  }
+
   body {
     background-color: var(--background);
     color: var(--text-primary);
@@ -68,10 +77,15 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     font-weight: 700;
-    tracking: -0.025em;
+    letter-spacing: -0.025em;
     color: var(--text-primary);
   }
 }
@@ -82,16 +96,13 @@
     backdrop-filter: blur(var(--glass-blur));
     border: 1px solid var(--glass-border);
   }
-  
+
   .premium-button {
-    @apply relative inline-flex items-center justify-center gap-2
-           px-6 py-3 rounded-full font-medium
-           transition-all duration-300 ease-[var(--transition-premium)]
-           active:scale-95;
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ease-[var(--transition-premium)] active:scale-95;
     background: var(--accent-primary);
     color: white;
   }
-  
+
   .premium-button:hover {
     filter: brightness(1.1);
     box-shadow: 0 0 20px var(--shadow-glow);
@@ -102,7 +113,8 @@
     color: var(--text-muted);
   }
 
-  .nav-link:hover, .nav-link.active {
+  .nav-link:hover,
+  .nav-link.active {
     color: var(--text-primary);
   }
 }

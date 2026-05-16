@@ -1,20 +1,24 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers/LenisProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
+import localFont from "next/font/local";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-heading",
-  subsets: ["latin"],
+
+const clashDisplay = localFont({
+  src: "../src/fonts/woff2/ClashDisplay-Variable.woff2",
+  variable: "--font-clash",
   display: "swap",
+  weight: "200 700",
 });
 
 const montserrat = Montserrat({
-  variable: "--font-body",
-  subsets: ["latin"],
   display: "swap",
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -64,6 +68,7 @@ export const viewport: Viewport = {
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ErrorBoundary } from "@/components/common/ErrorBoundary";
 
 export default function RootLayout({
   children,
@@ -71,14 +76,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(spaceGrotesk.variable, montserrat.variable, "scroll-smooth")}>
+    <html
+      lang="en"
+      className={cn(
+        clashDisplay.variable,
+        montserrat.variable,
+        "scroll-smooth"
+      )}
+    >
       <body className="bg-background text-text-primary font-body antialiased selection:bg-primary/30">
         <div className="noise-bg" />
         <LenisProvider>
           <ThemeProvider>
             <div className="relative flex min-h-screen flex-col">
               <Navbar />
-              <main className="flex-1">{children}</main>
+              <main className="flex-1">
+                <ErrorBoundary>
+                  {children}
+                </ErrorBoundary>
+              </main>
               <Footer />
             </div>
           </ThemeProvider>
