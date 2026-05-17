@@ -49,10 +49,10 @@ export function Typo() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }} // Initial delay similar to classic v0
-        className="text-[16px] md:text-[34px] text-[var(--text-muted)] font-body font-medium uppercase tracking-tight"
+        className="text-[16px] md:text-[34px] text-white font-body font-medium uppercase tracking-tighter"
       >
         {text}
-        <span className="animate-[pulse_1s_ease-in-out_infinite] inline-block border-r-2 border-[var(--text-muted)] ml-1 h-[0.9em] align-middle" />
+        <span className="animate-[pulse_1s_ease-in-out_infinite] inline-block border-r-2 border-[var(--text-danger)] ml-0.5 h-[0.95em] align-middle" />
       </motion.p>
     </div>
   );

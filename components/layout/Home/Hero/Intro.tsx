@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Typo } from "./Typo";
 import { AnimatedName } from "@/components/ui/AnimatedName";
+import { cn } from "@/lib/utils";
 
 export function Intro() {
   const [showGreeting, setShowGreeting] = useState(true);
@@ -40,14 +41,10 @@ export function Intro() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
-        className="text-5xl md:text-8xl lg:text-9xl font-body font-extrabold leading-[0.9] tracking-tighter mb-4"
-      >
-        DAVID 
-        <AnimatedName name="ADEBOYEJO" className="text-5xl font-bold tracking-normal font-body
-        " />
-         {/* <br className="md:hidden" />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">DAVID</span> */}
-      </motion.h1>
+        className={cn("text-5xl md:text-8xl lg:text-9xl mb-4" , 
+          "leading-[0.9] tracking-[-0.1px]",
+        "font-body font-black uppercase")}
+      >DAVID ADEBOYEJO</motion.h1>
 
       {/* Animated Roles */}
       <motion.div

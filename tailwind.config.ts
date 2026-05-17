@@ -17,6 +17,7 @@ const config: Config = {
         text: {
           primary: "#e4e4e7",
           secondary: "#a1a1aa",
+          danger: "#ef4444",
         },
       },
 

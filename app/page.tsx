@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Hero />
-      {/* <WhatIDo />
+      <WhatIDo />
       <AboutPreview />
       <FeaturedCaseStudies />
-      <ContactCTA /> */}
+      <ContactCTA />
     </div>
   );
 }

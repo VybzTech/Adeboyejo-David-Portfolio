@@ -1,100 +1,74 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-import { Button } from "@/components/ui/Button";
-import { ScrollReveal } from "@/components/common/ScrollReveal";
-import { BRAND_INFO } from "@/lib/data";
-import Link from "next/link";
-import { ArrowRight } from "@phosphor-icons/react";
-
-const scrollingTitles = [
-  "PRODUCT ENGINEER", "FULL STACK DEVELOPER", "UI/UX DESIGNER",
-  "REACT EXPERT", "MOBILE DEVELOPER", "PERFORMANCE ENGINEER",
-  "PRODUCT ENGINEER", "FULL STACK DEVELOPER", "UI/UX DESIGNER"
-];
+import { useState } from "react";
+import { useTheme } from "@/components/providers/ThemeProvider";
+import { cn } from "@/lib/utils";
+import { AboutBanner } from "./About/AboutBanner";
+import { AboutNav } from "./About/AboutNav";
+import { AboutMe } from "./About/AboutMe";
+import { Experience } from "./About/Experience";
+import { Education } from "./About/Education";
+import { Certification } from "./About/Certification";
 
 export function AboutPreview() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  });
+  const { theme } = useTheme();
+  const [activeSection, setActiveSection] = useState("about");
+  const isDark = theme === "dark";
 
-  const bannerX = useTransform(scrollYProgress, [0, 1], [0, -500]);
+  const renderContent = () => {
+    switch (activeSection) {
+      case "about":
+        return <AboutMe />;
+      case "experience":
+        return <Experience />;
+      case "education":
+        return <Education />;
+      case "certification":
+        return <Certification />;
+      default:
+        return <AboutMe />;
+    }
+  };
 
   return (
-    <section ref={containerRef} className="relative overflow-hidden bg-background py-64">
-      {/* Diagonal Banner */}
-      <div className="absolute top-1/2 left-1/2 w-[200%] h-40 bg-secondary/10 -rotate-[25deg] -translate-x-1/2 -translate-y-1/2 z-0 flex items-center overflow-hidden border-y border-white/5 pointer-events-none">
-        <motion.div style={{ x: bannerX }} className="flex whitespace-nowrap gap-12">
-          {scrollingTitles.map((title, i) => (
-            <span key={i} className="text-4xl md:text-6xl font-heading font-black text-white/20">
-              {title}
-            </span>
-          ))}
-        </motion.div>
-      </div>
+    <section
+      className={cn(
+        "relative overflow-hidden py-24 md:py-32",
+        isDark ? "bg-[var(--background)]" : "bg-white"
+      )}
+    >
+      {/* Banner Background */}
+      <AboutBanner />
 
-      <div className="max-w-7xl mx-auto px-6 pt-40 flex flex-col lg:flex-row gap-20">
-        {/* Pinned Summary */}
-        <div className="lg:w-1/3 lg:sticky lg:top-32 h-fit">
-          <ScrollReveal direction="left">
-            <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-4">About Me</h2>
-            <h3 className="text-4xl md:text-5xl font-heading font-bold mb-8">
-              A decade of <span className="text-gradient">excellence</span> in digital craftsmanship.
-            </h3>
-            <p className="text-text-muted mb-8 leading-relaxed">
-              I specialize in bridging the gap between complex engineering and intuitive design. My philosophy is rooted in performance, accessibility, and aesthetic perfection.
-            </p>
-            <Link href="/about">
-              <Button variant="outline" className="group">
-                Full Story
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </ScrollReveal>
-        </div>
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="pt-20 md:pt-40 flex flex-col lg:flex-row gap-12 lg:gap-20">
+          {/* Left Navigation */}
+          <AboutNav activeSection={activeSection} onSectionChange={setActiveSection} />
 
-        {/* Scroll Story */}
-        <div className="lg:w-2/3 flex flex-col gap-24 relative pl-12 border-l border-white/5">
-          <ScrollReveal direction="up">
-            <div className="relative">
-              <div className="absolute -left-[60px] top-4 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-[10px] font-bold text-background z-20 shadow-glow">1</div>
-              <div className="glass-panel p-10 rounded-3xl">
-                <h4 className="text-2xl font-heading font-bold mb-4">Who I Am</h4>
-                <p className="text-text-muted leading-relaxed">
-                  David is a Senior Product Engineer with a passion for building software that users actually love. With a background in both design and engineering, he brings a unique perspective to every project.
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal direction="up" delay={0.1}>
-            <div className="relative">
-              <div className="absolute -left-[60px] top-4 w-6 h-6 rounded-full bg-surface-elevated border border-white/10 flex items-center justify-center text-[10px] font-bold text-text-muted z-20">2</div>
-              <div className="glass-panel p-10 rounded-3xl">
-                <h4 className="text-2xl font-heading font-bold mb-4">Remote Readiness</h4>
-                <p className="text-text-muted leading-relaxed">
-                  Operating globally from Lagos, Nigeria. I have mastered the art of asynchronous communication and remote collaboration across multiple timezones (GMT to PST).
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal direction="up" delay={0.2}>
-            <div className="relative">
-              <div className="absolute -left-[60px] top-4 w-6 h-6 rounded-full bg-surface-elevated border border-white/10 flex items-center justify-center text-[10px] font-bold text-text-muted z-20">3</div>
-              <div className="glass-panel p-10 rounded-3xl">
-                <h4 className="text-2xl font-heading font-bold mb-4">Tech Philosophy</h4>
-                <p className="text-text-muted leading-relaxed">
-                  I don&apos;t just write code; I architect solutions. I believe in the &quot;Server First&quot; mentality, aggressive optimization, and the importance of a delightful user experience.
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
+          {/* Right Content */}
+          <div
+            className={cn(
+              "lg:w-2/3 rounded-2xl p-8 md:p-12 border transition-all duration-300",
+              isDark
+                ? "bg-gradient-to-br from-surface/50 to-surface/20 border-white/10"
+                : "bg-gradient-to-br from-blue-50/50 to-white border-blue-200/50"
+            )}
+          >
+            {renderContent()}
+          </div>
         </div>
       </div>
+
+      {/* Bottom Gradient Fade */}
+      <div
+        className={cn(
+          "absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t pointer-events-none",
+          isDark
+            ? "from-[var(--background)] to-transparent"
+            : "from-white to-transparent"
+        )}
+      />
     </section>
   );
 }

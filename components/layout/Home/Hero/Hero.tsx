@@ -24,20 +24,15 @@ export function Hero() {
       >
         <div className="flex-1 flex flex-col items-between justify-start text-center px-6 pt-[18vh]">
           <div className="mx-auto w-full flex flex-col items-start">
-            <AnimatedBadge text="Let's Build" /> 
+            <AnimatedBadge text="Let's Build" />
             <Intro />
-
-            {/* Action Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.2 }}
               className="flex flex-wrap gap-6 justify-center mt-4"
             >
-              {/* <Button size="lg" icon={<ArrowRightIcon weight="bold" />}>
-                Explore Work
-              </Button> */}
-              <OutlineButton icon={<EyeIcon weight="bold" size={16} />}>
+              <OutlineButton>
                 View Case Studies
               </OutlineButton>
             </motion.div>
@@ -45,7 +40,7 @@ export function Hero() {
         </div>
 
         {/* Tech Marquee */}
-        <div className="pb-10">
+        <div className="pb-7">
           <TechMarquee />
         </div>
       </BackgroundImage>
