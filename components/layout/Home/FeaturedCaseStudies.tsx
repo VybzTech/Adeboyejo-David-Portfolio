@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { PROJECTS } from "@/lib/data";
 import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { OutlineButton } from "@/components/ui/OutlineButton";
@@ -41,11 +41,11 @@ export function FeaturedCaseStudies() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal direction="right">
+          {/* <ScrollReveal direction="right">
             <Link href="/case-studies">
               <OutlineButton variant="default">View All</OutlineButton>
             </Link>
-          </ScrollReveal>
+          </ScrollReveal> */}
         </div>
 
         {/* 3-Column Grid */}
@@ -135,116 +135,6 @@ function EmblaCarouselSlide({
         </>
       )}
     </div>
-  );
-}
-
-
-                {/* Content */}
-                <div className="p-6 flex flex-col flex-grow">
-                  {/* Title & Description */}
-                  <div className="mb-4">
-                    <h3 className="text-xl font-heading font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                      {project.name}
-                    </h3>
-                    <p className="text-sm text-slate-700 line-clamp-2">
-                      {project.description}
-                    </p>
-                  </div>
-
-                  {/* Tags */}
-                  <div className="flex gap-2 mb-4 flex-wrap">
-                    {project.tags.slice(0, 3).map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-100/60 border border-blue-200/60 text-blue-700"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Tools Toggle */}
-                  <motion.div
-                    initial={false}
-                    animate={{
-                      height: toolsOpen[project.id] ? "auto" : 0,
-                      opacity: toolsOpen[project.id] ? 1 : 0,
-                      marginBottom: toolsOpen[project.id] ? 16 : 0,
-                    }}
-                    className="overflow-hidden"
-                  >
-                    {project.utilities && project.utilities.length > 0 && (
-                      <div className="mb-4 pb-4 border-b border-blue-200/40">
-                        <ul className="flex flex-wrap gap-2">
-                          {project.utilities.map(({ name, img }) => (
-                            <li
-                              key={name}
-                              className="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-50 border border-blue-200/50 overflow-hidden hover:border-blue-300 transition-all"
-                              title={name}
-                            >
-                              {img && (
-                                <Image
-                                  src={img}
-                                  alt={name}
-                                  width={32}
-                                  height={32}
-                                  className="w-6 h-6"
-                                />
-                              )}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </motion.div>
-
-                  {/* Actions */}
-                  <div className="flex gap-2 mt-auto">
-                    {project.utilities && project.utilities.length > 0 && (
-                      <button
-                        onClick={() => toggleTools(project.id)}
-                        className={cn(
-                          "flex-1 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-300 border",
-                          toolsOpen[project.id]
-                            ? "bg-blue-100 border-blue-300 text-blue-700"
-                            : "bg-blue-50 border-blue-200/50 text-blue-600 hover:bg-blue-100"
-                        )}
-                      >
-                        Tools
-                      </button>
-                    )}
-
-                    {project.link && (
-                      <Link href={project.link} target="_blank" className="flex-1">
-                        <OutlineButton
-                          variant="secondary"
-                          icon={<Globe size={16} />}
-                          className="w-full"
-                        >
-                          Demo
-                        </OutlineButton>
-                      </Link>
-                    )}
-
-                    {project.github && (
-                      <Link href={project.github} target="_blank" className="flex-1">
-                        <OutlineButton
-                          variant="secondary"
-                          icon={<GithubLogo size={16} />}
-                          className="w-full"
-                        >
-                          Code
-                        </OutlineButton>
-                      </Link>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }
 

@@ -3,12 +3,12 @@
 import { useState } from "react";
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
-import { AboutBanner } from "./About/AboutBanner";
-import { AboutNav } from "./About/AboutNav";
-import { AboutMe } from "./About/AboutMe";
-import { Experience } from "./About/Experience";
-import { Education } from "./About/Education";
-import { Certification } from "./About/Certification";
+import { AboutBanner } from "./AboutBanner";
+import { AboutNav } from "./AboutNav";
+import { AboutMe } from "./AboutMe";
+import { Experience } from "./Experience";
+import { Education } from "./Education";
+import { Certification } from "./Certification";
 
 export function AboutPreview() {
   const { theme } = useTheme();

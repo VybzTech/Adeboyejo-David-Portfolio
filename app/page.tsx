@@ -1,8 +1,8 @@
 import { Hero } from "@/components/layout/Home/Hero";
 import { WhatIDo } from "@/components/layout/Home/WhatIDo";
-import { AboutPreview } from "@/components/layout/Home/AboutPreview";
+import { AboutPreview } from "@/components/layout/Home/About/AboutPreview";
 import { FeaturedCaseStudies } from "@/components/layout/Home/FeaturedCaseStudies";
-import { ContactCTA } from "@/components/layout/Home/ContactCTA";
+import { ContactCTA } from "@/components/layout/Home/Contact/ContactCTA";
 
 export default function Home() {
   return (
