@@ -4,10 +4,11 @@ import { AnimatedName } from "@/components/ui/AnimatedName";
 import { PremiumCards } from "./Hero/PremiumCards";
 import { motion } from "framer-motion";
 import { useTheme } from "@/components/providers/ThemeProvider";
+import { cn } from "@/lib/utils";
 
 export function WhatIDo() {
-    const { theme } = useTheme();
-  
+  const { theme } = useTheme();
+
   return (
     <section className={`relative py-24 overflow-hidden ${theme === 'dark' ? 'bg-[var(--background)]' : 'bg-[#fff]'}`}>
       {/* Animated Background Gradient */}
@@ -34,9 +35,13 @@ export function WhatIDo() {
             >
               professional
             </motion.span>
-            <h1 className={`text-5xl md:text-7xl lg:text-8xl font-heading font-black tracking-tight ${theme === 'dark' ? 'text-primary' : 'text-[#111]'}`}>
+            {/* <h1 className={`text-5xl md:text-7xl lg:text-7xl font-heading font-black tracking-tight ${theme === 'dark' ? 'text-primary' : 'text-[#111]'}`}>
               SkillSet
-            </h1>
+            </h1> */}
+            <AnimatedName name="SkillSet" className={cn(
+              "text-5xl md:text-7xl lg:text-7xl font-heading font-black tracking-tight text-[#111]",
+               theme === 'dark' ? 'text-primary' : 'text-[#111]'
+            )} />
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}

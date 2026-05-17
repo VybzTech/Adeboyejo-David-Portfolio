@@ -33,7 +33,7 @@ export function AboutPreview() {
   return (
     <section
       className={cn(
-        "relative overflow-hidden py-24 md:py-32",
+        "relative py-24 md:py-32", // Removed overflow-hidden to allow banner to overlap previous section
         isDark ? "bg-[var(--background)]" : "bg-white"
       )}
     >

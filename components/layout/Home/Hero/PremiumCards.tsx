@@ -5,6 +5,7 @@ import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { Cpu, Globe, RocketLaunch, X } from "@phosphor-icons/react";
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
+import { TbClick } from "react-icons/tb";
 
 interface CardProps {
   title: string;
@@ -196,8 +197,8 @@ function Card({ title, description, details, technologies, icon, onViewMore }: C
   const rotateXSpring = useSpring(rotateXVal, { damping: 25, stiffness: 120 });
   const rotateYSpring = useSpring(rotateYVal, { damping: 25, stiffness: 120 });
 
-  const rotateX = useTransform(rotateXSpring, (val) => `${val}deg`);
-  const rotateY = useTransform(rotateYSpring, (val) => `${val}deg`);
+  const rotateX = useTransform(rotateXSpring, (val: number) => `${val}deg`);
+  const rotateY = useTransform(rotateYSpring, (val: number) => `${val}deg`);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -215,9 +216,17 @@ function Card({ title, description, details, technologies, icon, onViewMore }: C
     x.set(distX);
     y.set(distY);
 
-    // Stronger, more pronounced rotation for the pull/corner effect
+    // Stronger rotation with perspective compression
     rotateXVal.set(distY * 25);
     rotateYVal.set(distX * -25);
+
+    // Grab cursor when near edges/corners
+    const cardEl = e.currentTarget as HTMLElement;
+    if (Math.abs(distX) > 0.2 || Math.abs(distY) > 0.2) {
+      cardEl.style.cursor = 'grab';
+    } else {
+      cardEl.style.cursor = 'default';
+    }
   };
 
   const handleMouseLeave = () => {
@@ -225,6 +234,7 @@ function Card({ title, description, details, technologies, icon, onViewMore }: C
     y.set(0);
     rotateXVal.set(0);
     rotateYVal.set(0);
+    (event?.currentTarget as HTMLElement)?.style.setProperty('cursor', 'default');
   };
 
   const isDark = theme === "dark";
@@ -327,7 +337,9 @@ function Card({ title, description, details, technologies, icon, onViewMore }: C
           {/* Creative Explore Button */}
           <motion.button
             onClick={onViewMore}
-            className="mt-4 w-full opacity-0 group-hover:opacity-100 transition-all duration-300"
+            className="mt-4 w-full opacity-100 transition-all duration-300"
+            whileHover={{ scale: 1.05, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+            // group-hover:opacity-100
           >
             <motion.div
               className={cn(
@@ -352,13 +364,18 @@ function Card({ title, description, details, technologies, icon, onViewMore }: C
               />
 
               <span className="tracking-wide capitalize">Explore</span>
+             
               <motion.div
-                className="text-lg font-bold"
                 initial={{ x: 0 }}
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 200 }}
               >
-                →
+             <TbClick size={24}
+              className={cn(
+                "text-lg font-bold",
+                isDark ? "text-[var(--text-secondary)]" : "text-blue-600"
+              )}
+             />
               </motion.div>
             </motion.div>
           </motion.button>
