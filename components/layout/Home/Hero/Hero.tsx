@@ -3,13 +3,13 @@
 import { motion } from "framer-motion";
 import { BackgroundImage } from "@/components/ui/BackgroundImage";
 import { Button } from "@/components/ui/Button";
-import { TechMarquee } from "./TechMarquee";
-import { PremiumCards } from "./PremiumCards";
-import { BRAND_INFO } from "@/lib/data";
-import { ArrowRight, DownloadSimple } from "@phosphor-icons/react";
 import heroGif from "@/public/images/Home-Design.gif";
-import { useTheme } from "@/components/providers/ThemeProvider";
 import { AnimatedBadge } from "@/components/ui/AnimatedBadge";
+import { Intro } from "./Intro";
+import { useTheme } from "@/components/providers/ThemeProvider";
+import { OutlineButton } from "@/components/ui/OutlineButton";
+import { ArrowRightIcon, EyeIcon } from "@phosphor-icons/react";
+import { TechMarquee } from "./TechMarquee";
 
 export function Hero() {
 
@@ -17,58 +17,37 @@ export function Hero() {
 
   return (
     <section className="relative w-full overflow-hidden" id="Home">
-      <BackgroundImage 
+      <BackgroundImage
         src={heroGif}
-        className="min-h-screen"
+        className="min-h-screen h-screen"
         overlay={theme === "light" ? false : true}
       >
-        <div className="flex-1 flex flex-col items-center justify-center text-center px-6 pt-20">
-          <div className="max-w-7xl mx-auto w-full flex flex-col items-center">
-            {/* Badge */}
-            <AnimatedBadge text="Available for new projects" />
-
-            {/* Title */}
-            {/* <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-5xl md:text-7xl lg:text-9xl font-heading font-black leading-[0.9] tracking-tighter mb-8 uppercase"
-            >
-              PRODUCT <br />
-              <span className="text-[var(--accent-primary)]">ENGINEER</span>
-            </motion.h1> */}
-
-            {/* Subtitle */}
-            {/* <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mb-10 leading-relaxed font-body"
-            >
-              Building high-performance digital products that blend aesthetics with extreme performance. Based in Remote.
-            </motion.p> */}
+        <div className="flex-1 flex flex-col items-between justify-start text-center px-6 pt-[18vh]">
+          <div className="mx-auto w-full flex flex-col items-start">
+            <AnimatedBadge text="Let's Build" /> 
+            <Intro />
 
             {/* Action Buttons */}
-            {/* <motion.div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex flex-wrap gap-6 justify-center"
+              transition={{ duration: 0.5, delay: 1.2 }}
+              className="flex flex-wrap gap-6 justify-center mt-4"
             >
-              <Button size="lg" icon={<ArrowRight weight="bold" />}>
+              {/* <Button size="lg" icon={<ArrowRightIcon weight="bold" />}>
                 Explore Work
-              </Button>
-              <Button variant="outline" size="lg" icon={<DownloadSimple weight="bold" />}>
-                Resume
-              </Button>
-            </motion.div> */}
+              </Button> */}
+              <OutlineButton icon={<EyeIcon weight="bold" size={16} />}>
+                View Case Studies
+              </OutlineButton>
+            </motion.div>
           </div>
         </div>
 
         {/* Tech Marquee */}
-        {/* <div className="pb-10">
+        <div className="pb-10">
           <TechMarquee />
-        </div> */}
+        </div>
       </BackgroundImage>
     </section>
   );

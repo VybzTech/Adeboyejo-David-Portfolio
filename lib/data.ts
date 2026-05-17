@@ -113,6 +113,13 @@ export const SKILLS: Skill[] = [
   { name: "Adobe XD", level: 93, category: "design" },
   { name: "Firebase", level: 88, category: "tools" },
   { name: "PostgreSQL", level: 78, category: "backend" },
+];``
+
+export const TITLES = [
+  "Electronic & Computer Engineer",
+  "Product Engineer",
+  "Senior Front End Developer",
+  "Full Stack Developer",
 ];
 
 export const SERVICES: Service[] = [

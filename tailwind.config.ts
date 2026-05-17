@@ -25,6 +25,18 @@ const config: Config = {
         body: ["var(--font-montserrat)"],
       },
 
+      fontWeight: {
+        thin: "100",
+        extralight: "200",
+        light: "300",
+        normal: "400",
+        medium: "500",
+        semibold: "600",
+        bold: "700",
+        extrabold: "800",
+        black: "900",
+      },
+
       boxShadow: {
         skeuo:
           "8px 8px 16px #08080f, -8px -8px 16px #1c1c35",
