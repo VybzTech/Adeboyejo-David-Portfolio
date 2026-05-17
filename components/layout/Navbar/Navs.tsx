@@ -7,9 +7,10 @@ import { Button } from "@/components/ui/Button";
 interface NavsProps {
   isMobile?: boolean;
   onLinkClick?: () => void;
+  onOpenResume: () => void;
 }
 
-export function Navs({ isMobile, onLinkClick }: NavsProps) {
+export function Navs({ isMobile, onLinkClick, onOpenResume }: NavsProps) {
   const links = [
     { name: "About", href: "/about" },
     { name: "Case Studies", href: "/projects" },
@@ -23,13 +24,10 @@ export function Navs({ isMobile, onLinkClick }: NavsProps) {
           {link.name}
         </NavLink>
       ))}
-      
+
       <Button
         icon={<DownloadSimple size={18} weight="bold" />}
-        onClick={() => {
-          window.open("/resume.pdf", "_blank");
-          if (onLinkClick) onLinkClick();
-        }}
+        onClick={onOpenResume}
       >
         Resume
       </Button>

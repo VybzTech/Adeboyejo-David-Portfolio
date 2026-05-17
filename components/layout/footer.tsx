@@ -22,13 +22,18 @@ export function Footer() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(19,91,232,0.12),transparent_30%)] pointer-events-none" />
       {/* <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-primary/25 blur-[130px] rounded-full pointer-events-none opacity-60" /> */}
       <div className="absolute -top-60 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/15 blur-[150px] rounded-full pointer-events-none opacity-40" />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-6 group">
-              <Logo svgWidth="9vw" svgFill={"#5559"} AFill={"#135be8"} theme={"light"} />
+            <Link href="/" className="flex items-start gap-2.5 mb-6 group">
+              <Logo
+                className="w-[11vw] sm:w-[10vw] lg:w-[5vw] xl:w-[2.5vw] max-w-[200px]"
+                svgFill={"#5559"}
+                AFill={"#f22"}
+                theme={"light"}
+              />
               <span className="font-heading text-2xl font-bold tracking-[-0.02em]">
                 {BRAND_INFO.name}
               </span>

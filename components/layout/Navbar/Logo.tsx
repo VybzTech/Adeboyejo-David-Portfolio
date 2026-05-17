@@ -23,8 +23,9 @@
 
 
 import React from "react";
+import { cn } from "@/lib/utils";
 
-const Logo = ({ svgWidth, svgFill, AFill, theme }: { svgWidth: string; svgFill: string; AFill: string; theme: string }) => {
+const Logo = ({ className, svgFill, AFill, theme }: { className?: string; svgFill: string; AFill: string; theme: string }) => {
   const svgProps = {
     d: {
       path1:
@@ -37,18 +38,16 @@ const Logo = ({ svgWidth, svgFill, AFill, theme }: { svgWidth: string; svgFill: 
   };
 
   return (
-    <>
-      <svg
-        width={svgWidth}
-        viewBox="0 0 589 439"
-        fill={AFill}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path className="AFill" d={svgProps.d.path1} />
-        <path fill={svgFill} style={{ zIndex: 5 }} d={svgProps.d.path2} />
-        <path style={{ zIndex: 5 }} fill={svgFill} d={svgProps.d.path3} />
-      </svg>
-    </>
+    <svg
+      className={cn("h-auto w-auto", className)}
+      viewBox="0 0 589 439"
+      fill={AFill}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path className="AFill" d={svgProps.d.path1} />
+      <path fill={svgFill} style={{ zIndex: 5 }} d={svgProps.d.path2} />
+      <path style={{ zIndex: 5 }} fill={svgFill} d={svgProps.d.path3} />
+    </svg>
   );
 };
 export default Logo;

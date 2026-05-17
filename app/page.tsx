@@ -1,8 +1,8 @@
-import { Hero } from "@/components/sections/Hero";
-import { WhatIDo } from "@/components/sections/WhatIDo";
-import { AboutPreview } from "@/components/sections/AboutPreview";
-import { FeaturedCaseStudies } from "@/components/sections/FeaturedCaseStudies";
-import { ContactCTA } from "@/components/sections/ContactCTA";
+import { Hero } from "@/components/layout/Home/Hero";
+import { WhatIDo } from "@/components/layout/Home/WhatIDo";
+import { AboutPreview } from "@/components/layout/Home/AboutPreview";
+import { FeaturedCaseStudies } from "@/components/layout/Home/FeaturedCaseStudies";
+import { ContactCTA } from "@/components/layout/Home/ContactCTA";
 
 export default function Home() {
   return (

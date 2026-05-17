@@ -8,10 +8,12 @@ import { Navs } from "./Navs";
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
 import Theme from "./Theme";
+import { Resume } from "../Resume";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -47,11 +49,16 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div>
-            <Logo svgWidth="9vw" svgFill={"#333"} AFill={theme === "light" ? "#135be8" : "#c70b0b"} theme={theme} />
+            <Logo 
+              className="w-[9.5vw] sm:w-[9vw] lg:w-[4vw] xl:w-[2.5vw] max-w-[100px]"
+              svgFill={"#333"} 
+              AFill={theme === "light" ? "#135be8" : "#c70b0b"} 
+              theme={theme} 
+            />
           </div>
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            <Navs />
+            <Navs onOpenResume={() => setIsResumeOpen(true)} />
             <Theme theme={theme} toggleTheme={toggleTheme} isScrolled={isScrolled} />
           </div>
 
@@ -97,12 +104,21 @@ export function Navbar() {
               )}
             >
               <div className="p-8">
-                <Navs isMobile onLinkClick={() => setIsMobileMenuOpen(false)} />
+                <Navs 
+                  isMobile 
+                  onLinkClick={() => setIsMobileMenuOpen(false)} 
+                  onOpenResume={() => {
+                    setIsMobileMenuOpen(false);
+                    setIsResumeOpen(true);
+                  }} 
+                />
               </div>
             </motion.div>
           </>
         )}
       </AnimatePresence>
+
+      <Resume isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
     </>
   );
 }

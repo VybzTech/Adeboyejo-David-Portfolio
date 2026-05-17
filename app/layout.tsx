@@ -8,7 +8,7 @@ import localFont from "next/font/local";
 
 
 const clashDisplay = localFont({
-  src: "../src/fonts/woff2/ClashDisplay-Variable.woff2",
+  src: "../public/fonts/ClashDisplay-Variable.woff2",
   variable: "--font-clash",
   display: "swap",
   weight: "200 700",
