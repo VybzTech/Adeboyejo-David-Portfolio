@@ -7,7 +7,8 @@ export interface Project {
   tags: string[];
   github?: string;
   link?: string;
-  image: string;
+  image?: string;
+  images?: string[];
   role: string;
   timeline: string;
   metrics?: {

@@ -43,7 +43,7 @@ export function ContactCTA() {
   ];
 
   return (
-    <section id="contact" className="py-32 px-6 relative overflow-hidden bg-white">
+    <section id="contact" className={cn("py-32 px-6 relative overflow-hidden", theme === "dark" ? "bg-gray-900" : "bg-white")}>
       {/* Animated Background Orbs */}
       <div className="absolute inset-0 opacity-40 pointer-events-none overflow-hidden">
         <div className="absolute bottom-1/3 left-0 w-96 h-96 rounded-full blur-3xl opacity-30 animate-pulse bg-blue-400" />
@@ -55,15 +55,23 @@ export function ContactCTA() {
           ref={containerRef}
           whileHover={{ y: -4 }}
           className={cn(
-            "overflow-hidden rounded-3xl border transition-all duration-500",
-            "bg-gradient-to-br from-white via-blue-50/30 to-white border-blue-300/40",
-            "shadow-[0_0_60px_rgba(59,130,246,0.2),inset_0_1px_0_rgba(255,255,255,0.8)]",
-            "hover:shadow-[0_0_80px_rgba(59,130,246,0.3),inset_0_1px_0_rgba(255,255,255,0.8),0_20px_60px_rgba(59,130,246,0.15)]"
-          )}
+              "overflow-hidden rounded-3xl border transition-all duration-500",
+              theme === "dark"
+                ? "bg-gray-800/80 backdrop-blur-lg border-gray-600/40"
+                : "bg-gradient-to-br from-white via-blue-50/30 to-white border-blue-300/40",
+              "shadow-[0_0_60px_rgba(59,130,246,0.2),inset_0_1px_0_rgba(255,255,255,0.8)]",
+              "hover:shadow-[0_0_80px_rgba(59,130,246,0.3),inset_0_1px_0_rgba(255,255,255,0.8),0_20px_60px_rgba(59,130,246,0.15)]"
+            )}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Left: Content */}
-            <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-blue-200/40">
+            <div className={cn(
+              "p-8 md:p-12 lg:p-16 flex flex-col justify-between border-b lg:border-b-0 lg:border-r",
+              theme === "dark"
+                ? "bg-gray-800/70 backdrop-blur-lg border-gray-600/40"
+                : "bg-white/30 backdrop-blur-md border-blue-200/40",
+              "shadow-xl rounded-xl"
+            )}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +99,7 @@ export function ContactCTA() {
                 </div>
 
                 {/* Signature */}
-                <p className="text-sm font-semibold text-slate-600 pt-4 border-t border-blue-200/40">
+                <p className={cn("text-sm font-semibold pt-4 border-t", isDark ? "text-gray-400 border-gray-700" : "text-slate-600 border-blue-200/40")}>
                   — David Adeboyejo<br />
                   <span className="text-xs font-normal">Product Engineer • Full-Stack Developer • Frontend Systems Builder</span>
                 </p>

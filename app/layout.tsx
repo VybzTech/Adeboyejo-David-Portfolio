@@ -69,6 +69,7 @@ export const viewport: Viewport = {
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ErrorBoundary } from "@/components/common/ErrorBoundary";
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -84,6 +85,17 @@ export default function RootLayout({
         "scroll-smooth"
       )}
     >
+      <head>
+        {/* Plausible Analytics - GDPR Compliant */}
+        {process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN && (
+          <Script
+            defer
+            data-domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}
+            src="https://plausible.io/js/script.js"
+            strategy="afterInteractive"
+          />
+        )}
+      </head>
       <body className="bg-background text-text-primary font-body antialiased selection:bg-primary/30">
         <div className="noise-bg" />
         <LenisProvider>

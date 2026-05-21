@@ -7,14 +7,14 @@ import { Button } from "@/components/ui/Button";
 interface NavsProps {
   isMobile?: boolean;
   onLinkClick?: () => void;
-  onOpenResume: () => void;
 }
 
-export function Navs({ isMobile, onLinkClick, onOpenResume }: NavsProps) {
+export function Navs({ isMobile, onLinkClick, isScrolled }: NavsProps) {
   const links = [
+    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Case Studies", href: "/projects" },
-    { name: "Contact", href: "/contact" },
+    { name: "Projects", href: "/case-studies" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -24,13 +24,6 @@ export function Navs({ isMobile, onLinkClick, onOpenResume }: NavsProps) {
           {link.name}
         </NavLink>
       ))}
-
-      <Button
-        icon={<DownloadSimple size={18} weight="bold" />}
-        onClick={onOpenResume}
-      >
-        Resume
-      </Button>
     </div>
   );
 }

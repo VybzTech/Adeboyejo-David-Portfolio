@@ -29,7 +29,9 @@ export function Intro() {
               exit={{ opacity: 0, y: 20 }} // Exit by sliding down and fading out
               transition={{ duration: 0.6, delay: showGreeting ? 0.2 : 0 }}
             >
-              <p className="text-[15px] md:text-xl text-white font-body font-light">
+              <p className={cn("text-[15px] text-white font-body font-light",
+                "md:text-lg lg:text-xl"
+              )}>
                 Hello, I&apos;m
               </p>
             </motion.div>
@@ -41,10 +43,12 @@ export function Intro() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
-        className={cn("text-5xl md:text-8xl lg:text-9xl mb-4" , 
+        className={cn("text-5xl mb-4" , 
           "leading-[0.9] tracking-[-0.1px]",
-        "font-body font-black uppercase")}
-      >DAVID ADEBOYEJO</motion.h1>
+        "font-body font-black capitalize",
+        "md:text-6xl lg:text-7xl"
+      )}
+      >David Adeboyejo</motion.h1>
 
       {/* Animated Roles */}
       <motion.div

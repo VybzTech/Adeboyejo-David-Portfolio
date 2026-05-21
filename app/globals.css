@@ -36,6 +36,7 @@
   --text-muted: #666666;
   --text-danger: #ff4444;
   --accent-primary: #135be8;
+  --accent-primary-hover: #135ae893;
   --accent-secondary: #064da5;
   --border: #e5e5e5;
   --glass-bg: rgba(255, 255, 255, 0.7);
@@ -52,6 +53,7 @@
   --text-muted: #aaaaaa;
   --text-danger: #ff4444;
   --accent-primary: #135be8;
+  --accent-primary-hover: #135ae893;
   --accent-secondary: #064da5;
   --border: rgba(255, 255, 255, 0.1);
   --glass-bg: rgba(14, 14, 14, 0.7);

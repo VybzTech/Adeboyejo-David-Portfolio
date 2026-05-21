@@ -30,7 +30,7 @@ Successfully rebuilt the portfolio from CRA to Vite + React with Tailwind CSS. T
 ### Data Structure
 - **projects.ts** - 6 projects with full metadata (technologies, links, etc.)
 - **skills.ts** - 20 skills organized by category (frontend, backend, design, tools)
-- **caseStudies.ts** - 3 featured projects with detailed case study info
+- **caseStudies.ts** -
 
 ### Features Implemented
 - ✅ Phosphor Icons (primary) + React Icons (fallback)

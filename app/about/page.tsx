@@ -14,7 +14,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start mb-32">
           <ScrollReveal direction="left">
             <h1 className="text-5xl md:text-7xl font-heading font-bold mb-8">
-              Engineering <br /><span className="text-gradient">Experiences</span>.
+              Engineering <br /><span className="text-gradient">Experiences</span>
             </h1>
             <p className="text-xl text-text-muted max-w-xl mb-10 leading-relaxed">
               I&apos;m a Senior Product Engineer with a relentless focus on creating high-performance, aesthetically superior digital products. I believe that software should not only work perfectly but also feel physical and premium.
@@ -30,7 +30,7 @@ export default function AboutPage() {
           <ScrollReveal direction="right" className="relative aspect-square lg:aspect-auto lg:h-[600px] rounded-3xl overflow-hidden glass-panel border-white/10 p-4">
             <div className="relative h-full w-full rounded-2xl overflow-hidden">
               <Image
-                src="/hero-visual.png"
+                src="/images/Moi/David.png"
                 alt={BRAND_INFO.name}
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"

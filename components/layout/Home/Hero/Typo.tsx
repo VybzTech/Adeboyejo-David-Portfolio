@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { TITLES } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
 export function Typo() {
   const [text, setText] = useState("");
@@ -49,7 +50,9 @@ export function Typo() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }} // Initial delay similar to classic v0
-        className="text-[16px] md:text-[34px] text-white font-body font-medium uppercase tracking-tighter"
+        className={cn("text-[16px] text-white font-body font-medium uppercase",
+          " md:text-[19px] tracking-tighter"
+        )}
       >
         {text}
         <span className="animate-[pulse_1s_ease-in-out_infinite] inline-block border-r-2 border-[var(--text-danger)] ml-0.5 h-[0.95em] align-middle" />
