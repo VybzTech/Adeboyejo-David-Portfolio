@@ -5,7 +5,7 @@ import { LenisProvider } from "@/components/providers/LenisProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
-
+import { Analytics } from "@vercel/analytics/next"
 
 const clashDisplay = localFont({
   src: "../public/fonts/ClashDisplay-Variable.woff2",
