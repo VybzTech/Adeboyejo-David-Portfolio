@@ -67,9 +67,9 @@ export const viewport: Viewport = {
 
 
 import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { ErrorBoundary } from "@/components/common/ErrorBoundary";
 import Script from "next/script";
+import { Footer } from "@/components/layout/Footer";
 
 export default function RootLayout({
   children,
