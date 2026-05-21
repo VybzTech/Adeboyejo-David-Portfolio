@@ -53,7 +53,6 @@ export function WhatIDo() {
             </motion.p>
           </motion.div>
         </div>
-
         <PremiumCards />
       </div>
 

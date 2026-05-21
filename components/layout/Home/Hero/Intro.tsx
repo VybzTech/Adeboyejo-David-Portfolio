@@ -46,7 +46,7 @@ export function Intro() {
         className={cn("text-5xl mb-4" , 
           "leading-[0.9] tracking-[-0.1px]",
         "font-body font-black capitalize",
-        "md:text-6xl lg:text-7xl"
+        "md:text-6xl lg:text-[5.2rem]"
       )}
       >David Adeboyejo</motion.h1>
 

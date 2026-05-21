@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
-import { 
+import {
   FigmaLogo,
   GithubLogo,
   Code,
@@ -36,7 +36,7 @@ export function TechMarquee() {
   return (
     <div className={cn(
       "w-full overflow-hidden py-4 md:py-6 mt-6 md:mt-10",
-      "border-t bg-blue/10 backdrop-blur-xs shadow-[0_10px_20px_rgba(0,0,0,0.1)]"
+      "bg-blue/10 backdrop-blur-[2px] shadow-[0_10px_20px_rgba(0,0,100,0.3)]"
     )}>
       <motion.div
         className="flex items-center gap-10 md:gap-16 whitespace-nowrap px-4"

@@ -26,11 +26,19 @@ export function NavLink({ href, children, onClick }: NavLinkProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // If we're already on the same page, smooth-scroll to top instead of navigating
+    if (isActive) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    onClick?.();
+  };
 
   return (
     <Link
       href={href}
-      onClick={onClick}
+      onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={cn(
