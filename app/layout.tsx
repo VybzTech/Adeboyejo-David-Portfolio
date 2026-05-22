@@ -67,7 +67,7 @@ export const viewport: Viewport = {
 
 
 import Script from "next/script";
-// import { Footer } from "@/components/layout/Footer";
+import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { ErrorBoundary } from "@/components/common/ErrorBoundary";
 
@@ -96,7 +96,7 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body className="bg-background text-text-primary font-body antialiased selection:bg-primary/30">
+      <body className="bg-background text-text-primary font-body antialiased selection:bg-primary/25">
         <div className="noise-bg" />
         <LenisProvider>
           <ThemeProvider>
@@ -107,7 +107,7 @@ export default function RootLayout({
                   {children}
                 </ErrorBoundary>
               </main>
-              {/* <Footer /> */}
+              <Footer />
             </div>
           </ThemeProvider>
         </LenisProvider>

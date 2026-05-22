@@ -28,38 +28,61 @@ const TECH_STACK = [
 ];
 
 export function TechMarquee() {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isMarqueeHovered, setIsMarqueeHovered] = useState(false);
+  const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
   // Duplicate the array to create a seamless loop
   const duplicatedStack = [...TECH_STACK, ...TECH_STACK, ...TECH_STACK];
 
   return (
     <div className={cn(
-      "w-full overflow-hidden py-4 md:py-6 mt-6 md:mt-10",
-      "bg-blue/10 backdrop-blur-[2px] shadow-[0_10px_20px_rgba(0,0,100,0.3)]"
+      "w-full overflow-visible py-4 md:py-6 mt-6 md:mt-10",
+      "bg-black/10 backdrop-blur-[2px] shadow-[0_10px_20px_rgba(0,0,100,0.3)]",
+      "relative"
     )}>
       <motion.div
         className="flex items-center gap-10 md:gap-16 whitespace-nowrap px-4"
         animate={{
-          x: isHovered ? 0 : [0, -1200], // Approximate width to shift smoothly
+          x: isMarqueeHovered ? 0 : [0, -1200],
         }}
         transition={{
           x: {
             repeat: Infinity,
             repeatType: "loop",
-            duration: 35, // Slower, more elegant speed
+            duration: 35,
             ease: "linear",
           },
         }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={() => setIsMarqueeHovered(true)}
+        onMouseLeave={() => setIsMarqueeHovered(false)}
       >
         {duplicatedStack.map((tech, index) => (
-          <div
+          <motion.div
             key={`${tech.name}-${index}`}
-            className="flex items-center gap-2.5 md:gap-3 text-[var(--text-muted)] hover:text-[var(--accent-primary)] transition-all duration-300 cursor-pointer group"
+            className="relative flex items-center gap-2.5 md:gap-3 text-[var(--text-muted)] hover:text-[var(--accent-primary)] transition-colors duration-300 cursor-pointer group"
+            onMouseEnter={() => setHoveredTech(tech.name)}
+            onMouseLeave={() => setHoveredTech(null)}
           >
-            <div className="relative w-9 h-9 md:w-10 md:h-10 flex items-center justify-center  opacity-70 group-hover:opacity-100 transition-all duration-300">
+            {/* Glow effect on hover - grows with icon */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{
+                opacity: hoveredTech === tech.name ? 1 : 0,
+                scale: hoveredTech === tech.name ? 1.4 : 0.8,
+              }}
+              transition={{ duration: 0.4, type: "spring", stiffness: 200 }}
+              className="absolute -inset-3 rounded-full bg-gradient-to-r from-[#135be8]/25 via-[#135be8]/15 to-transparent blur-2xl pointer-events-none"
+            />
+
+            {/* Tech Icon - swells on hover */}
+            <motion.div
+              className="relative w-9 h-9 md:w-10 md:h-10 flex items-center justify-center z-9 flex-shrink-0"
+              animate={{
+                scale: hoveredTech === tech.name ? 1.3 : 1,
+                opacity: hoveredTech === tech.name ? 1 : 0.7,
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
               {tech.image ? (
                 <Image
                   src={tech.image}
@@ -71,9 +94,48 @@ export function TechMarquee() {
               ) : (
                 tech.icon
               )}
-            </div>
-            {/* <span className="text-xs md:text-sm font-bold uppercase tracking-widest">{tech.name}</span> */}
-          </div>
+            </motion.div>
+
+            {/* Soft tooltip name - pops from behind marquee */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20,
+                scale: 0.6,
+                zIndex: -1,
+              }}
+              animate={hoveredTech === tech.name ? {
+                opacity: 1,
+                y: -64,
+                scale: 1,
+                zIndex: 50,
+              } : {
+                opacity: 0,
+                y: 20,
+                scale: 0.6,
+                zIndex: -1,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 25,
+                mass: 0.8,
+              }}
+              className="absolute left-1/2 -translate-x-1/2 pointer-events-none"
+            >
+              <div className="relative">
+                {/* Glow background for name */}
+                <div className="absolute inset-0 bg-[#135be8]/40 blur-xl rounded-md" />
+
+                {/* Name text with glow - responsive sizing */}
+                <div className="relative px-2.5 md:px-3.5 lg:px-4 py-1.5 md:py-2 lg:py-2.5 rounded-lg bg-[#135be8]/15 border border-[#135be8]/40 backdrop-blur-xl whitespace-nowrap shadow-lg shadow-[#135be8]/20">
+                  <span className="text-[9px] md:text-[11px] lg:text-[13px] font-light tracking-widest text-[#135be8] font-body uppercase block">
+                    {tech.name}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
         ))}
       </motion.div>
     </div>

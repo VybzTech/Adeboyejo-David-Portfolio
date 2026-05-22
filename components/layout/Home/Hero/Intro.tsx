@@ -43,10 +43,10 @@ export function Intro() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
-        className={cn("text-5xl mb-4" , 
+        className={cn("text-[3.25rem] mb-4" , 
           "leading-[0.9] tracking-[-0.1px]",
         "font-body font-black capitalize",
-        "md:text-6xl lg:text-[5.2rem]"
+        "md:text-6xl lg:text-[5.5rem]"
       )}
       >David Adeboyejo</motion.h1>
 

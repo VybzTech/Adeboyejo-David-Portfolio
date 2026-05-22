@@ -26,12 +26,12 @@ export function AboutBanner() {
   const isDark = theme === "dark";
 
   return (
-    <div ref={containerRef} className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+    <div ref={containerRef} className="absolute inset-0 z-25 pointer-events-none">
       {/* Primary Auto-Looping Banner (Independent of Scroll) */}
       <div
         className={cn(
           "w-[200%] h-16 md:h-24",
-          "absolute left-1/2 flex items-center",
+          "absolute left-1/2 flex items-center z-25",
           "border-y shadow-[0_0_20px_2px_rgba(0,0,0,0.15)]",
           isDark
             ? "bg-[var(--surface)] border-white/10"
@@ -76,7 +76,7 @@ export function AboutBanner() {
             : "bg-primary/70 border-primary/80"
         )}
         style={{
-          top: "8%",
+          top: "6%",
           transform: "translate(-50%, -50%) rotate(-3deg)",
           marginTop: "1.5rem",
         }}

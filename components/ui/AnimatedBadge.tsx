@@ -43,7 +43,16 @@ export function AnimatedBadge({ text = "Let's Build", className }: AnimatedBadge
 
       {/* Inner Content */}
       <div
-        className="relative flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-b from-[var(--background)] to-[var(--background)]/95 border border-white/10 shadow-[inset_0_1px_4px_rgba(255,255,255,0.2),0_8px_24px_rgba(0,0,0,0.1)] backdrop-blur-xl z-10 text-xs font-semibold capitalize tracking-wide text-[var(--text-primary)] transition-all cursor-pointer"
+        className={cn(
+          "relative flex items-center rounded-full",
+          "gap-2 px-5 py-2 font-body",
+          "bg-gradient-to-b from-[var(--background)] to-[var(--background)]/95",
+          "border border-white/10",
+          "shadow-[inset_0_1px_3px_rgba(255,255,255,0.125),0_8px_24px_rgba(0,0,0,0.1)]",
+          "backdrop-blur-xl z-9",
+          "text-xs font-medium capitalize tracking-wide",
+          "text-[var(--text-primary)] transition-all cursor-pointer"
+        )}
         onMouseEnter={() => setIsInteracting(true)}
         onMouseLeave={() => setIsInteracting(false)}
         onFocus={() => setIsInteracting(true)}

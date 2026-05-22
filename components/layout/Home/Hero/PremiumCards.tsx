@@ -6,6 +6,7 @@ import { Cpu, Globe, RocketLaunch, X } from "@phosphor-icons/react";
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
 import { TbClick } from "react-icons/tb";
+import { LuMousePointerClick } from "react-icons/lu";
 
 interface CardProps {
   title: string;
@@ -36,7 +37,7 @@ function SkillModal({ skill, isOpen, onClose }: { skill: SkillDetail | null; isO
       exit={{ opacity: 0 }}
       onClick={onClose}
       className={cn(
-        "fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm transition-opacity overflow-y-auto",
+        "fixed inset-0 z-99 flex items-center justify-center backdrop-blur-sm transition-opacity overflow-y-auto",
         isOpen ? "pointer-events-auto" : "pointer-events-none",
         theme === "light" ? "bg-black/40" : "bg-black/60"
       )}
@@ -47,7 +48,7 @@ function SkillModal({ skill, isOpen, onClose }: { skill: SkillDetail | null; isO
         onClick={(e) => e.stopPropagation()}
         className={cn(
           "relative max-w-2xl w-full mx-4 rounded-2xl overflow-y-auto",
-          "my-[10vh] md:my-0",
+          "mt-[10.1vh]",
           theme === "light"
             ? "bg-gradient-to-br from-white to-slate-50"
             : "bg-gradient-to-br from-[var(--surface)] to-[var(--background)]"
@@ -57,14 +58,14 @@ function SkillModal({ skill, isOpen, onClose }: { skill: SkillDetail | null; isO
             theme === "light"
               ? "0 20px 60px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,1)"
               : "0 20px 60px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)",
-          maxHeight: "calc(100vh - 10vh)",
+          maxHeight: "calc(100vh - 10.01vh)",
         }}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
           className={cn(
-            "absolute top-6 right-6 z-10 p-2 rounded-full transition-colors",
+            "absolute top-6 right-6 z-10 p-2 rounded-full transition-colors hover:text-red-600",
             theme === "light"
               ? "hover:bg-slate-100 text-blue-600"
               : "hover:bg-white/10 text-primary"
@@ -107,8 +108,39 @@ function SkillModal({ skill, isOpen, onClose }: { skill: SkillDetail | null; isO
             </div>
           </div>
 
+          {/* Technologies */}
+          <div className="space-y-3 border-t border-white/10">
+            <h3
+              className={cn(
+                "text-sm font-bold uppercase tracking-widest",
+                theme === "light" ? "text-slate-500" : "text-text-secondary"
+              )}
+            >
+              Technologies & Tools
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {skill.technologies.map((tech, idx) => (
+                <motion.span
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: idx * 0.05 }}
+                  className={cn(
+                    "px-3 py-1.5 rounded-full text-xs font-semibold capitalize border transition-colors",
+                    theme === "light"
+                      ? "bg-blue-100 text-blue-700 border-blue-300 hover:bg-blue-200"
+                      : "bg-primary/10 text-primary border-primary/20 hover:bg-primary/20"
+                  )}
+                >
+                  {tech}
+                </motion.span>
+              ))}
+            </div>
+          </div>
+
+          
           {/* Details */}
-          <div className="space-y-4 pt-4">
+          <div className="space-y-4 pt-2">
             <h3
               className={cn(
                 "text-sm font-bold uppercase tracking-widest",
@@ -146,36 +178,6 @@ function SkillModal({ skill, isOpen, onClose }: { skill: SkillDetail | null; isO
                     {detail}
                   </span>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Technologies */}
-          <div className="space-y-3 pt-4 border-t border-white/10">
-            <h3
-              className={cn(
-                "text-sm font-bold uppercase tracking-widest",
-                theme === "light" ? "text-slate-500" : "text-text-secondary"
-              )}
-            >
-              Technologies & Tools
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {skill.technologies.map((tech, idx) => (
-                <motion.span
-                  key={idx}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: idx * 0.05 }}
-                  className={cn(
-                    "px-3 py-1.5 rounded-full text-xs font-semibold capitalize border transition-colors",
-                    theme === "light"
-                      ? "bg-blue-100 text-blue-700 border-blue-300 hover:bg-blue-200"
-                      : "bg-primary/10 text-primary border-primary/20 hover:bg-primary/20"
-                  )}
-                >
-                  {tech}
-                </motion.span>
               ))}
             </div>
           </div>
@@ -217,13 +219,13 @@ function Card({ title, description, details, technologies, icon, onViewMore }: C
     y.set(distY);
 
     // Stronger rotation with perspective compression
-    rotateXVal.set(distY * 25);
-    rotateYVal.set(distX * -25);
+    rotateXVal.set(distY * 12);
+    rotateYVal.set(distX * -12);
 
     // Grab cursor when near edges/corners
     const cardEl = e.currentTarget as HTMLElement;
     if (Math.abs(distX) > 0.2 || Math.abs(distY) > 0.2) {
-      cardEl.style.cursor = 'grab';
+      cardEl.style.cursor = 'pointer';
     } else {
       cardEl.style.cursor = 'default';
     }
@@ -248,21 +250,22 @@ function Card({ title, description, details, technologies, icon, onViewMore }: C
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative h-96 w-full rounded-3xl cursor-pointer"
+      className="relative h-96 w-full rounded-3xl cursor-pointer z-19"
     >
       {/* Premium Border */}
       <div
-        className="absolute inset-0 rounded-3xl p-[1px]"
+        className="absolute inset-0 rounded-3xl p-[2px]"
         style={{
+          //    rgba(0,240,255,0.3)
           background: isDark
-            ? "linear-gradient(135deg, rgba(0,240,255,0.3) 0%, rgba(255,255,255,0.1) 50%, rgba(139,92,246,0.2) 100%)"
-            : "linear-gradient(135deg, rgba(19,91,232,0.4) 0%, rgba(255,255,255,0.3) 50%, rgba(6,77,165,0.3) 100%)",
+            ? "linear-gradient(120deg, rgba(19, 91, 232, 0.04) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(47, 116, 255, 0.4) 100%)"
+            : "linear-gradient(135deg, rgba(220, 225, 231, 0.3) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(30, 91, 251, 0.02) 100%)",
         }}
       >
         {/* Main Card */}
         <motion.div
           className={cn(
-            "h-full w-full rounded-[28px] p-8 flex flex-col justify-between group transition-all duration-500",
+            "h-full w-full rounded-3xl p-8 flex flex-col justify-between group transition-all duration-500",
             isDark
               ? "bg-gradient-to-br from-[var(--surface)] to-[var(--background)]/50"
               : "bg-gradient-to-br from-white to-slate-50/80"
@@ -274,7 +277,7 @@ function Card({ title, description, details, technologies, icon, onViewMore }: C
               inset 1px 1px 0 rgba(255,255,255,0.1),
               inset -1px -1px 0 rgba(0,0,0,0.3),
               0 20px 40px rgba(0,0,0,0.2),
-              0 0 30px rgba(0,240,255,0.1)
+              0 0 30px rgba(0, 140, 255, 0.1)
             `
               : `
               inset 1px 1px 0 rgba(255,255,255,1),
@@ -288,8 +291,8 @@ function Card({ title, description, details, technologies, icon, onViewMore }: C
               ? `
               inset 1px 1px 0 rgba(255,255,255,0.15),
               inset -1px -1px 0 rgba(0,0,0,0.4),
-              0 30px 60px rgba(0,240,255,0.15),
-              0 0 40px rgba(0,240,255,0.2)
+              0 30px 60px rgba(0,140,255,0.15),
+              0 0 40px rgba(0,140,255,0.2)
             `
               : `
               inset 1px 1px 0 rgba(255,255,255,1),
@@ -302,17 +305,18 @@ function Card({ title, description, details, technologies, icon, onViewMore }: C
           <div className="space-y-4">
             <motion.div
               className={cn(
-                "w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg",
+                "w-16 h-16 rounded-3xl flex items-center justify-center shadow-lg",
                 isDark
                   ? "bg-gradient-to-br from-primary/20 to-primary/5 text-primary"
                   : "bg-gradient-to-br from-blue-100 to-blue-50 text-blue-600"
               )}
               style={{
                 boxShadow: isDark
-                  ? "inset 0 1px 2px rgba(255,255,255,0.2), 0 8px 16px rgba(0,240,255,0.15)"
+                  ? "inset 0 1px 2px rgba(255,255,255,0.2), 0 8px 16px rgba(0,140,255,0.15)"
                   : "inset 0 1px 2px rgba(255,255,255,1), 0 8px 16px rgba(19,91,232,0.1)",
               }}
               whileHover={{ scale: 1.1 }}
+              onClick={onViewMore}
             >
               {icon}
             </motion.div>
@@ -337,23 +341,25 @@ function Card({ title, description, details, technologies, icon, onViewMore }: C
           {/* Creative Explore Button */}
           <motion.button
             onClick={onViewMore}
-            className="mt-4 w-full opacity-100 transition-all duration-300"
+            className="mt-4 opacity-100 transition-all duration-300"
             whileHover={{ scale: 1.05, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-            // group-hover:opacity-100
+          // group-hover:opacity-100
           >
             <motion.div
               className={cn(
-                "relative overflow-hidden rounded-xl px-4 py-3 font-semibold text-sm transition-all duration-300 flex items-center justify-between group/btn",
-                isDark
-                  ? "bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/30 hover:border-primary/60 text-primary"
-                  : "bg-gradient-to-r from-blue-100/50 to-blue-50/50 border border-blue-300/40 hover:border-blue-400 text-blue-700"
+                "font-medium font-body capitalize cursor-pointer",
+                "relative overflow-hidden rounded-3xl transition-all duration-300 flex items-center justify-between group/btn",
+                "text-primary text-sm lg:text-[1rem]",
+                // isDark
+                //   ? "bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/30 hover:border-primary/60 text-primary"
+                //   : "bg-gradient-to-r from-blue-100/50 to-blue-50/50 border border-blue-300/40 hover:border-blue-400 text-blue-700"
               )}
               whileHover={{ y: -2 }}
             >
               {/* Animated background */}
               <motion.div
                 className={cn(
-                  "absolute inset-0 -z-10 rounded-xl",
+                  "absolute inset-0 -z-10 rounded-3xl",
                   isDark
                     ? "bg-gradient-to-r from-primary/20 to-transparent"
                     : "bg-gradient-to-r from-blue-200/30 to-transparent"
@@ -363,19 +369,24 @@ function Card({ title, description, details, technologies, icon, onViewMore }: C
                 transition={{ duration: 0.5 }}
               />
 
-              <span className="tracking-wide capitalize">Explore</span>
-             
+              <span className="tracking-normal lg:tracking-[-0.5px] capitalize">View more</span>
+
               <motion.div
                 initial={{ x: 0 }}
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 200 }}
               >
-             <TbClick size={24}
-              className={cn(
-                "text-lg font-bold",
-                isDark ? "text-[var(--text-secondary)]" : "text-blue-600"
-              )}
-             />
+                <LuMousePointerClick strokeWidth={1.5}
+                  //  <TbClick size={38} strokeWidth={1.5}
+                  className={cn(
+                    "text-xl pr-5 font-bold",
+                    "w-14 h-14",
+                    "md:w-16 md:h-16",
+                    "lg:w-14 lg:h-14",
+
+                    isDark ? "text-[var(--text-secondary)]" : "text-blue-600"
+                  )}
+                />
               </motion.div>
             </motion.div>
           </motion.button>
@@ -480,7 +491,7 @@ export function PremiumCards() {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl mx-auto px-6 py-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-8 lg:gap-12 w-full max-w-7xl mx-auto px-6 py-20">
         {cards.map((card) => (
           <Card key={card.id} {...card} />
         ))}

@@ -20,7 +20,7 @@ export function Footer() {
     <footer className="relative bg-[var(--background)] border-t border-[var(--border)] pt-20 pb-10 px-6 transition-all duration-500 overflow-hidden">
       {/* Intense Deep Blue Glows */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(19,91,232,0.12),transparent_30%)] pointer-events-none" />
-      {/* <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-primary/25 blur-[130px] rounded-full pointer-events-none opacity-60" /> */}
+      <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-primary/25 blur-[130px] rounded-full pointer-events-none opacity-20" />
       <div className="absolute -top-60 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-primary/15 blur-[150px] rounded-full pointer-events-none opacity-40" />
 
       <div className="max-w-7xl mx-auto relative z-1">

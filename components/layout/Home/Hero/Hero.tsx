@@ -43,8 +43,10 @@ export function Hero() {
         overlay={theme === "light" ? false : true}
       >
         <div className={cn(
-          "flex-1 flex flex-col items-between justify-start text-center px-[7vh] pt-[18vh]",
-          "md:pt-[12vh]")}>
+          "flex-1 flex flex-col items-between justify-start text-center",
+          "px-[7vw] pt-[18vh]",
+          "md:px-[6vw] md:pt-[14vh]",
+          "lg:px-[8vw] lg:pt-[18vh]")}>
           <div className="mx-auto w-full flex flex-col items-start">
             <AnimatedBadge text="Let's Build" />
             <Intro />
@@ -52,7 +54,9 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.2 }}
-              className="flex flex-wrap gap-5 justify-center mt-0"
+              className={cn("flex flex-wrap gap-2.5 lg:gap-7 justify-center mt-0 items-center",
+                "md:justify-start"
+              )}
             >
               <Link href="/case-studies">
                 <OutlineButton>

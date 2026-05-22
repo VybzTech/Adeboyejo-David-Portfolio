@@ -20,12 +20,12 @@ const OutlineButton = React.forwardRef<HTMLButtonElement, OutlineButtonProps>(
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         className={cn(
-          "uppercase text-[13px]",
-          "relative inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300 ease-in-out",
+          "uppercase text-[12px] md:text-[12px] lg:text-[15px]",
+          "relative inline-flex items-center justify-center gap-1 lg:gap-3.5 font-semibold transition-all duration-300 ease-in-out",
           "backdrop-blur-sm outline-none disabled:opacity-50 disabled:pointer-events-none",
           isSecondary
-            ? "border border-white/10 text-primary hover:bg-white/5 hover:border-white/20 px-4 py-2 rounded-lg"
-            : "border-2 border-primary text-primary hover:bg-primary/10 px-5 py-2.5 rounded-lg tracking-tight",
+            ? "border border-white/10 text-primary hover:bg-white/5 hover:border-white/20 px-3 py-1.5 rounded-lg md:px-3 md:py-2 lg:px-5 lg:py-3"
+            : "border-[2px] border-primary text-primary hover:bg-primary/10 px-4 py-2 rounded-lg tracking-tight md:px-3.5 md:py-2 lg:px-5 lg:py-3",
           className
         )}
         {...props}
