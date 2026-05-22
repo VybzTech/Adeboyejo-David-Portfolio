@@ -68,16 +68,18 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.1}>
-          <div className="relative aspect-video rounded-3xl overflow-hidden mb-16 border border-white/10">
-            <Image
-              src={project.image}
-              alt={project.name}
-              fill
-              className="object-cover"
-            />
-          </div>
-        </ScrollReveal>
+        {project.image && (
+          <ScrollReveal delay={0.1}>
+            <div className="relative aspect-video rounded-3xl overflow-hidden mb-16 border border-white/10">
+              <Image
+                src={project.image}
+                alt={project.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+          </ScrollReveal>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           <div className="md:col-span-2">

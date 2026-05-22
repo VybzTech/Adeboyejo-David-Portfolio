@@ -16,7 +16,7 @@ const colorVariants = {
     transition: {
       duration: 4,
       repeat: Infinity,
-      ease: "easeInOut",
+      type: "tween" as const,
     },
   },
   static: {

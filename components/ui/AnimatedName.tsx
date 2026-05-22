@@ -14,7 +14,7 @@ const gradientVariants = {
     transition: {
       duration: 8,
       repeat: Infinity,
-      ease: "easeInOut",
+      type: "tween" as const,
     },
   },
 };

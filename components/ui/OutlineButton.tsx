@@ -4,9 +4,10 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { motion, HTMLMotionProps } from "framer-motion";
 
-interface OutlineButtonProps extends HTMLMotionProps<"button"> {
+interface OutlineButtonProps extends Omit<HTMLMotionProps<"button">, "children"> {
   icon?: React.ReactNode;
   variant?: "default" | "secondary";
+  children?: React.ReactNode;
 }
 
 const OutlineButton = React.forwardRef<HTMLButtonElement, OutlineButtonProps>(
@@ -51,7 +52,7 @@ const OutlineButton = React.forwardRef<HTMLButtonElement, OutlineButtonProps>(
             initial={{ x: "-100%" }}
             whileHover={{ x: "100%" }}
             transition={{ duration: 0.6 }}
-            pointerEvents="none"
+            style={{ pointerEvents: "none" }}
           />
         )}
       </motion.button>

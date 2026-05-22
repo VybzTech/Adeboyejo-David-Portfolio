@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, Variant } from "framer-motion";
+import { motion, TargetAndTransition } from "framer-motion";
 import { ReactNode } from "react";
 
 type AnimationType =
@@ -23,7 +23,7 @@ interface AnimationProps {
   className?: string;
 }
 
-const animations: Record<AnimationType, { initial: Variant; animate: Variant }> = {
+const animations: Record<AnimationType, { initial: TargetAndTransition; animate: TargetAndTransition }> = {
   "fade-in": {
     initial: { opacity: 0 },
     animate: { opacity: 1 },

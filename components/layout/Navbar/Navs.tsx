@@ -9,7 +9,7 @@ interface NavsProps {
   onLinkClick?: () => void;
 }
 
-export function Navs({ isMobile, onLinkClick, isScrolled }: NavsProps) {
+export function Navs({ isMobile, onLinkClick }: NavsProps) {
   const links = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
