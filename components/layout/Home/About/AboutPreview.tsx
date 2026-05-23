@@ -48,7 +48,7 @@ export function AboutPreview() {
 
           {/* Right Content */}
           <div
-            className={cn(
+            className={cn( "min-h-[70vh]",
               "lg:w-2/3 rounded-2xl p-8 md:p-12 border transition-all duration-300",
               "shadow-[0_0_50px_rgba(59,130,255,0.1),inset_0_1px_7px_rgba(59,95,246,0.15),0_20px_20px_rgba(59,130,255,0.05)]",
               isDark

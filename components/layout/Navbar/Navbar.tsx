@@ -42,7 +42,7 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 w-[96vw] z-[100] transition-all duration-500 ease-in-out",
+          "fixed top-0 left-0 w-[98vw] z-[100] transition-all duration-500 ease-in-out",
           "px-6 py-3 ml-[2vw] my-2 rounded-[2.2rem]",
           "max-h-[10vh]",
           isScrolled
@@ -55,7 +55,7 @@ export function Navbar() {
           {/* Logo */}
           <div>
             <Logo
-              className="w-[9.5vw] sm:w-[9vw] md:w-[6vw] lg:w-[5vw] xl:w-[2.5vw] max-w-[100px]"
+              className="w-[9.5vw] sm:w-[9vw] md:w-[6vw] lg:w-[3rem] xl:w-[2.5rem]"
               svgFill={"#333"}
               AFill={theme === "light" ? "#135be8" : "#c70b0b"}
               theme={theme}

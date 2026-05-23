@@ -31,7 +31,7 @@ export function WhatIDo() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="font-medium uppercase text-xs text-primary tracking-tight"
+              className="font-medium uppercase text-sm text-primary tracking-[0.5px]"
             >
               professional
             </motion.span>
@@ -39,7 +39,7 @@ export function WhatIDo() {
               SkillSet
             </h1> */}
             <AnimatedName name="SkillSet" className={cn(
-              "text-5xl md:text-7xl lg:text-7xl font-heading font-black tracking-tight text-[#111]",
+              "text-5xl md:text-7xl lg:text-8xl font-heading font-black tracking-tight text-[#111]",
                theme === 'dark' ? 'text-primary' : 'text-[#111]'
             )} />
             <motion.p
