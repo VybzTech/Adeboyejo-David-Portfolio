@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BRAND_INFO } from "@/lib/data";
 import { GithubLogoIcon, LinkedinLogoIcon, TwitterLogoIcon, InstagramLogoIcon, EnvelopeSimple, Phone } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
-import Logo from "./Navbar/Logo";
+import Logo from "@/components/layout/Navbar/Logo";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
