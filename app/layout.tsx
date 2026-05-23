@@ -67,7 +67,7 @@ export const viewport: Viewport = {
 
 
 import Script from "next/script";
-import { Footer } from "../components/layout/Footer";
+import { Footer } from "./Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { ErrorBoundary } from "@/components/common/ErrorBoundary";
 import { DiamondScrollbar } from "@/components/common/DiamondScrollbar";
