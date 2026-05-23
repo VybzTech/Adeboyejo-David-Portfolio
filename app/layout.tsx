@@ -70,6 +70,7 @@ import Script from "next/script";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { ErrorBoundary } from "@/components/common/ErrorBoundary";
+import { DiamondScrollbar } from "@/components/common/DiamondScrollbar";
 
 export default function RootLayout({
   children,
@@ -102,6 +103,7 @@ export default function RootLayout({
           <ThemeProvider>
             <div className="relative flex min-h-screen flex-col">
               <Navbar />
+              <DiamondScrollbar />
               <main className="flex-1">
                 <ErrorBoundary>
                   {children}

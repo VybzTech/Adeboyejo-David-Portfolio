@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
+import { AnimatedName } from "@/components/ui/AnimatedName";
 
 interface AboutNavProps {
   activeSection: string;
@@ -36,16 +37,18 @@ export function AboutNav({ activeSection, onSectionChange }: AboutNavProps) {
           >
             About
           </h2>
-          <h3
+          {/* <h3
             className={cn(
-              "text-4xl md:text-5xl font-heading font-black mb-8",
+              "text-6xl md:text-5xl font-heading font-black mb-8",
               isDark
                 ? "text-[var(--text-primary)]"
                 : "text-slate-900"
             )}
           >
             Who <span className="text-primary">I</span> Am
-          </h3>
+          </h3> */}
+          <AnimatedName name="Who I am" className="text-5xl md:text-5xl lg:text-7xl font-heading font-black mb-8" />
+          {/* <AnimatedName name="David" className="text-4xl md:text-5xl lg:text-7xl font-heading font-black mb-8" /> */}
         </div>
 
         <nav className="space-y-3">
@@ -61,8 +64,8 @@ export function AboutNav({ activeSection, onSectionChange }: AboutNavProps) {
                     ? "bg-primary/20 border border-primary/50 text-primary shadow-[0_0_20px_rgba(0,240,255,0.2)]"
                     : "bg-blue-100 border border-blue-300 text-blue-700 shadow-[0_0_20px_rgba(19,91,232,0.2)]"
                   : isDark
-                  ? "bg-white/5 border border-white/10 text-text-secondary hover:bg-white/10"
-                  : "bg-slate-100/50 border border-slate-300/40 text-slate-600 hover:bg-slate-100"
+                    ? "bg-white/5 border border-white/10 text-text-secondary hover:bg-white/10"
+                    : "bg-slate-100/50 border border-slate-300/40 text-slate-600 hover:bg-slate-100"
               )}
             >
               <span className="text-xl">{section.emoji}</span>

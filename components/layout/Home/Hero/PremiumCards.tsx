@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { Cpu, Globe, RocketLaunch, X } from "@phosphor-icons/react";
 import { useTheme } from "@/components/providers/ThemeProvider";
@@ -27,6 +27,29 @@ interface SkillDetail {
 
 function SkillModal({ skill, isOpen, onClose }: { skill: SkillDetail | null; isOpen: boolean; onClose: () => void }) {
   const { theme } = useTheme();
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = scrollRef.current;
+      const totalScrollableHeight = scrollHeight - clientHeight;
+      if (totalScrollableHeight > 0) {
+        setScrollPercentage((scrollTop / totalScrollableHeight) * 100);
+      } else {
+        setScrollPercentage(0);
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      setScrollPercentage(0);
+      if (scrollRef.current) {
+        scrollRef.current.scrollTop = 0;
+      }
+    }
+  }, [isOpen, skill]);
 
   if (!skill) return null;
 
@@ -37,9 +60,9 @@ function SkillModal({ skill, isOpen, onClose }: { skill: SkillDetail | null; isO
       exit={{ opacity: 0 }}
       onClick={onClose}
       className={cn(
-        "fixed inset-0 z-99 flex items-center justify-center backdrop-blur-sm transition-opacity overflow-y-auto",
+        "fixed inset-0 z-100 flex items-center justify-center backdrop-blur-sm transition-opacity overflow-y-auto",
         isOpen ? "pointer-events-auto" : "pointer-events-none",
-        theme === "light" ? "bg-black/40" : "bg-black/60"
+        theme === "light" ? "bg-black/50" : "bg-black/60"
       )}
     >
       <motion.div
@@ -47,7 +70,7 @@ function SkillModal({ skill, isOpen, onClose }: { skill: SkillDetail | null; isO
         animate={{ scale: isOpen ? 1 : 0.9, y: isOpen ? 0 : 20 }}
         onClick={(e) => e.stopPropagation()}
         className={cn(
-          "relative max-w-2xl w-full mx-4 rounded-2xl overflow-y-auto",
+          "relative max-w-2xl w-full mx-4 rounded-2xl overflow-hidden",
           "mt-[10.1vh]",
           theme === "light"
             ? "bg-gradient-to-br from-white to-slate-50"
@@ -61,11 +84,17 @@ function SkillModal({ skill, isOpen, onClose }: { skill: SkillDetail | null; isO
           maxHeight: "calc(100vh - 10.01vh)",
         }}
       >
+        {/* Custom Scrollbar */}
+        <div className="custom-scrollbar-track">
+            <div className="scrollbar-fill" style={{ height: `${scrollPercentage}%` }}></div>
+            <div className="scrollbar-thumb-diamond" style={{ top: `${scrollPercentage}%` }}></div>
+        </div>
+
         {/* Close Button */}
         <button
           onClick={onClose}
           className={cn(
-            "absolute top-6 right-6 z-10 p-2 rounded-full transition-colors hover:text-red-600",
+            "absolute top-6 right-8 z-10 p-2 rounded-full transition-colors hover:text-red-600",
             theme === "light"
               ? "hover:bg-slate-100 text-blue-600"
               : "hover:bg-white/10 text-primary"
@@ -74,8 +103,14 @@ function SkillModal({ skill, isOpen, onClose }: { skill: SkillDetail | null; isO
           <X size={24} />
         </button>
 
-        {/* Content */}
-        <div className="p-8 md:p-12 space-y-6">
+        <div 
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="h-full w-full overflow-y-auto lg:overflow-y-hidden scrollbar-hide"
+          style={{ maxHeight: "calc(100vh - 10.01vh)" }}
+        >
+          {/* Content */}
+          <div className="p-8 md:p-12 space-y-6 pr-10">
           {/* Header */}
           <div className="flex items-start gap-6">
             <div
@@ -179,6 +214,7 @@ function SkillModal({ skill, isOpen, onClose }: { skill: SkillDetail | null; isO
                   </span>
                 </motion.div>
               ))}
+            </div>
             </div>
           </div>
         </div>

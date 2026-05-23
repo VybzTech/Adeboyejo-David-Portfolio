@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export function AboutMe() {
   const { theme } = useTheme();
@@ -34,10 +35,18 @@ export function AboutMe() {
       exit={{ opacity: 0, y: 20 }}
       className="space-y-8"
     >
-      <div className="space-y-4">
+      <div className="clearfix">
+        <Image 
+          src="/images/Moi/David.png" 
+          alt="David Adeboyejo" 
+          width={150} 
+          height={150} 
+          className="float-left hidden lg:block w-28 h-28 md:w-36 md:h-36 lg:w-38 lg:h-38 mr-6 mb-2 rounded-2xl object-cover shadow-[0_0_20px_rgba(19,91,232,0.15)]"
+          //  border-2 border-primary/20" 
+        />
         <p
           className={cn(
-            "text-lg leading-relaxed",
+            "text-lg leading-relaxed mb-4",
             isDark ? "text-text-secondary" : "text-slate-700"
           )}
         >
