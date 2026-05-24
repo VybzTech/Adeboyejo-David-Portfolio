@@ -71,6 +71,7 @@ import { Footer } from "./Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { ErrorBoundary } from "@/components/common/ErrorBoundary";
 import { DiamondScrollbar } from "@/components/common/DiamondScrollbar";
+import { Toaster } from "react-hot-toast";
 
 export default function RootLayout({
   children,
@@ -101,6 +102,21 @@ export default function RootLayout({
         <div className="noise-bg" />
         <LenisProvider>
           <ThemeProvider>
+            <Toaster
+              position="top-right"
+              reverseOrder={false}
+              gutter={8}
+              toastOptions={{
+                duration: 4000,
+                style: {
+                  background: "var(--surface)",
+                  color: "var(--text-primary)",
+                  borderRadius: "0.75rem",
+                  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+                  border: "1px solid var(--border)",
+                },
+              }}
+            />
             <div className="relative flex min-h-screen flex-col">
               <Navbar />
               <DiamondScrollbar />

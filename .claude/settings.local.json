@@ -8,7 +8,8 @@
       "Bash(curl -s http://localhost:3000)",
       "Bash(Start-Sleep -Seconds 5)",
       "Bash(npx husky *)",
-      "Bash(cd \"c:\\\\Users\\\\IT DIRECTORATE\\\\Documents\\\\GitHub\\\\Adeboyejo-David-Portfolio\" && mkdir -p .husky)"
+      "Bash(cd \"c:\\\\Users\\\\IT DIRECTORATE\\\\Documents\\\\GitHub\\\\Adeboyejo-David-Portfolio\" && mkdir -p .husky)",
+      "Bash(npm install *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\IT DIRECTORATE\\Documents\\GitHub\\Adeboyejo-David-Portfolio\\.husky"

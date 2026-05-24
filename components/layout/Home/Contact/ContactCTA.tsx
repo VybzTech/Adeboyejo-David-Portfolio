@@ -6,11 +6,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/common/Button";
 import { BRAND_INFO } from "@/lib/data";
-import { EnvelopeSimple as EnvelopeSimpleIcon, Phone as PhoneIcon, LinkedinLogo as LinkedinLogoIcon, PaperPlaneTilt as PaperPlaneTiltIcon, ArrowRightIcon } from "@phosphor-icons/react";
+import { EnvelopeSimple as EnvelopeSimpleIcon, Phone as PhoneIcon, LinkedinLogo as LinkedinLogoIcon, PaperPlaneTilt as PaperPlaneTiltIcon, ArrowRightIcon, XCircle } from "@phosphor-icons/react";
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Label } from "./Label";
+import toast from "react-hot-toast";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -36,10 +38,13 @@ export function ContactCTA() {
     reset,
   } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
+    mode: "onSubmit",
   });
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
+    const loadingToast = toast.loading("Sending your message...");
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -48,13 +53,25 @@ export function ContactCTA() {
       });
 
       if (response.ok) {
-        alert("Message sent successfully!");
+        toast.dismiss(loadingToast);
+        toast.success("Message sent successfully! I'll get back to you soon.", {
+          duration: 5000,
+          icon: "✓",
+        });
         reset();
       } else {
-        alert("Failed to send message. Please try again.");
+        const errorData = await response.json();
+        toast.dismiss(loadingToast);
+        toast.error(errorData.error || "Failed to send message. Please try again.", {
+          duration: 4000,
+        });
       }
     } catch (error) {
-      alert("An error occurred. Please try again.");
+      toast.dismiss(loadingToast);
+      toast.error("An error occurred. Please check your connection and try again.", {
+        duration: 4000,
+      });
+      console.error("Form submission error:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -115,9 +132,9 @@ export function ContactCTA() {
             <div className={cn(
               "p-8 md:p-12 lg:p-16 flex flex-col justify-between border-b lg:border-b-0 lg:border-r",
               theme === "dark"
-                ? "bg-gray-800/70 backdrop-blur-lg border-gray-600/40"
+                ? "bg-[var(--background)] backdrop-blur-lg border-gray-600/70"
                 : "bg-white/30 backdrop-blur-md border-blue-200/40",
-              "shadow-xl rounded-tl-3xl rounded-bl-3xl"
+              "shadow-xl rounded-tl-3xl lg:rounded-bl-3xl "
             )}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -147,7 +164,9 @@ export function ContactCTA() {
                 </div>
 
                 {/* Description */}
-                <div className="space-y-4 text-slate-700">
+                <div className={cn("space-y-4",
+                  isDark ? "text-white" : "text-slate-700"
+                )}>
                   <p className="text-base leading-relaxed">
                     Looking for a Product Engineer who builds scalable, high-performance digital experiences with strong frontend craftsmanship and full-stack thinking? Let's connect.
                   </p>
@@ -157,8 +176,8 @@ export function ContactCTA() {
                 </div>
 
                 {/* Signature */}
-                <p className={cn("text-sm font-semibold pt-4 border-t", isDark ? "text-gray-400 border-gray-700" : "text-slate-600 border-blue-200/40")}>
-                  — David Adeboyejo<br />
+                <p className={cn("text-sm font-semibold pt-4 pb-2.5 border-t", isDark ? "text-gray-400 border-slate-800/50" : "text-slate-600 border-blue-200/40")}>
+                  David Adeboyejo<br />
                   <span className="text-xs font-normal">Product Engineer • Full-Stack Developer • Frontend Systems Builder</span>
                 </p>
               </motion.div>
@@ -169,7 +188,8 @@ export function ContactCTA() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="flex gap-4 pt-8 border-t border-blue-200/40"
+                className={cn("flex gap-4 pt-8 border-t ",
+                  isDark ? "border-slate-800/60" : "border-blue-200/40")}
               >
                 {contactItems.map((item, idx) => (
                   <Link
@@ -184,7 +204,10 @@ export function ContactCTA() {
                       viewport={{ once: true }}
                       transition={{ delay: idx * 0.1 }}
                       whileHover={{ scale: 1.05 }}
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-100 border border-blue-300 text-blue-700 hover:bg-blue-200 hover:border-blue-400 transition-all duration-300 font-semibold text-sm"
+                      className={cn("flex items-center gap-2 px-4 py-2 rounded-lg hover:cursor-pointer",
+                        isDark ? "bg-[var(--background)] border-slate-800/60 text-white hover:bg-slate-800/60 hover:border-slate-800/60"
+                          : "bg-blue-100 border border-blue-300 text-blue-700 hover:bg-blue-200 hover:border-blue-400"
+                      )}
                     >
                       {item.icon}
                       <span className="hidden md:block lg:block">{item.label}</span>
@@ -195,7 +218,12 @@ export function ContactCTA() {
             </div>
 
             {/* Right: Form */}
-            <div className="p-8 md:p-12 lg:p-16 bg-gradient-to-br from-slate-200/50 to-slate-100/35 flex flex-col justify-center">
+            <div className={cn("p-8 md:p-12 lg:p-16",
+              "flex flex-col justify-center",
+              isDark ? "bg-gradient-to-br from-surface to-surface border-slate-700/20 shadow-[0_0_40px_rgba(59,130,255,0.1),inset_0_1px_7px_rgba(59,95,246,0.1),0_15px_15px_rgba(59,130,255,0.05)]"
+                :
+                "bg-gradient-to-br from-slate-200/50 to-slate-100/35",
+            )}>
               <motion.form
                 onSubmit={handleSubmit(onSubmit)}
                 initial={{ opacity: 0, y: 20 }}
@@ -206,49 +234,109 @@ export function ContactCTA() {
                 {/* Name & Subject Row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <motion.input
+                    <label className="block text-sm font-body font-light text-slate-500 mb-2">Full Name</label>
+                    <input
                       {...register("name")}
-                      whileFocus={{ scale: 1.02 }}
                       type="text"
-                      placeholder="Your Name"
-                      className="w-full px-4 py-3 rounded-lg border border-blue-200 bg-white/80 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
+                      placeholder="David Adeboyejo"
+                      className={cn(
+                        "w-full px-4 py-3 rounded-lg border placeholder-slate-400 focus:outline-none transition-all duration-300",
+                        errors.name
+                        ? "border-red-400/50 focus:ring-2 focus:ring-red-400/20 focus:border-red-400"
+                        : "border-blue-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20",
+                        isDark ? "bg-transparent text-white border-primary": " bg-white/80 text-slate-900"
+                      )}
                     />
-                    {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name.message}</p>}
+                    {errors.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="flex items-center gap-2 mt-2 text-xs text-red-600 font-body"
+                      >
+                        <XCircle size={14} weight="fill" />
+                        <span>{errors.name.message}</span>
+                      </motion.div>
+                    )}
                   </div>
                   <div>
-                    <motion.input
+                    <label className="block text-sm font-body font-light text-slate-500 mb-2">Subject</label>
+                    <input
                       {...register("subject")}
-                      whileFocus={{ scale: 1.02 }}
                       type="text"
-                      placeholder="Subject"
-                      className="w-full px-4 py-3 rounded-lg border border-blue-200 bg-white/80 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
+                      placeholder="Project Inquiry"
+                      className={cn(
+                        "w-full px-4 py-3 rounded-lg border placeholder-slate-400 focus:outline-none transition-all duration-300",
+                        errors.subject
+                          ? "border-red-400/50 focus:ring-2 focus:ring-red-400/20 focus:border-red-400"
+                          : "border-blue-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20",
+                        isDark ? "bg-transparent text-white border-primary": " bg-white/80 text-slate-900"
+                      )}
                     />
-                    {errors.subject && <p className="text-xs text-red-500 mt-1">{errors.subject.message}</p>}
+                    {errors.subject && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="flex items-center gap-2 mt-2 text-xs text-red-600 font-body"
+                      >
+                        <XCircle size={14} weight="fill" />
+                        <span>{errors.subject.message}</span>
+                      </motion.div>
+                    )}
                   </div>
                 </div>
 
                 {/* Email */}
                 <div>
-                  <motion.input
+                  <label className="block text-sm font-body font-light text-slate-500 mb-2">Email Address</label>
+                  <input
                     {...register("email")}
-                    whileFocus={{ scale: 1.02 }}
                     type="email"
-                    placeholder="Your Email"
-                    className="w-full px-4 py-3 rounded-lg border border-blue-200 bg-white/80 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
+                    placeholder="hello@example.com"
+                    className={cn(
+                      "w-full px-4 py-3 rounded-lg border placeholder-slate-400 focus:outline-none transition-all duration-300",
+                      errors.email
+                        ? "border-red-400/50 focus:ring-2 focus:ring-red-400/20 focus:border-red-400"
+                        : "border-blue-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20",
+                        isDark ? "bg-transparent text-white border-primary": " bg-white/80 text-slate-900"
+                    )}
                   />
-                  {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email.message}</p>}
+                  {errors.email && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="flex items-center gap-2 mt-2 text-xs text-red-600 font-body"
+                    >
+                      <XCircle size={14} weight="fill" />
+                      <span>{errors.email.message}</span>
+                    </motion.div>
+                  )}
                 </div>
 
                 {/* Message */}
                 <div>
-                  <motion.textarea
+                  <label className="block text-sm font-body font-light text-slate-500 mb-2">Message</label>
+                  <textarea
                     {...register("message")}
-                    whileFocus={{ scale: 1.02 }}
-                    placeholder="Your Message"
+                    placeholder="Tell me about your project, ideas, or just say hello..."
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-blue-200 bg-white/80 text-slate-900 placeholder-slate-500 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300 resize-none"
+                    className={cn(
+                      "w-full px-4 py-3 rounded-lg border placeholder-slate-400 focus:outline-none transition-all duration-300 resize-none",
+                      errors.message
+                        ? "border-red-400/50 focus:ring-2 focus:ring-red-400/20 focus:border-red-400"
+                        : "border-blue-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20",
+                        isDark ? "bg-transparent text-white border-primary": " bg-white/80 text-slate-900"
+                    )}
                   />
-                  {errors.message && <p className="text-xs text-red-500 mt-1">{errors.message.message}</p>}
+                  {errors.message && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="flex items-center gap-2 mt-2 text-xs text-red-600 font-body"
+                    >
+                      <XCircle size={14} weight="fill" />
+                      <span>{errors.message.message}</span>
+                    </motion.div>
+                  )}
                 </div>
 
                 {/* Send Button */}
@@ -270,7 +358,7 @@ export function ContactCTA() {
                         className="relative z-10"
                         whileHover={{ rotate: -25 }}
                       >
-                        <ArrowRightIcon size={22} className="text-white" />
+                        <ArrowRightIcon strokeWidth={2} size={22} className="text-white" />
                       </motion.div>
                     )}
                   </Button>

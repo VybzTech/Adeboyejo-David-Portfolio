@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { BRAND_INFO } from "@/lib/data";
-import { GithubLogo as GithubLogoIcon, LinkedinLogo as LinkedinLogoIcon, TwitterLogo as TwitterLogoIcon, InstagramLogo as InstagramLogoIcon, EnvelopeSimple, Phone } from "@phosphor-icons/react";
+import { GithubLogo as GithubLogoIcon, LinkedinLogo as LinkedinLogoIcon, TwitterLogo as TwitterLogoIcon, InstagramLogoIcon, EnvelopeSimple, Phone, WhatsappLogo } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import Logo from "@/components/layout/Navbar/Logo";
 
