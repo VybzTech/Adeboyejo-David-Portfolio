@@ -11,6 +11,7 @@ export const BRAND_INFO = {
     "Mobile Developer",
   ],
   location: "📍 Remote",
+  location2: "📍 Lagos, NG",
   email: "adedave77@gmail.com",
   phone: "+234 812 182 0645",
   github: "https://github.com/VybzTech",

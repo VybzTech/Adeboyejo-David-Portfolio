@@ -14,6 +14,7 @@ export function Footer() {
     { icon: <LinkedinLogoIcon size={24} />, href: BRAND_INFO.linkedin, label: "LinkedIn" },
     { icon: <TwitterLogoIcon size={24} />, href: BRAND_INFO.twitter, label: "Twitter" },
     { icon: <InstagramLogoIcon size={24} />, href: BRAND_INFO.instagram, label: "Instagram" },
+    { icon: <WhatsappLogo size={24} />, href: "https://wa.me/2348121820645", label: "WhatsApp" },
   ];
 
   return (
@@ -82,17 +83,18 @@ export function Footer() {
                 <a href={`tel:${BRAND_INFO.phone.replace(/\s/g, '')}`} className="hover:text-[var(--accent-primary)] transition-colors">{BRAND_INFO.phone}</a>
               </li>
               <li className="text-sm opacity-80">{BRAND_INFO.location}</li>
+              <li className="text-sm opacity-80">{BRAND_INFO.location2}</li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-[var(--border)] flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[var(--text-muted)]">
-          <p>© {currentYear} {BRAND_INFO.brand}. All rights reserved.</p>
-          <div className="flex gap-8">
-            <Link href="/privacy" className="hover:text-[var(--text-primary)] transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-[var(--text-primary)] transition-colors">Terms of Service</Link>
-          </div>
+        <div className="pt-8 border-t border-[var(--border)] flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+          <p className="text-slate-500">© {currentYear} {BRAND_INFO.brand}. All rights reserved.</p>
+          {/* <p className="text-[var(--text-muted)]">© {currentYear} {BRAND_INFO.brand}. All rights reserved.</p> */}
+          <p className="text-slate-500 italic tracking-tight text-sm">
+            Building scalable systems to optimize workflows — engineering how people work, efficiently.
+          </p>
         </div>
       </div>
     </footer>
