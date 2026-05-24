@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/common/Button";
 import { PaperPlaneTilt } from "@phosphor-icons/react";
 import { useState } from "react";
 
@@ -30,28 +30,29 @@ export function ContactForm() {
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    // try {
-    //   const response = await fetch("/api/contact", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(data),
-    //   });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-    //   if (response.ok) {
-    //     alert("Message sent successfully!");
-    //     reset();
-    //   } else {
-    //     alert("Failed to send message. Please try again.");
-    //   }
-    // } catch (error) {
-    //   alert("An error occurred. Please try again.");
-    // } finally {
-    //   setIsSubmitting(false);
-    // }
+      if (response.ok) {
+        alert("Message sent successfully!");
+        reset();
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      alert("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label className="text-sm font-medium text-text-muted">Full Name</label>
@@ -96,12 +97,14 @@ export function ContactForm() {
 
       <Button
         type="submit"
+        isLoading={isSubmitting}
         disabled={isSubmitting}
         className="w-full md:w-auto min-w-[200px]"
       >
         {isSubmitting ? "Sending..." : "Send Message"}
         <PaperPlaneTilt size={20} weight="bold" />
       </Button>
+
     </form>
   );
 }

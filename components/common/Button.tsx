@@ -1,12 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { ButtonHTMLAttributes, forwardRef, DragEvent } from "react";
+import { forwardRef } from "react";
 
-type MotionButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onDragEnter' | 'onDragOver' | 'onDragLeave' | 'onDrop' | 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration' | 'onTransitionEnd'>;
-
-export interface ButtonProps extends MotionButtonProps {
+export interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   isLoading?: boolean;

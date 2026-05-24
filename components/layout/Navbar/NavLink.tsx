@@ -14,23 +14,91 @@ interface NavLinkProps {
 
 export function NavLink({ href, children, onClick }: NavLinkProps) {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const [isActive, setIsActive] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    const checkActive = () => {
+      // 1. If we are on '/about' and this link is '/about'
+      if (href === "/about") {
+        setIsActive(pathname === "/about");
+        return;
+      }
+
+      // 2. If we are on '/case-studies' or any of its subpages and this link is '/case-studies'
+      if (href === "/case-studies") {
+        setIsActive(pathname.startsWith("/case-studies"));
+        return;
+      }
+
+      // 3. For Home ("/") and Contact ("/#contact")
+      if (pathname === "/") {
+        const hash = window.location.hash;
+        
+        if (href.includes("#contact")) {
+          const contactElement = document.getElementById("contact");
+          if (contactElement) {
+            const rect = contactElement.getBoundingClientRect();
+            // If the top of contact section is in viewport or above the middle of viewport
+            const isInViewport = rect.top < window.innerHeight * 0.5 && rect.bottom > 100;
+            setIsActive(hash === "#contact" || isInViewport);
+          } else {
+            setIsActive(hash === "#contact");
+          }
+        } else if (href === "/") {
+          // Home is active only if Contact is NOT active
+          const contactElement = document.getElementById("contact");
+          let isContactActive = hash === "#contact";
+          if (contactElement) {
+            const rect = contactElement.getBoundingClientRect();
+            isContactActive = rect.top < window.innerHeight * 0.5 && rect.bottom > 100;
+          }
+          setIsActive(!isContactActive);
+        }
+      } else {
+        // If we are on `/about` or `/case-studies`, then "/" or "/#contact" are not active
+        setIsActive(false);
+      }
+    };
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      checkActive();
     };
+
+    // Run initially
+    checkActive();
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("hashchange", checkActive);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("hashchange", checkActive);
+    };
+  }, [pathname, href]);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    // If we're already on the same page, smooth-scroll to top instead of navigating
-    if (isActive) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    // If the href is a section hash link on the current page
+    if (href.includes("#") || href.startsWith("/#")) {
+      const parts = href.split("#");
+      const hash = parts[parts.length - 1];
+      
+      if (pathname === "/") {
+        e.preventDefault();
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+          window.history.pushState(null, "", `#${hash}`);
+        }
+      }
+    } else if (href === "/") {
+      if (pathname === "/") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.history.pushState(null, "", "/");
+      }
     }
     onClick?.();
   };
