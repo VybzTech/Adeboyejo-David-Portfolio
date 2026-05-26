@@ -9,7 +9,8 @@
       "Bash(Start-Sleep -Seconds 5)",
       "Bash(npx husky *)",
       "Bash(cd \"c:\\\\Users\\\\IT DIRECTORATE\\\\Documents\\\\GitHub\\\\Adeboyejo-David-Portfolio\" && mkdir -p .husky)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "PowerShell(Get-Process node -ErrorAction SilentlyContinue | Where-Object { $_.Name -eq \"node\" } | Stop-Process -Force -ErrorAction SilentlyContinue; \"Dev server stopped\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\IT DIRECTORATE\\Documents\\GitHub\\Adeboyejo-David-Portfolio\\.husky"

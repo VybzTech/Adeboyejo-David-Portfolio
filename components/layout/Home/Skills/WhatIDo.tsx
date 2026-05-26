@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatedName } from "@/components/ui/AnimatedName";
-import { PremiumCards } from "./Hero/PremiumCards";
+import { PremiumCards } from "../Hero/PremiumCards";
 import { motion } from "framer-motion";
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
@@ -40,7 +40,7 @@ export function WhatIDo() {
             </h1> */}
             <AnimatedName name="SkillSet" className={cn(
               "text-5xl md:text-7xl lg:text-8xl font-heading font-black tracking-tight text-[#111]",
-               theme === 'dark' ? 'text-primary' : 'text-[#111]'
+              theme === 'dark' ? 'text-primary' : 'text-[#111]'
             )} />
             <motion.p
               initial={{ opacity: 0, y: 10 }}

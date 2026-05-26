@@ -1,20 +1,31 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import * as z from 'zod';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const formSchema = z.object({
+  name: z.string().min(2, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  subject: z.string().min(3, "Subject is required"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
 export async function POST(req: Request) {
   try {
-    const { name, email, subject, message } = await req.json();
+    const data = await req.json();
 
-    if (!name || !email || !subject || !message) {
+    const validationResult = formSchema.safeParse(data);
+    if (!validationResult.success) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
+        { error: 'Validation failed', details: validationResult.error.issues },
         { status: 400 }
       );
     }
 
-    const { data, error } = await resend.emails.send({
+    const { name, email, subject, message } = validationResult.data;
+
+    const { data: emailData, error } = await resend.emails.send({
       from: 'Contact Form <David-Adeboyejo@VybzTech.dev>', // You might need to change this to a verified domain on Resend
       to: ['adedave77@gmail.com'],
       subject: `Portfolio Website Contact: ${subject}`,
@@ -34,7 +45,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
-    return NextResponse.json({ success: true, data });
+    return NextResponse.json({ success: true, data: emailData });
   } catch (error) {
     console.error('Server error:', error);
     return NextResponse.json(

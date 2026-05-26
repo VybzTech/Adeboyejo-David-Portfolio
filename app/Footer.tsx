@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { BRAND_INFO } from "@/lib/data";
-import { GithubLogo as GithubLogoIcon, LinkedinLogo as LinkedinLogoIcon, TwitterLogo as TwitterLogoIcon, InstagramLogoIcon, EnvelopeSimple, Phone, WhatsappLogo } from "@phosphor-icons/react";
+import { GithubLogoIcon, LinkedinLogoIcon, TwitterLogoIcon, InstagramLogoIcon, EnvelopeSimpleIcon, PhoneIcon, WhatsappLogoIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import Logo from "@/components/layout/Navbar/Logo";
 
@@ -14,7 +14,7 @@ export function Footer() {
     { icon: <LinkedinLogoIcon size={24} />, href: BRAND_INFO.linkedin, label: "LinkedIn" },
     { icon: <TwitterLogoIcon size={24} />, href: BRAND_INFO.twitter, label: "Twitter" },
     { icon: <InstagramLogoIcon size={24} />, href: BRAND_INFO.instagram, label: "Instagram" },
-    { icon: <WhatsappLogo size={24} />, href: "https://wa.me/2348121820645", label: "WhatsApp" },
+    { icon: <WhatsappLogoIcon size={24} />, href: "https://wa.me/2348121820645", label: "WhatsApp" },
   ];
 
   return (
@@ -65,7 +65,7 @@ export function Footer() {
             <ul className="flex flex-col gap-4 text-[var(--text-muted)]">
               <li><Link href="/" className="hover:text-[var(--accent-primary)] transition-colors">Home</Link></li>
               <li><Link href="/about" className="hover:text-[var(--accent-primary)] transition-colors">About</Link></li>
-              <li><Link href="/projects" className="hover:text-[var(--accent-primary)] transition-colors">Case Studies</Link></li>
+              <li><Link href="/case-studies" className="hover:text-[var(--accent-primary)] transition-colors">Case Studies</Link></li>
               <li><Link href="/contact" className="hover:text-[var(--accent-primary)] transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -75,12 +75,12 @@ export function Footer() {
             <h4 className="font-heading font-bold text-[var(--text-primary)] mb-6 uppercase tracking-wider text-md">Contact</h4>
             <ul className="flex flex-col gap-4 text-[var(--text-muted)]">
               <li className="flex items-center gap-3">
-                <EnvelopeSimple size={20} className="text-[var(--accent-primary)]" />
-                <a href={`mailto:${BRAND_INFO.email}`} className="hover:text-[var(--accent-primary)] transition-colors">{BRAND_INFO.email}</a>
+                <EnvelopeSimpleIcon size={20} className="text-[var(--accent-primary)]" />
+                <a href={`mailto:${BRAND_INFO?.email}`} className="hover:text-[var(--accent-primary)] transition-colors">{BRAND_INFO?.email}</a>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={20} className="text-[var(--accent-primary)]" />
-                <a href={`tel:${BRAND_INFO.phone.replace(/\s/g, '')}`} className="hover:text-[var(--accent-primary)] transition-colors">{BRAND_INFO.phone}</a>
+                <PhoneIcon size={20} className="text-[var(--accent-primary)]" />
+                <a href={`tel:${BRAND_INFO?.phone?.replace(/\s/g, '')}`} className="hover:text-[var(--accent-primary)] transition-colors">{BRAND_INFO?.phone}</a>
               </li>
               <li className="text-sm opacity-80">{BRAND_INFO.location}</li>
               <li className="text-sm opacity-80">{BRAND_INFO.location2}</li>
@@ -90,7 +90,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-[var(--border)] flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p className="text-slate-500">© {currentYear} {BRAND_INFO.brand}. All rights reserved.</p>
+          <p className="text-slate-500">© {currentYear} {BRAND_INFO?.brand}. All rights reserved.</p>
           {/* <p className="text-[var(--text-muted)]">© {currentYear} {BRAND_INFO.brand}. All rights reserved.</p> */}
           <p className="text-slate-500 italic tracking-tight text-sm">
             Building scalable systems to optimize workflows — engineering how people work, efficiently.

@@ -34,14 +34,21 @@ export function ContactCTA() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
     reset,
   } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
-    mode: "onSubmit",
+    mode: "onChange",
+    reValidateMode: "onChange",
   });
 
   const onSubmit = async (data: FormValues) => {
+    const errorCount = Object.keys(errors).length;
+    if (errorCount > 0) {
+      toast.error(`Please fix ${errorCount} error${errorCount > 1 ? 's' : ''} in the form.`, { duration: 3000 });
+      return;
+    }
+
     setIsSubmitting(true);
     const loadingToast = toast.loading("Sending your message...");
 
@@ -234,7 +241,7 @@ export function ContactCTA() {
                 {/* Name & Subject Row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-body font-light text-slate-500 mb-2">Full Name</label>
+                    <label className="block text-sm font-body font-light text-slate-500 mb-2">Your Name</label>
                     <input
                       {...register("name")}
                       type="text"
@@ -344,21 +351,23 @@ export function ContactCTA() {
                   <Button
                     type="submit"
                     isLoading={isSubmitting}
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || Object.keys(errors).length > 0}
                     className={cn(
                       "w-fit relative rounded-full py-3 px-8 font-semibold text-white",
                       "bg-gradient-to-br from-blue-400 to-primary hover:from-blue-500 hover:to-blue-800",
                       "transition-all duration-300 shadow-lg hover:shadow-xl mx-auto",
-                      "flex items-center justify-center gap-3 ease-in-out hover:scale-[1.02] hover:cursor-pointer"
+                      "flex items-center justify-center gap-3 ease-in-out",
+                      Object.keys(errors).length > 0 ? "opacity-50 cursor-not-allowed" : "hover:scale-[1.02] hover:cursor-pointer"
                     )}
                   >
                     <span className="relative z-10 font-semibold">{isSubmitting ? "Sending..." : "Send Message"}</span>
                     {!isSubmitting && (
                       <motion.div
                         className="relative z-10"
-                        whileHover={{ rotate: -25 }}
+                        whileHover={{ rotate: Object.keys(errors).length > 0 ? 0 : -25 }}
                       >
-                        <ArrowRightIcon strokeWidth={2} size={22} className="text-white" />
+                        <PaperPlaneTiltIcon weight="bold" size={20} className="text-white" />
+                        {/* <ArrowRightIcon weight="bold" size={22} className="text-white" /> */}
                       </motion.div>
                     )}
                   </Button>
