@@ -73,18 +73,18 @@ export function FeaturedCaseStudies() {
       </div>
 
       {/* TV-View Container for Desktop */}
-      <div className="hidden lg:block">
+      <div className="hidden lg:block mb-8">
         <ScrollReveal>
           <div
-                      className={cn(
-                        "rounded-2xl p-8 md:p-12 border transition-all duration-300",
-                        "shadow-[0_0_50px_rgba(59,130,255,0.1),inset_0_1px_7px_rgba(59,95,246,0.15),0_20px_20px_rgba(59,130,255,0.05)]",
-                        isDark
-                        ? "bg-gradient-to-br from-surface/50 to-surface/20 border-white/10 shadow-[0_0_40px_rgba(59,130,255,0.1),inset_0_1px_7px_rgba(59,95,246,0.1),0_15px_15px_rgba(59,130,255,0.05)]"
-                          : "bg-gradient-to-br from-blue-50/50 to-white border-blue-200/50"
-                      )}
-                    >
-          {/* <div className="
+            className={cn(
+              "rounded-2xl p-8 md:p-12 border transition-all duration-300",
+              "shadow-[0_0_50px_rgba(59,130,255,0.1),inset_0_1px_7px_rgba(59,95,246,0.15),0_20px_20px_rgba(59,130,255,0.05)]",
+              isDark
+                ? "bg-gradient-to-br from-surface/50 to-surface/20 border-white/10 shadow-[0_0_40px_rgba(59,130,255,0.1),inset_0_1px_7px_rgba(59,95,246,0.1),0_15px_15px_rgba(59,130,255,0.05)]"
+                : "bg-gradient-to-br from-blue-50/50 to-white border-blue-200/50"
+            )}
+          >
+            {/* <div className="
           p-8 rounded-3xl
            border-2 border-slate-200 dark:border-slate-800\
            bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 

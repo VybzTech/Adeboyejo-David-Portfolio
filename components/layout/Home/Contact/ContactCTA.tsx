@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Label } from "./Label";
 import toast from "react-hot-toast";
+import { PillIconButton } from "@/components/common/PillIconButton";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -249,9 +250,9 @@ export function ContactCTA() {
                       className={cn(
                         "w-full px-4 py-3 rounded-lg border placeholder-slate-400 focus:outline-none transition-all duration-300",
                         errors.name
-                        ? "border-red-400/50 focus:ring-2 focus:ring-red-400/20 focus:border-red-400"
-                        : "border-blue-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20",
-                        isDark ? "bg-transparent text-white border-primary": " bg-white/80 text-slate-900"
+                          ? "border-red-400/50 focus:ring-2 focus:ring-red-400/20 focus:border-red-400"
+                          : "border-blue-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20",
+                        isDark ? "bg-transparent text-white border-primary" : " bg-white/80 text-slate-900"
                       )}
                     />
                     {errors.name && (
@@ -276,7 +277,7 @@ export function ContactCTA() {
                         errors.subject
                           ? "border-red-400/50 focus:ring-2 focus:ring-red-400/20 focus:border-red-400"
                           : "border-blue-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20",
-                        isDark ? "bg-transparent text-white border-primary": " bg-white/80 text-slate-900"
+                        isDark ? "bg-transparent text-white border-primary" : " bg-white/80 text-slate-900"
                       )}
                     />
                     {errors.subject && (
@@ -304,7 +305,7 @@ export function ContactCTA() {
                       errors.email
                         ? "border-red-400/50 focus:ring-2 focus:ring-red-400/20 focus:border-red-400"
                         : "border-blue-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20",
-                        isDark ? "bg-transparent text-white border-primary": " bg-white/80 text-slate-900"
+                      isDark ? "bg-transparent text-white border-primary" : " bg-white/80 text-slate-900"
                     )}
                   />
                   {errors.email && (
@@ -331,7 +332,7 @@ export function ContactCTA() {
                       errors.message
                         ? "border-red-400/50 focus:ring-2 focus:ring-red-400/20 focus:border-red-400"
                         : "border-blue-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20",
-                        isDark ? "bg-transparent text-white border-primary": " bg-white/80 text-slate-900"
+                      isDark ? "bg-transparent text-white border-primary" : " bg-white/80 text-slate-900"
                     )}
                   />
                   {errors.message && (
@@ -348,7 +349,7 @@ export function ContactCTA() {
 
                 {/* Send Button */}
                 <div className="relative pt-2">
-                  <Button
+                   {/* <Button
                     type="submit"
                     isLoading={isSubmitting}
                     disabled={isSubmitting || Object.keys(errors).length > 0}
@@ -367,10 +368,10 @@ export function ContactCTA() {
                         whileHover={{ rotate: Object.keys(errors).length > 0 ? 0 : -25 }}
                       >
                         <PaperPlaneTiltIcon weight="bold" size={20} className="text-white" />
-                        {/* <ArrowRightIcon weight="bold" size={22} className="text-white" /> */}
                       </motion.div>
                     )}
-                  </Button>
+                  </Button> */}
+                  <PillIconButton icon={<PaperPlaneTiltIcon weight="bold" size={20} className="text-white" />} title="Send Message" isLoading={isSubmitting} disabled={isSubmitting || Object.keys(errors).length > 0} className="mx-auto" />
                 </div>
               </motion.form>
             </div>

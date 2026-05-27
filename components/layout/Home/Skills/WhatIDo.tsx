@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatedName } from "@/components/ui/AnimatedName";
-import { PremiumCards } from "../Hero/PremiumCards";
+import { PremiumCards } from "./PremiumCards";
 import { motion } from "framer-motion";
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
@@ -19,7 +19,7 @@ export function WhatIDo() {
 
       {/* Content */}
       <div className="relative">
-        <div className="max-w-7xl mx-auto px-6 mb-3.5 md:mb-4 lg:mb-5">
+        <div className=" max-w-7xl mx-auto px-6 mb-3.5 md:mb-4 lg:mb-5">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
