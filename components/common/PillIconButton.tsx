@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 export const PillIconButton = ({
     icon,
     title,
-    isLoading = false,
     disabled = false,
     className,
     type = "button",
@@ -15,7 +14,6 @@ export const PillIconButton = ({
 }: {
     icon: React.ReactNode;
     title: string;
-    isLoading?: boolean;
     disabled?: boolean;
     className?: string;
     type?: "button" | "submit" | "reset";
@@ -24,7 +22,6 @@ export const PillIconButton = ({
     return (
         <Button
             type={type}
-            isLoading={isLoading}
             disabled={disabled}
             onClick={onClick}
             className={cn(
@@ -37,15 +34,13 @@ export const PillIconButton = ({
                 className
             )}
         >
-            <span className="relative z-10 font-semibold">{isLoading ? "Loading..." : title}</span>
-            {!isLoading && (
-                <motion.div
-                    className="relative z-10"
-                    whileHover={{ rotate: disabled ? 0 : -25 }}
-                >
-                    {icon}
-                </motion.div>
-            )}
+            <span className="relative z-10 font-semibold">{title}</span>
+            <motion.div
+                className="relative z-10"
+                whileHover={{ rotate: disabled ? 0 : -25 }}
+            >
+                {icon}
+            </motion.div>
         </Button>
     );
 };

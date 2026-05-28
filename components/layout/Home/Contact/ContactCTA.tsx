@@ -371,7 +371,7 @@ export function ContactCTA() {
                       </motion.div>
                     )}
                   </Button> */}
-                  <PillIconButton icon={<PaperPlaneTiltIcon weight="bold" size={20} className="text-white" />} title="Send Message" isLoading={isSubmitting} disabled={isSubmitting || Object.keys(errors).length > 0} className="mx-auto" />
+                  <PillIconButton icon={<PaperPlaneTiltIcon weight="bold" size={20} className="text-white" />} title={isSubmitting ? "Sending..." : "Send Message"} disabled={isSubmitting || Object.keys(errors).length > 0} className="mx-auto" />
                 </div>
               </motion.form>
             </div>

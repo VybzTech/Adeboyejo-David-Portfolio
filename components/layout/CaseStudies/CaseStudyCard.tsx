@@ -157,7 +157,7 @@ export function CaseStudyCard({ project, index, isDark }: CaseStudyCardProps) {
             <motion.button
               whileHover={{ x: 3 }}
               className={cn(
-                "flex items-center gap-1.5 text-xs font-semibold transition-colors",
+                "flex items-center gap-1.5 text-xs font-semibold transition-colors cursor-pointer",
                 isDark ? "text-primary hover:text-blue-400" : "text-primary hover:text-blue-700"
               )}
             >
