@@ -1,49 +1,3 @@
-// "use client";
-
-// import { useEffect, useRef } from "react";
-// import { useLenis } from "lenis/react";
-
-// export function DiamondScrollbar() {
-//     const fillRef = useRef<HTMLDivElement>(null);
-//     const thumbRef = useRef<HTMLDivElement>(null);
-
-//     // Hook into Lenis scroll cycle
-//     useLenis(({ progress }) => {
-//         // progress is a value between 0 and 1 representing total scroll depth
-//         const scrollPercent = progress * 100;
-
-//         if (fillRef.current && thumbRef.current) {
-//             // Update filling height
-//             fillRef.current.style.height = `${scrollPercent}%`;
-//             // Update diamond thumb position
-//             thumbRef.current.style.top = `${scrollPercent}%`;
-//         }
-//     });
-
-//     return (
-//         // Fixed container sitting on top of the layout on the right edge
-//         <div className="fixed top-[10vh] right-[3px] w-[4px] h-[calc(100vh-10vh)] z-[9999] pointer-events-none">
-//             {/* Track Background */}
-//             <div className="custom-scrollbar-track relative w-full h-full">
-//                 {/* Dynamic Blue Liquid Fill */}
-//                 <div
-//                     ref={fillRef}
-//                     className="scrollbar-fill"
-//                     style={{ height: "0%" }}
-//                 />
-//                 {/* Shimmering Diamond Head */}
-//                 <div
-//                     ref={thumbRef}
-//                     className="scrollbar-thumb-diamond"
-//                     style={{ top: "0%" }}
-//                 />
-//             </div>
-//         </div>
-//     );
-// }
-
-
-
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -128,7 +82,7 @@ export function DiamondScrollbar() {
 
   return (
     /* Changed pointer-events-none to pointer-events-auto and locked selections */
-    <div className="fixed top-[10vh] right-[3.5px] w-[4px] h-[calc(100vh-10vh)] z-[99] pointer-events-auto select-none">
+    <div className="fixed top-[10vh] right-[4px] w-[4px] h-[calc(100vh-10vh)] z-[99] pointer-events-auto select-none">
       {/* Track Background */}
       <div 
         ref={trackRef}

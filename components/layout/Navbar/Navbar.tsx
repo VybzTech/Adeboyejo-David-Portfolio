@@ -44,18 +44,18 @@ export function Navbar() {
         className={cn(
           "fixed top-0 left-0 w-[98vw] z-[100] transition-all duration-500 ease-in-out",
           "px-6 py-3 ml-[2vw] my-2 rounded-[2.2rem]",
-          "max-h-[10vh]",
+          ""  ,
           isScrolled
             ? (theme === "light" ? "on-scroll-white" : "on-scroll-dark")
             : "lg:bg-transparent  bg-white/3 dark:bg-black/5 backdrop-blur-xs border-[1.8px] border-white/5 dark:border-dark/5",
-          "lg:border-none lg:bg-transparent lg:backdrop-blur-none lg:w-full lg:ml-0 lg:rounded-none lg:mt-0 lg:h-[10vh]"
+          "lg:border-none lg:bg-transparent lg:backdrop-blur-none lg:w-full lg:ml-0 lg:rounded-none lg:mt-0 lg:min-h-[10vh]"
         )}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-7xl mx-auto flex items-end justify-between">
           {/* Logo */}
           <div>
             <Logo
-              className="w-[9.5vw] sm:w-[9vw] md:w-[6vw] lg:w-[3rem] xl:w-[2.5rem]"
+              className="w-[2.5rem] md:w-[2.8rem] lg:w-[2.95rem] xl:w-[2.75rem]"
               svgFill={"#333"}
               AFill={theme === "light" ? "#135be8" : "#c70b0b"}
               theme={theme}

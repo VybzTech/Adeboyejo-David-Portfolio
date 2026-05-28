@@ -1,6 +1,8 @@
 "use client";
 
 import { ScrollReveal } from "@/components/common/ScrollReveal";
+import { ResumeModal } from "@/components/layout/Home/ResumeModal";
+import { useState } from "react";
 import { PillIconButton } from "@/components/common/PillIconButton";
 import { BRAND_INFO, SKILLS } from "@/lib/data";
 import { useTheme } from "@/components/providers/ThemeProvider";
@@ -84,9 +86,10 @@ const categoryLabel: Record<SkillCategory, string> = {
 export default function AboutPage() {
   const { theme } = useTheme();
   const isDark = theme === "dark";
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   return (
-    <div
+    <> <div
       className={cn(
         "min-h-screen transition-colors duration-300",
         isDark ? "bg-[var(--background)]" : "bg-[#f9f9fa]"
@@ -156,7 +159,7 @@ export default function AboutPage() {
                 icon={<DownloadSimple size={18} weight="bold" className="text-white" />}
                 title="Download Resume"
                 type="button"
-                onClick={() => window.open("/resume.pdf", "_blank")}
+                onClick={() => setIsResumeOpen(true)}
               />
 
               {/* Social icons */}
@@ -473,7 +476,7 @@ export default function AboutPage() {
                   I&apos;m open to remote roles, freelance contracts, and exciting collaborative projects.
                 </p>
                 <Link href="/#contact">
-                  <PillIconButton
+                  <PillIconButton 
                     icon={<ArrowUpRight size={18} weight="bold" className="text-white" />}
                     title="Let's work together"
                     className="!mx-0"
@@ -485,5 +488,7 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+      <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
+    </>
   );
 }

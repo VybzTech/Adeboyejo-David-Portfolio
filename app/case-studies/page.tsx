@@ -33,7 +33,6 @@ export default function CaseStudiesPage() {
         isDark ? "bg-[var(--background)]" : "bg-[#f9f9fa]"
       )}
     >
-
       <HeroBackground children={
         <div>
         {/* Ambient background orbs */}
@@ -44,10 +43,8 @@ export default function CaseStudiesPage() {
               style={{ animationDelay: "2s" }}
             />
           </div>
-
           <div className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto">
             <CaseStudiesHero isDark={isDark} totalCount={PROJECTS.length} />
-
             <CategoryFilter
               categories={CATEGORIES}
               activeCategory={activeCategory}

@@ -54,7 +54,7 @@ export function SkillModal({ skill, isOpen, onClose }: SkillModalProps) {
       animate={{ opacity: isOpen ? 1 : 0 }}
       exit={{ opacity: 0 }}
       onClick={onClose}
-      className={cn(
+      className={cn("SkillModal",
         "fixed inset-0 z-[100] flex items-center justify-center backdrop-blur-sm transition-opacity overflow-y-auto",
         isOpen ? "pointer-events-auto" : "pointer-events-none",
         theme === "light" ? "bg-black/50" : "bg-black/60"

@@ -14,7 +14,7 @@ import { TechMarquee } from "./TechMarquee";
 import { cn } from "@/lib/utils";
 import { Animation } from "@/components/common/Animation";
 
-export function Hero() {
+export function Hero({ onDownloadCV }: { onDownloadCV: () => void }) {
 
   const { theme } = useTheme();
   const contactButtonClass = cn(
@@ -63,7 +63,7 @@ export function Hero() {
                   View Case Studies
                 </OutlineButton>
               </Link>
-              <OutlineButton>
+              <OutlineButton onClick={onDownloadCV}>
                 Download CV
               </OutlineButton> 
             </motion.div>

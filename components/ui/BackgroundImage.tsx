@@ -30,7 +30,7 @@ export function BackgroundImage({
           className="object-cover object-center"
         />
         {overlay && (
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--background)]/80 via-[var(--background)]/40 to-[var(--background)] opacity-70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--background)]/80 via-[var(--background)]/40 to-[var(--background)] opacity-50" />
         )}
       </div>
       <div className="relative z-9 w-full h-full flex flex-col">
