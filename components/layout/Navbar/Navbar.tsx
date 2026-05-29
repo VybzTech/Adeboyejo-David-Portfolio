@@ -51,7 +51,7 @@ export function Navbar() {
           "lg:border-none lg:bg-transparent lg:backdrop-blur-none lg:w-full lg:ml-0 lg:rounded-none lg:mt-0 lg:min-h-[10vh]"
         )}
       >
-        <div className="max-w-7xl mx-auto flex items-end justify-between">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div>
             <Logo
