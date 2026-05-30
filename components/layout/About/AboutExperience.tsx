@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { PillIconButton } from "@/components/common/PillIconButton";
 import { ExperienceModal } from "./ExperienceModal";
+import { ArrowBendUpRightIcon, ArrowUpRightIcon, SuitcaseSimpleIcon } from "@phosphor-icons/react";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 interface ExperienceItem {
   period: string;
@@ -17,13 +19,14 @@ interface ExperienceItem {
 
 interface AboutExperienceProps {
   experienceItems: ExperienceItem[];
-  isDark: boolean;
+  // isDark: boolean;
 }
 
-export const AboutExperience: React.FC<AboutExperienceProps> = ({ experienceItems, isDark }) => {
+export const AboutExperience: React.FC<AboutExperienceProps> = ({ experienceItems }) => {
   const [selected, setSelected] = useState<ExperienceItem | null>(null);
   const [open, setOpen] = useState(false);
-
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
   const openModal = (item: ExperienceItem) => {
     setSelected(item);
     setOpen(true);
@@ -39,7 +42,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = ({ experienceItem
       <ScrollReveal>
         <div className={cn("flex items-center gap-3 mb-3", isDark ? "text-white" : "text-[#111]")}>
           <div className={cn("p-2 rounded-xl", isDark ? "bg-primary/10 text-primary" : "bg-blue-50 text-primary" )}>
-            <SuitcaseSimple size={20} weight="bold" />
+            <SuitcaseSimpleIcon size={20} weight="bold" />
           </div>
           <span className="text-sm font-semibold uppercase tracking-widest text-primary">Career</span>
         </div>
@@ -73,7 +76,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = ({ experienceItem
                       <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-primary/10 text-primary">Current</span>
                     )}
                   </div>
-                  <ArrowUpRight size={16} className={isDark ? "text-white/20" : "text-slate-300"} />
+                  <ArrowUpRightIcon size={16} className={isDark ? "text-white/20" : "text-slate-300"} />
                 </div>
                 <h3 className={cn("text-base font-bold mb-0.5", isDark ? "text-white" : "text-[#111]")}>{item.role}</h3>
                 <p className={cn("text-sm font-medium mb-3", isDark ? "text-[var(--text-muted)]" : "text-slate-500")}>{item.company} · {item.companyType}</p>
@@ -84,7 +87,7 @@ export const AboutExperience: React.FC<AboutExperienceProps> = ({ experienceItem
                   ))}
                 </div>
                 <PillIconButton
-                  icon={<ArrowUpRight size={18} weight="bold" />}
+                  icon={<ArrowBendUpRightIcon size={18} weight="bold" />}
                   title="Preview"
                   variant="secondary"
                   onClick={() => openModal(item)}

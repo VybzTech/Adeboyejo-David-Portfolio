@@ -42,7 +42,7 @@ export const PillIconButton = ({
     "capitalize cursor-pointer tracking-tight",
     "w-fit relative rounded-full py-3 px-8 font-semibold",
     variant === "secondary"
-      ? "bg-white/5 border border-gray-300 text-gray-800 hover:bg-white/10"
+      ? "bg-gradient-to-br from-slate-50 via-slate-200 to-slate-50 border border-gray-300 text-gray-800"
       : "bg-gradient-to-br from-blue-400 to-primary hover:from-blue-500 hover:to-blue-800",
     "transition-all duration-300 shadow-lg hover:shadow-xl mx-auto",
     "flex items-center justify-center gap-3 ease-in-out",

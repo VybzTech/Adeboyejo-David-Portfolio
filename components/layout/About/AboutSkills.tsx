@@ -2,20 +2,25 @@ import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { PillIconButton } from "@/components/common/PillIconButton";
 import { cn } from "@/lib/utils";
 import { SKILLS } from "@/lib/data";
-import { Lightning, ArrowUpRight } from "@phosphor-icons/react";
+import { Lightning, ArrowUpRight, HeadCircuitIcon } from "@phosphor-icons/react";
 import Link from "next/link";
+import { useTheme } from "@/components/providers/ThemeProvider";
 
 interface AboutSkillsProps {
   skillCategories: readonly ["frontend", "backend", "design", "tools"];
-  isDark: boolean;
+  // isDark: boolean;
 }
 
-export const AboutSkills: React.FC<AboutSkillsProps> = ({ skillCategories, isDark }) => (
+export const AboutSkills: React.FC<AboutSkillsProps> = ({ skillCategories }) => {
+    const { theme } = useTheme();
+    const isDark = theme === "dark";
+    return (
   <section className="mb-24">
     <ScrollReveal>
       <div className="flex items-center gap-3 mb-3">
         <div className={cn("p-2 rounded-xl", isDark ? "bg-primary/10 text-primary" : "bg-blue-50 text-primary")}>
           {/* Icon placeholder */}
+        <HeadCircuitIcon size={32} />
         </div>
         <span className="text-sm font-semibold uppercase tracking-widest text-primary">Expertise</span>
       </div>
@@ -55,4 +60,5 @@ export const AboutSkills: React.FC<AboutSkillsProps> = ({ skillCategories, isDar
       })}
     </div>
   </section>
-);
+  )    
+};

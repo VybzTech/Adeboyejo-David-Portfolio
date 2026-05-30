@@ -10,24 +10,36 @@ import {
   MapPin,
   Lightning,
   PersonSimpleThrowIcon,
+  DownloadSimpleIcon,
+  LightningIcon,
+  DevToLogoIcon,
 } from "@phosphor-icons/react";
 import Image from "next/image";
+import { useState } from "react";
+import { SocialLinks, StatItems } from "./aboutData";
+import { SocialIcon } from "@/components/common/SocialIcon";
 
-export default function AboutHero() {
+export default function AboutHero({ statItems, openUp, socialLinks }: {
+  statItems: StatItems[];
+  openUp: () => void;
+  socialLinks: SocialLinks[];
+}) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+    <div className={cn("flex flex-col lg:grid grid-cols-1 lg:pt-20",
+      "lg:grid-cols-2 gap-16 lg:gap-16",
+      "items-start mb-24 min-h-[80vh]")}>
       {/* Left: Copy */}
       <ScrollReveal direction="left">
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-primary mb-6"
+          className="inline-flex items-center gap-2 text-base font-semibold uppercase tracking-wide text-primary mb-4"
         >
-          <PersonSimpleThrowIcon size={32} />
+          <PersonSimpleThrowIcon size={26} />
           {/* <Sparkle size={14} weight="fill" /> */}
           About me
         </motion.span>
@@ -36,7 +48,7 @@ export default function AboutHero() {
           isDark ? "text-white" : "text-[#111]"
         )}>
           Engineering <span className="relative inline-block">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary">
+            <span className="text-transparent bg-clip-text bg-gradient-to-br from-sky-400 to-primary">
               Experiences
             </span>
           </span>
@@ -51,23 +63,30 @@ export default function AboutHero() {
         </p>
         {/* CTA Row */}
         <div className={cn("flex flex-col lg:flex-row gap-7",
-          "items-center justify-center"
+          "items-start justify-start"
         )}>
-          {/* <div className="flex flex-wrap items-center gap-4"> */}
-          <PillIconButton
-            icon={<DownloadSimple size={18} weight="bold" className="text-white" />}
+          <PillIconButton className="mx-0"
+            icon={<DownloadSimpleIcon size={18} weight="bold" className="text-white" />}
             title="Download Resume"
             type="button"
-            onClick={() => setIsResumeOpen(true)}
+            onClick={() => openUp()}
           />
+
+          {/* Social icons */}
+          <div className="flex items-center justify-center gap-2">
+            {socialLinks.map((s) => (
+              <SocialIcon s={s} key={s.label} />
+            ))}
+          </div>
         </div>
       </ScrollReveal>
       {/* Right: Profile image + floating stat card */}
-      <ScrollReveal direction="right" className="flex flex-col items-center gap-6">
+      <ScrollReveal direction="right" className="w-full flex flex-col items-center justify-center gap-6">
         <div className="relative">
           <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-400/30 to-primary/30 blur-2xl scale-110 pointer-events-none" />
           <div className={cn(
             "relative w-[260px] h-[320px] md:w-[300px] md:h-[360px] rounded-3xl overflow-hidden border shadow-2xl",
+            "lg:w-[400px] lg:h-[400px]",
             isDark ? "border-white/10" : "border-slate-200"
           )}>
             <Image
@@ -91,11 +110,16 @@ export default function AboutHero() {
             animate={{ y: [0, -6, 0] }}
             transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             className={cn(
-              "absolute -top-4 -right-4 flex items-center gap-2 px-3 py-2 rounded-2xl shadow-lg border text-sm font-semibold",
+              "absolute -top-4 -right-4 flex items-center gap-2 px-3.5 py-1 rounded-3xl shadow-lg border text-[0.8rem] font-medium",
               isDark ? "bg-[var(--surface)] border-white/10 text-white" : "bg-white border-slate-200 text-slate-800"
             )}
           >
-            <Lightning size={14} weight="fill" className="text-yellow-400" />
+            <motion.span
+              animate={{ color: ["#FFC107", "#0a7f0cff", "#FFC107"] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeIn" }}
+            >
+              <DevToLogoIcon size={22} weight="fill" />
+            </motion.span>
             Available for hire
           </motion.div>
         </div>
