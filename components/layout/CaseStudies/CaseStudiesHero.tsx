@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { FolderOpen, Sparkle } from "@phosphor-icons/react";
+import { FolderOpen, PlugsIcon, Sparkle } from "@phosphor-icons/react";
 
 interface CaseStudiesHeroProps {
   isDark: boolean;
@@ -19,7 +19,8 @@ export function CaseStudiesHero({ isDark, totalCount }: CaseStudiesHeroProps) {
       >
         {/* Label */}
         <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-primary mb-5">
-          <Sparkle size={14} weight="fill" />
+          {/* <Sparkle size={14} weight="fill" /> */}
+          <PlugsIcon size={26}  />
           Portfolio
         </span>
 

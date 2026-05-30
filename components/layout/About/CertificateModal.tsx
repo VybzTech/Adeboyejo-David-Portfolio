@@ -3,29 +3,30 @@
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@/components/providers/ThemeProvider";
-import { PillIconButton } from "@/components/common/PillIconButton";
-import { X, CheckCircle } from "@phosphor-icons/react";
+import { X, CheckCircle, LinkSimple } from "@phosphor-icons/react";
 import Image from "next/image";
+import Link from "next/link";
 
-interface ExperienceItem {
-  period: string;
-  role: string;
-  company: string;
-  companyType: string;
+interface CertificateItem {
+  id: string;
+  name: string;
+  issuer: string;
+  issuedDate: string;
+  expiryDate?: string;
+  credentialId?: string;
+  credentialUrl?: string;
   description: string;
-  tags: string[];
-  responsibilities: string[];
-  current: boolean;
+  skills: string[];
   logo?: string;
 }
 
-interface ExperienceModalProps {
+interface CertificateModalProps {
   isOpen: boolean;
   onClose: () => void;
-  item: ExperienceItem;
+  item: CertificateItem;
 }
 
-export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, onClose, item }) => {
+export const CertificateModal: React.FC<CertificateModalProps> = ({ isOpen, onClose, item }) => {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
@@ -33,7 +34,7 @@ export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, onClos
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          key="experience-backdrop"
+          key="certificate-backdrop"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -45,7 +46,7 @@ export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, onClos
           onClick={onClose}
         >
           <motion.div
-            key="experience-modal"
+            key="certificate-modal"
             initial={{ scale: 0.93, y: 20, opacity: 0 }}
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.93, y: 20, opacity: 0 }}
@@ -71,7 +72,7 @@ export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, onClos
                   <div className="flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden border shadow-sm" style={{ borderColor: isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)" }}>
                     <Image
                       src={item.logo}
-                      alt={item.company}
+                      alt={item.issuer}
                       width={56}
                       height={56}
                       className="w-full h-full object-contain bg-white/50 dark:bg-white/5"
@@ -83,13 +84,14 @@ export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, onClos
                     "text-2xl font-heading font-bold mb-1",
                     isDark ? "text-white" : "text-slate-900"
                   )}>
-                    {item.role}
+                    {item.name}
                   </h2>
                   <p className={cn(
                     "text-sm font-medium",
                     isDark ? "text-white/60" : "text-slate-500"
                   )}>
-                    {item.company} · {item.companyType} • {item.period}
+                    {item.issuer} • {item.issuedDate}
+                    {item.expiryDate && ` - Expires ${item.expiryDate}`}
                   </p>
                 </div>
               </div>
@@ -110,7 +112,7 @@ export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, onClos
             {/* ── Content ─────────────────────────────────────────── */}
             <div className="px-6 pt-4 pb-8 overflow-y-auto scrollbar-hide" style={{ maxHeight: "calc(88vh - 140px)" }}>
               {/* Description */}
-              <div className="mb-4">
+              <div className="mb-8">
                 <p className={cn(
                   "text-base leading-relaxed",
                   isDark ? "text-white/70" : "text-slate-600"
@@ -119,17 +121,55 @@ export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, onClos
                 </p>
               </div>
 
-              {/* Responsibilities */}
-              {item.responsibilities && item.responsibilities.length > 0 && (
+              {/* Credential Info */}
+              {(item.credentialId || item.credentialUrl) && (
                 <div className="mb-8">
                   <h3 className={cn(
                     "text-sm font-bold uppercase tracking-widest mb-4",
                     isDark ? "text-white/50" : "text-slate-500"
                   )}>
-                    Key Responsibilities
+                    Credential Details
+                  </h3>
+                  <div className={cn(
+                    "p-4 rounded-lg border",
+                    isDark
+                      ? "bg-white/5 border-white/10"
+                      : "bg-slate-50 border-slate-200"
+                  )}>
+                    {item.credentialId && (
+                      <p className={cn(
+                        "text-sm mb-2",
+                        isDark ? "text-white/70" : "text-slate-600"
+                      )}>
+                        <span className={cn("font-semibold", isDark ? "text-white/90" : "text-slate-900")}>ID:</span> {item.credentialId}
+                      </p>
+                    )}
+                    {item.credentialUrl && (
+                      <Link href={item.credentialUrl} target="_blank" rel="noopener noreferrer">
+                        <motion.div
+                          whileHover={{ x: 4 }}
+                          className="flex items-center gap-2 text-sm text-primary hover:text-blue-600 cursor-pointer"
+                        >
+                          <LinkSimple size={16} />
+                          <span>View Certificate</span>
+                        </motion.div>
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Skills */}
+              {item.skills && item.skills.length > 0 && (
+                <div>
+                  <h3 className={cn(
+                    "text-sm font-bold uppercase tracking-widest mb-4",
+                    isDark ? "text-white/50" : "text-slate-500"
+                  )}>
+                    Key Skills Covered
                   </h3>
                   <ul className="space-y-3">
-                    {item.responsibilities.map((resp, idx) => (
+                    {item.skills.map((skill, idx) => (
                       <motion.li
                         key={idx}
                         initial={{ opacity: 0, x: -10 }}
@@ -146,38 +186,13 @@ export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, onClos
                           "text-sm leading-relaxed",
                           isDark ? "text-white/70" : "text-slate-600"
                         )}>
-                          {resp}
+                          {skill}
                         </span>
                       </motion.li>
                     ))}
                   </ul>
                 </div>
               )}
-
-              {/* Technologies */}
-              <div>
-                <h3 className={cn(
-                  "text-sm font-bold uppercase tracking-widest mb-4",
-                  isDark ? "text-white/50" : "text-slate-500"
-                )}>
-                  Technologies
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {item.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className={cn(
-                        "text-[11px] font-semibold px-3 py-1.5 rounded-full transition-colors",
-                        isDark
-                          ? "bg-primary/20 text-primary hover:bg-primary/30"
-                          : "bg-blue-100 text-primary hover:bg-blue-200"
-                      )}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </div>
           </motion.div>
         </motion.div>
@@ -185,22 +200,3 @@ export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, onClos
     </AnimatePresence>
   );
 };
-
-/*
-
-            {/* ── Action bar ──────────────────────────────────────── /}
-            <div
-              className={cn(
-                "flex items-center justify-end gap-3 px-6 py-4 border-t flex-shrink-0",
-                isDark ? "border-white/8 bg-[var(--surface)]" : "border-slate-100 bg-white"
-              )}
-            >
-              <PillIconButton
-                icon={<X size={16} weight="bold" />}
-                title="Close"
-                disabled={false}
-                onClick={onClose}
-                className="!mx-0 !py-2 !px-4 text-sm"
-              />
-            </div>
-*/ 
