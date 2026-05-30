@@ -42,10 +42,10 @@ export default function AboutPage() {
 
         <div className="relative z-10 pt-32 pb-24 px-6 pl-8 max-w-7xl mx-auto">
           {/* Hero */}
-          <AboutHero openUp={() => setIsResumeOpen(true)} statItems={statItems} socialLinks={socialLinks} />
+          {/* <AboutHero openUp={() => setIsResumeOpen(true)} statItems={statItems} socialLinks={socialLinks} /> */}
 
           {/* Skills Section */}
-          <AboutSkills skillCategories={skillCategories} />
+          {/* <AboutSkills skillCategories={skillCategories} /> */}
 
 {/* JOURNEY SO FAR HEADER */}
           {/* Experience & Education */}

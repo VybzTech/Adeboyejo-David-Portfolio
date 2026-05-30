@@ -18,10 +18,13 @@ export interface Project {
   stack: string[];
 }
 
+export type SkillCategory = "frontend" | "backend" | "design" | "tools";
+
 export interface Skill {
   name: string;
   level: number; // 0-100
-  category: 'frontend' | 'backend' | 'tools' | 'design';
+  category: SkillCategory;
+  image: string;
 }
 
 export interface Service {

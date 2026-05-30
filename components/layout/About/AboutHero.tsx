@@ -5,14 +5,9 @@ import { BRAND_INFO } from "@/lib/data";
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
 import {
-  DownloadSimple,
-  Sparkle,
-  MapPin,
-  Lightning,
   PersonSimpleThrowIcon,
   DownloadSimpleIcon,
-  LightningIcon,
-  DevToLogoIcon,
+  DevToLogoIcon
 } from "@phosphor-icons/react";
 import Image from "next/image";
 import { useState } from "react";
@@ -39,7 +34,7 @@ export default function AboutHero({ statItems, openUp, socialLinks }: {
           animate={{ opacity: 1 }}
           className="inline-flex items-center gap-2 text-base font-semibold uppercase tracking-wide text-primary mb-4"
         >
-          <PersonSimpleThrowIcon size={26} />
+          <PersonSimpleThrowIcon size={28} />
           {/* <Sparkle size={14} weight="fill" /> */}
           About me
         </motion.span>

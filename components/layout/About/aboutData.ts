@@ -1,10 +1,11 @@
 // aboutData.ts – shared data for About page modular components
 
 import { BRAND_INFO, SKILLS } from "@/lib/data";
-import { CodeIcon, StarIcon, RocketIcon, MedalIcon, IconProps, GithubLogoIcon, LinkedinLogoIcon, TwitterLogoIcon, InstagramLogoIcon, Icon } from "@phosphor-icons/react";
- 
+import { CodeIcon, StarIcon, RocketIcon, MedalIcon, IconProps, GithubLogoIcon, LinkedinLogoIcon, TwitterLogoIcon, InstagramLogoIcon } from "@phosphor-icons/react";
+import React from "react";
+
 export interface SocialLinks {
-  icon: Icon;
+  icon: React.ComponentType<IconProps>;
   href: string;
   label: string;
 }
@@ -25,12 +26,13 @@ export interface ExperienceItems {
   description: string;
   tags: string[];
   current: boolean;
+  responsibilities:string[]
 }
 
 export interface StatItems {
   value: string;
   label: string;
-  icon: Icon;
+  icon: React.ComponentType<IconProps>;
 }
 
 export const statItems:StatItems[] = [
@@ -63,6 +65,13 @@ export const experienceItems:ExperienceItems[] = [
     description: "Leading development of high-performance web and mobile applications for global clients, focused on Next.js, React, and full-stack architecture.",
     tags: ["Next.js", "React", "TypeScript", "Node.js"],
     current: true,
+    responsibilities: [
+      "Architected and deployed scalable full-stack web applications serving 10,000+ monthly active users",
+      "Built premium user interfaces with Framer Motion animations and responsive design patterns",
+      "Optimized application performance achieving 90+ Lighthouse scores across all metrics",
+      "Led technical strategy and mentored 3+ junior developers on React and Node.js best practices",
+      "Implemented CI/CD pipelines with GitHub Actions and automated testing frameworks",
+    ]
   },
   {
     period: "2021 – 2022",
@@ -72,6 +81,13 @@ export const experienceItems:ExperienceItems[] = [
     description: "Collaborated with early-stage startups to build MVPs and scale existing products. Specialized in React and Node.js ecosystems.",
     tags: ["React", "Node.js", "Firebase"],
     current: false,
+    responsibilities: [
+      "Developed 15+ production web applications for SaaS startups and agencies",
+      "Built real-time features using Firebase and WebSockets for collaborative applications",
+      "Designed and implemented RESTful APIs with Node.js and Express",
+      "Migrated legacy monolithic applications to modern microservices architecture",
+      "Maintained 99.5% uptime across deployed applications with monitoring and alerting",
+    ]
   },
 ];
 

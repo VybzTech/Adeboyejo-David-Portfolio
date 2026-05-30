@@ -106,19 +106,40 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SKILLS: Skill[] = [
-  { name: "React JS", level: 92, category: "frontend" },
-  { name: "Next JS", level: 85, category: "frontend" },
-  { name: "TypeScript", level: 80, category: "frontend" },
-  { name: "Tailwind CSS", level: 94, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "Node JS", level: 82, category: "backend" },
-  { name: "ASP .NET Core", level: 75, category: "backend" },
-  { name: "Flutter", level: 70, category: "frontend" },
-  { name: "Figma", level: 74, category: "design" },
-  { name: "Adobe XD", level: 93, category: "design" },
-  { name: "Firebase", level: 88, category: "tools" },
-  { name: "PostgreSQL", level: 78, category: "backend" },
-];``
+  // Original core skills
+  { name: "React JS", level: 92, category: "frontend", image: "ReactJS.png" },
+  { name: "Next JS", level: 85, category: "frontend", image: "Next-JS.svg" },
+  { name: "TypeScript", level: 80, category: "frontend", image: "typescript.png" },
+  { name: "Tailwind CSS", level: 94, category: "frontend", image: "TailwindCSS.png" },
+  { name: "JavaScript", level: 90, category: "frontend", image: "JS.png" },
+  { name: "Node JS", level: 82, category: "backend", image: "Node.png" },
+  { name: "ASP .NET Core", level: 75, category: "backend", image: "DOTNET-1.svg" },
+  { name: "Flutter", level: 70, category: "frontend", image: "Flutter.svg" },
+  { name: "Figma", level: 74, category: "design", image: "Figma.png" },
+  { name: "Adobe XD", level: 93, category: "design", image: "Adobe-XD.png" },
+  { name: "Firebase", level: 88, category: "tools", image: "Firebase.png" },
+  { name: "PostgreSQL", level: 78, category: "backend", image: "postgres.png" },
+  // Additional tools (set to 50%)
+  { name: "Android Studio", level: 50, category: "tools", image: "Android-studio.png" },
+  { name: "Bootstrap", level: 50, category: "tools", image: "Bootstrap.png" },
+  { name: "CSS3", level: 50, category: "tools", image: "CSS3.png" },
+  { name: "Chartjs", level: 50, category: "tools", image: "Chartjs.svg" },
+  { name: "DOTNET-1", level: 50, category: "tools", image: "DOTNET-1.svg" },
+  { name: "Dart Logo", level: 50, category: "tools", image: "Dart-Logo.png" },
+  { name: "DotNet Framework", level: 50, category: "tools", image: "DotNet-Framework.svg" },
+  { name: "Github", level: 50, category: "tools", image: "Github.png" },
+  { name: "HTML5", level: 50, category: "tools", image: "HTML5.png" },
+  { name: "Jquery", level: 50, category: "tools", image: "Jquery.png" },
+  { name: "Material UI", level: 50, category: "tools", image: "Material-ui.png" },
+  { name: "Netlify", level: 50, category: "tools", image: "Netlify-Logo.png" },
+  { name: "Php", level: 50, category: "tools", image: "Php.png" },
+  { name: "SCSS", level: 50, category: "tools", image: "SCSS.png" },
+  { name: "Swiper", level: 50, category: "tools", image: "Swiper.svg" },
+  { name: "VS Code", level: 50, category: "tools", image: "VS-Code.png" },
+  { name: "Visual Studio", level: 50, category: "tools", image: "Visual_Studio.png" },
+  { name: "Youtube", level: 50, category: "tools", image: "Youtube.png" },
+  { name: "C Sharp", level: 50, category: "tools", image: "c-sharp.png" }
+];
 
 export const TITLES = [
   "Electronic & Computer Engineer",
