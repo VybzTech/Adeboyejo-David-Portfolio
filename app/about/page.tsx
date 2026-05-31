@@ -41,20 +41,13 @@ export default function AboutPage() {
         </div>
 
         <div className="relative z-10 pt-32 pb-24 px-6 pl-8 max-w-7xl mx-auto">
-          {/* Hero */}
-          {/* <AboutHero openUp={() => setIsResumeOpen(true)} statItems={statItems} socialLinks={socialLinks} /> */}
-
-          {/* Skills Section */}
-          {/* <AboutSkills skillCategories={skillCategories} /> */}
-
-{/* JOURNEY SO FAR HEADER */}
-          {/* Experience & Education */}
+          <AboutHero openUp={() => setIsResumeOpen(true)} statItems={statItems} socialLinks={socialLinks} />
+          <AboutSkills skillCategories={skillCategories} />
+          {/* JOURNEY SO FAR HEADER */}
           <AboutExperience experienceItems={experienceItems} />
           <AboutEducation educationItems={educationItems} />
           <AboutCertificates certificateItems={certificateItems} />
           <AboutProcesses />
-
-          {/* CTA */}
           <AboutCTA openResume={() => setIsResumeOpen(true)} />
         </div>
       </div>

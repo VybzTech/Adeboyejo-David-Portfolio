@@ -65,7 +65,7 @@ export const processSteps: ProcessStep[] = [
     title: "Development & Building",
     shortDescription: "Writing clean, scalable code that powers your product's success",
     fullDescription: "Our engineering team builds robust, performant applications using modern technologies and industry best practices. We deliver working software in regular increments.",
-    icon: "Code",
+    icon: "Development",
     details: {
       whatWeDo: [
         "Build scalable backend APIs and services",

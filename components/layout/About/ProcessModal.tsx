@@ -5,6 +5,27 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { X, CheckCircle } from "@phosphor-icons/react";
 import { ProcessStep } from "@/lib/servicesData";
+import { useEffect } from "react";
+import dynamic from "next/dynamic";
+
+// Dynamically import service icons
+const Planning = dynamic(() => import("@/components/services/Code").then(mod => ({ default: mod.default })), { ssr: false });
+const Design = dynamic(() => import("@/components/services/Design").then(mod => ({ default: mod.default })), { ssr: false });
+const Development = dynamic(() => import("@/components/services/Development").then(mod => ({ default: mod.default })), { ssr: false });
+const Testing = dynamic(() => import("@/components/services/Debug").then(mod => ({ default: mod.default })), { ssr: false });
+const Launch = dynamic(() => import("@/components/services/Deployment").then(mod => ({ default: mod.default })), { ssr: false });
+const Growth = dynamic(() => import("@/components/services/Seo").then(mod => ({ default: mod.default })), { ssr: false });
+const Support = dynamic(() => import("@/components/services/Maintenance").then(mod => ({ default: mod.default })), { ssr: false });
+
+const iconMap: Record<string, React.ComponentType<any>> = {
+  Planning,
+  Design,
+  Development,
+  Testing,
+  Launch,
+  Growth,
+  Support,
+};
 
 interface ProcessModalProps {
   isOpen: boolean;
@@ -15,6 +36,18 @@ interface ProcessModalProps {
 export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose, process }) => {
   const { theme } = useTheme();
   const isDark = theme === "dark";
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <AnimatePresence>
@@ -53,20 +86,41 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose, pro
                 isDark ? "border-white/8 bg-[var(--surface)]" : "border-slate-100 bg-white"
               )}
             >
-              <div className="flex-1">
-                <h2 className={cn(
-                  "text-3xl font-heading font-bold mb-2",
-                  isDark ? "text-white" : "text-slate-900"
+              <div className="flex items-start gap-4 flex-1">
+                {/* Icon bubble */}
+                <div className={cn(
+                  "rounded-lg flex items-center justify-center flex-shrink-0",
+                  isDark ? "bg-primary/20" : "bg-primary/10",
+                  "w-24 h-24 mt-0.5 p-3.5"
                 )}>
-                  {process.title}
-                </h2>
-                <p className={cn(
-                  "text-base",
-                  isDark ? "text-white/60" : "text-slate-600"
-                )}>
-                  {process.fullDescription}
-                </p>
+                  {(() => {
+                    const IconComponent = iconMap[process.icon];
+                    return IconComponent ? (
+                      <div className="w-full h-full flex items-center justify-center text-primary [&_svg]:w-20 [&_svg]:h-20 [&_svg]:fill-current">
+                        <IconComponent />
+                      </div>
+                    ) : null;
+                  })()}
+                </div>
+
+                {/* Title and description */}
+                <div className="flex-1">
+                  <h2 className={cn(
+                    "text-3xl font-heading font-bold mb-2",
+                    isDark ? "text-white" : "text-slate-900"
+                  )}>
+                    {process.title}
+                  </h2>
+                  <p className={cn(
+                    "text-base",
+                    isDark ? "text-white/60" : "text-slate-600"
+                  )}>
+                    {process.fullDescription}
+                  </p>
+                </div>
               </div>
+
+              {/* Close button */}
               <button
                 onClick={onClose}
                 aria-label="Close modal"
@@ -82,7 +136,15 @@ export const ProcessModal: React.FC<ProcessModalProps> = ({ isOpen, onClose, pro
             </div>
 
             {/* ── Content ─────────────────────────────────────────── */}
-            <div className="px-8 py-8 overflow-y-auto scrollbar-hide" style={{ maxHeight: "calc(88vh - 180px)" }}>
+            <div
+              className={cn(
+                "px-8 py-8 overflow-y-auto",
+                isDark
+                  ? "[&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-white/5 [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb:hover]:bg-white/40"
+                  : "[&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-slate-100 [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar-thumb:hover]:bg-slate-400"
+              )}
+              style={{ maxHeight: "calc(88vh - 180px)" }}
+            >
               {/* What We Do */}
               <div className="mb-10">
                 <h3 className={cn(

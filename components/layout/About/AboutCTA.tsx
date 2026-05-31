@@ -70,7 +70,7 @@ export const AboutCTA: React.FC<AboutCTAProps> = ({ openResume }) => {
     <section className="mt-20 text-center">
       <ScrollReveal delay={0.2}>
         <div className={cn(
-          "mt-10 p-6 rounded-2xl border relative overflow-hidden",
+          "mt-10 p-6 rounded-2xl border relative overflow-hidden transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg hover:shadow-[0_3px_12px_rgba(0,94,250,0.2)]",
           isDark
             ? "bg-gradient-to-br from-primary/10 to-blue-500/5 border-primary/20"
             : "bg-gradient-to-br from-blue-50 to-white border-blue-200 shadow-sm"
@@ -84,9 +84,9 @@ export const AboutCTA: React.FC<AboutCTAProps> = ({ openResume }) => {
           </p>
           <Link href="/#contact">
             <PillIconButton
-              icon={<ArrowUpRight size={18} weight="bold" className="text-white" />}
+              icon={<ArrowUpRight size={18} className="text-white" />}
               title="Let's work together"
-              className="!mx-0"
+              className="mx-auto"
             />
           </Link>
         </div>

@@ -10,7 +10,10 @@
       "Bash(npx husky *)",
       "Bash(cd \"c:\\\\Users\\\\IT DIRECTORATE\\\\Documents\\\\GitHub\\\\Adeboyejo-David-Portfolio\" && mkdir -p .husky)",
       "Bash(npm install *)",
-      "PowerShell(Get-Process node -ErrorAction SilentlyContinue | Where-Object { $_.Name -eq \"node\" } | Stop-Process -Force -ErrorAction SilentlyContinue; \"Dev server stopped\")"
+      "PowerShell(Get-Process node -ErrorAction SilentlyContinue | Where-Object { $_.Name -eq \"node\" } | Stop-Process -Force -ErrorAction SilentlyContinue; \"Dev server stopped\")",
+      "Bash(curl -s http://localhost:3000/about)",
+      "Bash(curl -v http://localhost:3000/case-studies/5)",
+      "Bash(curl -s http://localhost:3000/case-studies/5)"
     ],
     "additionalDirectories": [
       "c:\\Users\\IT DIRECTORATE\\Documents\\GitHub\\Adeboyejo-David-Portfolio\\.husky"

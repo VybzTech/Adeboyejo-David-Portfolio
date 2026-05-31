@@ -9,8 +9,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProjectDetailPage({ params }: { params: { id: string } }) {
-  const project = PROJECTS.find((p) => p.id === parseInt(params.id));
+export default async function ProjectDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const project = PROJECTS.find((p) => p.id === parseInt(id));
 
   if (!project) notFound();
 
