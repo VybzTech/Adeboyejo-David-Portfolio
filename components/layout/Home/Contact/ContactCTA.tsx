@@ -349,28 +349,6 @@ export function ContactCTA() {
 
                 {/* Send Button */}
                 <div className="relative pt-2">
-                   {/* <Button
-                    type="submit"
-                    isLoading={isSubmitting}
-                    disabled={isSubmitting || Object.keys(errors).length > 0}
-                    className={cn(
-                      "w-fit relative rounded-full py-3 px-8 font-semibold text-white",
-                      "bg-gradient-to-br from-blue-400 to-primary hover:from-blue-500 hover:to-blue-800",
-                      "transition-all duration-300 shadow-lg hover:shadow-xl mx-auto",
-                      "flex items-center justify-center gap-3 ease-in-out",
-                      Object.keys(errors).length > 0 ? "opacity-50 cursor-not-allowed" : "hover:scale-[1.02] hover:cursor-pointer"
-                    )}
-                  >
-                    <span className="relative z-10 font-semibold">{isSubmitting ? "Sending..." : "Send Message"}</span>
-                    {!isSubmitting && (
-                      <motion.div
-                        className="relative z-10"
-                        whileHover={{ rotate: Object.keys(errors).length > 0 ? 0 : -25 }}
-                      >
-                        <PaperPlaneTiltIcon weight="bold" size={20} className="text-white" />
-                      </motion.div>
-                    )}
-                  </Button> */}
                   <PillIconButton icon={<PaperPlaneTiltIcon weight="bold" size={20} className="text-white" />} title={isSubmitting ? "Sending..." : "Send Message"} disabled={isSubmitting || Object.keys(errors).length > 0} className="mx-auto" />
                 </div>
               </motion.form>
