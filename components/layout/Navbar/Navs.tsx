@@ -21,7 +21,7 @@ export function Navs({ isMobile, onLinkClick }: NavsProps) {
   return (
     <div className={isMobile ? "flex flex-col items-center gap-8 py-8" : "flex items-center gap-4"}>
       {links.map((link) => (
-        process.env.PROJECT_ENV === "dev" && link?.name === "Studio" ? null:
+        // process.env.PROJECT_ENV === "dev" && link?.name === "Studio" ? null:
           <NavLink key={link.name} href={link.href} onClick={onLinkClick}>
             {link.name}
           </NavLink>

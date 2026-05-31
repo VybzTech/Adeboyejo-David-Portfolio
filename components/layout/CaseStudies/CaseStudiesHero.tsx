@@ -33,6 +33,9 @@ export function CaseStudiesHero({ isDark, totalCount }: CaseStudiesHeroProps) {
           Portfolio
         </span>
       </div>
+      {/* "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible; You are by definition, the only person smart enough to debug it "
+- Brian W. Kernighan. */}
+
 
       {/* Centered Hero Title - Together with Animation */}
       <AnimatedName name={"Case Studies"}
