@@ -53,7 +53,7 @@ export default function CaseStudiesPage() {
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full blur-3xl opacity-5 bg-primary animate-pulse" />
         <div
-          className="absolute bottom-1/4 -left-24 w-80 h-80 rounded-full blur-3xl opacity-10 bg-blue-400/50 animate-pulse"
+          className="absolute bottom-1/4 -left-24 w-80 h-80 rounded-full blur-3xl opacity-15 bg-blue-400/50 animate-pulse"
           style={{ animationDelay: "2s" }}
         />
       </div>

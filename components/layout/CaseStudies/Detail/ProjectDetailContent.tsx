@@ -24,7 +24,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
       isDark ? "bg-[var(--background)]" : "bg-white"
     )}>
       {/* Hero Section with Image Slider */}
-      <div className="relative pt-34 pb-7 px-6">
+      <div className="relative pt-30 pb-7 px-7 md:px-10 lg:px-14">
         <div className="max-w-6xl mx-auto">
           {/* Title */}
           <motion.div
@@ -33,13 +33,13 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
             className="mb-12"
           >
             <h1 className={cn(
-              "text-5xl md:text-7xl font-heading font-black mb-6 leading-tight",
+              "text-5xl md:text-7xl font-heading font-black mb-5 leading-tight",
               isDark ? "text-white" : "text-slate-900"
             )}>
               {project.name}
             </h1>
             <p className={cn(
-              "text-lg md:text-xl max-w-2xl",
+              "text-md md:text-xl mr-8",
               isDark ? "text-white/60" : "text-slate-600"
             )}>
               {project.description}

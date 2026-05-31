@@ -43,7 +43,7 @@ export function Navbar() {
       <header
         className={cn(
           "fixed top-0 left-0 w-[98vw] z-[100] transition-all duration-500 ease-in-out",
-          "px-6 py-3 ml-[2vw] my-2 rounded-[2.2rem]",
+          "px-6 py-3 ml-[1vw] my-2 rounded-[2.2rem]",
           ""  ,
           isScrolled
             ? (theme === "light" ? "on-scroll-white" : "on-scroll-dark")
