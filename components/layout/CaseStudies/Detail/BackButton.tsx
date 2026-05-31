@@ -11,10 +11,10 @@ export function BackButton() {
   const isDark = theme === "dark";
 
   return (
-    <div className="fixed left-6 z-40 pointer-events-none" style={{ top: "10vh" }}>
+    <div className="fixed right-8 z-40 pointer-events-none" style={{ top: "10.2vh" }}>
       <Link href="/case-studies" className="pointer-events-auto">
         <motion.button
-          whileHover={{ x: -4 }}
+          whileHover={{ x: -8 }}
           whileTap={{ scale: 0.95 }}
           className={cn(
             "flex items-center gap-2 px-4 py-2.5 rounded-full font-semibold text-sm",
@@ -25,7 +25,7 @@ export function BackButton() {
           )}
         >
           <CaretLeft size={16} weight="bold" />
-          <span>Back</span>
+          <span className="hidden md:block">Back</span>
         </motion.button>
       </Link>
     </div>

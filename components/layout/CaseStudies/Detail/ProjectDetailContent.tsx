@@ -24,7 +24,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
       isDark ? "bg-[var(--background)]" : "bg-white"
     )}>
       {/* Hero Section with Image Slider */}
-      <div className="relative pt-40 pb-16 px-6">
+      <div className="relative pt-32 pb-16 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Title */}
           <motion.div

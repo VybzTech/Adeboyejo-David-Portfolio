@@ -23,7 +23,7 @@ export function CategoryFilter({
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, delay: 0.15 }}
-      className="flex flex-wrap gap-2.5 mb-12 justify-center"
+      className="flex flex-wrap gap-2.5 mb-20 justify-center"
     >
       {categories.map((category) => {
         const count = projectCount(category);
