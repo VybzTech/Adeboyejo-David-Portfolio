@@ -15,14 +15,16 @@ export function Navs({ isMobile, onLinkClick }: NavsProps) {
     { name: "About", href: "/about" },
     { name: "Projects", href: "/case-studies" },
     { name: "Contact", href: "/#contact" },
+    { name: "Studio", href: "/studio" },
   ];
 
   return (
     <div className={isMobile ? "flex flex-col items-center gap-8 py-8" : "flex items-center gap-4"}>
       {links.map((link) => (
-        <NavLink key={link.name} href={link.href} onClick={onLinkClick}>
-          {link.name}
-        </NavLink>
+        process.env.PROJECT_ENV === "dev" && link?.name === "Studio" ? null:
+          <NavLink key={link.name} href={link.href} onClick={onLinkClick}>
+            {link.name}
+          </NavLink>
       ))}
     </div>
   );

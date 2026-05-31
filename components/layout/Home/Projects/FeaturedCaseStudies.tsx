@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { PROJECTS } from "@/lib/data";
+import React, { useEffect, useState } from "react";
 import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { useTheme } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
@@ -9,11 +8,25 @@ import { motion } from "framer-motion";
 import { AnimatedName } from "@/components/ui/AnimatedName";
 import { ProjectCard } from "./ProjectCard";
 import { AnimatedCounter } from "./AnimatedCounter";
+import { client } from "@/sanity/lib/client";
+import { allProjectsQuery } from "@/sanity/lib/queries";
+import { sanityProjectsToFrontend } from "@/sanity/lib/projectMapper";
+import { Project } from "@/lib/types";
 
 export function FeaturedCaseStudies() {
   const { theme } = useTheme();
-  const featured = PROJECTS.slice(0, 3); // Show first 3 projects -  change to favorite: true 
   const isDark = theme === "dark";
+  const [featured, setFeatured] = useState<Project[]>([]);
+
+  useEffect(() => {
+    async function fetchFeatured() {
+      const sanityProjects = await client.fetch(allProjectsQuery);
+      const mappedProjects = sanityProjectsToFrontend(sanityProjects);
+      setFeatured(mappedProjects.slice(0, 3));
+    }
+
+    fetchFeatured();
+  }, []);
 
   const metrics = [
     { label: "Years Experience", value: 4, suffix: "+", delay: 0.1 },

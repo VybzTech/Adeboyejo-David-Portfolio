@@ -41,9 +41,9 @@ export function ProjectGrid({ projects, isDark }: ProjectGridProps) {
         layout
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"
       >
-        {projects.map((project, index) => (
+        {projects?.map((project, index) => (
           <CaseStudyCard
-            key={project.id}
+            key={`${project.id} ${index} ${project.name}`}
             project={project}
             index={index}
             isDark={isDark}

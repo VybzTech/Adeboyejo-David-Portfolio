@@ -31,12 +31,12 @@ export function CaseStudyCard({ project, index, isDark }: CaseStudyCardProps) {
       {/* Image */}
       <div className="relative h-52 overflow-hidden bg-slate-100 dark:bg-white/5 flex-shrink-0">
         <Image
-  src={project.image}
-  alt={project.name}
-  fill
-  sizes="(max-width: 768px) 100vw, 50vw"
-  className="object-cover transition-transform duration-700 group-hover:scale-105"
-/>
+          src={project.image}
+          alt={project.name}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+        />
 
         {/* Hover overlay with action buttons */}
         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 z-10">
@@ -83,7 +83,7 @@ export function CaseStudyCard({ project, index, isDark }: CaseStudyCardProps) {
       <div className="flex flex-col flex-1 p-6">
         {/* Tags */}
         <div className="flex flex-wrap gap-1.5 mb-4">
-          {project.tags.map((tag) => (
+          {project?.tags?.map((tag) => (
             <span
               key={tag}
               className={cn(
@@ -116,7 +116,7 @@ export function CaseStudyCard({ project, index, isDark }: CaseStudyCardProps) {
         {/* Stack pills */}
         {project.stack && (
           <div className="flex flex-wrap gap-1.5 mb-5">
-            {project.stack.slice(0, 4).map((tech) => (
+            {project?.stack?.slice(0, 4)?.map((tech) => (
               <span
                 key={tech}
                 className={cn(

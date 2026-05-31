@@ -1,10 +1,13 @@
 import { MetadataRoute } from "next";
-import { PROJECTS } from "@/lib/data";
+import { client } from "@/sanity/lib/client";
+import { allProjectsQuery } from "@/sanity/lib/queries";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://david-adeboyejo.web.app";
 
-  const projectUrls = PROJECTS.map((project) => ({
+  const projects = await client.fetch(allProjectsQuery);
+
+  const projectUrls = projects.map((project: { id: number }) => ({
     url: `${baseUrl}/case-studies/${project.id}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
