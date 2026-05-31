@@ -57,7 +57,7 @@ export function ImageSlider({ images, projectName, isDark }: ImageSliderProps) {
   };
 
   return (
-    <div className="w-full mb-16">
+    <div className="w-full mb-10">
       {/* ── Main slide ─────────────────────────────────────── */}
       <div
         className={cn(

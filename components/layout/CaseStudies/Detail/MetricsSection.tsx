@@ -47,7 +47,7 @@ export function MetricsSection({ role, timeline, status, metrics }: MetricsSecti
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+      className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8"
     >
       {metricItems.map((metric, idx) => (
         <motion.div
@@ -61,13 +61,13 @@ export function MetricsSection({ role, timeline, status, metrics }: MetricsSecti
           )}
         >
           <p className={cn(
-            "text-xs font-bold uppercase tracking-widest mb-2",
+            "text-xs font-semibold font-body uppercase tracking-wide mb-2",
             isDark ? "text-white/50" : "text-slate-500"
           )}>
             {metric.label}
           </p>
           <p className={cn(
-            "text-lg md:text-xl font-heading font-bold",
+            "text-lg md:text-xl font-heading font-bold leading-tight",
             isDark ? "text-white" : "text-slate-900"
           )}>
             {metric.value}

@@ -61,7 +61,7 @@ export function ContentSection({
 
         {/* Tags/Categories */}
         {tags.length > 0 && (
-          <div className="mb-12">
+          <div className="mb-4">
             <h3 className={cn(
               "text-sm font-bold uppercase tracking-widest mb-4",
               isDark ? "text-white/50" : "text-slate-500"

@@ -24,7 +24,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
       isDark ? "bg-[var(--background)]" : "bg-white"
     )}>
       {/* Hero Section with Image Slider */}
-      <div className="relative pt-32 pb-16 px-6">
+      <div className="relative pt-34 pb-7 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Title */}
           <motion.div
@@ -60,7 +60,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
       </div>
 
       {/* Main Content Section */}
-      <div className="px-6 pb-32">
+      <div className="px-6 pb-10">
         <div className="max-w-6xl mx-auto">
           <ContentSection
             description={project.description}
@@ -74,7 +74,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
       </div>
 
       {/* Comment Section */}
-      <div className="px-6 pb-32">
+      <div className="px-6 pb-18">
         <div className="max-w-6xl mx-auto">
           <CommentSection projectName={project.name} />
         </div>
