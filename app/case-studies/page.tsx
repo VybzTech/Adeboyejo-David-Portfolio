@@ -23,7 +23,7 @@ export default function CaseStudiesPage() {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects = projects.filter((project) =>
-    activeCategory === "All" || project.tags.includes(activeCategory)
+    activeCategory === "All" || project.tags?.toLocaleString().toLowerCase().includes(activeCategory.toLowerCase())
   );
 
   const projectCount = (cat: string) =>

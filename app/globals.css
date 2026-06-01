@@ -73,7 +73,7 @@
   }
 
   body {
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
     /* Firefox */
     -ms-overflow-style: none;
     /* IE and Edge */
@@ -131,30 +131,30 @@
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   /* display: none; */
-  width: 8px;
+  /* width: 8px; */
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  /* background: var(--background); */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 8px;
+  /* background: var(--border); */
+  /* border-radius: 8px; */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
+  /* background: var(--text-muted); */
 }
 
 /* Hide scrollbar but allow scrolling */
 .scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  /* -ms-overflow-style: none; */
+  /* scrollbar-width: none; */
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 /* Smooth horizontal scroll */
@@ -207,7 +207,7 @@
 
 @media (min-width: 768px) {
   .SkillModal .custom-scrollbar-track {
-    display: none;
+    /* display: none; */
   }
 }
 
