@@ -264,7 +264,7 @@ type FormValues = z.infer<typeof formSchema>;
 //                         animate={{ opacity: 1, y: 0 }}
 //                         className="flex items-center gap-2 mt-2 text-xs text-red-600 font-body"
 //                       >
-//                         <XCircle size={14} weight="fill" />
+//                         <XCircleIcon size={14} weight="fill" />
 //                         <span>{errors.name.message}</span>
 //                       </motion.div>
 //                     )}
@@ -289,7 +289,7 @@ type FormValues = z.infer<typeof formSchema>;
 //                         animate={{ opacity: 1, y: 0 }}
 //                         className="flex items-center gap-2 mt-2 text-xs text-red-600 font-body"
 //                       >
-//                         <XCircle size={14} weight="fill" />
+//                         <XCircleIcon size={14} weight="fill" />
 //                         <span>{errors.subject.message}</span>
 //                       </motion.div>
 //                     )}
@@ -317,7 +317,7 @@ type FormValues = z.infer<typeof formSchema>;
 //                       animate={{ opacity: 1, y: 0 }}
 //                       className="flex items-center gap-2 mt-2 text-xs text-red-600 font-body"
 //                     >
-//                       <XCircle size={14} weight="fill" />
+//                       <XCircleIcon size={14} weight="fill" />
 //                       <span>{errors.email.message}</span>
 //                     </motion.div>
 //                   )}
@@ -344,7 +344,7 @@ type FormValues = z.infer<typeof formSchema>;
 //                       animate={{ opacity: 1, y: 0 }}
 //                       className="flex items-center gap-2 mt-2 text-xs text-red-600 font-body"
 //                     >
-//                       <XCircle size={14} weight="fill" />
+//                       <XCircleIcon size={14} weight="fill" />
 //                       <span>{errors.message.message}</span>
 //                     </motion.div>
 //                   )}
@@ -445,25 +445,25 @@ type FormValues = z.infer<typeof formSchema>;
 //                   <div>
 //                     <label className="block text-sm font-light text-slate-500 mb-2">Your Name</label>
 //                     <input {...register("name")} type="text" placeholder="David Adeboyejo" className={cn("w-full px-4 py-3 rounded-lg border focus:outline-none", errors.name ? "border-red-400" : "border-blue-200", isDark ? "bg-transparent text-white" : "bg-white")} />
-//                     {errors.name && <div className="text-xs text-red-600 mt-1 flex items-center gap-1"><XCircle size={14}/> {errors.name.message}</div>}
+//                     {errors.name && <div className="text-xs text-red-600 mt-1 flex items-center gap-1"><XCircleIcon size={14}/> {errors.name.message}</div>}
 //                   </div>
 //                   <div>
 //                     <label className="block text-sm font-light text-slate-500 mb-2">Subject</label>
 //                     <input {...register("subject")} type="text" placeholder="Project Inquiry" className={cn("w-full px-4 py-3 rounded-lg border focus:outline-none", errors.subject ? "border-red-400" : "border-blue-200", isDark ? "bg-transparent text-white" : "bg-white")} />
-//                     {errors.subject && <div className="text-xs text-red-600 mt-1 flex items-center gap-1"><XCircle size={14}/> {errors.subject.message}</div>}
+//                     {errors.subject && <div className="text-xs text-red-600 mt-1 flex items-center gap-1"><XCircleIcon size={14}/> {errors.subject.message}</div>}
 //                   </div>
 //                 </div>
 
 //                 <div>
 //                   <label className="block text-sm font-light text-slate-500 mb-2">Email Address</label>
 //                   <input {...register("email")} type="email" placeholder="hello@example.com" className={cn("w-full px-4 py-3 rounded-lg border focus:outline-none", errors.email ? "border-red-400" : "border-blue-200", isDark ? "bg-transparent text-white" : "bg-white")} />
-//                   {errors.email && <div className="text-xs text-red-600 mt-1 flex items-center gap-1"><XCircle size={14}/> {errors.email.message}</div>}
+//                   {errors.email && <div className="text-xs text-red-600 mt-1 flex items-center gap-1"><XCircleIcon size={14}/> {errors.email.message}</div>}
 //                 </div>
 
 //                 <div>
 //                   <label className="block text-sm font-light text-slate-500 mb-2">Message</label>
 //                   <textarea {...register("message")} rows={5} placeholder="Tell me about your project..." className={cn("w-full px-4 py-3 rounded-lg border focus:outline-none resize-none", errors.message ? "border-red-400" : "border-blue-200", isDark ? "bg-transparent text-white" : "bg-white")} />
-//                   {errors.message && <div className="text-xs text-red-600 mt-1 flex items-center gap-1"><XCircle size={14}/> {errors.message.message}</div>}
+//                   {errors.message && <div className="text-xs text-red-600 mt-1 flex items-center gap-1"><XCircleIcon size={14}/> {errors.message.message}</div>}
 //                 </div>
 
 //                 <div className="pt-2">
@@ -712,7 +712,7 @@ export function ContactCTA() {
                         animate={{ opacity: 1, y: 0 }}
                         className="flex items-center gap-2 mt-2 text-xs text-red-600 font-body"
                       >
-                        <XCircle size={14} weight="fill" />
+                        <XCircleIcon size={14} weight="fill" />
                         <span>{errors.name.message}</span>
                       </motion.div>
                     )}
@@ -737,7 +737,7 @@ export function ContactCTA() {
                         animate={{ opacity: 1, y: 0 }}
                         className="flex items-center gap-2 mt-2 text-xs text-red-600 font-body"
                       >
-                        <XCircle size={14} weight="fill" />
+                        <XCircleIcon size={14} weight="fill" />
                         <span>{errors.subject.message}</span>
                       </motion.div>
                     )}
@@ -765,7 +765,7 @@ export function ContactCTA() {
                       animate={{ opacity: 1, y: 0 }}
                       className="flex items-center gap-2 mt-2 text-xs text-red-600 font-body"
                     >
-                      <XCircle size={14} weight="fill" />
+                      <XCircleIcon size={14} weight="fill" />
                       <span>{errors.email.message}</span>
                     </motion.div>
                   )}
@@ -792,7 +792,7 @@ export function ContactCTA() {
                       animate={{ opacity: 1, y: 0 }}
                       className="flex items-center gap-2 mt-2 text-xs text-red-600 font-body"
                     >
-                      <XCircle size={14} weight="fill" />
+                      <XCircleIcon size={14} weight="fill" />
                       <span>{errors.message.message}</span>
                     </motion.div>
                   )}
