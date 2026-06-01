@@ -1,10 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { GithubLogo, Globe } from "@phosphor-icons/react";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/components/providers/ThemeProvider";
+import { getTechIcon } from "@/lib/techStackIcons";
 
 interface ContentSectionProps {
   description: string;
@@ -36,7 +38,7 @@ export function ContentSection({
         className="lg:col-span-2"
       >
         {/* Description */}
-        <div className="mb-12">
+        <div className="mb-10">
           <h2 className={cn(
             "text-2xl md:text-3xl font-heading font-bold mb-6",
             isDark ? "text-white" : "text-slate-900"
@@ -44,14 +46,14 @@ export function ContentSection({
             Overview
           </h2>
           <p className={cn(
-            "text-base md:text-lg leading-relaxed mb-6",
+            "text-sm md:text-md lg:text-lg leading-relaxed mb-6",
             isDark ? "text-white/70" : "text-slate-600"
           )}>
             {description}
           </p>
           {fullContent && (
             <p className={cn(
-              "text-base md:text-lg leading-relaxed",
+              "text-sm md:text-md lg:text-lg leading-relaxed",
               isDark ? "text-white/60" : "text-slate-600"
             )}>
               {fullContent}
@@ -107,20 +109,39 @@ export function ContentSection({
           )}>
             Tech Stack
           </h3>
-          <div className="flex flex-wrap gap-2">
-            {stack.map((tech) => (
-              <span
-                key={tech}
-                className={cn(
-                  "px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-default",
-                  isDark
-                    ? "bg-white/10 text-white/70 hover:bg-white/15 hover:text-white"
-                    : "bg-white text-slate-600 border border-slate-200 hover:border-slate-300"
-                )}
-              >
-                {tech}
-              </span>
-            ))}
+          <div className="flex flex-wrap gap-3">
+            {stack.map((tech) => {
+              const iconPath = getTechIcon(tech);
+              return (
+                <div
+                  key={tech}
+                  title={tech}
+                  className={cn("text-xs font-medium transition-all cursor-default text-gray-700",
+                    "flex items-center gap-2 px-3 py-1.5 rounded-lg hover:scale-105",
+                    iconPath
+                      ? isDark
+                        ? "bg-white/10 hover:bg-white/15"
+                        : "bg-white border border-slate-200 hover:border-slate-300"
+                      : isDark
+                      ? "bg-white/10 text-white/70 hover:bg-white/15 hover:text-white"
+                      : "bg-white text-slate-600 border border-slate-200 hover:border-slate-300"
+                  )}
+                >
+                  {iconPath && (
+                    <Image
+                      src={iconPath}
+                      alt={tech}
+                      width={24}
+                      height={24}
+                      className="w-5 h-5 object-contain"
+                    />
+                  )}
+                  <span className={isDark && iconPath ? "text-white/70" : ""}>
+                    {tech}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
 

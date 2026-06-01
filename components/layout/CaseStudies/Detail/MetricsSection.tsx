@@ -54,7 +54,7 @@ export function MetricsSection({ role, timeline, status, metrics }: MetricsSecti
           key={`${metric.label}-${idx}`}
           variants={itemVariants}
           className={cn(
-            "p-6 rounded-2xl border transition-all duration-300",
+            "px-5 pb-5 pt-4 rounded-2xl border transition-all duration-300",
             isDark
               ? "bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20"
               : "bg-white border-slate-100 hover:bg-slate-50 hover:border-slate-200 shadow-sm hover:shadow-md"

@@ -33,14 +33,14 @@ export function CommentSection({ projectName }: CommentSectionProps) {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="flex items-start gap-4">
           <div className={cn(
-            "flex items-center justify-center w-12 h-12 rounded-full",
+            "flex items-center justify-center min-w-14 w-14 h-14 rounded-full",
             isDark ? "bg-primary/20" : "bg-primary/10"
           )}>
             <ChatCircle size={24} className="text-primary" weight="fill" />
           </div>
           <div>
             <h3 className={cn(
-              "text-lg font-heading font-bold mb-1",
+              "text-lg font-heading font-bold mb-2",
               isDark ? "text-white" : "text-slate-900"
             )}>
               Have feedback on {projectName}?
@@ -48,11 +48,12 @@ export function CommentSection({ projectName }: CommentSectionProps) {
             <p className={cn(
               "text-sm",
               isDark ? "text-white/60" : "text-slate-600"
+              ,"w-[130%] translate-x-[-25%] md:translate-x-[0%] lg:translate-x-[0%] md:w-full lg:w-full"
             )}>
               Share your thoughts and let's start a conversation.
             </p>
+            </div>
           </div>
-        </div>
 
         <motion.button
           whileHover={{ scale: 1.05 }}

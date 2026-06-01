@@ -139,8 +139,8 @@ export function Footer() {
           
           {/* Brand Identity Section */}
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="flex items-start gap-2.5 mb-6 group">
-              <Logo className="w-[11vw] sm:w-[10vw] lg:w-[5vw] xl:w-[2.5vw] max-w-[200px]" svgFill={"#5559"} AFill={"#f22"} theme={"light"} />
+            <Link href="/" className="flex items-start gap-2.5 lg:gap-4 mb-6 group">
+              <Logo className="w-[3rem] md:w-[2.75rem] lg:w-[3.1rem] xl:w-[3.25rem]" svgFill={"#5559"} AFill={"#f22"} theme={"light"} />
               <span className="font-heading text-2xl font-bold tracking-[-0.02em]">{BRAND_INFO.name}</span>
             </Link>
             <p className="text-[var(--text-muted)] max-w-sm mb-8 leading-relaxed">

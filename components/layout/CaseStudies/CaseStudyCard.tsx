@@ -3,9 +3,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { GithubLogo, Globe, ArrowRight, Clock, Tag } from "@phosphor-icons/react";
+import { GithubLogo, Globe, ArrowRight, Clock } from "@phosphor-icons/react";
 import { cn } from "@/lib/utils";
 import { Project } from "@/lib/types";
+import { getTechIcon, TECH_ICON_SIZES } from "@/lib/techStackIcons";
 
 interface CaseStudyCardProps {
   project: Project;
@@ -14,6 +15,7 @@ interface CaseStudyCardProps {
 }
 
 export function CaseStudyCard({ project, index, isDark }: CaseStudyCardProps) {
+  const count = 3;
   return (
     <motion.article
       initial={{ opacity: 0, y: 28 }}
@@ -69,10 +71,10 @@ export function CaseStudyCard({ project, index, isDark }: CaseStudyCardProps) {
         {/* Status badge */}
         <div className="absolute top-3 left-3 z-20">
           <span className={cn(
-            "px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider",
+            "px-3.5 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider",
             project.status === "completed"
-              ? "bg-emerald-500/90 text-white"
-              : "bg-amber-400/90 text-white"
+              ? "bg-emerald-500 text-white/80 hover-group:text-white"
+              : "bg-yellow-500 text-white/80 hover-group:text-white"
           )}>
             {project.status === "completed" ? "Completed" : "In Progress"}
           </span>
@@ -81,22 +83,6 @@ export function CaseStudyCard({ project, index, isDark }: CaseStudyCardProps) {
 
       {/* Body */}
       <div className="flex flex-col flex-1 p-6">
-        {/* Tags */}
-        <div className="flex flex-wrap gap-1.5 mb-4">
-          {project?.tags?.map((tag) => (
-            <span
-              key={tag}
-              className={cn(
-                "inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md",
-                isDark ? "bg-primary/10 text-primary" : "bg-blue-50 text-primary"
-              )}
-            >
-              <Tag size={8} />
-              {tag}
-            </span>
-          ))}
-        </div>
-
         {/* Title */}
         <h3 className={cn(
           "text-xl font-heading font-bold mb-2 leading-tight group-hover:text-primary transition-colors",
@@ -113,36 +99,69 @@ export function CaseStudyCard({ project, index, isDark }: CaseStudyCardProps) {
           {project.description}
         </p>
 
-        {/* Stack pills */}
+        {/* Stack icons and pills */}
         {project.stack && (
           <div className="flex flex-wrap gap-1.5 mb-5">
-            {project?.stack?.slice(0, 4)?.map((tech) => (
-              <span
-                key={tech}
-                className={cn(
-                  "text-[10px] font-medium px-2 py-0.5 rounded",
-                  isDark
-                    ? "bg-white/5 text-[var(--text-muted)]"
-                    : "bg-slate-100 text-slate-500"
-                )}
-              >
-                {tech}
-              </span>
-            ))}
-            {project.stack.length > 4 && (
+            {project?.stack?.slice(0, count)?.map((tech) => {
+              const iconPath = getTechIcon(tech);
+              return (
+                <div
+                  key={tech}
+                  title={tech}
+                  className={cn("text-[9.5px] font-medium px-1.5 py-1 gap-1 text-gray-700",
+                    "flex items-center justify-center rounded transition-transform hover:scale-110",
+                    isDark
+                      ? "bg-white/5 text-[var(--text-muted)]"
+                      : "bg-slate-100 text-slate-700" 
+                  )}
+                >
+                  {iconPath ? (
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: index * 0.05 }}
+                      whileHover={{ scale: 1.01 }}
+                      className="flex items-center gap-1"
+                    >
+                      <Image
+                        src={iconPath}
+                        alt={tech}
+                        width={16}
+                        height={16}
+                        className="w-4 h-4 object-contain"
+                        title={tech}
+                      />
+                      {tech}
+                    </motion.div>
+                  ) : (
+                    tech
+                  )}
+                </div>
+              );
+            })}
+            {project.stack.length > count && (
               <span className={cn(
-                "text-[10px] font-medium px-2 py-0.5 rounded",
-                isDark ? "bg-white/5 text-[var(--text-muted)]" : "bg-slate-100 text-slate-400"
+                "text-[10px] font-medium px-2 py-1 rounded flex items-center justify-center",
+                isDark ? "bg-white/5 text-[var(--text-muted)]" : "bg-slate-100 text-slate-600"
               )}>
-                +{project.stack.length - 4} more
+                +{project.stack.length - count}
               </span>
             )}
           </div>
         )}
 
+{/* Premium Divider */}
+      <motion.div
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 0.7, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
+        style={{ transformOrigin: "center" }}
+        className="mb-4 h-[1.25px] bg-gradient-to-r from-transparent via-primary/20 to-transparent w-full mx-auto"
+      />
         {/* Footer */}
         <div className={cn(
-          "flex items-center justify-between pt-4 border-t",
+          // "flex items-center justify-between pt-4 border-t",
+          "flex items-center justify-between",
           isDark ? "border-white/8" : "border-slate-100"
         )}>
           {project.timeline && (

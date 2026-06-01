@@ -11,7 +11,7 @@ export function BackButton() {
   const isDark = theme === "dark";
 
   return (
-    <div className="fixed right-16 z-40 pointer-events-none" style={{ top: "15vh" }}>
+    <div className="fixed z-40 pointer-events-none right-8 lg:right-16 top-[11vh] lg:top-[15vh]">
       <Link href="/case-studies" className="pointer-events-auto">
         <motion.button
           whileHover={{ x: -8 }}

@@ -39,7 +39,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
               {project.name}
             </h1>
             <p className={cn(
-              "text-md md:text-xl mr-8",
+              "text-base md:text-lg lg:text-xl mr-8",
               isDark ? "text-white/60" : "text-slate-600"
             )}>
               {project.description}
@@ -60,8 +60,8 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
       </div>
 
       {/* Main Content Section */}
-      <div className="px-6 pb-10">
-        <div className="max-w-6xl mx-auto">
+      <div className="px-7 pb-12 md:px-10 lg:px-14">
+        <div className="mr-7 lg:max-w-6xl lg:mr-auto mx-auto ">
           <ContentSection
             description={project.description}
             fullContent={project.fullContent}
@@ -74,8 +74,8 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
       </div>
 
       {/* Comment Section */}
-      <div className="px-6 pb-18">
-        <div className="max-w-6xl mx-auto">
+      <div className="px-7 mr-7 md:px-10 lg:px-14 pb-18">
+        <div className="lg:max-w-6xl lg:mx-auto">
           <CommentSection projectName={project.name} />
         </div>
       </div>
