@@ -44,6 +44,14 @@ export function CaseStudiesHero({ isDark, totalCount }: CaseStudiesHeroProps) {
           // isDark ? "text-white" : "text-[#111]"
         )}
       />
+      <p className={cn("font-normal text-base max-w-5xl ",
+        "",
+        isDark ?"text-slate-100":
+        "text-slate-700"
+      )}>"Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible; You are by definition, the only person smart enough to debug it "
+- Brian W. Kernighan.
+
+      </p>
       {/* Premium Divider */}
       <motion.div
         initial={{ scaleX: 0 }}

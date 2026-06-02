@@ -8,6 +8,7 @@ const TECH_ICONS: Record<string, string> = {
   typescript: "/images/Tools/JS.png",
   ts: "/images/Tools/JS.png",
   react: "/images/Tools/ReactJS.png",
+  "React JS": "/images/Tools/ReactJS.png",
   "react.js": "/images/Tools/ReactJS.png",
   reactjs: "/images/Tools/ReactJS.png",
   "next.js": "/images/Tools/Next-JS.svg",
