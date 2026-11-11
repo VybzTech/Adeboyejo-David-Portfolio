@@ -6,14 +6,12 @@ import { cn } from "@/lib/utils";
 import { CaseStudiesHero } from "@/components/layout/CaseStudies/CaseStudiesHero";
 import { CategoryFilter } from "@/components/layout/CaseStudies/CategoryFilter";
 import { ProjectGrid } from "@/components/layout/CaseStudies/ProjectGrid";
-import { client } from "@/sanity/lib/client";
-import { allProjectsQuery } from "@/sanity/lib/queries";
-import { sanityProjectsToFrontend } from "@/sanity/lib/projectMapper";
+import { getProjects } from "@/lib/projectsService";
 import { Project } from "@/lib/types";
 
 export default function CaseStudiesPage() {
-
   const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
 
   const CATEGORIES = ["All", "Frontend", "Backend", "Full Stack", "Mobile", "SaaS", "AI"];
 
@@ -31,15 +29,19 @@ export default function CaseStudiesPage() {
       ? projects.length
       : projects.filter((p) => p.tags.includes(cat)).length;
 
-
   useEffect(() => {
-    async function fetchProjects() {
-      const sanityProjects = await client.fetch(allProjectsQuery);
-      const mappedProjects = sanityProjectsToFrontend(sanityProjects);
-      setProjects(mappedProjects);
+    async function loadProjects() {
+      try {
+        const fetchedProjects = await getProjects();
+        setProjects(fetchedProjects);
+      } catch (err) {
+        console.error("Failed to load projects:", err);
+      } finally {
+        setLoading(false);
+      }
     }
 
-    fetchProjects();
+    loadProjects();
   }, []);
 
   return (
@@ -80,52 +82,3 @@ export default function CaseStudiesPage() {
     </div>
   );
 }
-
-
-
-
-// import Image from "next/image";
-// import Link from "next/link";
-// import { GithubLogo, ArrowSquareOut } from "@phosphor-icons/react/dist/ssr"; // Server-safe icon variants
-// import { TrackedProjectCard } from "./TrackedProjectCard"; // We will create this client wrapper next
-// import { urlFor } from "@/sanity/lib/image";
-
-// import { client } from "@/sanity/lib/client";
-// // Fetching structured contents from Sanity Edge Network via GROQ
-// async function getProjects() {
-//   const query = `*[_type == "project"] | order(_createdAt desc) {
-//     title,
-//     "slug": slug.current,
-//     description,
-//     mainImage,
-//     links,
-//     isFeatured,
-//     techStack
-//   }`;
-
-//   // revalidate every hour (3600s), or set to 0 for real-time dynamic rendering
-//   return await client.fetch(query, {}, { next: { revalidate: 10 } });
-// }
-
-// export default async function CaseStudiesPage() {
-//   const projects = await getProjects();
-
-//   return (
-//     <main className="min-h-screen bg-slate-950 text-white py-24 px-6">
-//       <div className="max-w-6xl mx-auto">
-//         <header className="mb-16">
-//           <h1 className="text-4xl md:text-6xl font-black mb-4">Case Studies</h1>
-//           <p className="text-slate-400 max-w-xl text-lg">
-//             A deep dive into platforms and systems I've engineered, pulled straight from Sanity.io.
-//           </p>
-//         </header>
-
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-//           {projects.map((project: any) => (
-//             <TrackedProjectCard key={project.slug} project={project} />
-//           ))}
-//         </div>
-//       </div>
-//     </main>
-//   );
-// }

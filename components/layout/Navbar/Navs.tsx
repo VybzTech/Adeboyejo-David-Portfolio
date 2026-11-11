@@ -15,7 +15,7 @@ export function Navs({ isMobile, onLinkClick }: NavsProps) {
     { name: "About", href: "/about" },
     { name: "Projects", href: "/case-studies" },
     { name: "Contact", href: "/#contact" },
-    { name: "Studio", href: "/studio" },
+    { name: "Studio", href: "/admin" },
   ];
 
   return (

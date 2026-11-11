@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers/LenisProvider";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { AuthProvider } from "@/components/providers/AuthProvider";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next"
@@ -102,31 +103,33 @@ export default function RootLayout({
         <div className="noise-bg" />
         <LenisProvider>
           <ThemeProvider>
-            <Toaster
-              position="top-right"
-              reverseOrder={false}
-              gutter={8}
-              toastOptions={{
-                duration: 4000,
-                style: {
-                  background: "var(--surface)",
-                  color: "var(--text-primary)",
-                  borderRadius: "0.75rem",
-                  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
-                  border: "1px solid var(--border)",
-                },
-              }}
-            />
-            <div className="relative flex min-h-screen flex-col">
-              <Navbar />
-              {/* <DiamondScrollbar /> */}
-              <main className="flex-1">
-                <ErrorBoundary>
-                  {children}
-                </ErrorBoundary>
-              </main>
-              <Footer />
-            </div>
+            <AuthProvider>
+              <Toaster
+                position="top-right"
+                reverseOrder={false}
+                gutter={8}
+                toastOptions={{
+                  duration: 4000,
+                  style: {
+                    background: "var(--surface)",
+                    color: "var(--text-primary)",
+                    borderRadius: "0.75rem",
+                    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+                    border: "1px solid var(--border)",
+                  },
+                }}
+              />
+              <div className="relative flex min-h-screen flex-col">
+                <Navbar />
+                {/* <DiamondScrollbar /> */}
+                <main className="flex-1">
+                  <ErrorBoundary>
+                    {children}
+                  </ErrorBoundary>
+                </main>
+                <Footer />
+              </div>
+            </AuthProvider>
           </ThemeProvider>
         </LenisProvider>
       </body>

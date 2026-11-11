@@ -28,8 +28,8 @@ export function CaseStudiesHero({ isDark, totalCount }: CaseStudiesHeroProps) {
         )}>
         </div>
         */}
-        <CodesandboxLogoIcon size={24} className="text-primary" />
-        <span className="text-sm font-semibold uppercase tracking-widest text-primary">
+        <CodesandboxLogoIcon size={20} className="text-primary" />
+        <span className="text-[13px] font-semibold uppercase tracking-widest text-primary">
           Portfolio
         </span>
       </div>

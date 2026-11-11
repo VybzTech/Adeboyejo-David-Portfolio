@@ -1,6 +1,9 @@
 export interface Project {
   id: number;
+  docId?: string;
   name: string;
+  title?: string;
+  slug?: string;
   status: 'completed' | 'In-Progress';
   description: string;
   fullContent?: string;
@@ -11,11 +14,14 @@ export interface Project {
   images?: string[];
   role: string;
   timeline: string;
+  isFeatured?: boolean;
   metrics?: {
     label: string;
     value: string;
   }[];
   stack: string[];
+  createdAt?: string | number | null;
+  updatedAt?: string | number | null;
 }
 
 export type SkillCategory = "frontend" | "backend" | "design" | "tools";

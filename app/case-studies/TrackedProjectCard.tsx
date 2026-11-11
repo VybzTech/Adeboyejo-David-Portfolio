@@ -1,33 +1,33 @@
 "use client";
 
 import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
 import { GithubLogo, ArrowSquareOut } from "@phosphor-icons/react";
 import { trackInteraction } from "@/app/actions/portfolioActions";
+import { Project } from "@/lib/types";
 
-export function TrackedProjectCard({ project }: { project: any }) {
-  
+export function TrackedProjectCard({ project }: { project: Project }) {
   const handleLinkClick = async (platformType: string) => {
-    // Log the click event to your Supabase interaction logging system
-    await trackInteraction(`${project.title} - ${platformType}`, "project_outbound_click");
+    await trackInteraction(`${project.name || project.title} - ${platformType}`, "project_outbound_click");
   };
 
   return (
-    <div className={`group rounded-2xl border p-6 bg-slate-900/50 transition-all duration-300 ${
-      project.isFeatured ? 'border-blue-500/40 shadow-lg shadow-blue-500/5' : 'border-slate-800'
-    }`}>
+    <div
+      className={`group rounded-2xl border p-6 bg-slate-900/50 transition-all duration-300 ${
+        project.isFeatured ? "border-blue-500/40 shadow-lg shadow-blue-500/5" : "border-slate-800"
+      }`}
+    >
       {/* 1. Image Render Section */}
-      {project.mainImage && (
+      {project.image && (
         <div className="relative h-56 w-full mb-6 overflow-hidden rounded-xl bg-slate-800">
           <Image
-            src={urlFor(project.mainImage).width(800).quality(85).url()}
-            alt={project.mainImage.alt || project.title}
+            src={project.image}
+            alt={project.name || project.title || "Project image"}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(max-w-7xl) 50vw, 100vw"
+            sizes="(max-width: 1200px) 50vw, 100vw"
           />
           {project.isFeatured && (
-            <span className="absolute top-3 left-3 bg-blue-600 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+            <span className="absolute top-3 left-3 bg-blue-600 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-white">
               Featured Build
             </span>
           )}
@@ -36,16 +36,16 @@ export function TrackedProjectCard({ project }: { project: any }) {
 
       {/* 2. Text Details */}
       <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-        {project.title}
+        {project.name || project.title}
       </h3>
       <p className="text-slate-400 text-sm mb-4 line-clamp-3">
         {project.description}
       </p>
 
       {/* 3. Tech Stack Tags Array mapping */}
-      {project.techStack && (
+      {project.stack && project.stack.length > 0 && (
         <div className="flex flex-wrap gap-2 mb-6">
-          {project.techStack.map((tag: string) => (
+          {project.stack.map((tag: string) => (
             <span key={tag} className="text-xs font-mono bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">
               {tag}
             </span>
@@ -55,9 +55,9 @@ export function TrackedProjectCard({ project }: { project: any }) {
 
       {/* 4. Telemetry Tracked Action Buttons */}
       <div className="flex gap-4 border-t border-slate-800/80 pt-4">
-        {project.links?.github && (
+        {project.github && (
           <a
-            href={project.links.github}
+            href={project.github}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => handleLinkClick("GitHub")}
@@ -68,9 +68,9 @@ export function TrackedProjectCard({ project }: { project: any }) {
           </a>
         )}
 
-        {project.links?.liveDemo && (
+        {project.link && (
           <a
-            href={project.links.liveDemo}
+            href={project.link}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => handleLinkClick("Live Demo")}

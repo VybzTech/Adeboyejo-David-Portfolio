@@ -8,9 +8,7 @@ import { motion } from "framer-motion";
 import { AnimatedName } from "@/components/ui/AnimatedName";
 import { ProjectCard } from "./ProjectCard";
 import { AnimatedCounter } from "./AnimatedCounter";
-import { client } from "@/sanity/lib/client";
-import { allProjectsQuery } from "@/sanity/lib/queries";
-import { sanityProjectsToFrontend } from "@/sanity/lib/projectMapper";
+import { getFeaturedProjects } from "@/lib/projectsService";
 import { Project } from "@/lib/types";
 
 export function FeaturedCaseStudies() {
@@ -20,9 +18,12 @@ export function FeaturedCaseStudies() {
 
   useEffect(() => {
     async function fetchFeatured() {
-      const sanityProjects = await client.fetch(allProjectsQuery);
-      const mappedProjects = sanityProjectsToFrontend(sanityProjects);
-      setFeatured(mappedProjects.slice(0, 3));
+      try {
+        const projects = await getFeaturedProjects();
+        setFeatured(projects);
+      } catch (err) {
+        console.error("Failed to load featured projects:", err);
+      }
     }
 
     fetchFeatured();
