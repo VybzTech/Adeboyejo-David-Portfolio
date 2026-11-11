@@ -5,7 +5,7 @@ A premium, production-ready portfolio website built with Next.js, TypeScript, an
 ## Overview
 
 This is a full-stack portfolio showcasing work as a Product Engineer specializing in full-stack development, SaaS products, and modern web technologies. The site features:
-
+!
 - **Premium dark mode aesthetic** with cyan/violet accents (Apple × Linear × SaaS style)
 - **Tactile soft-UI** with hover lift effects, button depress states, and smooth transitions
 - **Optimized performance** with Lighthouse 95+ target, server components, and dynamic imports

@@ -3,6 +3,9 @@ import { BackButton } from "@/components/layout/CaseStudies/Detail/BackButton";
 import { ProjectDetailContent } from "@/components/layout/CaseStudies/Detail/ProjectDetailContent";
 import { getProjects, getProjectById } from "@/lib/projectsService";
 
+// Only pre-generate known project IDs; unknown IDs get a 404 (no SSR fallback needed)
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const projects = await getProjects();
   return projects.map((project) => ({

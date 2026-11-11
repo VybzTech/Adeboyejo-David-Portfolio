@@ -1,52 +1,56 @@
-"use server";
+"use client";
 
-import { supabase } from "@/lib/supabase";
+/**
+ * portfolioActions.ts
+ *
+ * Client-safe Firebase/Firestore-based replacements for the old Supabase server actions.
+ * These run entirely in the browser — no server functions required (keeps us on Firebase Spark plan).
+ */
+
+import { db } from "@/lib/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 interface ContactInput {
-    name: string;
-    email: string;
-    subject: string;
-    message: string;
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
 }
 
 /**
- * Handles saving validated contact form info directly to Supabase tables.
+ * Saves a validated contact form submission to the Firestore `contact_inquiries` collection.
  */
-export async function submitContactForm(data: ContactInput) {
-    try {
-        const { error } = await supabase
-            .from("ContactInquiry")
-            .insert([
-                {
-                    name: data.name,
-                    email: data.email,
-                    subject: data.subject,
-                    message: data.message,
-                },
-            ]);
-
-        if (error) throw error;
-        return { success: true };
-    } catch (err: any) {
-        console.error("Database operation failed for ContactInquiry:", err.message);
-        return { success: false, error: err.message || "Failed to persist submission." };
-    }
+export async function submitContactForm(data: ContactInput): Promise<{ success: boolean; error?: string }> {
+  try {
+    await addDoc(collection(db, "contact_inquiries"), {
+      ...data,
+      createdAt: serverTimestamp(),
+    });
+    return { success: true };
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "Failed to persist submission.";
+    console.error("Firestore contact submission failed:", message);
+    return { success: false, error: message };
+  }
 }
 
 /**
- * Logs user interaction with your social profiles or buttons into telemetry table.
+ * Logs a user interaction event to the Firestore `interaction_log` collection.
+ * Non-blocking — failures are swallowed to avoid disrupting navigation.
  */
-export async function trackInteraction(platform: string, actionType: string = "click_social_footer") {
-    try {
-        const { error } = await supabase
-            .from("InteractionLog")
-            .insert([{ platform, actionType }]);
-
-        if (error) throw error;
-        return { success: true };
-    } catch (err: any) {
-        // Non-blocking log to avoid disrupting user navigation if tracking experiences downtime
-        console.error(`Telemetry failed for platform ${platform}:`, err.message);
-        return { success: false };
-    }
+export async function trackInteraction(
+  platform: string,
+  actionType: string = "click_social_footer"
+): Promise<{ success: boolean }> {
+  try {
+    await addDoc(collection(db, "interaction_log"), {
+      platform,
+      actionType,
+      createdAt: serverTimestamp(),
+    });
+    return { success: true };
+  } catch (err: unknown) {
+    console.error(`Telemetry failed for platform ${platform}:`, err instanceof Error ? err.message : err);
+    return { success: false };
+  }
 }

@@ -12,9 +12,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { PillIconButton } from "@/components/common/PillIconButton";
-import { submitContactForm } from "@/app/actions/portfolioActions"; // Importing Server Action
-// Telemetry Action Import
-import { trackInteraction } from "@/app/actions/portfolioActions";
+import { submitContactForm, trackInteraction } from "@/app/actions/portfolioActions";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -517,30 +515,22 @@ export function ContactCTA() {
     const loadingToast = toast.loading("Sending your message...");
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      // Store form submission directly in Firestore (no server function needed)
+      const result = await submitContactForm(data);
 
-      if (response.ok) {
-        // Track the successful submission event in Supabase db
-        try {
-          await trackInteraction(`Form Submitted by ${data.name}`, "contact_form_submit");
-        } catch (telemetryErr) {
-          console.error("Telemetry log failed:", telemetryErr);
-        }
+      toast.dismiss(loadingToast);
 
-        toast.dismiss(loadingToast);
+      if (result.success) {
+        // Fire-and-forget telemetry
+        trackInteraction(`Form Submitted by ${data.name}`, "contact_form_submit").catch(() => {});
+
         toast.success("Message sent successfully! I'll get back to you soon.", {
           duration: 5000,
           icon: "✓",
         });
         reset();
       } else {
-        const errorData = await response.json();
-        toast.dismiss(loadingToast);
-        toast.error(errorData.error || "Failed to send message. Please try again.", {
+        toast.error(result.error || "Failed to send message. Please try again.", {
           duration: 4000,
         });
       }
