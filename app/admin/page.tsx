@@ -130,7 +130,11 @@ export default function AdminPage() {
       toast.success(`Firestore successfully synced with ${result.count} projects!`);
       await loadProjects();
     } catch (err: any) {
-      toast.error("Seeding failed: " + err.message);
+      if (err?.code === "permission-denied" || err?.message?.toLowerCase().includes("permission")) {
+        toast.error("Permission denied: Update Firestore Rules in Firebase Console to allow writes.", { duration: 6000 });
+      } else {
+        toast.error("Seeding failed: " + err.message);
+      }
     } finally {
       setSeeding(false);
     }
