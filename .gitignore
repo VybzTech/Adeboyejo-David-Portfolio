@@ -43,3 +43,10 @@ next-env.d.ts
 
 
 .husky
+
+# Firebase deploy cache
+.firebase/
+
+# Firebase debug logs
+firebase-debug.log
+.firebase-debug.log
